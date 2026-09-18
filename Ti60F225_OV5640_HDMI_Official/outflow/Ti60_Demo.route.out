@@ -1,0 +1,819 @@
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:14] No valid object(s) found for 'dsi_refclk_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:14] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:14] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:24] No valid object(s) found for 'clk_pixel_2x'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:24] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:24] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:29] No valid object(s) found for 'clk_54m'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:29] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:29] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:33] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:33] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:35] set_clock_groups: Defaulting to -exclusive since none of the required option was specified
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:341] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:341] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:342] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:342] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:347] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:347] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:348] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:348] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:576] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:576] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:576] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:577] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:577] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:577] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:578] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:578] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:578] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:579] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:579] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:579] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:580] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:580] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:580] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:581] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:581] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:581] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:582] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:582] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:582] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:583] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:583] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:583] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:584] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:584] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:584] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:585] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:585] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:585] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:586] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:586] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:586] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:587] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:587] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:587] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:588] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:588] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:588] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:589] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:589] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:589] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:590] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:590] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:590] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:591] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:591] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:591] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:592] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:592] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:592] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:593] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:593] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:593] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:594] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:594] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:594] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:595] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:595] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:595] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:596] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:596] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:596] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:597] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:597] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:597] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:598] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:598] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:598] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:599] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:599] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:599] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:600] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:600] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:600] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:601] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:601] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:601] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:602] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:602] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:602] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:603] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:603] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:603] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:604] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:604] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:604] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:605] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:605] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:605] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:606] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:606] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:606] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:607] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:607] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:607] Unable to run 'set_input_delay' constraint due to warnings found
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Router Setup
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : [Setup Parallel Routing Scheduler]
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Route Circuit with 32 threads
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Beneficial skew enabled! Optimizing clock skews ... 
+INFO     : Non-legalized beneficial skew improved geomean CPD by 0.62% (from 3056ps to 3037ps)
+INFO     : CSS improved CPD of clock tdqss_clk by 0.00% (from 1935ps to 1935ps)
+INFO     : CSS improved CPD of clock core_clk by 0.00% (from 3929ps to 3929ps)
+INFO     : CSS improved CPD of clock tac_clk by 2.23% (from 2379ps to 2326ps)
+INFO     : CSS improved CPD of clock twd_clk by 0.00% (from 1934ps to 1934ps)
+INFO     : CSS improved CPD of clock clk_sys by 0.00% (from 5217ps to 5217ps)
+INFO     : CSS improved CPD of clock clk_pixel by 0.00% (from 3974ps to 3974ps)
+INFO     : CSS improved CPD of clock cmos_pclk by 0.00% (from 3434ps to 3434ps)
+INFO     : Discretized beneficial skew improved geomean CPD by 0.33% (from 3056ps to 3046ps in 5 iterations and 0.1 sec)
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Overridding delay budgets for 270 synchronizer-related pins
+
+INFO     : Iter  1: overlap=10368   heapops=1655628    (0%) cpd=2326  frr=1.00  msec=494
+INFO     : [Setup Delay Budgets | 78.6 ms]
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Hold Fixing
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Total min wire delay:   2147989
+INFO     : Hold fix wire delay:        159
+INFO     : Hold fix delay ratio:     0.01%
+INFO     : Pins requiring hold fix:  0.01%
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Iter  2: overlap=4367    heapops=1190788    (34%) cpd=2323  frr=1.00  msec=182
+INFO     : Iter  3: overlap=2570    heapops=835981     (55%) cpd=2322  frr=1.00  msec=138
+INFO     : Iter  4: overlap=1465    heapops=604604     (64%) cpd=2323  frr=1.00  msec=115
+INFO     : Iter  5: overlap=746     heapops=385226     (73%) cpd=2323  frr=1.00  msec=92
+INFO     : Iter  6: overlap=318     heapops=235242     (81%) cpd=2354  frr=1.01  msec=72
+INFO     : [Rebuild Parallel Routing Scheduler]
+INFO     : Iter  7: overlap=119     heapops=102451     (86%) cpd=2354  frr=1.01  msec=68
+INFO     : Iter  8: overlap=48      heapops=54079      (87%) cpd=2354  frr=1.01  msec=53
+INFO     : Iter  9: overlap=14      heapops=38935      (88%) cpd=2354  frr=1.01  msec=49
+INFO     : Iter 10: overlap=4       heapops=30588      (88%) cpd=2354  frr=1.01  msec=56
+INFO     : Iter 11: overlap=4       heapops=28383      (88%) cpd=2354  frr=1.01  msec=59
+INFO     : Iter 12: overlap=3       heapops=28034      (88%) cpd=2382  frr=1.02  msec=54
+INFO     : Iter 13: overlap=3       heapops=27677      (88%) cpd=2354  frr=1.01  msec=58
+INFO     : Iter 14: overlap=1       heapops=27785      (88%) cpd=2382  frr=1.02  msec=55
+INFO     : Iter 15: overlap=1       heapops=27664      (88%) cpd=2382  frr=1.02  msec=59
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Beneficial skew enabled! Optimizing clock skews ... 
+INFO     : Non-legalized beneficial skew improved geomean CPD by 0.00% (from 3242ps to 3242ps)
+INFO     : CSS improved CPD of clock tdqss_clk by 0.00% (from 1935ps to 1935ps)
+INFO     : CSS improved CPD of clock core_clk by -1.21% (from 4145ps to 4195ps)
+INFO     : CSS improved CPD of clock tac_clk by 0.00% (from 2390ps to 2390ps)
+INFO     : CSS improved CPD of clock twd_clk by 0.00% (from 2019ps to 2019ps)
+INFO     : CSS improved CPD of clock clk_sys by 0.00% (from 5974ps to 5974ps)
+INFO     : CSS improved CPD of clock clk_pixel by 0.00% (from 4617ps to 4617ps)
+INFO     : CSS improved CPD of clock cmos_pclk by 0.00% (from 3532ps to 3532ps)
+INFO     : Discretized beneficial skew improved geomean CPD by -0.19% (from 3242ps to 3248ps in 1 iterations and 0.1 sec)
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Iter 16: overlap=0       heapops=27690      (88%) cpd=2390  frr=1.03  msec=201
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing Result
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing Succeeded in 1.99 seconds taking 16 iterations! 
+INFO     : 
+INFO     : First iteration critical path delay = 2.326 ns 
+INFO     : Last iteration critical path delay  = 2.390 ns (ratio = 1.03)
+INFO     : Max Routing Heap Size = 1,425
+INFO     : Routing trace written to file 'outflow\Ti60_Demo.troutingtraces' 
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing took 7.36915 seconds.
+INFO     : 	Routing took 23.5625 seconds (approximately) in total CPU time.
+INFO     : Routing virtual memory usage: begin = 161.888 MB, end = 262.9 MB, delta = 101.012 MB
+INFO     : 	Routing peak virtual memory usage = 455.044 MB
+INFO     : Routing resident set memory usage: begin = 181.428 MB, end = 283.772 MB, delta = 102.344 MB
+INFO     : 	Routing peak resident set memory usage = 444.628 MB
+           ***** Beginning stage final timing analysis ... *****
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:14] No valid object(s) found for 'dsi_refclk_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:14] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:14] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:24] No valid object(s) found for 'clk_pixel_2x'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:24] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:24] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:29] No valid object(s) found for 'clk_54m'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:29] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:29] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:33] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:33] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:35] set_clock_groups: Defaulting to -exclusive since none of the required option was specified
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:341] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:341] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:342] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:342] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:347] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:347] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:348] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:348] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:576] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:576] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:576] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:577] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:577] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:577] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:578] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:578] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:578] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:579] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:579] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:579] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:580] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:580] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:580] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:581] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:581] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:581] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:582] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:582] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:582] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:583] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:583] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:583] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:584] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:584] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:584] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:585] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:585] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:585] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:586] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:586] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:586] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:587] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:587] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:587] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:588] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:588] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:588] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:589] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:589] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:589] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:590] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:590] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:590] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:591] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:591] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:591] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:592] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:592] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:592] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:593] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:593] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:593] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:594] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:594] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:594] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:595] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:595] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:595] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:596] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:596] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:596] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:597] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:597] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:597] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:598] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:598] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:598] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:599] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:599] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:599] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:600] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:600] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:600] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:601] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:601] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:601] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:602] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:602] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:602] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:603] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:603] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:603] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:604] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:604] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:604] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:605] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:605] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:605] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:606] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:606] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:606] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:607] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:607] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/Ti60F225_OV5640_HDMI_Official/Ti60_Demo.pt.sdc:607] Unable to run 'set_input_delay' constraint due to warnings found
+Maximum possible analyzed clocks frequency
+ Clock Name  Period (ns)  Frequency (MHz)     Edge
+ tdqss_clk      2.045        488.998         (R-R)
+ core_clk       4.305        232.288         (R-R)
+ tac_clk        2.500        400.000         (R-R)
+ twd_clk        2.129        469.704         (R-R)
+ clk_sys        6.084        164.366         (R-R)
+ clk_pixel      4.727        211.551         (R-R)
+ cmos_pclk      7.284        137.287         (F-R)
+
+Geomean max period: 3.718
+
+Setup (Max) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+   tdqss_clk        tdqss_clk           2.604           0.559            (R-R)
+   tdqss_clk        core_clk            2.604           2.122            (R-R)
+   core_clk         tdqss_clk           2.604           1.471            (R-R)
+   core_clk         core_clk            5.208           0.903            (R-R)
+   core_clk         tac_clk             2.604           2.247            (R-R)
+   core_clk         twd_clk             0.541           0.319            (R-R)
+   tac_clk          core_clk            2.604           1.840            (R-R)
+   tac_clk          tac_clk             2.604           0.104            (R-R)
+   twd_clk          twd_clk             2.604           0.475            (R-R)
+   clk_sys          clk_sys            10.417           4.333            (R-R)
+   clk_pixel        clk_pixel          13.441           8.714            (R-R)
+   cmos_pclk        cmos_pclk          10.000           7.063            (R-R)
+   cmos_pclk        cmos_pclk           5.000           1.358            (F-R)
+
+Hold (Min) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+   tdqss_clk        tdqss_clk           0.000           0.097            (R-R)
+   tdqss_clk        core_clk            0.000           0.151            (R-R)
+   core_clk         tdqss_clk           0.000           0.079            (R-R)
+   core_clk         core_clk            0.000           0.028            (R-R)
+   core_clk         tac_clk             0.000           0.072            (R-R)
+   core_clk         twd_clk            -1.883           2.024            (R-R)
+   tac_clk          core_clk            0.000           0.159            (R-R)
+   tac_clk          tac_clk             0.000           0.027            (R-R)
+   twd_clk          twd_clk             0.000           0.071            (R-R)
+   clk_sys          clk_sys             0.000           0.030            (R-R)
+   clk_pixel        clk_pixel           0.000           0.081            (R-R)
+   cmos_pclk        cmos_pclk           0.000           0.014            (R-R)
+   cmos_pclk        cmos_pclk          -5.000           5.531            (F-R)
+
+INFO     : Write Timing Report to "outflow\Ti60_Demo.timing.rpt" ...
+INFO     : final timing analysis took 6.97314 seconds.
+INFO     : 	final timing analysis took 6.95312 seconds (approximately) in total CPU time.
+INFO     : final timing analysis virtual memory usage: begin = 298.876 MB, end = 329.66 MB, delta = 30.784 MB
+INFO     : 	final timing analysis peak virtual memory usage = 455.044 MB
+INFO     : final timing analysis resident set memory usage: begin = 319.772 MB, end = 348.996 MB, delta = 29.224 MB
+INFO     : 	final timing analysis peak resident set memory usage = 444.628 MB
+           ***** Ending stage final timing analysis *****
+           
+           ***** Beginning stage netlist pre-processing ... *****
+INFO     : Successfully Read in Verific binary Netlist dump file "outflow\Ti60_Demo.vdb".
+INFO     : ***** Beginning VDB Netlist Checker ... *****
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(11): Input/inout port clk_24m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(12): Input/inout port clk_25m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(21): Input/inout port clk_pixel_2x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(22): Input/inout port clk_pixel_10x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(30): Input/inout port dsi_refclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(31): Input/inout port dsi_byteclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(32): Input/inout port dsi_serclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(33): Input/inout port dsi_txcclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(60): Input/inout port clk_lvds_1x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(61): Input/inout port clk_lvds_7x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(62): Input/inout port clk_27m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(63): Input/inout port clk_54m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(97): Input/inout port i_dqs_n_hi[1] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(98): Input/inout port i_dqs_n_lo[1] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(121): Input/inout port csi_ctl0_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(125): Input/inout port csi_ctl1_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(129): Input/inout port csi_scl_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(133): Input/inout port csi_sda_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(136): Input/inout port csi_rxc_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(137): Input/inout port csi_rxc_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(140): Input/inout port csi_rxc_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(147): Input/inout port csi_rxd0_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(148): Input/inout port csi_rxd0_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(149): Input/inout port csi_rxd0_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(156): Input/inout port csi_rxd1_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(157): Input/inout port csi_rxd1_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(158): Input/inout port csi_rxd1_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(165): Input/inout port csi_rxd2_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(166): Input/inout port csi_rxd2_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(167): Input/inout port csi_rxd2_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(174): Input/inout port csi_rxd3_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(175): Input/inout port csi_rxd3_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(176): Input/inout port csi_rxd3_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(235): Input/inout port dsi_txd0_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(236): Input/inout port dsi_txd0_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(237): Input/inout port dsi_txd1_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(238): Input/inout port dsi_txd1_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(239): Input/inout port dsi_txd2_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(240): Input/inout port dsi_txd2_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(241): Input/inout port dsi_txd3_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(242): Input/inout port dsi_txd3_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(247): Input/inout port uart_rx_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(257): Input/inout port cmos_sdat_IN is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(269): Input/inout port cmos_ctl1_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(272): Input/inout port cmos_ctl2_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(275): Input/inout port cmos_ctl3_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(323): Input/inout port lcd_tp_sda_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(327): Input/inout port lcd_tp_scl_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(331): Input/inout port lcd_tp_int_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(351): Input/inout port lcd_b7_0_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(352): Input/inout port lcd_g7_0_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_HDMI_Official\example_top.v(353): Input/inout port lcd_r7_0_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : Found 103 warnings in the post-synthesis netlist.
+INFO     : VDB Netlist Checker took 0.0102915 seconds.
+INFO     : 	VDB Netlist Checker took 0.015625 seconds (approximately) in total CPU time.
+INFO     : VDB Netlist Checker virtual memory usage: begin = 327.012 MB, end = 327.132 MB, delta = 0.12 MB
+INFO     : 	VDB Netlist Checker peak virtual memory usage = 455.044 MB
+INFO     : VDB Netlist Checker resident set memory usage: begin = 348.556 MB, end = 348.676 MB, delta = 0.12 MB
+INFO     : 	VDB Netlist Checker peak resident set memory usage = 444.628 MB
+INFO     : ***** Ending VDB Netlist Checker ... *****
+INFO     : Writing netlist 'example_top' to Verilog file 'outflow\Ti60_Demo.prevpr.v' [VDB-1030]
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Net clk_lvds_1x promoted to global due to interface constraints.
+INFO     : Net clk_pixel_10x promoted to global due to interface constraints.
+INFO     : Net clk_lvds_7x promoted to global due to interface constraints.
+INFO     : Net clk_27m promoted to global due to interface constraints.
+INFO     : Net dsi_serclk_i promoted to global due to interface constraints.
+INFO     : Net dsi_byteclk_i promoted to global due to interface constraints.
+INFO     : Net dsi_txcclk_i promoted to global due to interface constraints.
+INFO     : Found 0 constant generator nets.
+INFO     : Pass 0: Swept away 0 nets with no fanout.
+INFO     : logical_block #0(clk_24m) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #1(clk_25m) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #5(clk_pixel_2x) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #9(dsi_refclk_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #33(clk_54m) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #149(i_dqs_n_hi[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #150(i_dqs_n_hi[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #151(i_dqs_n_lo[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #152(i_dqs_n_lo[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #171(csi_ctl0_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #174(csi_ctl1_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #177(csi_scl_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #180(csi_sda_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #181(csi_rxc_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #182(csi_rxc_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #185(csi_rxc_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #189(csi_rxd0_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #190(csi_rxd0_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #191(csi_rxd0_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #192(csi_rxd0_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #193(csi_rxd0_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #194(csi_rxd0_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #195(csi_rxd0_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #196(csi_rxd0_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #197(csi_rxd0_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #198(csi_rxd0_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #202(csi_rxd1_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #203(csi_rxd1_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #204(csi_rxd1_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #205(csi_rxd1_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #206(csi_rxd1_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #207(csi_rxd1_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #208(csi_rxd1_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #209(csi_rxd1_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #210(csi_rxd1_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #211(csi_rxd1_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #215(csi_rxd2_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #216(csi_rxd2_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #217(csi_rxd2_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #218(csi_rxd2_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #219(csi_rxd2_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #220(csi_rxd2_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #221(csi_rxd2_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #222(csi_rxd2_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #223(csi_rxd2_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #224(csi_rxd2_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #228(csi_rxd3_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #229(csi_rxd3_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #230(csi_rxd3_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #231(csi_rxd3_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #232(csi_rxd3_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #233(csi_rxd3_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #234(csi_rxd3_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #235(csi_rxd3_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #236(csi_rxd3_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #237(csi_rxd3_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #310(dsi_txd0_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #311(dsi_txd0_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #312(dsi_txd1_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #313(dsi_txd1_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #314(dsi_txd2_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #315(dsi_txd2_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #316(dsi_txd3_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #317(dsi_txd3_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #318(uart_rx_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #327(cmos_sdat_IN) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #343(cmos_ctl1_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #346(cmos_ctl2_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #349(cmos_ctl3_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #445(lcd_tp_sda_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #448(lcd_tp_scl_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #451(lcd_tp_int_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #506(lcd_b7_0_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #507(lcd_b7_0_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #508(lcd_b7_0_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #509(lcd_b7_0_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #510(lcd_b7_0_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #511(lcd_b7_0_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #512(lcd_b7_0_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #513(lcd_b7_0_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #514(lcd_g7_0_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #515(lcd_g7_0_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #516(lcd_g7_0_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #517(lcd_g7_0_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #518(lcd_g7_0_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #519(lcd_g7_0_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #520(lcd_g7_0_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #521(lcd_g7_0_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #522(lcd_r7_0_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #523(lcd_r7_0_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #524(lcd_r7_0_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #525(lcd_r7_0_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #526(lcd_r7_0_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #527(lcd_r7_0_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #528(lcd_r7_0_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #529(lcd_r7_0_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : Pass 0: Swept away 96 blocks with no fanout.
+INFO     : Pass 1: Swept away 0 nets with no fanout.
+INFO     : Pass 1: Swept away 0 blocks with no fanout.
+INFO     : Swept away 0 nets and 96 blocks in total.
+INFO     : Removed 0 LUT buffers
+INFO     : Sweept away 96 nodes
+INFO     : Successfully created VPR logical netlist from Verific binary DataBase file "outflow\Ti60_Demo.vdb".
+INFO     : Netlist pre-processing took 0.38843 seconds.
+INFO     : 	Netlist pre-processing took 0.203125 seconds (approximately) in total CPU time.
+INFO     : Netlist pre-processing virtual memory usage: begin = 316.764 MB, end = 594.136 MB, delta = 277.372 MB
+INFO     : 	Netlist pre-processing peak virtual memory usage = 594.136 MB
+INFO     : Netlist pre-processing resident set memory usage: begin = 338.34 MB, end = 616.184 MB, delta = 277.844 MB
+INFO     : 	Netlist pre-processing peak resident set memory usage = 616.184 MB
+           ***** Ending stage netlist pre-processing *****
+           
+           ***** Beginning stage packed netlist loading ... *****
+INFO     : Load Global Network took 0.412746 seconds.
+INFO     : 	Load Global Network took 0.125 seconds (approximately) in total CPU time.
+INFO     : Load Global Network virtual memory usage: begin = 594.136 MB, end = 594.136 MB, delta = 0 MB
+INFO     : 	Load Global Network peak virtual memory usage = 594.136 MB
+INFO     : Load Global Network resident set memory usage: begin = 616.216 MB, end = 616.452 MB, delta = 0.236 MB
+INFO     : 	Load Global Network peak resident set memory usage = 616.452 MB
+INFO     : Reading C:/Efinity/2025.1/arch/.\rr_pb_hier_mapping.xml
+INFO     : Read proto netlist file work_pnr\Ti60_Demo.net_proto
+INFO     : Read proto netlist for file "work_pnr\Ti60_Demo.net_proto" took 0.007 seconds
+INFO     : Setup net and block data structure took 0.052 seconds
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Packed netlist loading took 0.621858 seconds.
+INFO     : 	Packed netlist loading took 0.296875 seconds (approximately) in total CPU time.
+INFO     : Packed netlist loading virtual memory usage: begin = 594.136 MB, end = 594.136 MB, delta = 0 MB
+INFO     : 	Packed netlist loading peak virtual memory usage = 594.136 MB
+INFO     : Packed netlist loading resident set memory usage: begin = 616.184 MB, end = 616.46 MB, delta = 0.276 MB
+INFO     : 	Packed netlist loading peak resident set memory usage = 616.46 MB
+           ***** Ending stage packed netlist loading *****
+           
+INFO     : Run checks after load placement.
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully loaded placement data from "outflow\Ti60_Demo.place".
+           ***** Beginning stage bitstream generation ... *****
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Finished writing bitstream file work_pnr\Ti60_Demo.lbf.
+INFO     : Bitstream generation took 1.33575 seconds.
+INFO     : 	Bitstream generation took 1.125 seconds (approximately) in total CPU time.
+INFO     : Bitstream generation virtual memory usage: begin = 342.568 MB, end = 435.552 MB, delta = 92.984 MB
+INFO     : 	Bitstream generation peak virtual memory usage = 594.136 MB
+INFO     : Bitstream generation resident set memory usage: begin = 365.108 MB, end = 458.876 MB, delta = 93.768 MB
+INFO     : 	Bitstream generation peak resident set memory usage = 616.656 MB
+           ***** Ending stage bitstream generation *****
+           
+INFO     : The entire flow of EFX_PNR took 38.8557 seconds.
+INFO     : 	The entire flow of EFX_PNR took 69.4688 seconds (approximately) in total CPU time.
+INFO     : The entire flow of EFX_PNR virtual memory usage: begin = 19.968 MB, end = 435.552 MB, delta = 415.584 MB
+INFO     : 	The entire flow of EFX_PNR peak virtual memory usage = 594.136 MB
+INFO     : The entire flow of EFX_PNR resident set memory usage: begin = 22.252 MB, end = 458.9 MB, delta = 436.648 MB
+INFO     : 	The entire flow of EFX_PNR peak resident set memory usage = 616.656 MB

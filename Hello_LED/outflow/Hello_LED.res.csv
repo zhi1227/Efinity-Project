@@ -1,0 +1,9 @@
+sep=\t
+Module Resource Usage Distribution Estimates
+Generated at: Sep 14, 2026 22:35:55
+
+Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
+
+Module	         FFs	        SRLs	        ADDs	        LUTs	    COMB4s	      RAMs	 DSP/MULTs
+Hello_LED:Hello_LED                   	      33(0)	       0(0)	      31(0)	      23(0)	     0(0)	     0(0)	     0(0)	
+ +u_led_addr_display:led_addr_display 	     33(33)	       0(0)	     31(31)	     23(23)	     0(0)	     0(0)	     0(0)	

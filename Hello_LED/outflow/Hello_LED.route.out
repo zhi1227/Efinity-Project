@@ -1,0 +1,169 @@
+INFO     : No SDC file found.  Using default timing constraint of 1 ns.
+INFO     : NOTE:  Use --sdc_file <SDC_FILE> to override this behavior.
+INFO     : Creating clock 'clk' with 1 sources
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Router Setup
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : [Setup Parallel Routing Scheduler]
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Route Circuit with 24 threads
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Beneficial skew enabled! Optimizing clock skews ... 
+INFO     : Non-legalized beneficial skew improved geomean CPD by 23.50% (from 1430ps to 1094ps)
+INFO     : CSS improved CPD of clock clk by 20.70% (from 1430ps to 1134ps)
+INFO     : Discretized beneficial skew improved geomean CPD by 20.70% (from 1430ps to 1134ps in 9 iterations and 0.0 sec)
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Overridding delay budgets for 0 synchronizer-related pins
+
+INFO     : [Rebuild Parallel Routing Scheduler]
+INFO     : Iter  1: overlap=44      heapops=7527       (0%) cpd=1134  frr=1.00  msec=23
+INFO     : [Setup Delay Budgets | 3.1 ms]
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Hold Fixing
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Total min wire delay:      9005
+INFO     : Hold fix wire delay:        169
+INFO     : Hold fix delay ratio:     1.88%
+INFO     : Pins requiring hold fix:  3.66%
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Iter  2: overlap=42      heapops=4530       (40%) cpd=1221  frr=1.08  msec=13
+INFO     : Iter  3: overlap=35      heapops=3686       (42%) cpd=1221  frr=1.08  msec=11
+INFO     : Iter  4: overlap=37      heapops=3491       (46%) cpd=1221  frr=1.08  msec=12
+INFO     : Iter  5: overlap=18      heapops=3125       (48%) cpd=1220  frr=1.08  msec=12
+INFO     : Iter  6: overlap=19      heapops=2236       (54%) cpd=1198  frr=1.06  msec=12
+INFO     : Iter  7: overlap=19      heapops=2282       (53%) cpd=1167  frr=1.03  msec=10
+INFO     : Iter  8: overlap=15      heapops=2185       (55%) cpd=1167  frr=1.03  msec=11
+INFO     : Iter  9: overlap=13      heapops=2173       (55%) cpd=1167  frr=1.03  msec=11
+INFO     : Iter 10: overlap=16      heapops=2136       (55%) cpd=1167  frr=1.03  msec=10
+INFO     : Iter 11: overlap=13      heapops=1935       (58%) cpd=1225  frr=1.08  msec=11
+INFO     : Iter 12: overlap=8       heapops=2850       (51%) cpd=1229  frr=1.08  msec=11
+INFO     : Iter 13: overlap=13      heapops=2242       (55%) cpd=1207  frr=1.06  msec=12
+INFO     : Iter 14: overlap=6       heapops=2407       (56%) cpd=1270  frr=1.12  msec=11
+INFO     : Iter 15: overlap=5       heapops=2233       (56%) cpd=1231  frr=1.09  msec=10
+INFO     : Iter 16: overlap=2       heapops=1934       (58%) cpd=1221  frr=1.08  msec=11
+INFO     : Iter 17: overlap=5       heapops=2174       (56%) cpd=1212  frr=1.07  msec=10
+INFO     : Iter 18: overlap=8       heapops=2032       (58%) cpd=1217  frr=1.07  msec=11
+INFO     : Iter 19: overlap=1       heapops=2467       (54%) cpd=1232  frr=1.09  msec=10
+INFO     : Iter 20: overlap=1       heapops=2070       (58%) cpd=1231  frr=1.09  msec=10
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Beneficial skew enabled! Optimizing clock skews ... 
+INFO     : Non-legalized beneficial skew improved geomean CPD by 0.00% (from 1271ps to 1271ps)
+INFO     : CSS improved CPD of clock clk by 3.15% (from 1271ps to 1231ps)
+INFO     : Discretized beneficial skew improved geomean CPD by 3.15% (from 1271ps to 1231ps in 1 iterations and 0.0 sec)
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Iter 21: overlap=0       heapops=1852       (59%) cpd=1231  frr=1.09  msec=16
+INFO     : Iter 22: overlap=0       heapops=1943       (59%) cpd=1231  frr=1.09  msec=11
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing Result
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing Succeeded in 0.31 seconds taking 22 iterations! 
+INFO     : 
+INFO     : First iteration critical path delay = 1.134 ns 
+INFO     : Last iteration critical path delay  = 1.231 ns (ratio = 1.09)
+INFO     : Max Routing Heap Size = 270
+INFO     : Routing trace written to file 'D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.troutingtraces' 
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing took 0.952453 seconds.
+INFO     : 	Routing took 1.60938 seconds (approximately) in total CPU time.
+INFO     : Routing virtual memory usage: begin = 135.22 MB, end = 215.612 MB, delta = 80.392 MB
+INFO     : 	Routing peak virtual memory usage = 352.756 MB
+INFO     : Routing resident set memory usage: begin = 151.816 MB, end = 230.388 MB, delta = 78.572 MB
+INFO     : 	Routing peak resident set memory usage = 360.6 MB
+           ***** Beginning stage final timing analysis ... *****
+INFO     : No SDC file found.  Using default timing constraint of 1 ns.
+INFO     : NOTE:  Use --sdc_file <SDC_FILE> to override this behavior.
+INFO     : Creating clock 'clk' with 1 sources
+Maximum possible analyzed clocks frequency
+ Clock Name  Period (ns)  Frequency (MHz)     Edge
+    clk         1.357        736.920         (R-R)
+
+Geomean max period: 1.357
+
+Setup (Max) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+      clk              clk             1.000            -0.357           (R-R)
+
+Hold (Min) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+      clk              clk             0.000            0.017            (R-R)
+
+WARNING  : Clock domain between clk (rising) and clk (rising) may not meet (slack: -0.357 ns) the setup (max) timing requirement
+INFO     : Write Timing Report to "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow\Hello_LED.timing.rpt" ...
+INFO     : final timing analysis took 0.0502362 seconds.
+INFO     : 	final timing analysis took 0 seconds (approximately) in total CPU time.
+INFO     : final timing analysis virtual memory usage: begin = 251.62 MB, end = 251.7 MB, delta = 0.08 MB
+INFO     : 	final timing analysis peak virtual memory usage = 352.756 MB
+INFO     : final timing analysis resident set memory usage: begin = 269.112 MB, end = 269.668 MB, delta = 0.556 MB
+INFO     : 	final timing analysis peak resident set memory usage = 360.6 MB
+           ***** Ending stage final timing analysis *****
+           
+           ***** Beginning stage netlist pre-processing ... *****
+INFO     : Successfully Read in Verific binary Netlist dump file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.vdb".
+INFO     : ***** Beginning VDB Netlist Checker ... *****
+INFO     : VDB Netlist Checker took 0.0001132 seconds.
+INFO     : 	VDB Netlist Checker took 0 seconds (approximately) in total CPU time.
+INFO     : VDB Netlist Checker virtual memory usage: begin = 273.26 MB, end = 273.292 MB, delta = 0.032 MB
+INFO     : 	VDB Netlist Checker peak virtual memory usage = 352.756 MB
+INFO     : VDB Netlist Checker resident set memory usage: begin = 291.16 MB, end = 291.192 MB, delta = 0.032 MB
+INFO     : 	VDB Netlist Checker peak resident set memory usage = 360.6 MB
+INFO     : ***** Ending VDB Netlist Checker ... *****
+INFO     : Reading core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Successfully read core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Found 0 constant generator nets.
+INFO     : Pass 0: Swept away 0 nets with no fanout.
+INFO     : Pass 0: Swept away 0 blocks with no fanout.
+INFO     : Swept away 0 nets and 0 blocks in total.
+INFO     : Removed 0 LUT buffers
+INFO     : Successfully created VPR logical netlist from Verific binary DataBase file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.vdb".
+INFO     : Netlist pre-processing took 0.0016568 seconds.
+INFO     : 	Netlist pre-processing took 0 seconds (approximately) in total CPU time.
+INFO     : Netlist pre-processing virtual memory usage: begin = 273.244 MB, end = 273.324 MB, delta = 0.08 MB
+INFO     : 	Netlist pre-processing peak virtual memory usage = 352.756 MB
+INFO     : Netlist pre-processing resident set memory usage: begin = 291.144 MB, end = 291.22 MB, delta = 0.076 MB
+INFO     : 	Netlist pre-processing peak resident set memory usage = 360.6 MB
+           ***** Ending stage netlist pre-processing *****
+           
+           ***** Beginning stage packed netlist loading ... *****
+INFO     : Load Global Network took 0.546524 seconds.
+INFO     : 	Load Global Network took 0.140625 seconds (approximately) in total CPU time.
+INFO     : Load Global Network virtual memory usage: begin = 276.636 MB, end = 298.82 MB, delta = 22.184 MB
+INFO     : 	Load Global Network peak virtual memory usage = 352.756 MB
+INFO     : Load Global Network resident set memory usage: begin = 294.536 MB, end = 316.82 MB, delta = 22.284 MB
+INFO     : 	Load Global Network peak resident set memory usage = 360.6 MB
+INFO     : Reading C:/Efinity/2025.1/arch/.\rr_pb_hier_mapping.xml
+INFO     : Read proto netlist file D:/yilingsi_fpga/Efinity_Project/Hello_LED/work_pnr\Hello_LED.net_proto
+INFO     : Read proto netlist for file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/work_pnr\Hello_LED.net_proto" took 0 seconds
+INFO     : Setup net and block data structure took 0 seconds
+INFO     : Reading core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Successfully read core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Counting 1 clocks that are not assigned to clock resources as global clocks.
+INFO     : Packed netlist loading took 0.693196 seconds.
+INFO     : 	Packed netlist loading took 0.265625 seconds (approximately) in total CPU time.
+INFO     : Packed netlist loading virtual memory usage: begin = 273.324 MB, end = 328.004 MB, delta = 54.68 MB
+INFO     : 	Packed netlist loading peak virtual memory usage = 352.756 MB
+INFO     : Packed netlist loading resident set memory usage: begin = 291.22 MB, end = 344.064 MB, delta = 52.844 MB
+INFO     : 	Packed netlist loading peak resident set memory usage = 360.6 MB
+           ***** Ending stage packed netlist loading *****
+           
+INFO     : Run checks after load placement.
+INFO     : Reading core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Successfully read core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Successfully loaded placement data from "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.place".
+           ***** Beginning stage bitstream generation ... *****
+INFO     : Reading core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Successfully read core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Finished writing bitstream file D:/yilingsi_fpga/Efinity_Project/Hello_LED/work_pnr\Hello_LED.lbf.
+INFO     : Bitstream generation took 1.16071 seconds.
+INFO     : 	Bitstream generation took 0.9375 seconds (approximately) in total CPU time.
+INFO     : Bitstream generation virtual memory usage: begin = 283.94 MB, end = 355.236 MB, delta = 71.296 MB
+INFO     : 	Bitstream generation peak virtual memory usage = 355.236 MB
+INFO     : Bitstream generation resident set memory usage: begin = 300.44 MB, end = 372.7 MB, delta = 72.26 MB
+INFO     : 	Bitstream generation peak resident set memory usage = 372.7 MB
+           ***** Ending stage bitstream generation *****
+           
+INFO     : The entire flow of EFX_PNR took 7.49698 seconds.
+INFO     : 	The entire flow of EFX_PNR took 5.95312 seconds (approximately) in total CPU time.
+INFO     : The entire flow of EFX_PNR virtual memory usage: begin = 19.884 MB, end = 355.236 MB, delta = 335.352 MB
+INFO     : 	The entire flow of EFX_PNR peak virtual memory usage = 355.236 MB
+INFO     : The entire flow of EFX_PNR resident set memory usage: begin = 22.008 MB, end = 372.724 MB, delta = 350.716 MB
+INFO     : 	The entire flow of EFX_PNR peak resident set memory usage = 372.724 MB

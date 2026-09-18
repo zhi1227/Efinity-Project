@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<efx:tool_report xmlns:efx="http://www.efinixinc.com/tool_report" date="2026-09-15T17:13:37+0800" project="Ti60_Demo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/tool_report tool_report.xsd">
+
+  <efx:group name="System Resources">
+    <efx:group_data info="runtime" name="packing" severity="info" value="0|0:0:0"/>
+    <efx:group_data info="peak_rr" name="Peak RSS" severity="info" value="2415.41 MB"/>
+  </efx:group>
+
+  <efx:group name="Core Resources">
+    <efx:group_data name="Inputs" severity="info" value="66 / 1703"/>
+    <efx:group_data name="Outputs" severity="info" value="481 / 2267"/>
+    <efx:group_data name="XLRs" severity="info" value="42262 / 60800"/>
+    <efx:group_data name="Memory Blocks" severity="info" value="85 / 256"/>
+    <efx:group_data name="DSP Blocks" severity="info" value="14 / 160"/>
+  </efx:group>
+
+  <efx:group name="Interface">
+    <efx:group_data name="Missing Interface Pins" severity="info" value="90"/>
+    <efx:group_data name="Unassigned Core Pins" severity="info" value="0"/>
+  </efx:group>
+
+  <efx:group name="Timing">
+    <efx:group_data name="Worst Negative Slack (WNS)" severity="error" value="-37.608 ns"/>
+    <efx:group_data name="Worst Hold Slack (WHS)" severity="info" value="0.003 ns"/>
+    <efx:group_data name="tdqss_clk" severity="info" value="454.339 MHz"/>
+    <efx:group_data name="core_clk" severity="info" value="213.265 MHz"/>
+    <efx:group_data name="tac_clk" severity="info" value="412.882 MHz"/>
+    <efx:group_data name="twd_clk" severity="info" value="430.108 MHz"/>
+    <efx:group_data name="clk_sys" severity="info" value="128.717 MHz"/>
+    <efx:group_data name="clk_pixel" severity="info" value="19.589 MHz"/>
+    <efx:group_data name="cmos_pclk" severity="info" value="147.536 MHz"/>
+  </efx:group>
+
+  <efx:group name="Core Resources">
+    <efx:group_data name="Inputs" severity="info" value="66 / 1703"/>
+    <efx:group_data name="Outputs" severity="info" value="481 / 2267"/>
+    <efx:group_data name="XLRs" severity="info" value="42262 / 60800"/>
+    <efx:group_data name="Memory Blocks" severity="info" value="85 / 256"/>
+    <efx:group_data name="DSP Blocks" severity="info" value="14 / 160"/>
+  </efx:group>
+
+</efx:tool_report>

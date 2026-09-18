@@ -1,0 +1,1 @@
+"C:/Users/zhubinbin/Desktop/FPGA/Efinity/2025.1/bin/python.exe"  "C:/Users/zhubinbin/Desktop/FPGA/Efinity/2025.1/scripts/efx_run_pt_unified.py"  "Ti60_Demo"  "Titanium"  "Ti60F225"

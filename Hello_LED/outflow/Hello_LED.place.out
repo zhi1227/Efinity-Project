@@ -1,0 +1,165 @@
+           
+           Efinix FPGA Placement and Routing.
+           Version: 2025.1.110.5.9 
+           Compiled: Sep 19 2025.
+           
+           Copyright (C) 2013 - 2025 Efinix, Inc. All rights reserved.
+
+           
+           The Tool Is Based on VPR of University of Toronto,
+           a free open source code under MIT license.
+           
+           ***** Beginning stage netlist pre-processing ... *****
+INFO     : Successfully Read in Verific binary Netlist dump file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.vdb".
+INFO     : ***** Beginning VDB Netlist Checker ... *****
+INFO     : VDB Netlist Checker took 0.0006392 seconds.
+INFO     : 	VDB Netlist Checker took 0 seconds (approximately) in total CPU time.
+INFO     : VDB Netlist Checker virtual memory usage: begin = 121.472 MB, end = 121.54 MB, delta = 0.068 MB
+INFO     : 	VDB Netlist Checker peak virtual memory usage = 121.548 MB
+INFO     : VDB Netlist Checker resident set memory usage: begin = 131.948 MB, end = 132.308 MB, delta = 0.36 MB
+INFO     : 	VDB Netlist Checker peak resident set memory usage = 132.308 MB
+INFO     : ***** Ending VDB Netlist Checker ... *****
+INFO     : Reading core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Successfully read core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Found 0 constant generator nets.
+INFO     : Pass 0: Swept away 0 nets with no fanout.
+INFO     : Pass 0: Swept away 0 blocks with no fanout.
+INFO     : Swept away 0 nets and 0 blocks in total.
+INFO     : Removed 0 LUT buffers
+INFO     : Successfully created VPR logical netlist from Verific binary DataBase file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.vdb".
+INFO     : Netlist pre-processing took 0.0065345 seconds.
+INFO     : 	Netlist pre-processing took 0 seconds (approximately) in total CPU time.
+INFO     : Netlist pre-processing virtual memory usage: begin = 121.472 MB, end = 121.68 MB, delta = 0.208 MB
+INFO     : 	Netlist pre-processing peak virtual memory usage = 121.688 MB
+INFO     : Netlist pre-processing resident set memory usage: begin = 131.676 MB, end = 132.844 MB, delta = 1.168 MB
+INFO     : 	Netlist pre-processing peak resident set memory usage = 132.844 MB
+           ***** Ending stage netlist pre-processing *****
+           
+INFO     : Load Global Network took 0.568873 seconds.
+INFO     : 	Load Global Network took 0.109375 seconds (approximately) in total CPU time.
+INFO     : Load Global Network virtual memory usage: begin = 121.68 MB, end = 121.68 MB, delta = 0 MB
+INFO     : 	Load Global Network peak virtual memory usage = 121.688 MB
+INFO     : Load Global Network resident set memory usage: begin = 132.932 MB, end = 133.564 MB, delta = 0.632 MB
+INFO     : 	Load Global Network peak resident set memory usage = 133.564 MB
+INFO     : Reading C:/Efinity/2025.1/arch/.\rr_pb_hier_mapping.xml
+           ***** Beginning stage pre-packing ... *****
+           ***** Ending stage pre-packing *****
+           
+           ***** Beginning stage packing ... *****
+INFO     : Generate proto netlist for file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/work_pnr\Hello_LED.net_proto" took 0 seconds
+INFO     : Creating IO constraints file 'D:/yilingsi_fpga/Efinity_Project/Hello_LED/work_pnr\Hello_LED.io_place'
+INFO     : Packing took 0.004145 seconds.
+INFO     : 	Packing took 0 seconds (approximately) in total CPU time.
+INFO     : Packing virtual memory usage: begin = 121.68 MB, end = 121.68 MB, delta = 0 MB
+INFO     : 	Packing peak virtual memory usage = 121.688 MB
+INFO     : Packing resident set memory usage: begin = 134.1 MB, end = 134.452 MB, delta = 0.352 MB
+INFO     : 	Packing peak resident set memory usage = 134.452 MB
+           ***** Ending stage packing *****
+           
+INFO     : Read proto netlist file D:/yilingsi_fpga/Efinity_Project/Hello_LED/work_pnr\Hello_LED.net_proto
+INFO     : Read proto netlist for file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/work_pnr\Hello_LED.net_proto" took 0.001 seconds
+INFO     : Setup net and block data structure took 0.001 seconds
+INFO     : Reading core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Successfully read core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Counting 1 clocks that are not assigned to clock resources as global clocks.
+INFO     : Reading core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Successfully read core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+           ***** Beginning stage packed netlist loading ... *****
+INFO     : Read proto netlist file D:/yilingsi_fpga/Efinity_Project/Hello_LED/work_pnr\Hello_LED.net_proto
+INFO     : Read proto netlist for file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/work_pnr\Hello_LED.net_proto" took 0 seconds
+INFO     : Setup net and block data structure took 0.001 seconds
+INFO     : Packed netlist loading took 0.0010978 seconds.
+INFO     : 	Packed netlist loading took 0 seconds (approximately) in total CPU time.
+INFO     : Packed netlist loading virtual memory usage: begin = 151.316 MB, end = 151.316 MB, delta = 0 MB
+INFO     : 	Packed netlist loading peak virtual memory usage = 151.324 MB
+INFO     : Packed netlist loading resident set memory usage: begin = 165.368 MB, end = 165.396 MB, delta = 0.028 MB
+INFO     : 	Packed netlist loading peak resident set memory usage = 165.396 MB
+           ***** Ending stage packed netlist loading *****
+           
+           ***** Beginning stage pre-placement ... *****
+           
+           ***** Ending stage pre-placement *****
+           
+INFO     : No SDC file found.  Using default timing constraint of 1 ns.
+INFO     : NOTE:  Use --sdc_file <SDC_FILE> to override this behavior.
+INFO     : Creating clock 'clk' with 1 sources
+INFO     : Reading core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Successfully read core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Writing IO placement constraints to "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow\Hello_LED.interface.io"
+INFO     : Reading placement constraints from 'D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow\Hello_LED.interface.io'.
+INFO     : Reading placement constraints from 'D:/yilingsi_fpga/Efinity_Project/Hello_LED/work_pnr\Hello_LED.io_place'.
+WARNING  : clk has no assigned placement; it will be placed randomly.
+WARNING  : rst_n has no assigned placement; it will be placed randomly.
+WARNING  : led_data[7] has no assigned placement; it will be placed randomly.
+WARNING  : led_data[6] has no assigned placement; it will be placed randomly.
+WARNING  : led_data[5] has no assigned placement; it will be placed randomly.
+WARNING  : led_data[4] has no assigned placement; it will be placed randomly.
+WARNING  : led_data[3] has no assigned placement; it will be placed randomly.
+WARNING  : led_data[2] has no assigned placement; it will be placed randomly.
+WARNING  : led_data[1] has no assigned placement; it will be placed randomly.
+WARNING  : led_data[0] has no assigned placement; it will be placed randomly.
+INFO     : 10 IOs will have random placement.
+INFO     : Reading core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Successfully read core interface constraints file "D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.interface.csv"
+INFO     : Starting Global Placer with 24 threads ...
+            ----------     -------  --------------     -------
+             Iteration       WHPWL Worst Slack (ps) Convergence
+            ----------     -------  --------------     -------
+INFO     :           1        2704            -561        52.6%
+INFO     :           2        2355            -546        64.7%
+INFO     :           3        2152            -546        75.5%
+INFO     :           4        1989            -579        83.7%
+INFO     :           5        2003            -579        84.3%
+INFO     :           6        1958            -561        90.5%
+INFO     :           7        1929            -561        93.4%
+INFO     :           8        1894            -561        94.3%
+INFO     :           9        1892            -556        95.2%
+INFO     :          10        1775            -581        96.4%
+INFO     :          11        1776            -581        96.4%
+INFO     :          12        1775            -597        97.9%
+INFO     :          13        1766            -807        98.5%
+INFO     :          14        1777            -819        98.6%
+INFO     :          15        1774            -751        99.6%
+INFO     :          16        1766            -947        99.6%
+INFO     : Starting Annealer
+            ----------     -------  --------------     -------
+             Iteration       WHPWL  Delay Max (ps)     R Limit
+            ----------     -------  --------------     -------
+INFO     :           0         131            1687        30.0
+INFO     :           1         125            1870        28.9
+INFO     :           2         101            1584        27.4
+INFO     :           3         118            1584        26.1
+INFO     :           4         118            1527        24.7
+INFO     :           5         119            1527        23.5
+INFO     :           6         123            1496        22.1
+INFO     :           7         140            1490        21.1
+INFO     :           8         144            1490        19.9
+INFO     :           9         143            1490        19.0
+INFO     :          10         142            1496        17.9
+INFO     :          11         139            1496        17.1
+INFO     :          12         139            1496        16.1
+INFO     :          13         140            1469        15.4
+INFO     :          14         143            1469        14.5
+INFO     :          15         142            1469        13.8
+INFO     :          16         140            1496        13.0
+INFO     :          17         138            1486        12.3
+INFO     :          18         122            1486        11.7
+INFO     :          19         119            1486        11.1
+INFO     :          20         118            1486        10.5
+INFO     :          21         118            1486        10.0
+INFO     :          22         120            1486         9.5
+INFO     :          23         124            1486         9.0
+INFO     :          24         124            1486         8.5
+INFO     : Counted delay computer calls: 177524
+Placement successful: 58 cells are placed
+INFO     : Peak congestion smeared over 1/4 of the chip is 0.0100603 at 219,212
+INFO     : Congestion-weighted HPWL per net: 18.7039
+INFO     : Post-placement cluster-level checks is successful
+INFO     : Checks is successful
+INFO     : Placement took 0.990868 seconds.
+INFO     : 	Placement took 1.07812 seconds (approximately) in total CPU time.
+INFO     : Placement virtual memory usage: begin = 89 MB, end = 174.748 MB, delta = 85.748 MB
+INFO     : 	Placement peak virtual memory usage = 190.496 MB
+INFO     : Placement resident set memory usage: begin = 105.34 MB, end = 186.368 MB, delta = 81.028 MB
+INFO     : 	Placement peak resident set memory usage = 206.944 MB
+INFO     : Post-placement primitive-level checks is successful

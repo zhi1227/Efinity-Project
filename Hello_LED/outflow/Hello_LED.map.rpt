@@ -1,0 +1,81 @@
+Efinity Synthesis report for project Hello_LED
+Version: 2025.1.110.5.9
+Generated at: Sep 14, 2026 22:35:55
+Copyright (C) 2013 - 2025  All rights reserved.
+
+Top-level Entity Name : Hello_LED
+
+family : Titanium
+device : Ti60F225
+project : Hello_LED
+project-xml : D:\yilingsi_fpga\Efinity_Project\Hello_LED\Hello_LED.xml
+root : Hello_LED
+I,include : D:/yilingsi_fpga/Efinity_Project/Hello_LED
+output-dir : D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow
+work-dir : D:/yilingsi_fpga/Efinity_Project/Hello_LED/work_syn
+write-efx-verilog : D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.map.v
+binary-db : D:/yilingsi_fpga/Efinity_Project/Hello_LED/outflow/Hello_LED.vdb
+insert-ios : 0
+insert-gclk : 0
+max-carry-cascade : 320
+max-dsp-cascade : 16
+max_mult : -1
+max_ram : -1
+mode : speed
+veri_options : verilog_mode=verilog_2k,vhdl_mode=vhdl_2008
+num_srl : -1
+
+File List:
+
+D:\yilingsi_fpga\Efinity_Project\Hello_LED\Hello_LED.v
+D:\yilingsi_fpga\Efinity_Project\Hello_LED\led_addr_display.v
+
+### ### Report Section Start ### ###
+
+
+### ### EFX_FF CE enables (begin) ### ### ###
+Total number of enable signals: 1
+Total number of FFs with enable signals: 8
+CE signal <u_led_addr_display/equal_6/n49>, number of controlling flip flops: 8
+### ### EFX_FF CE enables (end) ### ### ###
+
+### ### EFX_FF SR set/reset (begin) ### ### ###
+Total number of set/reset signals: 1
+Total number of FFs with set/reset signals: 33
+SR signal <rst_n>, number of controlling flip flops: 33
+### ### EFX_FF SR set/reset (end) ### ### ###
+
+### ### Module Resource Usage Distribution Estimates (begin) ### ###
+
+**Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
+
+Module                                         FFs        SRLs        ADDs        LUTs    COMB4s      RAMs DSP/MULTs
+--------------------------------------         ---        ----        ----        ----      ----      ---- ---------
+Hello_LED:Hello_LED                          33(0)        0(0)       31(0)       23(0)      0(0)      0(0)      0(0)
+ +u_led_addr_display:led_addr_display       33(33)        0(0)      31(31)      23(23)      0(0)      0(0)      0(0)
+
+### ### Module Resource Usage Distribution Estimates (end) ### ###
+
+
+### ### Clock Load Distribution Report (begin) ### ###
+
+ Clock     Flip-Flops     Shift-Regs   Memory Ports    Multipliers
+ -----     ----------     ----------   ------------    -----------
+   clk             33              0              0              0
+
+### ### Clock Load Distribution Report (end) ### ###
+
+### ### Resource Summary (begin) ### ### ### 
+INPUT  PORTS    : 	2
+OUTPUT PORTS    : 	8
+
+EFX_ADD         : 	31
+EFX_LUT4        : 	23
+   1-2  Inputs  : 	2
+   3    Inputs  : 	15
+   4    Inputs  : 	6
+EFX_FF          : 	33
+### ### Resource Summary (end) ### ### ###
+
+Plain synthesis (without verilog dump and post-map checks) time : 7s
+Elapsed synthesis time : 7s

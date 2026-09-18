@@ -1,0 +1,32 @@
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 16, 2026 09:48:24
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 16, 2026 23:42:15
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] cannot open Verilog file 'D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO\W0_FIFO.v' (SORT-1002) 
+[EFX-0010 VERI-ERROR] cannot open Verilog file 'D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO\R0_FIFO.v' (SORT-1002) 
+[EFX-0010 VERI-ERROR] cannot open Verilog file 'D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.v' (SORT-1002) 
+[EFX-0010 VERI-ERROR] cannot open Verilog file 'D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.v' (SORT-1002) 
+[EFX-0010 VERI-ERROR] cannot open Verilog file 'D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_64\W0_FIFO_64.v' (SORT-1002) 
+[EFX-0010 VERI-ERROR] cannot open Verilog file 'D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\ip/FIFO_W48R24\FIFO_W48R24.v' (SORT-1002) 
+[EFX-0010 VERI-ERROR] cannot open Verilog file 'D:\yilingsi_fpga\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_8\R0_FIFO_8.v' (SORT-1002) 
+[EFX-0021 ERROR] Elaboration of module 'example_top' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 16, 2026 23:46:07
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 16, 2026 23:49:44
+///////////////////////////////////
+
