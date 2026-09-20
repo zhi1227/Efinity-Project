@@ -1,0 +1,30 @@
+# Local editor settings and document lock files
+.vscode/
+~$*
+~$$*
+
+# FPGA synthesis, place/route and simulation caches
+work_syn/
+work_pnr/
+work_dbg/
+work_pt/
+greybox_tmp/
+work/
+db/
+incremental_db/
+*.wlf
+*.vcd
+*.qws
+transcript
+__pycache__/
+
+# Quartus reference-project generated output
+/FPGA_Sobel/project/output_files/
+/FPGA_Sobel/project/simulation/
+/FPGA_Sobel/project/PLLJ_PLLSPE_INFO.txt
+/FPGA_Sobel/project/*.jic
+
+# Keep the tested Ti60 bitstream and timing report, not intermediate netlists
+/Ti60F225_GitHub_FPGA_Sobel_Port/outflow/*
+!/Ti60F225_GitHub_FPGA_Sobel_Port/outflow/Ti60_Demo.bit
+!/Ti60F225_GitHub_FPGA_Sobel_Port/outflow/Ti60_Demo.timing.rpt
