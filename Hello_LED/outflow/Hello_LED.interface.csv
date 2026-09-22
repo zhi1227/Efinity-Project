@@ -1,8 +1,0 @@
-
-# Efinity Interface Configuration
-# Version: 2025.1.110.5.9
-# Date: 2026-09-14 22:36
-
-# Copyright (C) 2013 - 2025 Efinix Inc. All rights reserved.
-
-# [required | optional] (input|output|clkout), x, y, z, __bypass__|[~|!]<clock>, [[~|!]<pin_name>] | __vcc__ | __gnd__
