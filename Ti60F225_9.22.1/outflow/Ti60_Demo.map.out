@@ -1,0 +1,1136 @@
+INFO     : Efinix FPGA Synthesis.
+INFO     : Version: 2025.1.110.5.9
+INFO     : Compiled: Sep 19 2025.
+INFO     : 
+INFO     : Copyright (C) 2013 - 2025 Efinix, Inc. All rights reserved.
+
+INFO     : Reading project database "D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction/Ti60_Demo.xml"
+INFO     : Analyzing Verilog file 'D:/Efinity/sim_models/maplib/efinix_peri_lib.v' [VERI-1482]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(8): compiling module 'EFX_IBUF' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(16): compiling module 'EFX_OBUF' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(23): compiling module 'EFX_IO_BUF' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(33): compiling module 'EFX_CLKOUT' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(41): compiling module 'EFX_IREG' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(51): compiling module 'EFX_OREG' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(60): compiling module 'EFX_IOREG' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(75): compiling module 'EFX_IDDIO' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(87): compiling module 'EFX_ODDIO' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(99): compiling module 'EFX_GPIO_V1' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(124): compiling module 'EFX_GPIO_V2' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(149): compiling module 'EFX_GPIO_V3' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(186): compiling module 'EFX_PLL_V1' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(205): compiling module 'EFX_PLL_V2' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(231): compiling module 'EFX_PLL_V3' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(279): compiling module 'EFX_OSC_V1' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(285): compiling module 'EFX_OSC_V3' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(294): compiling module 'EFX_FPLL_V1' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(348): compiling module 'EFX_JTAG_V1' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(357): compiling module 'EFX_JTAG_CTRL' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(364): compiling module 'EFX_LVDS_RX_V1' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(381): compiling module 'EFX_LVDS_TX_V1' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(399): compiling module 'EFX_LVDS_RX_V2' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(426): compiling module 'EFX_LVDS_TX_V2' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_peri_lib.v(446): compiling module 'EFX_LVDS_BIDIR_V2' [VERI-1018]
+INFO     : Reading project database "D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction/Ti60_Demo.xml"
+INFO     : ***** Beginning Analysis ... *****
+INFO     : default VHDL library search path is now "D:/Efinity/sim_models/vhdl/packages/vhdl_2008" [VHDL-1504]
+INFO     : Analyzing Verilog file 'D:/Efinity/sim_models/maplib/efinix_maplib.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity/sim_models/maplib/efinix_peri_lib.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity/sim_models/maplib/efinix_maplib.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity/sim_models/maplib/efinix_peri_lib.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO\W0_FIFO.sv' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO\R0_FIFO.sv' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/dsi_tx\dsi_tx.sv' [VERI-1482]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/dsi_tx\dsi_tx.sv(6312): undeclared symbol '**', assumed default net type '**' [VERI-2561]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/dsi_tx\dsi_tx.sv(6312): undeclared symbol '**', assumed default net type '**' [VERI-2561]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/csi_rx\csi_rx.sv' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv' [VERI-1482]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(267): analyzing included file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl/ddr3_controller.vh' [VERI-1328]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(267): back to file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv' [VERI-2320]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(590): undeclared symbol '**', assumed default net type '**' [VERI-2561]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(595): analyzing included file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl/ddr3_controller.vh' [VERI-1328]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(595): back to file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv' [VERI-2320]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1604): analyzing included file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl/ddr3_controller.vh' [VERI-1328]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1604): back to file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv' [VERI-2320]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1858): analyzing included file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl/ddr3_controller.vh' [VERI-1328]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1858): back to file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv' [VERI-2320]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2165): analyzing included file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl/ddr3_controller.vh' [VERI-1328]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2165): back to file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv' [VERI-2320]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2616): analyzing included file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl/ddr3_controller.vh' [VERI-1328]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2616): back to file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv' [VERI-2320]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_64\W0_FIFO_64.sv' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/FIFO_W48R24\FIFO_W48R24.sv' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_8\R0_FIFO_8.sv' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_32\W0_FIFO_32.sv' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_16\W0_FIFO_16.sv' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v' [VERI-1482]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(778): analyzing included file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024/bram_ini.vh' [VERI-1328]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(778): back to file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v' [VERI-2320]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(1050): analyzing included file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024/bram_decompose.vh' [VERI-1328]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(1050): back to file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v' [VERI-2320]
+INFO     : Analyzing Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/FIFO36x512\FIFO36x512.sv' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\cmos_i2c\i2c_timing_ctrl_16bit.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\cmos_i2c\CMOS_Capture_RAW_Gray.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\cmos_i2c\I2C_MT9M001_Gray_Config.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\lcd_para.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\lcd_driver.v' [VERI-1482]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\lcd_driver.v(37): analyzing included file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src/lcd_para.v' [VERI-1328]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\lcd_driver.v(37): back to file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\lcd_driver.v' [VERI-2320]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\hdmi_tx_ip.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\encode.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\serdes_4b_10to1.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\cmos_i2c\I2C_SC130GS_12801024_4Lanes_Config.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\Sensor_Image_XYCrop.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\cmos_i2c\i2c_timing_ctrl_reg16_dat16.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\cmos_i2c\I2C_AR0135_1280720_Config.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\AXI4_AWARMux.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\axi4_ctrl.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\tmds_channel.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\rgb2dvi.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\cmos_i2c\I2C_OV5640_1280720_Config.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\uart\integer_divider.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\uart\uart_receiver.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\uart\FPGA_UART_Test.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\uart\uart_transfer.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\uart\precise_divider.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\rgb565_to_gray.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\rgb565_to_rgb888.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\median3x3.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\sobel3x3.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\nms3x3.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\canny_threshold.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\hysteresis_local.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\face_reader_720p.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\low_pass_realtime.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\morph_erode3x3_stream.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\true_ccl.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_filter_720p.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\rgb565_to_ycbcr_skin.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\edge_despeckle.v' [VERI-1482]
+INFO     : Analysis took 0.541997 seconds.
+INFO     : 	Analysis took 0.453125 seconds (approximately) in total CPU time.
+INFO     : Analysis virtual memory usage: begin = 53.636 MB, end = 68.068 MB, delta = 14.432 MB
+INFO     : 	Analysis peak virtual memory usage = 68.068 MB
+INFO     : Analysis resident set memory usage: begin = 57.644 MB, end = 81.316 MB, delta = 23.672 MB
+INFO     : 	Analysis peak resident set memory usage = 81.316 MB
+INFO     : ***** Ending Analysis ... *****
+INFO     : ***** Beginning Elaboration ... *****
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(612): port 'cal_shift_val' remains unconnected for this instance [VERI-1927]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(962): port 'axi_awid' remains unconnected for this instance [VERI-1927]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(1669): port 'TMDS_Clk_p' remains unconnected for this instance [VERI-1927]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(6): compiling module 'example_top' [VERI-1018]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(443): expression size 32 truncated to fit in target size 1 [VERI-1209]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(184): port 'wr_busy' remains unconnected for this instance [VERI-1927]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(184): port 'wr_data' is not connected on this instance [VERI-2435]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(49): compiling module 'DdrCtrl' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1859): compiling module 'efx_ddr3_soft_controller_f9db9b463f784e0ead4594b0b8e61d81' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2496): port '**' is not connected on this instance [VERI-2435]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2496): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2611): compiling module '**' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2611): expression size ** truncated to fit in target size ** [VERI-1209]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(884): compiling module 'EFX_SRL8' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2496): actual bit length ** differs from formal bit length *** for port '**' [VERI-1330]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2611): compiling module '**' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2611): expression size ** truncated to fit in target size ** [VERI-1209]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2611): compiling module '**' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2611): expression size ** truncated to fit in target size ** [VERI-1209]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2496): actual bit length ** differs from formal bit length *** for port '**' [VERI-1330]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3274): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1663): compiling module '**' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(590): port '**' remains unconnected for this instance [VERI-1927]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(590): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1786): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1853): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1786): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1599): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1599): extracting RAM for identifier '**' [VERI-2571]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(262): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(222): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1599): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1599): extracting RAM for identifier '**' [VERI-2571]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1599): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1599): extracting RAM for identifier '**' [VERI-2571]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3295): compiling module 'efx_fifo_top_f9db9b463f784e0ead4594b0b8e61d81(FAMILY="TITANIUM",BYPASS_RESET_SYNC=1,MODE="FWFT",DEPTH=64,DATA_WIDTH=128,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=33,PROG_FULL_NEGATE=33,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=2)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3615): compiling module 'efx_fifo_ram_f9db9b463f784e0ead4594b0b8e61d81(FAMILY="TITANIUM",WR_DEPTH=64,RD_DEPTH=64,WDATA_WIDTH=128,RDATA_WIDTH=128,WADDR_WIDTH=6,RADDR_WIDTH=6,RAM_MUX_RATIO=1)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3652): extracting RAM for identifier 'ram' [VERI-2571]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(4256): compiling module 'efx_fifo_ctl_f9db9b463f784e0ead4594b0b8e61d81(SYNC_CLK=0,MODE="FWFT",WR_DEPTH=64,WADDR_WIDTH=6,RADDR_WIDTH=6,PROG_FULL_ASSERT=33,PROG_FULL_NEGATE=33,PROG_EMPTY_NEGATE=2,OUTPUT_REG=1,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(4699): compiling module 'efx_fifo_bin2gray_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=7)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(4129): compiling module 'efx_asyncreg_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=7,ACTIVE_LOW=0)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3931): compiling module 'efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=7)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3931): compiling module 'efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=6)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3931): compiling module 'efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3931): compiling module 'efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=4)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3931): compiling module 'efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=3)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3931): compiling module 'efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=2)' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(590): actual bit length ** differs from formal bit length *** for port '**' [VERI-1330]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1599): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1599): extracting RAM for identifier '**' [VERI-2571]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1599): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1599): extracting RAM for identifier '**' [VERI-2571]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1460): port '**' remains unconnected for this instance [VERI-1927]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1460): compiling module '**' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(4817): port '**' remains unconnected for this instance [VERI-1927]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(4817): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3295): compiling module 'efx_fifo_top_f9db9b463f784e0ead4594b0b8e61d81(FAMILY="TITANIUM",BYPASS_RESET_SYNC=1,DEPTH=64,DATA_WIDTH=1,PIPELINE_REG=0,OPTIONAL_FLAGS=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=62,PROG_FULL_NEGATE=62,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=2)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3615): compiling module 'efx_fifo_ram_f9db9b463f784e0ead4594b0b8e61d81(FAMILY="TITANIUM",WR_DEPTH=64,RD_DEPTH=64,WDATA_WIDTH=1,RDATA_WIDTH=1,WADDR_WIDTH=6,RADDR_WIDTH=6,RAM_MUX_RATIO=1)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(3652): extracting RAM for identifier 'ram' [VERI-2571]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(4256): compiling module 'efx_fifo_ctl_f9db9b463f784e0ead4594b0b8e61d81(SYNC_CLK=0,WR_DEPTH=64,WADDR_WIDTH=6,RADDR_WIDTH=6,PIPELINE_REG=0,ALMOST_FLAG=0,PROG_FULL_ASSERT=62,PROG_FULL_NEGATE=62,PROG_EMPTY_NEGATE=2,OUTPUT_REG=1,HANDSHAKE_FLAG=0,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(4817): actual bit length ** differs from formal bit length *** for port '**' [VERI-1330]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(4817): input port '**' is not connected on this instance [VDB-1013]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2160): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2160): extracting RAM for identifier '**' [VERI-2571]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1460): expression size ** truncated to fit in target size ** [VERI-1209]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1460): net '**' does not have a driver [VDB-1002]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(590): net '**' does not have a driver [VDB-1002]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(590): input port '**' is not connected on this instance [VDB-1013]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1786): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1853): compiling module '**' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(1726): compiling module '**' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(2496): input port '**' is not connected on this instance [VDB-1013]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv(117): input port 'wr_data[127]' is not connected on this instance [VDB-1013]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(579): actual bit length 4 differs from formal bit length 8 for port 'axi_aid' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(586): actual bit length 4 differs from formal bit length 8 for port 'axi_wid' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(595): actual bit length 4 differs from formal bit length 8 for port 'axi_bid' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(601): actual bit length 4 differs from formal bit length 8 for port 'axi_rid' [VERI-1330]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\AXI4_AWARMux.v(11): compiling module 'AXI4_AWARMux(AID_LEN=4)' [VERI-1018]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\AXI4_AWARMux.v(90): expression size 2 truncated to fit in target size 1 [VERI-1209]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\cmos_i2c\i2c_timing_ctrl_16bit.v(32): compiling module 'i2c_timing_ctrl_16bit(CLK_FREQ=96000000,I2C_FREQ=50000)' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\cmos_i2c\I2C_OV5640_1280720_Config.v(17): compiling module 'I2C_OV5640_1280720_Config' [VERI-1018]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(713): expression size 3 truncated to fit in target size 2 [VERI-1209]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(714): expression size 5 truncated to fit in target size 4 [VERI-1209]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\Sensor_Image_XYCrop.v(32): compiling module 'Sensor_Image_XYCrop(IMAGE_HSIZE_SOURCE=2560,IMAGE_VSIZE_SOURCE=720,IMAGE_HSIZE_TARGET=2560,IMAGE_YSIZE_TARGET=720,PIXEL_DATA_WIDTH=8)' [VERI-1018]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(861): actual bit length 64 differs from formal bit length 8 for port 'image_out_data' [VERI-1330]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\axi4_ctrl.v(2): compiling module 'axi4_ctrl(C_ID_LEN=4,C_RD_END_ADDR=1843200,C_W_WIDTH=8,C_R_WIDTH=16)' [VERI-1018]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\axi4_ctrl.v(91): expression size 32 truncated to fit in target size 16 [VERI-1209]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\axi4_ctrl.v(113): expression size 3 truncated to fit in target size 2 [VERI-1209]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\axi4_ctrl.v(114): expression size 3 truncated to fit in target size 2 [VERI-1209]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\axi4_ctrl.v(196): expression size 3 truncated to fit in target size 2 [VERI-1209]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\axi4_ctrl.v(238): expression size 2 truncated to fit in target size 1 [VERI-1209]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\axi4_ctrl.v(257): expression size 23 truncated to fit in target size 22 [VERI-1209]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(116): port 'a_wr_rst_i' remains unconnected for this instance [VERI-1927]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(49): compiling module 'W0_FIFO_8' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(316): compiling module 'efx_fifo_top_e28a7d4c8cc34a9cb9a97c74b3f9b99f(FAMILY="TITANIUM",SYNC_STAGE=3,MODE="FWFT",DEPTH=8192,DATA_WIDTH=8,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=128,PROG_FULL_NEGATE=128,PROGRAMMABLE_EMPTY="STATIC_SINGLE",PROG_EMPTY_ASSERT=127,PROG_EMPTY_NEGATE=128,ASYM_WIDTH_RATIO=8)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(1376): compiling module 'efx_resetsync_e28a7d4c8cc34a9cb9a97c74b3f9b99f(ACTIVE_LOW=0)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(1421): compiling module 'efx_asyncreg_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(636): compiling module 'efx_fifo_ram_e28a7d4c8cc34a9cb9a97c74b3f9b99f(FAMILY="TITANIUM",WR_DEPTH=8192,RDATA_WIDTH=128,WADDR_WIDTH=13,OUTPUT_REG=0,RAM_MUX_RATIO=16)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(673): extracting RAM for identifier 'ram' [VERI-2571]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(948): compiling module 'efx_fifo_ctl_e28a7d4c8cc34a9cb9a97c74b3f9b99f(SYNC_CLK=0,SYNC_STAGE=3,MODE="FWFT",WR_DEPTH=8192,WADDR_WIDTH=13,ASYM_WIDTH_RATIO=8,RAM_MUX_RATIO=16,PROG_FULL_ASSERT=128,PROG_FULL_NEGATE=128,PROGRAMMABLE_EMPTY="STATIC_SINGLE",PROG_EMPTY_ASSERT=127,PROG_EMPTY_NEGATE=128,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(1251): expression size 32 truncated to fit in target size 14 [VERI-1209]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(1252): expression size 32 truncated to fit in target size 10 [VERI-1209]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(227): compiling module 'efx_fifo_bin2gray_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=10)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(1421): compiling module 'efx_asyncreg_e28a7d4c8cc34a9cb9a97c74b3f9b99f(ASYNC_STAGE=3,WIDTH=10,ACTIVE_LOW=0)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=10)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=9)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=8)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=7)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=6)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=4)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=3)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=2)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(227): compiling module 'efx_fifo_bin2gray_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=14)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(1421): compiling module 'efx_asyncreg_e28a7d4c8cc34a9cb9a97c74b3f9b99f(ASYNC_STAGE=3,WIDTH=14,ACTIVE_LOW=0)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=14)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=13)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=12)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(139): compiling module 'efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=11)' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv(95): input port 'a_wr_rst_i' is not connected on this instance [VDB-1013]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(116): port 'a_wr_rst_i' remains unconnected for this instance [VERI-1927]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(49): compiling module 'R0_FIFO_16' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(316): compiling module 'efx_fifo_top_6027459dad3e4cdabe6337b18ba70805(FAMILY="TITANIUM",SYNC_STAGE=3,MODE="FWFT",DATA_WIDTH=128,PROGRAMMABLE_FULL="STATIC_SINGLE",PROG_FULL_ASSERT=256,PROG_FULL_NEGATE=256,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3,ASYM_WIDTH_RATIO=1)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(1376): compiling module 'efx_resetsync_6027459dad3e4cdabe6337b18ba70805(ACTIVE_LOW=0)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(1421): compiling module 'efx_asyncreg_6027459dad3e4cdabe6337b18ba70805(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(636): compiling module 'efx_fifo_ram_6027459dad3e4cdabe6337b18ba70805(FAMILY="TITANIUM",RD_DEPTH=4096,WDATA_WIDTH=128,RDATA_WIDTH=16,RADDR_WIDTH=12,OUTPUT_REG=0,RAM_MUX_RATIO=8)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(673): extracting RAM for identifier 'ram' [VERI-2571]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(948): compiling module 'efx_fifo_ctl_6027459dad3e4cdabe6337b18ba70805(SYNC_CLK=0,SYNC_STAGE=3,MODE="FWFT",RADDR_WIDTH=12,ASYM_WIDTH_RATIO=1,RAM_MUX_RATIO=8,PROGRAMMABLE_FULL="STATIC_SINGLE",PROG_FULL_ASSERT=256,PROG_FULL_NEGATE=256,PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(1236): expression size 32 truncated to fit in target size 10 [VERI-1209]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(1237): expression size 32 truncated to fit in target size 13 [VERI-1209]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(227): compiling module 'efx_fifo_bin2gray_6027459dad3e4cdabe6337b18ba70805(WIDTH=13)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(1421): compiling module 'efx_asyncreg_6027459dad3e4cdabe6337b18ba70805(ASYNC_STAGE=3,WIDTH=13,ACTIVE_LOW=0)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(139): compiling module 'efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=13)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(139): compiling module 'efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=12)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(139): compiling module 'efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=11)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(139): compiling module 'efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=10)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(139): compiling module 'efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=9)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(139): compiling module 'efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=8)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(139): compiling module 'efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=7)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(139): compiling module 'efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=6)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(139): compiling module 'efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(139): compiling module 'efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=4)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(139): compiling module 'efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=3)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(139): compiling module 'efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=2)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(227): compiling module 'efx_fifo_bin2gray_6027459dad3e4cdabe6337b18ba70805(WIDTH=10)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(1421): compiling module 'efx_asyncreg_6027459dad3e4cdabe6337b18ba70805(ASYNC_STAGE=3,WIDTH=10,ACTIVE_LOW=0)' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv(95): input port 'a_wr_rst_i' is not connected on this instance [VDB-1013]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\axi4_ctrl.v(464): expression size 17 truncated to fit in target size 16 [VERI-1209]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\axi\axi4_ctrl.v(574): expression size 23 truncated to fit in target size 22 [VERI-1209]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(934): actual bit length 32 differs from formal bit length 4 for port 'axi_bid' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(935): actual bit length 32 differs from formal bit length 2 for port 'axi_bresp' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(936): actual bit length 32 differs from formal bit length 1 for port 'axi_bvalid' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(946): actual bit length 32 differs from formal bit length 2 for port 'axi_rresp' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(954): actual bit length 64 differs from formal bit length 8 for port 'wframe_data' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(961): actual bit length 8 differs from formal bit length 32 for port 'tp_o' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(963): expression size 8 truncated to fit in target size 4 [VERI-1209]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\rgb565_to_rgb888.v(41): compiling module 'rgb565_to_rgb888' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\lcd_driver.v(39): compiling module 'lcd_driver' [VERI-1018]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\lcd_driver.v(145): expression size 14 truncated to fit in target size 12 [VERI-1209]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(1014): actual bit length 24 differs from formal bit length 48 for port 'lcd_data' [VERI-1330]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\rgb565_to_gray.v(38): compiling module 'rgb565_to_gray' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v(46): compiling module 'line_buffer_3x3' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v(102): extracting RAM for identifier 'prev_line_1' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v(104): extracting RAM for identifier 'prev_line_2' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\median3x3.v(30): compiling module 'median3x3' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\sobel3x3.v(41): compiling module 'sobel3x3' [VERI-1018]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\sobel3x3.v(94): expression size 13 truncated to fit in target size 12 [VERI-1209]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\sobel3x3.v(95): expression size 13 truncated to fit in target size 12 [VERI-1209]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v(46): compiling module 'line_buffer_3x3(DWIDTH=14)' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v(102): extracting RAM for identifier 'prev_line_1' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v(104): extracting RAM for identifier 'prev_line_2' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\nms3x3.v(40): compiling module 'nms3x3' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\canny_threshold.v(42): compiling module 'canny_threshold(USE_PORTS=1'b1)' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v(46): compiling module 'line_buffer_3x3(DWIDTH=2)' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v(102): extracting RAM for identifier 'prev_line_1' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v(104): extracting RAM for identifier 'prev_line_2' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\hysteresis_local.v(35): compiling module 'hysteresis_local' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\edge_despeckle.v(21): compiling module 'edge_despeckle' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v(46): compiling module 'line_buffer_3x3(DWIDTH=1)' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v(102): extracting RAM for identifier 'prev_line_1' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v(104): extracting RAM for identifier 'prev_line_2' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\face_reader_720p.v(1): compiling module 'face_reader_720p' [VERI-1018]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\face_reader_720p.v(22): expression size 32 truncated to fit in target size 8 [VERI-1209]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(1459): actual bit length 10 differs from formal bit length 11 for port 'pixel_y' [VERI-1330]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\low_pass_realtime.v(4): compiling module 'low_pass_realtime' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\low_pass_realtime.v(126): compiling module 'line_delay_bit' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\low_pass_realtime.v(138): extracting RAM for identifier 'mem' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\morph_erode3x3_stream.v(7): compiling module 'morph_erode3x3_stream' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v(8): compiling module 'streaming_connected_components' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v(181): extracting RAM for identifier 'min_x_buf0' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v(181): extracting RAM for identifier 'max_x_buf0' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v(182): extracting RAM for identifier 'min_y_buf0' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v(182): extracting RAM for identifier 'max_y_buf0' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v(183): extracting RAM for identifier 'area_buf0' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v(184): extracting RAM for identifier 'min_x_buf1' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v(184): extracting RAM for identifier 'max_x_buf1' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v(185): extracting RAM for identifier 'min_y_buf1' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v(185): extracting RAM for identifier 'max_y_buf1' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v(186): extracting RAM for identifier 'area_buf1' [VERI-2571]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\true_ccl.v(224): port 'rst_busy' remains unconnected for this instance [VERI-1927]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\true_ccl.v(235): concatenation with an unsized literal will be treated as 32 bits [VERI-1320]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\true_ccl.v(241): port 'rst_busy' remains unconnected for this instance [VERI-1927]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\true_ccl.v(7): compiling module 'true_ccl' [VERI-1018]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\true_ccl.v(75): expression size 12 truncated to fit in target size 11 [VERI-1209]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\true_ccl.v(176): latch inferred for net 'PreCombCur' [VERI-2580]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/FIFO36x512\FIFO36x512.sv(98): port 'a_wr_rst_i' remains unconnected for this instance [VERI-1927]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/FIFO36x512\FIFO36x512.sv(49): compiling module 'FIFO36x512' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/FIFO36x512\FIFO36x512.sv(298): compiling module 'efx_fifo_top_6c202e0ff01b459189da89d80c75a4c4(FAMILY="TITANIUM",SYNC_CLK=1,MODE="FWFT",DATA_WIDTH=36,PIPELINE_REG=0,OPTIONAL_FLAGS=0,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=4,PROG_FULL_NEGATE=4,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0,OVERFLOW_PROTECT=0,UNDERFLOW_PROTECT=0)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/FIFO36x512\FIFO36x512.sv(1358): compiling module 'efx_resetsync_6c202e0ff01b459189da89d80c75a4c4(ACTIVE_LOW=0)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/FIFO36x512\FIFO36x512.sv(1403): compiling module 'efx_asyncreg_6c202e0ff01b459189da89d80c75a4c4(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/FIFO36x512\FIFO36x512.sv(618): compiling module 'efx_fifo_ram_6c202e0ff01b459189da89d80c75a4c4(FAMILY="TITANIUM",WDATA_WIDTH=36,RDATA_WIDTH=36,OUTPUT_REG=0,RAM_MUX_RATIO=1)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/FIFO36x512\FIFO36x512.sv(655): extracting RAM for identifier 'ram' [VERI-2571]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/FIFO36x512\FIFO36x512.sv(930): compiling module 'efx_fifo_ctl_6c202e0ff01b459189da89d80c75a4c4(MODE="FWFT",PIPELINE_REG=0,ALMOST_FLAG=0,PROG_FULL_ASSERT=4,PROG_FULL_NEGATE=4,HANDSHAKE_FLAG=0)' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/FIFO36x512\FIFO36x512.sv(86): input port 'a_wr_rst_i' is not connected on this instance [VDB-1013]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\true_ccl.v(221): actual bit length 32 differs from formal bit length 36 for port 'rdata' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\true_ccl.v(235): actual bit length 66 differs from formal bit length 36 for port 'wdata' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\true_ccl.v(238): actual bit length 34 differs from formal bit length 36 for port 'rdata' [VERI-1330]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(144): port 'addr' is not connected on this instance [VERI-2435]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(49): compiling module 'BlockRam90x1024' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(147): compiling module 'efx_bram_c049287cb79b40dcbc066cb296c918cf_renamed_due_excessive_length_1' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(2719): compiling module 'efx_true_dual_port_ram_c049287cb79b40dcbc066cb296c918cf_renamed_due_excessive_length_2' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(971): compiling module 'dpram_wrapper_mwm_c049287cb79b40dcbc066cb296c918cf_renamed_due_excessive_length_3' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(1091): expression size 32 truncated to fit in target size 1 [VERI-1209]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(1092): expression size 32 truncated to fit in target size 1 [VERI-1209]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(1104): expression size 32 truncated to fit in target size 1 [VERI-1209]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(1105): expression size 32 truncated to fit in target size 1 [VERI-1209]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(1108): expression size 32 truncated to fit in target size 1 [VERI-1209]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(1109): expression size 32 truncated to fit in target size 1 [VERI-1209]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(657): compiling module 'dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1)' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(754): compiling module 'EFX_DPRAM10(CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,ADDRENA_POLARITY=1,RSTA_POLARITY=1,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,ADDRENB_POLARITY=1,RSTB_POLARITY=1,READ_WIDTH_A=10,WRITE_WIDTH_A=10,READ_WIDTH_B=10,WRITE_WIDTH_B=10,OUTPUT_REG_A=0,OUTPUT_REG_B=0)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(657): compiling module 'dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=1)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(657): compiling module 'dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=2)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(657): compiling module 'dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=3)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(657): compiling module 'dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=4)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(657): compiling module 'dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=5)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(657): compiling module 'dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=6)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(657): compiling module 'dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=7)' [VERI-1018]
+INFO     : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(657): compiling module 'dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=8)' [VERI-1018]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(133): input port 'addr[9]' is not connected on this instance [VDB-1013]
+WARNING  : D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/BlockRam90x1024\BlockRam90x1024.v(133): input port 'clke' remains unconnected for this instance [VDB-1053]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v(134): actual bit length 27 differs from formal bit length 26 for port 'Count' [VERI-1330]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_filter_720p.v(4): compiling module 'bbox_filter_720p(MAX_OUT_BLOBS=1,MIN_W=60,MAX_W=640,MIN_H=60,MAX_H=560,MIN_COMPACTNESS=4,MIN_AREA_PIX=6000)' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v(8): compiling module 'bbox_overlay' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v(51): extracting RAM for identifier 'a_x0' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v(52): extracting RAM for identifier 'a_x1' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v(53): extracting RAM for identifier 'a_y0' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v(54): extracting RAM for identifier 'a_y1' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v(57): extracting RAM for identifier 'b_x0' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v(58): extracting RAM for identifier 'b_x1' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v(59): extracting RAM for identifier 'b_y0' [VERI-2571]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v(60): extracting RAM for identifier 'b_y1' [VERI-2571]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v(192): latch inferred for net 'dx0[10]' [VERI-2580]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\rgb2dvi.v(7): compiling module 'rgb2dvi(ENABLE_OSERDES=0)' [VERI-1018]
+INFO     : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\tmds_channel.v(4): compiling module 'tmds_channel' [VERI-1018]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\rgb2dvi.v(50): actual bit length 32 differs from formal bit length 4 for port 'data_island_data' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\rgb2dvi.v(52): actual bit length 4 differs from formal bit length 3 for port 'mode' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\rgb2dvi.v(58): actual bit length 32 differs from formal bit length 4 for port 'data_island_data' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\rgb2dvi.v(60): actual bit length 4 differs from formal bit length 3 for port 'mode' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\rgb2dvi.v(66): actual bit length 32 differs from formal bit length 4 for port 'data_island_data' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\hdmi_ip\rgb2dvi.v(68): actual bit length 4 differs from formal bit length 3 for port 'mode' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(1651): actual bit length 32 differs from formal bit length 1 for port 'oe_i' [VERI-1330]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(428): net 'w_dev_index_o[7]' does not have a driver [VDB-1002]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(429): net 'w_dev_cmd_o[7]' does not have a driver [VDB-1002]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(430): net 'w_dev_wdata_o[31]' does not have a driver [VDB-1002]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(431): net 'w_dev_wvalid_o' does not have a driver [VDB-1002]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(435): net 'w_spi_ssn_o' does not have a driver [VDB-1002]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(436): net 'w_spi_data_o[3]' does not have a driver [VDB-1002]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(453): net 'w_lcd_b_o[7]' does not have a driver [VDB-1002]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(1644): input port 'SerialClk' is not connected on this instance [VDB-1013]
+INFO     : Elaboration took 0.228439 seconds.
+INFO     : 	Elaboration took 0.21875 seconds (approximately) in total CPU time.
+INFO     : Elaboration virtual memory usage: begin = 68.068 MB, end = 126.876 MB, delta = 58.808 MB
+INFO     : 	Elaboration peak virtual memory usage = 126.876 MB
+INFO     : Elaboration resident set memory usage: begin = 81.348 MB, end = 141.448 MB, delta = 60.1 MB
+INFO     : 	Elaboration peak resident set memory usage = 141.448 MB
+INFO     : ***** Ending Elaboration ... *****
+INFO     : ... Setting Synthesis Option: mode=speed
+INFO     : ***** Beginning Reading Mapping Library ... *****
+INFO     : Analyzing Verilog file 'D:/Efinity/sim_models/maplib/efinix_maplib.v' [VERI-1482]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(8): compiling module 'EFX_ADD' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(21): compiling module 'EFX_FF' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(38): compiling module 'EFX_COMB4' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(48): compiling module 'EFX_GBUFCE' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(57): compiling module 'EFX_LUT4' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(65): compiling module 'EFX_MULT' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(100): compiling module 'EFX_DSP48' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(156): compiling module 'EFX_DSP24' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(209): compiling module 'EFX_DSP12' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(262): compiling module 'EFX_RAM_4K' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(322): compiling module 'EFX_RAM_5K' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(394): compiling module 'EFX_DPRAM_5K' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(499): compiling module 'RAMB5' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(561): compiling module 'EFX_RAM_10K' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(653): compiling module 'EFX_RAM10' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(754): compiling module 'EFX_DPRAM10' [VERI-1018]
+INFO     : D:/Efinity/sim_models/maplib/efinix_maplib.v(884): compiling module 'EFX_SRL8' [VERI-1018]
+INFO     : Reading Mapping Library took 0.0136483 seconds.
+INFO     : 	Reading Mapping Library took 0 seconds (approximately) in total CPU time.
+INFO     : Reading Mapping Library virtual memory usage: begin = 169.456 MB, end = 169.456 MB, delta = 0 MB
+INFO     : 	Reading Mapping Library peak virtual memory usage = 169.456 MB
+INFO     : Reading Mapping Library resident set memory usage: begin = 184.436 MB, end = 184.44 MB, delta = 0.004 MB
+INFO     : 	Reading Mapping Library peak resident set memory usage = 184.44 MB
+INFO     : ***** Ending Reading Mapping Library ... *****
+INFO     : ... Pre-synthesis checks begin
+WARNING  : The primary output port 'csi_ctl0_o' wire 'csi_ctl0_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_ctl1_o' wire 'csi_ctl1_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_scl_o' wire 'csi_scl_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_scl_oe' wire 'csi_scl_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_sda_o' wire 'csi_sda_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_sda_oe' wire 'csi_sda_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxc_hs_en_o' wire 'csi_rxc_hs_en_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxc_hs_term_en_o' wire 'csi_rxc_hs_term_en_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxd0_rst_o' wire 'csi_rxd0_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxd0_hs_en_o' wire 'csi_rxd0_hs_en_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxd0_hs_term_en_o' wire 'csi_rxd0_hs_term_en_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxd1_rst_o' wire 'csi_rxd1_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxd1_hs_en_o' wire 'csi_rxd1_hs_en_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxd1_hs_term_en_o' wire 'csi_rxd1_hs_term_en_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxd2_rst_o' wire 'csi_rxd2_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxd2_hs_en_o' wire 'csi_rxd2_hs_en_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxd2_hs_term_en_o' wire 'csi_rxd2_hs_term_en_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxd3_rst_o' wire 'csi_rxd3_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxd3_hs_en_o' wire 'csi_rxd3_hs_en_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'csi_rxd3_hs_term_en_o' wire 'csi_rxd3_hs_term_en_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_rst_o' wire 'dsi_txc_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_lp_p_oe' wire 'dsi_txc_lp_p_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_lp_p_o' wire 'dsi_txc_lp_p_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_lp_n_oe' wire 'dsi_txc_lp_n_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_lp_n_o' wire 'dsi_txc_lp_n_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_hs_oe' wire 'dsi_txc_hs_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_hs_o[7]' wire 'dsi_txc_hs_o[7]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_hs_o[6]' wire 'dsi_txc_hs_o[6]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_hs_o[5]' wire 'dsi_txc_hs_o[5]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_hs_o[4]' wire 'dsi_txc_hs_o[4]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_hs_o[3]' wire 'dsi_txc_hs_o[3]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_hs_o[2]' wire 'dsi_txc_hs_o[2]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_hs_o[1]' wire 'dsi_txc_hs_o[1]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txc_hs_o[0]' wire 'dsi_txc_hs_o[0]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_rst_o' wire 'dsi_txd0_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_hs_oe' wire 'dsi_txd0_hs_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_hs_o[7]' wire 'dsi_txd0_hs_o[7]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_hs_o[6]' wire 'dsi_txd0_hs_o[6]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_hs_o[5]' wire 'dsi_txd0_hs_o[5]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_hs_o[4]' wire 'dsi_txd0_hs_o[4]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_hs_o[3]' wire 'dsi_txd0_hs_o[3]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_hs_o[2]' wire 'dsi_txd0_hs_o[2]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_hs_o[1]' wire 'dsi_txd0_hs_o[1]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_hs_o[0]' wire 'dsi_txd0_hs_o[0]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_lp_p_oe' wire 'dsi_txd0_lp_p_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_lp_p_o' wire 'dsi_txd0_lp_p_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_lp_n_oe' wire 'dsi_txd0_lp_n_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd0_lp_n_o' wire 'dsi_txd0_lp_n_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_rst_o' wire 'dsi_txd1_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_lp_p_oe' wire 'dsi_txd1_lp_p_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_lp_p_o' wire 'dsi_txd1_lp_p_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_lp_n_oe' wire 'dsi_txd1_lp_n_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_lp_n_o' wire 'dsi_txd1_lp_n_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_hs_oe' wire 'dsi_txd1_hs_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_hs_o[7]' wire 'dsi_txd1_hs_o[7]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_hs_o[6]' wire 'dsi_txd1_hs_o[6]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_hs_o[5]' wire 'dsi_txd1_hs_o[5]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_hs_o[4]' wire 'dsi_txd1_hs_o[4]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_hs_o[3]' wire 'dsi_txd1_hs_o[3]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_hs_o[2]' wire 'dsi_txd1_hs_o[2]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_hs_o[1]' wire 'dsi_txd1_hs_o[1]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd1_hs_o[0]' wire 'dsi_txd1_hs_o[0]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_rst_o' wire 'dsi_txd2_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_lp_p_oe' wire 'dsi_txd2_lp_p_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_lp_p_o' wire 'dsi_txd2_lp_p_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_lp_n_oe' wire 'dsi_txd2_lp_n_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_lp_n_o' wire 'dsi_txd2_lp_n_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_hs_oe' wire 'dsi_txd2_hs_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_hs_o[7]' wire 'dsi_txd2_hs_o[7]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_hs_o[6]' wire 'dsi_txd2_hs_o[6]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_hs_o[5]' wire 'dsi_txd2_hs_o[5]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_hs_o[4]' wire 'dsi_txd2_hs_o[4]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_hs_o[3]' wire 'dsi_txd2_hs_o[3]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_hs_o[2]' wire 'dsi_txd2_hs_o[2]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_hs_o[1]' wire 'dsi_txd2_hs_o[1]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd2_hs_o[0]' wire 'dsi_txd2_hs_o[0]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_rst_o' wire 'dsi_txd3_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_lp_p_oe' wire 'dsi_txd3_lp_p_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_lp_p_o' wire 'dsi_txd3_lp_p_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_lp_n_oe' wire 'dsi_txd3_lp_n_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_lp_n_o' wire 'dsi_txd3_lp_n_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_hs_oe' wire 'dsi_txd3_hs_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_hs_o[7]' wire 'dsi_txd3_hs_o[7]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_hs_o[6]' wire 'dsi_txd3_hs_o[6]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_hs_o[5]' wire 'dsi_txd3_hs_o[5]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_hs_o[4]' wire 'dsi_txd3_hs_o[4]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_hs_o[3]' wire 'dsi_txd3_hs_o[3]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_hs_o[2]' wire 'dsi_txd3_hs_o[2]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_hs_o[1]' wire 'dsi_txd3_hs_o[1]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'dsi_txd3_hs_o[0]' wire 'dsi_txd3_hs_o[0]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'uart_tx_o' wire 'uart_tx_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'led_o[4]' wire 'led_o[4]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txc_oe' wire 'lvds_txc_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txc_o[6]' wire 'lvds_txc_o[6]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txc_o[5]' wire 'lvds_txc_o[5]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txc_o[4]' wire 'lvds_txc_o[4]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txc_o[3]' wire 'lvds_txc_o[3]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txc_o[2]' wire 'lvds_txc_o[2]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txc_o[1]' wire 'lvds_txc_o[1]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txc_o[0]' wire 'lvds_txc_o[0]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txc_rst_o' wire 'lvds_txc_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd0_oe' wire 'lvds_txd0_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd0_o[6]' wire 'lvds_txd0_o[6]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd0_o[5]' wire 'lvds_txd0_o[5]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd0_o[4]' wire 'lvds_txd0_o[4]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd0_o[3]' wire 'lvds_txd0_o[3]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd0_o[2]' wire 'lvds_txd0_o[2]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd0_o[1]' wire 'lvds_txd0_o[1]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd0_o[0]' wire 'lvds_txd0_o[0]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd0_rst_o' wire 'lvds_txd0_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd1_oe' wire 'lvds_txd1_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd1_o[6]' wire 'lvds_txd1_o[6]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd1_o[5]' wire 'lvds_txd1_o[5]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd1_o[4]' wire 'lvds_txd1_o[4]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd1_o[3]' wire 'lvds_txd1_o[3]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd1_o[2]' wire 'lvds_txd1_o[2]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd1_o[1]' wire 'lvds_txd1_o[1]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd1_o[0]' wire 'lvds_txd1_o[0]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd1_rst_o' wire 'lvds_txd1_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd2_oe' wire 'lvds_txd2_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd2_o[6]' wire 'lvds_txd2_o[6]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd2_o[5]' wire 'lvds_txd2_o[5]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd2_o[4]' wire 'lvds_txd2_o[4]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd2_o[3]' wire 'lvds_txd2_o[3]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd2_o[2]' wire 'lvds_txd2_o[2]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd2_o[1]' wire 'lvds_txd2_o[1]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd2_o[0]' wire 'lvds_txd2_o[0]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd2_rst_o' wire 'lvds_txd2_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd3_oe' wire 'lvds_txd3_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd3_o[6]' wire 'lvds_txd3_o[6]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd3_o[5]' wire 'lvds_txd3_o[5]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd3_o[4]' wire 'lvds_txd3_o[4]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd3_o[3]' wire 'lvds_txd3_o[3]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd3_o[2]' wire 'lvds_txd3_o[2]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd3_o[1]' wire 'lvds_txd3_o[1]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd3_o[0]' wire 'lvds_txd3_o[0]' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lvds_txd3_rst_o' wire 'lvds_txd3_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lcd_tp_sda_o' wire 'lcd_tp_sda_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lcd_tp_sda_oe' wire 'lcd_tp_sda_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lcd_tp_scl_o' wire 'lcd_tp_scl_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lcd_tp_scl_oe' wire 'lcd_tp_scl_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lcd_tp_int_o' wire 'lcd_tp_int_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lcd_tp_int_oe' wire 'lcd_tp_int_oe' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lcd_tp_rst_o' wire 'lcd_tp_rst_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lcd_pwm_o' wire 'lcd_pwm_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lcd_blen_o' wire 'lcd_blen_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lcd_vs_o' wire 'lcd_vs_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lcd_hs_o' wire 'lcd_hs_o' is not driven. [EFX-0256]
+WARNING  : The primary output port 'lcd_de_o' wire 'lcd_de_o' is not driven. [EFX-0256]
+WARNING  : Removing redundant signal : Shift_Q7_Out[4][7]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Q7_Out[4][6]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Q7_Out[4][5]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Q7_Out[4][4]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Q7_Out[4][3]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Q7_Out[4][2]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Q7_Out[4][1]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Q7_Out[4][0]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Out[7]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Out[6]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Out[5]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Out[4]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Out[3]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Out[2]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Out[1]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Out[0]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Q7_Out[4][31]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Q7_Out[4][30]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Q7_Out[4][29]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : Removing redundant signal : Shift_Q7_Out[4][28]. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:2611) [EFX-0200]
+WARNING  : (The above message was generated too many times, subsequent similar messages will be muted.) [EFX-0200]
+INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1599) [EFX-0677]
+INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1599) [EFX-0677]
+INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1599) [EFX-0677]
+INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:3652) [EFX-0677]
+INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1599) [EFX-0677]
+INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1599) [EFX-0677]
+INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:3652) [EFX-0677]
+WARNING  : Re-wiring to GND non-driven net 'u_efx_fifo_top.a_rst_i'. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:4817) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net 'u_efx_fifo_top.clk_i'. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:4817) [EFX-0201]
+INFO     : Module Instance 'bram_u2' input pin 'wr_en_i' is tied to constant (=1). [EFX-0266]
+INFO     : Module Instance 'bram_u2' input pin 'rd_en_i' is tied to constant (=1). [EFX-0266]
+INFO     : Module Instance 'bram_u1' input pin 'wr_en_i' is tied to constant (=1). [EFX-0266]
+INFO     : Module Instance 'bram_u1' input pin 'rd_en_i' is tied to constant (=1). [EFX-0266]
+INFO     : Module Instance 'bram_u0' input pin 'wr_en_i' is tied to constant (=1). [EFX-0266]
+INFO     : Module Instance 'bram_u0' input pin 'rd_en_i' is tied to constant (=1). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wclk' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[0]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[1]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[2]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[3]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[4]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[5]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[6]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[7]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[8]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[9]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[10]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[11]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[12]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[13]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[14]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[15]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[16]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[17]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[18]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[19]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[20]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[21]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[22]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[23]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[24]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[25]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[26]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[27]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[28]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[29]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[30]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[31]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[32]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[33]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[34]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[35]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[36]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[37]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[38]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[39]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[40]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[41]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[42]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[43]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[44]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[45]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[46]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[47]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[48]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[49]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[50]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[51]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[52]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[53]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[54]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[55]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[56]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[57]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[58]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[59]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[60]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[61]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[62]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[63]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[64]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[65]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[66]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[67]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[68]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[69]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[70]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'wdata[71]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'waddr[0]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'waddr[1]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'waddr[2]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'waddr[3]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'waddr[4]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'waddr[5]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'waddr[6]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'waddr[7]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'waddr[8]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 'we' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'map_ram' input pin 're' is tied to constant (=1). [EFX-0266]
+WARNING  : Re-wiring to GND non-driven net 'r_rd_fifo_wr_en_p[31]'. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1460) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net 'r_rd_fifo_wr_en_p[30]'. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1460) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net 'r_rd_fifo_wr_en_p[29]'. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1460) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net 'r_rd_fifo_wr_en_p[28]'. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1460) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net 'r_rd_fifo_wr_en_p[27]'. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1460) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net 'r_rd_fifo_wr_en_p[26]'. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1460) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net 'r_rd_fifo_wr_en_p[25]'. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1460) [EFX-0201]
+WARNING  : Re-wiring to GND non-driven net 'r_rd_fifo_wr_en_p[24]'. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1460) [EFX-0201]
+WARNING  : (The above message was generated too many times, subsequent similar messages will be muted.) [EFX-0201]
+INFO     : Module Instance 'fifo_rdpush' input pin 'io_push_payload[0]' is tied to constant (=1). [EFX-0266]
+INFO     : Module Instance 'fifo_rdpush' input pin 'io_pop_ready' is tied to constant (=1). [EFX-0266]
+INFO     : Module Instance 'fifo_ack' input pin 'io_pop_ready' is tied to constant (=1). [EFX-0266]
+INFO     : Module Instance 'mux0' input pin 'b_rd_en' is tied to constant (=1). [EFX-0266]
+INFO     : Module Instance 'phase_u0' input pin 'pll_sel[0]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'phase_u0' input pin 'pll_sel[1]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'phase_u0' input pin 'pll_sel[2]' is tied to constant (=1). [EFX-0266]
+INFO     : Module Instance 'phase_u0' input pin 'pll_sel[3]' is tied to constant (=0). [EFX-0266]
+INFO     : Module Instance 'phase_u0' input pin 'pll_sel[4]' is tied to constant (=0). [EFX-0266]
+INFO     : (The above message was generated too many times, subsequent similar messages will be muted.) [EFX-0266]
+INFO     : Module Instance 'inst_arburst_fifo' input pin 'I_Wr_Data[2]' is tied to constant (=0). [EFX-0266]
+INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/W0_FIFO_8\W0_FIFO_8.sv:673) [EFX-0677]
+INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/R0_FIFO_16\R0_FIFO_16.sv:673) [EFX-0677]
+INFO     : ... Memory 'prev_line_1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v:102) [EFX-0677]
+INFO     : ... Memory 'prev_line_2' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v:104) [EFX-0677]
+INFO     : ... Memory 'prev_line_1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v:102) [EFX-0677]
+INFO     : ... Memory 'prev_line_2' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v:104) [EFX-0677]
+INFO     : ... Memory 'prev_line_1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v:102) [EFX-0677]
+INFO     : ... Memory 'prev_line_2' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v:104) [EFX-0677]
+INFO     : ... Memory 'prev_line_1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v:102) [EFX-0677]
+INFO     : ... Memory 'prev_line_2' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\vision\line_buffer_3x3.v:104) [EFX-0677]
+INFO     : ... Memory 'mem' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\low_pass_realtime.v:138) [EFX-0677]
+INFO     : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/FIFO36x512\FIFO36x512.sv:655) [EFX-0677]
+INFO     : ... Memory 'min_x_buf0' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:181) [EFX-0677]
+INFO     : ... Memory 'max_x_buf0' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:181) [EFX-0677]
+INFO     : ... Memory 'min_y_buf0' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:182) [EFX-0677]
+INFO     : ... Memory 'max_y_buf0' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:182) [EFX-0677]
+INFO     : ... Memory 'area_buf0' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:183) [EFX-0677]
+INFO     : ... Memory 'min_x_buf1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:184) [EFX-0677]
+INFO     : ... Memory 'max_x_buf1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:184) [EFX-0677]
+INFO     : ... Memory 'min_y_buf1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:185) [EFX-0677]
+INFO     : ... Memory 'max_y_buf1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:185) [EFX-0677]
+INFO     : ... Memory 'area_buf1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:186) [EFX-0677]
+INFO     : ... Memory 'a_x0' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:51) [EFX-0677]
+INFO     : ... Memory 'a_x1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:52) [EFX-0677]
+INFO     : ... Memory 'a_y0' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:53) [EFX-0677]
+INFO     : ... Memory 'a_y1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:54) [EFX-0677]
+INFO     : ... Memory 'b_x0' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:57) [EFX-0677]
+INFO     : ... Memory 'b_x1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:58) [EFX-0677]
+INFO     : ... Memory 'b_y0' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:59) [EFX-0677]
+INFO     : ... Memory 'b_y1' is not initialized, assuming empty initial contents. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:60) [EFX-0677]
+INFO     : ... Pre-synthesis checks end (Real time : 0s)
+INFO     : ... NameSpace init begin
+INFO     : ... NameSpace init end (Real time : 0s)
+INFO     : ... Mapping design "example_top"
+INFO     : ... Hierarchical pre-synthesis "Ddr_Ctrl_Sc_Fifo_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=8,DATA_DEPTH=32)" begin
+INFO     : ... Hierarchical pre-synthesis "Ddr_Ctrl_Sc_Fifo_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=8,DATA_DEPTH=32)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "Ddr_Ctrl_Sc_Fifo_f9db9b463f784e0ead4594b0b8e61d81(DATA_DEPTH=32)" begin
+INFO     : ... Hierarchical pre-synthesis "Ddr_Ctrl_Sc_Fifo_f9db9b463f784e0ead4594b0b8e61d81(DATA_DEPTH=32)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "Ddr_Ctrl_Sc_Fifo_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=48,DATA_DEPTH=32)" begin
+INFO     : ... Hierarchical pre-synthesis "Ddr_Ctrl_Sc_Fifo_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=48,DATA_DEPTH=32)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "native_mux_f9db9b463f784e0ead4594b0b8e61d81" begin
+INFO     : ... Hierarchical pre-synthesis "native_mux_f9db9b463f784e0ead4594b0b8e61d81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "reset_sub_f9db9b463f784e0ead4594b0b8e61d81(OUT_RST_ACTIVE="LOW",CYCLE=4)" begin
+INFO     : ... Hierarchical pre-synthesis "reset_sub_f9db9b463f784e0ead4594b0b8e61d81(OUT_RST_ACTIVE="LOW",CYCLE=4)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "reset_ctrl_f9db9b463f784e0ead4594b0b8e61d81(NUM_RST=4,CYCLE=4,IN_RST_ACTIVE=4'b0,OUT_RST_ACTIVE=4'b0)" begin
+INFO     : ... Hierarchical pre-synthesis "reset_ctrl_f9db9b463f784e0ead4594b0b8e61d81(NUM_RST=4,CYCLE=4,IN_RST_ACTIVE=4'b0,OUT_RST_ACTIVE=4'b0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "reset_ctrl_f9db9b463f784e0ead4594b0b8e61d81(CYCLE=4,IN_RST_ACTIVE=4'b0,OUT_RST_ACTIVE=4'b0)" begin
+INFO     : ... Hierarchical pre-synthesis "reset_ctrl_f9db9b463f784e0ead4594b0b8e61d81(CYCLE=4,IN_RST_ACTIVE=4'b0,OUT_RST_ACTIVE=4'b0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "buffercc_f9db9b463f784e0ead4594b0b8e61d81" begin
+INFO     : ... Hierarchical pre-synthesis "buffercc_f9db9b463f784e0ead4594b0b8e61d81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "buffercc_1_f9db9b463f784e0ead4594b0b8e61d81" begin
+INFO     : ... Hierarchical pre-synthesis "buffercc_1_f9db9b463f784e0ead4594b0b8e61d81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "streamfifocc64_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=32)" begin
+INFO     : ... Hierarchical pre-synthesis "streamfifocc64_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=32)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "streamfifocc64_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=144)" begin
+INFO     : ... Hierarchical pre-synthesis "streamfifocc64_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=144)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "streamfifocc64_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=1)" begin
+INFO     : ... Hierarchical pre-synthesis "streamfifocc64_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_f9db9b463f784e0ead4594b0b8e61d81(FAMILY="TITANIUM",WR_DEPTH=64,RD_DEPTH=64,WDATA_WIDTH=128,RDATA_WIDTH=128,WADDR_WIDTH=6,RADDR_WIDTH=6,RAM_MUX_RATIO=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_f9db9b463f784e0ead4594b0b8e61d81(FAMILY="TITANIUM",WR_DEPTH=64,RD_DEPTH=64,WDATA_WIDTH=128,RDATA_WIDTH=128,WADDR_WIDTH=6,RADDR_WIDTH=6,RAM_MUX_RATIO=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=7)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=7)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=7,ACTIVE_LOW=0)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=7,ACTIVE_LOW=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=2)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=2)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=3)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=3)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=4)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=4)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=6)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=6)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=7)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_f9db9b463f784e0ead4594b0b8e61d81(WIDTH=7)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_f9db9b463f784e0ead4594b0b8e61d81(SYNC_CLK=0,MODE="FWFT",WR_DEPTH=64,WADDR_WIDTH=6,RADDR_WIDTH=6,PROG_FULL_ASSERT=33,PROG_FULL_NEGATE=33,PROG_EMPTY_NEGATE=2,OUTPUT_REG=1,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_f9db9b463f784e0ead4594b0b8e61d81(SYNC_CLK=0,MODE="FWFT",WR_DEPTH=64,WADDR_WIDTH=6,RADDR_WIDTH=6,PROG_FULL_ASSERT=33,PROG_FULL_NEGATE=33,PROG_EMPTY_NEGATE=2,OUTPUT_REG=1,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_f9db9b463f784e0ead4594b0b8e61d81(FAMILY="TITANIUM",BYPASS_RESET_SYNC=1,MODE="FWFT",DEPTH=64,DATA_WIDTH=128,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=33,PROG_FULL_NEGATE=33,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=2)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_f9db9b463f784e0ead4594b0b8e61d81(FAMILY="TITANIUM",BYPASS_RESET_SYNC=1,MODE="FWFT",DEPTH=64,DATA_WIDTH=128,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=33,PROG_FULL_NEGATE=33,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=2)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "streamfifocc64_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=2)" begin
+INFO     : ... Hierarchical pre-synthesis "streamfifocc64_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=2)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "streamfifocc64_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=52)" begin
+INFO     : ... Hierarchical pre-synthesis "streamfifocc64_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=52)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_f9db9b463f784e0ead4594b0b8e61d81(FAMILY="TITANIUM",WR_DEPTH=64,RD_DEPTH=64,WDATA_WIDTH=1,RDATA_WIDTH=1,WADDR_WIDTH=6,RADDR_WIDTH=6,RAM_MUX_RATIO=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_f9db9b463f784e0ead4594b0b8e61d81(FAMILY="TITANIUM",WR_DEPTH=64,RD_DEPTH=64,WDATA_WIDTH=1,RDATA_WIDTH=1,WADDR_WIDTH=6,RADDR_WIDTH=6,RAM_MUX_RATIO=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_f9db9b463f784e0ead4594b0b8e61d81(SYNC_CLK=0,WR_DEPTH=64,WADDR_WIDTH=6,RADDR_WIDTH=6,PIPELINE_REG=0,ALMOST_FLAG=0,PROG_FULL_ASSERT=62,PROG_FULL_NEGATE=62,PROG_EMPTY_NEGATE=2,OUTPUT_REG=1,HANDSHAKE_FLAG=0,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_f9db9b463f784e0ead4594b0b8e61d81(SYNC_CLK=0,WR_DEPTH=64,WADDR_WIDTH=6,RADDR_WIDTH=6,PIPELINE_REG=0,ALMOST_FLAG=0,PROG_FULL_ASSERT=62,PROG_FULL_NEGATE=62,PROG_EMPTY_NEGATE=2,OUTPUT_REG=1,HANDSHAKE_FLAG=0,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_f9db9b463f784e0ead4594b0b8e61d81(FAMILY="TITANIUM",BYPASS_RESET_SYNC=1,DEPTH=64,DATA_WIDTH=1,PIPELINE_REG=0,OPTIONAL_FLAGS=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=62,PROG_FULL_NEGATE=62,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=2)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_f9db9b463f784e0ead4594b0b8e61d81(FAMILY="TITANIUM",BYPASS_RESET_SYNC=1,DEPTH=64,DATA_WIDTH=1,PIPELINE_REG=0,OPTIONAL_FLAGS=0,OUTPUT_REG=1,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=62,PROG_FULL_NEGATE=62,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=2)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "bram_wrapper_fifo_f9db9b463f784e0ead4594b0b8e61d81" begin
+INFO     : ... Hierarchical pre-synthesis "bram_wrapper_fifo_f9db9b463f784e0ead4594b0b8e61d81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "user_dual_port_ram_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=72,OUTPUT_REG="FALSE",RAM_INIT_FILE="ddr3_controller.bin")" begin
+INFO     : ... Hierarchical pre-synthesis "user_dual_port_ram_f9db9b463f784e0ead4594b0b8e61d81(DATA_WIDTH=72,OUTPUT_REG="FALSE",RAM_INIT_FILE="ddr3_controller.bin")" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "ddr_3_controller_f9db9b463f784e0ead4594b0b8e61d81" begin
+INFO     : ... Hierarchical pre-synthesis "ddr_3_controller_f9db9b463f784e0ead4594b0b8e61d81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "controller_top_f9db9b463f784e0ead4594b0b8e61d81" begin
+INFO     : ... Hierarchical pre-synthesis "controller_top_f9db9b463f784e0ead4594b0b8e61d81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "reset_sub_f9db9b463f784e0ead4594b0b8e61d81(OUT_RST_ACTIVE="LOW",CYCLE=5)" begin
+INFO     : ... Hierarchical pre-synthesis "reset_sub_f9db9b463f784e0ead4594b0b8e61d81(OUT_RST_ACTIVE="LOW",CYCLE=5)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "reset_ctrl_f9db9b463f784e0ead4594b0b8e61d81(NUM_RST=2,CYCLE=5,IN_RST_ACTIVE=2'b0,OUT_RST_ACTIVE=2'b0)" begin
+INFO     : ... Hierarchical pre-synthesis "reset_ctrl_f9db9b463f784e0ead4594b0b8e61d81(NUM_RST=2,CYCLE=5,IN_RST_ACTIVE=2'b0,OUT_RST_ACTIVE=2'b0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "phase_shift_f9db9b463f784e0ead4594b0b8e61d81" begin
+INFO     : ... Hierarchical pre-synthesis "phase_shift_f9db9b463f784e0ead4594b0b8e61d81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "top_f9db9b463f784e0ead4594b0b8e61d81" begin
+INFO     : ... Hierarchical pre-synthesis "top_f9db9b463f784e0ead4594b0b8e61d81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_ddr3_axi_f9db9b463f784e0ead4594b0b8e61d81" begin
+INFO     : ... Hierarchical pre-synthesis "efx_ddr3_axi_f9db9b463f784e0ead4594b0b8e61d81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_ddr3_soft_controller_f9db9b463f784e0ead4594b0b8e61d81" begin
+INFO     : ... Hierarchical pre-synthesis "efx_ddr3_soft_controller_f9db9b463f784e0ead4594b0b8e61d81" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "DdrCtrl" begin
+INFO     : ... Hierarchical pre-synthesis "DdrCtrl" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "AXI4_AWARMux(AID_LEN=4)" begin
+INFO     : ... Hierarchical pre-synthesis "AXI4_AWARMux(AID_LEN=4)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "i2c_timing_ctrl_16bit(CLK_FREQ=96000000,I2C_FREQ=50000)" begin
+INFO     : ... Hierarchical pre-synthesis "i2c_timing_ctrl_16bit(CLK_FREQ=96000000,I2C_FREQ=50000)" end (Real time : 1s)
+INFO     : ... Hierarchical pre-synthesis "I2C_OV5640_1280720_Config" begin
+INFO     : ... Wide MUX mapping to ram-net, output: 'LUT_DATA' select size : 8 output width: 24
+INFO     : ... Hierarchical pre-synthesis "I2C_OV5640_1280720_Config" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "Sensor_Image_XYCrop(IMAGE_HSIZE_SOURCE=2560,IMAGE_VSIZE_SOURCE=720,IMAGE_HSIZE_TARGET=2560,IMAGE_YSIZE_TARGET=720,PIXEL_DATA_WIDTH=8)" begin
+INFO     : ... Hierarchical pre-synthesis "Sensor_Image_XYCrop(IMAGE_HSIZE_SOURCE=2560,IMAGE_VSIZE_SOURCE=720,IMAGE_HSIZE_TARGET=2560,IMAGE_YSIZE_TARGET=720,PIXEL_DATA_WIDTH=8)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_resetsync_e28a7d4c8cc34a9cb9a97c74b3f9b99f(ACTIVE_LOW=0)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_resetsync_e28a7d4c8cc34a9cb9a97c74b3f9b99f(ACTIVE_LOW=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_e28a7d4c8cc34a9cb9a97c74b3f9b99f(FAMILY="TITANIUM",WR_DEPTH=8192,RDATA_WIDTH=128,WADDR_WIDTH=13,OUTPUT_REG=0,RAM_MUX_RATIO=16)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_e28a7d4c8cc34a9cb9a97c74b3f9b99f(FAMILY="TITANIUM",WR_DEPTH=8192,RDATA_WIDTH=128,WADDR_WIDTH=13,OUTPUT_REG=0,RAM_MUX_RATIO=16)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=10)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=10)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_e28a7d4c8cc34a9cb9a97c74b3f9b99f(ASYNC_STAGE=3,WIDTH=10,ACTIVE_LOW=0)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_e28a7d4c8cc34a9cb9a97c74b3f9b99f(ASYNC_STAGE=3,WIDTH=10,ACTIVE_LOW=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=2)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=2)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=3)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=3)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=4)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=4)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=6)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=6)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=7)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=7)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=8)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=8)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=9)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=9)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=10)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=10)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=14)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=14)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_e28a7d4c8cc34a9cb9a97c74b3f9b99f(ASYNC_STAGE=3,WIDTH=14,ACTIVE_LOW=0)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_e28a7d4c8cc34a9cb9a97c74b3f9b99f(ASYNC_STAGE=3,WIDTH=14,ACTIVE_LOW=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=11)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=11)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=12)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=12)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=13)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=13)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=14)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f(WIDTH=14)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_e28a7d4c8cc34a9cb9a97c74b3f9b99f(SYNC_CLK=0,SYNC_STAGE=3,MODE="FWFT",WR_DEPTH=8192,WADDR_WIDTH=13,ASYM_WIDTH_RATIO=8,RAM_MUX_RATIO=16,PROG_FULL_ASSERT=128,PROG_FULL_NEGATE=128,PROGRAMMABLE_EMPTY="STATIC_SINGLE",PROG_EMPTY_ASSERT=127,PROG_EMPTY_NEGATE=128,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_e28a7d4c8cc34a9cb9a97c74b3f9b99f(SYNC_CLK=0,SYNC_STAGE=3,MODE="FWFT",WR_DEPTH=8192,WADDR_WIDTH=13,ASYM_WIDTH_RATIO=8,RAM_MUX_RATIO=16,PROG_FULL_ASSERT=128,PROG_FULL_NEGATE=128,PROGRAMMABLE_EMPTY="STATIC_SINGLE",PROG_EMPTY_ASSERT=127,PROG_EMPTY_NEGATE=128,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_e28a7d4c8cc34a9cb9a97c74b3f9b99f(FAMILY="TITANIUM",SYNC_STAGE=3,MODE="FWFT",DEPTH=8192,DATA_WIDTH=8,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=128,PROG_FULL_NEGATE=128,PROGRAMMABLE_EMPTY="STATIC_SINGLE",PROG_EMPTY_ASSERT=127,PROG_EMPTY_NEGATE=128,ASYM_WIDTH_RATIO=8)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_e28a7d4c8cc34a9cb9a97c74b3f9b99f(FAMILY="TITANIUM",SYNC_STAGE=3,MODE="FWFT",DEPTH=8192,DATA_WIDTH=8,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=128,PROG_FULL_NEGATE=128,PROGRAMMABLE_EMPTY="STATIC_SINGLE",PROG_EMPTY_ASSERT=127,PROG_EMPTY_NEGATE=128,ASYM_WIDTH_RATIO=8)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "W0_FIFO_8" begin
+INFO     : ... Hierarchical pre-synthesis "W0_FIFO_8" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_6027459dad3e4cdabe6337b18ba70805(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_6027459dad3e4cdabe6337b18ba70805(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_resetsync_6027459dad3e4cdabe6337b18ba70805(ACTIVE_LOW=0)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_resetsync_6027459dad3e4cdabe6337b18ba70805(ACTIVE_LOW=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_6027459dad3e4cdabe6337b18ba70805(FAMILY="TITANIUM",RD_DEPTH=4096,WDATA_WIDTH=128,RDATA_WIDTH=16,RADDR_WIDTH=12,OUTPUT_REG=0,RAM_MUX_RATIO=8)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_6027459dad3e4cdabe6337b18ba70805(FAMILY="TITANIUM",RD_DEPTH=4096,WDATA_WIDTH=128,RDATA_WIDTH=16,RADDR_WIDTH=12,OUTPUT_REG=0,RAM_MUX_RATIO=8)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_6027459dad3e4cdabe6337b18ba70805(WIDTH=13)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_6027459dad3e4cdabe6337b18ba70805(WIDTH=13)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_6027459dad3e4cdabe6337b18ba70805(ASYNC_STAGE=3,WIDTH=13,ACTIVE_LOW=0)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_6027459dad3e4cdabe6337b18ba70805(ASYNC_STAGE=3,WIDTH=13,ACTIVE_LOW=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=2)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=2)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=3)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=3)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=4)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=4)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=6)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=6)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=7)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=7)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=8)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=8)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=9)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=9)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=10)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=10)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=11)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=11)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=12)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=12)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=13)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805(WIDTH=13)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_6027459dad3e4cdabe6337b18ba70805(WIDTH=10)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_bin2gray_6027459dad3e4cdabe6337b18ba70805(WIDTH=10)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_6027459dad3e4cdabe6337b18ba70805(ASYNC_STAGE=3,WIDTH=10,ACTIVE_LOW=0)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_6027459dad3e4cdabe6337b18ba70805(ASYNC_STAGE=3,WIDTH=10,ACTIVE_LOW=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_6027459dad3e4cdabe6337b18ba70805(SYNC_CLK=0,SYNC_STAGE=3,MODE="FWFT",RADDR_WIDTH=12,ASYM_WIDTH_RATIO=1,RAM_MUX_RATIO=8,PROGRAMMABLE_FULL="STATIC_SINGLE",PROG_FULL_ASSERT=256,PROG_FULL_NEGATE=256,PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_6027459dad3e4cdabe6337b18ba70805(SYNC_CLK=0,SYNC_STAGE=3,MODE="FWFT",RADDR_WIDTH=12,ASYM_WIDTH_RATIO=1,RAM_MUX_RATIO=8,PROGRAMMABLE_FULL="STATIC_SINGLE",PROG_FULL_ASSERT=256,PROG_FULL_NEGATE=256,PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3,OVERFLOW_PROTECT=1,UNDERFLOW_PROTECT=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_6027459dad3e4cdabe6337b18ba70805(FAMILY="TITANIUM",SYNC_STAGE=3,MODE="FWFT",DATA_WIDTH=128,PROGRAMMABLE_FULL="STATIC_SINGLE",PROG_FULL_ASSERT=256,PROG_FULL_NEGATE=256,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3,ASYM_WIDTH_RATIO=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_6027459dad3e4cdabe6337b18ba70805(FAMILY="TITANIUM",SYNC_STAGE=3,MODE="FWFT",DATA_WIDTH=128,PROGRAMMABLE_FULL="STATIC_SINGLE",PROG_FULL_ASSERT=256,PROG_FULL_NEGATE=256,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=2,PROG_EMPTY_NEGATE=3,ASYM_WIDTH_RATIO=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "R0_FIFO_16" begin
+INFO     : ... Hierarchical pre-synthesis "R0_FIFO_16" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "axi4_ctrl(C_ID_LEN=4,C_RD_END_ADDR=1843200,C_W_WIDTH=8,C_R_WIDTH=16)" begin
+INFO     : ... Hierarchical pre-synthesis "axi4_ctrl(C_ID_LEN=4,C_RD_END_ADDR=1843200,C_W_WIDTH=8,C_R_WIDTH=16)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "rgb565_to_rgb888" begin
+INFO     : ... Hierarchical pre-synthesis "rgb565_to_rgb888" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "lcd_driver" begin
+INFO     : ... Hierarchical pre-synthesis "lcd_driver" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "rgb565_to_gray" begin
+INFO     : ... Hierarchical pre-synthesis "rgb565_to_gray" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "line_buffer_3x3" begin
+INFO     : ... Hierarchical pre-synthesis "line_buffer_3x3" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "median3x3" begin
+INFO     : ... Hierarchical pre-synthesis "median3x3" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "sobel3x3" begin
+INFO     : ... Hierarchical pre-synthesis "sobel3x3" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "line_buffer_3x3(DWIDTH=14)" begin
+INFO     : ... Hierarchical pre-synthesis "line_buffer_3x3(DWIDTH=14)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "nms3x3" begin
+INFO     : ... Hierarchical pre-synthesis "nms3x3" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "canny_threshold(USE_PORTS=1'b1)" begin
+INFO     : ... Hierarchical pre-synthesis "canny_threshold(USE_PORTS=1'b1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "line_buffer_3x3(DWIDTH=2)" begin
+INFO     : ... Hierarchical pre-synthesis "line_buffer_3x3(DWIDTH=2)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "hysteresis_local" begin
+INFO     : ... Hierarchical pre-synthesis "hysteresis_local" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "line_buffer_3x3(DWIDTH=1)" begin
+INFO     : ... Hierarchical pre-synthesis "line_buffer_3x3(DWIDTH=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "edge_despeckle" begin
+INFO     : ... Hierarchical pre-synthesis "edge_despeckle" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "face_reader_720p" begin
+INFO     : ... Hierarchical pre-synthesis "face_reader_720p" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "line_delay_bit" begin
+INFO     : ... Hierarchical pre-synthesis "line_delay_bit" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "low_pass_realtime" begin
+INFO     : ... Hierarchical pre-synthesis "low_pass_realtime" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "morph_erode3x3_stream" begin
+INFO     : Instance 'GEN_VTAP_BIN[0].u_vtap_bin' is equivalent to 'u_ld1_3', it will be optimized. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\morph_erode3x3_stream.v:122) [EFX-0673]
+INFO     : Instance 'GEN_VTAP_BIN[1].u_vtap_bin' is equivalent to 'u_ld2_3', it will be optimized. (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\morph_erode3x3_stream.v:122) [EFX-0673]
+INFO     : ... Hierarchical pre-synthesis "morph_erode3x3_stream" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_6c202e0ff01b459189da89d80c75a4c4(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_asyncreg_6c202e0ff01b459189da89d80c75a4c4(WIDTH=1,ACTIVE_LOW=0,RST_VALUE=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_resetsync_6c202e0ff01b459189da89d80c75a4c4(ACTIVE_LOW=0)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_resetsync_6c202e0ff01b459189da89d80c75a4c4(ACTIVE_LOW=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_6c202e0ff01b459189da89d80c75a4c4(FAMILY="TITANIUM",WDATA_WIDTH=36,RDATA_WIDTH=36,OUTPUT_REG=0,RAM_MUX_RATIO=1)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ram_6c202e0ff01b459189da89d80c75a4c4(FAMILY="TITANIUM",WDATA_WIDTH=36,RDATA_WIDTH=36,OUTPUT_REG=0,RAM_MUX_RATIO=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_6c202e0ff01b459189da89d80c75a4c4(MODE="FWFT",PIPELINE_REG=0,ALMOST_FLAG=0,PROG_FULL_ASSERT=4,PROG_FULL_NEGATE=4,HANDSHAKE_FLAG=0)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_ctl_6c202e0ff01b459189da89d80c75a4c4(MODE="FWFT",PIPELINE_REG=0,ALMOST_FLAG=0,PROG_FULL_ASSERT=4,PROG_FULL_NEGATE=4,HANDSHAKE_FLAG=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_6c202e0ff01b459189da89d80c75a4c4(FAMILY="TITANIUM",SYNC_CLK=1,MODE="FWFT",DATA_WIDTH=36,PIPELINE_REG=0,OPTIONAL_FLAGS=0,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=4,PROG_FULL_NEGATE=4,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0,OVERFLOW_PROTECT=0,UNDERFLOW_PROTECT=0)" begin
+INFO     : ... Hierarchical pre-synthesis "efx_fifo_top_6c202e0ff01b459189da89d80c75a4c4(FAMILY="TITANIUM",SYNC_CLK=1,MODE="FWFT",DATA_WIDTH=36,PIPELINE_REG=0,OPTIONAL_FLAGS=0,PROGRAMMABLE_FULL="NONE",PROG_FULL_ASSERT=4,PROG_FULL_NEGATE=4,PROGRAMMABLE_EMPTY="NONE",PROG_EMPTY_ASSERT=0,PROG_EMPTY_NEGATE=0,OVERFLOW_PROTECT=0,UNDERFLOW_PROTECT=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "FIFO36x512" begin
+INFO     : ... Hierarchical pre-synthesis "FIFO36x512" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1)" begin
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=1)" begin
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=1)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=2)" begin
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=2)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=3)" begin
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=3)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=4)" begin
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=4)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=5)" begin
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=5)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=6)" begin
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=6)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=7)" begin
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=7)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=8)" begin
+INFO     : ... Hierarchical pre-synthesis "dpbram_primitive_c049287cb79b40dcbc066cb296c918cf(WRITE_WIDTH_A=10,CLKA_POLARITY=1,CLKEA_POLARITY=1,WEA_POLARITY=1,READ_WIDTH_A=10,OUTPUT_REG_A=0,WRITE_WIDTH_B=10,CLKB_POLARITY=1,CLKEB_POLARITY=1,WEB_POLARITY=1,READ_WIDTH_B=10,OUTPUT_REG_B=0,RSTA_POLARITY=1,ADDRENA_POLARITY=1,RSTB_POLARITY=1,ADDRENB_POLARITY=1,ini_index=8)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "dpram_wrapper_mwm_c049287cb79b40dcbc066cb296c918cf_renamed_due_excessive_length_3" begin
+INFO     : ... Hierarchical pre-synthesis "dpram_wrapper_mwm_c049287cb79b40dcbc066cb296c918cf_renamed_due_excessive_length_3" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_true_dual_port_ram_c049287cb79b40dcbc066cb296c918cf_renamed_due_excessive_length_2" begin
+INFO     : ... Hierarchical pre-synthesis "efx_true_dual_port_ram_c049287cb79b40dcbc066cb296c918cf_renamed_due_excessive_length_2" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "efx_bram_c049287cb79b40dcbc066cb296c918cf_renamed_due_excessive_length_1" begin
+INFO     : ... Hierarchical pre-synthesis "efx_bram_c049287cb79b40dcbc066cb296c918cf_renamed_due_excessive_length_1" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "BlockRam90x1024" begin
+INFO     : ... Hierarchical pre-synthesis "BlockRam90x1024" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "true_ccl" begin
+INFO     : ... Hierarchical pre-synthesis "true_ccl" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "streaming_connected_components" begin
+INFO     : ... Hierarchical pre-synthesis "streaming_connected_components" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "bbox_filter_720p(MAX_OUT_BLOBS=1,MIN_W=60,MAX_W=640,MIN_H=60,MAX_H=560,MIN_COMPACTNESS=4,MIN_AREA_PIX=6000)" begin
+INFO     : ... Hierarchical pre-synthesis "bbox_filter_720p(MAX_OUT_BLOBS=1,MIN_W=60,MAX_W=640,MIN_H=60,MAX_H=560,MIN_COMPACTNESS=4,MIN_AREA_PIX=6000)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "bbox_overlay" begin
+INFO     : ... Hierarchical pre-synthesis "bbox_overlay" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "tmds_channel" begin
+INFO     : ... Hierarchical pre-synthesis "tmds_channel" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "rgb2dvi(ENABLE_OSERDES=0)" begin
+INFO     : ... Hierarchical pre-synthesis "rgb2dvi(ENABLE_OSERDES=0)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "example_top" begin
+WARNING  : Mapping into logic memory block 'u_face_ccl/min_x_buf0' (704 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:181) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_ccl/max_x_buf0' (704 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:181) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_ccl/min_y_buf0' (640 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:182) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_ccl/max_y_buf0' (640 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:182) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_ccl/area_buf0' (1408 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:183) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_ccl/min_x_buf1' (704 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:184) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_ccl/max_x_buf1' (704 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:184) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_ccl/min_y_buf1' (640 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:185) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_ccl/max_y_buf1' (640 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:185) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_ccl/area_buf1' (1408 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\streaming_connected_components.v:186) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_overlay/a_x0' (176 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:51) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_overlay/a_x1' (176 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:52) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_overlay/a_y0' (160 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:53) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_overlay/a_y1' (160 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:54) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_overlay/b_x0' (176 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:57) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_overlay/b_x1' (176 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:58) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_overlay/b_y0' (160 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:59) because it has async writer. [EFX-0657]
+WARNING  : Mapping into logic memory block 'u_face_overlay/b_y1' (160 bits) (D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\src\face\bbox_overlay.v:60) because it has async writer. [EFX-0657]
+INFO     : ... Clock Enable Synthesis Performed on 1200 flops.
+INFO     : Cannot infer shift registers from 'ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/r_rd_fifo_wr_en_p[0]' (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1460) to 'ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/r_rd_fifo_wr_en_p[17]' (D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction\ip/DdrCtrl\DdrCtrl.sv:1460). Shift registers with both dynamic address and reset not supported. [EFX-0688]
+INFO     : ... Hierarchical pre-synthesis "example_top" end (Real time : 3s)
+INFO     : ... Flat optimizations begin
+INFO     : ... Flat optimizations end (Real time : 0s)
+INFO     : ... Flat synthesis begin
+INFO     : ... Flat synthesis end (Real time : 0s)
+INFO     : ... Flat optimizations begin
+INFO     : ... Flat optimizations end (Real time : 0s)
+INFO     : ... Check and break combinational loops begin
+INFO     : ... Check and break combinational loops end (Real time : 0s)
+INFO     : ... Setup for logic synthesis begin
+INFO     : ... Setup for logic synthesis end (Real time : 0s)
+INFO     : ... LUT mapping begin
+INFO     : ... LS, strategy: 3, nd: 14866, ed: 50020, lv: 28, pw: 28184.30
+INFO     : ... LUT mapping end (Real time : 37s)
+INFO     : ... Post-synthesis Verific netlist creation begin
+INFO     : ... Post-synthesis Verific netlist creation end (Real time : 0s)
+INFO     : ***** Beginning VDB Netlist Checker ... *****
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(11): Input/inout port clk_24m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(12): Input/inout port clk_25m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(21): Input/inout port clk_pixel_2x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(22): Input/inout port clk_pixel_10x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(30): Input/inout port dsi_refclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(31): Input/inout port dsi_byteclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(32): Input/inout port dsi_serclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(33): Input/inout port dsi_txcclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(60): Input/inout port clk_lvds_1x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(61): Input/inout port clk_lvds_7x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(62): Input/inout port clk_27m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(63): Input/inout port clk_54m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(97): Input/inout port i_dqs_n_hi[1] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(98): Input/inout port i_dqs_n_lo[1] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(121): Input/inout port csi_ctl0_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(125): Input/inout port csi_ctl1_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(129): Input/inout port csi_scl_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(133): Input/inout port csi_sda_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(136): Input/inout port csi_rxc_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(137): Input/inout port csi_rxc_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(140): Input/inout port csi_rxc_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(147): Input/inout port csi_rxd0_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(148): Input/inout port csi_rxd0_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(149): Input/inout port csi_rxd0_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(156): Input/inout port csi_rxd1_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(157): Input/inout port csi_rxd1_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(158): Input/inout port csi_rxd1_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(165): Input/inout port csi_rxd2_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(166): Input/inout port csi_rxd2_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(167): Input/inout port csi_rxd2_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(174): Input/inout port csi_rxd3_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(175): Input/inout port csi_rxd3_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(176): Input/inout port csi_rxd3_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(235): Input/inout port dsi_txd0_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(236): Input/inout port dsi_txd0_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(237): Input/inout port dsi_txd1_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(238): Input/inout port dsi_txd1_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(239): Input/inout port dsi_txd2_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(240): Input/inout port dsi_txd2_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(241): Input/inout port dsi_txd3_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(242): Input/inout port dsi_txd3_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(247): Input/inout port uart_rx_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(257): Input/inout port cmos_sdat_IN is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(269): Input/inout port cmos_ctl1_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(272): Input/inout port cmos_ctl2_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(275): Input/inout port cmos_ctl3_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(323): Input/inout port lcd_tp_sda_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(327): Input/inout port lcd_tp_scl_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(331): Input/inout port lcd_tp_int_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(351): Input/inout port lcd_b7_0_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(352): Input/inout port lcd_g7_0_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Efinity_Project\Efinity_Project\Ti60F225_OV5640_Face_Reproduction\example_top.v(353): Input/inout port lcd_r7_0_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : CE port of EFX_DSP48 instance u_face_bbox_filter/n379_pp_0x0 is permanently disabled [VDB-8002]
+WARNING  : CE port of EFX_DSP48 instance u_face_bbox_filter/n620_pp_1x0 is permanently disabled [VDB-8002]
+WARNING  : CE port of EFX_DSP48 instance u_face_bbox_filter/n620_pp_0x0 is permanently disabled [VDB-8002]
+WARNING  : CE port of EFX_DSP48 instance u_face_bbox_filter/n379_pp_1x0 is permanently disabled [VDB-8002]
+WARNING  : Found 107 warnings in the post-synthesis netlist.
+INFO     : VDB Netlist Checker took 0.0275336 seconds.
+INFO     : 	VDB Netlist Checker took 0.0625 seconds (approximately) in total CPU time.
+INFO     : VDB Netlist Checker virtual memory usage: begin = 409.928 MB, end = 410.004 MB, delta = 0.076 MB
+INFO     : 	VDB Netlist Checker peak virtual memory usage = 410.072 MB
+INFO     : VDB Netlist Checker resident set memory usage: begin = 414.06 MB, end = 414.232 MB, delta = 0.172 MB
+INFO     : 	VDB Netlist Checker peak resident set memory usage = 414.232 MB
+INFO     : ***** Ending VDB Netlist Checker ... *****
+INFO     : Resource Summary 
+INFO     : =============================== 
+INFO     : EFX_ADD         : 	1534
+INFO     : EFX_LUT4        : 	12408
+INFO     : EFX_DSP48       : 	15
+INFO     : EFX_FF          : 	12342
+INFO     : EFX_SRL8        : 	501
+INFO     : EFX_RAM10       : 	94
+INFO     : EFX_DPRAM10     : 	9
+INFO     : =============================== 
+INFO     : ... Post-Map Verilog Writer begin
+INFO     : Writing netlist 'example_top' to Verilog file 'D:/Efinity_Project/Efinity_Project/Ti60F225_OV5640_Face_Reproduction/outflow/Ti60_Demo.map.v' [VDB-1030]
+INFO     : ... Post-Map Verilog Writer end (Real time : 1s)
+INFO     : The entire flow of EFX_MAP took 48.9555 seconds.
+INFO     : 	The entire flow of EFX_MAP took 58.8906 seconds (approximately) in total CPU time.
+INFO     : The entire flow of EFX_MAP virtual memory usage: begin = 18.072 MB, end = 298.412 MB, delta = 280.34 MB
+INFO     : 	The entire flow of EFX_MAP peak virtual memory usage = 410.072 MB
+INFO     : The entire flow of EFX_MAP resident set memory usage: begin = 16.876 MB, end = 316.352 MB, delta = 299.476 MB
+INFO     : 	The entire flow of EFX_MAP peak resident set memory usage = 425.492 MB
