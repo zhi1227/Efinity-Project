@@ -1,0 +1,15 @@
+Scanning JTAG IDCODES at ftdi://0x0403:0x6014:0:1/1
+Traceback (most recent call last):
+  File "C:\Efinity\2025.1\pgm\bin\jtag_chain_detect.py", line 120, in <module>
+    _jtag_engine.configure(url=_url)
+  File "C:\Efinity/2025.1/debugger\bin\efx_dbg\jcf.py", line 821, in configure
+    url, init = self._get_url_init(url)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Efinity/2025.1/debugger\bin\efx_dbg\jcf.py", line 421, in _get_url_init
+    board_profile_selector = EfxHwBoardProfileSelector()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Efinity\2025.1\pgm\bin\efx_pgm\efx_hw_common\boards.py", line 132, in __init__
+    board_profile_dir_list = [Path(os.environ["EFINITY_USER_DIR"], 'pgm', 'boards')]
+                                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 679, in __getitem__
+KeyError: 'EFINITY_USER_DIR'

@@ -1,0 +1,209 @@
+{
+  "setup": [
+    {
+      "launch": "tdqss_clk",
+      "capture": "tdqss_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 0.43,
+      "edge": "R-R"
+    },
+    {
+      "launch": "tdqss_clk",
+      "capture": "core_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 1.885,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "tdqss_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 1.418,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "core_clk",
+      "constraint_ns": 5.208,
+      "slack_ns": 0.884,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "tac_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 1.782,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "twd_clk",
+      "constraint_ns": 0.541,
+      "slack_ns": 0.317,
+      "edge": "R-R"
+    },
+    {
+      "launch": "tac_clk",
+      "capture": "core_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 1.878,
+      "edge": "R-R"
+    },
+    {
+      "launch": "tac_clk",
+      "capture": "tac_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 0.432,
+      "edge": "R-R"
+    },
+    {
+      "launch": "twd_clk",
+      "capture": "twd_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 0.437,
+      "edge": "R-R"
+    },
+    {
+      "launch": "clk_sys",
+      "capture": "clk_sys",
+      "constraint_ns": 10.417,
+      "slack_ns": 4.031,
+      "edge": "R-R"
+    },
+    {
+      "launch": "clk_pixel",
+      "capture": "clk_pixel",
+      "constraint_ns": 13.441,
+      "slack_ns": 3.326,
+      "edge": "R-R"
+    },
+    {
+      "launch": "cmos_pclk",
+      "capture": "cmos_pclk",
+      "constraint_ns": 10.0,
+      "slack_ns": 6.749,
+      "edge": "R-R"
+    },
+    {
+      "launch": "cmos_pclk",
+      "capture": "cmos_pclk",
+      "constraint_ns": 5.0,
+      "slack_ns": 1.94,
+      "edge": "F-R"
+    }
+  ],
+  "hold": [
+    {
+      "launch": "tdqss_clk",
+      "capture": "tdqss_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.092,
+      "edge": "R-R"
+    },
+    {
+      "launch": "tdqss_clk",
+      "capture": "core_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.16,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "tdqss_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.066,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "core_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.03,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "tac_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.044,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "twd_clk",
+      "constraint_ns": -1.883,
+      "slack_ns": 2.016,
+      "edge": "R-R"
+    },
+    {
+      "launch": "tac_clk",
+      "capture": "core_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.195,
+      "edge": "R-R"
+    },
+    {
+      "launch": "tac_clk",
+      "capture": "tac_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.027,
+      "edge": "R-R"
+    },
+    {
+      "launch": "twd_clk",
+      "capture": "twd_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.046,
+      "edge": "R-R"
+    },
+    {
+      "launch": "clk_sys",
+      "capture": "clk_sys",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.028,
+      "edge": "R-R"
+    },
+    {
+      "launch": "clk_pixel",
+      "capture": "clk_pixel",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.026,
+      "edge": "R-R"
+    },
+    {
+      "launch": "cmos_pclk",
+      "capture": "cmos_pclk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.067,
+      "edge": "R-R"
+    },
+    {
+      "launch": "cmos_pclk",
+      "capture": "cmos_pclk",
+      "constraint_ns": -5.0,
+      "slack_ns": 5.959,
+      "edge": "F-R"
+    }
+  ],
+  "worst_setup_ns": 0.317,
+  "worst_hold_ns": 0.026,
+  "synthesis_resources": {
+    "EFX_ADD": 1946,
+    "EFX_LUT4": 7119,
+    "EFX_DSP48": 3,
+    "EFX_DSP24": 1,
+    "EFX_FF": 5978,
+    "EFX_SRL8": 492,
+    "EFX_RAM10": 147,
+    "EFX_DPRAM10": 4
+  },
+  "jtag_id": "0x10660A79",
+  "jtag_program_exit": 0,
+  "default_mode": 3,
+  "source_pdf": "D:/嵌入式fpga资料整理/最新通知/易灵思.pdf",
+  "xlr_used": 13158,
+  "xlr_capacity": 60800,
+  "memory_blocks": 151,
+  "memory_capacity": 256,
+  "board_user_confirmed": "已是黑底白边，红框正常"
+}

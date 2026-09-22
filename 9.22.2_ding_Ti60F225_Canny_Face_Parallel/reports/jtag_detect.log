@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Efinity\2025.1\pgm\bin\jtag_chain_detect.py", line 112, in <module>
+    _url = usb_connects[0].URLS[1]
+           ~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: tuple index out of range

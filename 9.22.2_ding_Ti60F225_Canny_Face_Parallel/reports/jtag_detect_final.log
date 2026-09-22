@@ -1,0 +1,5 @@
+Scanning JTAG IDCODES at ftdi://0x0403:0x6014:0:1/1
+Found 1 devices in chain
+JTAG device chain:
+	Device 1.  0x10660a79 (Ti60)
+Generated JCF at reports\jtag_chain.jcf

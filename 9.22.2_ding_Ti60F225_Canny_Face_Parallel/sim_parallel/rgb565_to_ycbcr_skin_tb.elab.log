@@ -1,0 +1,12 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe rgb565_to_ycbcr_skin_tb -s rgb565_to_ycbcr_skin_tb -mt 2 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.rgb565_to_ycbcr_skin
+Compiling module work.rgb565_to_ycbcr_skin_tb
+Built simulation snapshot rgb565_to_ycbcr_skin_tb

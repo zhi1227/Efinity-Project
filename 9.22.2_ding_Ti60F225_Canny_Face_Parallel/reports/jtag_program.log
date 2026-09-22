@@ -1,0 +1,6 @@
+Using board profile: 'Generic Board Profile Using FT232' for pinout connection
+jtag programming started!
+JTAG Programming on ftdi://0x0403:0x6014:0:1/1
+Programming 'outflow\Ti60_Demo.bit' via JTAG at freq 6.0 MHz
+Device ID read from JTAG: 0x10660A79
+... finished with JTAG programming
