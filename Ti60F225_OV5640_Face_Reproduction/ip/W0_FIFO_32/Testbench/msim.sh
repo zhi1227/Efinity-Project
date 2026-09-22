@@ -12,4 +12,4 @@ if [ -f vsim.wlf ]; then
 	rm vsim.wlf
 fi
 
-vsim -do tcl.do
+vsim -do modelsim.do

@@ -38,6 +38,25 @@ module true_ccl #(
   // FIFO empty flags
   wire CurEmpty, PreEmpty;
 
+  // ------------------------------------------------------------------
+  // 前向声明（wire 必须先声明再使用）。
+  // 原代码把这几根 wire 写在下面使用之后，Verilog-2001 不允许，
+  // Vivado 会报 VRFC 10-3380 "used before its declaration" / VRFC 10-2938。
+  // Efinity 对此较宽松，所以问题一直没暴露。
+  //   Start/End     ：像素的上升/下降沿（进入/离开前景）
+  //   EnEnd         ：数据使能的上升沿（行结束）
+  //   RealNEn       ：CC 表 B 口读数据里的 "real new" 标志位
+  //   CurY/PreY     ：当前行号 / 上一段行号（PreY 只用到低 2 位）
+  // ------------------------------------------------------------------
+  wire Start, End, EnEnd;
+  wire RealNEn, oaRealNEn;
+  wire [Hb-1:0] CurY;
+  wire [1:0]    PreY;
+  wire [Wb-1:0] CurXStart, CurXEnd, PreXStart, PreXEnd, BottomLineXMax;
+  wire [89 - 3*Wb - 2*Hb - Nb - 1:0] CurCount, bCount, iaCount;
+  wire [Wb-1:0] bXMin, bXMax, bBottomLineXMax, iaXMin, iaXMax;
+  wire [Hb-1:0] bYMin, bYMax, iaYMin, iaYMax;
+
   // 同步复位：将所有关键寄存器在 SRST=0 时复位
   always @(posedge clk) begin
     if (!SRST) begin
@@ -76,9 +95,9 @@ module true_ccl #(
     end
   end
   
-  wire Start = PixelData && !PrePixel;  
-  wire End   = !PixelData && PrePixel;
-  wire EnEnd = !DataEn_[`DL - 1] && DataEn_[`DL];  
+  assign Start = PixelData && !PrePixel;  
+  assign End   = !PixelData && PrePixel;
+  assign EnEnd = !DataEn_[`DL - 1] && DataEn_[`DL];  
 		 
   localparam PreIDLE = 6'b000001,
              PreDONE = 6'b000010,
@@ -189,10 +208,7 @@ module true_ccl #(
     endcase
   end 
 		 
-  wire [Wb - 1:0] CurXStart, CurXEnd, PreXStart, PreXEnd, BottomLineXMax;
   wire [Nb - 1:0] CurN, PreN; 
-  wire [Hb - 1:0] CurY;
-  wire [1:0] PreY;
 
   wire PreWrCurRd = NextCurState[1] || (PreCombCur && CurDoneC) || (CurState[2] && CurCCALDone);  
 
@@ -238,21 +254,21 @@ module true_ccl #(
   wire [89    :0] CCdinb  = CurCombPre ? {79'b0,oaRealN,1'b1}
                                        : {bCount, bXMin, bXMax, bYMin, bYMax, bBottomLineXMax, RealN, RealNEn};
   
-  wire [89 - 3 * Wb - 2 * Hb - Nb - 1:0] CurCount = CurXEnd - CurXStart + 1'b1;
-  wire [89 - 3 * Wb - 2 * Hb - Nb - 1:0] bCount   = Count + CurCount;
-  wire [Wb - 1:0] bXMin = CurXStart < XMin ? CurXStart : XMin;
-  wire [Wb - 1:0] bXMax = CurXEnd > XMax ? CurXEnd : XMax;
-  wire [Wb - 1:0] bBottomLineXMax = CurXEnd;
-  wire [Hb - 1:0] bYMin = YMin;
-  wire [Hb - 1:0] bYMax = CurY;
+  assign CurCount = CurXEnd - CurXStart + 1'b1;
+  assign bCount   = Count + CurCount;
+  assign bXMin = CurXStart < XMin ? CurXStart : XMin;
+  assign bXMax = CurXEnd > XMax ? CurXEnd : XMax;
+  assign bBottomLineXMax = CurXEnd;
+  assign bYMin = YMin;
+  assign bYMax = CurY;
   wire CCweb = PreCombCur || CurCombPre;         
   wire [Nb - 1:0] CCaddrb = NextPreState[3:2] || CCweb ? RealN : PreN;            
 
-  wire [89 - 3 * Wb - 2 * Hb - Nb - 1:0] iaCount = oaCount + Count;
-  wire [Wb - 1:0] iaXMin = XMin < oaXMin ? XMin : oaXMin;
-  wire [Wb - 1:0] iaXMax = XMax > oaXMax ? XMax : oaXMax;
-  wire [Hb - 1:0] iaYMin = YMin < oaYMin ? YMin : oaYMin;
-  wire [Hb - 1:0] iaYMax = YMax > oaYMax ? YMax : oaYMax ;
+  assign iaCount = oaCount + Count;
+  assign iaXMin = XMin < oaXMin ? XMin : oaXMin;
+  assign iaXMax = XMax > oaXMax ? XMax : oaXMax;
+  assign iaYMin = YMin < oaYMin ? YMin : oaYMin;
+  assign iaYMax = YMax > oaYMax ? YMax : oaYMax ;
 
   BlockRam90x1024 iCCList( 
     .clk(clk), 

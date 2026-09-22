@@ -1,6 +1,6 @@
 `resetall
 `timescale 1ns/1ps
-`include "W0_FIFO_16_define.vh"
+`include "W0_FIFO_16_define.svh"
 
 module fifo_tb;
 
@@ -11,15 +11,6 @@ initial begin
 end
 `endif
 
-localparam WDATA_WIDTH_WGR	= (ASYM_WIDTH_RATIO == 0)? 16 : 
-                              (ASYM_WIDTH_RATIO == 1)? 32 :
-                              (ASYM_WIDTH_RATIO == 2)? 32 :
-                              (ASYM_WIDTH_RATIO == 3)? 16 :
-                              (ASYM_WIDTH_RATIO == 4)? 16 :
-                              (ASYM_WIDTH_RATIO == 5)? 16 :
-                              (ASYM_WIDTH_RATIO == 6)? 16 :
-                              (ASYM_WIDTH_RATIO == 7)? 16 :
-                              (ASYM_WIDTH_RATIO == 8)? 16 : 16;
                               
 localparam WDATA_WIDTH_RGW	= (ASYM_WIDTH_RATIO == 0)? 16 : 
                               (ASYM_WIDTH_RATIO == 1)? 16 :
@@ -121,6 +112,7 @@ initial begin
     rd_en_i   = 1'b0;
     wdata     = 'h0;
     waddr     = 'd0;
+    raddr     = 'd0;
     dynamic_a = {};
     dynamic_b = {};
 end
@@ -160,23 +152,52 @@ initial begin
 end
 
 initial begin
+	forever begin
+		@(posedge rd_clk_i) begin
+		    if (rd_en_i && ~empty_o) begin
+		    	raddr <= raddr + 1;
+		    end
+		end
+	end
+end
+
+initial begin
     forever begin
         @(posedge wr_clk_i) begin
             if (wr_en_i && ~full_o) begin
-                if (WDATA_WIDTH <= RDATA_WIDTH) begin
-                    dynamic_a.push_back(wdata);
-                    dynamic_b.push_back(wdata);
-                    $display("%t - write data %h to address: %d ", $time(), wdata, waddr );
-                end
-                else begin
-                    integer i;
-                    reg  [LSB_WIDTH-1 :0 ] lsbaddr;
-                    for (i=RAM_MUX_RATIO; i > 0; i=i-1) begin
-                        lsbaddr = i;
-                        dynamic_a.push_back(wdata[((WDATA_WIDTH_WGR/RAM_MUX_RATIO)*i)-1 -: WDATA_WIDTH_WGR/RAM_MUX_RATIO]);
-                        dynamic_b.push_back(wdata[((WDATA_WIDTH_WGR/RAM_MUX_RATIO)*i)-1 -: WDATA_WIDTH_WGR/RAM_MUX_RATIO]);
+                if (ENDIANESS == 0) begin
+                	if (WDATA_WIDTH <= RDATA_WIDTH) begin
+                		dynamic_a.push_back(wdata);
+                		dynamic_b.push_back(wdata);
+                		$display("%t - write data %h to address: %d ", $time(), wdata, waddr );
+                		end
+                	else begin
+                		integer i;
+                		reg  [LSB_WIDTH-1 :0 ] lsbaddr;
+                		for (i=RAM_MUX_RATIO; i > 0; i=i-1) begin
+                        	lsbaddr = i;
+                        	dynamic_a.push_back(wdata[((WDATA_WIDTH/RAM_MUX_RATIO)*i)-1 -: RDATA_WIDTH]);
+                        	dynamic_b.push_back(wdata[((WDATA_WIDTH/RAM_MUX_RATIO)*i)-1 -: RDATA_WIDTH]);
+                        end
+                        	$display("%t - write data %h to address: %d", $time(), wdata, waddr);
                     end
-                    $display("%t - write data %h to address: %d", $time(), wdata, waddr);
+                end
+                else begin 
+                	if (WDATA_WIDTH <= RDATA_WIDTH) begin 
+                		dynamic_a.push_back(wdata);
+                		dynamic_b.push_back(wdata);
+                		$display("%t - write data %h to address: %d ", $time(), wdata, waddr );
+                		end
+                	else begin //downsize
+                		integer i;
+                		reg  [LSB_WIDTH-1 :0 ] lsbaddr;
+                		for (i=0; i < RAM_MUX_RATIO; i=i+1) begin
+                        	lsbaddr = i;
+                        	dynamic_a.push_back(wdata[((WDATA_WIDTH/RAM_MUX_RATIO)*i) +: RDATA_WIDTH]);
+                        	dynamic_b.push_back(wdata[((WDATA_WIDTH/RAM_MUX_RATIO)*i) +: RDATA_WIDTH]);
+                        end
+                        	$display("%t - write data %h to address: %d", $time(), wdata, waddr);
+                    end
                 end
             end
         end
@@ -187,16 +208,24 @@ initial begin
     forever begin
         if (MODE == "STANDARD") begin
             @(posedge rd_clk_i) begin
-                if (RDATA_WIDTH <= WDATA_WIDTH) begin
+                if (RDATA_WIDTH <= WDATA_WIDTH) begin 
                     if(rd_en_i == 1 && ~empty_o) begin
                         monitor <= dynamic_a.pop_front();
                     end
                 end
-                else begin
+                else if (RDATA_WIDTH > WDATA_WIDTH && ENDIANESS == 0) begin 
                     integer i;
                     for (i=RAM_MUX_RATIO; i > 0; i=i-1) begin
                         if (rd_en_i && ~empty_o) begin
                             monitor[((RDATA_WIDTH_48/RAM_MUX_RATIO)*i)-1 -: (RDATA_WIDTH_48/RAM_MUX_RATIO)] <= dynamic_a.pop_front();
+                        end
+                    end
+                end
+                else if (RDATA_WIDTH > WDATA_WIDTH && ENDIANESS == 1) begin 
+                	integer i;
+                    for (i=0; i < RAM_MUX_RATIO; i=i+1) begin
+                        if (rd_en_i && ~empty_o) begin
+                            monitor[((RDATA_WIDTH_48/RAM_MUX_RATIO)*i) +: (RDATA_WIDTH_48/RAM_MUX_RATIO)] <= dynamic_a.pop_front();
                         end
                     end
                 end
@@ -205,7 +234,7 @@ initial begin
         else begin
             if (SYNC_CLK) begin
                 @(posedge rd_clk_i) begin
-                    if (RDATA_WIDTH <= WDATA_WIDTH) begin
+                    if (RDATA_WIDTH <= WDATA_WIDTH) begin 
                         if (dynamic_b.size() == RAM_MUX_RATIO) begin
                             monitor <= dynamic_a.pop_front();
                         end
@@ -213,7 +242,7 @@ initial begin
                             monitor <= dynamic_a.pop_front();
                         end
                     end
-                    else begin
+                    else begin 
                         integer i;
                         if (dynamic_b.size() == RAM_MUX_RATIO) begin
                             for (i=RAM_MUX_RATIO; i > 0; i=i-1) begin
@@ -233,19 +262,27 @@ initial begin
 			end
             else begin
                 @(posedge rd_clk_i) begin
-                    if (RDATA_WIDTH <= WDATA_WIDTH) begin
+                    if (RDATA_WIDTH <= WDATA_WIDTH) begin 
                         #0.1
                         if (rd_en_i && ~empty_o) begin
                             monitor <= dynamic_a.pop_front();
                         end
                     end
-                    else begin
+                    else if(RDATA_WIDTH > WDATA_WIDTH && ENDIANESS == 0) begin 
                         integer i;
                         for (i=RAM_MUX_RATIO; i > 0; i=i-1) begin
                             if (rd_en_i && ~almost_empty_o) begin
                                 monitor[((RDATA_WIDTH_48/RAM_MUX_RATIO)*i)-1 -: (RDATA_WIDTH_48/RAM_MUX_RATIO)] <= dynamic_a.pop_front();
                             end
                         end					
+                    end
+                    else begin 
+                    	integer i;
+                        for (i=0; i < RAM_MUX_RATIO; i=i+1) begin
+                            if (rd_en_i && ~almost_empty_o) begin
+                                monitor[((RDATA_WIDTH_48/RAM_MUX_RATIO)*i) +: (RDATA_WIDTH_48/RAM_MUX_RATIO)] <= dynamic_a.pop_front();
+                            end
+                        end	
                     end
                 end
             end
@@ -259,13 +296,20 @@ initial begin
             if (SYNC_CLK == 0) begin
                 @ (negedge empty_o) begin
                     if (~rd_en_i && dynamic_b.size() != 1) begin
-                        if (RDATA_WIDTH <= WDATA_WIDTH) begin
+                    	//integer i
+                        if (RDATA_WIDTH <= WDATA_WIDTH) begin 
                             monitor <= dynamic_a.pop_front();					
                         end
-                        else begin
+                        else if (RDATA_WIDTH > WDATA_WIDTH && ENDIANESS == 0) begin
                             integer i;
                             for (i=RAM_MUX_RATIO; i > 0; i=i-1) begin
                                 monitor[((RDATA_WIDTH_48/RAM_MUX_RATIO)*i)-1 -: (RDATA_WIDTH_48/RAM_MUX_RATIO)] <= dynamic_a.pop_front();
+                            end
+                        end
+                        else begin
+                        	integer i;
+                            for (i=0; i < RAM_MUX_RATIO; i=i+1) begin
+                                monitor[((RDATA_WIDTH_48/RAM_MUX_RATIO)*i) +: (RDATA_WIDTH_48/RAM_MUX_RATIO)] <= dynamic_a.pop_front();
                             end
                         end
                     end
@@ -286,34 +330,69 @@ always @ (posedge rd_clk_i)begin
     temp_empty_o <= empty_o;
 end
 
-initial begin
-    forever begin
-        if (MODE == "STANDARD") begin
-            @(negedge rd_clk_i) begin
-                if (rd_valid_o == 1 && ~a_rst_i) begin
-                    if (monitor  === rdata) begin
-                        $display("%t - PASS! FIFO read data %h is match to expected data %h", $time(), rdata, monitor);
-                    end
-                    else begin
-                        $error("%t - FAIL! FIFO read data %h does not match to expected data %h", $time(), rdata, monitor);
-                    end
-                end
-            end
-        end
-        else begin
-            @(posedge rd_clk_i) begin
-                if (rd_en_i && rd_valid_o) begin
-                    if (monitor  === rdata) begin
-                        $display("%t - PASS! FIFO read data %h is match to expected data %h", $time(), rdata, monitor);
-                    end
-                    else begin
-                        $error("%t - ERROR! FIFO read data %h does not match to expected data %h", $time(), rdata, monitor);
-                    end
-                end
-            end		
-        end	
-    end
-end
+generate 
+   if (OUTPUT_REG == 0) begin
+      initial begin
+          forever begin
+              if (MODE == "STANDARD") begin
+                  @(negedge rd_clk_i) begin
+                      if (rd_valid_o == 1 && ~a_rst_i) begin
+                          if (monitor  === rdata) begin
+                              $display("%t - PASS! FIFO read data %h is match to expected data %h", $time(), rdata, monitor);
+                          end
+                          else begin
+                              $error("%t - FAIL! FIFO read data %h does not match to expected data %h", $time(), rdata, monitor);
+                          end
+                      end
+                  end
+              end
+              else begin
+                  @(posedge rd_clk_i) begin
+                      if (rd_en_i && rd_valid_o) begin
+                          if (monitor  === rdata) begin
+                              $display("%t - PASS! FIFO read data %h is match to expected data %h", $time(), rdata, monitor);
+                          end
+                          else begin
+                              $error("%t - ERROR! FIFO read data %h does not match to expected data %h", $time(), rdata, monitor);
+                          end
+                      end
+                  end		
+              end	
+          end
+      end
+   end
+   else begin
+      initial begin
+          forever begin
+              if (MODE == "STANDARD") begin
+                  @(negedge rd_clk_i) begin
+                      if (rd_valid_o == 1 && ~a_rst_i) begin
+                          if (monitor_temp  === rdata) begin
+                              $display("%t - PASS! FIFO read data %h is match to expected data %h", $time(), rdata, monitor);
+                          end
+                          else begin
+                              $error("%t - FAIL! FIFO read data %h does not match to expected data %h", $time(), rdata, monitor);
+                          end
+                      end
+                  end
+              end
+              else begin
+                  @(posedge rd_clk_i) begin
+                      if (rd_en_i && rd_valid_o) begin
+                          if (monitor_temp  === rdata) begin
+                              $display("%t - PASS! FIFO read data %h is match to expected data %h", $time(), rdata, monitor);
+                          end
+                          else begin
+                              $error("%t - ERROR! FIFO read data %h does not match to expected data %h", $time(), rdata, monitor);
+                          end
+                      end
+                  end		
+              end	
+          end
+      end
+   end
+endgenerate
+
 
 generate
     if (SYNC_CLK == 1 && ASYM_WIDTH_RATIO == 4) begin

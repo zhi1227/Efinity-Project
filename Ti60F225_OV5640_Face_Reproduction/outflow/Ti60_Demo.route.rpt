@@ -1,7 +1,7 @@
 
 Efinix FPGA Placement and Routing.
 Version: 2025.1.110.5.9 
-Date: Wed Sep 16 23:54:08 2026
+Date: Tue Sep 22 10:28:50 2026
 
 Copyright (C) 2013 - 2025 Efinix, Inc. All rights reserved.
  
@@ -38,34 +38,34 @@ Top-level Entity Name: Ti60_Demo
 
 
 ---------- Resource Summary (begin) ----------
-Inputs: 65 / 1703 (3.82%)
+Inputs: 64 / 1703 (3.76%)
 Outputs: 487 / 2267 (21.48%)
 Global Clocks (GBUF): 14 / 32 (43.75%)
 Regional Clocks (RBUF): 0 / 32 (0.00%)
 	RBUF: Core: 0 / 16 (0.00%)
 	RBUF: Periphery: 0 / 8 (0.00%)
 	RBUF: Multi-Region: 0 / 8 (0.00%)
-XLRs: 27372 / 60800 (45.02%)
-	XLRs needed for Logic: 12785 / 60800 (21.03%)
-	XLRs needed for Logic + FF: 1755 / 60800 (2.89%)
-	XLRs needed for Adder: 967 / 60800 (1.59%)
-	XLRs needed for Adder + FF: 225 / 60800 (0.37%)
-	XLRs needed for FF: 11128 / 60800 (18.30%)
-	XLRs needed for SRL8: 512 / 14720 (3.48%)
+XLRs: 24519 / 60800 (40.33%)
+	XLRs needed for Logic: 10511 / 60800 (17.29%)
+	XLRs needed for Logic + FF: 1899 / 60800 (3.12%)
+	XLRs needed for Adder: 1165 / 60800 (1.92%)
+	XLRs needed for Adder + FF: 369 / 60800 (0.61%)
+	XLRs needed for FF: 10074 / 60800 (16.57%)
+	XLRs needed for SRL8: 501 / 14720 (3.40%)
 	XLRs needed for SRL8+FF: 0 / 14720 (0.00%)
 	XLRs needed for Routing: 0 / 60800 (0.00%)
-Memory Blocks: 81 / 256 (31.64%)
-DSP Blocks: 13 / 160 (8.12%)
+Memory Blocks: 103 / 256 (40.23%)
+DSP Blocks: 15 / 160 (9.38%)
 ---------- Resource Summary (end) ----------
 
 
 ---------- DSP Packer Summary (begin) ----------
 
-	DSP48 blocks required to legally pack design: 13
+	DSP48 blocks required to legally pack design: 15
 	DSP48 blocks recoverable by optimizing:
 		-> DSP24/12 control signals & parameters: 0
-	Best case scenario DSP count after optimizing: 13
+	Best case scenario DSP count after optimizing: 15
 
 ---------- DSP Packer Summary (end) ----------
 
-Elapsed time for entire flow: 0 hours 4 minutes 27 seconds
+Elapsed time for entire flow: 0 hours 4 minutes 26 seconds

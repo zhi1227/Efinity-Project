@@ -8,8 +8,8 @@
     <efx:design_info def_veri_version="verilog_2k" def_vhdl_version="vhdl_2008">
         <efx:top_module name="fifo_demo_top"/>
         <efx:design_file name="fifo_demo_top.v" version="default" library="default"/>
-        <efx:design_file name="W0_FIFO_16.v" version="default" library="default"/>
-        <efx:design_file name="efx_symmetric_width_fifo_top.v" version="default" library="default"/>
+        <efx:design_file name="W0_FIFO_16.sv" version="default" library="default"/>
+        <efx:design_file name="efx_symmetric_width_fifo_top.sv" version="default" library="default"/>
         <efx:top_vhdl_arch name=""/>
     </efx:design_info>
     <efx:constraint_info>
