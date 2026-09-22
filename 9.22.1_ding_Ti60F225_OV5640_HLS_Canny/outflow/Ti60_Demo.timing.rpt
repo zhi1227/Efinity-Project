@@ -1,0 +1,2069 @@
+
+Efinix Static Timing Analysis Report
+Version: 2025.1.110.5.9
+Date: Tue Sep 22 16:04:39 2026
+
+Copyright (C) 2013 - 2025 Efinix, Inc. All rights reserved.
+
+Top-level Entity Name: Ti60_Demo
+
+SDC Filename: Ti60_Demo.pt.sdc
+
+Timing Model: C4
+	process : typical
+	temperature : 0C to 85C
+	voltage : 0.95 +/-30mV
+	speedgrade : 4
+	technology : t16ff
+	status : final
+
+---------- Table of Contents (begin) ----------
+   1. Clock Frequency Summary
+   2. Clock Relationship Summary
+   3. Path Details for Max Critical Paths
+   4. Path Details for Min Critical Paths
+---------- Table of Contents (end) ------------
+
+---------- 1. Clock Frequency Summary (begin) ----------
+
+User target constrained clocks
+ Clock Name   Period (ns)  Frequency (MHz)    Waveform        Targets
+dsi_byteclk_i    23.809         42.001     {0.000 11.904} {dsi_byteclk_i}
+dsi_txcclk_i      5.952        168.011     {2.232 5.208}  {dsi_txcclk_i} 
+dsi_serclk_i      5.952        168.011     {0.744 3.720}  {dsi_serclk_i} 
+tdqss_clk         2.604        384.025     {0.000 1.302}  {tdqss_clk}    
+core_clk          5.208        192.012     {0.000 2.604}  {core_clk}     
+tac_clk           2.604        384.025     {0.000 1.302}  {tac_clk}      
+twd_clk           2.604        384.025     {0.651 1.953}  {twd_clk}      
+clk_sys          10.417         95.997     {0.000 5.208}  {clk_sys}      
+clk_pixel        13.441         74.399     {0.000 6.720}  {clk_pixel}    
+clk_pixel_10x     1.344        744.048     {0.336 1.008}  {clk_pixel_10x}
+clk_lvds_1x      20.833         48.001     {0.000 10.416} {clk_lvds_1x}  
+clk_lvds_7x       2.976        336.022     {0.744 2.232}  {clk_lvds_7x}  
+clk_27m          62.500         16.000     {0.000 31.250} {clk_27m}      
+cmos_pclk        10.000        100.000     {0.000 5.000}  {cmos_pclk}    
+
+Maximum possible analyzed clocks frequency
+ Clock Name  Period (ns)  Frequency (MHz)     Edge
+ tdqss_clk      2.219        450.653         (R-R)
+ core_clk       4.012        249.252         (R-R)
+ tac_clk        2.269        440.723         (R-R)
+ twd_clk        2.418        413.565         (R-R)
+ clk_sys        6.466        154.655         (R-R)
+ clk_pixel      6.676        149.790         (R-R)
+ cmos_pclk      7.662        130.514         (F-R)
+
+Geomean max period: 3.992
+
+---------- Clock Frequency Summary (end) ---------------
+
+---------- 2. Clock Relationship Summary (begin) ----------
+
+Setup (Max) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+   tdqss_clk        tdqss_clk           2.604           0.385            (R-R)
+   tdqss_clk        core_clk            2.604           2.116            (R-R)
+   core_clk         tdqss_clk           2.604           1.500            (R-R)
+   core_clk         core_clk            5.208           1.196            (R-R)
+   core_clk         tac_clk             2.604           2.253            (R-R)
+   core_clk         twd_clk             0.541           0.302            (R-R)
+   tac_clk          core_clk            2.604           2.109            (R-R)
+   tac_clk          tac_clk             2.604           0.335            (R-R)
+   twd_clk          twd_clk             2.604           0.186            (R-R)
+   clk_sys          clk_sys            10.417           3.951            (R-R)
+   clk_pixel        clk_pixel          13.441           6.765            (R-R)
+   cmos_pclk        cmos_pclk          10.000           7.228            (R-R)
+   cmos_pclk        cmos_pclk           5.000           1.169            (F-R)
+
+Hold (Min) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+   tdqss_clk        tdqss_clk           0.000           0.098            (R-R)
+   tdqss_clk        core_clk            0.000           0.150            (R-R)
+   core_clk         tdqss_clk           0.000           0.079            (R-R)
+   core_clk         core_clk            0.000           0.051            (R-R)
+   core_clk         tac_clk             0.000           0.067            (R-R)
+   core_clk         twd_clk            -1.883           2.024            (R-R)
+   tac_clk          core_clk            0.000           0.162            (R-R)
+   tac_clk          tac_clk             0.000           0.028            (R-R)
+   twd_clk          twd_clk             0.000           0.052            (R-R)
+   clk_sys          clk_sys             0.000           0.029            (R-R)
+   clk_pixel        clk_pixel           0.000           0.031            (R-R)
+   cmos_pclk        cmos_pclk           0.000           0.026            (R-R)
+   cmos_pclk        cmos_pclk          -5.000           5.577            (F-R)
+
+NOTE: Values are in nanoseconds.
+
+---------- Clock Relationship Summary (end) ---------------
+
+---------- 3. Path Details for Max Critical Paths (begin) ----------
+
+################################################################################
+Path Detail Report (twd_clk vs twd_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/r_dq_oe[15]~FF|CLK
+Path End      : o_dq_oe[7]                                                                                                           
+Launch Clock  : twd_clk (RISE)                                                                                                       
+Capture Clock : twd_clk (RISE)                                                                                                       
+Slack         : 0.186 (required time - arrival time)                                                                                 
+Delay         : 1.422                                                                                                                
+
+Logic Level             : 1
+Non-global nets on path : 2
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.865
++ Clock To Q + Data Path Delay : 1.535
+--------------------------------------
+End-of-path arrival time       : 3.400
+
+Constraint                     : 2.604
++ Capture Clock Path Delay     : 1.855
+- Clock Uncertainty            : 0.110
+- Output Delay                 : 0.763
+--------------------------------------
+End-of-path required time      : 3.586
+
+Launch Clock Path
+                                                        name                                                           model name   delay (ns)  cumulative delay (ns) pins on net    location
+===============================================================================================================================================================================================
+twd_clk                                                                                                                  inpad        0.000             0.000               0       (219,159)
+twd_clk                                                                                                                  inpad        0.110             0.110             429       (219,159)
+twd_clk                                                                                                                  net          1.755             1.865             429       (219,159)
+   Routing elements:
+      Manhattan distance of X:154, Y:152
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/r_dq_oe[15]~FF|CLK    ff           0.000             1.865             429       (65,7)   
+
+Data Path
+                                                       name                                                          model name   delay (ns)  cumulative delay (ns) pins on net    location
+=============================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/r_dq_oe[15]~FF|Q    ff           0.113             0.113               3        (65,7) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/r_dq_oe[15]         net          0.340             0.453               3        (65,7) 
+   Routing elements:
+      Manhattan distance of X:20, Y:2
+LUT__21382|in[0]                                                                                                       lut          0.054             0.507               3        (85,5) 
+LUT__21382|out                                                                                                         lut          0.000             0.507              17        (85,5) 
+o_dq_oe[0]                                                                                                             net          0.984             1.491              17        (85,5) 
+   Routing elements:
+      Manhattan distance of X:127, Y:5
+o_dq_oe[7]                                                                                                             outpad       0.044             1.535              17        (212,0)
+o_dq_oe[7]                                                                                                             outpad       0.000             1.535               0        (212,0)
+
+Capture Clock Path
+        name          model name   delay (ns)  cumulative delay (ns) pins on net    location
+==============================================================================================
+twd_clk                 inpad        0.000             0.000               0       (219,159)
+twd_clk                 inpad        0.110             0.110             429       (219,159)
+twd_clk                 net          1.701             1.811             429       (219,159)
+   Routing elements:
+      Manhattan distance of X:29, Y:159
+twd_clk~CLKOUT~190~1    outpad       0.044             1.855             429       (190,0)  
+twd_clk~CLKOUT~190~1    outpad       0.000             1.855               0       (190,0)  
+
+################################################################################
+Path Detail Report (tdqss_clk vs tdqss_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : o_dqs_oe[1]~FF|CLK                  
+Path End      : o_dqs_n_oe[1]                       
+Launch Clock  : tdqss_clk (RISE)                    
+Capture Clock : tdqss_clk (RISE)                    
+Slack         : 0.385 (required time - arrival time)
+Delay         : 1.223                               
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.844
++ Clock To Q + Data Path Delay : 1.336
+--------------------------------------
+End-of-path arrival time       : 3.180
+
+Constraint                     : 2.604
++ Capture Clock Path Delay     : 1.834
+- Clock Uncertainty            : 0.110
+- Output Delay                 : 0.763
+--------------------------------------
+End-of-path required time      : 3.565
+
+Launch Clock Path
+       name         model name   delay (ns)  cumulative delay (ns) pins on net    location
+============================================================================================
+tdqss_clk             inpad        0.000             0.000               0        (110,0) 
+tdqss_clk             inpad        0.110             0.110             146        (110,0) 
+tdqss_clk             net          1.734             1.844             146        (110,0) 
+   Routing elements:
+      Manhattan distance of X:83, Y:43
+o_dqs_oe[1]~FF|CLK    ff           0.000             1.844             146        (193,43)
+
+Data Path
+      name        model name   delay (ns)  cumulative delay (ns) pins on net    location
+==========================================================================================
+o_dqs_oe[1]~FF|Q    ff           0.113             0.113              5         (193,43)
+o_dqs_n_oe[0]       net          1.179             1.292              5         (193,43)
+   Routing elements:
+      Manhattan distance of X:163, Y:43
+o_dqs_n_oe[1]       outpad       0.044             1.336              5         (30,0)  
+o_dqs_n_oe[1]       outpad       0.000             1.336              0         (30,0)  
+
+Capture Clock Path
+        name           model name   delay (ns)  cumulative delay (ns) pins on net    location
+===============================================================================================
+tdqss_clk                inpad        0.000             0.000               0        (110,0)
+tdqss_clk                inpad        0.110             0.110             146        (110,0)
+tdqss_clk                net          1.680             1.790             146        (110,0)
+   Routing elements:
+      Manhattan distance of X:77, Y:0
+tdqss_clk~CLKOUT~33~1    outpad       0.044             1.834             146        (33,0) 
+tdqss_clk~CLKOUT~33~1    outpad       0.000             1.834               0        (33,0) 
+
+################################################################################
+Path Detail Report (tdqss_clk vs core_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_r[6]~FF|CLK           
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][6]~FF|D
+Launch Clock  : tdqss_clk (RISE)                                                                                                                                                                       
+Capture Clock : core_clk (RISE)                                                                                                                                                                        
+Slack         : 2.116 (required time - arrival time)                                                                                                                                                   
+Delay         : 0.205                                                                                                                                                                                  
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.844
++ Clock To Q + Data Path Delay : 0.321
+--------------------------------------
+End-of-path arrival time       : 2.165
+
+Constraint                     : 2.604
++ Capture Clock Path Delay     : 1.787
+- Clock Uncertainty            : 0.110
+--------------------------------------
+End-of-path required time      : 4.281
+
+Launch Clock Path
+                                                                                    name                                                                                      model name   delay (ns)  cumulative delay (ns) pins on net    location
+======================================================================================================================================================================================================================================================
+tdqss_clk                                                                                                                                                                       inpad        0.000             0.000               0        (110,0) 
+tdqss_clk                                                                                                                                                                       inpad        0.110             0.110             146        (110,0) 
+tdqss_clk                                                                                                                                                                       net          1.734             1.844             146        (110,0) 
+   Routing elements:
+      Manhattan distance of X:79, Y:69
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_r[6]~FF|CLK    ff           0.000             1.844             146        (189,69)
+
+Data Path
+                                                                                         name                                                                                            model name   delay (ns)  cumulative delay (ns) pins on net    location
+=================================================================================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_r[6]~FF|Q                  ff          0.113             0.113              2         (189,69)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_r[6]                       net         0.205             0.318              2         (189,69)
+   Routing elements:
+      Manhattan distance of X:0, Y:5
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][6]~FF|D     ff          0.003             0.321              2         (189,74)
+
+Capture Clock Path
+                                                                                          name                                                                                             model name   delay (ns)  cumulative delay (ns) pins on net    location
+===================================================================================================================================================================================================================================================================
+core_clk                                                                                                                                                                                     inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                                                                                                     inpad        0.110             0.110             831       (219,164)
+core_clk                                                                                                                                                                                     net          1.677             1.787             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:30, Y:90
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][6]~FF|CLK    ff           0.000             1.787             831       (189,74) 
+
+################################################################################
+Path Detail Report (core_clk vs tdqss_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/core_clk_rstn~FF|CLK
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/tdqss_clk_rstn~FF|SR
+Launch Clock  : core_clk (RISE)                                                                                        
+Capture Clock : tdqss_clk (RISE)                                                                                       
+Slack         : 1.500 (required time - arrival time)                                                                   
+Delay         : 0.847                                                                                                  
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.787
++ Clock To Q + Data Path Delay : 1.051
+--------------------------------------
+End-of-path arrival time       : 2.838
+
+Constraint                     : 2.604
++ Capture Clock Path Delay     : 1.844
+- Clock Uncertainty            : 0.110
+--------------------------------------
+End-of-path required time      : 4.338
+
+Launch Clock Path
+                                                 name                                                    model name   delay (ns)  cumulative delay (ns) pins on net    location
+=================================================================================================================================================================================
+core_clk                                                                                                   inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                   inpad        0.110             0.110             831       (219,164)
+core_clk                                                                                                   net          1.677             1.787             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:86, Y:75
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/core_clk_rstn~FF|CLK    ff           0.000             1.787             831       (133,89) 
+
+Data Path
+                                                 name                                                    model name   delay (ns)  cumulative delay (ns) pins on net    location
+=================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/core_clk_rstn~FF|Q       ff          0.113             0.113             815        (133,89)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/core_clk_rstn            net         0.847             0.960             815        (133,89)
+   Routing elements:
+      Manhattan distance of X:48, Y:43
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/tdqss_clk_rstn~FF|SR     ff          0.091             1.051             815        (181,46)
+
+Capture Clock Path
+                                                  name                                                    model name   delay (ns)  cumulative delay (ns) pins on net    location
+==================================================================================================================================================================================
+tdqss_clk                                                                                                   inpad        0.000             0.000               0        (110,0) 
+tdqss_clk                                                                                                   inpad        0.110             0.110             146        (110,0) 
+tdqss_clk                                                                                                   net          1.734             1.844             146        (110,0) 
+   Routing elements:
+      Manhattan distance of X:71, Y:46
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/tdqss_clk_rstn~FF|CLK    ff           0.000             1.844             146        (181,46)
+
+################################################################################
+Path Detail Report (core_clk vs core_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/ram__D$2|RCLK            
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/ram_raddr[3]~FF|D
+Launch Clock  : core_clk (RISE)                                                                                                     
+Capture Clock : core_clk (RISE)                                                                                                     
+Slack         : 1.196 (required time - arrival time)                                                                                
+Delay         : 2.711                                                                                                               
+
+Logic Level             : 7
+Non-global nets on path : 7
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.787
++ Clock To Q + Data Path Delay : 3.902
+--------------------------------------
+End-of-path arrival time       : 5.689
+
+Constraint                     : 5.208
++ Capture Clock Path Delay     : 1.787
+- Clock Uncertainty            : 0.110
+--------------------------------------
+End-of-path required time      : 6.885
+
+Launch Clock Path
+                                                  name                                                    model name   delay (ns)  cumulative delay (ns) pins on net    location
+==================================================================================================================================================================================
+core_clk                                                                                                 inpad           0.000             0.000               0       (219,164)
+core_clk                                                                                                 inpad           0.110             0.110             831       (219,164)
+core_clk                                                                                                 net             1.677             1.787             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:63, Y:62
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/ram__D$2|RCLK ram_8192x20     0.000             1.787             831       (156,102)
+
+Data Path
+                                                        name                                                          model name   delay (ns)  cumulative delay (ns) pins on net    location
+==============================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/ram__D$2|RDATA[13]        ram_8192x20     1.188             1.188              38       (156,102)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/w_ar_fifo_rd_data[11]             net             0.666             1.854              38       (156,102)
+   Routing elements:
+      Manhattan distance of X:21, Y:16
+LUT__23232|in[3]                                                                                                     lut             0.055             1.909              38       (135,118)
+LUT__23232|out                                                                                                       lut             0.000             1.909               2       (135,118)
+n10412                                                                                                               net             0.177             2.086               2       (135,118)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+LUT__23233|in[3]                                                                                                     lut             0.055             2.141               2       (135,119)
+LUT__23233|out                                                                                                       lut             0.000             2.141               2       (135,119)
+n10413                                                                                                               net             0.346             2.487               2       (135,119)
+   Routing elements:
+      Manhattan distance of X:8, Y:4
+LUT__23236|in[0]                                                                                                     lut             0.054             2.541               2       (143,115)
+LUT__23236|out                                                                                                       lut             0.000             2.541               2       (143,115)
+n10416                                                                                                               net             0.170             2.711               2       (143,115)
+   Routing elements:
+      Manhattan distance of X:0, Y:5
+LUT__23252|in[0]                                                                                                     lut             0.054             2.765               2       (143,110)
+LUT__23252|out                                                                                                       lut             0.000             2.765               2       (143,110)
+n10432                                                                                                               net             0.339             3.104               2       (143,110)
+   Routing elements:
+      Manhattan distance of X:0, Y:16
+LUT__23274|in[2]                                                                                                     lut             0.054             3.158               2       (143,94) 
+LUT__23274|out                                                                                                       lut             0.000             3.158               9       (143,94) 
+n10454                                                                                                               net             0.251             3.409               9       (143,94) 
+   Routing elements:
+      Manhattan distance of X:4, Y:5
+LUT__23523|in[0]                                                                                                     lut             0.054             3.463               9       (139,89) 
+LUT__23523|out                                                                                                       lut             0.000             3.463               2       (139,89) 
+n10586                                                                                                               net             0.382             3.845               2       (139,89) 
+   Routing elements:
+      Manhattan distance of X:6, Y:7
+LUT__23531|in[1]                                                                                                     lut             0.054             3.899               2       (145,82) 
+LUT__23531|out                                                                                                       lut             0.000             3.899               2       (145,82) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/ram_raddr[3]~FF|D ff              0.003             3.902               2       (145,82) 
+
+Capture Clock Path
+                                                         name                                                           model name   delay (ns)  cumulative delay (ns) pins on net    location
+================================================================================================================================================================================================
+core_clk                                                                                                                  inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                                  inpad        0.110             0.110             831       (219,164)
+core_clk                                                                                                                  net          1.677             1.787             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:74, Y:82
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/ram_raddr[3]~FF|CLK    ff           0.000             1.787             831       (145,82) 
+
+################################################################################
+Path Detail Report (core_clk vs tac_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[3]~FF|CLK          
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][3]~FF|D
+Launch Clock  : core_clk (RISE)                                                                                                                                                                       
+Capture Clock : tac_clk (RISE)                                                                                                                                                                        
+Slack         : 2.253 (required time - arrival time)                                                                                                                                                  
+Delay         : 0.196                                                                                                                                                                                 
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.787
++ Clock To Q + Data Path Delay : 0.312
+--------------------------------------
+End-of-path arrival time       : 2.099
+
+Constraint                     : 2.604
++ Capture Clock Path Delay     : 1.858
+- Clock Uncertainty            : 0.110
+--------------------------------------
+End-of-path required time      : 4.352
+
+Launch Clock Path
+                                                                                    name                                                                                      model name   delay (ns)  cumulative delay (ns) pins on net    location
+======================================================================================================================================================================================================================================================
+core_clk                                                                                                                                                                        inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                                                                                        inpad        0.110             0.110             831       (219,164)
+core_clk                                                                                                                                                                        net          1.677             1.787             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:111, Y:131
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[3]~FF|CLK    ff           0.000             1.787             831       (108,33) 
+
+Data Path
+                                                                                         name                                                                                           model name   delay (ns)  cumulative delay (ns) pins on net    location
+================================================================================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[3]~FF|Q                 ff          0.113             0.113              2         (108,33)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[3]                      net         0.196             0.309              2         (108,33)
+   Routing elements:
+      Manhattan distance of X:5, Y:0
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][3]~FF|D     ff          0.003             0.312              2         (113,33)
+
+Capture Clock Path
+                                                                                          name                                                                                            model name   delay (ns)  cumulative delay (ns) pins on net    location
+==================================================================================================================================================================================================================================================================
+tac_clk                                                                                                                                                                                     inpad        0.000             0.000               0        (111,0) 
+tac_clk                                                                                                                                                                                     inpad        0.110             0.110             331        (111,0) 
+tac_clk                                                                                                                                                                                     net          1.748             1.858             331        (111,0) 
+   Routing elements:
+      Manhattan distance of X:2, Y:33
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][3]~FF|CLK    ff           0.000             1.858             331        (113,33)
+
+################################################################################
+Path Detail Report (core_clk vs twd_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[6]~FF|CLK          
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][6]~FF|D
+Launch Clock  : core_clk (RISE)                                                                                                                                                                       
+Capture Clock : twd_clk (RISE)                                                                                                                                                                        
+Slack         : 0.302 (required time - arrival time)                                                                                                                                                  
+Delay         : 0.201                                                                                                                                                                                 
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.787
++ Clock To Q + Data Path Delay : 0.317
+--------------------------------------
+End-of-path arrival time       : 2.104
+
+Constraint                     : 0.541
++ Capture Clock Path Delay     : 1.865
+- Clock Uncertainty            : 0.000
+--------------------------------------
+End-of-path required time      : 2.406
+
+Launch Clock Path
+                                                                                    name                                                                                      model name   delay (ns)  cumulative delay (ns) pins on net    location
+======================================================================================================================================================================================================================================================
+core_clk                                                                                                                                                                        inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                                                                                        inpad        0.110             0.110             831       (219,164)
+core_clk                                                                                                                                                                        net          1.677             1.787             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:188, Y:144
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[6]~FF|CLK    ff           0.000             1.787             831       (31,20)  
+
+Data Path
+                                                                                         name                                                                                           model name   delay (ns)  cumulative delay (ns) pins on net    location
+================================================================================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[6]~FF|Q                 ff          0.113             0.113              2         (31,20)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[6]                      net         0.201             0.314              2         (31,20)
+   Routing elements:
+      Manhattan distance of X:5, Y:0
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][6]~FF|D     ff          0.003             0.317              2         (36,20)
+
+Capture Clock Path
+                                                                                          name                                                                                            model name   delay (ns)  cumulative delay (ns) pins on net    location
+==================================================================================================================================================================================================================================================================
+twd_clk                                                                                                                                                                                     inpad        0.000             0.000               0       (219,159)
+twd_clk                                                                                                                                                                                     inpad        0.110             0.110             429       (219,159)
+twd_clk                                                                                                                                                                                     net          1.755             1.865             429       (219,159)
+   Routing elements:
+      Manhattan distance of X:183, Y:139
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][6]~FF|CLK    ff           0.000             1.865             429       (36,20)  
+
+################################################################################
+Path Detail Report (core_clk vs clk_sys)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/w_init_done~FF|CLK
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/logic_rstn~FF|SR  
+Launch Clock  : core_clk (RISE)                                                                               
+Capture Clock : clk_sys (RISE)                                                                                
+Slack         : 3.571 (required time - arrival time)                                                          
+Delay         : 0.665                                                                                         
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.787
++ Clock To Q + Data Path Delay : 0.869
+--------------------------------------
+End-of-path arrival time       : 2.656
+
+Constraint                     : 4.390
++ Capture Clock Path Delay     : 1.837
+- Clock Uncertainty            : 0.000
+--------------------------------------
+End-of-path required time      : 6.227
+
+Launch Clock Path
+                                             name                                               model name   delay (ns)  cumulative delay (ns) pins on net    location
+========================================================================================================================================================================
+core_clk                                                                                          inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                          inpad        0.110             0.110             831       (219,164)
+core_clk                                                                                          net          1.677             1.787             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:57, Y:70
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/w_init_done~FF|CLK    ff           0.000             1.787             831       (162,94) 
+
+Data Path
+                                            name                                              model name   delay (ns)  cumulative delay (ns) pins on net    location
+======================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/w_init_done~FF|Q     ff          0.113             0.113             127       (162,94) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/w_init_done          net         0.665             0.778             127       (162,94) 
+   Routing elements:
+      Manhattan distance of X:0, Y:33
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/logic_rstn~FF|SR     ff          0.091             0.869             127       (162,127)
+
+Capture Clock Path
+                                            name                                               model name   delay (ns)  cumulative delay (ns) pins on net    location
+=======================================================================================================================================================================
+clk_sys                                                                                          inpad        0.000             0.000                0      (0,162)  
+clk_sys                                                                                          inpad        0.110             0.110             1411      (0,162)  
+clk_sys                                                                                          net          1.727             1.837             1411      (0,162)  
+   Routing elements:
+      Manhattan distance of X:162, Y:35
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/logic_rstn~FF|CLK    ff           0.000             1.837             1411      (162,127)
+
+################################################################################
+Path Detail Report (tac_clk vs core_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushCC_pushPtrGray[0]~FF|CLK            
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[0]~FF|D
+Launch Clock  : tac_clk (RISE)                                                                                                                         
+Capture Clock : core_clk (RISE)                                                                                                                        
+Slack         : 2.109 (required time - arrival time)                                                                                                   
+Delay         : 0.198                                                                                                                                  
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.858
++ Clock To Q + Data Path Delay : 0.314
+--------------------------------------
+End-of-path arrival time       : 2.172
+
+Constraint                     : 2.604
++ Capture Clock Path Delay     : 1.787
+- Clock Uncertainty            : 0.110
+--------------------------------------
+End-of-path required time      : 4.281
+
+Launch Clock Path
+                                                           name                                                              model name   delay (ns)  cumulative delay (ns) pins on net    location
+=====================================================================================================================================================================================================
+tac_clk                                                                                                                        inpad        0.000             0.000               0        (111,0) 
+tac_clk                                                                                                                        inpad        0.110             0.110             331        (111,0) 
+tac_clk                                                                                                                        net          1.748             1.858             331        (111,0) 
+   Routing elements:
+      Manhattan distance of X:10, Y:33
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushCC_pushPtrGray[0]~FF|CLK    ff           0.000             1.858             331        (121,33)
+
+Data Path
+                                                                 name                                                                    model name   delay (ns)  cumulative delay (ns) pins on net    location
+=================================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushCC_pushPtrGray[0]~FF|Q                   ff          0.113             0.113              3         (121,33)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushCC_pushPtrGray[0]                        net         0.198             0.311              3         (121,33)
+   Routing elements:
+      Manhattan distance of X:5, Y:0
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[0]~FF|D     ff          0.003             0.314              3         (126,33)
+
+Capture Clock Path
+                                                                  name                                                                     model name   delay (ns)  cumulative delay (ns) pins on net    location
+===================================================================================================================================================================================================================
+core_clk                                                                                                                                     inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                                                     inpad        0.110             0.110             831       (219,164)
+core_clk                                                                                                                                     net          1.677             1.787             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:93, Y:131
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[0]~FF|CLK    ff           0.000             1.787             831       (126,33) 
+
+################################################################################
+Path Detail Report (tac_clk vs tac_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc_io_dataOut[0]~FF|CLK
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushCC_pushPtr[6]~FF|CE                    
+Launch Clock  : tac_clk (RISE)                                                                                                                            
+Capture Clock : tac_clk (RISE)                                                                                                                            
+Slack         : 0.335 (required time - arrival time)                                                                                                      
+Delay         : 1.955                                                                                                                                     
+
+Logic Level             : 3
+Non-global nets on path : 4
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.858
++ Clock To Q + Data Path Delay : 2.159
+--------------------------------------
+End-of-path arrival time       : 4.017
+
+Constraint                     : 2.604
++ Capture Clock Path Delay     : 1.858
+- Clock Uncertainty            : 0.110
+--------------------------------------
+End-of-path required time      : 4.352
+
+Launch Clock Path
+                                                                   name                                                                     model name   delay (ns)  cumulative delay (ns) pins on net    location
+====================================================================================================================================================================================================================
+tac_clk                                                                                                                                       inpad        0.000             0.000               0        (111,0)
+tac_clk                                                                                                                                       inpad        0.110             0.110             331        (111,0)
+tac_clk                                                                                                                                       net          1.748             1.858             331        (111,0)
+   Routing elements:
+      Manhattan distance of X:13, Y:34
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc_io_dataOut[0]~FF|CLK    ff           0.000             1.858             331        (98,34)
+
+Data Path
+                                                                  name                                                                    model name   delay (ns)  cumulative delay (ns) pins on net    location
+==================================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc_io_dataOut[0]~FF|Q     ff          0.113             0.113               2        (98,34) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc_io_dataOut[0]          net         0.427             0.540               2        (98,34) 
+   Routing elements:
+      Manhattan distance of X:22, Y:1
+LUT__22603|in[0]                                                                                                                             lut         0.055             0.595               2        (120,33)
+LUT__22603|out                                                                                                                               lut         0.000             0.595               2        (120,33)
+n10120                                                                                                                                       net         0.362             0.957               2        (120,33)
+   Routing elements:
+      Manhattan distance of X:6, Y:8
+LUT__22607|in[0]                                                                                                                             lut         0.055             1.012               2        (126,41)
+LUT__22607|out                                                                                                                               lut         0.000             1.012               2        (126,41)
+n10124                                                                                                                                       net         0.220             1.232               2        (126,41)
+   Routing elements:
+      Manhattan distance of X:5, Y:7
+LUT__22608|in[1]                                                                                                                             lut         0.054             1.286               2        (121,34)
+LUT__22608|out                                                                                                                               lut         0.000             1.286              14        (121,34)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/_zz_16                                        net         0.782             2.068              14        (121,34)
+   Routing elements:
+      Manhattan distance of X:58, Y:7
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushCC_pushPtr[6]~FF|CE                       ff          0.091             2.159              14        (179,41)
+
+Capture Clock Path
+                                                         name                                                            model name   delay (ns)  cumulative delay (ns) pins on net    location
+=================================================================================================================================================================================================
+tac_clk                                                                                                                    inpad        0.000             0.000               0        (111,0) 
+tac_clk                                                                                                                    inpad        0.110             0.110             331        (111,0) 
+tac_clk                                                                                                                    net          1.748             1.858             331        (111,0) 
+   Routing elements:
+      Manhattan distance of X:68, Y:41
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushCC_pushPtr[6]~FF|CLK    ff           0.000             1.858             331        (179,41)
+
+################################################################################
+Path Detail Report (clk_sys vs core_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : rstn_sys~FF|CLK                                                                                                                                            
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/rst_ctrl0/genblk1[3].genblk1.genblk1.inst_sysclk_rstn/r_srst_1P[0]~FF|SR
+Launch Clock  : clk_sys (RISE)                                                                                                                                             
+Capture Clock : core_clk (RISE)                                                                                                                                            
+Slack         : 3.112 (required time - arrival time)                                                                                                                       
+Delay         : 1.024                                                                                                                                                      
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.837
++ Clock To Q + Data Path Delay : 1.228
+--------------------------------------
+End-of-path arrival time       : 3.065
+
+Constraint                     : 4.390
++ Capture Clock Path Delay     : 1.787
+- Clock Uncertainty            : 0.000
+--------------------------------------
+End-of-path required time      : 6.177
+
+Launch Clock Path
+     name        model name   delay (ns)  cumulative delay (ns) pins on net    location
+=========================================================================================
+clk_sys            inpad        0.000             0.000                0       (0,162) 
+clk_sys            inpad        0.110             0.110             1411       (0,162) 
+clk_sys            net          1.727             1.837             1411       (0,162) 
+   Routing elements:
+      Manhattan distance of X:144, Y:140
+rstn_sys~FF|CLK    ff           0.000             1.837             1411       (144,22)
+
+Data Path
+                                                                           name                                                                              model name   delay (ns)  cumulative delay (ns) pins on net    location
+=====================================================================================================================================================================================================================================
+rstn_sys~FF|Q                                                                                                                                                   ff          0.113             0.113             237        (144,22)
+rstn_sys                                                                                                                                                        net         1.024             1.137             237        (144,22)
+   Routing elements:
+      Manhattan distance of X:11, Y:64
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/rst_ctrl0/genblk1[3].genblk1.genblk1.inst_sysclk_rstn/r_srst_1P[0]~FF|SR     ff          0.091             1.228             237        (133,86)
+
+Capture Clock Path
+                                                                            name                                                                              model name   delay (ns)  cumulative delay (ns) pins on net    location
+======================================================================================================================================================================================================================================
+core_clk                                                                                                                                                        inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                                                                        inpad        0.110             0.110             831       (219,164)
+core_clk                                                                                                                                                        net          1.677             1.787             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:86, Y:78
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/rst_ctrl0/genblk1[3].genblk1.genblk1.inst_sysclk_rstn/r_srst_1P[0]~FF|CLK    ff           0.000             1.787             831       (133,86) 
+
+################################################################################
+Path Detail Report (clk_sys vs clk_sys)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc_io_dataOut[5]~FF|CLK
+Path End      : u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ram/ram__D$f12|RADDR[7]                                                  
+Launch Clock  : clk_sys (RISE)                                                                                                                        
+Capture Clock : clk_sys (RISE)                                                                                                                        
+Slack         : 3.951 (required time - arrival time)                                                                                                  
+Delay         : 6.215                                                                                                                                 
+
+Logic Level             : 26
+Non-global nets on path : 27
+Global nets on path     :  0
+
+Launch Clock Path Delay        : 1.837
++ Clock To Q + Data Path Delay : 6.356
+--------------------------------------
+End-of-path arrival time       : 8.193
+
+Constraint                     : 10.417
++ Capture Clock Path Delay     :  1.837
+- Clock Uncertainty            :  0.110
+---------------------------------------
+End-of-path required time      : 12.144
+
+Launch Clock Path
+                                                                 name                                                                   model name   delay (ns)  cumulative delay (ns) pins on net    location
+================================================================================================================================================================================================================
+clk_sys                                                                                                                                   inpad        0.000             0.000                0       (0,162)
+clk_sys                                                                                                                                   inpad        0.110             0.110             1411       (0,162)
+clk_sys                                                                                                                                   net          1.727             1.837             1411       (0,162)
+   Routing elements:
+      Manhattan distance of X:64, Y:151
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc_io_dataOut[5]~FF|CLK    ff           0.000             1.837             1411       (64,11)
+
+Data Path
+                                                                name                                                                  model name   delay (ns)  cumulative delay (ns) pins on net    location
+==============================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc_io_dataOut[5]~FF|Q ff              0.113             0.113               3        (64,11) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc_io_dataOut[5]      net             0.419             0.532               3        (64,11) 
+   Routing elements:
+      Manhattan distance of X:3, Y:17
+LUT__22455|in[0]                                                                                                                     lut             0.054             0.586               3        (67,28) 
+LUT__22455|out                                                                                                                       lut             0.000             0.586               3        (67,28) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/n3                                 net             0.297             0.883               3        (67,28) 
+   Routing elements:
+      Manhattan distance of X:2, Y:1
+LUT__22456|in[1]                                                                                                                     lut             0.054             0.937               3        (65,29) 
+LUT__22456|out                                                                                                                       lut             0.000             0.937               3        (65,29) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/n4                                 net             0.122             1.059               3        (65,29) 
+   Routing elements:
+      Manhattan distance of X:0, Y:2
+LUT__22457|in[1]                                                                                                                     lut             0.054             1.113               3        (65,27) 
+LUT__22457|out                                                                                                                       lut             0.000             1.113               3        (65,27) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/n5                                 net             0.245             1.358               3        (65,27) 
+   Routing elements:
+      Manhattan distance of X:2, Y:3
+LUT__22458|in[1]                                                                                                                     lut             0.054             1.412               3        (67,30) 
+LUT__22458|out                                                                                                                       lut             0.000             1.412               3        (67,30) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/n6                                 net             0.104             1.516               3        (67,30) 
+   Routing elements:
+      Manhattan distance of X:2, Y:0
+LUT__22459|in[1]                                                                                                                     lut             0.054             1.570               3        (65,30) 
+LUT__22459|out                                                                                                                       lut             0.000             1.570               3        (65,30) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/n7                                 net             0.319             1.889               3        (65,30) 
+   Routing elements:
+      Manhattan distance of X:0, Y:2
+LUT__22460|in[1]                                                                                                                     lut             0.054             1.943               3        (65,28) 
+LUT__22460|out                                                                                                                       lut             0.000             1.943               2        (65,28) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/n8                                 net             0.119             2.062               2        (65,28) 
+   Routing elements:
+      Manhattan distance of X:5, Y:0
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i1|I1                        adder           0.050             2.112               2        (70,28) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i1|CO                        adder           0.000             2.112               2        (70,28) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/n2                           net             0.000             2.112               2        (70,28) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i2|CI                        adder           0.021             2.133               2        (70,29) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i2|CO                        adder           0.000             2.133               2        (70,29) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/n4                           net             0.000             2.133               2        (70,29) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i3|CI                        adder           0.021             2.154               2        (70,30) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i3|CO                        adder           0.000             2.154               2        (70,30) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/n6                           net             0.000             2.154               2        (70,30) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i4|CI                        adder           0.021             2.175               2        (70,31) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i4|CO                        adder           0.000             2.175               2        (70,31) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/n8                           net             0.000             2.175               2        (70,31) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i5|CI                        adder           0.021             2.196               2        (70,32) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i5|CO                        adder           0.000             2.196               2        (70,32) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/n10                          net             0.000             2.196               2        (70,32) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i6|CI                        adder           0.021             2.217               2        (70,33) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i6|CO                        adder           0.000             2.217               2        (70,33) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/n12                          net             0.000             2.217               2        (70,33) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i7|CI                        adder           0.084             2.301               2        (70,34) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/sub_31/add_2/i7|O                         adder           0.000             2.301               2        (70,34) 
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr_io_pushOccupancy[6]                       net             0.819             3.120               2        (70,34) 
+   Routing elements:
+      Manhattan distance of X:39, Y:41
+LUT__21433|in[0]                                                                                                                     lut             0.054             3.174               2        (109,75)
+LUT__21433|out                                                                                                                       lut             0.000             3.174              20        (109,75)
+n9610                                                                                                                                net             0.447             3.621              20        (109,75)
+   Routing elements:
+      Manhattan distance of X:1, Y:21
+LUT__21434|in[2]                                                                                                                     lut             0.055             3.676              20        (108,96)
+LUT__21434|out                                                                                                                       lut             0.000             3.676               5        (108,96)
+w_ddr3_wready                                                                                                                        net             0.450             4.126               4        (108,96)
+   Routing elements:
+      Manhattan distance of X:3, Y:14
+LUT__21435|in[1]                                                                                                                     lut             0.055             4.181               5        (111,82)
+LUT__21435|out                                                                                                                       lut             0.000             4.181               3        (111,82)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/n1193                                                                  net             0.334             4.515               2        (111,82)
+   Routing elements:
+      Manhattan distance of X:6, Y:7
+LUT__24779|in[1]                                                                                                                     lut             0.055             4.570               3        (105,75)
+LUT__24779|out                                                                                                                       lut             0.000             4.570               2        (105,75)
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/n205                                                                net             0.641             5.211               2        (105,75)
+   Routing elements:
+      Manhattan distance of X:38, Y:26
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i1|I1                                                        adder           0.050             5.261               2        (67,49) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i1|CO                                                        adder           0.000             5.261               2        (67,49) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/n2                                                           net             0.000             5.261               2        (67,49) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i2|CI                                                        adder           0.021             5.282               2        (67,50) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i2|CO                                                        adder           0.000             5.282               2        (67,50) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/n4                                                           net             0.000             5.282               2        (67,50) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i3|CI                                                        adder           0.021             5.303               2        (67,51) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i3|CO                                                        adder           0.000             5.303               2        (67,51) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/n6                                                           net             0.000             5.303               2        (67,51) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i4|CI                                                        adder           0.021             5.324               2        (67,52) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i4|CO                                                        adder           0.000             5.324               2        (67,52) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/n8                                                           net             0.000             5.324               2        (67,52) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i5|CI                                                        adder           0.021             5.345               2        (67,53) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i5|CO                                                        adder           0.000             5.345               2        (67,53) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/n10                                                          net             0.000             5.345               2        (67,53) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i6|CI                                                        adder           0.021             5.366               2        (67,54) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i6|CO                                                        adder           0.000             5.366               2        (67,54) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/n12                                                          net             0.000             5.366               2        (67,54) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i7|CI                                                        adder           0.021             5.387               2        (67,55) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i7|CO                                                        adder           0.000             5.387               2        (67,55) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/n14                                                          net             0.000             5.387               2        (67,55) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i8|CI                                                        adder           0.021             5.408               2        (67,56) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i8|CO                                                        adder           0.000             5.408               2        (67,56) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/n16                                                          net             0.000             5.408               2        (67,56) 
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i9|CI                                                        adder           0.084             5.492               2        (67,57) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/add_50/i9|O                                                         adder           0.000             5.492              10        (67,57) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/raddr[8]                                                                          net             0.836             6.328               9        (67,57) 
+   Routing elements:
+      Manhattan distance of X:34, Y:5
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ram/ram__D$f12|RADDR[7]                                                 ram_8192x20     0.028             6.356              10        (33,62) 
+
+Capture Clock Path
+                                      name                                        model name   delay (ns)  cumulative delay (ns) pins on net    location
+==========================================================================================================================================================
+clk_sys                                                                          inpad           0.000             0.000                0       (0,162)
+clk_sys                                                                          inpad           0.110             0.110             1411       (0,162)
+clk_sys                                                                          net             1.727             1.837             1411       (0,162)
+   Routing elements:
+      Manhattan distance of X:33, Y:100
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ram/ram__D$f12|RCLK ram_8192x20     0.000             1.837             1411       (33,62)
+
+################################################################################
+Path Detail Report (clk_pixel vs clk_pixel)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : u_hls_canny_stream/u_sobel/u_sd1/i37/mem__D$2|RCLK
+Path End      : u_hls_canny_stream/grad[9]~FF|D                   
+Launch Clock  : clk_pixel (RISE)                                  
+Capture Clock : clk_pixel (RISE)                                  
+Slack         : 6.765 (required time - arrival time)              
+Delay         : 5.375                                             
+
+Logic Level             : 26
+Non-global nets on path : 26
+Global nets on path     :  0
+
+Launch Clock Path Delay        : 1.829
++ Clock To Q + Data Path Delay : 6.566
+--------------------------------------
+End-of-path arrival time       : 8.395
+
+Constraint                     : 13.441
++ Capture Clock Path Delay     :  1.829
+- Clock Uncertainty            :  0.110
+---------------------------------------
+End-of-path required time      : 15.160
+
+Launch Clock Path
+                       name                         model name   delay (ns)  cumulative delay (ns) pins on net    location
+============================================================================================================================
+clk_pixel                                          inpad           0.000             0.000               0        (0,159) 
+clk_pixel                                          inpad           0.110             0.110             601        (0,159) 
+clk_pixel                                          net             1.719             1.829             601        (0,159) 
+   Routing elements:
+      Manhattan distance of X:72, Y:17
+u_hls_canny_stream/u_sobel/u_sd1/i37/mem__D$2|RCLK ram_8192x20     0.000             1.829             601        (72,142)
+
+Data Path
+                         name                           model name   delay (ns)  cumulative delay (ns) pins on net    location
+================================================================================================================================
+u_hls_canny_stream/u_sobel/u_sd1/i37/mem__D$2|RDATA[2] ram_8192x20     1.188             1.188               3        (72,142)
+u_hls_canny_stream/u_sobel/row1[2]                     net             0.692             1.880               3        (72,142)
+   Routing elements:
+      Manhattan distance of X:12, Y:24
+u_hls_canny_stream/u_sobel/add_3/i3|I1                 adder           0.048             1.928               3        (84,166)
+u_hls_canny_stream/u_sobel/add_3/i3|CO                 adder           0.000             1.928               2        (84,166)
+u_hls_canny_stream/u_sobel/add_3/n6                    net             0.000             1.928               2        (84,166)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_hls_canny_stream/u_sobel/add_3/i4|CI                 adder           0.022             1.950               2        (84,167)
+u_hls_canny_stream/u_sobel/add_3/i4|CO                 adder           0.000             1.950               2        (84,167)
+u_hls_canny_stream/u_sobel/add_3/n8                    net             0.000             1.950               2        (84,167)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_hls_canny_stream/u_sobel/add_3/i5|CI                 adder           0.084             2.034               2        (84,168)
+u_hls_canny_stream/u_sobel/add_3/i5|O                  adder           0.000             2.034               2        (84,168)
+u_hls_canny_stream/u_sobel/n25                         net             0.229             2.263               2        (84,168)
+   Routing elements:
+      Manhattan distance of X:6, Y:0
+u_hls_canny_stream/u_sobel/add_4/i6|I0                 adder           0.020             2.283               2        (90,168)
+u_hls_canny_stream/u_sobel/add_4/i6|CO                 adder           0.000             2.283               2        (90,168)
+u_hls_canny_stream/u_sobel/add_4/n12                   net             0.000             2.283               2        (90,168)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_hls_canny_stream/u_sobel/add_4/i7|CI                 adder           0.022             2.305               2        (90,169)
+u_hls_canny_stream/u_sobel/add_4/i7|CO                 adder           0.000             2.305               2        (90,169)
+u_hls_canny_stream/u_sobel/add_4/n14                   net             0.000             2.305               2        (90,169)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_hls_canny_stream/u_sobel/add_4/i8|CI                 adder           0.022             2.327               2        (90,170)
+u_hls_canny_stream/u_sobel/add_4/i8|CO                 adder           0.000             2.327               2        (90,170)
+u_hls_canny_stream/u_sobel/add_4/n16                   net             0.000             2.327               2        (90,170)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_hls_canny_stream/u_sobel/add_4/i9|CI                 adder           0.022             2.349               2        (90,171)
+u_hls_canny_stream/u_sobel/add_4/i9|CO                 adder           0.000             2.349               2        (90,171)
+u_hls_canny_stream/u_sobel/add_4/n18                   net             0.000             2.349               2        (90,171)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_hls_canny_stream/u_sobel/add_4/i10|CI                adder           0.022             2.371               2        (90,172)
+u_hls_canny_stream/u_sobel/add_4/i10|CO                adder           0.000             2.371               2        (90,172)
+n11561                                                 net             0.000             2.371               2        (90,172)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+AUX_ADD_CO__u_hls_canny_stream/u_sobel/add_4/i10|CI    adder           0.084             2.455               2        (90,173)
+AUX_ADD_CO__u_hls_canny_stream/u_sobel/add_4/i10|O     adder           0.000             2.455               2        (90,173)
+u_hls_canny_stream/u_sobel/gx_pos[10]                  net             0.182             2.637               2        (90,173)
+   Routing elements:
+      Manhattan distance of X:5, Y:0
+u_hls_canny_stream/u_sobel/sub_11/add_2/i11|I0         adder           0.045             2.682               2        (85,173)
+u_hls_canny_stream/u_sobel/sub_11/add_2/i11|CO         adder           0.000             2.682               2        (85,173)
+u_hls_canny_stream/u_sobel/sub_11/add_2/n22            net             0.000             2.682               2        (85,173)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_hls_canny_stream/u_sobel/sub_11/add_2/i12|CI         adder           0.084             2.766               2        (85,174)
+u_hls_canny_stream/u_sobel/sub_11/add_2/i12|O          adder           0.000             2.766              13        (85,174)
+u_hls_canny_stream/u_sobel/gx[11]                      net             0.513             3.279              13        (85,174)
+   Routing elements:
+      Manhattan distance of X:3, Y:2
+LUT__24077|in[2]                                       lut             0.054             3.333              13        (88,176)
+LUT__24077|out                                         lut             0.000             3.333               8        (88,176)
+u_hls_canny_stream/u_sobel/ax[3]                       net             0.184             3.517               8        (88,176)
+   Routing elements:
+      Manhattan distance of X:1, Y:1
+u_hls_canny_stream/u_sobel/add_22/i3|I1                adder           0.054             3.571               8        (89,177)
+u_hls_canny_stream/u_sobel/add_22/i3|O                 adder           0.000             3.571               2        (89,177)
+u_hls_canny_stream/u_sobel/n265                        net             0.231             3.802               2        (89,177)
+   Routing elements:
+      Manhattan distance of X:1, Y:3
+u_hls_canny_stream/u_sobel/add_23/i4|I0                adder           0.020             3.822               2        (90,180)
+u_hls_canny_stream/u_sobel/add_23/i4|CO                adder           0.000             3.822               2        (90,180)
+n11547                                                 net             0.000             3.822               2        (90,180)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+AUX_ADD_CO__u_hls_canny_stream/u_sobel/add_23/i4|CI    adder           0.084             3.906               2        (90,181)
+AUX_ADD_CO__u_hls_canny_stream/u_sobel/add_23/i4|O     adder           0.000             3.906               3        (90,181)
+u_hls_canny_stream/u_sobel/add_23/n8                   net             0.399             4.305               3        (90,181)
+   Routing elements:
+      Manhattan distance of X:4, Y:1
+AUX_ADD_CI__u_hls_canny_stream/u_sobel/add_23/i5|I0    adder           0.045             4.350               3        (86,182)
+AUX_ADD_CI__u_hls_canny_stream/u_sobel/add_23/i5|CO    adder           0.000             4.350               2        (86,182)
+n11548                                                 net             0.000             4.350               2        (86,182)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_hls_canny_stream/u_sobel/add_23/i5|CI                adder           0.084             4.434               2        (86,183)
+u_hls_canny_stream/u_sobel/add_23/i5|O                 adder           0.000             4.434               2        (86,183)
+u_hls_canny_stream/u_sobel/n280                        net             0.213             4.647               2        (86,183)
+   Routing elements:
+      Manhattan distance of X:5, Y:0
+u_hls_canny_stream/u_sobel/add_24/i7|I0                adder           0.045             4.692               2        (91,183)
+u_hls_canny_stream/u_sobel/add_24/i7|CO                adder           0.000             4.692               2        (91,183)
+u_hls_canny_stream/u_sobel/add_24/n14                  net             0.000             4.692               2        (91,183)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_hls_canny_stream/u_sobel/add_24/i8|CI                adder           0.021             4.713               2        (91,184)
+u_hls_canny_stream/u_sobel/add_24/i8|CO                adder           0.000             4.713               2        (91,184)
+u_hls_canny_stream/u_sobel/add_24/n16                  net             0.000             4.713               2        (91,184)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_hls_canny_stream/u_sobel/add_24/i9|CI                adder           0.084             4.797               2        (91,185)
+u_hls_canny_stream/u_sobel/add_24/i9|O                 adder           0.000             4.797               3        (91,185)
+u_hls_canny_stream/u_sobel/ax106[11]                   net             0.351             5.148               3        (91,185)
+   Routing elements:
+      Manhattan distance of X:4, Y:7
+LUT__25165|in[2]                                       lut             0.054             5.202               3        (95,178)
+LUT__25165|out                                         lut             0.000             5.202               2        (95,178)
+n11417                                                 net             0.094             5.296               2        (95,178)
+   Routing elements:
+      Manhattan distance of X:1, Y:0
+LUT__25166|in[3]                                       lut             0.054             5.350               2        (94,178)
+LUT__25166|out                                         lut             0.000             5.350               2        (94,178)
+n11418                                                 net             0.174             5.524               2        (94,178)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+LUT__25168|in[1]                                       lut             0.054             5.578               2        (94,179)
+LUT__25168|out                                         lut             0.000             5.578               2        (94,179)
+n11420                                                 net             0.167             5.745               2        (94,179)
+   Routing elements:
+      Manhattan distance of X:0, Y:5
+LUT__25170|in[2]                                       lut             0.054             5.799               2        (94,184)
+LUT__25170|out                                         lut             0.000             5.799               2        (94,184)
+n11422                                                 net             0.196             5.995               2        (94,184)
+   Routing elements:
+      Manhattan distance of X:3, Y:0
+LUT__25180|in[0]                                       lut             0.054             6.049               2        (97,184)
+LUT__25180|out                                         lut             0.000             6.049               3        (97,184)
+n11432                                                 net             0.460             6.509               3        (97,184)
+   Routing elements:
+      Manhattan distance of X:2, Y:1
+LUT__25182|in[3]                                       lut             0.054             6.563               3        (95,183)
+LUT__25182|out                                         lut             0.000             6.563               2        (95,183)
+u_hls_canny_stream/grad[9]~FF|D                        ff              0.003             6.566               2        (95,183)
+
+Capture Clock Path
+              name                 model name   delay (ns)  cumulative delay (ns) pins on net    location
+===========================================================================================================
+clk_pixel                            inpad        0.000             0.000               0        (0,159) 
+clk_pixel                            inpad        0.110             0.110             601        (0,159) 
+clk_pixel                            net          1.719             1.829             601        (0,159) 
+   Routing elements:
+      Manhattan distance of X:95, Y:24
+u_hls_canny_stream/grad[9]~FF|CLK    ff           0.000             1.829             601        (95,183)
+
+################################################################################
+Path Detail Report (cmos_pclk vs cmos_pclk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : r_XYCrop_frame_de~FF|CLK                                                       
+Path End      : u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ram/ram__D$2|WE[0]
+Launch Clock  : cmos_pclk (RISE)                                                               
+Capture Clock : cmos_pclk (RISE)                                                               
+Slack         : 7.228 (required time - arrival time)                                           
+Delay         : 2.470                                                                          
+
+Logic Level             : 2
+Non-global nets on path : 3
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.811
++ Clock To Q + Data Path Delay : 2.662
+--------------------------------------
+End-of-path arrival time       : 4.473
+
+Constraint                     : 10.000
++ Capture Clock Path Delay     :  1.811
+- Clock Uncertainty            :  0.110
+---------------------------------------
+End-of-path required time      : 11.701
+
+Launch Clock Path
+          name            model name   delay (ns)  cumulative delay (ns) pins on net    location
+==================================================================================================
+cmos_pclk                   inpad        0.000             0.000               0       (111,323)
+cmos_pclk                   inpad        0.110             0.110             137       (111,323)
+cmos_pclk                   net          1.701             1.811             137       (111,323)
+   Routing elements:
+      Manhattan distance of X:16, Y:7
+r_XYCrop_frame_de~FF|CLK    ff           0.000             1.811             137       (95,316) 
+
+Data Path
+                                     name                                        model name   delay (ns)  cumulative delay (ns) pins on net    location
+=========================================================================================================================================================
+r_XYCrop_frame_de~FF|Q                                                          ff              0.113             0.113               2        (95,316)
+r_XYCrop_frame_de                                                               net             0.376             0.489               2        (95,316)
+   Routing elements:
+      Manhattan distance of X:0, Y:17
+LUT__21383|in[1]                                                                lut             0.054             0.543               2        (95,299)
+LUT__21383|out                                                                  lut             0.000             0.543               3        (95,299)
+led_o[3]                                                                        net             1.114             1.657               3        (95,299)
+   Routing elements:
+      Manhattan distance of X:34, Y:245
+LUT__24740|in[2]                                                                lut             0.054             1.711               3        (61,54) 
+LUT__24740|out                                                                  lut             0.000             1.711              23        (61,54) 
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/wr_en_int                    net             0.872             2.583              23        (61,54) 
+   Routing elements:
+      Manhattan distance of X:28, Y:12
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ram/ram__D$2|WE[0] ram_8192x20     0.079             2.662              23        (33,42) 
+
+Capture Clock Path
+                                     name                                       model name   delay (ns)  cumulative delay (ns) pins on net    location
+========================================================================================================================================================
+cmos_pclk                                                                      inpad           0.000             0.000               0       (111,323)
+cmos_pclk                                                                      inpad           0.110             0.110             137       (111,323)
+cmos_pclk                                                                      net             1.701             1.811             137       (111,323)
+   Routing elements:
+      Manhattan distance of X:78, Y:281
+u_axi4_ctrl/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ram/ram__D$2|WCLK ram_8192x20     0.000             1.811             137       (33,42)  
+
+################################################################################
+Path Detail Report (cmos_pclk vs cmos_pclk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : cmos_vsync                                
+Path End      : u_Sensor_Image_XYCrop/image_ypos[11]~FF|CE
+Launch Clock  : cmos_pclk (FALL)                          
+Capture Clock : cmos_pclk (RISE)                          
+Slack         : 1.169 (required time - arrival time)      
+Delay         : 2.448                                     
+
+Logic Level             : 1
+Non-global nets on path : 2
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.802
++ Clock To Q + Data Path Delay : 2.539
++ Input Delay                  : 1.191
+--------------------------------------
+End-of-path arrival time       : 5.532
+
+Constraint                     : 5.000
++ Capture Clock Path Delay     : 1.811
+- Clock Uncertainty            : 0.110
+--------------------------------------
+End-of-path required time      : 6.701
+
+Launch Clock Path
+         name            model name   delay (ns)  cumulative delay (ns) pins on net    location
+=================================================================================================
+cmos_pclk                  inpad        0.000             0.000               0       (111,323)
+cmos_pclk                  inpad        0.110             0.110             137       (111,323)
+cmos_pclk                  net          1.648             1.758             137       (111,323)
+   Routing elements:
+      Manhattan distance of X:93, Y:0
+cmos_pclk~CLKOUT~18~322    outpad       0.044             1.802             137       (18,323) 
+cmos_pclk~CLKOUT~18~322    outpad       0.000             1.802               0       (18,323) 
+
+Data Path
+                   name                     model name   delay (ns)  cumulative delay (ns) pins on net    location
+====================================================================================================================
+cmos_vsync                                    inpad        0.110             0.110               0        (0,321) 
+cmos_vsync                                    inpad        0.000             0.110              16        (0,321) 
+cmos_vsync                                    net          1.042             1.152              16        (0,321) 
+   Routing elements:
+      Manhattan distance of X:95, Y:6
+LUT__24648|in[2]                              lut          0.054             1.206              16        (95,315)
+LUT__24648|out                                lut          0.000             1.206              13        (95,315)
+ceg_net589                                    net          1.242             2.448              13        (95,315)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+u_Sensor_Image_XYCrop/image_ypos[11]~FF|CE    ff           0.091             2.539              13        (95,314)
+
+Capture Clock Path
+                   name                      model name   delay (ns)  cumulative delay (ns) pins on net    location
+=====================================================================================================================
+cmos_pclk                                      inpad        0.000             0.000               0       (111,323)
+cmos_pclk                                      inpad        0.110             0.110             137       (111,323)
+cmos_pclk                                      net          1.701             1.811             137       (111,323)
+   Routing elements:
+      Manhattan distance of X:16, Y:9
+u_Sensor_Image_XYCrop/image_ypos[11]~FF|CLK    ff           0.000             1.811             137       (95,314) 
+
+---------- Path Details for Max Critical Paths (end) ---------------
+
+---------- 4. Path Details for Min Critical Paths (begin) ----------
+
+################################################################################
+Path Detail Report (cmos_pclk vs cmos_pclk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : XYCrop_frame_Gray[0]~FF|CLK         
+Path End      : r_XYCrop_frame_Gray[0]~FF|D         
+Launch Clock  : cmos_pclk (RISE)                    
+Capture Clock : cmos_pclk (RISE)                    
+Slack         : 0.026 (arrival time - required time)
+Delay         : 0.107                               
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.794
++ Clock To Q + Data Path Delay : 0.096
+--------------------------------------
+End-of-path arrival time       : 1.890
+
+Constraint                     : 0.000
++ Capture Clock Path Delay     : 1.794
++ Clock Uncertainty            : 0.070
+--------------------------------------
+End-of-path required time      : 1.864
+
+Launch Clock Path
+           name              model name   delay (ns)  cumulative delay (ns) pins on net    location
+=====================================================================================================
+cmos_pclk                      inpad        0.000             0.000               0       (111,323)
+cmos_pclk                      inpad        0.070             0.070             137       (111,323)
+cmos_pclk                      net          1.724             1.794             137       (111,323)
+   Routing elements:
+      Manhattan distance of X:79, Y:289
+XYCrop_frame_Gray[0]~FF|CLK    ff           0.000             1.794             137       (32,34)  
+
+Data Path
+           name              model name   delay (ns)  cumulative delay (ns) pins on net    location
+=====================================================================================================
+XYCrop_frame_Gray[0]~FF|Q       ff           0.072            0.072              2         (32,34)
+XYCrop_frame_Gray[0]            net          0.107            0.179              2         (32,34)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+r_XYCrop_frame_Gray[0]~FF|D     ff          -0.083            0.096              2         (32,35)
+
+Capture Clock Path
+            name               model name   delay (ns)  cumulative delay (ns) pins on net    location
+=======================================================================================================
+cmos_pclk                        inpad        0.000             0.000               0       (111,323)
+cmos_pclk                        inpad        0.070             0.070             137       (111,323)
+cmos_pclk                        net          1.724             1.794             137       (111,323)
+   Routing elements:
+      Manhattan distance of X:79, Y:288
+r_XYCrop_frame_Gray[0]~FF|CLK    ff           0.000             1.794             137       (32,35)  
+
+################################################################################
+Path Detail Report (tdqss_clk vs tdqss_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/dqs_state[0]~FF|CLK
+Path End      : o_dqs_oe[1]~FF|D                                                                                                      
+Launch Clock  : tdqss_clk (RISE)                                                                                                      
+Capture Clock : tdqss_clk (RISE)                                                                                                      
+Slack         : 0.098 (arrival time - required time)                                                                                  
+Delay         : 0.096                                                                                                                 
+
+Logic Level             : 1
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.194
++ Clock To Q + Data Path Delay : 0.168
+--------------------------------------
+End-of-path arrival time       : 1.362
+
+Constraint                     : 0.000
++ Capture Clock Path Delay     : 1.194
++ Clock Uncertainty            : 0.070
+--------------------------------------
+End-of-path required time      : 1.264
+
+Launch Clock Path
+                                                         name                                                           model name   delay (ns)  cumulative delay (ns) pins on net    location
+================================================================================================================================================================================================
+tdqss_clk                                                                                                                 inpad        0.000             0.000               0        (110,0) 
+tdqss_clk                                                                                                                 inpad        0.070             0.070             146        (110,0) 
+tdqss_clk                                                                                                                 net          1.124             1.194             146        (110,0) 
+   Routing elements:
+      Manhattan distance of X:83, Y:45
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/dqs_state[0]~FF|CLK    ff           0.000             1.194             146        (193,45)
+
+Data Path
+                                                        name                                                          model name   delay (ns)  cumulative delay (ns) pins on net    location
+==============================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/dqs_state[0]~FF|Q     ff          0.072             0.072              5         (193,45)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/dqs_state[0]          net         0.062             0.134              5         (193,45)
+   Routing elements:
+      Manhattan distance of X:0, Y:2
+LUT__23390|in[0]                                                                                                         lut         0.034             0.168              5         (193,43)
+LUT__23390|out                                                                                                           lut         0.000             0.168              2         (193,43)
+o_dqs_oe[1]~FF|D                                                                                                         ff          0.000             0.168              2         (193,43)
+
+Capture Clock Path
+       name         model name   delay (ns)  cumulative delay (ns) pins on net    location
+============================================================================================
+tdqss_clk             inpad        0.000             0.000               0        (110,0) 
+tdqss_clk             inpad        0.070             0.070             146        (110,0) 
+tdqss_clk             net          1.124             1.194             146        (110,0) 
+   Routing elements:
+      Manhattan distance of X:83, Y:43
+o_dqs_oe[1]~FF|CLK    ff           0.000             1.194             146        (193,43)
+
+################################################################################
+Path Detail Report (tdqss_clk vs core_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popCC_popPtrGray[1]~FF|CLK              
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc/buffers_0[1]~FF|D
+Launch Clock  : tdqss_clk (RISE)                                                                                                                   
+Capture Clock : core_clk (RISE)                                                                                                                    
+Slack         : 0.150 (arrival time - required time)                                                                                               
+Delay         : 0.111                                                                                                                              
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.194
++ Clock To Q + Data Path Delay : 0.183
+--------------------------------------
+End-of-path arrival time       : 1.377
+
+Constraint                     : 0.000
++ Capture Clock Path Delay     : 1.157
++ Clock Uncertainty            : 0.070
+--------------------------------------
+End-of-path required time      : 1.227
+
+Launch Clock Path
+                                                        name                                                           model name   delay (ns)  cumulative delay (ns) pins on net    location
+===============================================================================================================================================================================================
+tdqss_clk                                                                                                                inpad        0.000             0.000               0        (110,0) 
+tdqss_clk                                                                                                                inpad        0.070             0.070             146        (110,0) 
+tdqss_clk                                                                                                                net          1.124             1.194             146        (110,0) 
+   Routing elements:
+      Manhattan distance of X:65, Y:52
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popCC_popPtrGray[1]~FF|CLK    ff           0.000             1.194             146        (175,52)
+
+Data Path
+                                                               name                                                                  model name   delay (ns)  cumulative delay (ns) pins on net    location
+=============================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popCC_popPtrGray[1]~FF|Q                     ff          0.072             0.072              3         (175,52)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popCC_popPtrGray[1]                          net         0.111             0.183              3         (175,52)
+   Routing elements:
+      Manhattan distance of X:0, Y:5
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc/buffers_0[1]~FF|D     ff          0.000             0.183              3         (175,47)
+
+Capture Clock Path
+                                                                name                                                                   model name   delay (ns)  cumulative delay (ns) pins on net    location
+===============================================================================================================================================================================================================
+core_clk                                                                                                                                 inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                                                 inpad        0.070             0.070             831       (219,164)
+core_clk                                                                                                                                 net          1.087             1.157             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:44, Y:117
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc/buffers_0[1]~FF|CLK    ff           0.000             1.157             831       (175,47) 
+
+################################################################################
+Path Detail Report (core_clk vs tdqss_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushCC_pushPtrGray[2]~FF|CLK            
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc/buffers_0[2]~FF|D
+Launch Clock  : core_clk (RISE)                                                                                                                    
+Capture Clock : tdqss_clk (RISE)                                                                                                                   
+Slack         : 0.079 (arrival time - required time)                                                                                               
+Delay         : 0.114                                                                                                                              
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.157
++ Clock To Q + Data Path Delay : 0.186
+--------------------------------------
+End-of-path arrival time       : 1.343
+
+Constraint                     : 0.000
++ Capture Clock Path Delay     : 1.194
++ Clock Uncertainty            : 0.070
+--------------------------------------
+End-of-path required time      : 1.264
+
+Launch Clock Path
+                                                         name                                                            model name   delay (ns)  cumulative delay (ns) pins on net    location
+=================================================================================================================================================================================================
+core_clk                                                                                                                   inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                                   inpad        0.070             0.070             831       (219,164)
+core_clk                                                                                                                   net          1.087             1.157             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:45, Y:110
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushCC_pushPtrGray[2]~FF|CLK    ff           0.000             1.157             831       (174,54) 
+
+Data Path
+                                                               name                                                                  model name   delay (ns)  cumulative delay (ns) pins on net    location
+=============================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushCC_pushPtrGray[2]~FF|Q                   ff          0.072             0.072              3         (174,54)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushCC_pushPtrGray[2]                        net         0.114             0.186              3         (174,54)
+   Routing elements:
+      Manhattan distance of X:5, Y:0
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc/buffers_0[2]~FF|D     ff          0.000             0.186              3         (179,54)
+
+Capture Clock Path
+                                                                name                                                                   model name   delay (ns)  cumulative delay (ns) pins on net    location
+===============================================================================================================================================================================================================
+tdqss_clk                                                                                                                                inpad        0.000             0.000               0        (110,0) 
+tdqss_clk                                                                                                                                inpad        0.070             0.070             146        (110,0) 
+tdqss_clk                                                                                                                                net          1.124             1.194             146        (110,0) 
+   Routing elements:
+      Manhattan distance of X:69, Y:54
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc/buffers_0[2]~FF|CLK    ff           0.000             1.194             146        (179,54)
+
+################################################################################
+Path Detail Report (core_clk vs core_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushCC_pushPtr[0]~FF|CLK
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/ram|WADDR[11]           
+Launch Clock  : core_clk (RISE)                                                                                                     
+Capture Clock : core_clk (RISE)                                                                                                     
+Slack         : 0.051 (arrival time - required time)                                                                                
+Delay         : 0.142                                                                                                               
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.157
++ Clock To Q + Data Path Delay : 0.121
+--------------------------------------
+End-of-path arrival time       : 1.278
+
+Constraint                     : 0.000
++ Capture Clock Path Delay     : 1.157
++ Clock Uncertainty            : 0.070
+--------------------------------------
+End-of-path required time      : 1.227
+
+Launch Clock Path
+                                                        name                                                          model name   delay (ns)  cumulative delay (ns) pins on net    location
+==============================================================================================================================================================================================
+core_clk                                                                                                                inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                                inpad        0.070             0.070             831       (219,164)
+core_clk                                                                                                                net          1.087             1.157             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:85, Y:77
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushCC_pushPtr[0]~FF|CLK    ff           0.000             1.157             831       (134,87) 
+
+Data Path
+                                                       name                                                         model name   delay (ns)  cumulative delay (ns) pins on net    location
+============================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushCC_pushPtr[0]~FF|Q ff               0.072            0.072              5         (134,87)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushCC_pushPtr[0]      net              0.142            0.214              5         (134,87)
+   Routing elements:
+      Manhattan distance of X:2, Y:5
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/ram|WADDR[11]          ram_8192x20     -0.093            0.121              5         (132,82)
+
+Capture Clock Path
+                                                name                                                  model name   delay (ns)  cumulative delay (ns) pins on net    location
+==============================================================================================================================================================================
+core_clk                                                                                             inpad           0.000             0.000               0       (219,164)
+core_clk                                                                                             inpad           0.070             0.070             831       (219,164)
+core_clk                                                                                             net             1.087             1.157             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:87, Y:82
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/ram|WCLK ram_8192x20     0.000             1.157             831       (132,82) 
+
+################################################################################
+Path Detail Report (core_clk vs tac_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[5]~FF|CLK          
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][5]~FF|D
+Launch Clock  : core_clk (RISE)                                                                                                                                                                       
+Capture Clock : tac_clk (RISE)                                                                                                                                                                        
+Slack         : 0.067 (arrival time - required time)                                                                                                                                                  
+Delay         : 0.111                                                                                                                                                                                 
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.157
++ Clock To Q + Data Path Delay : 0.183
+--------------------------------------
+End-of-path arrival time       : 1.340
+
+Constraint                     : 0.000
++ Capture Clock Path Delay     : 1.203
++ Clock Uncertainty            : 0.070
+--------------------------------------
+End-of-path required time      : 1.273
+
+Launch Clock Path
+                                                                                    name                                                                                      model name   delay (ns)  cumulative delay (ns) pins on net    location
+======================================================================================================================================================================================================================================================
+core_clk                                                                                                                                                                        inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                                                                                        inpad        0.070             0.070             831       (219,164)
+core_clk                                                                                                                                                                        net          1.087             1.157             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:107, Y:132
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[5]~FF|CLK    ff           0.000             1.157             831       (112,32) 
+
+Data Path
+                                                                                         name                                                                                           model name   delay (ns)  cumulative delay (ns) pins on net    location
+================================================================================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[5]~FF|Q                 ff          0.072             0.072              2         (112,32)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[5]                      net         0.111             0.183              2         (112,32)
+   Routing elements:
+      Manhattan distance of X:0, Y:5
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][5]~FF|D     ff          0.000             0.183              2         (112,27)
+
+Capture Clock Path
+                                                                                          name                                                                                            model name   delay (ns)  cumulative delay (ns) pins on net    location
+==================================================================================================================================================================================================================================================================
+tac_clk                                                                                                                                                                                     inpad        0.000             0.000               0        (111,0) 
+tac_clk                                                                                                                                                                                     inpad        0.070             0.070             331        (111,0) 
+tac_clk                                                                                                                                                                                     net          1.133             1.203             331        (111,0) 
+   Routing elements:
+      Manhattan distance of X:1, Y:27
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][5]~FF|CLK    ff           0.000             1.203             331        (112,27)
+
+################################################################################
+Path Detail Report (core_clk vs twd_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[5]~FF|CLK          
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][5]~FF|D
+Launch Clock  : core_clk (RISE)                                                                                                                                                                       
+Capture Clock : twd_clk (RISE)                                                                                                                                                                        
+Slack         : 2.024 (arrival time - required time)                                                                                                                                                  
+Delay         : 0.119                                                                                                                                                                                 
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.157
++ Clock To Q + Data Path Delay : 0.191
+--------------------------------------
+End-of-path arrival time       : 1.348
+
+Constraint                     : -1.883
++ Capture Clock Path Delay     :  1.207
++ Clock Uncertainty            :  0.000
+---------------------------------------
+End-of-path required time      : -0.676
+
+Launch Clock Path
+                                                                                    name                                                                                      model name   delay (ns)  cumulative delay (ns) pins on net    location
+======================================================================================================================================================================================================================================================
+core_clk                                                                                                                                                                        inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                                                                                        inpad        0.070             0.070             831       (219,164)
+core_clk                                                                                                                                                                        net          1.087             1.157             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:184, Y:141
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[5]~FF|CLK    ff           0.000             1.157             831       (35,23)  
+
+Data Path
+                                                                                         name                                                                                           model name   delay (ns)  cumulative delay (ns) pins on net    location
+================================================================================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[5]~FF|Q                 ff          0.072             0.072              2         (35,23)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_r[5]                      net         0.119             0.191              2         (35,23)
+   Routing elements:
+      Manhattan distance of X:5, Y:0
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][5]~FF|D     ff          0.000             0.191              2         (40,23)
+
+Capture Clock Path
+                                                                                          name                                                                                            model name   delay (ns)  cumulative delay (ns) pins on net    location
+==================================================================================================================================================================================================================================================================
+twd_clk                                                                                                                                                                                     inpad        0.000             0.000               0       (219,159)
+twd_clk                                                                                                                                                                                     inpad        0.070             0.070             429       (219,159)
+twd_clk                                                                                                                                                                                     net          1.137             1.207             429       (219,159)
+   Routing elements:
+      Manhattan distance of X:179, Y:136
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][5]~FF|CLK    ff           0.000             1.207             429       (40,23)  
+
+################################################################################
+Path Detail Report (tac_clk vs core_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushCC_pushPtrGray[5]~FF|CLK            
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[5]~FF|D
+Launch Clock  : tac_clk (RISE)                                                                                                                         
+Capture Clock : core_clk (RISE)                                                                                                                        
+Slack         : 0.162 (arrival time - required time)                                                                                                   
+Delay         : 0.114                                                                                                                                  
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.203
++ Clock To Q + Data Path Delay : 0.186
+--------------------------------------
+End-of-path arrival time       : 1.389
+
+Constraint                     : 0.000
++ Capture Clock Path Delay     : 1.157
++ Clock Uncertainty            : 0.070
+--------------------------------------
+End-of-path required time      : 1.227
+
+Launch Clock Path
+                                                           name                                                              model name   delay (ns)  cumulative delay (ns) pins on net    location
+=====================================================================================================================================================================================================
+tac_clk                                                                                                                        inpad        0.000             0.000               0        (111,0) 
+tac_clk                                                                                                                        inpad        0.070             0.070             331        (111,0) 
+tac_clk                                                                                                                        net          1.133             1.203             331        (111,0) 
+   Routing elements:
+      Manhattan distance of X:14, Y:41
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushCC_pushPtrGray[5]~FF|CLK    ff           0.000             1.203             331        (125,41)
+
+Data Path
+                                                                 name                                                                    model name   delay (ns)  cumulative delay (ns) pins on net    location
+=================================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushCC_pushPtrGray[5]~FF|Q                   ff          0.072             0.072              3         (125,41)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushCC_pushPtrGray[5]                        net         0.114             0.186              3         (125,41)
+   Routing elements:
+      Manhattan distance of X:5, Y:0
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[5]~FF|D     ff          0.000             0.186              3         (130,41)
+
+Capture Clock Path
+                                                                  name                                                                     model name   delay (ns)  cumulative delay (ns) pins on net    location
+===================================================================================================================================================================================================================
+core_clk                                                                                                                                     inpad        0.000             0.000               0       (219,164)
+core_clk                                                                                                                                     inpad        0.070             0.070             831       (219,164)
+core_clk                                                                                                                                     net          1.087             1.157             831       (219,164)
+   Routing elements:
+      Manhattan distance of X:89, Y:123
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[5]~FF|CLK    ff           0.000             1.157             831       (130,41) 
+
+################################################################################
+Path Detail Report (tac_clk vs tac_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/w_rd_fifo_wr_data[48]~FF|CLK              
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ram/ram__D$c12|WDATA[10]
+Launch Clock  : tac_clk (RISE)                                                                                                               
+Capture Clock : tac_clk (RISE)                                                                                                               
+Slack         : 0.028 (arrival time - required time)                                                                                         
+Delay         : 0.137                                                                                                                        
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.203
++ Clock To Q + Data Path Delay : 0.098
+--------------------------------------
+End-of-path arrival time       : 1.301
+
+Constraint                     : 0.000
++ Capture Clock Path Delay     : 1.203
++ Clock Uncertainty            : 0.070
+--------------------------------------
+End-of-path required time      : 1.273
+
+Launch Clock Path
+                                                     name                                                        model name   delay (ns)  cumulative delay (ns) pins on net    location
+=========================================================================================================================================================================================
+tac_clk                                                                                                            inpad        0.000             0.000               0        (111,0) 
+tac_clk                                                                                                            inpad        0.070             0.070             331        (111,0) 
+tac_clk                                                                                                            net          1.133             1.203             331        (111,0) 
+   Routing elements:
+      Manhattan distance of X:5, Y:12
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/w_rd_fifo_wr_data[48]~FF|CLK    ff           0.000             1.203             331        (116,12)
+
+Data Path
+                                                            name                                                               model name   delay (ns)  cumulative delay (ns) pins on net    location
+=======================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/w_rd_fifo_wr_data[48]~FF|Q                 ff               0.072            0.072              3         (116,12)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/w_rd_fifo_wr_data[48]                      net              0.137            0.209              3         (116,12)
+   Routing elements:
+      Manhattan distance of X:1, Y:10
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ram/ram__D$c12|WDATA[10] ram_8192x20     -0.111            0.098              3         (117,2) 
+
+Capture Clock Path
+                                                          name                                                            model name   delay (ns)  cumulative delay (ns) pins on net    location
+==================================================================================================================================================================================================
+tac_clk                                                                                                                  inpad           0.000             0.000               0        (111,0)
+tac_clk                                                                                                                  inpad           0.070             0.070             331        (111,0)
+tac_clk                                                                                                                  net             1.133             1.203             331        (111,0)
+   Routing elements:
+      Manhattan distance of X:6, Y:2
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ram/ram__D$c12|WCLK ram_8192x20     0.000             1.203             331        (117,2)
+
+################################################################################
+Path Detail Report (twd_clk vs twd_clk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/dffrs_2532/i15_2|CLK     
+Path End      : ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/dm_data_buf_p[4][14]~FF|D
+Launch Clock  : twd_clk (RISE)                                                                                                              
+Capture Clock : twd_clk (RISE)                                                                                                              
+Slack         : 0.052 (arrival time - required time)                                                                                        
+Delay         : 0.069                                                                                                                       
+
+Logic Level             : 1
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.334
++ Clock To Q + Data Path Delay : 0.122
+--------------------------------------
+End-of-path arrival time       : 1.456
+
+Constraint                     : 0.000
++ Capture Clock Path Delay     : 1.334
++ Clock Uncertainty            : 0.070
+--------------------------------------
+End-of-path required time      : 1.404
+
+Launch Clock Path
+                                                         name                                                            model name   delay (ns)  cumulative delay (ns) pins on net    location
+=================================================================================================================================================================================================
+twd_clk                                                                                                                    inpad        0.000             0.000               0       (219,159)
+twd_clk                                                                                                                    inpad        0.070             0.070             429       (219,159)
+twd_clk                                                                                                                    net          1.264             1.334             429       (219,159)
+   Routing elements:
+      Manhattan distance of X:126, Y:141
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/dffrs_2532/i15_2|CLK    srl8         0.000             1.334             429       (93,18)  
+
+Data Path
+                                                            name                                                              model name   delay (ns)  cumulative delay (ns) pins on net    location
+======================================================================================================================================================================================================
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/dffrs_2532/i15_2|Q            srl8         0.072            0.072              2         (93,18)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/dffrs_2532/i15_pre            net          0.034            0.106              2         (93,18)
+   Routing elements:
+      Manhattan distance of X:0, Y:1
+LUT__22819|in[0]                                                                                                                 lut          0.035            0.141              2         (93,17)
+LUT__22819|out                                                                                                                   lut          0.000            0.141              2         (93,17)
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/dm_data_buf_p[4][14]~FF|D     ff          -0.019            0.122              2         (93,17)
+
+Capture Clock Path
+                                                             name                                                               model name   delay (ns)  cumulative delay (ns) pins on net    location
+========================================================================================================================================================================================================
+twd_clk                                                                                                                           inpad        0.000             0.000               0       (219,159)
+twd_clk                                                                                                                           inpad        0.070             0.070             429       (219,159)
+twd_clk                                                                                                                           net          1.264             1.334             429       (219,159)
+   Routing elements:
+      Manhattan distance of X:126, Y:142
+ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/dm_data_buf_p[4][14]~FF|CLK    ff           0.000             1.334             429       (93,17)  
+
+################################################################################
+Path Detail Report (clk_sys vs clk_sys)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : u_axi4_ctrl/rfifo_wdata[47]~FF|CLK                                                   
+Path End      : u_axi4_ctrl/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ram/ram__D$g1|WDATA[3]
+Launch Clock  : clk_sys (RISE)                                                                       
+Capture Clock : clk_sys (RISE)                                                                       
+Slack         : 0.029 (arrival time - required time)                                                 
+Delay         : 0.138                                                                                
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.189
++ Clock To Q + Data Path Delay : 0.099
+--------------------------------------
+End-of-path arrival time       : 1.288
+
+Constraint                     : 0.000
++ Capture Clock Path Delay     : 1.189
++ Clock Uncertainty            : 0.070
+--------------------------------------
+End-of-path required time      : 1.259
+
+Launch Clock Path
+               name                 model name   delay (ns)  cumulative delay (ns) pins on net    location
+============================================================================================================
+clk_sys                               inpad        0.000             0.000                0       (0,162) 
+clk_sys                               inpad        0.070             0.070             1411       (0,162) 
+clk_sys                               net          1.119             1.189             1411       (0,162) 
+   Routing elements:
+      Manhattan distance of X:144, Y:137
+u_axi4_ctrl/rfifo_wdata[47]~FF|CLK    ff           0.000             1.189             1411       (144,25)
+
+Data Path
+                                        name                                           model name   delay (ns)  cumulative delay (ns) pins on net    location
+===============================================================================================================================================================
+u_axi4_ctrl/rfifo_wdata[47]~FF|Q                                                      ff               0.072            0.072              2         (144,25)
+u_axi4_ctrl/rfifo_wdata[47]                                                           net              0.138            0.210              2         (144,25)
+   Routing elements:
+      Manhattan distance of X:3, Y:3
+u_axi4_ctrl/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ram/ram__D$g1|WDATA[3] ram_8192x20     -0.111            0.099              2         (147,22)
+
+Capture Clock Path
+                                      name                                         model name   delay (ns)  cumulative delay (ns) pins on net    location
+===========================================================================================================================================================
+clk_sys                                                                           inpad           0.000             0.000                0       (0,162) 
+clk_sys                                                                           inpad           0.070             0.070             1411       (0,162) 
+clk_sys                                                                           net             1.119             1.189             1411       (0,162) 
+   Routing elements:
+      Manhattan distance of X:147, Y:140
+u_axi4_ctrl/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ram/ram__D$g1|WCLK ram_8192x20     0.000             1.189             1411       (147,22)
+
+################################################################################
+Path Detail Report (clk_pixel vs clk_pixel)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : u_hls_canny_stream/grad[0]~FF|CLK               
+Path End      : u_hls_canny_stream/u_nms/u_nd1/mem__D$2|WDATA[0]
+Launch Clock  : clk_pixel (RISE)                                
+Capture Clock : clk_pixel (RISE)                                
+Slack         : 0.031 (arrival time - required time)            
+Delay         : 0.140                                           
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.184
++ Clock To Q + Data Path Delay : 0.101
+--------------------------------------
+End-of-path arrival time       : 1.285
+
+Constraint                     : 0.000
++ Capture Clock Path Delay     : 1.184
++ Clock Uncertainty            : 0.070
+--------------------------------------
+End-of-path required time      : 1.254
+
+Launch Clock Path
+              name                 model name   delay (ns)  cumulative delay (ns) pins on net    location
+===========================================================================================================
+clk_pixel                            inpad        0.000             0.000               0        (0,159) 
+clk_pixel                            inpad        0.070             0.070             601        (0,159) 
+clk_pixel                            net          1.114             1.184             601        (0,159) 
+   Routing elements:
+      Manhattan distance of X:82, Y:23
+u_hls_canny_stream/grad[0]~FF|CLK    ff           0.000             1.184             601        (82,182)
+
+Data Path
+                      name                        model name   delay (ns)  cumulative delay (ns) pins on net    location
+==========================================================================================================================
+u_hls_canny_stream/grad[0]~FF|Q                  ff               0.072            0.072              4         (82,182)
+u_hls_canny_stream/grad[0]                       net              0.140            0.212              4         (82,182)
+   Routing elements:
+      Manhattan distance of X:5, Y:0
+u_hls_canny_stream/u_nms/u_nd1/mem__D$2|WDATA[0] ram_8192x20     -0.111            0.101              4         (87,182)
+
+Capture Clock Path
+                    name                      model name   delay (ns)  cumulative delay (ns) pins on net    location
+======================================================================================================================
+clk_pixel                                    inpad           0.000             0.000               0        (0,159) 
+clk_pixel                                    inpad           0.070             0.070             601        (0,159) 
+clk_pixel                                    net             1.114             1.184             601        (0,159) 
+   Routing elements:
+      Manhattan distance of X:87, Y:23
+u_hls_canny_stream/u_nms/u_nd1/mem__D$2|WCLK ram_8192x20     0.000             1.184             601        (87,182)
+
+################################################################################
+Path Detail Report (cmos_pclk vs cmos_pclk)
+################################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : cmos_data[1]                        
+Path End      : XYCrop_frame_Gray[1]~FF|D           
+Launch Clock  : cmos_pclk (FALL)                    
+Capture Clock : cmos_pclk (RISE)                    
+Slack         : 5.577 (arrival time - required time)
+Delay         : 0.397                               
+
+Logic Level             : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 1.166
++ Clock To Q + Data Path Delay : 0.314
++ Input Delay                  : 0.961
+--------------------------------------
+End-of-path arrival time       : 2.441
+
+Constraint                     : -5.000
++ Capture Clock Path Delay     :  1.794
++ Clock Uncertainty            :  0.070
+---------------------------------------
+End-of-path required time      : -3.136
+
+Launch Clock Path
+        name          model name   delay (ns)  cumulative delay (ns) pins on net    location
+==============================================================================================
+cmos_pclk               inpad        0.000             0.000               0       (111,323)
+cmos_pclk               inpad        0.070             0.070             137       (111,323)
+cmos_pclk               net          1.068             1.138             137       (111,323)
+   Routing elements:
+      Manhattan distance of X:105, Y:323
+cmos_pclk~CLKOUT~6~1    outpad       0.028             1.166             137       (6,0)    
+cmos_pclk~CLKOUT~6~1    outpad       0.000             1.166               0       (6,0)    
+
+Data Path
+          name             model name   delay (ns)  cumulative delay (ns) pins on net    location
+===================================================================================================
+cmos_data[1]                 inpad         0.070            0.070              0         (0,4)  
+cmos_data[1]                 inpad         0.000            0.070              2         (0,4)  
+cmos_data[1]                 net           0.327            0.397              2         (0,4)  
+   Routing elements:
+      Manhattan distance of X:32, Y:11
+XYCrop_frame_Gray[1]~FF|D    ff           -0.083            0.314              2         (32,15)
+
+Capture Clock Path
+           name              model name   delay (ns)  cumulative delay (ns) pins on net    location
+=====================================================================================================
+cmos_pclk                      inpad        0.000             0.000               0       (111,323)
+cmos_pclk                      inpad        0.070             0.070             137       (111,323)
+cmos_pclk                      net          1.724             1.794             137       (111,323)
+   Routing elements:
+      Manhattan distance of X:79, Y:308
+XYCrop_frame_Gray[1]~FF|CLK    ff           0.000             1.794             137       (32,15)  
+
+---------- Path Details for Min Critical Paths (end) ---------------
+

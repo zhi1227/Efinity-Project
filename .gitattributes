@@ -1,0 +1,20 @@
+# Prevent Windows line-ending conversion from corrupting FPGA artifacts.
+*.bit binary
+*.bin binary
+*.hex binary
+*.pickle binary
+*.pb binary
+*.vdb binary
+*.qdb binary
+*.qpg binary
+*.qtl binary
+*.wlf binary
+
+# Source and documentation stay diffable.
+*.v text
+*.sv text
+*.vh text
+*.svh text
+*.xml text
+*.sdc text
+*.md text

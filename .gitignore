@@ -17,6 +17,22 @@ incremental_db/
 *.qws
 transcript
 __pycache__/
+.Xil/
+.workbuddy/
+xsim.dir/
+*.jou
+webtalk*.log
+xsim*.log
+xelab.log
+xelab.pb
+xvlog.log
+xvlog.pb
+
+# Local analysis and generated simulation runs. Testbench sources under tb/
+# and reusable scripts under tools/ remain versioned.
+_analysis/
+sim/
+sim_modular/
 
 # Quartus reference-project generated output
 /FPGA_Sobel/project/output_files/
@@ -28,3 +44,9 @@ __pycache__/
 /Ti60F225_GitHub_FPGA_Sobel_Port/outflow/*
 !/Ti60F225_GitHub_FPGA_Sobel_Port/outflow/Ti60_Demo.bit
 !/Ti60F225_GitHub_FPGA_Sobel_Port/outflow/Ti60_Demo.timing.rpt
+
+# New Efinity projects: keep reproducible sources and release artifacts, but
+# do not version the large generated outflow directory.
+**/outflow/*
+!**/outflow/*.bit
+!**/outflow/*.timing.rpt
