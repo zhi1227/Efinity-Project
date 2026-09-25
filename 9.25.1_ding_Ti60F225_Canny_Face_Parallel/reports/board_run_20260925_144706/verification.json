@@ -1,0 +1,20 @@
+{
+  "time": "2026-09-25T14:47:44.9016333+08:00",
+  "project": "D:\\yilingsi_fpga\\Efinity_Project\\2026.9.25\\9.25.1_ding_Ti60F225_Canny_Face_Parallel",
+  "verified_manifest": "reports/contest_20260925/final/build_manifest.json",
+  "manifest_files": 505,
+  "hash_mismatches": 0,
+  "bit": "D:\\yilingsi_fpga\\Efinity_Project\\2026.9.25\\9.25.1_ding_Ti60F225_Canny_Face_Parallel\\reports\\contest_20260925\\final\\Ti60_Demo.bit",
+  "bit_sha256": "78f227940dfc785eb368d5c685917adbb78da4abcdacce6e4be5d601a463eeb0",
+  "completed_existing_simulations": 12,
+  "setup_slack_min_ns": 0.302,
+  "hold_slack_min_ns": 0.026,
+  "device_id": "0x10660A79",
+  "usb_url": "ftdi://0x0403:0x6014:0:1/1",
+  "programming_mode": "JTAG SRAM",
+  "flash_modified": false,
+  "hardware_video_acceptance": "PENDING_USER_OBSERVATION",
+  "program_exit_code": 0,
+  "program_finished": true,
+  "program_finished_at": "2026-09-25T14:47:48.0140043+08:00"
+}

@@ -1,0 +1,15 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_filters/xsim_script.tcl
+# xsim {tb_filters} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS Gaussian and median: 1012 windows, zero/full-scale, all impulse positions, randomized sort/math, coordinates/valid
+$finish called at time : 10170 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_filters.v" Line 25
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Sep 25 14:35:25 2026...

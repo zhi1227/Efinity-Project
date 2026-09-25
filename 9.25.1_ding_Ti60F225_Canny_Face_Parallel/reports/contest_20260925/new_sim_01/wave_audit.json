@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "source": "recorded VCD, not generated expected traces",
+  "freeze": {
+    "cycles_checked": 2556,
+    "transitions": [
+      {
+        "time_ns": 885.0,
+        "frozen": 1,
+        "read_slot": 0
+      },
+      {
+        "time_ns": 3045.0,
+        "frozen": 0,
+        "read_slot": 1
+      },
+      {
+        "time_ns": 23595.0,
+        "frozen": 1,
+        "read_slot": 0
+      }
+    ]
+  },
+  "video": {
+    "delay_cycles_before_overlay": 658,
+    "raster_cycles_checked": 26337,
+    "canny_coordinates_checked": 13440
+  }
+}

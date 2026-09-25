@@ -1,0 +1,44 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_720p -s tb_720p -mt 2 -debug typical 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.rgb565_to_gray
+Compiling module work.line_buffer_3x3
+Compiling module work.median3x3
+Compiling module work.sobel3x3
+Compiling module work.gaussian3x3
+Compiling module work.line_buffer_3x3(DWIDTH=14)
+Compiling module work.nms3x3
+Compiling module work.canny_threshold(TH_HIGH=12'b0101...
+Compiling module work.line_buffer_3x3(DWIDTH=2)
+Compiling module work.hysteresis_local
+Compiling module work.canny_stream(GAUSSIAN=1)
+Compiling module work.video_delay(BITS=40)
+Compiling module work.rgb565_to_rgb888
+Compiling module work.rgb565_to_ycbcr_skin
+Compiling module work.line_buffer_3x3(DWIDTH=1)
+Compiling module work.face_morph
+Compiling module work.video_delay(BITS=24,LATENCY=3309...
+Compiling module work.video_delay(BITS=9,LATENCY=6617)
+Compiling module work.video_delay(BITS=10,LATENCY=3309...
+Compiling module work.video_delay(BITS=17,LATENCY=4963...
+Compiling module work.face_grid_regions_default
+Compiling module work.edge_shape_roi_default
+Compiling module work.vision_hud
+Compiling module work.parallel_overlay
+Compiling module work.parallel_video(CANNY_GAUSSIAN=1)
+Compiling module work.tb_720p
+Built simulation snapshot tb_720p
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/reports/contest_20260925/final_sim/xsim.dir/tb_720p/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 14:32:37 2026...

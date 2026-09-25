@@ -1,0 +1,70 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/canny_threshold.v" into library work
+INFO: [VRFC 10-311] analyzing module canny_threshold
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/edge_despeckle.v" into library work
+INFO: [VRFC 10-311] analyzing module edge_despeckle
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/gaussian3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module gaussian3x3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/hysteresis_local.v" into library work
+INFO: [VRFC 10-311] analyzing module hysteresis_local
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/line_buffer_3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module line_buffer_3x3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/median3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module median3x3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/nms_hist.v" into library work
+INFO: [VRFC 10-311] analyzing module nms_hist
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/nms3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module nms3x3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/rgb565_to_gray.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb565_to_gray
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/rgb565_to_rgb888.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb565_to_rgb888
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/sobel3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module sobel3x3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/button_press.v" into library work
+INFO: [VRFC 10-311] analyzing module button_press
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/canny_stream.v" into library work
+INFO: [VRFC 10-311] analyzing module canny_stream
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/edge_shape_roi.v" into library work
+INFO: [VRFC 10-311] analyzing module edge_shape_roi
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/face_grid_regions.v" into library work
+INFO: [VRFC 10-311] analyzing module face_grid_regions
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/face_morph.v" into library work
+INFO: [VRFC 10-311] analyzing module face_morph
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/parallel_overlay.v" into library work
+INFO: [VRFC 10-311] analyzing module parallel_overlay
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/parallel_video.v" into library work
+INFO: [VRFC 10-311] analyzing module parallel_video
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/uart_params.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_params
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/video_delay.v" into library work
+INFO: [VRFC 10-311] analyzing module video_delay
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/vision_hud.v" into library work
+INFO: [VRFC 10-311] analyzing module vision_hud
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/axi/frame_buffer_select.v" into library work
+INFO: [VRFC 10-311] analyzing module frame_buffer_select
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/face/rgb565_to_ycbcr_skin.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb565_to_ycbcr_skin
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_720p.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_720p
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_contest_video.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_contest_video
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_controls.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_controls
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_face_grid_regions.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_face_grid_regions
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_filters.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_filters
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_freeze.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_freeze
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_parallel.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_parallel
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_shape.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_shape
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_stage1_display.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_stage1_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/vision/canny_threshold_ports_tb.v" into library work
+INFO: [VRFC 10-311] analyzing module canny_threshold_ports_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/vision/hysteresis_local_tb.v" into library work
+INFO: [VRFC 10-311] analyzing module hysteresis_local_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/face/rgb565_to_ycbcr_skin_tb.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb565_to_ycbcr_skin_tb
