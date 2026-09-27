@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Sep 26 17:22:28 2026
+# Process ID: 27788
+# Current directory: D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/reports/remove_modes67_20260926/sim
+# Command line: xsim.exe -mode tcl -source {xsim.dir/tb_face_grid_regions/xsim_script.tcl}
+# Log file: D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/reports/remove_modes67_20260926/sim/xsim.log
+# Journal file: D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/reports/remove_modes67_20260926/sim\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_face_grid_regions/xsim_script.tcl
+# xsim {tb_face_grid_regions} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+grid mode 0 processing wait 1633 cycles
+grid mode 1 processing wait 765 cycles
+grid mode 2 processing wait 5623 cycles
+grid mode 3 processing wait 961 cycles
+grid mode 4 processing wait 794 cycles
+grid mode 5 processing wait 1415 cycles
+grid mode 6 processing wait 1199 cycles
+PASS grid: small/wide/narrow rejected; two faces, empty-frame clear, full-bank BFS, border and diagonal connectivity
+$finish called at time : 352630 ns : File "D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_face_grid_regions.v" Line 63
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 17:22:33 2026...

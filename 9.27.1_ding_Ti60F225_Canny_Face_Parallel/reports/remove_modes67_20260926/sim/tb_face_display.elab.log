@@ -1,0 +1,36 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe tb_face_display -s tb_face_display -mt 2 -debug typical 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.rgb565_to_gray
+Compiling module work.line_buffer_3x3(WIDTH=64)
+Compiling module work.median3x3
+Compiling module work.sobel3x3
+Compiling module work.gaussian3x3
+Compiling module work.line_buffer_3x3(WIDTH=64,DWIDTH=...
+Compiling module work.nms3x3
+Compiling module work.canny_threshold(TH_HIGH=12'b0101...
+Compiling module work.line_buffer_3x3(WIDTH=64,DWIDTH=...
+Compiling module work.hysteresis_local
+Compiling module work.canny_stream(WIDTH=64,GAUSSIAN=1...
+Compiling module work.video_delay(BITS=40,LATENCY=402)
+Compiling module work.rgb565_to_rgb888
+Compiling module work.rgb565_to_ycbcr_skin
+Compiling module work.line_buffer_3x3(WIDTH=64,DWIDTH=...
+Compiling module work.face_morph(WIDTH=64)
+Compiling module work.video_delay(BITS=24,LATENCY=201)
+Compiling module work.video_delay(BITS=8,LATENCY=401)
+Compiling module work.video_delay(BITS=9,LATENCY=201)
+Compiling module work.video_delay(BITS=1,LATENCY=301)
+Compiling module work.face_grid_regions(WIDTH=64,HEIGH...
+Compiling module work.vision_hud
+Compiling module work.parallel_overlay(WIDTH=64,HEIGHT...
+Compiling module work.parallel_video(WIDTH=64,HEIGHT=6...
+Compiling module work.tb_face_display
+Built simulation snapshot tb_face_display

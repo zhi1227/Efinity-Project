@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Sep 26 16:35:09 2026
+# Process ID: 39028
+# Current directory: D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/reports/remove_modes_20260926/sim
+# Command line: xsim.exe -mode tcl -source {xsim.dir/tb_stage1_display/xsim_script.tcl}
+# Log file: D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/reports/remove_modes_20260926/sim/xsim.log
+# Journal file: D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/reports/remove_modes_20260926/sim\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_stage1_display/xsim_script.tcl
+# xsim {tb_stage1_display} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS stage1 frame=0 mode=6 threshold=40
+PASS stage1 frame=1 mode=7 threshold=48
+PASS stage1 frame=2 mode=5 threshold=56
+PASS stage1 frame=3 mode=6 threshold=64
+PASS stage1 frame=4 mode=7 threshold=72
+PASS stage1 frame=5 mode=5 threshold=80
+PASS stage1 frame=6 mode=6 threshold=88
+PASS stage1 frame=7 mode=7 threshold=96
+PASS stage1 independent full-raster reference: 65536 pixels; gray, raw/clean skin, Sobel, borders, frame commit, config, reset
+$finish called at time : 1056360 ns : File "D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_stage1_display.v" Line 131
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 224.105 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 16:35:21 2026...

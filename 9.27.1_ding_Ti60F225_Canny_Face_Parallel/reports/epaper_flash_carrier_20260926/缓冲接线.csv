@@ -1,0 +1,12 @@
+﻿信号,来源,缓冲芯片,输入A脚,输出Y脚,串阻后去向,串阻初值Ω,FPGA方向
+EPD_DIN,J1-17,U1,2,18,J2-3,33,output
+EPD_CLK,J1-3,U1,4,16,J2-4,33,output
+EPD_CS,J1-5,U1,6,14,J2-5,33,output
+EPD_DC,J1-7,U1,8,12,J2-6,33,output
+EPD_RST,J1-19,U1,11,9,J2-7,33,output
+EPD_BUSY,J2-8,U2,4,16,J1-13,33,input
+EPD_PWR,J1-25,U2,2,18,J2-9,33,output
+FLASH_CS,J1-27,U1,13,7,J3-2,33,output
+FLASH_CLK,J1-26,U1,15,5,J3-5,33,output
+FLASH_MOSI,J1-23,U1,17,3,J3-6,33,output
+FLASH_MISO,J3-3,U2,6,14,J1-24,33,input

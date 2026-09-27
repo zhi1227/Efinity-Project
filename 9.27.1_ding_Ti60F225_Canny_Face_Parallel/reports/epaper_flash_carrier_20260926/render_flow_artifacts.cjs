@@ -1,0 +1,42 @@
+const fs = require('fs');
+const path = require('path');
+const {pathToFileURL} = require('url');
+const {chromium} = require('C:/Users/LIUZHI/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{
+  const root=__dirname;
+  const diagrams=JSON.parse(fs.readFileSync(path.join(root,'图件清单.json'),'utf8'));
+  const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});
+  const page=await browser.newPage({viewport:{width:1680,height:1100},deviceScaleFactor:1});
+  const report={diagrams:[],html:{},errors:[]};
+  page.on('pageerror',e=>report.errors.push(e.message));
+  for(const d of diagrams){
+    const svg=fs.readFileSync(path.join(root,d.name+'.svg'),'utf8');
+    const w=Number(svg.match(/width="(\d+)"/)[1]);
+    const h=Number(svg.match(/height="(\d+)"/)[1]);
+    await page.setViewportSize({width:w,height:Math.min(h,1100)});
+    await page.setContent('<!doctype html><meta charset="utf-8"><style>html,body{margin:0;background:#fff}svg{display:block}</style>'+svg);
+    await page.evaluate(()=>document.fonts.ready);
+    await page.screenshot({path:path.join(root,d.name+'.png'),fullPage:true});
+    const overflow=await page.evaluate(({w,h})=>[...document.querySelectorAll('svg text')].map(t=>{const b=t.getBBox();return{text:t.textContent,x:b.x,y:b.y,w:b.width,h:b.height};}).filter(b=>b.x<0||b.y<0||b.x+b.w>w||b.y+b.h>h),{w,h});
+    report.diagrams.push({name:d.name,width:w,height:h,overflow});
+  }
+  await page.setViewportSize({width:1440,height:1000});
+  await page.goto(pathToFileURL(path.join(root,'接线与流程总览.html')).href);
+  await page.screenshot({path:path.join(root,'网页总览预览.png'),fullPage:true});
+  await page.locator('[data-target="pins"]').click();
+  await page.locator('#filter').fill('FLASH_MISO');
+  report.html.filtered=await page.locator('#count').textContent();
+  report.html.visibleRows=await page.locator('.pin-table tbody tr:not([hidden])').count();
+  await page.screenshot({path:path.join(root,'引脚查询预览.png'),fullPage:true});
+  await page.locator('[data-target="d2"]').click();
+  await page.locator('#d2 [data-zoom="+"]').click();
+  report.html.zoom=await page.locator('#d2 svg').getAttribute('data-zoom');
+  await page.locator('#d2 [data-zoom="reset"]').click();
+  const ids=await page.locator('[id]').evaluateAll(es=>es.map(e=>e.id));
+  report.html.uniqueIds=ids.length===new Set(ids).size;
+  await page.setViewportSize({width:390,height:844});
+  report.html.mobileOverflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);
+  fs.writeFileSync(path.join(root,'图件检查.json'),JSON.stringify(report,null,2));
+  console.log(JSON.stringify(report,null,2));
+  await browser.close();
+})().catch(e=>{console.error(e);process.exitCode=1;});

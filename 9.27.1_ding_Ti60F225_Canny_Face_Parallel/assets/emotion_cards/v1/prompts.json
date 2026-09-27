@@ -1,0 +1,39 @@
+{
+  "tool": "built-in image_gen",
+  "status": "generated_preview_assets_not_yet_encoded_for_epaper",
+  "target_display": {
+    "width": 792,
+    "height": 272,
+    "colors": [
+      "white",
+      "black",
+      "red"
+    ]
+  },
+  "images": [
+    {
+      "id": "happy",
+      "name": "开心",
+      "prompt": "Create ONE finished horizontal illustration, NOT a sheet or collage. Use case: illustration-story. Asset: cute pixel-art emotion card for a 792x272 red/black/white e-paper display. Target image size 1584x544, exact 99:34 panoramic aspect ratio, representing 2x resolution. Flat digital artwork filling the canvas, not a photo of a device. Palette strictly pure white #FFFFFF, black #000000 and vermilion red #FF0000 only; absolutely no grays, gradients, beige, shadows or other colors. Authentic carefully crafted 16-bit pixel art, clean square pixel blocks on a consistent grid, sharp stepped outlines, polished charming sprite design, generous white space. The same character throughout the intended collection: a plump white chibi kitten, two small triangular ears, thick black pixel outline, short stubby paws, tiny red scarf and square red cheeks. Character occupies the left half, emotional expression extremely clear. On the right half put exactly the two specified simplified Chinese characters in very large beautifully legible bold black pixel-inspired Chinese lettering, horizontally aligned. Sparse matching red/black pixel decorations around character and a short red pixel underline under label. Visually balanced with 6% safe margins, roomy white background, high contrast readable on small screen. No other text, no English, no numbers, no logo, no watermark, no decorative UI labels. Text must be correctly spelled, well spaced, not distorted.\nExact Chinese label: \"开心\".\nKitten is joyfully hopping, eyes squeezed into happy upward curves, a wide laughing mouth and raised paws, a few tiny red pixel hearts and black sparkle marks.",
+      "saved_path": "D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/assets/emotion_cards/v1/happy.png"
+    },
+    {
+      "id": "sad",
+      "name": "难过",
+      "prompt": "Create ONE finished horizontal illustration, NOT a sheet or collage. Use case: illustration-story. Asset: cute pixel-art emotion card for a 792x272 red/black/white e-paper display. Target image size 1584x544, exact 99:34 panoramic aspect ratio, representing 2x resolution. Flat digital artwork filling the canvas, not a photo of a device. Palette strictly pure white #FFFFFF, black #000000 and vermilion red #FF0000 only; absolutely no grays, gradients, beige, shadows or other colors. Authentic carefully crafted 16-bit pixel art, clean square pixel blocks on a consistent grid, sharp stepped outlines, polished charming sprite design, generous white space. The same character throughout the intended collection: a plump white chibi kitten, two small triangular ears, thick black pixel outline, short stubby paws, tiny red scarf and square red cheeks. Character occupies the left half, emotional expression extremely clear. On the right half put exactly the two specified simplified Chinese characters in very large beautifully legible bold black pixel-inspired Chinese lettering, horizontally aligned. Sparse matching red/black pixel decorations around character and a short red pixel underline under label. Visually balanced with 6% safe margins, roomy white background, high contrast readable on small screen. No other text, no English, no numbers, no logo, no watermark, no decorative UI labels. Text must be correctly spelled, well spaced, not distorted.\nExact Chinese label: \"难过\".\nKitten is sitting with drooping ears, watery downcast eyes with black outlined white pixel tears, small trembling downturned mouth and paws held together, two sparse black pixel rain drops and a small broken red pixel heart; sweet and endearing, not distressing.",
+      "saved_path": "D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/assets/emotion_cards/v1/sad.png"
+    },
+    {
+      "id": "angry",
+      "name": "生气",
+      "prompt": "Create ONE finished horizontal illustration, NOT a sheet or collage. Use case: illustration-story. Asset: cute pixel-art emotion card for a 792x272 red/black/white e-paper display. Target image size 1584x544, exact 99:34 panoramic aspect ratio, representing 2x resolution. Flat digital artwork filling the canvas, not a photo of a device. Palette strictly pure white #FFFFFF, black #000000 and vermilion red #FF0000 only; absolutely no grays, gradients, beige, shadows or other colors. Authentic carefully crafted 16-bit pixel art, clean square pixel blocks on a consistent grid, sharp stepped outlines, polished charming sprite design, generous white space. The same character throughout the intended collection: a plump white chibi kitten, two small triangular ears, thick black pixel outline, short stubby paws, tiny red scarf and square red cheeks. Character occupies the left half, emotional expression extremely clear. On the right half put exactly the two specified simplified Chinese characters in very large beautifully legible bold black pixel-inspired Chinese lettering, horizontally aligned. Sparse matching red/black pixel decorations around character and a short red pixel underline under label. Visually balanced with 6% safe margins, roomy white background, high contrast readable on small screen. No other text, no English, no numbers, no logo, no watermark, no decorative UI labels. Text must be correctly spelled, well spaced, not distorted.\nExact Chinese label: \"生气\".\nKitten puffs its round cheeks, brows tilted inward, tiny downturned mouth, paws on its hips, a little red pixel anger symbol near its head and two black steam puffs; adorably grumpy, playful rather than menacing.",
+      "saved_path": "D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/assets/emotion_cards/v1/angry.png"
+    },
+    {
+      "id": "surprised",
+      "name": "惊讶",
+      "prompt": "Create ONE finished horizontal illustration, NOT a sheet or collage. Use case: illustration-story. Asset: cute pixel-art emotion card for a 792x272 red/black/white e-paper display. Target image size 1584x544, exact 99:34 panoramic aspect ratio, representing 2x resolution. Flat digital artwork filling the canvas, not a photo of a device. Palette strictly pure white #FFFFFF, black #000000 and vermilion red #FF0000 only; absolutely no grays, gradients, beige, shadows or other colors. Authentic carefully crafted 16-bit pixel art, clean square pixel blocks on a consistent grid, sharp stepped outlines, polished charming sprite design, generous white space. The same character throughout the intended collection: a plump white chibi kitten, two small triangular ears, thick black pixel outline, short stubby paws, tiny red scarf and square red cheeks. Character occupies the left half, emotional expression extremely clear. On the right half put exactly the two specified simplified Chinese characters in very large beautifully legible bold black pixel-inspired Chinese lettering, horizontally aligned. Sparse matching red/black pixel decorations around character and a short red pixel underline under label. Visually balanced with 6% safe margins, roomy white background, high contrast readable on small screen. No other text, no English, no numbers, no logo, no watermark, no decorative UI labels. Text must be correctly spelled, well spaced, not distorted.\nExact Chinese label: \"惊讶\".\nKitten has very wide round black eyes with white highlights, tiny round O-shaped mouth, paws lifted beside cheeks, upright ears, red pixel exclamation mark and a few black pixel stars; delightful surprise.",
+      "saved_path": "D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/assets/emotion_cards/v1/surprised.png"
+    }
+  ]
+}

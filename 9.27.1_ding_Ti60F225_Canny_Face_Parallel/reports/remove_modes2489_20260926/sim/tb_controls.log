@@ -1,0 +1,15 @@
+
+****** xsim v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_controls/xsim_script.tcl
+# xsim {tb_controls} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS K1 8-mode cycle 0/1/3/5/6/7/10/13, retired UART 2/4/8/9/b/c ignored including key collisions, clamps/HUD/blanking/sync
+$finish called at time : 283540 ns : File "D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_controls.v" Line 108
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 16:56:09 2026...

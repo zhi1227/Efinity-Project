@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "created": "2026-09-26T16:37:36.8833675+08:00",
+  "tests": [
+    "tb_parallel",
+    "tb_controls",
+    "tb_720p",
+    "tb_face_grid_regions",
+    "canny_threshold_ports_tb",
+    "hysteresis_local_tb",
+    "rgb565_to_ycbcr_skin_tb",
+    "tb_stage1_display",
+    "tb_freeze",
+    "tb_contest_video",
+    "tb_filters"
+  ],
+  "removed_modes": [
+    11,
+    12
+  ],
+  "active_modes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    13
+  ],
+  "resources": {
+    "dsp_blocks": 4,
+    "xlr": 14382,
+    "ram_blocks": 178
+  },
+  "saved_resources": {
+    "dsp_blocks": 10,
+    "xlr": 1790,
+    "ram_blocks": 8
+  },
+  "setup_slack_min_ns": 0.247,
+  "hold_slack_min_ns": 0.01,
+  "bit_path": "reports/remove_modes_20260926/build/Ti60_Demo.bit",
+  "bit_sha256": "40456526b07e83f0f867e575c4896048c741e5be590e2735cea21efa0cd18dd7",
+  "manifest_files": 502,
+  "hardware_status": "NOT_PROGRAMMED_THIS_CHANGE",
+  "flash_status": "UNCHANGED",
+  "protected_board_files": "UNCHANGED",
+  "expression_mode_14": "NOT_IMPLEMENTED"
+}

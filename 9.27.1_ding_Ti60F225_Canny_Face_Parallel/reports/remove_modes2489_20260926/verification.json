@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "created": "2026-09-26T17:00:13.9021340+08:00",
+  "tests": [
+    "tb_controls",
+    "tb_contest_video",
+    "tb_parallel",
+    "tb_720p",
+    "tb_face_grid_regions",
+    "canny_threshold_ports_tb",
+    "hysteresis_local_tb",
+    "rgb565_to_ycbcr_skin_tb",
+    "tb_stage1_display",
+    "tb_freeze",
+    "tb_filters"
+  ],
+  "newly_removed_modes": [
+    2,
+    4,
+    8,
+    9
+  ],
+  "all_removed_modes": [
+    2,
+    4,
+    8,
+    9,
+    11,
+    12
+  ],
+  "active_modes": [
+    0,
+    1,
+    3,
+    5,
+    6,
+    7,
+    10,
+    13
+  ],
+  "resources": {
+    "dsp_blocks": 4,
+    "ram_blocks": 170,
+    "xlr": 14363
+  },
+  "saved_this_change": {
+    "dsp_blocks": 0,
+    "ram_blocks": 8,
+    "xlr": 19
+  },
+  "setup_slack_min_ns": 0.317,
+  "hold_slack_min_ns": 0.026,
+  "bit_path": "reports/remove_modes2489_20260926/build/Ti60_Demo.bit",
+  "bit_sha256": "fb3bd04dd431ae231c9e896e4b65ba7fe04579163b84800eee870829f4c66ffb",
+  "manifest_files": 502,
+  "changed_source_test_files": [
+    "src/parallel/canny_stream.v",
+    "src/parallel/parallel_overlay.v",
+    "src/parallel/parallel_video.v",
+    "src/parallel/uart_params.v",
+    "tb/parallel/tb_contest_video.v",
+    "tb/parallel/tb_controls.v",
+    "Ti60_Demo.xml"
+  ],
+  "hardware_status": "NOT_PROGRAMMED_THIS_CHANGE",
+  "flash_status": "UNCHANGED",
+  "protected_board_files": "UNCHANGED",
+  "expression_mode_14": "NOT_IMPLEMENTED"
+}

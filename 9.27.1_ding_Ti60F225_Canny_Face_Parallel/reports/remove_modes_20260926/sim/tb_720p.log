@@ -1,0 +1,17 @@
+
+****** xsim v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_720p/xsim_script.tcl
+# xsim {tb_720p} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS 720p modes 5/6/7 exact RGB/DE/HS/VS: 2764800 display pixels
+PASS 720p three frames: valid=2716992, uniform edges=0, worst CCL processing=443411 pixel clocks
+$finish called at time : 43125040 ns : File "D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_720p.v" Line 57
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:04 . Memory (MB): peak = 224.234 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 16:34:31 2026...

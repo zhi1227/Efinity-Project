@@ -1,0 +1,24 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_stage1_display/xsim_script.tcl
+# xsim {tb_stage1_display} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS stage1 frame=0 mode=6 threshold=40
+PASS stage1 frame=1 mode=7 threshold=48
+PASS stage1 frame=2 mode=5 threshold=56
+PASS stage1 frame=3 mode=6 threshold=64
+PASS stage1 frame=4 mode=7 threshold=72
+PASS stage1 frame=5 mode=5 threshold=80
+PASS stage1 frame=6 mode=6 threshold=88
+PASS stage1 frame=7 mode=7 threshold=96
+PASS stage1 independent full-raster reference: 65536 pixels; gray, raw/clean skin, Sobel, borders, frame commit, config, reset
+$finish called at time : 1056360 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_stage1_display.v" Line 131
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 219.805 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Sep 25 14:34:49 2026...

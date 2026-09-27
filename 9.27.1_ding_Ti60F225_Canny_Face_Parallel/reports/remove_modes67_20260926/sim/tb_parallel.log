@@ -1,0 +1,21 @@
+
+****** xsim v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_parallel/xsim_script.tcl
+# xsim {tb_parallel} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS frame           0 edge pixels           0 valid        2240 skin           0 clean           0
+PASS frame           1 edge pixels          40 valid        2240 skin           0 clean           0
+PASS frame           2 edge pixels         108 valid        2240 skin           0 clean           0
+PASS frame           3 edge pixels         108 valid        2240 skin         768 clean         656
+PASS frame           4 edge pixels           0 valid        2240 skin           0 clean           0
+PASS frame           5 edge pixels           0 valid        2240 skin           1 clean           0
+PASS parallel end-to-end RGB/sync/coordinates, black, single-pixel step, rectangle, skin, stale clearing
+$finish called at time : 356480 ns : File "D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_parallel.v" Line 74
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 17:21:12 2026...

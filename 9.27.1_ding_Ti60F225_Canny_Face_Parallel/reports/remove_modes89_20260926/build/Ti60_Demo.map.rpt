@@ -1,0 +1,135 @@
+Efinity Synthesis report for project Ti60_Demo
+Version: 2025.1.110.5.9
+Generated at: Sep 26, 2026 16:54:02
+Copyright (C) 2013 - 2025  All rights reserved.
+
+Top-level Entity Name : example_top
+
+family : Titanium
+device : Ti60F225
+project : Ti60_Demo
+project-xml : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\Ti60_Demo.xml
+root : example_top
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\W0_FIFO
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\R0_FIFO
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\dsi_tx
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\csi_rx
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\DdrCtrl
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\W0_FIFO_8
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\W0_FIFO_64
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\FIFO_W48R24
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\R0_FIFO_8
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\R0_FIFO_16
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\W0_FIFO_32
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\W0_FIFO_16
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\BlockRam90x1024
+I,include : D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip\FIFO36x512
+I,include : ip/W0_FIFO
+I,include : src/parallel
+I,include : ip/R0_FIFO
+I,include : ip/dsi_tx
+I,include : ip/csi_rx
+I,include : ip/DdrCtrl
+I,include : ip/W0_FIFO_8
+I,include : ip/W0_FIFO_64
+I,include : ip/FIFO_W48R24
+I,include : ip/R0_FIFO_8
+I,include : ip/R0_FIFO_16
+I,include : ip/W0_FIFO_32
+I,include : ip/W0_FIFO_16
+I,include : ip/BlockRam90x1024
+I,include : ip/FIFO36x512
+I,include : ip/FIFO36x512
+output-dir : reports/remove_modes89_20260926/build
+work-dir : reports/remove_modes89_20260926/work
+write-efx-verilog : reports/remove_modes89_20260926/build\Ti60_Demo.map.v
+binary-db : reports/remove_modes89_20260926/build\Ti60_Demo.vdb
+insert-ios : 0
+insert-gclk : 0
+max-carry-cascade : 320
+max-dsp-cascade : 16
+max_mult : -1
+max_ram : -1
+seq_opt : 0
+mode : speed
+veri_options : verilog_mode=verilog_2k,vhdl_mode=vhdl_2008
+num_srl : -1
+retiming : 0
+
+File List:
+
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/W0_FIFO\W0_FIFO.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/R0_FIFO\R0_FIFO.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/dsi_tx\dsi_tx.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/csi_rx\csi_rx.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/DdrCtrl\DdrCtrl.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/W0_FIFO_8\W0_FIFO_8.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/W0_FIFO_64\W0_FIFO_64.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/FIFO_W48R24\FIFO_W48R24.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/R0_FIFO_8\R0_FIFO_8.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/R0_FIFO_16\R0_FIFO_16.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/W0_FIFO_32\W0_FIFO_32.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/W0_FIFO_16\W0_FIFO_16.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/BlockRam90x1024\BlockRam90x1024.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/FIFO36x512\FIFO36x512.sv
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\example_top.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\cmos_i2c\i2c_timing_ctrl_16bit.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\cmos_i2c\I2C_OV5640_1280720_Config.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\lcd_para.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\lcd_driver.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\axi\AXI4_AWARMux.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\axi\axi4_ctrl.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\axi\frame_buffer_select.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\gaussian3x3.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\button_press.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\vision_hud.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\hdmi_ip\encode.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\hdmi_ip\tmds_channel.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\hdmi_ip\rgb2dvi.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\hdmi_ip\serdes_4b_10to1.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\line_buffer_3x3.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\rgb565_to_gray.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\rgb565_to_rgb888.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\median3x3.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\sobel3x3.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\nms3x3.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\canny_threshold.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\hysteresis_local.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\face\rgb565_to_ycbcr_skin.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\canny_stream.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\face_grid_regions.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\face_morph.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\parallel_overlay.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\parallel_video.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\uart_params.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\video_delay.v
+D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\Sensor_Image_XYCrop.v
+
+### ### Report Section Start ### ###
+
+"MEM|SYN-0677" : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/DdrCtrl\DdrCtrl.sv:1599)
+"MEM|SYN-0677" : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/DdrCtrl\DdrCtrl.sv:1599)
+"MEM|SYN-0677" : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/DdrCtrl\DdrCtrl.sv:1599)
+"MEM|SYN-0677" : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/DdrCtrl\DdrCtrl.sv:3652)
+"MEM|SYN-0677" : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/DdrCtrl\DdrCtrl.sv:1599)
+"MEM|SYN-0677" : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/DdrCtrl\DdrCtrl.sv:1599)
+"MEM|SYN-0677" : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/DdrCtrl\DdrCtrl.sv:3652)
+"MEM|SYN-0677" : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/W0_FIFO_8\W0_FIFO_8.sv:673)
+"MEM|SYN-0677" : ... Memory 'ram' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\ip/R0_FIFO_16\R0_FIFO_16.sv:673)
+"MEM|SYN-0677" : ... Memory 'prev_line_1' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\line_buffer_3x3.v:102)
+"MEM|SYN-0677" : ... Memory 'prev_line_2' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\line_buffer_3x3.v:104)
+"MEM|SYN-0677" : ... Memory 'prev_line_1' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\line_buffer_3x3.v:102)
+"MEM|SYN-0677" : ... Memory 'prev_line_2' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\line_buffer_3x3.v:104)
+"MEM|SYN-0677" : ... Memory 'prev_line_1' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\line_buffer_3x3.v:102)
+"MEM|SYN-0677" : ... Memory 'prev_line_2' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\line_buffer_3x3.v:104)
+"MEM|SYN-0677" : ... Memory 'mem' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\video_delay.v:9)
+"MEM|SYN-0677" : ... Memory 'prev_line_1' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\line_buffer_3x3.v:102)
+"MEM|SYN-0677" : ... Memory 'prev_line_2' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\vision\line_buffer_3x3.v:104)
+"MEM|SYN-0677" : ... Memory 'mem' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\video_delay.v:9)
+"MEM|SYN-0677" : ... Memory 'mem' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\video_delay.v:9)
+"MEM|SYN-0677" : ... Memory 'mem' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\video_delay.v:9)
+"MEM|SYN-0677" : ... Memory 'mem' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\video_delay.v:9)
+"MEM|SYN-0677" : ... Memory 'cell_sum' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\face_grid_regions.v:26)
+"MEM|SYN-0677" : ... Memory 'grid' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\face_grid_regions.v:37)
+"MEM|SYN-0677" : ... Memory 'queue' is not initialized, assuming empty initial contents. (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\face_grid_regions.v:53)
+"MEM|SYN-0657" : Mapping into logic memory block 'u_parallel/u_regions/cell_sum' (1120 bits) (D:\house-1\9.25.1_ding_Ti60F225_Canny_Face_Parallel\src\parallel\face_grid_regions.v:26) because read port is not synchronous.

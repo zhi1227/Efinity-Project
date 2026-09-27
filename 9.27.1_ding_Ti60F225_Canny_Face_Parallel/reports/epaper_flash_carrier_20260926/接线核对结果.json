@@ -1,0 +1,28 @@
+{
+  "idc_pins": 40,
+  "signal_ios": 36,
+  "used_ios": 11,
+  "remaining_breakout_ios": 25,
+  "reserved_shared_in_breakout": 10,
+  "fpga_outputs": 9,
+  "fpga_inputs": 2,
+  "j3_order": [
+    "VCC",
+    "CS",
+    "DO",
+    "GND",
+    "CLK",
+    "DI"
+  ],
+  "checks": [
+    "36 ball mappings match core PDF extracted text",
+    "11 existing ports and 1.8V standard match peripheral XML",
+    "IDC pins cover 1..40 once",
+    "J4 Markdown table matches all 25 remaining IOs",
+    "11 buffer channels unique and valid A/Y pairs"
+  ],
+  "limitations": [
+    "Pin correspondence checks only; no CAD ERC/DRC or hardware measurement",
+    "Module pitch, received chip variant and harness orientation need physical verification"
+  ]
+}

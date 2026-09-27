@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="2050" viewBox="0 0 1680 2050" role="img" aria-label="04  表情识别与电子纸刷新：并行识别，顺序换图">
+<defs>
+<marker id="g4-arr-ink" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#172b46"/></marker>
+<marker id="g4-arr-blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#2563eb"/></marker>
+<marker id="g4-arr-teal" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#087f73"/></marker>
+<marker id="g4-arr-orange" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#bd6513"/></marker>
+<marker id="g4-arr-red" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#bf3b40"/></marker>
+<marker id="g4-arr-muted" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#56677c"/></marker>
+</defs>
+<rect width="1680" height="2050" fill="#fff"/>
+<text x="50" y="57" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" fill="#172b46" font-weight="700" text-anchor="start">04  表情识别与电子纸刷新：并行识别，顺序换图</text>
+<text x="50" y="94" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" fill="#56677c" font-weight="400" text-anchor="start">规划中的软件/硬件分工；表情模式14、RISC-V和电子纸驱动尚未接入当前工程。</text>
+<rect x="45" y="145" width="495" height="100" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="67" y="179" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#087f73" font-weight="700" text-anchor="start">视频与识别任务持续运行</text>
+<text x="67" y="211" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">摄像头 → 单人目标 → 四表情分类</text>
+<text x="67" y="239" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">摄像头 / HDMI 不等待电子纸</text>
+<polyline points="292,245 292,290" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-teal)"/>
+<rect x="45" y="290" width="495" height="130" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="67" y="324" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#087f73" font-weight="700" text-anchor="start">筛选稳定结果</text>
+<text x="67" y="356" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">有人脸且置信度达标；连续多帧一致</text>
+<text x="67" y="384" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">无人 / 低置信度时维持当前显示</text>
+<text x="67" y="412" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">时间阈值与四类名称由应用配置</text>
+<polyline points="292,420 292,465" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-teal)"/>
+<rect x="45" y="465" width="495" height="135" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="67" y="499" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#087f73" font-weight="700" text-anchor="start">跨时钟邮箱：pending_id</text>
+<text x="67" y="531" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">只保存最新稳定结果</text>
+<text x="67" y="559" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">电子纸忙时也持续更新该邮箱</text>
+<text x="67" y="587" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">不无限排队；不改当前 active_id</text>
+<rect x="740" y="145" width="730" height="105" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="762" y="179" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#2563eb" font-weight="700" text-anchor="start">上电与接口初始化</text>
+<text x="762" y="211" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">9路输出 / 2路输入；CS先拉高，SPI设置Mode0</text>
+<text x="762" y="239" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">读Flash ID，核对容量与图片目录；异常进入错误处理</text>
+<polyline points="1105,250 1105,315" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<polygon points="1105.0,315 1395,387.5 1105.0,460 815,387.5" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="1105.0" y="394.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#172b46" font-weight="400" text-anchor="middle">pending有效，且与已显示图不同？</text>
+<polyline points="540,525 645,525 645,387 815,387" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-teal)"/>
+<text x="558" y="370" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#087f73" font-weight="700" text-anchor="start">读取最新结果</text>
+<polyline points="1395,387 1590,387 1590,650 1470,650" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<text x="1432" y="431" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">否：稍后再检查</text>
+<rect x="1010" y="605" width="460" height="93" rx="14" fill="#f5f7fa" stroke="#56677c" stroke-width="1.6"/>
+<text x="1032" y="639" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#56677c" font-weight="700" text-anchor="start">主循环 / 定时调度</text>
+<text x="1032" y="671" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">不阻塞视频；稍后重新检查</text>
+<polyline points="1240,605 1240,555 1105,555 1105,460" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<polyline points="1105,460 740,520 740,710 1105,710 1105,750" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-blue)"/>
+<text x="950" y="506" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#2563eb" font-weight="700" text-anchor="start">是</text>
+<polygon points="1105.0,750 1395,822.5 1105.0,895 815,822.5" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="1105.0" y="829.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#172b46" font-weight="400" text-anchor="middle">屏幕空闲，且刷新间隔已满足？</text>
+<polyline points="1395,822 1540,822 1540,650 1470,650" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<text x="1440" y="804" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">否</text>
+<polyline points="1105,895 1105,940" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<text x="1127" y="923" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">是</text>
+<rect x="740" y="940" width="730" height="110" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="762" y="974" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#2563eb" font-weight="700" text-anchor="start">锁定 active_id，准备屏幕</text>
+<text x="762" y="1006" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">PWR使能 → 按驱动复位 / 初始化 → 等待就绪</text>
+<text x="762" y="1034" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">检查图片头与边界；初始化等待也应带超时</text>
+<polyline points="1105,1050 1105,1090" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<rect x="740" y="1090" width="730" height="100" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="762" y="1124" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#2563eb" font-weight="700" text-anchor="start">分块读 Flash，写屏内 RAM</text>
+<text x="762" y="1156" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">调用图03流程；同一次刷新只使用锁定的那张图</text>
+<polyline points="1105,1190 1105,1230" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<polygon points="1105.0,1230 1395,1295.0 1105.0,1360 815,1295.0" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="1105.0" y="1302.0" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#172b46" font-weight="400" text-anchor="middle">传输与校验成功？</text>
+<rect x="45" y="1160" width="495" height="200" rx="14" fill="#fff4f4" stroke="#bf3b40" stroke-width="1.6"/>
+<text x="67" y="1194" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#bf3b40" font-weight="700" text-anchor="start">错误处理</text>
+<text x="67" y="1226" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">CS取消片选，记录错误状态</text>
+<text x="67" y="1254" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">未触发刷新时不宣称画面已改变</text>
+<text x="67" y="1282" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">刷新超时则画面状态标为未知</text>
+<text x="67" y="1310" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">按驱动结束 / 休眠；限次延时重试</text>
+<text x="67" y="1338" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">pending继续更新，避免无限重试</text>
+<polyline points="815,1295 540,1295" fill="none" stroke="#bf3b40" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-red)"/>
+<text x="657" y="1274" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#bf3b40" font-weight="700" text-anchor="start">否</text>
+<polyline points="740,995 595,995 595,1210 540,1210" fill="none" stroke="#bf3b40" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-red)"/>
+<text x="542" y="970" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#bf3b40" font-weight="700" text-anchor="start">初始化失败 / 超时</text>
+<polyline points="1105,1360 1105,1405" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<text x="1127" y="1387" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">是</text>
+<rect x="740" y="1405" width="730" height="105" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="762" y="1439" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#bd6513" font-weight="700" text-anchor="start">发整屏刷新命令</text>
+<text x="762" y="1471" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">开始异步等待；不要重复发图或中途重启刷新</text>
+<text x="762" y="1499" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">屏内两个控制IC按该型号驱动协调更新</text>
+<polyline points="1105,1510 1105,1550" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<rect x="740" y="1550" width="730" height="140" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="762" y="1584" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#bd6513" font-weight="700" text-anchor="start">轮询同步后的 BUSY，按驱动判断刷新完成</text>
+<text x="762" y="1616" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">BUSY高表示忙；设定超过正常刷新时间的超时</text>
+<text x="762" y="1644" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">等待期间：识别继续，新的结果只更新pending</text>
+<text x="762" y="1672" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">未完成就返回调度，不能死循环占住所有任务</text>
+<polyline points="740,1620 620,1620 620,1320 540,1320" fill="none" stroke="#bf3b40" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-red)"/>
+<text x="644" y="1560" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#bf3b40" font-weight="700" text-anchor="start">超时</text>
+<polyline points="1105,1690 1105,1740" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<text x="1127" y="1718" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">刷新成功</text>
+<rect x="740" y="1740" width="730" height="130" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="762" y="1774" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#bd6513" font-weight="700" text-anchor="start">记录已显示图并按驱动休眠 / 关电</text>
+<text x="762" y="1806" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">displayed_id = active_id；记录完成时间</text>
+<text x="762" y="1834" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">保留pending；达到刷新间隔后再检查最新结果</text>
+<text x="762" y="1862" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">休眠后下次传图需重新初始化</text>
+<polyline points="1470,1805 1620,1805 1620,285 1105,285 1105,315" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-blue)"/>
+<text x="1499" y="1200" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#2563eb" font-weight="700" text-anchor="start">回到主循环</text>
+<rect x="45" y="1475" width="495" height="180" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="67" y="1509" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#bd6513" font-weight="700" text-anchor="start">时间预算</text>
+<text x="67" y="1541" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">当前屏整屏刷新典型约24～25秒</text>
+<text x="67" y="1569" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">SPI 1MHz时两次搬运纯载荷约0.87秒</text>
+<text x="67" y="1597" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">总等待另含初始化、排队与间隔</text>
+<text x="67" y="1625" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">不能按“识别出一次就立即刷一次”设计</text>
+<rect x="45" y="1765" width="610" height="108" rx="14" fill="#f5f7fa" stroke="#56677c" stroke-width="1.6"/>
+<text x="67" y="1799" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#56677c" font-weight="700" text-anchor="start">刷新频率策略</text>
+<text x="67" y="1831" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">官方Wiki建议刷新间隔至少180秒。</text>
+<text x="67" y="1859" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">刷新耗时与允许的重复刷新间隔是两个不同参数。</text>
+<text x="50" y="2024" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="400" text-anchor="start">分支逻辑为设计方案，需移植该屏驱动后实测；BUSY完成、故障恢复与供电时序不能仅用固定延时代替。</text>
+</svg>

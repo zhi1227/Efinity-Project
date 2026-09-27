@@ -1,0 +1,18 @@
+
+****** xsim v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/canny_threshold_ports_tb/xsim_script.tcl
+# xsim {canny_threshold_ports_tb} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+==================================================
+  canny_threshold_ports_tb: ok=150018 err=0
+  *** ALL PASS ***
+==================================================
+$finish called at time : 3000960 ns : File "D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/vision/canny_threshold_ports_tb.v" Line 172
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 16:58:08 2026...

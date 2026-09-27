@@ -1,0 +1,389 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ti60电子纸底板：引脚与数据流程</title><style>*{box-sizing:border-box}body{margin:0;color:#172b46;background:#f0f4f8;font:16px/1.65 "Microsoft YaHei",sans-serif}header{padding:28px 36px 18px;background:#152c4a;color:white}header h1{margin:0;font-size:27px}header p{margin:8px 0 0;color:#d6e2ef}nav{position:sticky;top:0;z-index:10;display:flex;gap:8px;flex-wrap:wrap;padding:14px 28px;background:#fff;border-bottom:1px solid #d6e0ea}button,a{touch-action:manipulation}button{font:inherit;cursor:pointer;border:1px solid #ccd7e2;border-radius:8px;background:#fff;padding:7px 15px;color:#26415d}button[aria-selected=true]{background:#2563eb;color:#fff;border-color:#2563eb}main{padding:22px;max-width:1900px;margin:auto}.panel{display:none;background:#fff;padding:24px;border-radius:14px;box-shadow:0 3px 18px #1b345010}.panel.active{display:block}h2{font-size:24px;margin:0 0 10px}h3{font-size:19px;margin-top:30px}p{margin:10px 0 18px}.toolbar{display:flex;align-items:center;gap:12px;margin:16px 0}.toolbar a,a{color:#215ccc}.diagram{overflow:auto;border:1px solid #dce4ed;border-radius:10px;background:#fff}.diagram svg{display:block;width:100%;height:auto;max-width:none}.table-scroll{overflow:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:10px 12px;border:1px solid #dfe6ee;vertical-align:top}th{background:#eff4fa;white-space:nowrap}tbody tr:nth-child(even){background:#fafcfe}.filter{display:flex;align-items:center;gap:14px;font-weight:700}input{padding:10px;width:390px;border:1px solid #cbd5e1;border-radius:8px;font:inherit}li{margin:13px 0}footer{padding:16px 36px;color:#617386}@media(max-width:700px){header,main{padding:16px}nav{padding:10px}.panel{padding:12px}.toolbar{flex-wrap:wrap}h1{font-size:22px!important}.filter{display:block}input{width:100%}}@media print{body{background:white}header{color:#172b46;background:white}nav,.toolbar,.filter,#count,footer{display:none}.panel{display:block;box-shadow:none;border-radius:0;padding:0;break-before:page}.panel:first-child{break-before:auto}main{padding:0}.diagram{overflow:visible;border:0}.diagram svg{width:100%!important}tr{break-inside:avoid}}</style></head><body><header><h1>Ti60 × W25Q32 × 电子纸</h1><p>IDC40转接底板 · 完整引脚分配 · 分块传图 · 表情刷新调度　/　2026-09-26</p></header><nav><button class="tab" data-target="d0" aria-selected="true">系统总览</button><button class="tab" data-target="d1" aria-selected="false">信号接线</button><button class="tab" data-target="d2" aria-selected="false">传图流程</button><button class="tab" data-target="d3" aria-selected="false">识别刷新</button><button class="tab" data-target="pins" aria-selected="false">全部引脚</button><button class="tab" data-target="notes" aria-selected="false">画图清单</button></nav><main><section id="d0" class="panel active"><h2>系统总览</h2><p>Flash需要FPGA发送读命令才返回数据；FPGA随后用另一组SPI发送给电子纸。图中的RISC-V和新外设驱动均为后续实现。</p><div class="toolbar"><button data-zoom="-">缩小</button><button data-zoom="+">放大</button><button data-zoom="reset">适合宽度</button><a href="01_系统数据路径.svg" download>下载SVG</a><a href="01_系统数据路径.png" download>下载PNG</a></div><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="01  图片真正走的路径：Flash → FPGA → 电子纸">
+<defs>
+<marker id="g1-arr-ink" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#172b46"/></marker>
+<marker id="g1-arr-blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#2563eb"/></marker>
+<marker id="g1-arr-teal" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#087f73"/></marker>
+<marker id="g1-arr-orange" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#bd6513"/></marker>
+<marker id="g1-arr-red" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#bf3b40"/></marker>
+<marker id="g1-arr-muted" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#56677c"/></marker>
+</defs>
+<rect width="1600" height="1000" fill="#fff"/>
+<text x="50" y="57" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" fill="#172b46" font-weight="700" text-anchor="start">01  图片真正走的路径：Flash → FPGA → 电子纸</text>
+<text x="50" y="94" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" fill="#56677c" font-weight="400" text-anchor="start">这是逻辑数据方向；每条外设信号的实际线路都经过 IDC40 和底板定向缓冲。</text>
+<rect x="45" y="190" width="360" height="270" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="67" y="224" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#087f73" font-weight="700" text-anchor="start">W25Q32 现成模块</text>
+<text x="67" y="256" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">存放预先编码的表情位图</text>
+<text x="67" y="284" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">标准 SPI 从设备</text>
+<text x="67" y="312" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">CS / CLK / DI：接收命令</text>
+<text x="67" y="340" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">DO：向 FPGA 返回图片数据</text>
+<rect x="600" y="140" width="400" height="470" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="622" y="174" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#2563eb" font-weight="700" text-anchor="start">Ti60 FPGA 内部（待实现）</text>
+<rect x="628" y="205" width="344" height="115" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="650" y="239" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#2563eb" font-weight="700" text-anchor="start">RISC-V 控制程序</text>
+<text x="650" y="271" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">选择图片地址、调度 SPI</text>
+<text x="650" y="299" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">检查状态、管理刷新间隔</text>
+<rect x="628" y="349" width="344" height="87" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="650" y="383" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#2563eb" font-weight="700" text-anchor="start">1～4 KiB RAM 小缓冲</text>
+<text x="650" y="415" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">读一块，再发送一块</text>
+<rect x="628" y="468" width="344" height="108" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="650" y="502" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#2563eb" font-weight="700" text-anchor="start">SPI_A：读 Flash</text>
+<text x="650" y="534" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">SPI_B：写电子纸</text>
+<text x="650" y="562" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">两组独立 CS / CLK / MOSI</text>
+<rect x="1190" y="190" width="365" height="270" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="1212" y="224" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#bd6513" font-weight="700" text-anchor="start">5.79 英寸 B 电子纸模块</text>
+<text x="1212" y="256" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">DIN：接收图像与命令</text>
+<text x="1212" y="284" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">DC：区分命令 / 数据</text>
+<text x="1212" y="312" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">收到完整图后触发刷新</text>
+<text x="1212" y="340" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">BUSY：返回忙闲状态</text>
+<polyline points="600,270 405,270" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g1-arr-teal)"/>
+<text x="425" y="239" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#087f73" font-weight="700" text-anchor="start">① 读命令 + 地址</text>
+<text x="427" y="303" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#087f73" font-weight="400" text-anchor="start">CS / CLK / DI</text>
+<polyline points="405,395 600,395" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g1-arr-teal)"/>
+<text x="422" y="377" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#087f73" font-weight="700" text-anchor="start">② 图片字节 DO</text>
+<polyline points="1000,270 1190,270" fill="none" stroke="#bd6513" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g1-arr-orange)"/>
+<text x="1013" y="239" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#bd6513" font-weight="700" text-anchor="start">③ 写入命令 + 数据</text>
+<text x="1018" y="303" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="15" fill="#bd6513" font-weight="400" text-anchor="start">CLK / DIN / DC / CS</text>
+<polyline points="1190,395 1000,395" fill="none" stroke="#bd6513" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g1-arr-orange)"/>
+<text x="1024" y="377" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#bd6513" font-weight="700" text-anchor="start">④ BUSY 忙闲</text>
+<rect x="45" y="675" width="470" height="145" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="67" y="709" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#2563eb" font-weight="700" text-anchor="start">开发板 → 新底板</text>
+<text x="67" y="741" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">IDC40：36 个信号 + 电源 / 地</text>
+<text x="67" y="769" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">底板供电与信号侧为 3.3V</text>
+<text x="67" y="797" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">FPGA 侧约束仍是 1.8V LVCMOS</text>
+<rect x="563" y="675" width="470" height="145" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="585" y="709" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#087f73" font-weight="700" text-anchor="start">新底板的工作</text>
+<text x="585" y="741" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">连接器 + 两片 SN74LVC244A</text>
+<text x="585" y="769" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">GH9P 接屏；1×6 排母接 Flash</text>
+<text x="585" y="797" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">新底板无需额外 CPU 或屏升压电路</text>
+<rect x="1080" y="675" width="475" height="145" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="1102" y="709" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#bd6513" font-weight="700" text-anchor="start">剩余引脚</text>
+<text x="1102" y="741" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">11 个 IO 分给屏和 Flash</text>
+<text x="1102" y="769" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">25 个 IO → J4 的 2×13 排针</text>
+<text x="1102" y="797" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">其中 10 个属于按键 / 配置复用</text>
+<rect x="45" y="855" width="1510" height="85" rx="14" fill="#fff4f4" stroke="#bf3b40" stroke-width="1.6"/>
+<text x="67" y="889" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#bf3b40" font-weight="700" text-anchor="start">你当前图的三处改线</text>
+<text x="67" y="921" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">DIN：IO0 → IO14；RST：IO8 → IO16；PWR：IO12 → IO22。并加入缓冲和 Flash 接口。</text>
+<text x="50" y="974" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="400" text-anchor="start">画原理图时：W25 的 DO 接 FPGA 的 MISO；电子纸 DIN 接 FPGA 的另一路 MOSI，二者不要直接相连。</text>
+</svg></div></section><section id="d1" class="panel "><h2>信号接线</h2><p>每行按箭头接线。先将当前图中的电子纸接口U1改为J2，把U1/U2留给缓冲芯片；不要让缓冲前后使用相同网名。</p><div class="toolbar"><button data-zoom="-">缩小</button><button data-zoom="+">放大</button><button data-zoom="reset">适合宽度</button><a href="02_信号连接.svg" download>下载SVG</a><a href="02_信号连接.png" download>下载PNG</a></div><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1280" viewBox="0 0 1600 1280" role="img" aria-label="02  十一路信号完整连接：方向、IDC 脚号和缓冲脚号">
+<defs>
+<marker id="g2-arr-ink" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#172b46"/></marker>
+<marker id="g2-arr-blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#2563eb"/></marker>
+<marker id="g2-arr-teal" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#087f73"/></marker>
+<marker id="g2-arr-orange" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#bd6513"/></marker>
+<marker id="g2-arr-red" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#bf3b40"/></marker>
+<marker id="g2-arr-muted" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#56677c"/></marker>
+</defs>
+<rect width="1600" height="1280" fill="#fff"/>
+<text x="50" y="57" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" fill="#172b46" font-weight="700" text-anchor="start">02  十一路信号完整连接：方向、IDC 脚号和缓冲脚号</text>
+<text x="50" y="94" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" fill="#56677c" font-weight="400" text-anchor="start">统一位号：J1=IDC40；J2=GH9P；J3=Flash排母；U1/U2=缓冲。把你图中的电子纸连接器 U1 改名 J2。</text>
+<text x="65" y="142" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#172b46" font-weight="700" text-anchor="start">开发板 / IDC 一侧</text>
+<text x="645" y="142" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#172b46" font-weight="700" text-anchor="start">缓冲：A 输入 → Y 输出</text>
+<text x="1130" y="142" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#172b46" font-weight="700" text-anchor="start">外设连接器一侧</text>
+<rect x="50" y="162" width="430" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="72" y="196" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#2563eb" font-weight="700" text-anchor="start">J1-17   User_3V3_IO14</text>
+<text x="72" y="214" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">GPIOL_N_10 / 球位 G2   FPGA 输出</text>
+<rect x="615" y="162" width="385" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="637" y="196" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">U1：输入2脚 → 输出18脚</text>
+<text x="637" y="214" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">Y 输出后串 33Ω（预留可调整）</text>
+<rect x="1125" y="162" width="425" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="1147" y="196" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">J2-3   EPD_DIN</text>
+<text x="1147" y="214" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">FPGA → 缓冲 → 模块</text>
+<polyline points="480,193 615,193" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<polyline points="1000,193 1125,193" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<rect x="50" y="238" width="430" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="72" y="272" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#2563eb" font-weight="700" text-anchor="start">J1-3   User_3V3_IO2</text>
+<text x="72" y="290" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">GPIOL_N_06 / 球位 K2   FPGA 输出</text>
+<rect x="615" y="238" width="385" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="637" y="272" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">U1：输入4脚 → 输出16脚</text>
+<text x="637" y="290" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">Y 输出后串 33Ω（预留可调整）</text>
+<rect x="1125" y="238" width="425" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="1147" y="272" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">J2-4   EPD_CLK</text>
+<text x="1147" y="290" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">FPGA → 缓冲 → 模块</text>
+<polyline points="480,269 615,269" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<polyline points="1000,269 1125,269" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<rect x="50" y="314" width="430" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="72" y="348" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#2563eb" font-weight="700" text-anchor="start">J1-5   User_3V3_IO4</text>
+<text x="72" y="366" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">GPIOL_N_08 / 球位 H3   FPGA 输出</text>
+<rect x="615" y="314" width="385" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="637" y="348" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">U1：输入6脚 → 输出14脚</text>
+<text x="637" y="366" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">Y 输出后串 33Ω（预留可调整）</text>
+<rect x="1125" y="314" width="425" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="1147" y="348" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">J2-5   EPD_CS</text>
+<text x="1147" y="366" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">FPGA → 缓冲 → 模块</text>
+<polyline points="480,345 615,345" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<polyline points="1000,345 1125,345" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<rect x="50" y="390" width="430" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="72" y="424" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#2563eb" font-weight="700" text-anchor="start">J1-7   User_3V3_IO6</text>
+<text x="72" y="442" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">GPIOL_N_05 / 球位 J3   FPGA 输出</text>
+<rect x="615" y="390" width="385" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="637" y="424" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">U1：输入8脚 → 输出12脚</text>
+<text x="637" y="442" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">Y 输出后串 33Ω（预留可调整）</text>
+<rect x="1125" y="390" width="425" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="1147" y="424" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">J2-6   EPD_DC</text>
+<text x="1147" y="442" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">FPGA → 缓冲 → 模块</text>
+<polyline points="480,421 615,421" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<polyline points="1000,421 1125,421" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<rect x="50" y="466" width="430" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="72" y="500" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#2563eb" font-weight="700" text-anchor="start">J1-19   User_3V3_IO16</text>
+<text x="72" y="518" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">GPIOL_N_11 / 球位 F5   FPGA 输出</text>
+<rect x="615" y="466" width="385" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="637" y="500" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">U1：输入11脚 → 输出9脚</text>
+<text x="637" y="518" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">Y 输出后串 33Ω（预留可调整）</text>
+<rect x="1125" y="466" width="425" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="1147" y="500" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">J2-7   EPD_RST</text>
+<text x="1147" y="518" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">FPGA → 缓冲 → 模块</text>
+<polyline points="480,497 615,497" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<polyline points="1000,497 1125,497" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<rect x="50" y="542" width="430" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="72" y="576" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#2563eb" font-weight="700" text-anchor="start">J1-13   User_3V3_IO10</text>
+<text x="72" y="594" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">GPIOL_N_12 / 球位 G4   FPGA 输入</text>
+<rect x="615" y="542" width="385" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="637" y="576" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">U2：输入4脚 → 输出16脚</text>
+<text x="637" y="594" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">Y 输出后串 33Ω（预留可调整）</text>
+<rect x="1125" y="542" width="425" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="1147" y="576" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">J2-8   EPD_BUSY</text>
+<text x="1147" y="594" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">模块 → 缓冲 → FPGA</text>
+<polyline points="1125,573 1000,573" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<polyline points="615,573 480,573" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<rect x="50" y="618" width="430" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="72" y="652" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#2563eb" font-weight="700" text-anchor="start">J1-25   User_3V3_IO22</text>
+<text x="72" y="670" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">GPIOL_N_09 / 球位 G1   FPGA 输出</text>
+<rect x="615" y="618" width="385" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="637" y="652" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">U2：输入2脚 → 输出18脚</text>
+<text x="637" y="670" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">Y 输出后串 33Ω（预留可调整）</text>
+<rect x="1125" y="618" width="425" height="62" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="1147" y="652" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#2563eb" font-weight="700" text-anchor="start">J2-9   EPD_PWR</text>
+<text x="1147" y="670" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">FPGA → 缓冲 → 模块</text>
+<polyline points="480,649 615,649" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<polyline points="1000,649 1125,649" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-blue)"/>
+<rect x="50" y="694" width="430" height="62" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="72" y="728" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#087f73" font-weight="700" text-anchor="start">J1-27   User_3V3_IO24</text>
+<text x="72" y="746" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">GPIOL_N_14 / 球位 F2   FPGA 输出</text>
+<rect x="615" y="694" width="385" height="62" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="637" y="728" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#087f73" font-weight="700" text-anchor="start">U1：输入13脚 → 输出7脚</text>
+<text x="637" y="746" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">Y 输出后串 33Ω（预留可调整）</text>
+<rect x="1125" y="694" width="425" height="62" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="1147" y="728" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#087f73" font-weight="700" text-anchor="start">J3-2   FLASH_CS</text>
+<text x="1147" y="746" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">FPGA → 缓冲 → 模块</text>
+<polyline points="480,725 615,725" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-teal)"/>
+<polyline points="1000,725 1125,725" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-teal)"/>
+<rect x="50" y="770" width="430" height="62" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="72" y="804" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#087f73" font-weight="700" text-anchor="start">J1-26   User_3V3_IO23</text>
+<text x="72" y="822" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">GPIOL_P_09 / 球位 H1   FPGA 输出</text>
+<rect x="615" y="770" width="385" height="62" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="637" y="804" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#087f73" font-weight="700" text-anchor="start">U1：输入15脚 → 输出5脚</text>
+<text x="637" y="822" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">Y 输出后串 33Ω（预留可调整）</text>
+<rect x="1125" y="770" width="425" height="62" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="1147" y="804" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#087f73" font-weight="700" text-anchor="start">J3-5   FLASH_CLK</text>
+<text x="1147" y="822" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">FPGA → 缓冲 → 模块</text>
+<polyline points="480,801 615,801" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-teal)"/>
+<polyline points="1000,801 1125,801" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-teal)"/>
+<rect x="50" y="846" width="430" height="62" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="72" y="880" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#087f73" font-weight="700" text-anchor="start">J1-23   User_3V3_IO20</text>
+<text x="72" y="898" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">GPIOL_N_07 / 球位 J1   FPGA 输出</text>
+<rect x="615" y="846" width="385" height="62" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="637" y="880" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#087f73" font-weight="700" text-anchor="start">U1：输入17脚 → 输出3脚</text>
+<text x="637" y="898" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">Y 输出后串 33Ω（预留可调整）</text>
+<rect x="1125" y="846" width="425" height="62" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="1147" y="880" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#087f73" font-weight="700" text-anchor="start">J3-6   FLASH_MOSI</text>
+<text x="1147" y="898" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">FPGA → 缓冲 → 模块</text>
+<polyline points="480,877 615,877" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-teal)"/>
+<polyline points="1000,877 1125,877" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-teal)"/>
+<rect x="50" y="922" width="430" height="62" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="72" y="956" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#087f73" font-weight="700" text-anchor="start">J1-24   User_3V3_IO21</text>
+<text x="72" y="974" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">GPIOL_P_07 / 球位 K1   FPGA 输入</text>
+<rect x="615" y="922" width="385" height="62" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="637" y="956" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#087f73" font-weight="700" text-anchor="start">U2：输入6脚 → 输出14脚</text>
+<text x="637" y="974" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">Y 输出后串 33Ω（预留可调整）</text>
+<rect x="1125" y="922" width="425" height="62" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="1147" y="956" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#087f73" font-weight="700" text-anchor="start">J3-3   FLASH_MISO</text>
+<text x="1147" y="974" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="14" fill="#172b46" font-weight="400" text-anchor="start">模块 → 缓冲 → FPGA</text>
+<polyline points="1125,953 1000,953" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-teal)"/>
+<polyline points="615,953 480,953" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g2-arr-teal)"/>
+<rect x="50" y="1025" width="1500" height="92" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="72" y="1059" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#bd6513" font-weight="700" text-anchor="start">电源直连，不经过信号缓冲</text>
+<text x="72" y="1091" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">J1-29 → 3.3V → J2-1 / J3-1 / U1、U2 的20脚；J1-12、30 → 共地 → J2-2 / J3-4 / U1、U2 的10脚。</text>
+<rect x="50" y="1134" width="1500" height="90" rx="14" fill="#f5f7fa" stroke="#56677c" stroke-width="1.6"/>
+<text x="72" y="1168" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#56677c" font-weight="700" text-anchor="start">使能与未用脚</text>
+<text x="72" y="1200" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">U1/U2 的1、19脚接 BUF_nOE：10kΩ上拉，JP1短接GND启用。U2未用A脚接地，未用Y脚留空。</text>
+<text x="50" y="1254" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="400" text-anchor="start">注意：两路返回信号 BUSY / MISO 必须释放原 LCD 输出使能。缓冲脚号按 SN74LVC244A 的 PW / TSSOP-20 封装。</text>
+</svg></div></section><section id="d2" class="panel "><h2>传图流程</h2><p>以1KiB缓存循环搬运。读取Flash不等于刷屏：所有颜色/半屏段写完并校验后才触发一次整屏更新。</p><div class="toolbar"><button data-zoom="-">缩小</button><button data-zoom="+">放大</button><button data-zoom="reset">适合宽度</button><a href="03_分块传图流程.svg" download>下载SVG</a><a href="03_分块传图流程.png" download>下载PNG</a></div><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1910" viewBox="0 0 1600 1910" role="img" aria-label="03  一张图怎样从 W25 搬到电子纸：分块传输">
+<defs>
+<marker id="g3-arr-ink" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#172b46"/></marker>
+<marker id="g3-arr-blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#2563eb"/></marker>
+<marker id="g3-arr-teal" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#087f73"/></marker>
+<marker id="g3-arr-orange" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#bd6513"/></marker>
+<marker id="g3-arr-red" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#bf3b40"/></marker>
+<marker id="g3-arr-muted" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#56677c"/></marker>
+</defs>
+<rect width="1600" height="1910" fill="#fff"/>
+<text x="50" y="57" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" fill="#172b46" font-weight="700" text-anchor="start">03  一张图怎样从 W25 搬到电子纸：分块传输</text>
+<text x="50" y="94" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" fill="#56677c" font-weight="400" text-anchor="start">设计流程，尚未实现固件。例：每次搬运1024字节；半屏方向、位序、颜色极性按5.79 B驱动编码。</text>
+<rect x="540" y="130" width="680" height="90" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="562" y="164" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#2563eb" font-weight="700" text-anchor="start">锁定 active_image_id</text>
+<text x="562" y="196" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">检查图片头：尺寸、格式、长度、地址范围、预期校验值</text>
+<polyline points="880,220 880,260" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g3-arr-muted)"/>
+<rect x="540" y="260" width="680" height="110" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="562" y="294" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#2563eb" font-weight="700" text-anchor="start">选择半屏 / 黑白或红色平面</text>
+<text x="562" y="326" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">设置该段RAM窗口和起始位置；DC=0发写RAM命令</text>
+<text x="562" y="354" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">同一张图发完前，不用新识别结果替换正在传输的图片</text>
+<polyline points="880,370 880,410" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g3-arr-muted)"/>
+<rect x="540" y="410" width="680" height="85" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="562" y="444" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#2563eb" font-weight="700" text-anchor="start">计算本块长度 n = min(1024, 本段剩余字节)</text>
+<text x="562" y="476" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">根据段描述计算 Flash 地址</text>
+<polyline points="880,495 880,540" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g3-arr-muted)"/>
+<rect x="540" y="540" width="680" height="145" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="562" y="574" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#087f73" font-weight="700" text-anchor="start">SPI_A：读取 Flash</text>
+<text x="562" y="606" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">FLASH_CS=0；DI依次发送 0x03 + 24位地址</text>
+<text x="562" y="634" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">继续提供 n×8 个时钟；从 DO/MISO 收进 RAM</text>
+<text x="562" y="662" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">命令与地址阶段的返回位丢弃；读完 FLASH_CS=1</text>
+<polyline points="880,685 880,730" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g3-arr-muted)"/>
+<rect x="540" y="730" width="680" height="88" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="562" y="764" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#087f73" font-weight="700" text-anchor="start">小缓冲中现在有 n 字节</text>
+<text x="562" y="796" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">累计 CRC / 长度；Flash 已取消片选，可暂停时钟</text>
+<polyline points="880,818 880,865" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g3-arr-muted)"/>
+<rect x="540" y="865" width="680" height="145" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="562" y="899" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#bd6513" font-weight="700" text-anchor="start">SPI_B：发送这 n 字节给屏内 RAM</text>
+<text x="562" y="931" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">DC=1，按屏驱动的CS时序从 DIN 发出数据</text>
+<text x="562" y="959" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">屏内部RAM地址递增；暂不触发刷新</text>
+<text x="562" y="987" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">发送结束：更新段内偏移和剩余长度</text>
+<polyline points="880,1010 880,1050" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g3-arr-muted)"/>
+<polygon points="880.0,1050 1140,1122.5 880.0,1195 620,1122.5" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="880.0" y="1129.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#172b46" font-weight="400" text-anchor="middle">当前段还有未发送字节？</text>
+<polyline points="620,1122 440,1122 440,452 540,452" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g3-arr-blue)"/>
+<text x="294" y="900" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#2563eb" font-weight="700" text-anchor="start">是：下一块</text>
+<polyline points="880,1195 880,1240" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g3-arr-muted)"/>
+<text x="900" y="1220" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">否</text>
+<polygon points="880.0,1240 1140,1312.5 880.0,1385 620,1312.5" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="880.0" y="1319.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#172b46" font-weight="400" text-anchor="middle">还有其他半屏 / 颜色段？</text>
+<polyline points="1140,1312 1390,1312 1390,315 1220,315" fill="none" stroke="#bd6513" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g3-arr-orange)"/>
+<text x="1245" y="1100" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#bd6513" font-weight="700" text-anchor="start">是：选择下一段</text>
+<polyline points="880,1385 880,1430" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g3-arr-muted)"/>
+<text x="900" y="1410" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">否</text>
+<polygon points="880.0,1430 1140,1502.5 880.0,1575 620,1502.5" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="880.0" y="1509.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#172b46" font-weight="400" text-anchor="middle">总长度与 CRC 均正确？</text>
+<polyline points="620,1502 500,1502 500,1640 465,1640" fill="none" stroke="#bf3b40" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g3-arr-red)"/>
+<text x="526" y="1491" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#bf3b40" font-weight="700" text-anchor="start">否</text>
+<rect x="50" y="1560" width="415" height="170" rx="14" fill="#fff4f4" stroke="#bf3b40" stroke-width="1.6"/>
+<text x="72" y="1594" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#bf3b40" font-weight="700" text-anchor="start">停止本次刷新</text>
+<text x="72" y="1626" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">不要触发屏幕更新</text>
+<text x="72" y="1654" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">记录错误，按策略重新初始化</text>
+<text x="72" y="1682" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">下一次重传完整图片</text>
+<text x="72" y="1710" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">屏内部分RAM写入不等于画面已更新</text>
+<polyline points="880,1575 880,1625" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g3-arr-muted)"/>
+<text x="900" y="1605" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">是</text>
+<rect x="540" y="1625" width="680" height="100" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="562" y="1659" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#bd6513" font-weight="700" text-anchor="start">全部图像写完后，只触发一次整屏刷新</text>
+<text x="562" y="1691" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">切回命令阶段；按驱动启动更新 → 返回主状态机等待BUSY</text>
+<rect x="50" y="1795" width="1500" height="70" rx="14" fill="#f5f7fa" stroke="#56677c" stroke-width="1.6"/>
+<text x="72" y="1829" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" fill="#56677c" font-weight="700" text-anchor="start">两组SPI的职责</text>
+<text x="72" y="1861" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">SPI_A接Flash：CS、CLK、DI、DO；SPI_B接电子纸：CS、CLK、DIN，另有DC/RST/PWR/BUSY。</text>
+<text x="50" y="1884" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="400" text-anchor="start">分块传输减少 FPGA RAM；它不是电子纸局部刷新，也不会把整屏刷新时间缩短成数据传输时间。</text>
+</svg></div></section><section id="d3" class="panel "><h2>识别刷新</h2><p>识别和显示解耦。忙时只保存最新结果，不中断当前刷新，不积累无限待显示队列。</p><div class="toolbar"><button data-zoom="-">缩小</button><button data-zoom="+">放大</button><button data-zoom="reset">适合宽度</button><a href="04_识别刷新流程.svg" download>下载SVG</a><a href="04_识别刷新流程.png" download>下载PNG</a></div><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" width="1680" height="2050" viewBox="0 0 1680 2050" role="img" aria-label="04  表情识别与电子纸刷新：并行识别，顺序换图">
+<defs>
+<marker id="g4-arr-ink" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#172b46"/></marker>
+<marker id="g4-arr-blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#2563eb"/></marker>
+<marker id="g4-arr-teal" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#087f73"/></marker>
+<marker id="g4-arr-orange" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#bd6513"/></marker>
+<marker id="g4-arr-red" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#bf3b40"/></marker>
+<marker id="g4-arr-muted" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#56677c"/></marker>
+</defs>
+<rect width="1680" height="2050" fill="#fff"/>
+<text x="50" y="57" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" fill="#172b46" font-weight="700" text-anchor="start">04  表情识别与电子纸刷新：并行识别，顺序换图</text>
+<text x="50" y="94" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="17" fill="#56677c" font-weight="400" text-anchor="start">规划中的软件/硬件分工；表情模式14、RISC-V和电子纸驱动尚未接入当前工程。</text>
+<rect x="45" y="145" width="495" height="100" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="67" y="179" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#087f73" font-weight="700" text-anchor="start">视频与识别任务持续运行</text>
+<text x="67" y="211" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">摄像头 → 单人目标 → 四表情分类</text>
+<text x="67" y="239" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">摄像头 / HDMI 不等待电子纸</text>
+<polyline points="292,245 292,290" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-teal)"/>
+<rect x="45" y="290" width="495" height="130" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="67" y="324" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#087f73" font-weight="700" text-anchor="start">筛选稳定结果</text>
+<text x="67" y="356" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">有人脸且置信度达标；连续多帧一致</text>
+<text x="67" y="384" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">无人 / 低置信度时维持当前显示</text>
+<text x="67" y="412" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">时间阈值与四类名称由应用配置</text>
+<polyline points="292,420 292,465" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-teal)"/>
+<rect x="45" y="465" width="495" height="135" rx="14" fill="#edfaf6" stroke="#087f73" stroke-width="1.6"/>
+<text x="67" y="499" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#087f73" font-weight="700" text-anchor="start">跨时钟邮箱：pending_id</text>
+<text x="67" y="531" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">只保存最新稳定结果</text>
+<text x="67" y="559" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">电子纸忙时也持续更新该邮箱</text>
+<text x="67" y="587" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">不无限排队；不改当前 active_id</text>
+<rect x="740" y="145" width="730" height="105" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="762" y="179" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#2563eb" font-weight="700" text-anchor="start">上电与接口初始化</text>
+<text x="762" y="211" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">9路输出 / 2路输入；CS先拉高，SPI设置Mode0</text>
+<text x="762" y="239" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">读Flash ID，核对容量与图片目录；异常进入错误处理</text>
+<polyline points="1105,250 1105,315" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<polygon points="1105.0,315 1395,387.5 1105.0,460 815,387.5" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="1105.0" y="394.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#172b46" font-weight="400" text-anchor="middle">pending有效，且与已显示图不同？</text>
+<polyline points="540,525 645,525 645,387 815,387" fill="none" stroke="#087f73" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-teal)"/>
+<text x="558" y="370" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#087f73" font-weight="700" text-anchor="start">读取最新结果</text>
+<polyline points="1395,387 1590,387 1590,650 1470,650" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<text x="1432" y="431" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">否：稍后再检查</text>
+<rect x="1010" y="605" width="460" height="93" rx="14" fill="#f5f7fa" stroke="#56677c" stroke-width="1.6"/>
+<text x="1032" y="639" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#56677c" font-weight="700" text-anchor="start">主循环 / 定时调度</text>
+<text x="1032" y="671" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">不阻塞视频；稍后重新检查</text>
+<polyline points="1240,605 1240,555 1105,555 1105,460" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<polyline points="1105,460 740,520 740,710 1105,710 1105,750" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-blue)"/>
+<text x="950" y="506" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#2563eb" font-weight="700" text-anchor="start">是</text>
+<polygon points="1105.0,750 1395,822.5 1105.0,895 815,822.5" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="1105.0" y="829.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#172b46" font-weight="400" text-anchor="middle">屏幕空闲，且刷新间隔已满足？</text>
+<polyline points="1395,822 1540,822 1540,650 1470,650" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<text x="1440" y="804" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">否</text>
+<polyline points="1105,895 1105,940" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<text x="1127" y="923" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">是</text>
+<rect x="740" y="940" width="730" height="110" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="762" y="974" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#2563eb" font-weight="700" text-anchor="start">锁定 active_id，准备屏幕</text>
+<text x="762" y="1006" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">PWR使能 → 按驱动复位 / 初始化 → 等待就绪</text>
+<text x="762" y="1034" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">检查图片头与边界；初始化等待也应带超时</text>
+<polyline points="1105,1050 1105,1090" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<rect x="740" y="1090" width="730" height="100" rx="14" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="762" y="1124" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#2563eb" font-weight="700" text-anchor="start">分块读 Flash，写屏内 RAM</text>
+<text x="762" y="1156" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">调用图03流程；同一次刷新只使用锁定的那张图</text>
+<polyline points="1105,1190 1105,1230" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<polygon points="1105.0,1230 1395,1295.0 1105.0,1360 815,1295.0" fill="#f4f7ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="1105.0" y="1302.0" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#172b46" font-weight="400" text-anchor="middle">传输与校验成功？</text>
+<rect x="45" y="1160" width="495" height="200" rx="14" fill="#fff4f4" stroke="#bf3b40" stroke-width="1.6"/>
+<text x="67" y="1194" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#bf3b40" font-weight="700" text-anchor="start">错误处理</text>
+<text x="67" y="1226" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">CS取消片选，记录错误状态</text>
+<text x="67" y="1254" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">未触发刷新时不宣称画面已改变</text>
+<text x="67" y="1282" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">刷新超时则画面状态标为未知</text>
+<text x="67" y="1310" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">按驱动结束 / 休眠；限次延时重试</text>
+<text x="67" y="1338" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">pending继续更新，避免无限重试</text>
+<polyline points="815,1295 540,1295" fill="none" stroke="#bf3b40" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-red)"/>
+<text x="657" y="1274" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#bf3b40" font-weight="700" text-anchor="start">否</text>
+<polyline points="740,995 595,995 595,1210 540,1210" fill="none" stroke="#bf3b40" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-red)"/>
+<text x="542" y="970" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#bf3b40" font-weight="700" text-anchor="start">初始化失败 / 超时</text>
+<polyline points="1105,1360 1105,1405" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<text x="1127" y="1387" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">是</text>
+<rect x="740" y="1405" width="730" height="105" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="762" y="1439" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#bd6513" font-weight="700" text-anchor="start">发整屏刷新命令</text>
+<text x="762" y="1471" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">开始异步等待；不要重复发图或中途重启刷新</text>
+<text x="762" y="1499" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">屏内两个控制IC按该型号驱动协调更新</text>
+<polyline points="1105,1510 1105,1550" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<rect x="740" y="1550" width="730" height="140" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="762" y="1584" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#bd6513" font-weight="700" text-anchor="start">轮询同步后的 BUSY，按驱动判断刷新完成</text>
+<text x="762" y="1616" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">BUSY高表示忙；设定超过正常刷新时间的超时</text>
+<text x="762" y="1644" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">等待期间：识别继续，新的结果只更新pending</text>
+<text x="762" y="1672" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">未完成就返回调度，不能死循环占住所有任务</text>
+<polyline points="740,1620 620,1620 620,1320 540,1320" fill="none" stroke="#bf3b40" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-red)"/>
+<text x="644" y="1560" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#bf3b40" font-weight="700" text-anchor="start">超时</text>
+<polyline points="1105,1690 1105,1740" fill="none" stroke="#56677c" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-muted)"/>
+<text x="1127" y="1718" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="700" text-anchor="start">刷新成功</text>
+<rect x="740" y="1740" width="730" height="130" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="762" y="1774" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" fill="#bd6513" font-weight="700" text-anchor="start">记录已显示图并按驱动休眠 / 关电</text>
+<text x="762" y="1806" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">displayed_id = active_id；记录完成时间</text>
+<text x="762" y="1834" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">保留pending；达到刷新间隔后再检查最新结果</text>
+<text x="762" y="1862" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">休眠后下次传图需重新初始化</text>
+<polyline points="1470,1805 1620,1805 1620,285 1105,285 1105,315" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#g4-arr-blue)"/>
+<text x="1499" y="1200" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#2563eb" font-weight="700" text-anchor="start">回到主循环</text>
+<rect x="45" y="1475" width="495" height="180" rx="14" fill="#fff7ed" stroke="#bd6513" stroke-width="1.6"/>
+<text x="67" y="1509" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#bd6513" font-weight="700" text-anchor="start">时间预算</text>
+<text x="67" y="1541" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">当前屏整屏刷新典型约24～25秒</text>
+<text x="67" y="1569" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">SPI 1MHz时两次搬运纯载荷约0.87秒</text>
+<text x="67" y="1597" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">总等待另含初始化、排队与间隔</text>
+<text x="67" y="1625" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">不能按“识别出一次就立即刷一次”设计</text>
+<rect x="45" y="1765" width="610" height="108" rx="14" fill="#f5f7fa" stroke="#56677c" stroke-width="1.6"/>
+<text x="67" y="1799" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" fill="#56677c" font-weight="700" text-anchor="start">刷新频率策略</text>
+<text x="67" y="1831" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">官方Wiki建议刷新间隔至少180秒。</text>
+<text x="67" y="1859" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" fill="#172b46" font-weight="400" text-anchor="start">刷新耗时与允许的重复刷新间隔是两个不同参数。</text>
+<text x="50" y="2024" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" fill="#56677c" font-weight="400" text-anchor="start">分支逻辑为设计方案，需移植该屏驱动后实测；BUSY完成、故障恢复与供电时序不能仅用固定延时代替。</text>
+</svg></div></section><section id="pins" class="panel"><h2>全部引脚规划</h2><p>方向相对FPGA。信号经缓冲；电源和地直接连接。J3按照所给模块元件面，从VCC方焊盘开始编号。</p><h3>J2：GH9P电子纸</h3><div class="table-scroll"><table><thead><tr><th>J2脚</th><th>信号</th><th>IDC脚</th><th>网络</th><th>方向</th></tr></thead><tbody><tr><td>1</td><td>VCC</td><td>29</td><td>3.3V</td><td>电源</td></tr><tr><td>2</td><td>GND</td><td>12 / 30</td><td>GND</td><td>地</td></tr><tr><td>3</td><td>DIN</td><td>17</td><td>IO14</td><td>输出</td></tr><tr><td>4</td><td>CLK</td><td>3</td><td>IO2</td><td>输出</td></tr><tr><td>5</td><td>CS</td><td>5</td><td>IO4</td><td>输出</td></tr><tr><td>6</td><td>DC</td><td>7</td><td>IO6</td><td>输出</td></tr><tr><td>7</td><td>RST</td><td>19</td><td>IO16</td><td>输出</td></tr><tr><td>8</td><td>BUSY</td><td>13</td><td>IO10</td><td>输入</td></tr><tr><td>9</td><td>PWR</td><td>25</td><td>IO22</td><td>输出</td></tr></tbody></table></div><h3>J3：Flash模块排母</h3><div class="table-scroll"><table><thead><tr><th>J3脚</th><th>模块丝印</th><th>IDC脚</th><th>网络</th><th>方向</th></tr></thead><tbody><tr><td>1</td><td>VCC</td><td>29</td><td>3.3V</td><td>电源</td></tr><tr><td>2</td><td>CS</td><td>27</td><td>IO24</td><td>输出</td></tr><tr><td>3</td><td>DO / MISO</td><td>24</td><td>IO21</td><td>输入</td></tr><tr><td>4</td><td>GND</td><td>12 / 30</td><td>GND</td><td>地</td></tr><tr><td>5</td><td>CLK</td><td>26</td><td>IO23</td><td>输出</td></tr><tr><td>6</td><td>DI / MOSI</td><td>23</td><td>IO20</td><td>输出</td></tr></tbody></table></div><h3>J1：IDC40完整分配</h3><label class="filter">查引脚 / 信号 / 球位 <input id="filter" placeholder="例如 IO14、MISO、K2、配置Flash" /></label><p id="count">共40行</p><div class="table-scroll"><table class="pin-table"><thead><tr><th>IDC脚</th><th>原网络</th><th>分配信号</th><th>去向</th><th>FPGA球位</th><th>现有工程占用</th><th>备注</th></tr></thead><tbody><tr><td>1</td><td>IO0</td><td>User_3V3_IO0</td><td>J4-1</td><td>M2</td><td>key_freeze_n</td><td>K2 / key_freeze_n</td></tr><tr><td>2</td><td>IO1</td><td>User_3V3_IO1</td><td>J4-2</td><td>N2</td><td>key_mode_n</td><td>K1 / key_mode_n</td></tr><tr><td>3</td><td>IO2</td><td>EPD_CLK</td><td>J2-4 via U1 (4-&gt;16)</td><td>K2</td><td>lcd_vs_o</td><td>需释放旧LCD端口；BUSY/MISO必须关闭原输出使能</td></tr><tr><td>4</td><td>IO3</td><td>User_3V3_IO3</td><td>J4-3</td><td>K3</td><td>lcd_hs_o</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>5</td><td>IO4</td><td>EPD_CS</td><td>J2-5 via U1 (6-&gt;14)</td><td>H3</td><td>lcd_b7_0_io[7]</td><td>需释放旧LCD端口；BUSY/MISO必须关闭原输出使能</td></tr><tr><td>6</td><td>IO5</td><td>User_3V3_IO5</td><td>J4-4</td><td>J2</td><td>lcd_b7_0_io[6]</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>7</td><td>IO6</td><td>EPD_DC</td><td>J2-6 via U1 (8-&gt;12)</td><td>J3</td><td>lcd_b7_0_io[5]</td><td>需释放旧LCD端口；BUSY/MISO必须关闭原输出使能</td></tr><tr><td>8</td><td>IO7</td><td>User_3V3_IO7</td><td>J4-5</td><td>K4</td><td>lcd_b7_0_io[4]</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>9</td><td>IO8</td><td>User_3V3_IO8</td><td>J4-6</td><td>H4</td><td>lcd_b7_0_io[3]</td><td>配置Flash CDI3</td></tr><tr><td>10</td><td>IO9</td><td>User_3V3_IO9</td><td>J4-7</td><td>H5</td><td>lcd_b7_0_io[2]</td><td>配置Flash CDI2</td></tr><tr><td>11</td><td>D5V0</td><td>5V</td><td>J5-3</td><td></td><td></td><td>仅电源引出</td></tr><tr><td>12</td><td>GND</td><td>GND</td><td>GND plane / J2-2 / J3-4 / J4-26 / J5-2,4</td><td></td><td></td><td></td></tr><tr><td>13</td><td>IO10</td><td>EPD_BUSY</td><td>J2-8 via U2 (4-&gt;16)</td><td>G4</td><td>lcd_b7_0_io[1]</td><td>需释放旧LCD端口；BUSY/MISO必须关闭原输出使能</td></tr><tr><td>14</td><td>IO11</td><td>User_3V3_IO11</td><td>J4-8</td><td>G3</td><td>lcd_b7_0_io[0]</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>15</td><td>IO12</td><td>User_3V3_IO12</td><td>J4-9</td><td>E3</td><td>lcd_g7_0_io[7]</td><td>CBSEL1</td></tr><tr><td>16</td><td>IO13</td><td>User_3V3_IO13</td><td>J4-10</td><td>F3</td><td>lcd_g7_0_io[6]</td><td>CBSEL0</td></tr><tr><td>17</td><td>IO14</td><td>EPD_DIN</td><td>J2-3 via U1 (2-&gt;18)</td><td>G2</td><td>lcd_g7_0_io[5]</td><td>需释放旧LCD端口；BUSY/MISO必须关闭原输出使能</td></tr><tr><td>18</td><td>IO15</td><td>User_3V3_IO15</td><td>J4-11</td><td>H2</td><td>lcd_g7_0_io[4]</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>19</td><td>IO16</td><td>EPD_RST</td><td>J2-7 via U1 (11-&gt;9)</td><td>F5</td><td>lcd_g7_0_io[3]</td><td>需释放旧LCD端口；BUSY/MISO必须关闭原输出使能</td></tr><tr><td>20</td><td>IO17</td><td>User_3V3_IO17</td><td>J4-12</td><td>G5</td><td>lcd_g7_0_io[2]</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>21</td><td>IO18</td><td>User_3V3_IO18</td><td>J4-13</td><td>L1</td><td>lcd_g7_0_io[1]</td><td>配置Flash CDI1</td></tr><tr><td>22</td><td>IO19</td><td>User_3V3_IO19</td><td>J4-14</td><td>M1</td><td>lcd_g7_0_io[0]</td><td>配置Flash CDI0</td></tr><tr><td>23</td><td>IO20</td><td>FLASH_MOSI</td><td>J3-6 via U1 (17-&gt;3)</td><td>J1</td><td>lcd_r7_0_io[7]</td><td>需释放旧LCD端口；BUSY/MISO必须关闭原输出使能</td></tr><tr><td>24</td><td>IO21</td><td>FLASH_MISO</td><td>J3-3 via U2 (6-&gt;14)</td><td>K1</td><td>lcd_r7_0_io[6]</td><td>需释放旧LCD端口；BUSY/MISO必须关闭原输出使能</td></tr><tr><td>25</td><td>IO22</td><td>EPD_PWR</td><td>J2-9 via U2 (2-&gt;18)</td><td>G1</td><td>lcd_r7_0_io[5]</td><td>需释放旧LCD端口；BUSY/MISO必须关闭原输出使能</td></tr><tr><td>26</td><td>IO23</td><td>FLASH_CLK</td><td>J3-5 via U1 (15-&gt;5)</td><td>H1</td><td>lcd_r7_0_io[4]</td><td>需释放旧LCD端口；BUSY/MISO必须关闭原输出使能</td></tr><tr><td>27</td><td>IO24</td><td>FLASH_CS</td><td>J3-2 via U1 (13-&gt;7)</td><td>F2</td><td>lcd_r7_0_io[3]</td><td>需释放旧LCD端口；BUSY/MISO必须关闭原输出使能</td></tr><tr><td>28</td><td>IO25</td><td>User_3V3_IO25</td><td>J4-15</td><td>F1</td><td>lcd_r7_0_io[2]</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>29</td><td>D3V3</td><td>3V3</td><td>U1,U2 / J2-1 / J3-1 / J5-1</td><td></td><td></td><td>3.3V供电</td></tr><tr><td>30</td><td>GND</td><td>GND</td><td>GND plane</td><td></td><td></td><td></td></tr><tr><td>31</td><td>IO26</td><td>User_3V3_IO26</td><td>J4-16</td><td>E2</td><td>lcd_r7_0_io[1]</td><td>TEST_N</td></tr><tr><td>32</td><td>IO27</td><td>User_3V3_IO27</td><td>J4-17</td><td>E1</td><td>lcd_r7_0_io[0]</td><td>NSTATUS</td></tr><tr><td>33</td><td>IO28</td><td>User_3V3_IO28</td><td>J4-18</td><td>C1</td><td>lcd_pwm_o</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>34</td><td>IO29</td><td>User_3V3_IO29</td><td>J4-19</td><td>D1</td><td>lcd_blen_o</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>35</td><td>IO30</td><td>User_3V3_IO30</td><td>J4-20</td><td>C2</td><td>lcd_tp_sda_io</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>36</td><td>IO31</td><td>User_3V3_IO31</td><td>J4-21</td><td>B1</td><td>lcd_tp_scl_io</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>37</td><td>IO32</td><td>User_3V3_IO32</td><td>J4-22</td><td>A2</td><td>lcd_tp_rst_o</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>38</td><td>IO33</td><td>User_3V3_IO33</td><td>J4-23</td><td>B2</td><td>lcd_tp_int_io</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>39</td><td>IO34</td><td>User_3V3_IO34</td><td>J4-24</td><td>A9</td><td>未分配GPIO端口（仍需完整接口检查）</td><td>未用于本次外设；仍需检查当前占用</td></tr><tr><td>40</td><td>IO35</td><td>User_3V3_IO35</td><td>J4-25</td><td>B9</td><td>未分配GPIO端口（仍需完整接口检查）</td><td>未用于本次外设；仍需检查当前占用</td></tr></tbody></table></div><h3>U1/U2：缓冲信号脚</h3><div class="table-scroll"><table><thead><tr><th>信号</th><th>来源</th><th>器件</th><th>输入A脚</th><th>输出Y脚</th><th>输出串33Ω后去向</th></tr></thead><tbody><tr><td>EPD_DIN</td><td>J1-17</td><td>U1</td><td>2</td><td>18</td><td>J2-3</td></tr><tr><td>EPD_CLK</td><td>J1-3</td><td>U1</td><td>4</td><td>16</td><td>J2-4</td></tr><tr><td>EPD_CS</td><td>J1-5</td><td>U1</td><td>6</td><td>14</td><td>J2-5</td></tr><tr><td>EPD_DC</td><td>J1-7</td><td>U1</td><td>8</td><td>12</td><td>J2-6</td></tr><tr><td>EPD_RST</td><td>J1-19</td><td>U1</td><td>11</td><td>9</td><td>J2-7</td></tr><tr><td>EPD_BUSY</td><td>J2-8</td><td>U2</td><td>4</td><td>16</td><td>J1-13</td></tr><tr><td>EPD_PWR</td><td>J1-25</td><td>U2</td><td>2</td><td>18</td><td>J2-9</td></tr><tr><td>FLASH_CS</td><td>J1-27</td><td>U1</td><td>13</td><td>7</td><td>J3-2</td></tr><tr><td>FLASH_CLK</td><td>J1-26</td><td>U1</td><td>15</td><td>5</td><td>J3-5</td></tr><tr><td>FLASH_MOSI</td><td>J1-23</td><td>U1</td><td>17</td><td>3</td><td>J3-6</td></tr><tr><td>FLASH_MISO</td><td>J3-3</td><td>U2</td><td>6</td><td>14</td><td>J1-24</td></tr></tbody></table></div><p>两片20脚接3.3V、10脚接地；1/19脚接BUF_nOE（10kΩ上拉，JP1短接GND启用）。U2未用A脚8/11/13/15/17接地，Y脚12/9/7/5/3留空。</p></section><section id="notes" class="panel"><h2>按你的当前原理图修改</h2><ol><li>将电子纸连接器位号U1改为J2；DIN从IO0改IO14，RST从IO8改IO16，PWR从IO12改IO22。</li><li>加入两片SN74LVC244APWR（PW/TSSOP-20），按图02区分9路输出和2路输入。HOST侧与模块侧分开命名。</li><li>加入J3六针排母：1=VCC，2=CS，3=DO，4=GND，5=CLK，6=DI。针距按实物确认。</li><li>J4用2×13排针引出25路剩余IO和1路GND；J5引出3.3V/GND/5V/GND。复用脚明确标注。</li><li>加入电源去耦、串阻位置、默认电平电阻和JP1。U1/U2各100nF；IDC入口22µF+100nF；屏接口10µF+100nF；Flash接口1µF+100nF。</li><li>现有LCD端口需释放，特别是BUSY和MISO必须取消原输出使能。当前位流不是本底板的测试程序。</li></ol><h3>先存图，再运行</h3><p>PC上把图片转为792×272黑白红位平面，按半屏行字节对齐、位序与驱动发送顺序编码；存入Flash并回读校验。原PNG/JPG不能直接当屏幕数据发出。四类名称可映射到任意图片槽。</p><h3>建议存储分区（设计约定）</h3><p>0x000000～0x00FFFF预留目录/版本；10个图片槽从0x010000开始，每槽64KiB。图片槽i的地址=0x010000+i×0x10000。可预留256字节头部，记录长度、格式、各段偏移与CRC。原始双平面约53,856字节，半屏按行补齐后可为54,400字节，均可放入一个槽。具体存储布局应与驱动/转换器共同确定。</p><h3>缓冲与供电补充</h3><p>串阻初值33Ω仅作调试起点。BUF_nOE默认上拉禁用，确认正确固件后插JP1启用。模块侧CS/RST可100kΩ上拉，PWR可100kΩ下拉；返回BUSY/MISO输入可100kΩ下拉，若模块已有拉电阻需核算。不要在屏TXB信号上增加强上拉。详细电阻与网络连接见同目录Markdown方案。</p><h3>确认边界</h3><p>本成果是接线规划与详细流程图，未生成可投板CAD文件，也未修改RTL或刷写硬件。模块针距、GH连接器与线束方向、供电压降和实际SPI波形仍需核实。当前屏典型整屏刷新约24～25秒，厂商建议刷新间隔至少180秒，二者不是同一个参数。</p><h3>文件与依据</h3><p><a href="底板原理图接线方案.md">详细原理图接线方案</a> · <a href="IDC40引脚分配.csv">40针CSV</a> · <a href="缓冲接线.csv">缓冲CSV</a></p><p>板卡/核心板/电子纸本地原理图与当前Ti60_Demo.peri.xml；<a href="https://www.waveshare.com/wiki/5.79inch_e-Paper_Module_(B)_Manual">微雪该型号手册</a>；<a href="https://www.winbond.com/resource-files/W25Q32JV%20RevJ%2012242024%20Plus.pdf">W25Q32JV数据手册</a>；<a href="https://www.ti.com/lit/ds/symlink/sn74lvc244a.pdf">SN74LVC244A数据手册</a>。</p></section></main><footer>离线文件，无外部脚本依赖。SVG可放大、PNG可分享；打印时输出全部内容。</footer><script>document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',String(t===b)));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===b.dataset.target));}));document.querySelectorAll('[data-zoom]').forEach(b=>b.addEventListener('click',()=>{const svg=b.closest('.panel').querySelector('svg');let z=Number(svg.dataset.zoom||1);z=b.dataset.zoom==='reset'?1:Math.max(.5,Math.min(3,z+(b.dataset.zoom==='+'?.25:-.25)));svg.dataset.zoom=z;svg.style.width=(100*z)+'%';}));document.getElementById('filter').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();let n=0;document.querySelectorAll('.pin-table tbody tr').forEach(r=>{const show=r.textContent.toLowerCase().includes(q);r.hidden=!show;if(show)n++;});document.getElementById('count').textContent='显示 '+n+' / 40 行';});</script></body></html>

@@ -1,0 +1,41 @@
+﻿IDC脚号,原板网络,FPGA_GPIO,FPGA球位,底板信号,去向,FPGA方向,当前工程占用,说明
+1,User_3V3_IO0,GPIOL_N_02,M2,User_3V3_IO0,J4-1,按后续用途配置,key_freeze_n,K2 / key_freeze_n
+2,User_3V3_IO1,GPIOL_P_02,N2,User_3V3_IO1,J4-2,按后续用途配置,key_mode_n,K1 / key_mode_n
+3,User_3V3_IO2,GPIOL_N_06,K2,EPD_CLK,J2-4 via U1 (4->16),output,lcd_vs_o,需释放旧LCD端口；BUSY/MISO必须关闭原输出使能
+4,User_3V3_IO3,GPIOL_P_06,K3,User_3V3_IO3,J4-3,按后续用途配置,lcd_hs_o,未用于本次外设；仍需检查当前占用
+5,User_3V3_IO4,GPIOL_N_08,H3,EPD_CS,J2-5 via U1 (6->14),output,lcd_b7_0_io[7],需释放旧LCD端口；BUSY/MISO必须关闭原输出使能
+6,User_3V3_IO5,GPIOL_P_08,J2,User_3V3_IO5,J4-4,按后续用途配置,lcd_b7_0_io[6],未用于本次外设；仍需检查当前占用
+7,User_3V3_IO6,GPIOL_N_05,J3,EPD_DC,J2-6 via U1 (8->12),output,lcd_b7_0_io[5],需释放旧LCD端口；BUSY/MISO必须关闭原输出使能
+8,User_3V3_IO7,GPIOL_P_05,K4,User_3V3_IO7,J4-5,按后续用途配置,lcd_b7_0_io[4],未用于本次外设；仍需检查当前占用
+9,User_3V3_IO8,GPIOL_N_04,H4,User_3V3_IO8,J4-6,按后续用途配置,lcd_b7_0_io[3],配置Flash CDI3
+10,User_3V3_IO9,GPIOL_P_04,H5,User_3V3_IO9,J4-7,按后续用途配置,lcd_b7_0_io[2],配置Flash CDI2
+11,D5V0,,,5V,J5-3,power,,仅电源引出
+12,GND,,,GND,"GND plane / J2-2 / J3-4 / J4-26 / J5-2,4",ground,,
+13,User_3V3_IO10,GPIOL_N_12,G4,EPD_BUSY,J2-8 via U2 (4->16),input,lcd_b7_0_io[1],需释放旧LCD端口；BUSY/MISO必须关闭原输出使能
+14,User_3V3_IO11,GPIOL_P_12,G3,User_3V3_IO11,J4-8,按后续用途配置,lcd_b7_0_io[0],未用于本次外设；仍需检查当前占用
+15,User_3V3_IO12,GPIOL_N_13,E3,User_3V3_IO12,J4-9,按后续用途配置,lcd_g7_0_io[7],CBSEL1
+16,User_3V3_IO13,GPIOL_P_13,F3,User_3V3_IO13,J4-10,按后续用途配置,lcd_g7_0_io[6],CBSEL0
+17,User_3V3_IO14,GPIOL_N_10,G2,EPD_DIN,J2-3 via U1 (2->18),output,lcd_g7_0_io[5],需释放旧LCD端口；BUSY/MISO必须关闭原输出使能
+18,User_3V3_IO15,GPIOL_P_10,H2,User_3V3_IO15,J4-11,按后续用途配置,lcd_g7_0_io[4],未用于本次外设；仍需检查当前占用
+19,User_3V3_IO16,GPIOL_N_11,F5,EPD_RST,J2-7 via U1 (11->9),output,lcd_g7_0_io[3],需释放旧LCD端口；BUSY/MISO必须关闭原输出使能
+20,User_3V3_IO17,GPIOL_P_11,G5,User_3V3_IO17,J4-12,按后续用途配置,lcd_g7_0_io[2],未用于本次外设；仍需检查当前占用
+21,User_3V3_IO18,GPIOL_N_03,L1,User_3V3_IO18,J4-13,按后续用途配置,lcd_g7_0_io[1],配置Flash CDI1
+22,User_3V3_IO19,GPIOL_P_03,M1,User_3V3_IO19,J4-14,按后续用途配置,lcd_g7_0_io[0],配置Flash CDI0
+23,User_3V3_IO20,GPIOL_N_07,J1,FLASH_MOSI,J3-6 via U1 (17->3),output,lcd_r7_0_io[7],需释放旧LCD端口；BUSY/MISO必须关闭原输出使能
+24,User_3V3_IO21,GPIOL_P_07,K1,FLASH_MISO,J3-3 via U2 (6->14),input,lcd_r7_0_io[6],需释放旧LCD端口；BUSY/MISO必须关闭原输出使能
+25,User_3V3_IO22,GPIOL_N_09,G1,EPD_PWR,J2-9 via U2 (2->18),output,lcd_r7_0_io[5],需释放旧LCD端口；BUSY/MISO必须关闭原输出使能
+26,User_3V3_IO23,GPIOL_P_09,H1,FLASH_CLK,J3-5 via U1 (15->5),output,lcd_r7_0_io[4],需释放旧LCD端口；BUSY/MISO必须关闭原输出使能
+27,User_3V3_IO24,GPIOL_N_14,F2,FLASH_CS,J3-2 via U1 (13->7),output,lcd_r7_0_io[3],需释放旧LCD端口；BUSY/MISO必须关闭原输出使能
+28,User_3V3_IO25,GPIOL_P_14,F1,User_3V3_IO25,J4-15,按后续用途配置,lcd_r7_0_io[2],未用于本次外设；仍需检查当前占用
+29,D3V3,,,3V3,"U1,U2 / J2-1 / J3-1 / J5-1",power,,3.3V供电
+30,GND,,,GND,GND plane,ground,,
+31,User_3V3_IO26,GPIOL_N_15,E2,User_3V3_IO26,J4-16,按后续用途配置,lcd_r7_0_io[1],TEST_N
+32,User_3V3_IO27,GPIOL_P_15,E1,User_3V3_IO27,J4-17,按后续用途配置,lcd_r7_0_io[0],NSTATUS
+33,User_3V3_IO28,GPIOL_N_16,C1,User_3V3_IO28,J4-18,按后续用途配置,lcd_pwm_o,未用于本次外设；仍需检查当前占用
+34,User_3V3_IO29,GPIOL_P_16,D1,User_3V3_IO29,J4-19,按后续用途配置,lcd_blen_o,未用于本次外设；仍需检查当前占用
+35,User_3V3_IO30,GPIOL_N_17,C2,User_3V3_IO30,J4-20,按后续用途配置,lcd_tp_sda_io,未用于本次外设；仍需检查当前占用
+36,User_3V3_IO31,GPIOL_P_17,B1,User_3V3_IO31,J4-21,按后续用途配置,lcd_tp_scl_io,未用于本次外设；仍需检查当前占用
+37,User_3V3_IO32,GPIOL_N_18,A2,User_3V3_IO32,J4-22,按后续用途配置,lcd_tp_rst_o,未用于本次外设；仍需检查当前占用
+38,User_3V3_IO33,GPIOL_P_18,B2,User_3V3_IO33,J4-23,按后续用途配置,lcd_tp_int_io,未用于本次外设；仍需检查当前占用
+39,User_3V3_IO34,GPIOT_N_11,A9,User_3V3_IO34,J4-24,按后续用途配置,未分配GPIO端口（仍需完整接口检查）,未用于本次外设；仍需检查当前占用
+40,User_3V3_IO35,GPIOT_P_11,B9,User_3V3_IO35,J4-25,按后续用途配置,未分配GPIO端口（仍需完整接口检查）,未用于本次外设；仍需检查当前占用

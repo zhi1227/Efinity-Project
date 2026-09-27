@@ -1,0 +1,463 @@
+PAGE 1
+5.79in
+ch e-Paper (B)
+User Manual
+www.waveshare.com/wiki
+5.79inch e-Paper (B)
+User Manual
+
+PAGE 2
+5.79inch e-Paper (B)
+User Manual
+1
+Revision History
+Version Content Date Page
+1.0 New creation 2024/3/1 All
+PAGE 3
+5.79inch e-Paper (B)
+User Manual
+2
+Contents
+1. OVERVIEW ............................................................................................................................................................... 3
+2. FEATURES ................................................................................................................................................................ 4
+3. MECHANICAL SPECIFICATION .............................................................................................................................5
+4. MECHANICAL DRAWING OF EPD MODULE ......................................................................................................6
+5. INPUT/OUTPUT PIN ASSIGNMENT .................................................................................................................... 7
+6. ELECTRICAL CHARACTERISTICS .......................................................................................................................... 9
+6.1 Absolute Maximum Rating ....................................................................................................................... 9
+6.2 DC Characteristics .................................................................................................................................... 10
+6.3 AC Characteristics .................................................................................................................................... 11
+6.3.1 MCU Interface Selection ..................................................................................................................... 11
+6.3.2 MCU Serial Interface (4-wire SPI) ........................................................................................................11
+6.3.3 MCU Serial Peripheral Interface (3-wire SPI) ...................................................................................... 12
+6.4.4 Interface Timing .................................................................................................................................. 14
+7. COMMAND TABLE ................................................................................................................................................15
+8. OPTICAL SPECIFICATIONS ..................................................................................................................................29
+9. HANDLING, SAFETY, AND ENVIRONMENT REQUIREMENTS ..................................................................... 30
+10. RELIABILITY TEST ...............................................................................................................................................31
+11. REFERNCE CIRCUIT ............................................................................................................................................32
+12. TYPICAL OPERATING SEQUENCE ................................................................................................................... 33
+12.1 Normal Operation Flow ........................................................................................................................ 33
+12.2 Normal Operation Reference Program .............................................................................................34
+13. INSPECTION METHOD AND CONDITION ......................................................................................................35
+13.1 Inspection Condition ............................................................................................................................. 35
+13.2 Zone Definition ....................................................................................................................................... 35
+13.3 General Inspection Standards for Products ....................................................................................36
+13.3.1 Appearance Inspection Standard ......................................................................................................36
+14. PACKAGING .........................................................................................................................................................39
+PAGE 4
+5.79inch e-Paper (B)
+User Manual
+3
+1. OVERVIEW
+5.79 inch e-Paper (B) is an Active Matrix Electrophoretic Display (AM EPD), with interface and a
+reference system design. The display is capable to display images at 1-bit white, black and red full
+display capabilities. The 5.79 inch active area contains 272×792 pixels. The module is a TFT-array
+driving electrophoresis display, with integrated circuits including gate driver, source driver, MCU
+interface, timing controller, oscillator, DC-DC, SRAM, LUT, VCOM. Module can be used in portable
+electronic devices, such as Electronic Shelf Label (ESL) System.
+PAGE 5
+5.79inch e-Paper (B)
+User Manual
+4
+2. FEATURES
+ 272×792 pixels display
+ High contrast High reflectance
+ Ultra wide viewing angle Ultra low power consumption
+ Pure reflective mode
+ Bi-stable display
+ Commercial temperature range
+ Landscape portrait modes
+ Hard-coat antiglare display surface
+ Ultra Low current deep sleep mode
+ On-chip display RAM
+ Waveform can stored in On-chip OTP or written by MCU
+ Serial peripheral interface available
+ On-chip oscillator
+ On-chip booster and regulator control for generating VCOM, Gate and Source driving voltage
+ I2C signal master interface to read external temperature sensor
+ Support partial update mode
+ Built-in temperature sensor
+PAGE 6
+5.79inch e-Paper (B)
+User Manual
+5
+3. MECHANICAL SPECIFICATION
+Parameter Specification Unit Remark
+Screen Size 5.79 Inch
+Display Resolution 272(H) x 792(V) Pixel DPI:144
+Active Area 47.74 x 139.00 mm
+Pixel Pitch 0.1755 x 0.1755 mm
+Pixel Configuration Rectangle
+Outline Dimension 56.94 (H) × 150.92(V) × 1.0(D) mm
+Weight 15.7±0.5 g
+PAGE 7
+5.79inch e-Paper (B)
+User Manual
+6
+4. MECHANICAL DRAWING OF EPD MODULE
+
+PAGE 8
+5.79inch e-Paper (B)
+User Manual
+7
+5. INPUT/OUTPUT PIN ASSIGNMENT
+NO. Name I/O Description Remark
+1 NC Do not connect with other NPC pins Keep Open
+2 GDR O N-Channel MOSFET Gate Drive Control
+3 RESE I Current Sense Input for the Control Loop
+4 NC Do not connect with other NC pins Keep Open
+5 VSH2 C Positive Source driving voltage(Red)
+6 TSCL O
+I2C Interface to digital temperature sensor Clock pin
+External pull up resistor is required when connecting to I2C
+slave.
+When not in use: VSS
+7 TSDA I/O
+I2C Interface to digital temperature sensor Data pin
+External pull up resistor is required when connecting to I2C
+slave.
+When not in use: VSS
+8 BS1 I Bus Interface selection pin Note 5-5
+9 BUSY O Busy state output pin Note 5-4
+10 RES# I Reset signal input, Active Low Note 5-3
+11 D/C# I Data/Command control pin Note 5-2
+12 CS# I Chip select input pin Note 5-1
+13 SCL I Serial Clock pin (SPI)
+14 SDA I/O Serial Data pin (SPI)
+15 VDDIO P Power supply for interface logic pins.
+It should be connected with VCI.
+16 VCI P Power supply for the chip
+17 VSS P Ground
+18 VDD C Core logic power pin VDD can be regulated internally from
+VCI. A capacitor should be connected between VDD and VSS.
+19 VPP P FOR TEST
+20 VSH1 C Positive Source driving voltage
+21 VGH C Power Supply pin for Positive Gate driving voltage and VSH1
+22 VSL C Negative Source driving voltage
+23 VGL C Power Supply pin for Negative Gate driving voltage VCOM
+and VSL
+24 VCOM C VCOM driving voltage
+I = Input Pin, O =Output Pin, I/O = Bi-directional Pin (Input/output), P = Power Pin, C =Capacitor Pin
+Note 5-1: This pin (CS#) is the chip select input connecting to the MCU. The chip is enabled for MCU
+PAGE 9
+5.79inch e-Paper (B)
+User Manual
+8
+communication only when CS# is pulled LOW.
+Note 5-2: This pin is (D/C#) Data/Command control pin connecting to the MCU in 4-wire SPI mode.
+When the pin is pulled HIGH, the data at SDA will be interpreted as data. When the pin is
+pulled LOW, the data at SDA will be interpreted as command.
+Note 5-3: This pin (RES#) is reset signal input. The Reset is active low.
+Note 5-4: This pin is Busy state output pin. When Busy is High, the operation of chip should not be
+interrupted, command should not be sent. The chip would put Busy pin High when
+-Outputting display waveform-Communicating with digital temperature sensor.
+Note 5-5: Bus interface selection pin.
+BS1 State MCU Interface
+L 4-lines serial peripheral interface(SPI) - 8 bits SPI
+H 3- lines serial peripheral interface(SPI) - 9 bits SPI
+PAGE 10
+5.79inch e-Paper (B)
+User Manual
+9
+6. ELECTRICAL CHARACTERISTICS
+6.1 ABSOLUTE MAXIMUM RATING
+Parameter Symbol Rating Unit
+Logic supply voltage VCI -0.5 to +6.0 V
+Logic Input voltage VIN -0.5 to VCI +0.5 V
+Logic Output voltage VOUT -0.5 to VCI +0.5 V
+Operating Temp range TOPR 0 to +40 ºC
+Storage Temp range TSTG -25 to+70 ºC
+Optimal Storage Temp TSTGo 23±2 ºC
+Optimal Storage Humidity HSTGo 55±10 %RH
+Note: Maximum ratings are those values beyond which damages to the device may occur. Functional
+operation should be restricted to the limits in the Panel DC Characteristics tables.
+PAGE 11
+5.79inch e-Paper (B)
+User Manual
+10
+6.2 DC CHARACTERISTICS
+The following specifications apply for: VSS=0V, VCI=3.0V, TOPR =25ºC.
+Parameter Symbol Condition Applicable
+pin Min. Typ. Max. Unit
+Single ground VSS - - 0 - V
+Logic supply
+voltage VCI - VCI 2.3 3.0 3.7 V
+Core logic voltage VDD VDD 1.7 1.8 1.9 V
+High level input
+voltage VIH - - 0.8VCI - - V
+Low level input
+voltage VIL - - - - 0.2VCI V
+High level output
+voltage VOH IOH = - 100uA - 0.9VCI - - V
+Low level output
+voltage VOL IOL = 100uA - - - 0.1VCI V
+Typical power PTYP VCI =3.0V - - 17.4 - mW
+Deep sleep mode PSTPY VCI =3.0V - - 0.006 - mW
+Typical operating
+current Iopr_VCI VCI =3.0V - - 5.8 - mA
+Image update time - 25 ºC - - 25 - sec
+Sleep mode current Islp_VCI
+DC/DC off, No clock
+No input load Ram data
+retain - - 25 - uA
+Deep sleep mode
+current Idslp_VCI
+DC/DC off, No clock
+No input load Ram data
+not retain - - 3 5 uA
+Notes: 1. The typical power is measured with following transition from horizontal 3 scale pattern to
+vertical.
+
+PAGE 12
+5.79inch e-Paper (B)
+User Manual
+11
+2. The deep sleep power is the consumed power when the panel controller is in deep sleep mode.
+3. The listed electrical characteristics are only guaranteed under the controller & waveform
+provided by Waveshare.
+4. Electrical measurement: Multimeter
+6.3 AC CHARACTERISTICS
+6.3.1 MCU INTERFACE SELECTION
+The IC can support 3-wire/4-wire serial peripheral. MCU interface is pin selectable by
+BS1 shown in Table 6-1.
+Notes: L is connected to VSS and H is connected to VDDIO.
+6.3.2 MCU SERIAL INTERFACE (4-WIRE SPI)
+The 4-wire SPI consists of serial clock SCL, serial data SDA, D/C# and CS#. The
+control pins status in 4-wire SPI in writing command/data is shown in Table 6-2 and the
+write procedure 4-wire SPI is shown in Table 6-2.
+
+PAGE 13
+5.79inch e-Paper (B)
+User Manual
+12
+Notes: 1. L is connected to VSS and H is connected to VDDIO.
+2. ↑ stands for rising edge of signal.
+3. DA (Write Mode) is shifted into an 8-bit shift register on every rising edge of SCL in the
+order of D7, D6, ... D0. The level of D/C# should be kept over the whole byte. The data byte in
+the shift register is written to the Graphic Display Data RAM (RAM)/Data Byte register or
+command Byte register according to D/C# pin.
+6.3.3 MCU SERIAL PERIPHERAL INTERFACE (3-WIRE SPI)
+MCU Serial Peripheral Interface (3-wire SPI) The 3-wire SPI consists of serial clock
+SCL, serial data SDA and CS#. The operation is similar to 4-wire SPI while D/C# pin is not
+used and it must be tied to LOW. The control pins status in 3-wire SPI is shown in Table 6-3.
+In the write operation, a 9-bit data will be shifted into the shift register on every clock
+rising edge. The bit shifting sequence is D/C# bit, D7 bit, D6 bit to D0 bit. The first bit is
+D/C# bit which determines the following byte is command or data. When D/C# bit is 0, the
+following byte is command. When D/C# bit is 1, the following byte is data. Table 6-3 shows
+the write procedure in 3-wire SPI.
+PAGE 14
+5.79inch e-Paper (B)
+User Manual
+13
+Notes: 1. L is connected to VSS and H is connected to VDDIO.
+2. ↑ stands for rising edge of signal.
+Figure 6-3: Write procedure in 3-wire SPI
+PAGE 15
+5.79inch e-Paper (B)
+User Manual
+14
+6.4.4 INTERFACE TIMING
+The following specifications apply for: VSS=0V, VCI=3.0V, TOPR =25ºC.
+PAGE 16
+5.79inch e-Paper (B)
+User Manual
+15
+7. COMMAND TABLE
+
+PAGE 17
+5.79inch e-Paper (B)
+User Manual
+16
+
+PAGE 18
+5.79inch e-Paper (B)
+User Manual
+17
+
+PAGE 19
+5.79inch e-Paper (B)
+User Manual
+18
+
+PAGE 20
+5.79inch e-Paper (B)
+User Manual
+19
+
+PAGE 21
+5.79inch e-Paper (B)
+User Manual
+20
+
+PAGE 22
+5.79inch e-Paper (B)
+User Manual
+21
+
+PAGE 23
+5.79inch e-Paper (B)
+User Manual
+22
+
+PAGE 24
+5.79inch e-Paper (B)
+User Manual
+23
+
+PAGE 25
+5.79inch e-Paper (B)
+User Manual
+24
+
+PAGE 26
+5.79inch e-Paper (B)
+User Manual
+25
+
+PAGE 27
+5.79inch e-Paper (B)
+User Manual
+26
+
+PAGE 28
+5.79inch e-Paper (B)
+User Manual
+27
+
+PAGE 29
+5.79inch e-Paper (B)
+User Manual
+28
+
+PAGE 30
+5.79inch e-Paper (B)
+User Manual
+29
+8. OPTICAL SPECIFICATIONS
+Measurements are made with that the illumination is under an angle of 45 degree, the detection
+is perpendicular unless otherwise specified.
+Symbol Parameter Conditions Min Typ. Max Units Notes
+R White Reflectivity White 30 35 - % 8- 1
+CR Contrast Ratio Indoor 8:1 - 8-2
+T update Image update time at 25 °C 25 - sec
+Life Topr 1000000times or 5years
+Note 8-1: Luminance meter: Eye-One Pro Spectrophotometer.
+Note 8-2: CR=Surface Reflectance with all white pixel/Surface Reflectance with all black pixels.
+.
+PAGE 31
+5.79inch e-Paper (B)
+User Manual
+30
+9. HANDLING, SAFETY, AND ENVIRONMENT REQUIREMENTS
+WARNING
+The display glass may break when it is dropped or bumped on a hard surface. Handle with care.
+Should the display break, do not touch the electrophoretic material. In case of contact with
+electrophoretic material, wash with water and soap.
+CAUTION
+The display module should not be exposed to harmful gases, such as acid and alkali gases,
+which corrode electronic components. Disassembling the display module.
+Disassembling the display module can cause permanent damage and invalidates the warranty
+agreements.
+Observe general precautions that are common to handling delicate electronic components.
+The glass can break and front surfaces can easily be damaged. Moreover the display is sensitive
+to static electricity and other rough environmental conditions.
+Data sheet status
+Product specification This data sheet contains final product specifications.
+Limiting values
+Limiting values given are in accordance with the Absolute Maximum Rating System (IEC
+134).
+Stress above one or more of the limiting values may cause permanent damage to the
+device. These are stress ratings only and operation of the device at these or at any other
+conditions above those given in the Characteristics sections of the specification is not
+implied. Exposure to limiting values for extended periods may affect device reliability.
+Application information
+Where application information is given, it is advisory and does not form part of the
+specification.
+PAGE 32
+5.79inch e-Paper (B)
+User Manual
+31
+10. RELIABILITY TEST
+NO Test items Test condition
+1 Low-Temperature Storage T = -25°C, 240 h
+Test in white pattern
+2 High-Temperature Storage T=+60ºC, RH=35%, 240h
+Test in white pattern
+3 High-Temperature Operation T=+40ºC, RH=35%, 240h
+4 Low-Temperature Operation 0ºC, 240h
+5 High Temperature
+High Humidity Operation T=40ºC, RH=80%, 240h
+6 High Temperature
+High Humidity Storage
+T=50ºC, RH=90%, 240h
+Test in white pattern
+7 Temperature Cycle 1 cycle: [-25°C 30min]→ [+60 °C 30 min] : 50 cycles Test in
+white pattern
+8 UV exposure Resistance 765W/m² for 168hrs, 40 °C Test in white pattern
+9 ESD Gun
+Air+/-15KV; Contact +/-8KV
+(Test finished product shell, not display only)
+Air+/-8KV; Contact +/-6KV
+(Naked EPD display, not including IC and FPC area)
+Air+/-4KV; Contact +/-2KV
+(Naked EPD display, including IC and FPC area)
+Note： Put in normal temperature for 1hour after test finished, display performance is ok.
+PAGE 33
+5.79inch e-Paper (B)
+User Manual
+32
+11. REFERNCE CIRCUIT
+
+PAGE 34
+5.79inch e-Paper (B)
+User Manual
+33
+12. TYPICAL OPERATING SEQUENCE
+12.1 NORMAL OPERATION FLOW
+
+PAGE 35
+5.79inch e-Paper (B)
+User Manual
+34
+12.2 NORMAL OPERATION REFERENCE PROGRAM
+
+PAGE 36
+5.79inch e-Paper (B)
+User Manual
+35
+13. INSPECTION METHOD AND CONDITION
+13.1 INSPECTION CONDITION
+Item Condition
+Illuminance 800~1500LUX
+Temperature 22ºC±3ºC
+Humidity 55±10%RH
+Distance ≥30cm
+Angle Vertical fore and aft 45
+Inspection Method By eyes
+13.2 ZONE DEFINITION
+A Zone： Active area
+B Zone： Border zone
+C Zone： From B zone edge to panel edge
+PAGE 37
+5.79inch e-Paper (B)
+User Manual
+36
+13.3 GENERAL INSPECTION STANDARDS FOR PRODUCTS
+13.3.1 APPEARANCE INSPECTION STANDARD
+
+PAGE 38
+5.79inch e-Paper (B)
+User Manual
+37
+
+PAGE 39
+5.79inch e-Paper (B)
+User Manual
+38
+
+PAGE 40
+5.79inch e-Paper (B)
+User Manual
+39
+14. PACKAGING

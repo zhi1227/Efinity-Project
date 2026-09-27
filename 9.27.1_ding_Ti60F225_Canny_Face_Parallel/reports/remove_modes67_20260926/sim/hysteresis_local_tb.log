@@ -1,0 +1,18 @@
+
+****** xsim v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/hysteresis_local_tb/xsim_script.tcl
+# xsim {hysteresis_local_tb} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+==================================================
+  hysteresis_local_tb: ok=100015 err=0
+  *** ALL PASS ***
+==================================================
+$finish called at time : 2000360 ns : File "D:/house-1/9.25.1_ding_Ti60F225_Canny_Face_Parallel/tb/vision/hysteresis_local_tb.v" Line 178
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 17:22:50 2026...
