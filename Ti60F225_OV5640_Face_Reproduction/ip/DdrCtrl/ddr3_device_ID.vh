@@ -1,1 +1,0 @@
-`define sg25E 
