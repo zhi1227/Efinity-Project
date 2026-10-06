@@ -1,0 +1,15 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_ep1_gesture -s tb_ep1_gesture -mt 2 -debug typical 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3645] port 'box_valid' remains unconnected for this instance [D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/tb/tb_ep1_components.sv:9]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.ep1_classify
+Compiling module work.ep1_gesture(WIDTH=128,HEIGHT=96,...
+Compiling module work.ep1_gesture(WIDTH=128,HEIGHT=96,...
+Compiling module work.tb_ep1_gesture
+Built simulation snapshot tb_ep1_gesture

@@ -1,0 +1,110 @@
+{
+  "mapped_project1_primitive_count": 3540,
+  "clock_connections": {
+    "clk_pixel": 2789,
+    "1'b0": 10
+  },
+  "unexpected_clocks": [],
+  "clock_constraint_ns": 13.4409,
+  "cdc_report": "No Synchronizer warnings to report.",
+  "constant_ce_dsp": [
+    {
+      "name": "\\u_project1/color/mult_5",
+      "used_pipeline_registers_ce_enabled": {
+        "P_REG": "1'b0"
+      }
+    },
+    {
+      "name": "\\u_project1/color/mult_6",
+      "used_pipeline_registers_ce_enabled": {
+        "P_REG": "1'b0"
+      }
+    },
+    {
+      "name": "\\u_project1/color/mult_7",
+      "used_pipeline_registers_ce_enabled": {
+        "P_REG": "1'b0",
+        "W_REG": "1'b0",
+        "O_REG": "1'b0"
+      }
+    },
+    {
+      "name": "\\u_project1/stats/mult_294_pp_1x0",
+      "used_pipeline_registers_ce_enabled": {}
+    },
+    {
+      "name": "\\u_project1/grad/mult_46",
+      "used_pipeline_registers_ce_enabled": {
+        "A_REG": "1'b0",
+        "B_REG": "1'b0",
+        "W_REG": "1'b0"
+      }
+    },
+    {
+      "name": "\\u_project1/grad/mult_47",
+      "used_pipeline_registers_ce_enabled": {
+        "A_REG": "1'b0",
+        "B_REG": "1'b0"
+      }
+    },
+    {
+      "name": "\\u_project1/grad/mult_49",
+      "used_pipeline_registers_ce_enabled": {
+        "A_REG": "1'b0",
+        "B_REG": "1'b0",
+        "W_REG": "1'b0"
+      }
+    },
+    {
+      "name": "\\u_project1/grad/mult_50",
+      "used_pipeline_registers_ce_enabled": {
+        "A_REG": "1'b0",
+        "B_REG": "1'b0"
+      }
+    },
+    {
+      "name": "\\u_project1/grad/mult_52",
+      "used_pipeline_registers_ce_enabled": {
+        "P_REG": "1'b0",
+        "O_REG": "1'b0"
+      }
+    },
+    {
+      "name": "\\u_project1/skin/mult_5",
+      "used_pipeline_registers_ce_enabled": {}
+    },
+    {
+      "name": "\\u_project1/skin/mult_6",
+      "used_pipeline_registers_ce_enabled": {}
+    },
+    {
+      "name": "\\u_project1/skin/mult_8",
+      "used_pipeline_registers_ce_enabled": {}
+    },
+    {
+      "name": "\\u_project1/stats/mult_264",
+      "used_pipeline_registers_ce_enabled": {}
+    },
+    {
+      "name": "\\u_project1/stats/n2478_pp_0x0_c",
+      "used_pipeline_registers_ce_enabled": {}
+    },
+    {
+      "name": "\\u_project1/stats/mult_279_pp_0x1",
+      "used_pipeline_registers_ce_enabled": {}
+    },
+    {
+      "name": "\\u_project1/stats/mult_294_pp_0x0_c",
+      "used_pipeline_registers_ce_enabled": {}
+    },
+    {
+      "name": "\\u_project1/stats/mult_279_pp_0x0_c",
+      "used_pipeline_registers_ce_enabled": {}
+    },
+    {
+      "name": "\\u_project1/stats/mult_279_pp_1x0",
+      "used_pipeline_registers_ce_enabled": {}
+    }
+  ],
+  "scope": "new processing modules; inherited board I/O exceptions unchanged"
+}

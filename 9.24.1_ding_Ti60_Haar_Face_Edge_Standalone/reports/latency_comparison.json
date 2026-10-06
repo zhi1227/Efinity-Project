@@ -1,0 +1,47 @@
+{
+  "core_clock_mhz": 74.399,
+  "previous_positive_cycles": 6678150,
+  "current_positive_cycles": 4806015,
+  "first_candidate_cycles": 450731,
+  "candidate_to_display_cycles": 647836,
+  "full_done_clock": 6072837,
+  "first_display_clock": 2484907,
+  "phase_offsets": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "strides": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28
+  ],
+  "live_feedback": "User photo confirms live camera video, SELFP, one green face box and visible white Sobel edges in the face ROI. First-acquisition time and closer-distance behavior remain unmeasured.",
+  "programmed_bit_sha256": "A9FDE5EBA56C534ABBCCDD7EEAC4E7D3181ECE271D3552574CAF066CA6B85D66",
+  "jtag_programming": "complete",
+  "near_video_test": "PASS: displayed box > 384 pixels, timeout clear",
+  "roi_edges_visual": "confirmed by user photo"
+}

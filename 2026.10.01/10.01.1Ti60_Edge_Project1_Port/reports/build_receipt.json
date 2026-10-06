@@ -1,0 +1,11 @@
+{
+  "board_programmed": false,
+  "device": "Ti60F225C4",
+  "timing_relationships": 26,
+  "log": "reports/build_20260929_204725.log",
+  "generated": "2026-09-29T20:49:15.3794616+08:00",
+  "tool": "Efinity 2025.1.110.5.9",
+  "bit_sha256": "B771A66506D7B6430A66BD204C41D842B431DE7F183B30010A04F55F0434B52E",
+  "download_state": "paused_by_user_before_power_off",
+  "last_scan_issue": "FT232H now uses D2XX; Efinity 2025.1 configure signature mismatch. Project-local compatibility adapter prepared, hardware validation paused by user."
+}

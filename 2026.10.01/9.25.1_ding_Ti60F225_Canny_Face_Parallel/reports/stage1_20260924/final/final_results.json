@@ -1,0 +1,249 @@
+{
+  "date": "2026-09-24",
+  "project": "D:\\yilingsi_fpga\\Efinity_Project\\2026.9.22\\9.22.2_ding_Ti60F225_Canny_Face_Parallel",
+  "stage": "1",
+  "board_downloaded": false,
+  "flash_written": false,
+  "xlr_used": 13394,
+  "xlr_capacity": 60800,
+  "memory_used": 161,
+  "memory_capacity": 256,
+  "dsp_used": 4,
+  "dsp_capacity": 160,
+  "worst_setup_ns": 0.302,
+  "worst_hold_ns": 0.026,
+  "setup": [
+    {
+      "launch": "tdqss_clk",
+      "capture": "tdqss_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 0.482,
+      "edge": "R-R"
+    },
+    {
+      "launch": "tdqss_clk",
+      "capture": "core_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 1.873,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "tdqss_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 1.349,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "core_clk",
+      "constraint_ns": 5.208,
+      "slack_ns": 1.02,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "tac_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 2.034,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "twd_clk",
+      "constraint_ns": 0.541,
+      "slack_ns": 0.302,
+      "edge": "R-R"
+    },
+    {
+      "launch": "tac_clk",
+      "capture": "core_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 1.773,
+      "edge": "R-R"
+    },
+    {
+      "launch": "tac_clk",
+      "capture": "tac_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 0.445,
+      "edge": "R-R"
+    },
+    {
+      "launch": "twd_clk",
+      "capture": "twd_clk",
+      "constraint_ns": 2.604,
+      "slack_ns": 0.477,
+      "edge": "R-R"
+    },
+    {
+      "launch": "clk_sys",
+      "capture": "clk_sys",
+      "constraint_ns": 10.417,
+      "slack_ns": 4.347,
+      "edge": "R-R"
+    },
+    {
+      "launch": "clk_pixel",
+      "capture": "clk_pixel",
+      "constraint_ns": 13.441,
+      "slack_ns": 3.654,
+      "edge": "R-R"
+    },
+    {
+      "launch": "cmos_pclk",
+      "capture": "cmos_pclk",
+      "constraint_ns": 10.0,
+      "slack_ns": 7.099,
+      "edge": "R-R"
+    },
+    {
+      "launch": "cmos_pclk",
+      "capture": "cmos_pclk",
+      "constraint_ns": 5.0,
+      "slack_ns": 1.82,
+      "edge": "F-R"
+    }
+  ],
+  "hold": [
+    {
+      "launch": "tdqss_clk",
+      "capture": "tdqss_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.098,
+      "edge": "R-R"
+    },
+    {
+      "launch": "tdqss_clk",
+      "capture": "core_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.131,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "tdqss_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.092,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "core_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.029,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "tac_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.053,
+      "edge": "R-R"
+    },
+    {
+      "launch": "core_clk",
+      "capture": "twd_clk",
+      "constraint_ns": -1.883,
+      "slack_ns": 2.024,
+      "edge": "R-R"
+    },
+    {
+      "launch": "tac_clk",
+      "capture": "core_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.137,
+      "edge": "R-R"
+    },
+    {
+      "launch": "tac_clk",
+      "capture": "tac_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.03,
+      "edge": "R-R"
+    },
+    {
+      "launch": "twd_clk",
+      "capture": "twd_clk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.052,
+      "edge": "R-R"
+    },
+    {
+      "launch": "clk_sys",
+      "capture": "clk_sys",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.026,
+      "edge": "R-R"
+    },
+    {
+      "launch": "clk_pixel",
+      "capture": "clk_pixel",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.029,
+      "edge": "R-R"
+    },
+    {
+      "launch": "cmos_pclk",
+      "capture": "cmos_pclk",
+      "constraint_ns": 0.0,
+      "slack_ns": 0.067,
+      "edge": "R-R"
+    },
+    {
+      "launch": "cmos_pclk",
+      "capture": "cmos_pclk",
+      "constraint_ns": -5.0,
+      "slack_ns": 5.85,
+      "edge": "F-R"
+    }
+  ],
+  "tests": [
+    {
+      "name": "tb_parallel",
+      "pass": true,
+      "log": "reports/stage1_20260924/sim_run03/tb_parallel.log"
+    },
+    {
+      "name": "tb_controls",
+      "pass": true,
+      "log": "reports/stage1_20260924/sim_run03/tb_controls.log"
+    },
+    {
+      "name": "tb_720p",
+      "pass": true,
+      "log": "reports/stage1_20260924/sim_run03/tb_720p.log"
+    },
+    {
+      "name": "tb_face_grid_regions",
+      "pass": true,
+      "log": "reports/stage1_20260924/sim_run03/tb_face_grid_regions.log"
+    },
+    {
+      "name": "canny_threshold_ports_tb",
+      "pass": true,
+      "log": "reports/stage1_20260924/sim_run03/canny_threshold_ports_tb.log"
+    },
+    {
+      "name": "hysteresis_local_tb",
+      "pass": true,
+      "log": "reports/stage1_20260924/sim_run03/hysteresis_local_tb.log"
+    },
+    {
+      "name": "rgb565_to_ycbcr_skin_tb",
+      "pass": true,
+      "log": "reports/stage1_20260924/sim_run03/rgb565_to_ycbcr_skin_tb.log"
+    },
+    {
+      "name": "tb_stage1_display",
+      "pass": true,
+      "log": "reports/stage1_20260924/sim_run03/tb_stage1_display.log"
+    }
+  ],
+  "frozen_files": 572,
+  "frozen_changed": 0,
+  "T02_real_samples": "PENDING",
+  "default_mode": 3,
+  "default_low": 40,
+  "default_high": 80
+}

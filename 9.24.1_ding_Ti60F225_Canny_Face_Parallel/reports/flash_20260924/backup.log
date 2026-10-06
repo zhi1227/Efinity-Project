@@ -1,0 +1,4 @@
+Using board profile: 'Generic Board Profile Using FT232' for pinout connection
+Connecting to JTAG_TAP: efx_ti
+Unsupported JTAG Bridge version: 255.255. Please choose the latest bundled JTAG Bridge image and then try again., aborting jtag2spi read
+ERROR: problem occurred during jtag_bridge programming, aborting!

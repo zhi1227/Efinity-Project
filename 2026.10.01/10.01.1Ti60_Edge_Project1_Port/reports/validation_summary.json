@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-09-29T20:59:17.803454",
+  "device": "Ti60F225C4",
+  "boot_mode": "M3 SOBEL",
+  "boot_threshold": 100,
+  "reset_button": "K3 / RESET (J5 CRESET_N)",
+  "bit_sha256": "B771A66506D7B6430A66BD204C41D842B431DE7F183B30010A04F55F0434B52E",
+  "jtag_sram_success": false,
+  "download_state": "paused_by_user_before_power_off",
+  "setup_relationships": 13,
+  "hold_relationships": 13,
+  "minimum_setup_slack_ns": 0.317,
+  "minimum_hold_slack_ns": 0.025,
+  "tests": {
+    "math": "PASS 2000 median and 2000 L2 Sobel/Prewitt random neighborhoods",
+    "skin": "PASS 2021 independent skin RGB/threshold cases including strict R-G boundaries and valid/coordinate alignment",
+    "controls": "PASS M3 boot default, buttons debounce, boot-held, short/long, no release duplicate, frame commit, wrap, saturation",
+    "gesture": "PASS 31 flood-fill-reference CCL frames: exact geometry, union, diagonal, ties, borders, exact 64 candidates, candidate/label/FIFO overflow, deadline, removal, class boundaries and stability",
+    "cc720p": "PASS 720p CCL at 1650 clocks/line and 8250-clock frame gap: A=65524 F=999 R=1000, next empty frame clears all results",
+    "video": "PASS video FULL=0 frames=64 pixels=49152 RGB/DE/HS/VS exact",
+    "720p": "PASS video FULL=1 frames=3 pixels=2764800 RGB/DE/HS/VS exact",
+    "hud": "PASS decimal conversion, HUD skin/F/A/R labels, OVF and plus glyph; emitted RTL preview"
+  },
+  "original_rtl_unchanged": true,
+  "physical_hdmi_acceptance": "pending_user_observation",
+  "real_hand_classification": "not_measured",
+  "field_threshold_calibration": "not_performed"
+}

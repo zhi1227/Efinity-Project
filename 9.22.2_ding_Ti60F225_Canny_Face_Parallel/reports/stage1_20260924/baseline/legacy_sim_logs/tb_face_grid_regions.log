@@ -1,0 +1,22 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_face_grid_regions/xsim_script.tcl
+# xsim {tb_face_grid_regions} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+grid mode 0 processing wait 1633 cycles
+grid mode 1 processing wait 765 cycles
+grid mode 2 processing wait 5623 cycles
+grid mode 3 processing wait 961 cycles
+grid mode 4 processing wait 794 cycles
+grid mode 5 processing wait 1415 cycles
+grid mode 6 processing wait 1199 cycles
+PASS grid: small/wide/narrow rejected; two faces, empty-frame clear, full-bank BFS, border and diagonal connectivity
+$finish called at time : 352630 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.9.22/9.22.2_ding_Ti60F225_Canny_Face_Parallel/tb/parallel/tb_face_grid_regions.v" Line 63
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Sep 22 23:01:14 2026...

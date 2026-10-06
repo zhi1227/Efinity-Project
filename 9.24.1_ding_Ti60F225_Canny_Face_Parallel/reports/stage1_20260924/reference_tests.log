@@ -1,0 +1,17 @@
+test_dataset_labels_and_no_overwrite (__main__.ReferenceTests.test_dataset_labels_and_no_overwrite) ... ok
+test_default_config (__main__.ReferenceTests.test_default_config) ... ok
+test_diagonal_eight_connectivity (__main__.ReferenceTests.test_diagonal_eight_connectivity) ... ok
+test_empty_dataset_is_pending (__main__.ReferenceTests.test_empty_dataset_is_pending) ... ok
+test_existing_rtl_skin_rectangle (__main__.ReferenceTests.test_existing_rtl_skin_rectangle) ... ok
+test_full_skin_border_and_grid (__main__.ReferenceTests.test_full_skin_border_and_grid) ... ok
+test_integer_color_truth (__main__.ReferenceTests.test_integer_color_truth) ... ok
+test_isolated_noise_and_frame_clear (__main__.ReferenceTests.test_isolated_noise_and_frame_clear) ... ok
+test_metrics_one_to_one_and_undefined (__main__.ReferenceTests.test_metrics_one_to_one_and_undefined) ... ok
+test_raw_rgb565_byte_order (__main__.ReferenceTests.test_raw_rgb565_byte_order) ... ok
+test_scan_order_capacity (__main__.ReferenceTests.test_scan_order_capacity) ... ok
+test_sobel_step_and_uniform (__main__.ReferenceTests.test_sobel_step_and_uniform) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.256s
+
+OK

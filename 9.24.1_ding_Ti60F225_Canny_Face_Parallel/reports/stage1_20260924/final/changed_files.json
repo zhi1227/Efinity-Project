@@ -1,0 +1,74 @@
+[
+  {
+    "path": "PROJECT_CONTEXT.md",
+    "status": "modified"
+  },
+  {
+    "path": "README_第一阶段.md",
+    "status": "added"
+  },
+  {
+    "path": "README_赛题四.md",
+    "status": "modified"
+  },
+  {
+    "path": "Ti60_Demo.xml",
+    "status": "modified"
+  },
+  {
+    "path": "src/parallel/canny_stream.v",
+    "status": "modified"
+  },
+  {
+    "path": "src/parallel/parallel_overlay.v",
+    "status": "modified"
+  },
+  {
+    "path": "src/parallel/parallel_video.v",
+    "status": "modified"
+  },
+  {
+    "path": "src/parallel/uart_params.v",
+    "status": "modified"
+  },
+  {
+    "path": "src/parallel/vision_config.vh",
+    "status": "added"
+  },
+  {
+    "path": "tb/parallel/tb_720p.v",
+    "status": "modified"
+  },
+  {
+    "path": "tb/parallel/tb_controls.v",
+    "status": "modified"
+  },
+  {
+    "path": "tb/parallel/tb_stage1_display.v",
+    "status": "added"
+  },
+  {
+    "path": "tools/run_parallel_tests.ps1",
+    "status": "modified"
+  },
+  {
+    "path": "tools/stage1_reference.py",
+    "status": "added"
+  },
+  {
+    "path": "tools/stage1_snapshot.ps1",
+    "status": "modified"
+  },
+  {
+    "path": "tools/test_stage1_reference.py",
+    "status": "added"
+  },
+  {
+    "path": "docs/stage1_dataset/采样与标定说明.md",
+    "status": "added"
+  },
+  {
+    "path": "docs/stage1_dataset/template.json",
+    "status": "added"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "created": "2026-09-25T14:36:34.8446621+08:00",
+  "tests": [
+    "tb_parallel",
+    "tb_controls",
+    "tb_720p",
+    "tb_face_grid_regions",
+    "canny_threshold_ports_tb",
+    "hysteresis_local_tb",
+    "rgb565_to_ycbcr_skin_tb",
+    "tb_stage1_display",
+    "tb_freeze",
+    "tb_shape",
+    "tb_contest_video",
+    "tb_filters"
+  ],
+  "manifest_files": 505,
+  "setup_slack_min_ns": 0.302,
+  "hold_slack_min_ns": 0.026,
+  "bit_sha256": "78f227940dfc785eb368d5c685917adbb78da4abcdacce6e4be5d601a463eeb0",
+  "hardware_status": "NOT_PROGRAMMED_USB_NOT_ENUMERATED",
+  "flash_status": "UNCHANGED",
+  "real_video_acceptance": "PENDING"
+}

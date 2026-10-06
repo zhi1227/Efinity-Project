@@ -1,0 +1,30 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_parallel -s tb_parallel -mt 2 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.rgb565_to_gray
+Compiling module work.line_buffer_3x3(WIDTH=64)
+Compiling module work.median3x3
+Compiling module work.sobel3x3
+Compiling module work.line_buffer_3x3(WIDTH=64,DWIDTH=...
+Compiling module work.nms3x3
+Compiling module work.canny_threshold(TH_HIGH=12'b0111...
+Compiling module work.line_buffer_3x3(WIDTH=64,DWIDTH=...
+Compiling module work.hysteresis_local
+Compiling module work.canny_stream(WIDTH=64)
+Compiling module work.video_delay(BITS=40,LATENCY=378)
+Compiling module work.rgb565_to_rgb888
+Compiling module work.rgb565_to_ycbcr_skin
+Compiling module work.line_buffer_3x3(WIDTH=64,DWIDTH=...
+Compiling module work.face_morph(WIDTH=64)
+Compiling module work.video_delay(BITS=24,LATENCY=189)
+Compiling module work.face_grid_regions(WIDTH=64,HEIGH...
+Compiling module work.parallel_overlay
+Compiling module work.parallel_video(WIDTH=64,HEIGHT=4...
+Compiling module work.tb_parallel
+Built simulation snapshot tb_parallel

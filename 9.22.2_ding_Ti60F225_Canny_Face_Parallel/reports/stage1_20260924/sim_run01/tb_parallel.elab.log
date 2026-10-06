@@ -1,0 +1,40 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_parallel -s tb_parallel -mt 2 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.rgb565_to_gray
+Compiling module work.line_buffer_3x3(WIDTH=64)
+Compiling module work.median3x3
+Compiling module work.sobel3x3
+Compiling module work.line_buffer_3x3(WIDTH=64,DWIDTH=...
+Compiling module work.nms3x3
+Compiling module work.canny_threshold(TH_HIGH=12'b0101...
+Compiling module work.line_buffer_3x3(WIDTH=64,DWIDTH=...
+Compiling module work.hysteresis_local
+Compiling module work.canny_stream(WIDTH=64)
+Compiling module work.video_delay(BITS=40,LATENCY=378)
+Compiling module work.rgb565_to_rgb888
+Compiling module work.rgb565_to_ycbcr_skin
+Compiling module work.line_buffer_3x3(WIDTH=64,DWIDTH=...
+Compiling module work.face_morph(WIDTH=64)
+Compiling module work.video_delay(BITS=24,LATENCY=189)
+Compiling module work.video_delay(BITS=9,LATENCY=377)
+Compiling module work.video_delay(BITS=2,LATENCY=189)
+Compiling module work.face_grid_regions(WIDTH=64,HEIGH...
+Compiling module work.parallel_overlay(WIDTH=64)
+Compiling module work.parallel_video(WIDTH=64,HEIGHT=4...
+Compiling module work.tb_parallel
+Built simulation snapshot tb_parallel
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/yilingsi_fpga/Efinity_Project/2026.9.22/9.22.2_ding_Ti60F225_Canny_Face_Parallel/reports/stage1_20260924/sim_run01/xsim.dir/tb_parallel/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 24 13:14:15 2026...

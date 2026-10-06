@@ -1,0 +1,39 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/src/parallel/video_delay.v" into library work
+INFO: [VRFC 10-311] analyzing module video_delay
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/src/vision/line_buffer_3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module line_buffer_3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/src/hand/hand_font.v" into library work
+INFO: [VRFC 10-311] analyzing module hand_font
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/src/project1/ep1_components.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_classify
+INFO: [VRFC 10-311] analyzing module ep1_gesture
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/src/project1/ep1_controls.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_button
+INFO: [VRFC 10-311] analyzing module ep1_controls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/src/project1/ep1_hud.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_decimal
+INFO: [VRFC 10-311] analyzing module ep1_hud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/src/project1/ep1_math.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_color
+INFO: [VRFC 10-311] analyzing module ep1_median
+INFO: [VRFC 10-311] analyzing module ep1_gradient
+INFO: [VRFC 10-311] analyzing module ep1_morph
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/src/project1/ep1_skin.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_skin
+INFO: [VRFC 10-311] analyzing module ep1_window7
+INFO: [VRFC 10-311] analyzing module ep1_disk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/src/project1/ep1_video.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_video
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/tb/tb_ep1_components.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_ep1_gesture
+INFO: [VRFC 10-311] analyzing module tb_ep1_cc720p
+INFO: [VRFC 10-311] analyzing module tb_ep1_skin
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/tb/tb_ep1_controls.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_ep1_controls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/tb/tb_ep1_hud.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_ep1_hud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/tb/tb_ep1_math.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_ep1_math
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/tb/tb_ep1_video.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_ep1_video
+INFO: [VRFC 10-311] analyzing module tb_ep1_720p

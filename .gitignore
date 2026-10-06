@@ -15,6 +15,13 @@ incremental_db/
 *.wlf
 *.vcd
 *.qws
+*.cdb
+*.hdb
+*.ddb
+*.pickle
+*.raw
+*.bak
+*.wdb
 transcript
 __pycache__/
 .Xil/
@@ -27,6 +34,10 @@ xelab.log
 xelab.pb
 xvlog.log
 xvlog.pb
+**/*.log
+!**/reports/*.log
+!**/reports/**/*.log
+**/*.exe
 
 # Local analysis and generated simulation runs. Testbench sources under tb/
 # and reusable scripts under tools/ remain versioned.
@@ -39,6 +50,9 @@ sim_modular/
 /FPGA_Sobel/project/simulation/
 /FPGA_Sobel/project/PLLJ_PLLSPE_INFO.txt
 /FPGA_Sobel/project/*.jic
+
+# Quartus compilation outputs for bundled reference projects
+/2026.10.01/FPGA-Edge-Detection-Project1/par/output_files/
 
 # Keep the tested Ti60 bitstream and timing report, not intermediate netlists
 /Ti60F225_GitHub_FPGA_Sobel_Port/outflow/*

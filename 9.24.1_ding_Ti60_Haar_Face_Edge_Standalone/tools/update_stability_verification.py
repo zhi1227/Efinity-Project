@@ -1,0 +1,10 @@
+from pathlib import Path
+P=Path(r'D:\yilingsi_fpga\Efinity_Project\2026.9.24\Ti60_Haar_Face_Edge_Standalone')
+f=P/'tools/check_stability_golden.py';s=f.read_text(encoding='utf-8-sig');s=s.replace("f=P/'src/haar/haar_face_video.v';s=f.read_text();s=re.sub(r'SELF_EXPECTED=\\d+',f'SELF_EXPECTED={count}',s);f.write_text(s)","f=P/'src/haar/haar_face_video.v'\nexpected=int(re.search(r'SELF_EXPECTED=(\\d+)',f.read_text())[1])\nassert count==expected, (count,expected)")
+f.write_text(s,encoding='utf-8')
+f=P/'tools/record_verified_build.py';s=f.read_text();s=s.replace("'outflow/Ti60_Demo.hex']","'outflow/Ti60_Demo.hex','sim/positive.mem','sim/expected.mem','sim/expected_count.vh']")
+s=s.replace("['.v','.sv','.mem','.sdc']","['.v','.sv','.vh','.mem','.sdc']")
+s=s.replace('Initial live camera output confirmed, face boxes not seen; diagnostic revision awaits live feedback','Previous diagnostic: unobstructed frontal face detected on board, but boxes flicker. Stability revision awaits live confirmation.')
+f.write_text(s)
+f=P/'tools/README.md';s=f.read_text();s+='\n`apply_stability_update.py` and `fix_tracker_expiry.py` are historical one-time edit scripts; do not rerun them. `check_stability_golden.py` regenerates seven-scale simulation vectors and checks the quantized startup test count against the RTL; run it before simulation/build, not after generating a verified bitstream. The tracker unit test covers dropout, candidate order changes, per-face expiry, capacity, reacquisition and an expiry/matching race.\n';f.write_text(s)
+print('Updated reproducibility checks and manifest scope.')

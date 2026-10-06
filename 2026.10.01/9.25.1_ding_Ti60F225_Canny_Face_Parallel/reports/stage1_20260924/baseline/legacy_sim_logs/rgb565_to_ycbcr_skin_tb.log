@@ -1,0 +1,38 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/rgb565_to_ycbcr_skin_tb/xsim_script.tcl
+# xsim {rgb565_to_ycbcr_skin_tb} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+================================================================
+ Task 1: rgb565_to_ycbcr_skin TB
+================================================================
+
+  [A0] 硬真值表（12 组，精确定值）
+      硬真值表小计：ok=12 err=0
+
+  [A] 定向：肤色正例（应判 1）
+  [B] 定向：非肤色反例（应判 0）
+  [C] 定向：暗部 Y<40 应排除
+  [D] 定向：过曝 Y>235 应排除
+  [E] 定向：阈值全开 -> 全 1
+  [F] 定向：阈值全关 -> 全 0
+
+  [A-F] 定向合计：ok=30 err=0
+
+  [G] 随机 100000 组...
+      ok=100030 err=0
+
+  [H] de/x/y 透传检查
+
+================================================================
+ PASS: ok=100032 err=0
+================================================================
+$finish called at time : 2000700 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.9.22/9.22.2_ding_Ti60F225_Canny_Face_Parallel/tb/face/rgb565_to_ycbcr_skin_tb.v" Line 286
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Sep 22 22:58:53 2026...

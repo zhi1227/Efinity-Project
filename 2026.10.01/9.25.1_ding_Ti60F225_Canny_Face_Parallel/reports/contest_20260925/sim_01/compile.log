@@ -1,0 +1,28 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/canny_threshold.v" into library work
+INFO: [VRFC 10-311] analyzing module canny_threshold
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/edge_despeckle.v" into library work
+INFO: [VRFC 10-311] analyzing module edge_despeckle
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/gaussian3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module gaussian3x3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/hysteresis_local.v" into library work
+INFO: [VRFC 10-311] analyzing module hysteresis_local
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/line_buffer_3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module line_buffer_3x3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/median3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module median3x3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/nms_hist.v" into library work
+INFO: [VRFC 10-311] analyzing module nms_hist
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/nms3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module nms3x3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/rgb565_to_gray.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb565_to_gray
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/rgb565_to_rgb888.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb565_to_rgb888
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/vision/sobel3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module sobel3x3
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/button_press.v" into library work
+INFO: [VRFC 10-311] analyzing module button_press
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/canny_stream.v" into library work
+INFO: [VRFC 10-311] analyzing module canny_stream
+ERROR: [VRFC 10-1412] syntax error near ) [D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/canny_stream.v:40]
+ERROR: [VRFC 10-2865] module 'canny_stream' ignored due to previous errors [D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/src/parallel/canny_stream.v:9]

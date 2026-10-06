@@ -1,0 +1,31 @@
+{
+  "stage_count": 25,
+  "feature_geometry_matches": true,
+  "weights_match": true,
+  "node_threshold_match": 2913,
+  "leaf_match": 5826,
+  "stage_threshold_match": 24,
+  "all_stage_thresholds_negative": true,
+  "xml_sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0",
+  "source": "https://raw.githubusercontent.com/opencv/opencv/4.x/data/haarcascades/haarcascade_frontalface_default.xml",
+  "audit_only_not_applied": true,
+  "normalization_comparison": {
+    "current_and_cornell": [
+      0,
+      0,
+      24,
+      24
+    ],
+    "opencv_reference": [
+      1,
+      1,
+      22,
+      22
+    ]
+  },
+  "stage_threshold_comparison": {
+    "current_and_cornell": "0.4 * integer model threshold",
+    "opencv_reference": "original model threshold minus a small epsilon"
+  },
+  "interpretation": "Behavioral differences found; not yet identified as the cause of this user's live issue, and no FPGA change has been made from this audit."
+}

@@ -1,0 +1,16 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_ep1_720p/xsim_script.tcl
+# xsim {tb_ep1_720p} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS video FULL=1 frames=3 pixels=2764800 RGB/DE/HS/VS exact
+$finish called at time : 37207970 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.9.28/Ti60_Edge_Project1_Port/tb/tb_ep1_video.sv" Line 58
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:19 . Memory (MB): peak = 218.574 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Sep 29 20:49:30 2026...

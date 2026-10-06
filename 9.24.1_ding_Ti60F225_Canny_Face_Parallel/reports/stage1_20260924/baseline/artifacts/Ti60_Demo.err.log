@@ -1,0 +1,20 @@
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 22, 2026 22:55:51
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] instantiating unknown module 'Sensor_Image_XYCrop' (VERI-1063) (D:\yilingsi_fpga\Efinity_Project\2026.9.22\9.22.2_ding_Ti60F225_Canny_Face_Parallel\example_top.v:862)
+[EFX-0021 ERROR] Elaboration of module 'example_top' failed. Please check previous error messages.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 22, 2026 22:56:12
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Sep 22, 2026 23:01:54
+///////////////////////////////////
+

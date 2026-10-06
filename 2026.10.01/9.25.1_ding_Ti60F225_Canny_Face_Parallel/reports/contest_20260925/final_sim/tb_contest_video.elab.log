@@ -1,0 +1,44 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_contest_video -s tb_contest_video -mt 2 -debug typical 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.rgb565_to_gray
+Compiling module work.line_buffer_3x3(WIDTH=128)
+Compiling module work.median3x3
+Compiling module work.sobel3x3
+Compiling module work.gaussian3x3
+Compiling module work.line_buffer_3x3(WIDTH=128,DWIDTH...
+Compiling module work.nms3x3
+Compiling module work.canny_threshold(TH_HIGH=12'b0101...
+Compiling module work.line_buffer_3x3(WIDTH=128,DWIDTH...
+Compiling module work.hysteresis_local
+Compiling module work.canny_stream(WIDTH=128,GAUSSIAN=...
+Compiling module work.video_delay(BITS=40,LATENCY=658)
+Compiling module work.rgb565_to_rgb888
+Compiling module work.rgb565_to_ycbcr_skin
+Compiling module work.line_buffer_3x3(WIDTH=128,DWIDTH...
+Compiling module work.face_morph(WIDTH=128)
+Compiling module work.video_delay(BITS=24,LATENCY=329)
+Compiling module work.video_delay(BITS=9,LATENCY=657)
+Compiling module work.video_delay(BITS=10,LATENCY=329)
+Compiling module work.video_delay(BITS=17,LATENCY=493)
+Compiling module work.face_grid_regions(WIDTH=128,HEIG...
+Compiling module work.edge_shape_roi(WIDTH=128,HEIGHT=...
+Compiling module work.vision_hud
+Compiling module work.parallel_overlay(WIDTH=128,HEIGH...
+Compiling module work.parallel_video(WIDTH=128,HEIGHT=...
+Compiling module work.tb_contest_video
+Built simulation snapshot tb_contest_video
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/yilingsi_fpga/Efinity_Project/2026.9.25/9.25.1_ding_Ti60F225_Canny_Face_Parallel/reports/contest_20260925/final_sim/xsim.dir/tb_contest_video/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 14:35:06 2026...

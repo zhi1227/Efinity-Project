@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "capture_source": "TODO: OV5640 raw data or documented lossless capture",
+  "width": 1280,
+  "height": 720,
+  "frames": []
+}

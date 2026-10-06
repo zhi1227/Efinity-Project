@@ -1,0 +1,23 @@
+{
+  "width": 32,
+  "height": 24,
+  "frames": 64,
+  "modes": 8,
+  "patterns": [
+    "black",
+    "white",
+    "vertical step",
+    "horizontal step",
+    "isolated pixel",
+    "random RGB",
+    "skin checker",
+    "ramp"
+  ],
+  "thresholds": [
+    0,
+    20,
+    100,
+    255
+  ],
+  "neighborhood_cases": 2000
+}

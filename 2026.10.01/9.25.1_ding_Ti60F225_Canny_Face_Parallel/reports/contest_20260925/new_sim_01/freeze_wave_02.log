@@ -1,0 +1,14 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_freeze/xsim_script.tcl
+# xsim {tb_freeze} -wdb {freeze.wdb} -autoloadwcfg -tclbatch {../../../tools/wave_freeze.tcl}
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source ../../../tools/wave_freeze.tcl
+## open_vcd freeze.vcd
+ERROR: [Simulator 45-10] The current simulation was compiled without trace information.  To perform the requested operation, please recompile the design with -debug all or typical.
+INFO: [Common 17-206] Exiting xsim at Fri Sep 25 14:30:27 2026...

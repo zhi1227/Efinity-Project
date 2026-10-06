@@ -1,0 +1,36 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_ep1_720p -s tb_ep1_720p -mt 2 -debug typical 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.ep1_button(DEBOUNCE=2,LONG_PRESS...
+Compiling module work.ep1_controls(DEBOUNCE=2,LONG_PRE...
+Compiling module work.ep1_color
+Compiling module work.line_buffer_3x3
+Compiling module work.ep1_median
+Compiling module work.ep1_gradient
+Compiling module work.line_buffer_3x3(DWIDTH=1)
+Compiling module work.ep1_morph
+Compiling module work.ep1_morph(DILATE=1)
+Compiling module work.ep1_skin
+Compiling module work.ep1_window7
+Compiling module work.ep1_disk
+Compiling module work.video_delay(BITS=67,LATENCY=8267...
+Compiling module work.video_delay(BITS=8,LATENCY=8264)
+Compiling module work.video_delay(BITS=9,LATENCY=6608)
+Compiling module work.video_delay(BITS=3,LATENCY=4951)
+Compiling module work.video_delay(BITS=2,LATENCY=3297)
+Compiling module work.video_delay(BITS=2,LATENCY=1643)
+Compiling module work.ep1_classify
+Compiling module work.ep1_gesture_default
+Compiling module work.ep1_decimal
+Compiling module work.hand_font
+Compiling module work.ep1_hud
+Compiling module work.ep1_video(DEBOUNCE=2,LONG_PRESS=...
+Compiling module work.tb_ep1_video(FULL=1)
+Compiling module work.tb_ep1_720p
+Built simulation snapshot tb_ep1_720p

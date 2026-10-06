@@ -1,0 +1,13 @@
+{
+  "timing_relationships": 26,
+  "board_programmed": true,
+  "bit_sha256": "F96CF58E747D8E4B737DBC1EC1D4AD911F160E15B138183C72BE529B48CC55E8",
+  "tool": "Efinity 2025.1.110.5.9",
+  "generated": "2026-09-28T22:27:06.6159714+08:00",
+  "log": "reports/build_20260928_222540.log",
+  "device": "Ti60F225C4",
+  "jtag_log": "reports/jtag_sram_20260928_222728.log",
+  "jtag_scan_log": "reports/jtag_scan_20260928_222728.log",
+  "programmed_at": "2026-09-28T22:27:32.1135776+08:00",
+  "physical_hdmi_acceptance": "pending_observation"
+}
