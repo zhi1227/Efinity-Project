@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Oct  7 18:53:20 2026
+# Process ID: 46904
+# Current directory: D:/FPGA/Ti60_Vision6_WaveFix
+# Command line: xsim.exe -log reports/tb_h5_ui.log -mode tcl -source {xsim.dir/tb_h5_ui/xsim_script.tcl}
+# Log file: D:/FPGA/Ti60_Vision6_WaveFix/reports/tb_h5_ui.log
+# Journal file: D:/FPGA/Ti60_Vision6_WaveFix\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_h5_ui/xsim_script.tcl
+# xsim {tb_h5_ui} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS: full 720p H5 hand-lost, palm-unconfirmed, palm-ready, reverse-direction and wave-confirmed UI rasters
+$finish called at time : 46080226 ns : File "D:/FPGA/Ti60_Vision6_WaveFix/sim/tb_h5_ui.sv" Line 28
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:26 . Memory (MB): peak = 225.102 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct  7 18:53:50 2026...

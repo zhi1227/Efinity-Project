@@ -1,0 +1,448 @@
+﻿**WARNING** BY CLICKING ON THE "ACCEPT" BUTTON OR OTHERWISE ACCESSING,
+DOWNLOADING, INSTALLING OR USING THE LICENSED SOFTWARE, YOU OR THE
+ENTITY THAT YOU REPRESENT ("LICENSEE") ARE UNCONDITIONALLY CONSENTING
+TO BE BOUND BY AND ARE BECOMING A PARTY TO THE EFINIX SOFTWARE LICENSE
+AGREEMENT CONSISTING OF THIS PARAGRAPH AND THE FOLLOWING SOFTWARE
+LICENSE TERMS (THE "AGREEMENT") WITH RESPECT TO THIS LICENSED
+SOFTWARE. IF A SEPARATE WRITTEN LICENSE AGREEMENT WITH RESPECT TO THIS
+LICENSED SOFTWARE EXISTS BETWEEN LICENSEE AND EFINIX, INC. (“EFINIX”),
+THE TERMS OF THAT WRITTEN LICENSE AGREEMENT (EXCLUDING THE PRE-PRINTED
+TERMS OF ANY PURCHASE ORDER, CONFIRMATION OR SIMILAR DOCUMENT, WHICH
+WILL HAVE NO EFFECT AND WILL NOT BE CONSIDERED AGREED TO BY EFINIX)
+SHALL TAKE PRECEDENCE OVER THIS AGREEMENT, AND YOU ACKNOWLEDGE THAT
+LICENSEE IS BOUND BY THE TERMS OF THAT WRITTEN LICENSE AGREEMENT.
+PROVISION OF THE LICENSED SOFTWARE IS CONDITIONED ON, AND LICENSEE'S
+DOWNLOADING, INSTALLATION OR USE OF THIS LICENSED SOFTWARE SHALL
+CONSTITUTE, LICENSEE’S ASSENT TO THE TERMS OF THIS AGREEMENT OR OF
+SUCH EXISTING SEPARATE WRITTEN LICENSE AGREEMENT TO THE EXCLUSION OF
+ALL OTHER TERMS. IF THESE TERMS ARE CONSIDERED AN OFFER, ACCEPTANCE IS
+EXPRESSLY LIMITED TO SUCH TERMS.
+
+IF LICENSEE DOES NOT UNCONDITIONALLY AGREE TO THE FOREGOING, CLICK THE
+"CANCEL" BUTTON AND THE DOWNLOAD OR INSTALLATION PROCESS WILL NOT
+CONTINUE. IF YOU CONTINUE WITH THE DOWNLOAD OR INSTALLATON, YOU ARE
+REPRESENTING AND WARRANTING THAT YOU ARE AUTHORIZED TO BIND LICENSEE.
+
+EFINIX SOFTWARE LICENSE AGREEMENT
+TERMS AND CONDITIONS
+
+       These Terms and Conditions (“Terms”) are incorporated by
+reference and made a part of that certain Software License Agreement
+(this “Agreement”) between Efinix, Inc. (“Efinix”), a Delaware
+corporation, and the identified Licensee (“Licensee”).  Capitalized
+terms not defined herein are as defined on the cover page to this
+Agreement or applicable Order.
+
+1. Definitions.
+       1.1 "Authorization Codes" means any license key, license file, license
+            manager, dongle or other key, code or information issued by (or on
+            behalf of) Efinix that is necessary to download, install, operate 
+            and/or regulate User or Seat access to the applicable Licensed 
+            Software.
+       1.2 “Effective Date” is set forth on the applicable Order.
+       1.3 “Efinix Devices” means programmable logic devices, including field 
+           programmable gate array devices (“FPGAs”), complex programmable 
+           logic devices (“CPLDs”), SoC devices, and/or any other semiconductor
+           devices designed, developed or manufactured by or on behalf of 
+           Efinix.
+       1.4 “License Term” means the term of the license grant for the Licensed
+           Software as set forth on the applicable Order.
+       1.5 “Licensed Software” the Efinity software as defined on the 
+           applicable Order.
+       1.6 “Maintenance Period” means the period during the License Term in 
+           which Licensee is entitled to receive Updates and Upgrades, as set
+           forth on the applicable Order.
+       1.7 “Maintenance Services,” “Updates” and “Upgrades” are defined in 
+           Section 3 below.
+       1.8 "Order” means the cover page to this Agreement (if attached), a 
+           separate written authorization or order document that has been 
+           acknowledged and agreed by Efinix in writing, or an electronic 
+           order placed through Efinix’s online order and procurement page on 
+           its website, with confirmed payment.
+       1.9 "Seat" means the right granted by Efinix to Licensee to have the 
+           Licensed Software used by one User in accordance with the terms and 
+           conditions of this Agreement.  A "Seat" is either a Node-Locked Seat 
+           or a Floating Seat, which is set by the Authorization Codes:
+           (a) “Node-Locked Seat” means use of a specific machine limited to a 
+               single User.
+           (b) “Floating Seat” means concurrent use on any number of machines 
+               and by any number of Users up to the total number of authorized 
+               Seats. 
+       1.10 “Termination Date” is set forth on the applicable Order.
+       1.11 “Third Party License” is a separate file, header, or release notes 
+            that contains additional terms, conditions or restrictions imposed 
+            by third-party licensors. Third Party Licenses will be identified 
+            and relevant terms included in the Licensed Software documentation 
+            and/or appear upon activation of the Licensed Software.
+       1.12 "User" means a specific human being who is identified by Licensee 
+            as a person who is authorized to use the applicable Licensed 
+            Software on behalf of Licensee. In cases where Licensee is an 
+            individual who has obtained a Seat from Efinix for his/her 
+            individual use, Licensee and User are one and the same.
+
+2. License.
+       2.1 Licensed Software.  Subject to the terms and conditions of this 
+           Agreement, Efinix hereby grants Licensee, under Efinix’s rights in 
+           the Licensed Software, a non-transferable, non-exclusive, 
+           non-sublicensable license, within the Territory, to use the Licensed 
+           Software for the License Term solely in connection with developing, 
+           synthesizing, testing and verifying designs only for Efinix Devices.
+           The Licensed Software may only be used by up to the permitted number 
+           of Seats and Users, as set forth on the applicable Order.  If Efinix 
+           has issued to Licensee a Node-Locked Seat, the Licensee may allow 
+           the Licensed Software to be (a) installed on and accessed from only 
+           the specific machine(s) allowed by the applicable Authorization 
+           Codes, and (b) used by only one User (at a time) for each one Seat 
+           for such Licensed Software that has been issued to Licensee by 
+           Efinix.
+       2.2 Third-Party Licenses. Certain portions of the Licensed Software may 
+           originate from third-party licensors and are subject to the notices, 
+           terms and conditions of the applicable Third-Party Licenses. 
+       2.3 Restrictions:
+           (a) Licensee shall not use, distribute, reproduce, modify, create 
+               derivative works of, or allow access to the Licensed Software 
+               except as expressly authorized by this Agreement.  
+           (b) No right is granted hereunder to use the Licensed Software to 
+               program or develop designs for non-Efinix Devices.
+           (c) Except to the extent such restrictions are prohibited under 
+               applicable law, Licensee may not decompile, translate, 
+               reverse-engineer, disassemble, or otherwise reduce the Licensed 
+               Software, data files generated by the Licensed Software, and/or 
+               programmable hardware devices, transmit the Licensed Software, 
+               or make any hard-copy memory dumps of the object code. 
+           (d) Licensee may not publish or disclose the results of any 
+               benchmarking of the Licensed Software, or use such results for 
+               any other software development activities.
+           (e) Licensee shall not use the Licensed Software for a design for 
+               use in military, nuclear, chemical or biological weapons, or 
+               missile technology applications, or medical, diagnostic, 
+               therapeutic, life support or safety devices or systems, or in 
+               any other application in which the failure of such design could 
+               create a situation where personal injury or death may occur.
+
+3. Updates and Upgrades to the Licensed Software.  
+       Provided that all License Fees and Maintenance Fees due and payable 
+       under the applicable License Agreement have been paid to Efinix, Efinix 
+       will provide Updates and Upgrades to Licensee during the Maintenance 
+       Period, pursuant to the License Agreement (“Maintenance Services”).  
+       All Updates and Upgrades provided to Licensee under the License 
+       Agreement shall be deemed “Licensed Software” and subject to all of the 
+       terms and conditions of the applicable License Agreement. For purposes 
+       of this Agreement:
+       3.1 “Update” means an error correction, bug fix, patch or other 
+           correction or modification to a current version of the Licensed 
+           Software that does not otherwise add functionalities to the Licensed 
+           Software or to the relevant documentation, which Efinix in its 
+           discretion designates as such and makes generally commercially 
+           available without an additional charge.  Updates do not include any 
+           new features, functionality or components that are made available by 
+           Efinix as separate products or for additional fees; and
+       3.2 “Upgrade” means a new release of the Licensed Software that add 
+           functionalities to the Licensed Software or to the relevant 
+           documentation, which Efinix in its discretion designates as such and 
+           makes generally commercially available to Licensees without an 
+           additional charge.  Upgrades do not include any new features, 
+           functionality or components that are made available by Efinix as 
+           separate products or for additional fees. 
+ 
+4. Fees and Payment; Taxes.   
+       Within thirty (30) days after delivery of the Licensed Software or, if 
+       indicated, such other payment period indicated on the applicable Order 
+       or specified with delivery of the Authorization Codes for the Licensed 
+       Software (and annually thereafter with respect to recurring, use or User 
+       fees) or, if applicable, the date(s) otherwise expressly agreed by 
+       Efinix, Licensee shall pay Efinix Efinix’s then current standard license 
+       fees for any authorized Seats, Users or other uses of the Licensed 
+       Software or such other fees as have been expressly agreed to by Efinix 
+       (“License Fees”); in the case of annual or monthly License Fees, License 
+       Fees therefor will be paid annually in advance.  Additional licenses for 
+       additional Seats or Sites may be ordered by Licensee by submitting a 
+       written order consistent with the current prices quoted by Efinix.  If 
+       Maintenance Services are ordered by Licensee, at the same time as 
+       payment of the initial License Fees, and annually in advance thereafter 
+       if Maintenance Services are renewed, Licensee shall also pay Efinix’s 
+       then current Maintenance fees for Licensed Software or such other fees 
+       as have been expressly agreed to by Efinix (“Maintenance Fees”).  
+       Without limiting Efinix’s remedies, if Licensee makes or uses copies, or 
+       has Seats/Users/uses, that are not authorized hereunder, it will so 
+       report to Efinix and will pay additional license and maintenance fees 
+       equal to Efinix’s then current standard fees for the license and 
+       maintenance of such extra copies and Seats/Users/uses (from time to time 
+       upon request, Efinix will be entitled to audit or have audited all 
+       systems and records relevant to assure compliance with the foregoing; 
+       any audit showing noncompliance will be at Licensee’s expense).  All 
+       payments shall be made in the currency of, and within the borders of 
+       the United States. Any payments more than thirty (30) days overdue will 
+       bear a late payment fee of 1.5% per month, or, if lower, the maximum 
+       rate allowed by law.  In addition, Licensee will pay all taxes, 
+       shipping, duties, withholdings, backup withholding and the like; when 
+       Efinix has the legal obligation to pay or collect such taxes, the 
+       appropriate amount shall be paid by Licensee directly to Efinix.  
+       Licensee will reimburse Efinix for all reasonable travel and other 
+       related expenses incurred by Efinix in its performance hereunder; 
+       provided, however, that such expenses shall have been pre-approved by 
+       Licensee. 
+
+5. Export Control.  
+       Licensee shall not, directly or indirectly, export, re-export or 
+       transship the Licensed Software in violation of any applicable export 
+       control laws and regulations of any country having jurisdiction over 
+       the Licensed Software or parties to this Agreement (“Export Laws”), 
+       including without limitation, the U.S. Export Administration 
+       Regulations, the Enhanced Proliferation Control Initiative (EPCI) 
+       Regulations, the Foreign Asset Control Regulations, the import and 
+       export restrictions of the various European, Middle Eastern and/or 
+       African countries and any economic sanctions imposed by the United 
+       States Government upon any foreign country.  Licensee agrees, at 
+       Licensee’s own expense, to comply with all applicable Export Laws and 
+       will, in accordance with the indemnification provisions of this 
+       Agreement, indemnify, defend and hold Efinix and its third-party 
+       vendors harmless from any claim against Efinix or its third-party 
+       vendors due to Licensee’s violation or alleged violation of the Export Laws.
+
+6. WARRANTY DISCLAIMER.  
+       THE LICENSED SOFTWARE AND ANY RELATED MATERIALS ARE PROVIDED “AS IS” 
+       AND EFINIX MAKES NO WARRANTIES, EXPRESS OR IMPLIED WITH RESPECT 
+       THERETO, AND EXPRESSLY DISCLAIMS ANY IMPLIED WARRANTIES, INCLUDING, 
+       WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, 
+       NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.  SOME STATES DO 
+       NOT ALLOW EXCLUSIONS OF AN IMPLIED WARRANTY, SO THIS DISCLAIMER MAY NOT 
+       APPLY TO LICENSEE.
+
+7. LIMITATION OF LIABILITY.  
+       NOTWITHSTANDING ANYTHING TO THE CONTRARY, EXCEPT FOR BODILY INJURY, 
+       EFINIX SHALL NOT BE LIABLE WITH RESPECT TO ANY SUBJECT MATTER OF THIS 
+       AGREEMENT UNDER TORT, CONTRACT, STRICT LIABILITY OR ANY OTHER LEGAL OR 
+       EQUITABLE THEORY (I) FOR ANY INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY 
+       OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT 
+       LIMITATION, DAMAGES FOR LOSS OF GOODWILL, DATA OR PROFIT, WORK 
+       STOPPAGE, OR COMPUTER FAILURE OR MALFUNCTION, OR IN ANY EVENT (II) FOR 
+       ANY AMOUNT IN EXCESS, IN THE AGGREGATE, OF THE FEE PAID BY LICENSEE TO 
+       EFINIX HEREUNDER (OR, IF THE FEE HAS BEEN WAIVED, $100), EVEN IF EFINIX 
+       SHALL HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGES.  SOME 
+       STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR 
+       CONSEQUENTIAL DAMAGES, SO THIS LIMITATION AND EXCLUSION MAY NOT APPLY 
+       TO LICENSEE.
+
+8. Proprietary Rights.  
+       Licensee acknowledges and agrees that Licensee has no proprietary 
+       rights in the Licensed Software or in any other materials received from 
+       Efinix, and does not acquire any proprietary rights by virtue of this 
+       Agreement, except those contractual rights that are expressly granted 
+       herein. 
+
+9. Indemnification. 
+       Licensee shall defend, indemnify and hold harmless Efinix and its 
+       affiliates and their respective directors, officers, employees, and 
+       agents (collectively, “Indemnified Parties”) from and against any and 
+       all claims, actions, liabilities, losses, damages and expenses, 
+       including reasonable attorneys’ fees, incurred by Efinix in 
+       investigating and/or defending against any claims, actions or 
+       liabilities arising out of or in connection with (a) a claim that a 
+       design or other product created by Licensee violates any applicable 
+       laws or regulations or infringes the rights of any third party, 
+       including, without limitation, rights arising under patent, trademark, 
+       copyright or trade secret law (except to the extent such claim relates 
+       to the Licensed Software); (b) the failure of Licensee to comply with 
+       all applicable laws, rules, and/or regulations; or (c)  any warranties 
+       granted by Licensee, or any implied warranties claimed by any of 
+       Licensee’s purchasers or end-users. Any settlement that requires the 
+       payment of monies or other actions by Efinix or that affects Efinix’s 
+       rights shall require Efinix’s prior written consent.  
+
+10. Confidential Information.   
+       Licensee agrees that the Licensed Software and any information relating 
+       to Efinix or its products or business (collectively “Confidential 
+       Information”) are highly proprietary to Efinix.  Licensee agrees to 
+       keep the Confidential Information confidential and not to use it or 
+       disclose it to any third party, except as expressly authorized herein. 
+       Licensee’s agents, contractors and employees may access the 
+       Confidential Information on a need-to-know basis, to the extent 
+       necessary for Licensee’s authorized use of the Licensed Software and 
+       provided such agents, contractors and employees are bound in writing to 
+       the obligations and restrictions of this Section 10 and Section 2.3 (f) 
+       herein.  Licensee agrees that it will not alter, remove or obfuscate 
+       any proprietary markings or labels that may appear on the Licensed 
+       Software, its packaging, documentation or other related materials.  
+       Licensee shall be liable for any unauthorized disclosure by its agents, 
+       contractors or employees. Licensee agrees that any violation of this 
+       Section 10 could cause Efinix irreparable harm for which Efinix would 
+       have no adequate remedy at law and in the event of such violation, 
+       Efinix shall be entitled to preliminary and other injunctive relief, in 
+       addition to and not in lieu of any other remedies to which it may be 
+       entitled in equity or at law.  Upon termination or expiration of this 
+       Agreement for any reason, Licensee shall promptly return to Licensee or 
+       destroy (and so certify to Licensee) all Confidential Information then 
+       in its possession or control.
+
+11. Term and Termination.
+       11.1 Term.  Unless earlier terminated as provided below, this Agreement 
+            shall have a term extending from the Effective Date until the 
+            Termination Date, as determined by the License Term and the scope 
+            of access set by the Authorization Codes.  Upon expiration of the 
+            License Term or earlier termination as set forth below, Licensee’s 
+            access to the Licensed Software will automatically be disabled and 
+            Licensee may no longer be able to, and shall not attempt to, use 
+            the Licensed Software. 
+       11.2 Termination.  This Agreement will terminate:
+            (a) By Efinix immediately and without notice if Licensee breaches 
+                any provision of or obligation under this Agreement
+            (b) By Licensee at any time upon Licensee’s ceasing all use of and 
+                destroying the Licensed Software and all copies thereof, with 
+                notice thereof to Efinix;
+            (c) Upon written notice, effective immediately, if Licensee 
+                becomes insolvent or is placed in receivership or upon the 
+                commencement by or against Licensee of  bankruptcy proceedings 
+                or any other proceedings for the settlement of Licensee’s 
+                debts, or if Licensee makes an assignment for the benefit of 
+                creditors, or commences of any act or action concerning  
+                Licensee’s dissolution or liquidation.  
+       11.3 Liability and Other Remedies.  Neither party will be liable for 
+            damages of any kind as a result of exercising its right to 
+            terminate this Agreement according to its terms, and termination 
+            will not affect any other right or remedy of either party.
+       11.4 Effect of Termination; Survival.  Upon termination of this 
+            Agreement for any reason, all licenses to the Licensed Software 
+            shall terminate and Licensee must destroy the Licensed Software 
+            and all copies thereof.  The provisions of Sections 2.3 through 13 
+            shall survive any termination or expiration of this Agreement.  
+
+12. Arbitration.
+       12.1 Agreement to Arbitrate.  The parties agree that any and all 
+            disputes or controversies of any nature between them arising at 
+            any time shall be determined by binding arbitration in accordance 
+            with the Commercial Arbitration Rules of the AAA before a single 
+            neutral arbitrator (“Arbitrator”) in the State of California, 
+            county of Santa Clara.  The Arbitrator shall be mutually agreed 
+            upon by the parties; if the parties are unable to agree on an 
+            Arbitrator, the Arbitrator shall be appointed by the AAA.  The 
+            Arbitrator shall determine how all expenses relating to the 
+            arbitration shall be paid, including without limitation, the 
+            respective expenses of each party, the fees of the arbitrator and 
+            the administrative fee of the American Arbitration Association.  
+            Any final outcome of such arbitration shall be final and binding 
+            as to all matters of substance and procedure, and may be enforced 
+            by a petition to any court of competent jurisdiction, for 
+            confirmation and enforcement of the award.  In addition, either 
+            party may seek equitable, non-monetary relief at any time in any 
+            court of competent jurisdiction without thereby waiving its right 
+            to arbitration of any dispute or controversy.  All proceedings 
+            shall, to the extent permitted by law, be closed to the public and 
+            confidential and all records relating thereto shall be permanently 
+            sealed, except as necessary to obtain court confirmation of the 
+            arbitration award.
+
+13. General Provisions.
+       13.1 Assignment. Licensee may not assign any rights or delegate any 
+            duties under this Agreement without the prior written consent of 
+            Efinix, and any attempt to do so without that consent will be 
+            void.  This Agreement will bind and inure to the benefit of the 
+            parties and their respective successors and permitted assigns.
+       13.2 Choice of Law.  This Agreement will be governed by and construed 
+            according to the laws of the State of California, regardless of 
+            the laws that might otherwise govern under applicable principles 
+            of conflicts of laws thereof.  The parties agree that the United 
+            Nations Convention on Contracts for the International Sale of 
+            Goods (1980) is specifically excluded from application to this 
+            Agreement. 
+       13.3 Amendment; Waiver.  This Agreement may be amended or supplemented 
+            only by a writing that refers explicitly to this Agreement and 
+            that is signed on behalf of both parties. No term or provision 
+            hereof will be considered waived by either party, and no breach 
+            excused by either party, unless such waiver or consent is in 
+            writing signed on behalf of the party against whom the waiver is 
+            asserted.  No consent by either party to, or waiver of, a breach 
+            by either party, whether express or implied, will constitute a 
+            consent to, waiver of, or excuse of any other, different, or 
+            subsequent breach by either party.
+       13.4 Entire Agreement.  This Agreement, including the applicable 
+            Order(s) and all Exhibits to this Agreement, which are hereby 
+            incorporated by reference, represents the entire agreement between 
+            the parties relating to its subject matter and supersedes all 
+            prior representations, discussions, negotiations and agreements, 
+            whether written or oral.
+       13.5 Notices.  All notices, reports, requests, approvals and other 
+            communications required or permitted under this Agreement must be 
+            in writing.  They will be deemed given when required if: 
+            (a) delivered personally, (b) sent by confirmed email, (c) sent by 
+            commercial overnight courier with written verification of receipt, 
+            (d) sent by registered or certified mail, return receipt 
+            requested, postage prepaid; or (e) except with respect to any 
+            notice of breach or termination under this Agreement, by confirmed 
+            email.  All communications must be sent to the receiving party’s 
+            address set forth in the introduction to this Agreement or to such 
+            other address that the receiving party may have provided for 
+            purpose of notice in a manner provided in this Section.  Notice by 
+            mail shall be effective on the date it is officially recorded as 
+            delivered to the intended recipient by return receipt or 
+            equivalent.  All notices and other communication required or 
+            contemplated by this Agreement delivered in person or sent by 
+            confirmed email shall be deemed to have been delivered to and 
+            received by the addressee and shall be effective on the date of 
+            personal delivery (in the case of subsection (a) above) or on the 
+            date sent (in the case of subsections (b)-(d) above), or in the 
+            case of email, on the date the recipient confirms receipt of such 
+            email.  Notice not given in writing shall be effective only if 
+            acknowledged in writing by a duly authorized representative of the 
+            party to whom it was given.
+       13.6 Government Users.  This Section shall only apply to the US 
+            Government, to any US Government agency, entity, or branch, to any 
+            quasi-US Government entity, and to any US Government subcontractor 
+            at any tier (collectively, “US Government”) as Licensee.  The 
+            Licensed Software was created at private expense, is commercial as 
+            defined in Federal Acquisition Regulation (“FAR”) 2.101, and are 
+            provided with no rights conferred to the US Government except as 
+            expressly stated in this Agreement.  If the Licensee is the US 
+            Government, then, the use, duplication, reproduction, release, 
+            modification, disclosure or transfer of the Licensed Software, or 
+            any related Efinix intellectual property of any kind, including 
+            any documentation, technical data, specifications, and manuals, is 
+            restricted by the terms, conditions and restrictions contained in 
+            this  Agreement or in a license agreement, in accordance with FAR 
+            12.212 for civilian purposes and Defense Federal Acquisition 
+            Regulation Supplement (DFARS) 227.7202 for military purposes, if 
+            applicable, or any related, applicable FAR, DFARS, or US 
+            Government agency regulation part, subpart, paragraph, clause or 
+            Code of Federal Regulation similarly restricting such use.  In any 
+            event, under any and all circumstances, the US Government agrees 
+            that it shall only have the right to use the Licensed Software in 
+            accordance with the terms, conditions, and restrictions contained 
+            in this Agreement or as contained in a related license agreement 
+            referenced in, or attached to, this Agreement, or referenced in an 
+            exhibit to it. All other use is prohibited.  The US Government 
+            will only use the Licensed Software for US Government purposes.  
+            Licensed Software shall be deemed irrevocably accepted by the US 
+            Government upon delivery by Efinix, in any form consistent with 
+            the terms of this Agreement, and acceptance by the US Government 
+            in accordance with standard and usual US Government practices for 
+            commercial services and products.
+       13.7 Relationship of Parties.  The parties to this Agreement are 
+            independent contractors.  There is no relationship of agency, 
+            partnership, joint venture, employment or franchise between the 
+            parties.  Neither party has the authority to bind the other or to 
+            incur any obligation on its behalf. Licensee will not represent or 
+            imply that it is Efinix, an agent of Efinix, or a part of Efinix. 
+       13.8 Force Majeure.  No liability shall be incurred by either party by 
+            reason of non-performance or delay in performance of any 
+            obligation (except for non-payment by Licensee) caused by Force 
+            Majeure, at least for the duration of the Force Majeure; provided 
+            however that the affected party shall notify the other party of 
+            the existence thereof and the effect upon its ability to perform 
+            its obligations.  As used herein, the term “Force Majeure” shall 
+            mean and include, without limitation, any act of God, industry 
+            wide strikes, explosion, fire, flood, war and other hostilities, 
+            acts of terrorism, civil unrest, governmental acts, regulations, 
+            or orders, inadequate supply of raw materials, components, labor 
+            or energy, or any other circumstance of a similar nature beyond 
+            the reasonable control of the affected party.
+       13.9 Severability.  If any part of this Agreement is found invalid or 
+            unenforceable, such part will be amended to achieve as nearly as 
+            possible the same economic effect as the original provision and 
+            the remainder of this Agreement will remain in full force.
+       13.10 Counterparts.  This Agreement may be executed simultaneously in 
+             two or more counterparts, each of which shall be deemed an 
+             original, but all of which together shall constitute one and the 
+             same instrument.
+
+-END OF SOFTWARE LICENSE TERMS AND CONDITIONS-
+

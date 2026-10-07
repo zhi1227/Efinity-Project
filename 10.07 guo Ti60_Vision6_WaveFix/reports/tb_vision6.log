@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Oct  7 18:47:43 2026
+# Process ID: 4348
+# Current directory: D:/FPGA/Ti60_Vision6_WaveFix
+# Command line: xsim.exe -log reports/tb_vision6.log -mode tcl -source {xsim.dir/tb_vision6/xsim_script.tcl}
+# Log file: D:/FPGA/Ti60_Vision6_WaveFix/reports/tb_vision6.log
+# Journal file: D:/FPGA/Ti60_Vision6_WaveFix\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_vision6/xsim_script.tcl
+# xsim {tb_vision6} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS: 720p frame 0 mode 0 pure_en=0 pixels=921600 nonzero=885600 changed=0
+PASS: 720p frame 1 mode 1 pure_en=0 pixels=921600 nonzero=6923 changed=885281
+PASS: 720p frame 2 mode 10 pure_en=0 pixels=921600 nonzero=886356 changed=12996
+PASS: 720p frame 3 mode 9 pure_en=0 pixels=921600 nonzero=14112 changed=886356
+PASS: 720p frame 4 mode 14 pure_en=0 pixels=921600 nonzero=464997 changed=424758
+PASS: 720p frame 5 mode 15 pure_en=0 pixels=921600 nonzero=885600 changed=81496
+PASS: 720p frame 6 mode 15 pure_en=1 pixels=921600 nonzero=885600 changed=0
+PASS: six modes, full raster, same-image split, pure_en capture and unknown idle
+$finish called at time : 86625126 ns : File "D:/FPGA/Ti60_Vision6_WaveFix/sim/tb_vision6.sv" Line 63
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:05:27 . Memory (MB): peak = 224.113 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct  7 18:53:15 2026...
