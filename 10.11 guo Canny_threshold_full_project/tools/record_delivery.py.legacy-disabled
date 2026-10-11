@@ -1,0 +1,75 @@
+from pathlib import Path
+from PIL import Image,ImageDraw,ImageFont
+import json,re,hashlib,datetime
+P=Path(__file__).resolve().parents[1]
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+place=(P/'outflow/Ti60_Demo.place.rpt').read_text()
+res={}
+for label,key in [('XLRs','xlr'),('Memory Blocks','ram_blocks'),('DSP Blocks','dsp'),('Global Clocks \\(GBUF\\)','global_clocks')]:
+    m=re.search(r'^'+label+r':\s*(\d+) / (\d+)',place,re.M)
+    assert m,label
+    res[key]={'used':int(m[1]),'available':int(m[2])}
+    assert int(m[1])<=int(m[2])
+assert res['xlr']['used']<60000
+peri=(P/'Ti60_Demo.peri.xml').read_text()
+res['pll']={'used':len(re.findall(r'<efxpt:pll ',peri)),'available':4}
+assert res['pll']['used']<=4
+timing=(P/'outflow/Ti60_Demo.timing.rpt').read_text()
+def slacks(part):
+    return [float(m[1]) for m in re.finditer(r'^\s*\S+\s+\S+\s+-?\d+\.\d+\s+(-?\d+\.\d+)\s+\(',part,re.M)]
+a=timing.split('Setup (Max) Clock Relationship',1)[1].split('Hold (Min) Clock Relationship')
+setup=slacks(a[0]);hold=slacks(a[1].split('NOTE:')[0]);assert setup and hold
+assert min(setup)>=0 and min(hold)>=0
+tests={}
+for name,marker,count in [('tb_menu_controls','PASS: six-mode',1),('tb_menu','PASS: mode ',6),
+                          ('tb_menu_cdc','PASS: CDC',1),('tb_menu_render','PASS: final-font',6),
+                          ('tb_menu_commit','PASS: real HDMI',1)]:
+    data=(P/f'reports/{name}.log').read_text(errors='replace')
+    assert data.count(marker)>=count,name
+    assert not re.search('Fatal:|Error:',data),name
+    tests[name]={'status':'PASS','log_sha256':sha(P/f'reports/{name}.log')}
+accents=[(88,216,232),(130,181,255),(184,160,255),(101,219,171),(255,173,114),(250,147,195)]
+sheet=Image.new('RGB',(1536,688),(7,16,31));d=ImageDraw.Draw(sheet)
+f=ImageFont.truetype('C:/Windows/Fonts/msyh.ttc',18)
+names=['01 原始彩色 · M00','02 Canny边缘 · M01','03 边缘与候选框 · M03','04 灰度/Sobel对照 · M05','05 彩色边缘叠加 · M10','06 圆形/矩形识别 · M12']
+for i in range(6):
+    im=Image.open(P/f'reports/menu_{i}.ppm').convert('RGB');assert im.size==(1024,600)
+    assert im.getpixel((49+156*i,180))==accents[i],('wrong selected card',i)
+    for j in range(6):
+        if i!=j:assert im.getpixel((49+156*j,180))==(23,40,62),('unexpected selected card',i,j)
+    assert im.getpixel((850,40))==((92,67,40) if i==5 else (27,75,73)),('LIVE/HOLD badge',i)
+    im.save(P/f'reports/menu_{i}.png')
+    xx=(i%3)*512;yy=(i//3)*344
+    sheet.paste(im.resize((512,300)),(xx,yy+40))
+    d.text((xx+16,yy+14),names[i],font=f,fill='white')
+sheet.save(P/'reports/six_modes.png')
+original=json.loads((P/'reports/source_baseline.json').read_text())
+changed=[n for n,h in original['files'].items() if sha(Path(original['base'])/n)!=h]
+assert not changed,changed
+main=(P/'example_top.v').read_text()
+assert 'face_overrun,freeze_pixel,mode_committed,frozen_committed);' in main
+assert '.src_status({frozen_committed,mode_committed})' in main
+delivery={
+ 'created':datetime.datetime.now().isoformat(timespec='seconds'),
+ 'status':'BUILT_AND_SIMULATED','project':str(P/'Ti60_Demo.xml'),
+ 'hardware_status':'NOT_PROGRAMMED; USER_BOARD_ACCEPTANCE_PENDING',
+ 'mode_ids':[0,1,3,5,10,12],'default_mode':3,
+ 'resources':res,'minimum_setup_slack_ns':min(setup),'minimum_hold_slack_ns':min(hold),
+ 'lcd_timing':{'active':[1024,600],'total':[1344,635],'pixel_hz':48000000,'design_refresh_hz':48000000/1344/635},
+ 'bit_sha256':sha(P/'outflow/Ti60_Demo.bit'),'tests':tests,
+ 'test_scope':'Full CPU/six-frame integration test, then font-only reduction and all six final-font rasters. Algorithm implementation is unchanged; HDL compile includes the whole board design.',
+ 'original_files_verified_unchanged':len(original['files']),
+ 'font':json.loads((P/'reports/font.json').read_text(encoding='utf-8')),
+ 'known_limits':['15 RAM blocks remain; four PLLs are allocated.',
+ 'No physical camera/LCD/HDMI acceptance performed in this task.',
+ 'Existing Canny/skin/shape algorithm limits remain as in the source project.']}
+(P/'reports/delivery.json').write_text(json.dumps(delivery,ensure_ascii=False,indent=2),encoding='utf-8')
+files={}
+for folder in ['src','rtl','vendor','firmware','tools','sim','ip']:
+    for p in (P/folder).rglob('*'):
+        if p.is_file():files[p.relative_to(P).as_posix()]=sha(p)
+for p in P.iterdir():
+    if p.is_file() and p.suffix in ['.v','.xml','.sdc','.hex','.bin','.md']:files[p.name]=sha(p)
+files['outflow/Ti60_Demo.bit']=sha(P/'outflow/Ti60_Demo.bit')
+(P/'reports/final_manifest.json').write_text(json.dumps(files,indent=2),encoding='utf-8')
+print(json.dumps({k:v for k,v in delivery.items() if k not in ['font','tests']},ensure_ascii=False,indent=2))

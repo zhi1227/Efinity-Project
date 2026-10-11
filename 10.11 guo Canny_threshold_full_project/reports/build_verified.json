@@ -1,0 +1,25 @@
+{
+  "resources": {
+    "XLRs": {
+      "used": 36054,
+      "available": 60800
+    },
+    "Memory Blocks": {
+      "used": 248,
+      "available": 256
+    },
+    "DSP Blocks": {
+      "used": 37,
+      "available": 160
+    },
+    "Global Clocks (GBUF)": {
+      "used": 14,
+      "available": 32
+    }
+  },
+  "min_setup_slack_ns": 0.302,
+  "min_hold_slack_ns": 0.026,
+  "bit_sha256": "809fd251efe5dcbcd3482d1b6fc2ff8902497e64b18fd6de13ebbab97af723d2",
+  "hex_sha256": "e9b38d4c99abddcd8e3924bac2dc1dca60aa6431369b507b44259db198407516",
+  "physical_board_test": "not performed; user must confirm camera video and diagnostic lights"
+}

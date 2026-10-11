@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Oct  9 20:44:24 2026
+# Process ID: 30512
+# Current directory: C:/Users/Aqi'Glow/Documents/Codex/2026-10-09/d-gitku-efinity-project-main-efinity/work/threshold-project
+# Command line: xsim.exe -log reports/tb_threshold_commit.log -mode tcl -source {xsim.dir/tb_threshold_commit/xsim_script.tcl}
+# Log file: C:/Users/Aqi'Glow/Documents/Codex/2026-10-09/d-gitku-efinity-project-main-efinity/work/threshold-project/reports/tb_threshold_commit.log
+# Journal file: C:/Users/Aqi'Glow/Documents/Codex/2026-10-09/d-gitku-efinity-project-main-efinity/work/threshold-project\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_threshold_commit/xsim_script.tcl
+# xsim {tb_threshold_commit} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS: frame-atomic thresholds reach Canny; HDMI status, 26-bit CDC and LCD frame snapshot converge without tearing
+$finish called at time : 12061098 ns : File "C:/Users/Aqi'Glow/Documents/Codex/2026-10-09/d-gitku-efinity-project-main-efinity/work/threshold-project/sim/tb_threshold_commit.sv" Line 30
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:43 . Memory (MB): peak = 224.109 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Oct  9 20:45:11 2026...

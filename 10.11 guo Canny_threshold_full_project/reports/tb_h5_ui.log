@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Oct  9 20:55:48 2026
+# Process ID: 15260
+# Current directory: C:/Users/Aqi'Glow/Documents/Codex/2026-10-09/d-gitku-efinity-project-main-efinity/work/threshold-project
+# Command line: xsim.exe -log reports/tb_h5_ui.log -mode tcl -source {xsim.dir/tb_h5_ui/xsim_script.tcl}
+# Log file: C:/Users/Aqi'Glow/Documents/Codex/2026-10-09/d-gitku-efinity-project-main-efinity/work/threshold-project/reports/tb_h5_ui.log
+# Journal file: C:/Users/Aqi'Glow/Documents/Codex/2026-10-09/d-gitku-efinity-project-main-efinity/work/threshold-project\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_h5_ui/xsim_script.tcl
+# xsim {tb_h5_ui} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS: full 720p H5 hand-lost, palm-unconfirmed, palm-ready, reverse-direction and wave-confirmed UI rasters
+$finish called at time : 46080226 ns : File "C:/Users/Aqi'Glow/Documents/Codex/2026-10-09/d-gitku-efinity-project-main-efinity/work/threshold-project/sim/tb_h5_ui.sv" Line 28
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:55 . Memory (MB): peak = 225.082 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Oct  9 20:56:46 2026...
