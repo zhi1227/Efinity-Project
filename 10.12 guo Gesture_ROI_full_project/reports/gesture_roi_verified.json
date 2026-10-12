@@ -1,0 +1,53 @@
+{
+  "project": "C:\\Users\\Aqi'Glow\\Documents\\Codex\\2026-10-09\\d-gitku-efinity-project-main-efinity\\work\\Gesture_ROI_full_project",
+  "design_and_ip_sources": 74,
+  "ip_settings": 14,
+  "sdc_files": 1,
+  "checked_files": 144,
+  "missing_files": [],
+  "checked_at": "2026-10-11T11:21:21.106193+08:00",
+  "roi_before": [
+    160,
+    60,
+    960,
+    660
+  ],
+  "roi_after": [
+    40,
+    40,
+    1000,
+    680
+  ],
+  "simulation": {
+    "tb_gesture_roi": "PASS",
+    "tb_h4_overlay": "PASS",
+    "tb_h5_raster": "PASS",
+    "tb_h5_ui": "PASS",
+    "tb_threshold_ui": "PASS"
+  },
+  "build": {
+    "resources": {
+      "XLRs": {
+        "used": 36064,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 248,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 37,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.302,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "d16e296646dd04e16008de118decfd8f02eb772b79da50a51ef970418be04e70",
+    "hex_sha256": "df480ca7c35a99df2a3b3fb7e786ef936d50b6d32a13891a5de18e2156ea0b2e",
+    "physical_board_test": "not performed; user must confirm camera video and diagnostic lights"
+  }
+}

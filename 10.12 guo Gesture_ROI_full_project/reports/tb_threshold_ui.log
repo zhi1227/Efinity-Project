@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Oct 11 11:18:29 2026
+# Process ID: 33400
+# Current directory: C:/Users/Aqi'Glow/Documents/Codex/2026-10-09/d-gitku-efinity-project-main-efinity/work/gesture-roi-project
+# Command line: xsim.exe -log reports/tb_threshold_ui.log -mode tcl -source {xsim.dir/tb_threshold_ui/xsim_script.tcl}
+# Log file: C:/Users/Aqi'Glow/Documents/Codex/2026-10-09/d-gitku-efinity-project-main-efinity/work/gesture-roi-project/reports/tb_threshold_ui.log
+# Journal file: C:/Users/Aqi'Glow/Documents/Codex/2026-10-09/d-gitku-efinity-project-main-efinity/work/gesture-roi-project\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_threshold_ui/xsim_script.tcl
+# xsim {tb_threshold_ui} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS: all 4096 decimal values; six full LCD/HDMI rasters; idle/low/high selection; pure capture editor access; unchanged pixel counts
+$finish called at time : 46162260 ns : File "C:/Users/Aqi'Glow/Documents/Codex/2026-10-09/d-gitku-efinity-project-main-efinity/work/gesture-roi-project/sim/tb_threshold_ui.sv" Line 48
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:04 . Memory (MB): peak = 225.082 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 11:20:37 2026...
