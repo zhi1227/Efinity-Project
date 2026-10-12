@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Oct  7 18:46:42 2026
+# Process ID: 28664
+# Current directory: D:/FPGA/Ti60_Vision6_WaveFix
+# Command line: xsim.exe -log reports/tb_h4_templates.log -mode tcl -source {xsim.dir/tb_h4_templates/xsim_script.tcl}
+# Log file: D:/FPGA/Ti60_Vision6_WaveFix/reports/tb_h4_templates.log
+# Journal file: D:/FPGA/Ti60_Vision6_WaveFix\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_h4_templates/xsim_script.tcl
+# xsim {tb_h4_templates} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS: personalized three-class enrollment, sparse noise/translation tolerance, unknown/solid/invalid rejection, ambiguity and freeze persistence
+$finish called at time : 59150 ns : File "D:/FPGA/Ti60_Vision6_WaveFix/sim/tb_h4_templates.sv" Line 35
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct  7 18:46:47 2026...

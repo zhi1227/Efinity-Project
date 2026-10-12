@@ -1,0 +1,12 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_vision8_fifo -s tb_vision8_fifo --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.vision8_fifo(AB=4)
+Compiling module work.tb_vision8_fifo
+Built simulation snapshot tb_vision8_fifo

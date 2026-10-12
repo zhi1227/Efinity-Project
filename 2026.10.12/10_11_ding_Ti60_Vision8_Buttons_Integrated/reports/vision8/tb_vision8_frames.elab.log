@@ -1,0 +1,14 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_vision8_frames -s tb_vision8_frames --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 3 for port 'column' [D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_frames.v:79]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.vision8_ascii
+Compiling module work.vision8_frames(WIDTH=64,HEIGHT=4...
+Compiling module work.tb_vision8_frames
+Built simulation snapshot tb_vision8_frames

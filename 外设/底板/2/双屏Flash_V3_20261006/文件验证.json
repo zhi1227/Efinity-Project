@@ -1,0 +1,23 @@
+{
+  "original_backup_sha256": "130f28dc97615cbb0e16c5ed6eddb3b1deddce6c62cc8d8120fa55bf85b44e5c",
+  "modified_project_sha256": "d9cd897eb3455eb991b17cedb7a8ce0d1189e81dd7bcc38315bcca6e7fd78242",
+  "database_integrity": "ok",
+  "history_decode_roundtrip": "passed",
+  "project_uuid": "34a78b5f14f94019887d4d632016772cf721898ba8de4567ad4d1f1299345df6",
+  "branch_uuid": "fba55e83b3894b8c8c4c8157cb6f90a4",
+  "edited_documents": 15,
+  "native_copper_rebuild": "pending",
+  "native_drc": "pending",
+  "original_current_sha256": "481ca83342fc2d2b357910e66f01274834d9c1edcc995638d7ef0d6ddb513416",
+  "original_has_independent_later_changes": true,
+  "later_change_records": 302,
+  "latest_original_snapshot": "原工程后续版本快照_未合并.eprj2",
+  "new_static_clearance_issues": 0,
+  "new_schematic_pcb_mapping_changes": 0,
+  "original_io26_io27_io28_preserved_in_copy": true,
+  "c3_c4_placement_layers_preserved_in_copy": true,
+  "user_merge_choice": "preserve_current_independent_copy",
+  "native_open_and_save": "pending",
+  "native_erc_netlist_verification": "pending",
+  "manufacturing_output": "not_generated_pending_native_acceptance"
+}

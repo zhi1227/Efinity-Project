@@ -1,0 +1,87 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x00000000f9000000 0x0000000000008000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD C:\Users\Aqi'Glow\AppData\Local\Temp\ccqoJzC7.o
+LOAD C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+
+.text           0x00000000f9000000       0x70
+ *(.text.start)
+ .text.start    0x00000000f9000000       0x40 C:\Users\Aqi'Glow\AppData\Local\Temp\ccqoJzC7.o
+                0x00000000f9000000                _start
+ *(.text*)
+ .text          0x00000000f9000040        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccqoJzC7.o
+ .text          0x00000000f9000040        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+ .text.startup  0x00000000f9000040       0x30 C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+                0x00000000f9000040                main
+
+.rela.dyn       0x00000000f9000070        0x0
+ .rela.text.start
+                0x00000000f9000070        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccqoJzC7.o
+
+.rodata
+ *(.rodata*)
+ *(.srodata*)
+
+.data           0x00000000f9000070        0x0
+                0x00000000f9000070                . = ALIGN (0x4)
+                0x00000000f9000870                __global_pointer$ = (. + 0x800)
+ *(.data*)
+ .data          0x00000000f9000070        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccqoJzC7.o
+ .data          0x00000000f9000070        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+ *(.sdata*)
+
+.bss            0x00000000f9000070        0x0
+                0x00000000f9000070                . = ALIGN (0x4)
+                0x00000000f9000070                _bss_start = .
+ *(.bss*)
+ .bss           0x00000000f9000070        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccqoJzC7.o
+ .bss           0x00000000f9000070        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+ *(.sbss*)
+ *(COMMON)
+                0x00000000f9000070                . = ALIGN (0x4)
+                0x00000000f9000070                _bss_end = .
+                0x00000000f9008000                _stack_top = (ORIGIN (RAM) + LENGTH (RAM))
+                0x0000000000000001                ASSERT ((_bss_end <= (_stack_top - 0x800)), Firmware leaves less than 2 KiB stack)
+OUTPUT(firmware/build/menu.elf elf32-littleriscv)
+
+.debug_line     0x0000000000000000      0x211
+ .debug_line    0x0000000000000000       0x81 C:\Users\Aqi'Glow\AppData\Local\Temp\ccqoJzC7.o
+ .debug_line    0x0000000000000081      0x190 C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+
+.debug_info     0x0000000000000000       0xe5
+ .debug_info    0x0000000000000000       0x26 C:\Users\Aqi'Glow\AppData\Local\Temp\ccqoJzC7.o
+ .debug_info    0x0000000000000026       0xbf C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+
+.debug_abbrev   0x0000000000000000       0x92
+ .debug_abbrev  0x0000000000000000       0x14 C:\Users\Aqi'Glow\AppData\Local\Temp\ccqoJzC7.o
+ .debug_abbrev  0x0000000000000014       0x7e C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+
+.debug_aranges  0x0000000000000000       0x40
+ .debug_aranges
+                0x0000000000000000       0x20 C:\Users\Aqi'Glow\AppData\Local\Temp\ccqoJzC7.o
+ .debug_aranges
+                0x0000000000000020       0x20 C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+
+.debug_str      0x0000000000000000      0x116
+ .debug_str     0x0000000000000000       0x36 C:\Users\Aqi'Glow\AppData\Local\Temp\ccqoJzC7.o
+ .debug_str     0x0000000000000036       0xe0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+                                        0x136 (size before relaxing)
+
+.debug_loc      0x0000000000000000       0x20
+ .debug_loc     0x0000000000000000       0x20 C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+
+.debug_ranges   0x0000000000000000       0x30
+ .debug_ranges  0x0000000000000000       0x30 C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+
+.comment        0x0000000000000000       0x33
+ .comment       0x0000000000000000       0x33 C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o
+                                         0x34 (size before relaxing)
+
+.debug_frame    0x0000000000000000       0x20
+ .debug_frame   0x0000000000000000       0x20 C:\Users\Aqi'Glow\AppData\Local\Temp\ccucN1SH.o

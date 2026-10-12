@@ -1,0 +1,119 @@
+{
+  "original_project": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.11\\10_10_liu_ Ti60_Vision6_WaveFix",
+  "optimized_project": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.11\\10_11_liu_Ti60_Vision6_RAM_Optimized",
+  "original_files_verified_unchanged": 840,
+  "protected_design_files_verified_unchanged": 589,
+  "project_xml_difference_only_build_timestamp": true,
+  "before": {
+    "resources": {
+      "XLRs": {
+        "used": 35076,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 244,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 37,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.302,
+    "min_hold_slack_ns": 0.017,
+    "bit_sha256": "5af09cfd55abed8ee4f2bd0f480fe5d9e64663df576cac12d222f11113c1affc",
+    "hex_sha256": "ae9384c492aceb6558a4c7a77b74113fec1d977589f216fbb586a3c39e4baf36",
+    "physical_board_test": "not performed; user must confirm camera video and diagnostic lights"
+  },
+  "after": {
+    "resources": {
+      "XLRs": {
+        "used": 35425,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 215,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 37,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.302,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "e9306ab9808ee7fcdf4e946d53f8186ab49615d153c21bdcfdfea6b406c33f0c",
+    "hex_sha256": "ed572dbb02c7643506c182f1346476a8111841cbd2e5b989fb06e1b7c9fec9d6",
+    "physical_board_test": "not performed; user must confirm camera video and diagnostic lights"
+  },
+  "ram_saved_blocks": 29,
+  "image_raw_bytes": 15000,
+  "image_packed_bytes": 9664,
+  "image_raw_sha256": "c331ec7f13f00c27238d3573ad813e581846aa8a648132f75a0bd562935e0691",
+  "firmware_bin_bytes_before": 15864,
+  "firmware_bin_bytes_after": 10944,
+  "firmware_stack_and_free_bytes": 5416,
+  "module_ram_blocks_from_mapped_netlists": [
+    {
+      "hierarchy": "u_menu/soc/system_ramA_logic/",
+      "before": 32,
+      "after": 16
+    },
+    {
+      "hierarchy": "u_menu/display/renderer/glyph/",
+      "before": 8,
+      "after": 6
+    },
+    {
+      "hierarchy": "u_parallel/u_overlay/font/",
+      "before": 8,
+      "after": 7
+    },
+    {
+      "hierarchy": "u_parallel/u_video_delay/",
+      "before": 19,
+      "after": 14
+    },
+    {
+      "hierarchy": "u_parallel/gray_delay/",
+      "before": 8,
+      "after": 7
+    },
+    {
+      "hierarchy": "u_parallel/raw_delay/",
+      "before": 9,
+      "after": 5
+    }
+  ],
+  "simulation_pass_count": 19,
+  "simulation_logs": [
+    "reports\\tb_h5_palm.log",
+    "reports\\tb_h5_wave.log",
+    "reports\\tb_h5_raster.log",
+    "reports\\tb_h4_controls.log",
+    "reports\\tb_h4_skin.log",
+    "reports\\tb_h4_templates.log",
+    "reports\\tb_h4_overlay.log",
+    "reports\\tb_controls6.log",
+    "reports\\tb_matrix8.log",
+    "reports\\tb_menu_render.log",
+    "reports\\tb_vision6.log",
+    "reports\\tb_h5_ui.log",
+    "reports\\tb_i2c6.log",
+    "reports\\tb_health6.log",
+    "reports\\tb_frame_path.log",
+    "reports\\tb_menu_cdc6.log",
+    "reports\\tb_menu_cpu6.log",
+    "reports\\tb_epd_cpu.log",
+    "reports\\ram_optimization\\equivalence.log"
+  ],
+  "physical_board_test": "not performed"
+}

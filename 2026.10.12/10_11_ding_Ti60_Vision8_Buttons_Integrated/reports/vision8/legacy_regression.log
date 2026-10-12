@@ -1,0 +1,462 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/epd_apb.v" into library work
+INFO: [VRFC 10-311] analyzing module epd_apb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/spi_write_byte.v" into library work
+INFO: [VRFC 10-311] analyzing module spi_write_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/cmos_i2c/i2c_timing_ctrl_16bit.v" into library work
+INFO: [VRFC 10-311] analyzing module i2c_timing_ctrl_16bit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/cmos_i2c/I2C_OV5640_1280720_Config.v" into library work
+INFO: [VRFC 10-311] analyzing module I2C_OV5640_1280720_Config
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/vision/gaussian3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module gaussian3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/parallel/button_press.v" into library work
+INFO: [VRFC 10-311] analyzing module button_press
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/parallel/vision_hud.v" into library work
+INFO: [VRFC 10-311] analyzing module vision_hud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/parallel/edge_shape_roi.v" into library work
+INFO: [VRFC 10-311] analyzing module edge_shape_roi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/vision/line_buffer_3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module line_buffer_3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/vision/rgb565_to_gray.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb565_to_gray
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/vision/rgb565_to_rgb888.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb565_to_rgb888
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/vision/median3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module median3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/vision/sobel3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module sobel3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/vision/nms3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module nms3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/vision/canny_threshold.v" into library work
+INFO: [VRFC 10-311] analyzing module canny_threshold
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/vision/hysteresis_local.v" into library work
+INFO: [VRFC 10-311] analyzing module hysteresis_local
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/face/rgb565_to_ycbcr_skin.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb565_to_ycbcr_skin
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/parallel/canny_stream.v" into library work
+INFO: [VRFC 10-311] analyzing module canny_stream
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/parallel/face_grid_regions.v" into library work
+INFO: [VRFC 10-311] analyzing module face_grid_regions
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/parallel/face_morph.v" into library work
+INFO: [VRFC 10-311] analyzing module face_morph
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/parallel/parallel_overlay.v" into library work
+INFO: [VRFC 10-311] analyzing module parallel_overlay
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/parallel/parallel_video.v" into library work
+INFO: [VRFC 10-311] analyzing module parallel_video
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/parallel/uart_params.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_params
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/parallel/video_delay.v" into library work
+INFO: [VRFC 10-311] analyzing module video_delay
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/menu_status_cdc.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_status_cdc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/menu_glyph_rom.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_glyph_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/menu_renderer.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_renderer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/menu_lcd_apb.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_lcd_apb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/riscv_menu_top.v" into library work
+INFO: [VRFC 10-311] analyzing module riscv_menu_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/camera_health.v" into library work
+INFO: [VRFC 10-311] analyzing module camera_health
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/gesture_features.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_features
+INFO: [VRFC 10-311] analyzing module gesture_shape
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/gesture_stabilizer.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_stabilizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/gesture_branch.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_branch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/raster_xy.v" into library work
+INFO: [VRFC 10-311] analyzing module raster_xy
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/gesture_matrix8.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_matrix8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/gesture_diag_hud.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_diag_hud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision6_overlay.v" into library work
+INFO: [VRFC 10-311] analyzing module vision6_overlay
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/gesture/ep1_components.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_classify
+INFO: [VRFC 10-311] analyzing module ep1_gesture
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/gesture/ep1_math.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_color
+INFO: [VRFC 10-311] analyzing module ep1_median
+INFO: [VRFC 10-311] analyzing module ep1_gradient
+INFO: [VRFC 10-311] analyzing module ep1_morph
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/gesture/ep1_skin.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_skin
+INFO: [VRFC 10-311] analyzing module ep1_window7
+INFO: [VRFC 10-311] analyzing module ep1_disk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision6_glyph_rom.v" into library work
+INFO: [VRFC 10-311] analyzing module vision6_glyph_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/gesture_key.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_key
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/gesture_skin_learn.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_skin_learn
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/gesture_sample16.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_sample16
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/gesture_templates.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_templates
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/gesture_wizard.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_wizard
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/gesture_palm_evidence.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_palm_evidence
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/gesture_wave.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_wave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_controls.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_key
+INFO: [VRFC 10-311] analyzing module vision8_controls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_fifo.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_slots.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_slots
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_base_axi.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_base_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_ddr.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_ddr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_frames.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_frames
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/menu8_renderer.v" into library work
+INFO: [VRFC 10-311] analyzing module menu8_renderer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/axi/axi4_ctrl.v" into library work
+INFO: [VRFC 10-311] analyzing module axi4_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/axi/frame_buffer_select.v" into library work
+INFO: [VRFC 10-311] analyzing module frame_buffer_select
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h5_palm.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_h5_palm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h5_wave.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_h5_wave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h5_raster.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_h5_raster
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h4_controls.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_h4_controls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h4_skin.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_h4_skin
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h4_templates.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_h4_templates
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h4_overlay.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_h4_overlay
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_controls6.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_controls6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_matrix8.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_matrix8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_vision6.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_vision6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h5_ui.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_h5_ui
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_i2c6.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_i2c6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_health6.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_health6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_frame_path.sv" into library work
+INFO: [VRFC 10-311] analyzing module W0_FIFO_8
+INFO: [VRFC 10-311] analyzing module R0_FIFO_16
+INFO: [VRFC 10-311] analyzing module tb_frame_path
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_menu_cdc6.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_menu_cdc6
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_h5_palm -s tb_h5_palm --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.gesture_palm_evidence
+Compiling module work.tb_h5_palm
+Built simulation snapshot tb_h5_palm
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_h5_palm/xsim_script.tcl
+# xsim {tb_h5_palm} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: independent upright/sideways open-palm evidence, exact upper-hand centroid, thumb/heart/fist/checkerboard/empty/invalid rejection
+$finish called at time : 3390 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h5_palm.sv" Line 27
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:29:01 2026...
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_h5_wave -s tb_h5_wave --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.gesture_wave
+Compiling module work.tb_h5_wave
+Built simulation snapshot tb_h5_wave
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_h5_wave/xsim_script.tcl
+# xsim {tb_h5_wave} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: wrist-only and translational wave, two blurred frames, static jitter/one-way/unknown/thumb/heart rejection, timeout, removal, target change and disable
+$finish called at time : 6610 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h5_wave.sv" Line 38
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:29:04 2026...
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_h5_raster -s tb_h5_raster --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.raster_xy(WIDTH=320)
+Compiling module work.gesture_wizard(COUNTDOWN_FRAMES=...
+Compiling module work.gesture_skin_learn(WIDTH=320,HEI...
+Compiling module work.ep1_window7(WIDTH=320)
+Compiling module work.ep1_disk
+Compiling module work.line_buffer_3x3(WIDTH=320,DWIDTH...
+Compiling module work.ep1_morph(DILATE=1)
+Compiling module work.ep1_morph
+Compiling module work.video_delay(BITS=3,LATENCY=2017)
+Compiling module work.gesture_sample16
+Compiling module work.gesture_palm_evidence
+Compiling module work.gesture_templates
+Compiling module work.gesture_stabilizer(WIDTH=320,HEI...
+Compiling module work.gesture_wave(WIDTH=320,HEIGHT=24...
+Compiling module work.ep1_classify
+Compiling module work.ep1_gesture(WIDTH=320,HEIGHT=240...
+Compiling module work.gesture_branch(WIDTH=320,HEIGHT=...
+Compiling module work.tb_h5_raster
+Built simulation snapshot tb_h5_raster
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_h5_raster/xsim_script.tcl
+# xsim {tb_h5_raster} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+Enrolled 1 in 9 frames
+Enrolled 2 in 8 frames
+Enrolled 3 in 8 frames
+WRIST tilt=0 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=2 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=4 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=6 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=8 cls=1 lean=119 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=10 cls=1 lean=125 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=12 cls=1 lean=125 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=12 cls=1 lean=130 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=10 cls=1 lean=130 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=8 cls=1 lean=125 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=6 cls=1 lean=125 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=4 cls=1 lean=119 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=2 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=0 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=-2 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=-4 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=-6 cls=1 lean=119 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=-8 cls=1 lean=111 phase=2 dir=2 extreme=111 credit=6 cx=159
+WRIST tilt=-10 cls=1 lean=111 phase=3 dir=2 extreme=111 credit=6 cx=159
+WRIST tilt=-12 cls=1 lean=109 phase=3 dir=2 extreme=109 credit=6 cx=159
+WRIST return=-12 cls=1 lean=108 phase=3 dir=2 cx=159
+WRIST return=-10 cls=1 lean=108 phase=3 dir=2 cx=159
+WRIST return=-8 cls=1 lean=109 phase=3 dir=2 cx=159
+WRIST return=-6 cls=1 lean=111 phase=3 dir=2 cx=159
+WRIST return=-4 cls=1 lean=111 phase=3 dir=2 cx=159
+WRIST return=-2 cls=1 lean=119 phase=3 dir=2 cx=159
+WRIST return=0 cls=1 lean=120 phase=3 dir=2 cx=159
+WRIST return=2 cls=1 lean=120 phase=3 dir=2 cx=159
+WRIST return=4 cls=1 lean=120 phase=3 dir=2 cx=159
+WRIST return=6 cls=1 lean=120 phase=3 dir=2 cx=159
+WRIST return=8 cls=1 lean=119 phase=3 dir=2 cx=159
+WRIST return=10 cls=1 lean=125 phase=3 dir=2 cx=159
+WRIST return=12 cls=1 lean=125 phase=3 dir=2 cx=159
+Independent evidence used on 33 tilted-palm frames
+PASS: H5 RGB-to-template button enrollment and changed-shape wrist-wave; multi-tone fingers; learned thumb/heart/dynamic wave; static/jitter/fist/blank rejection; freeze and mode persistence
+$finish called at time : 220320190 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h5_raster.sv" Line 81
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:25 . Memory (MB): peak = 219.391 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:31:33 2026...
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_h4_controls -s tb_h4_controls --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.gesture_key(DEBOUNCE=3,LONG_CYCL...
+Compiling module work.gesture_wizard(COUNTDOWN_FRAMES=...
+Compiling module work.tb_h4_controls
+Built simulation snapshot tb_h4_controls
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_h4_controls/xsim_script.tcl
+# xsim {tb_h4_controls} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: K2 debounce, boot-held suppression, short/long exclusivity, three steps, colour failure, ambiguity, timeout and cancellation
+$finish called at time : 4610 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h4_controls.sv" Line 26
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:31:37 2026...
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_h4_skin -s tb_h4_skin --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.gesture_skin_learn(WIDTH=128,HEI...
+Compiling module work.tb_h4_skin
+Built simulation snapshot tb_h4_skin
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_h4_skin/xsim_script.tcl
+# xsim {tb_h4_skin} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: pale fingertip, palm and shadow segmentation; skin calibration; white/blue/dark background rejection
+$finish called at time : 21450 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h4_skin.sv" Line 22
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:31:40 2026...
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_h4_templates -s tb_h4_templates --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.gesture_templates
+Compiling module work.tb_h4_templates
+Built simulation snapshot tb_h4_templates
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_h4_templates/xsim_script.tcl
+# xsim {tb_h4_templates} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: personalized three-class enrollment, sparse noise/translation tolerance, unknown/solid/invalid rejection, ambiguity and freeze persistence
+$finish called at time : 59150 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h4_templates.sv" Line 35
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:31:43 2026...
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_h4_overlay -s tb_h4_overlay --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.gesture_diag_hud
+Compiling module work.gesture_matrix8
+Compiling module work.vision6_glyph_rom
+Compiling module work.vision6_overlay
+Compiling module work.tb_h4_overlay
+Built simulation snapshot tb_h4_overlay
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_h4_overlay/xsim_script.tcl
+# xsim {tb_h4_overlay} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: three HDMI matrix + Chinese/English results, idle on missing target, no cyan debug tint, pure capture removes every overlay
+$finish called at time : 6400446 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h4_overlay.sv" Line 31
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:31:51 2026...
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_controls6 -s tb_controls6 --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.uart_params(CLKS_PER_BIT=16,KEY_...
+Compiling module work.tb_controls6
+Built simulation snapshot tb_controls6
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_controls6/xsim_script.tcl
+# xsim {tb_controls6} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: six-mode keys, UART, pure_en capture, optional detection and auxiliary modes
+$finish called at time : 20646 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_controls6.sv" Line 20
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:31:55 2026...
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_matrix8 -s tb_matrix8 --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.gesture_matrix8
+Compiling module work.tb_matrix8
+Built simulation snapshot tb_matrix8
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_matrix8/xsim_script.tcl
+# xsim {tb_matrix8} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: three exact 8x8 bitmaps, idle grid, cell gaps, wave highlight, no removed gesture icon
+$finish called at time : 238595 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_matrix8.sv" Line 22
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:31:59 2026...
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_vision6 -s tb_vision6 --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'source_id_i' on this module [D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/parallel/parallel_video.v:176]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

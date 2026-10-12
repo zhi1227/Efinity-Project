@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Oct 11 16:13:46 2026
+# Process ID: 13888
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision6_RAM_Optimized
+# Command line: xsim.exe -log reports/tb_h5_ui.log -mode tcl -source {xsim.dir/tb_h5_ui/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision6_RAM_Optimized/reports/tb_h5_ui.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision6_RAM_Optimized\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_h5_ui/xsim_script.tcl
+# xsim {tb_h5_ui} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: full 720p H5 hand-lost, palm-unconfirmed, palm-ready, reverse-direction and wave-confirmed UI rasters
+$finish called at time : 46080226 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision6_RAM_Optimized/sim/tb_h5_ui.sv" Line 28
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:28 . Memory (MB): peak = 220.004 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 16:14:17 2026...

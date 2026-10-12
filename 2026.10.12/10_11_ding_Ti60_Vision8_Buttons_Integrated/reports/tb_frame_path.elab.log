@@ -1,0 +1,15 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_frame_path -s tb_frame_path --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.frame_buffer_select
+Compiling module work.W0_FIFO_8
+Compiling module work.R0_FIFO_16
+Compiling module work.axi4_ctrl(C_ID_LEN=4,C_RD_END_AD...
+Compiling module work.tb_frame_path
+Built simulation snapshot tb_frame_path

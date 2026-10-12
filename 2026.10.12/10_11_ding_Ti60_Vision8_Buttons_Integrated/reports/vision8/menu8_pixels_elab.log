@@ -1,0 +1,15 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_menu8_pixels -s tb_menu8_pixels --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/menu8_renderer.v" Line 2. Module menu8_renderer doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/menu_glyph_rom.v" Line 2. Module menu_glyph_rom doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.menu_glyph_rom
+Compiling module work.menu8_renderer
+Compiling module work.tb_menu8_pixels
+Built simulation snapshot tb_menu8_pixels

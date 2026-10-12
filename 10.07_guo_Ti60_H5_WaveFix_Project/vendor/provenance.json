@@ -1,0 +1,6 @@
+{
+  "sapphire_source": "D:\\Efinity\\ipm\\ip\\efx_tsemac\\fpga\\Ti60F225_devkit\\ip\\sapphire\\source\\hardware\\netlist\\EfxSapphireSoc.v",
+  "sapphire_sha256": "b311fc2d40d90035110ad62691e239188d297d208fd2877934ecc5547df37d46",
+  "lcd_reference": "C:\\Users\\Aqi'Glow\\Desktop\\fpga易灵思\\电子屏幕VD-LVDS-7TH_HDK_V3.3_20251111\\VD-LVDS-7TH_HDK_V3.3_20251111\\03_FPGA_Demo\\3_Elitestek_Ti60_Demo\\05_LVDS_LCD_Test_1024600",
+  "changes_to_sapphire_rtl": "none; RAM initialization files contain our compiled program"
+}

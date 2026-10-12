@@ -1,0 +1,6381 @@
+{
+  "note": "Comparison only. Original file was not overwritten by the file-editing scripts. The modified project uses the start-of-task backup.",
+  "change_count": 302,
+  "changes": [
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e66",
+      "type": "COMPONENT",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "layerId": 1,
+        "x": 2460,
+        "y": 1335,
+        "angle": -90,
+        "attrs": {
+          "Supplier Part": "",
+          "Value": "100nF",
+          "Unique ID": "gge44",
+          "Reuse Block": "",
+          "Group ID": "",
+          "Channel ID": "$1e119"
+        },
+        "locked": false,
+        "zIndex": 66
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "layerId": 1,
+        "x": 2455,
+        "y": 1315,
+        "angle": -90,
+        "attrs": {
+          "Supplier Part": "",
+          "Value": "100nF",
+          "Unique ID": "gge44",
+          "Reuse Block": "",
+          "Group ID": "",
+          "Channel ID": "$1e119"
+        },
+        "locked": false,
+        "zIndex": 66
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "8d2baa4f631cec03",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO0",
+        "layerId": 1,
+        "startX": 1255,
+        "startY": 2250,
+        "endX": 1522.2657,
+        "endY": 2250,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "cff2d494b1960838",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "FLASH_CS",
+        "layerId": 1,
+        "startX": 2350.63,
+        "startY": 1205,
+        "endX": 2681.89,
+        "endY": 1205,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "7419f4f5ac154678",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1303.649,
+        "centerY": 3655,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "f5ca659651109bc2",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO12",
+        "layerId": 1,
+        "startX": 1360,
+        "startY": 1775,
+        "endX": 1725,
+        "endY": 1410,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e649",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2587.44,
+        "startY": 1576.81,
+        "endX": 2587.44,
+        "endY": 1765,
+        "width": 20,
+        "locked": false,
+        "zIndex": 649
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "2b550350c8b25c14",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO3",
+        "layerId": 1,
+        "startX": 1445,
+        "startY": 2110,
+        "endX": 1230,
+        "endY": 2110,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e300",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 1374.5223,
+        "startY": 1985,
+        "endX": 2075,
+        "endY": 1284.5223,
+        "width": 10,
+        "locked": false,
+        "zIndex": 300
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "d4a3d9f79c8271e8",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1144.5497,
+        "centerY": 3610,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "2fe380797f50cee5",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1263.8742,
+        "centerY": 3525,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "02c84506bc808ff7",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2367.56,
+        "startY": 1287.44,
+        "endX": 2365.63,
+        "endY": 1289.37,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e317",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 964.7085,
+        "startY": 1710.2915,
+        "endX": 1250.2277,
+        "endY": 1709.7723,
+        "width": 10,
+        "locked": false,
+        "zIndex": 317
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "4b567f707e50fd4a",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 950,
+        "startY": 1625,
+        "endX": 1310,
+        "endY": 1625,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "40ebcca3912e048a",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO12",
+        "layerId": 1,
+        "startX": 4.8384,
+        "startY": 2165,
+        "endX": 675,
+        "endY": 2165,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e13f88617c04e141",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO19",
+        "layerId": 1,
+        "startX": 805.4781,
+        "startY": 1449.5219,
+        "endX": 450,
+        "endY": 1805,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e383",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 2,
+        "startX": 2010,
+        "startY": 380,
+        "endX": 2125,
+        "endY": 495,
+        "width": 10,
+        "locked": false,
+        "zIndex": 383
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "772134dc401ff95b",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 1,
+        "startX": 665,
+        "startY": 2500,
+        "endX": 1160,
+        "endY": 2005,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e61",
+      "type": "ATTR",
+      "backup": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e58",
+        "layerId": 3,
+        "x": 920.9,
+        "y": 3570.9,
+        "key": "Designator",
+        "value": "C5",
+        "keyVisible": false,
+        "valueVisible": true,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 720,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 2,
+        "specialColor": null
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e58",
+        "layerId": 3,
+        "x": 925.9,
+        "y": 3560.9,
+        "key": "Designator",
+        "value": "C5",
+        "keyVisible": false,
+        "valueVisible": true,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 720,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 2,
+        "specialColor": null
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "5e0b125e25cde894",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1184.3245,
+        "centerY": 3610,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e361",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO12",
+        "layerId": 1,
+        "startX": 1925,
+        "startY": 425,
+        "endX": 1925,
+        "endY": 1247.72,
+        "width": 10,
+        "locked": false,
+        "zIndex": 361
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "54391f3f66a6757f",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2690,
+        "startY": 1291.85,
+        "endX": 2688.78,
+        "endY": 1290.63,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "[\"NET\",\"GND\"]",
+      "type": "NET",
+      "backup": {
+        "netType": null,
+        "specialColor": "#CCCCCC",
+        "retLine": false,
+        "differentialName": null,
+        "isPositiveNet": false,
+        "equalLengthGroupName": null
+      },
+      "current_original": {
+        "netType": null,
+        "specialColor": "#cccccc",
+        "retLine": false,
+        "differentialName": null,
+        "isPositiveNet": false,
+        "equalLengthGroupName": null
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "f26bea854d400109",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1065,
+        "centerY": 3610,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "3a50d1f8ba1835ce",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 1375,
+        "startY": 1845,
+        "endX": 1090,
+        "endY": 1845,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "ea3b6f50e82bf84e",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2458.19,
+        "startY": 1290.63,
+        "endX": 2455,
+        "endY": 1287.44,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "f216a44fb29a4f7f",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 625,
+        "startY": 2105,
+        "endX": 1025,
+        "endY": 1705,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e393",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO0",
+        "layerId": 1,
+        "startX": 2315,
+        "startY": 415,
+        "endX": 2210,
+        "endY": 310,
+        "width": 10,
+        "locked": false,
+        "zIndex": 393
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "eaa38143294e4f0e",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1589.0993,
+        "centerY": 3605,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e279",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO19",
+        "layerId": 1,
+        "startX": 450,
+        "startY": 1805,
+        "endX": 755,
+        "endY": 1500,
+        "width": 10,
+        "locked": false,
+        "zIndex": 279
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "924d0b76ccab95c4",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 625,
+        "startY": 2105,
+        "endX": 45,
+        "endY": 2105,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e394",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO0",
+        "layerId": 1,
+        "startX": 2315,
+        "startY": 1400,
+        "endX": 2315,
+        "endY": 415,
+        "width": 10,
+        "locked": false,
+        "zIndex": 394
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e341",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO3",
+        "layerId": 1,
+        "startX": 1415,
+        "startY": 2125,
+        "endX": 1215,
+        "endY": 2125,
+        "width": 10,
+        "locked": false,
+        "zIndex": 341
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "a5b2990a8d9892fd",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1303.649,
+        "centerY": 3525,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "1abf5a59d23613d7",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 2005,
+        "startY": 895,
+        "endX": 2062.4648,
+        "endY": 837.5352,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e328",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 1060,
+        "startY": 1905,
+        "endX": 1335,
+        "endY": 1905,
+        "width": 10,
+        "locked": false,
+        "zIndex": 328
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e382",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 1,
+        "startX": 2125,
+        "startY": 1295,
+        "endX": 2125,
+        "endY": 520,
+        "width": 10,
+        "locked": false,
+        "zIndex": 382
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "1977344ad5c9191d",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1184.3245,
+        "centerY": 3525,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e355",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 1710,
+        "startY": 435,
+        "endX": 1710,
+        "endY": 310,
+        "width": 10,
+        "locked": false,
+        "zIndex": 355
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "8009814fd6125ec8",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1144.5497,
+        "centerY": 3525,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "0a21da0816894a8e",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 1409.5223,
+        "startY": 1950,
+        "endX": 1893.4877,
+        "endY": 1466.0346,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "f4bd561f083f9c7e",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2678.78,
+        "startY": 1280.63,
+        "endX": 2545,
+        "endY": 1280.63,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "c56991cf259a0905",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 1145,
+        "startY": 1950,
+        "endX": 1409.5223,
+        "endY": 1950,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "456d2cb4b2ee6176",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 570,
+        "startY": 2005,
+        "endX": 950,
+        "endY": 1625,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "9fc4fc1da4178fc3",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1430,
+        "centerY": 3565,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "d0b20230e58ef17c",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 2005,
+        "startY": 1485,
+        "endX": 2005,
+        "endY": 895,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "[\"PRIMITIVE\",\"COPPEROUTLINE\"]",
+      "type": "PRIMITIVE",
+      "backup": {
+        "display": false,
+        "pick": true
+      },
+      "current_original": {
+        "display": true,
+        "pick": true
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e123",
+      "type": "ATTR",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "parentId": "e120",
+        "layerId": 3,
+        "x": null,
+        "y": null,
+        "key": "Name",
+        "value": "={Value}",
+        "keyVisible": false,
+        "valueVisible": false,
+        "fontFamily": "default",
+        "fontSize": 67.5,
+        "strokeWidth": 6,
+        "bold": false,
+        "italic": false,
+        "origin": "LEFT_BOTTOM",
+        "angle": 630,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 123
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e120",
+        "layerId": 3,
+        "x": null,
+        "y": null,
+        "key": "Name",
+        "value": "={Value}",
+        "keyVisible": false,
+        "valueVisible": false,
+        "fontFamily": "default",
+        "fontSize": 67.5,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 630,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 1,
+        "specialColor": null
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e69",
+      "type": "ATTR",
+      "backup": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e66",
+        "layerId": 3,
+        "x": 2440,
+        "y": 1395,
+        "key": "Designator",
+        "value": "C7",
+        "keyVisible": false,
+        "valueVisible": true,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 360,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 2,
+        "specialColor": null
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e66",
+        "layerId": 3,
+        "x": 2435,
+        "y": 1375,
+        "key": "Designator",
+        "value": "C7",
+        "keyVisible": false,
+        "valueVisible": true,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 360,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 2,
+        "specialColor": null
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "bcfd1fe875c08274",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO23",
+        "layerId": 1,
+        "startX": 1980,
+        "startY": 1945,
+        "endX": 1910,
+        "endY": 1945,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "b42ebba4dbb7931e",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 1775,
+        "startY": 1445,
+        "endX": 1375,
+        "endY": 1845,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e297",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 1335,
+        "startY": 1905,
+        "endX": 1970,
+        "endY": 1270,
+        "width": 10,
+        "locked": false,
+        "zIndex": 297
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "938721488ee3201c",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 1665,
+        "startY": 1365,
+        "endX": 1324.0742,
+        "endY": 1705.9258,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "1c425102427d091f",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO5",
+        "layerId": 1,
+        "startX": 2062.4648,
+        "startY": 257.5352,
+        "endX": 2062.4648,
+        "endY": 837.5352,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "b3505485a5b2e0b2",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO23",
+        "layerId": 2,
+        "startX": 375,
+        "startY": 1600,
+        "endX": 1635,
+        "endY": 1600,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e388",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO3",
+        "layerId": 2,
+        "startX": 2230,
+        "startY": 435,
+        "endX": 2230,
+        "endY": 515,
+        "width": 10,
+        "locked": false,
+        "zIndex": 388
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "1eff5a3c9c56e64a",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1509.5497,
+        "centerY": 3650,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "2cd588489710a67f",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1303.649,
+        "centerY": 3570,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e129",
+      "type": "ATTR",
+      "backup": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e125",
+        "layerId": 3,
+        "x": 105,
+        "y": 3540,
+        "key": "Designator",
+        "value": "R18",
+        "keyVisible": false,
+        "valueVisible": true,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 360,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 2,
+        "specialColor": null
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e125",
+        "layerId": 3,
+        "x": 100,
+        "y": 3535,
+        "key": "Designator",
+        "value": "R18",
+        "keyVisible": false,
+        "valueVisible": true,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 360,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 2,
+        "specialColor": null
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "d839407df47d4cb6",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO9",
+        "layerId": 1,
+        "startX": 800,
+        "startY": 2230,
+        "endX": 1125,
+        "endY": 1905,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "495b987e8a55ba1c",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO12",
+        "layerId": 1,
+        "startX": 1065,
+        "startY": 1775,
+        "endX": 1360,
+        "endY": 1775,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "af748606280dac0f",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO0",
+        "layerId": 1,
+        "startX": 640,
+        "startY": 2865,
+        "endX": 1255,
+        "endY": 2250,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "[\"PAD_NET\",\"e120\",\"1\",\"e12\"]",
+      "type": "PAD_NET",
+      "backup": {
+        "partitionId": "",
+        "padNet": "3V3",
+        "padLen": 0
+      },
+      "current_original": {
+        "partitionId": "",
+        "padNet": "3V3",
+        "padLen": 0,
+        "attrsMap": {}
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "10565ce33a01eecb",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "layerId": 1,
+        "startX": 2105,
+        "startY": 980,
+        "endX": 2105,
+        "endY": 1569.9535,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e367",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 1970,
+        "startY": 360,
+        "endX": 1956.4173,
+        "endY": 346.4173,
+        "width": 10,
+        "locked": false,
+        "zIndex": 367
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "6c3347fe4ea08068",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "layerId": 1,
+        "startX": 2105.0233,
+        "startY": 1569.9767,
+        "endX": 1495,
+        "endY": 2180,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "1ca81a172111a3cd",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO3",
+        "layerId": 1,
+        "startX": 2055,
+        "startY": 930,
+        "endX": 2055,
+        "endY": 1500,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "1f7554876cb5395c",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2587.44,
+        "startY": 1682.44,
+        "endX": 2587.44,
+        "endY": 1765,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "b6aa49812aff849e",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 1,
+        "startX": 1947.023,
+        "startY": 867.977,
+        "endX": 2010,
+        "endY": 805,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "82de304ea92ff915",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1104.7748,
+        "centerY": 3655,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e369",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 1956.4173,
+        "startY": 346.4173,
+        "endX": 1956.4173,
+        "endY": 256.4173,
+        "width": 10,
+        "locked": false,
+        "zIndex": 369
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e329",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO9",
+        "layerId": 1,
+        "startX": 1367.5,
+        "startY": 1947.5,
+        "endX": 1082.5,
+        "endY": 1947.5,
+        "width": 10,
+        "locked": false,
+        "zIndex": 329
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "72d7458ceaace468",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 1,
+        "startX": 1160,
+        "startY": 2005,
+        "endX": 1415,
+        "endY": 2005,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "af98442eaaf87e87",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1224.0993,
+        "centerY": 3655,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "[\"PRIMITIVE\",\"COPPERFILLED\"]",
+      "type": "PRIMITIVE",
+      "backup": {
+        "display": false,
+        "pick": true
+      },
+      "current_original": {
+        "display": true,
+        "pick": true
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "9f516d9a0d6086d3",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO23",
+        "ruleName": "",
+        "centerX": 1980,
+        "centerY": 1945,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "2b0a060c2a07fbd8",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO21",
+        "layerId": 2,
+        "startX": 340,
+        "startY": 1696.9968,
+        "endX": 1661.9968,
+        "endY": 1696.9968,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "fc5722a96fa4c187",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO18",
+        "layerId": 1,
+        "startX": 1475,
+        "startY": 1215,
+        "endX": 1180,
+        "endY": 1510,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e336",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO3",
+        "layerId": 1,
+        "startX": 1215,
+        "startY": 2125,
+        "endX": 635,
+        "endY": 2705,
+        "width": 10,
+        "locked": false,
+        "zIndex": 336
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e648",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2370,
+        "startY": 1359.37,
+        "endX": 2587.44,
+        "endY": 1576.81,
+        "width": 20,
+        "locked": false,
+        "zIndex": 648
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e4835699442a4ed5",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1509.5497,
+        "centerY": 3520,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "cac79b928fa7f219",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO17",
+        "layerId": 1,
+        "startX": 1663.5827,
+        "startY": 523.9819,
+        "endX": 1663.5827,
+        "endY": 256.4173,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e121",
+      "type": "ATTR",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "parentId": "e120",
+        "layerId": 3,
+        "x": null,
+        "y": null,
+        "key": "Footprint",
+        "value": "c4599b177cb43abf",
+        "keyVisible": false,
+        "valueVisible": false,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": false,
+        "italic": false,
+        "origin": "LEFT_BOTTOM",
+        "angle": 630,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 121
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e120",
+        "layerId": 3,
+        "x": null,
+        "y": null,
+        "key": "Footprint",
+        "value": "c4599b177cb43abf",
+        "keyVisible": false,
+        "valueVisible": false,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 630,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": -1,
+        "specialColor": null
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e62",
+      "type": "COMPONENT",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "layerId": 1,
+        "x": 850,
+        "y": 3685,
+        "angle": 0,
+        "attrs": {
+          "Unique ID": "gge43",
+          "Reuse Block": "",
+          "Group ID": "",
+          "Channel ID": "$1e117"
+        },
+        "locked": false,
+        "zIndex": 62
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "layerId": 1,
+        "x": 850,
+        "y": 3675,
+        "angle": 0,
+        "attrs": {
+          "Unique ID": "gge43",
+          "Reuse Block": "",
+          "Group ID": "",
+          "Channel ID": "$1e117"
+        },
+        "locked": false,
+        "zIndex": 62
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e325",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO12",
+        "layerId": 1,
+        "startX": 1030,
+        "startY": 1870,
+        "endX": 1305,
+        "endY": 1870,
+        "width": 10,
+        "locked": false,
+        "zIndex": 325
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e381",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 1,
+        "startX": 1385,
+        "startY": 2035,
+        "endX": 2125,
+        "endY": 1295,
+        "width": 10,
+        "locked": false,
+        "zIndex": 381
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e538",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO21",
+        "layerId": 1,
+        "startX": 1965,
+        "startY": 2025,
+        "endX": 2285.34,
+        "endY": 2025,
+        "width": 10,
+        "locked": false,
+        "zIndex": 538
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "b0d6978d0f107cbe",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 630,
+        "startY": 2465,
+        "endX": 1145,
+        "endY": 1950,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "f75404d260dac518",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1184.3245,
+        "centerY": 3655,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "6a7650c43458608d",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO18",
+        "layerId": 1,
+        "startX": 1180,
+        "startY": 1510,
+        "endX": 835,
+        "endY": 1510,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e72",
+      "type": "ATTR",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "parentId": "e70",
+        "layerId": 3,
+        "x": null,
+        "y": null,
+        "key": "Device",
+        "value": "bf2b08471bbd38b1",
+        "keyVisible": false,
+        "valueVisible": false,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": false,
+        "italic": false,
+        "origin": "LEFT_BOTTOM",
+        "angle": 270,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 72
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e70",
+        "layerId": 3,
+        "x": null,
+        "y": null,
+        "key": "Device",
+        "value": "bf2b08471bbd38b1",
+        "keyVisible": false,
+        "valueVisible": false,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 270,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 72,
+        "specialColor": null
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e343",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "layerId": 1,
+        "startX": 1235,
+        "startY": 2180,
+        "endX": 610,
+        "endY": 2805,
+        "width": 10,
+        "locked": false,
+        "zIndex": 343
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e282",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO18",
+        "layerId": 1,
+        "startX": 795,
+        "startY": 1550,
+        "endX": 490,
+        "endY": 1855,
+        "width": 10,
+        "locked": false,
+        "zIndex": 282
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "9910e4809f3553cc",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 1600,
+        "startY": 1335,
+        "endX": 1310.0475,
+        "endY": 1624.9525,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e120",
+      "type": "COMPONENT",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "layerId": 1,
+        "x": 2370,
+        "y": 1320,
+        "angle": 270,
+        "attrs": {
+          "Supplier Part": "",
+          "Value": "100K",
+          "Unique ID": "gge36",
+          "Reuse Block": "",
+          "Group ID": "",
+          "Channel ID": "$1e97"
+        },
+        "locked": false,
+        "zIndex": 120
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "layerId": 1,
+        "x": 2345,
+        "y": 1250,
+        "angle": -90,
+        "attrs": {
+          "Supplier Part": "",
+          "Value": "100K",
+          "Unique ID": "gge36",
+          "Reuse Block": "",
+          "Group ID": "",
+          "Channel ID": "$1e97"
+        },
+        "locked": false,
+        "zIndex": 120
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e378",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 2060,
+        "startY": 260,
+        "endX": 2010,
+        "endY": 210,
+        "width": 10,
+        "locked": false,
+        "zIndex": 378
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e316",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 670,
+        "startY": 2005,
+        "endX": 964.7085,
+        "endY": 1710.2915,
+        "width": 10,
+        "locked": false,
+        "zIndex": 316
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e357",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO17",
+        "layerId": 1,
+        "startX": 1663.5827,
+        "startY": 1166.4173,
+        "endX": 1220,
+        "endY": 1610,
+        "width": 10,
+        "locked": false,
+        "zIndex": 357
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "7958dbf82e4f97b8",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO19",
+        "layerId": 1,
+        "startX": 1556.4173,
+        "startY": 468.5827,
+        "endX": 1556.4173,
+        "endY": 263.5827,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "2597ca9e33599f54",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2560,
+        "startY": 1290.63,
+        "endX": 2458.19,
+        "endY": 1290.63,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e1710",
+      "type": "VIA",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1357.5756,
+        "centerY": 2610,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "zIndex": 1710
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1355,
+        "centerY": 2600,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e298",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO9",
+        "layerId": 1,
+        "startX": 2020,
+        "startY": 1295,
+        "endX": 2020,
+        "endY": 515,
+        "width": 10,
+        "locked": false,
+        "zIndex": 298
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "9ae27af413a5526b",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 1763.5827,
+        "startY": 641.4173,
+        "endX": 1665,
+        "endY": 740,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e363",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 1867.0614,
+        "startY": 1222.9386,
+        "endX": 1867.0614,
+        "endY": 502.0614,
+        "width": 10,
+        "locked": false,
+        "zIndex": 363
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e347",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "layerId": 1,
+        "startX": 1442.0658,
+        "startY": 2180,
+        "endX": 1235,
+        "endY": 2180,
+        "width": 10,
+        "locked": false,
+        "zIndex": 347
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e346",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO0",
+        "layerId": 1,
+        "startX": 640,
+        "startY": 2865,
+        "endX": 1220,
+        "endY": 2285,
+        "width": 10,
+        "locked": false,
+        "zIndex": 346
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e70",
+      "type": "COMPONENT",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "layerId": 1,
+        "x": 2545,
+        "y": 1320,
+        "angle": 270,
+        "attrs": {
+          "Unique ID": "gge45",
+          "Reuse Block": "",
+          "Group ID": "",
+          "Channel ID": "$1e121"
+        },
+        "locked": false,
+        "zIndex": 70
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "layerId": 1,
+        "x": 2560,
+        "y": 1330,
+        "angle": -90,
+        "attrs": {
+          "Unique ID": "gge45",
+          "Reuse Block": "",
+          "Group ID": "",
+          "Channel ID": "$1e121"
+        },
+        "locked": false,
+        "zIndex": 70
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e396",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "layerId": 1,
+        "startX": 2270,
+        "startY": 555,
+        "endX": 2270,
+        "endY": 1352.0658,
+        "width": 10,
+        "locked": false,
+        "zIndex": 396
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e451",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO9",
+        "layerId": 1,
+        "startX": 1082.5,
+        "startY": 1947.5,
+        "endX": 800,
+        "endY": 2230,
+        "width": 10,
+        "locked": false,
+        "zIndex": 451
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e285",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO17",
+        "layerId": 1,
+        "startX": 530,
+        "startY": 1905,
+        "endX": 825,
+        "endY": 1610,
+        "width": 10,
+        "locked": false,
+        "zIndex": 285
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e397",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "layerId": 1,
+        "startX": 2270,
+        "startY": 1352.0658,
+        "endX": 1442.0658,
+        "endY": 2180,
+        "width": 10,
+        "locked": false,
+        "zIndex": 397
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "d9839717c176e0b8",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO17",
+        "layerId": 1,
+        "startX": 1250,
+        "startY": 1570,
+        "endX": 1535,
+        "endY": 1285,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "34863bb295593db1",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1065,
+        "centerY": 3525,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "53eab874020425be",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2345,
+        "startY": 1440,
+        "endX": 2587.44,
+        "endY": 1682.44,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "a7d702f7722a09b8",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 1960,
+        "startY": 260,
+        "endX": 1960,
+        "endY": 775,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e395",
+      "type": "VIA",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "ruleName": "",
+        "centerX": 2270,
+        "centerY": 555,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "zIndex": 395
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "f2857bd9e1996fa2",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1104.7748,
+        "centerY": 3525,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e339",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 640,
+        "startY": 2595,
+        "endX": 1150,
+        "endY": 2085,
+        "width": 10,
+        "locked": false,
+        "zIndex": 339
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "9c72e5801c55805d",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 1175,
+        "startY": 2060,
+        "endX": 1430,
+        "endY": 2060,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "c055cdadb26f647c",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1469.7748,
+        "centerY": 3565,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "bf6cf7b35aa94b07",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "layerId": 1,
+        "startX": 1235,
+        "startY": 2180,
+        "endX": 610,
+        "endY": 2805,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e350",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO19",
+        "layerId": 1,
+        "startX": 1610,
+        "startY": 210,
+        "endX": 1560,
+        "endY": 260,
+        "width": 10,
+        "locked": false,
+        "zIndex": 350
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e65",
+      "type": "ATTR",
+      "backup": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e62",
+        "layerId": 3,
+        "x": 940,
+        "y": 3665,
+        "key": "Designator",
+        "value": "C6",
+        "keyVisible": false,
+        "valueVisible": true,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 720,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 2,
+        "specialColor": null
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e62",
+        "layerId": 3,
+        "x": 940,
+        "y": 3655,
+        "key": "Designator",
+        "value": "C6",
+        "keyVisible": false,
+        "valueVisible": true,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 720,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 2,
+        "specialColor": null
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "5a1cda82a5432298",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO17",
+        "layerId": 1,
+        "startX": 865,
+        "startY": 1570,
+        "endX": 1250,
+        "endY": 1570,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e399",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "layerId": 2,
+        "startX": 2210,
+        "startY": 210,
+        "endX": 2260,
+        "endY": 210,
+        "width": 10,
+        "locked": false,
+        "zIndex": 399
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e373",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO9",
+        "layerId": 2,
+        "startX": 1910,
+        "startY": 340,
+        "endX": 2015,
+        "endY": 445,
+        "width": 10,
+        "locked": false,
+        "zIndex": 373
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e323",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO12",
+        "layerId": 1,
+        "startX": 4.8384,
+        "startY": 2165,
+        "endX": 735,
+        "endY": 2165,
+        "width": 10,
+        "locked": false,
+        "zIndex": 323
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "461203bda409d6ee",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2688.78,
+        "startY": 1290.63,
+        "endX": 2560,
+        "endY": 1290.63,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e795",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO23",
+        "layerId": 1,
+        "startX": 2170,
+        "startY": 1600,
+        "endX": 2175,
+        "endY": 1605,
+        "width": 10,
+        "locked": false,
+        "zIndex": 795
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "c2e585137cc63721",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1144.5497,
+        "centerY": 3570,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "c5ffa24be8312746",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 1710,
+        "startY": 585,
+        "endX": 1710,
+        "endY": 310,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "bda0c57f2c001fa9",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO12",
+        "layerId": 1,
+        "startX": 1725,
+        "startY": 1410,
+        "endX": 1725,
+        "endY": 775,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "4abb56ac2b9e848d",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1469.7748,
+        "centerY": 3605,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "bca3c50b485b9faf",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1549.3245,
+        "centerY": 3605,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e364",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 1867.0614,
+        "startY": 502.0614,
+        "endX": 1763.5827,
+        "endY": 398.5827,
+        "width": 10,
+        "locked": false,
+        "zIndex": 364
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e342",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO3",
+        "layerId": 1,
+        "startX": 1415,
+        "startY": 2125,
+        "endX": 2230,
+        "endY": 1310,
+        "width": 10,
+        "locked": false,
+        "zIndex": 342
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "3768598c6eac63c8",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1589.0993,
+        "centerY": 3650,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "32fc8998a18ce179",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1224.0993,
+        "centerY": 3525,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "8210932e3c6288bc",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1184.3245,
+        "centerY": 3570,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "168982a8b832e630",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO3",
+        "layerId": 1,
+        "startX": 2110,
+        "startY": 310,
+        "endX": 2110,
+        "endY": 875,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e380",
+      "type": "VIA",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO7",
+        "ruleName": "",
+        "centerX": 2125,
+        "centerY": 520,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "zIndex": 380
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "625fec507a61d809",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 1,
+        "startX": 1415,
+        "startY": 2005,
+        "endX": 1947.023,
+        "endY": 1472.977,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "f094b8ba0db02990",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 1090,
+        "startY": 1845,
+        "endX": 736.9041,
+        "endY": 2198.0959,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "793ae05b3c352c2e",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1509.5497,
+        "centerY": 3565,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "97d0df30da7d45b3",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 1763.5827,
+        "startY": 641.4173,
+        "endX": 1763.5827,
+        "endY": 236.4173,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "6fa5735e2b4e5238",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO19",
+        "layerId": 1,
+        "startX": 1556.4173,
+        "startY": 468.5827,
+        "endX": 1425,
+        "endY": 600,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "cfffc4c6a3674dab",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2460,
+        "startY": 1307.44,
+        "endX": 2450.2143,
+        "endY": 1307.44,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "098065e4eb8a038e",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 1775,
+        "startY": 805,
+        "endX": 1775,
+        "endY": 1445,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "78e2340bca294686",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2486.81,
+        "startY": 1280.63,
+        "endX": 2460,
+        "endY": 1307.44,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e296",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO12",
+        "layerId": 1,
+        "startX": 1305,
+        "startY": 1870,
+        "endX": 1927.28,
+        "endY": 1247.72,
+        "width": 10,
+        "locked": false,
+        "zIndex": 296
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e796",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO23",
+        "layerId": 1,
+        "startX": 2175,
+        "startY": 1605,
+        "endX": 2175,
+        "endY": 1635,
+        "width": 10,
+        "locked": false,
+        "zIndex": 796
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "2ae66340c3e169e6",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1469.7748,
+        "centerY": 3520,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e793",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO23",
+        "layerId": 2,
+        "startX": 2170,
+        "startY": 1600,
+        "endX": 375,
+        "endY": 1600,
+        "width": 10,
+        "locked": false,
+        "zIndex": 793
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e376",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 2075,
+        "startY": 375,
+        "endX": 2060,
+        "endY": 360,
+        "width": 10,
+        "locked": false,
+        "zIndex": 376
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "871d23fe2e819f04",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 1025,
+        "startY": 1705,
+        "endX": 1323.1483,
+        "endY": 1705,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "696e9d45bf04b5ea",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 1893.4877,
+        "startY": 1466.0346,
+        "endX": 1893.4877,
+        "endY": 841.5123,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "c81fad8d030806cb",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO3",
+        "layerId": 1,
+        "startX": 2055,
+        "startY": 1500,
+        "endX": 1445,
+        "endY": 2110,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "21066c5213920e94",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 2010,
+        "startY": 210,
+        "endX": 1960,
+        "endY": 260,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e398",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "layerId": 2,
+        "startX": 2260,
+        "startY": 210,
+        "endX": 2270,
+        "endY": 220,
+        "width": 10,
+        "locked": false,
+        "zIndex": 398
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "7a5aaea6fa98c1f9",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 1430,
+        "startY": 2060,
+        "endX": 2005,
+        "endY": 1485,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e349",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO0",
+        "layerId": 1,
+        "startX": 2315,
+        "startY": 1400,
+        "endX": 1430,
+        "endY": 2285,
+        "width": 10,
+        "locked": false,
+        "zIndex": 349
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e1708",
+      "type": "VIA",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1155,
+        "centerY": 2610,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "zIndex": 1708
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1155,
+        "centerY": 2600,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e370",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 1956.4173,
+        "startY": 256.4173,
+        "endX": 1910,
+        "endY": 210,
+        "width": 10,
+        "locked": false,
+        "zIndex": 370
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e230",
+      "type": "VIA",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO21",
+        "ruleName": "",
+        "centerX": 1960,
+        "centerY": 2020,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "zIndex": 230
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO21",
+        "ruleName": "",
+        "centerX": 1970,
+        "centerY": 2005,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "d4e8f1dc45ba08b1",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO11",
+        "layerId": 1,
+        "startX": 1910,
+        "startY": 210,
+        "endX": 1860,
+        "endY": 260,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e390",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO3",
+        "layerId": 1,
+        "startX": 2230,
+        "startY": 515,
+        "endX": 2230,
+        "endY": 1310,
+        "width": 10,
+        "locked": false,
+        "zIndex": 390
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e375",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 2075,
+        "startY": 375,
+        "endX": 2075,
+        "endY": 1284.5223,
+        "width": 10,
+        "locked": false,
+        "zIndex": 375
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "30d47e4017ceda69",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 1323.1483,
+        "startY": 1705,
+        "endX": 1324.0742,
+        "endY": 1705.9258,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e73",
+      "type": "ATTR",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "parentId": "e70",
+        "layerId": 3,
+        "x": 2530,
+        "y": 1400,
+        "key": "Designator",
+        "value": "C8",
+        "keyVisible": false,
+        "valueVisible": true,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": false,
+        "italic": false,
+        "origin": "LEFT_BOTTOM",
+        "angle": 360,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 73
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e70",
+        "layerId": 3,
+        "x": 2545,
+        "y": 1410,
+        "key": "Designator",
+        "value": "C8",
+        "keyVisible": false,
+        "valueVisible": true,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 360,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 2,
+        "specialColor": null
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "4e05a79c3943bcfd",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1224.0993,
+        "centerY": 3570,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "dac184e40dd35a6d",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2690,
+        "startY": 1291.85,
+        "endX": 2678.78,
+        "endY": 1280.63,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e322",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 1015,
+        "startY": 1805,
+        "endX": 1285,
+        "endY": 1805,
+        "width": 10,
+        "locked": false,
+        "zIndex": 322
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e124",
+      "type": "ATTR",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "parentId": "e120",
+        "layerId": 3,
+        "x": 2350,
+        "y": 1400,
+        "key": "Designator",
+        "value": "R17",
+        "keyVisible": false,
+        "valueVisible": true,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": false,
+        "italic": false,
+        "origin": "LEFT_BOTTOM",
+        "angle": 720,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 124
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e120",
+        "layerId": 3,
+        "x": 2325,
+        "y": 1330,
+        "key": "Designator",
+        "value": "R17",
+        "keyVisible": false,
+        "valueVisible": true,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 720,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 2,
+        "specialColor": null
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "9ce62730ce526a2b",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO12",
+        "layerId": 1,
+        "startX": 675,
+        "startY": 2165,
+        "endX": 1065,
+        "endY": 1775,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "aad2edad6b92a26a",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO3",
+        "layerId": 1,
+        "startX": 1230,
+        "startY": 2110,
+        "endX": 635,
+        "endY": 2705,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e356",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 1774.6744,
+        "startY": 499.6744,
+        "endX": 1774.6744,
+        "endY": 1185.3256,
+        "width": 10,
+        "locked": false,
+        "zIndex": 356
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e335",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 1,
+        "startX": 1130,
+        "startY": 2035,
+        "endX": 1385,
+        "endY": 2035,
+        "width": 10,
+        "locked": false,
+        "zIndex": 335
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "4d91ed853b5f64ca",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO23",
+        "layerId": 1,
+        "startX": 1710,
+        "startY": 2145,
+        "endX": 1710,
+        "endY": 2470,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e332",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 1110,
+        "startY": 1985,
+        "endX": 1374.5223,
+        "endY": 1985,
+        "width": 10,
+        "locked": false,
+        "zIndex": 332
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "75bf1b0aee928bd0",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "FLASH_CS",
+        "layerId": 1,
+        "startX": 2345,
+        "startY": 1210.63,
+        "endX": 2350.63,
+        "endY": 1205,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "7f3a4de86d739fc9",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1263.8742,
+        "centerY": 3610,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "1c5e883104e9d687",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO12",
+        "layerId": 1,
+        "startX": 1810,
+        "startY": 690,
+        "endX": 1725,
+        "endY": 775,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e281",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO18",
+        "layerId": 1,
+        "startX": 1205,
+        "startY": 1550,
+        "endX": 795,
+        "endY": 1550,
+        "width": 10,
+        "locked": false,
+        "zIndex": 281
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e360",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO12",
+        "layerId": 1,
+        "startX": 1810,
+        "startY": 310,
+        "endX": 1925,
+        "endY": 425,
+        "width": 10,
+        "locked": false,
+        "zIndex": 360
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "5f204b8ec49f456a",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO19",
+        "layerId": 1,
+        "startX": 1556.4173,
+        "startY": 263.5827,
+        "endX": 1610,
+        "endY": 210,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "33cda838c97fe4b5",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1469.7748,
+        "centerY": 3650,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e647",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2398.2843,
+        "startY": 1359.37,
+        "endX": 2370,
+        "endY": 1359.37,
+        "width": 20,
+        "locked": false,
+        "zIndex": 647
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "321656efca1fdee8",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 2110,
+        "startY": 210,
+        "endX": 2062.4648,
+        "endY": 257.5352,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "cf23df141a5792e1",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 1960,
+        "startY": 775,
+        "endX": 1893.4877,
+        "endY": 841.5123,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "5464c9b3c8e1256a",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO23",
+        "layerId": 2,
+        "startX": 1635,
+        "startY": 1600,
+        "endX": 1980,
+        "endY": 1945,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "0bb5ec9587991fd8",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO21",
+        "layerId": 1,
+        "startX": 1970,
+        "startY": 2005,
+        "endX": 1990,
+        "endY": 2025,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "eb90dbdd9c21d6c4",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 640,
+        "startY": 2595,
+        "endX": 1175,
+        "endY": 2060,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "56ad82f36675cf85",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1144.5497,
+        "centerY": 3655,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "2a4379ca4730b0da",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 570,
+        "startY": 2005,
+        "endX": 45,
+        "endY": 2005,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "0cd337a51e4b7050",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 1860,
+        "startY": 260,
+        "endX": 1860,
+        "endY": 720,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e389",
+      "type": "VIA",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO3",
+        "ruleName": "",
+        "centerX": 2230,
+        "centerY": 515,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "zIndex": 389
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "5d44ab4116e4b8aa",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO18",
+        "layerId": 1,
+        "startX": 1475,
+        "startY": 648.7859,
+        "endX": 1475,
+        "endY": 1215,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "c84090227854b116",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1065,
+        "centerY": 3655,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "319e8f46af53c037",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO17",
+        "layerId": 1,
+        "startX": 1663.5827,
+        "startY": 523.9819,
+        "endX": 1535,
+        "endY": 652.5646,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "520dac9bd7c0f1bb",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1303.649,
+        "centerY": 3610,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e318",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 1250.2277,
+        "startY": 1709.7723,
+        "endX": 1774.6744,
+        "endY": 1185.3256,
+        "width": 10,
+        "locked": false,
+        "zIndex": 318
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e385",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 2160,
+        "startY": 260,
+        "endX": 2110,
+        "endY": 210,
+        "width": 10,
+        "locked": false,
+        "zIndex": 385
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "45e612219d51738c",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 1710,
+        "startY": 585,
+        "endX": 1600,
+        "endY": 695,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e391",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 2185,
+        "startY": 520,
+        "endX": 2160,
+        "endY": 495,
+        "width": 10,
+        "locked": false,
+        "zIndex": 391
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e537",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO21",
+        "layerId": 1,
+        "startX": 1960,
+        "startY": 2020,
+        "endX": 1965,
+        "endY": 2025,
+        "width": 10,
+        "locked": false,
+        "zIndex": 537
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "939c6f19bb2c17e0",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1430,
+        "centerY": 3520,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e321",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 715,
+        "startY": 2105,
+        "endX": 1015,
+        "endY": 1805,
+        "width": 10,
+        "locked": false,
+        "zIndex": 321
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e540",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO21",
+        "layerId": 2,
+        "startX": 1636.9968,
+        "startY": 1696.9968,
+        "endX": 1960,
+        "endY": 2020,
+        "width": 10,
+        "locked": false,
+        "zIndex": 540
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "adc469519980b543",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO3",
+        "layerId": 1,
+        "startX": 2110,
+        "startY": 875,
+        "endX": 2055,
+        "endY": 930,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "dc9436348a575ccc",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO9",
+        "layerId": 1,
+        "startX": 1410,
+        "startY": 1905,
+        "endX": 1838.4287,
+        "endY": 1476.5713,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "cd22faefeab1a1fe",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "layerId": 1,
+        "startX": 1495,
+        "startY": 2180,
+        "endX": 1235,
+        "endY": 2180,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e366",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 1763.5827,
+        "startY": 236.4173,
+        "endX": 1763.5827,
+        "endY": 398.5827,
+        "width": 10,
+        "locked": false,
+        "zIndex": 366
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "da422c74de17b776",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO0",
+        "layerId": 1,
+        "startX": 2210,
+        "startY": 310,
+        "endX": 2210,
+        "endY": 970,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "3cede8bec46d5eeb",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO0",
+        "layerId": 1,
+        "startX": 1522.2657,
+        "startY": 2250,
+        "endX": 2160,
+        "endY": 1612.2657,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e353",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO18",
+        "layerId": 1,
+        "startX": 1615,
+        "startY": 315,
+        "endX": 1615,
+        "endY": 1140,
+        "width": 10,
+        "locked": false,
+        "zIndex": 353
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "ab7e0a039090f01d",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2455,
+        "startY": 1287.44,
+        "endX": 2367.56,
+        "endY": 1287.44,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e276",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO19",
+        "layerId": 1,
+        "startX": 1205,
+        "startY": 1500,
+        "endX": 1560,
+        "endY": 1145,
+        "width": 10,
+        "locked": false,
+        "zIndex": 276
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e326",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 55.1615,
+        "startY": 2198.0959,
+        "endX": 766.9041,
+        "endY": 2198.0959,
+        "width": 10,
+        "locked": false,
+        "zIndex": 326
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e354",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 1774.6744,
+        "startY": 499.6744,
+        "endX": 1710,
+        "endY": 435,
+        "width": 10,
+        "locked": false,
+        "zIndex": 354
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e377",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 2060,
+        "startY": 360,
+        "endX": 2060,
+        "endY": 260,
+        "width": 10,
+        "locked": false,
+        "zIndex": 377
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "07da057db7f4d1af",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO18",
+        "layerId": 1,
+        "startX": 1615,
+        "startY": 508.7859,
+        "endX": 1475,
+        "endY": 648.7859,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "04007f763d29c8a7",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO19",
+        "layerId": 1,
+        "startX": 805.4781,
+        "startY": 1449.5219,
+        "endX": 1135.4781,
+        "endY": 1449.5219,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "27d4a39ec3235f65",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO18",
+        "layerId": 1,
+        "startX": 1615,
+        "startY": 315,
+        "endX": 1615,
+        "endY": 508.7859,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "f5d82bb4d35508d1",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 736.9041,
+        "startY": 2198.0959,
+        "endX": 55.1615,
+        "endY": 2198.0959,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e277",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO18",
+        "layerId": 1,
+        "startX": 1615,
+        "startY": 1140,
+        "endX": 1205,
+        "endY": 1550,
+        "width": 10,
+        "locked": false,
+        "zIndex": 277
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "a42f685764cf56bb",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO21",
+        "layerId": 1,
+        "startX": 1990,
+        "startY": 2025,
+        "endX": 2285.34,
+        "endY": 2025,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "1207590918f76393",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2545,
+        "startY": 1280.63,
+        "endX": 2486.81,
+        "endY": 1280.63,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "[\"PAD_NET\",\"e70\",\"1\",\"e20\"]",
+      "type": "PAD_NET",
+      "backup": {
+        "partitionId": "",
+        "padNet": "GND",
+        "padLen": 0
+      },
+      "current_original": {
+        "partitionId": "",
+        "padNet": "GND",
+        "padLen": 0,
+        "attrsMap": {}
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "327bd1056b7aa462",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO9",
+        "layerId": 1,
+        "startX": 1838.4287,
+        "startY": 836.5713,
+        "endX": 1910,
+        "endY": 765,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "fbf18a225263f33c",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1263.8742,
+        "centerY": 3570,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "219aca34923d61f8",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO21",
+        "layerId": 2,
+        "startX": 1661.9968,
+        "startY": 1696.9968,
+        "endX": 1970,
+        "endY": 2005,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e58",
+      "type": "COMPONENT",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "layerId": 1,
+        "x": 845,
+        "y": 3585,
+        "angle": 0,
+        "attrs": {
+          "Supplier Part": "",
+          "Value": "100nF",
+          "Unique ID": "gge42",
+          "Reuse Block": "",
+          "Group ID": "",
+          "Channel ID": "$1e115"
+        },
+        "locked": false,
+        "zIndex": 58
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "layerId": 1,
+        "x": 850,
+        "y": 3575,
+        "angle": 0,
+        "attrs": {
+          "Supplier Part": "",
+          "Value": "100nF",
+          "Unique ID": "gge42",
+          "Reuse Block": "",
+          "Group ID": "",
+          "Channel ID": "$1e115"
+        },
+        "locked": false,
+        "zIndex": 58
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e797",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO23",
+        "layerId": 1,
+        "startX": 2175,
+        "startY": 1635,
+        "endX": 1710,
+        "endY": 2100,
+        "width": 10,
+        "locked": false,
+        "zIndex": 797
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "2a0c941a57d3054a",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "layerId": 1,
+        "startX": 2160,
+        "startY": 925,
+        "endX": 2160,
+        "endY": 260,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e638",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "FLASH_CS",
+        "layerId": 1,
+        "startX": 2370,
+        "startY": 1280.63,
+        "endX": 2445.63,
+        "endY": 1205,
+        "width": 10,
+        "locked": false,
+        "zIndex": 638
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e372",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO9",
+        "layerId": 2,
+        "startX": 1910,
+        "startY": 310,
+        "endX": 1910,
+        "endY": 340,
+        "width": 10,
+        "locked": false,
+        "zIndex": 372
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e286",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO17",
+        "layerId": 1,
+        "startX": 825,
+        "startY": 1610,
+        "endX": 1220,
+        "endY": 1610,
+        "width": 10,
+        "locked": false,
+        "zIndex": 286
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "49a868f11ae410a2",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1549.3245,
+        "centerY": 3650,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "ded5098cc70059fc",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 1860,
+        "startY": 720,
+        "endX": 1775,
+        "endY": 805,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "[\"PAD_NET\",\"e120\",\"2\",\"e11\"]",
+      "type": "PAD_NET",
+      "backup": {
+        "partitionId": "",
+        "padNet": "FLASH_CS",
+        "padLen": 0
+      },
+      "current_original": {
+        "partitionId": "",
+        "padNet": "FLASH_CS",
+        "padLen": 0,
+        "attrsMap": {}
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "21850a60a8ea2fbc",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1104.7748,
+        "centerY": 3610,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "79b8664d1091efec",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO9",
+        "layerId": 1,
+        "startX": 1838.4287,
+        "startY": 1476.5713,
+        "endX": 1838.4287,
+        "endY": 836.5713,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "bdc453a64aa4edf0",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO18",
+        "layerId": 1,
+        "startX": 835,
+        "startY": 1510,
+        "endX": 490,
+        "endY": 1855,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "4ba70cc08575694b",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO19",
+        "layerId": 1,
+        "startX": 1425,
+        "startY": 1160,
+        "endX": 1135.4781,
+        "endY": 1449.5219,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "22d48bc907776621",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO1",
+        "layerId": 1,
+        "startX": 2160,
+        "startY": 925,
+        "endX": 2105,
+        "endY": 980,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e1709",
+      "type": "VIA",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1248.5477,
+        "centerY": 2610,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "zIndex": 1709
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1250,
+        "centerY": 2600,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "d7e1aecbe83ec47b",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO0",
+        "layerId": 1,
+        "startX": 2160,
+        "startY": 1020,
+        "endX": 2160,
+        "endY": 1612.2657,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "1d4cf2354c87449d",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 1,
+        "startX": 2010,
+        "startY": 805,
+        "endX": 2010,
+        "endY": 310,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e392",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 2160,
+        "startY": 495,
+        "endX": 2160,
+        "endY": 260,
+        "width": 10,
+        "locked": false,
+        "zIndex": 392
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e306",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 1390,
+        "startY": 2085,
+        "endX": 2185,
+        "endY": 1290,
+        "width": 10,
+        "locked": false,
+        "zIndex": 306
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "9afc978ae0b832b1",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 1600,
+        "startY": 695,
+        "endX": 1600,
+        "endY": 1335,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e379",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 2,
+        "startX": 2010,
+        "startY": 310,
+        "endX": 2010,
+        "endY": 380,
+        "width": 10,
+        "locked": false,
+        "zIndex": 379
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "ae845ba3ffba8f76",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1509.5497,
+        "centerY": 3605,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "eb2b07da823159d0",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 1665,
+        "startY": 740,
+        "endX": 1665,
+        "endY": 1365,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "64d342bcdddeb362",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2345,
+        "startY": 1289.37,
+        "endX": 2345,
+        "endY": 1440,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "0e7236bb4f626a6a",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2365.63,
+        "startY": 1289.37,
+        "endX": 2345,
+        "endY": 1289.37,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e792",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO23",
+        "layerId": 1,
+        "startX": 1710,
+        "startY": 2100,
+        "endX": 1710,
+        "endY": 2470,
+        "width": 10,
+        "locked": false,
+        "zIndex": 792
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "80294a30f874afe7",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "3V3",
+        "layerId": 1,
+        "startX": 2450.2143,
+        "startY": 1307.44,
+        "endX": 2398.2843,
+        "endY": 1359.37,
+        "width": 20,
+        "locked": false,
+        "zIndex": -1
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e374",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO9",
+        "layerId": 2,
+        "startX": 2015,
+        "startY": 445,
+        "endX": 2015,
+        "endY": 515,
+        "width": 10,
+        "locked": false,
+        "zIndex": 374
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e539",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO21",
+        "layerId": 2,
+        "startX": 340,
+        "startY": 1696.9968,
+        "endX": 1636.9968,
+        "endY": 1696.9968,
+        "width": 10,
+        "locked": false,
+        "zIndex": 539
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e384",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 2,
+        "startX": 2125,
+        "startY": 495,
+        "endX": 2125,
+        "endY": 520,
+        "width": 10,
+        "locked": false,
+        "zIndex": 384
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "fabe7edb81d57cd4",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1628.8742,
+        "centerY": 3650,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e334",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 1,
+        "startX": 665,
+        "startY": 2500,
+        "endX": 1130,
+        "endY": 2035,
+        "width": 10,
+        "locked": false,
+        "zIndex": 334
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e122",
+      "type": "ATTR",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "parentId": "e120",
+        "layerId": 3,
+        "x": null,
+        "y": null,
+        "key": "Device",
+        "value": "a5c2f0d76dda8c25",
+        "keyVisible": false,
+        "valueVisible": false,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": false,
+        "italic": false,
+        "origin": "LEFT_BOTTOM",
+        "angle": 630,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 122
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e120",
+        "layerId": 3,
+        "x": null,
+        "y": null,
+        "key": "Device",
+        "value": "a5c2f0d76dda8c25",
+        "keyVisible": false,
+        "valueVisible": false,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 630,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 122,
+        "specialColor": null
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e348",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO0",
+        "layerId": 1,
+        "startX": 1220,
+        "startY": 2285,
+        "endX": 1430,
+        "endY": 2285,
+        "width": 10,
+        "locked": false,
+        "zIndex": 348
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e280",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO19",
+        "layerId": 1,
+        "startX": 755,
+        "startY": 1500,
+        "endX": 1205,
+        "endY": 1500,
+        "width": 10,
+        "locked": false,
+        "zIndex": 280
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "7c6ff7cd8705f55c",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1104.7748,
+        "centerY": 3570,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "5efdd4d1337fe7c9",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO12",
+        "layerId": 1,
+        "startX": 1810,
+        "startY": 310,
+        "endX": 1810,
+        "endY": 690,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e400",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO1",
+        "layerId": 2,
+        "startX": 2270,
+        "startY": 220,
+        "endX": 2270,
+        "endY": 555,
+        "width": 10,
+        "locked": false,
+        "zIndex": 400
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "[\"PAD_NET\",\"e70\",\"2\",\"e19\"]",
+      "type": "PAD_NET",
+      "backup": {
+        "partitionId": "",
+        "padNet": "3V3",
+        "padLen": 0
+      },
+      "current_original": {
+        "partitionId": "",
+        "padNet": "3V3",
+        "padLen": 0,
+        "attrsMap": {}
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e359",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO17",
+        "layerId": 1,
+        "startX": 1663.5827,
+        "startY": 256.4173,
+        "endX": 1663.5827,
+        "endY": 1166.4173,
+        "width": 10,
+        "locked": false,
+        "zIndex": 359
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e780",
+      "type": "VIA",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO23",
+        "ruleName": "",
+        "centerX": 2170,
+        "centerY": 1600,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "zIndex": 780
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "cd8d2bb46246b224",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO19",
+        "layerId": 1,
+        "startX": 1425,
+        "startY": 600,
+        "endX": 1425,
+        "endY": 1160,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "abfe5f4bc6396f52",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1549.3245,
+        "centerY": 3565,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e327",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 766.9041,
+        "startY": 2198.0959,
+        "endX": 1060,
+        "endY": 1905,
+        "width": 10,
+        "locked": false,
+        "zIndex": 327
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "61ae077f22b160fd",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1224.0993,
+        "centerY": 3610,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e386",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO3",
+        "layerId": 2,
+        "startX": 2110,
+        "startY": 310,
+        "endX": 2110,
+        "endY": 315,
+        "width": 10,
+        "locked": false,
+        "zIndex": 386
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e287",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO15",
+        "layerId": 1,
+        "startX": 45,
+        "startY": 2005,
+        "endX": 670,
+        "endY": 2005,
+        "width": 10,
+        "locked": false,
+        "zIndex": 287
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "7617439648ed7acf",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO0",
+        "layerId": 1,
+        "startX": 2210,
+        "startY": 970,
+        "endX": 2160,
+        "endY": 1020,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e387",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO3",
+        "layerId": 2,
+        "startX": 2110,
+        "startY": 315,
+        "endX": 2230,
+        "endY": 435,
+        "width": 10,
+        "locked": false,
+        "zIndex": 387
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e71",
+      "type": "ATTR",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "parentId": "e70",
+        "layerId": 3,
+        "x": null,
+        "y": null,
+        "key": "Footprint",
+        "value": "c5555808f571eea1",
+        "keyVisible": false,
+        "valueVisible": false,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": false,
+        "italic": false,
+        "origin": "LEFT_BOTTOM",
+        "angle": 270,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 71
+      },
+      "current_original": {
+        "partitionId": "",
+        "groupID": 0,
+        "parentId": "e70",
+        "layerId": 3,
+        "x": null,
+        "y": null,
+        "key": "Footprint",
+        "value": "c5555808f571eea1",
+        "keyVisible": false,
+        "valueVisible": false,
+        "fontFamily": "default",
+        "fontSize": 45,
+        "strokeWidth": 6,
+        "bold": 0,
+        "italic": 0,
+        "origin": "LEFT_BOTTOM",
+        "angle": 270,
+        "reverse": false,
+        "expansion": 0,
+        "mirror": false,
+        "locked": false,
+        "zIndex": 1,
+        "specialColor": null
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "1ece8cfa78c1d3e5",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO9",
+        "layerId": 1,
+        "startX": 1910,
+        "startY": 765,
+        "endX": 1910,
+        "endY": 310,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e331",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO8",
+        "layerId": 1,
+        "startX": 630,
+        "startY": 2465,
+        "endX": 1110,
+        "endY": 1985,
+        "width": 10,
+        "locked": false,
+        "zIndex": 331
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e368",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO11",
+        "layerId": 1,
+        "startX": 1970,
+        "startY": 360,
+        "endX": 1970,
+        "endY": 1270,
+        "width": 10,
+        "locked": false,
+        "zIndex": 368
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "c33f49039ed90e75",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "FLASH_CS",
+        "layerId": 1,
+        "startX": 2445.63,
+        "startY": 1205,
+        "endX": 2681.89,
+        "endY": 1205,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e324",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO12",
+        "layerId": 1,
+        "startX": 735,
+        "startY": 2165,
+        "endX": 1030,
+        "endY": 1870,
+        "width": 10,
+        "locked": false,
+        "zIndex": 324
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e307",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 2185,
+        "startY": 1290,
+        "endX": 2185,
+        "endY": 520,
+        "width": 10,
+        "locked": false,
+        "zIndex": 307
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "6b56209a6a10fb3a",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO23",
+        "layerId": 1,
+        "startX": 1910,
+        "startY": 1945,
+        "endX": 1710,
+        "endY": 2145,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "d10db01edf8cca23",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1430,
+        "centerY": 3605,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e351",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO19",
+        "layerId": 1,
+        "startX": 1560,
+        "startY": 260,
+        "endX": 1560,
+        "endY": 1145,
+        "width": 10,
+        "locked": false,
+        "zIndex": 351
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "ba90d2b78cb77400",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO9",
+        "layerId": 1,
+        "startX": 1125,
+        "startY": 1905,
+        "endX": 1410,
+        "endY": 1905,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "d42f47da6ca263eb",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO17",
+        "layerId": 1,
+        "startX": 530,
+        "startY": 1905,
+        "endX": 865,
+        "endY": 1570,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "d2f24241f9231170",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "User_3V3_IO1",
+        "layerId": 1,
+        "startX": 2210,
+        "startY": 210,
+        "endX": 2160,
+        "endY": 260,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e319",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 1285,
+        "startY": 1805,
+        "endX": 1867.0614,
+        "endY": 1222.9386,
+        "width": 10,
+        "locked": false,
+        "zIndex": 319
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e320",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO13",
+        "layerId": 1,
+        "startX": 45,
+        "startY": 2105,
+        "endX": 715,
+        "endY": 2105,
+        "width": 10,
+        "locked": false,
+        "zIndex": 320
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "7dcae2739fd56060",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO7",
+        "layerId": 1,
+        "startX": 1947.023,
+        "startY": 1472.977,
+        "endX": 1947.023,
+        "endY": 867.977,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "a296205594ee6e09",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1065,
+        "centerY": 3570,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "1b785808fe5a9084",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1263.8742,
+        "centerY": 3655,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e299",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO9",
+        "layerId": 1,
+        "startX": 2020,
+        "startY": 1295,
+        "endX": 1367.5,
+        "endY": 1947.5,
+        "width": 10,
+        "locked": false,
+        "zIndex": 299
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "16d9c6fd701f4f0a",
+      "type": "LINE",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO17",
+        "layerId": 1,
+        "startX": 1535,
+        "startY": 1285,
+        "endX": 1535,
+        "endY": 652.5646,
+        "width": 10,
+        "locked": false,
+        "zIndex": -1
+      }
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e371",
+      "type": "VIA",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO9",
+        "ruleName": "",
+        "centerX": 2020,
+        "centerY": 515,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "zIndex": 371
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "e340",
+      "type": "LINE",
+      "backup": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "USER_3V3_IO5",
+        "layerId": 1,
+        "startX": 1150,
+        "startY": 2085,
+        "endX": 1390,
+        "endY": 2085,
+        "width": 10,
+        "locked": false,
+        "zIndex": 340
+      },
+      "current_original": null
+    },
+    {
+      "doc": "4f72a239a6e0e4ad56712a4bf96f8464",
+      "id": "4a53a370e1e4aee1",
+      "type": "VIA",
+      "backup": null,
+      "current_original": {
+        "partitionId": "",
+        "groupId": 0,
+        "netName": "GND",
+        "ruleName": "",
+        "centerX": 1430,
+        "centerY": 3650,
+        "holeDiameter": 12.0078,
+        "viaDiameter": 24.0158,
+        "viaType": "NORMAL",
+        "topSolderExpansion": null,
+        "bottomSolderExpansion": null,
+        "locked": false,
+        "unusedInnerLayers": []
+      }
+    }
+  ]
+}

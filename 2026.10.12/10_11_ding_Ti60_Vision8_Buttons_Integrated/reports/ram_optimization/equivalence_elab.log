@@ -1,0 +1,33 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_ram_equivalence -s tb_ram_equivalence --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.video_delay_baseline(BITS=19)
+Compiling module work.video_delay(BITS=19)
+Compiling module work.video_delay_baseline(BITS=9,LATE...
+Compiling module work.video_delay(BITS=9,LATENCY=4963)
+Compiling module work.video_delay_baseline(BITS=8,LATE...
+Compiling module work.video_delay(BITS=8,LATENCY=6617)
+Compiling module work.video_delay_baseline(BITS=8,LATE...
+Compiling module work.video_delay(BITS=8,LATENCY=1025)
+Compiling module work.video_delay_baseline(BITS=3,LATE...
+Compiling module work.video_delay(BITS=3,LATENCY=3309)
+Compiling module work.menu_glyph_rom_baseline
+Compiling module work.menu_glyph_rom
+Compiling module work.vision6_glyph_rom_baseline
+Compiling module work.vision6_glyph_rom
+Compiling module work.tb_ram_equivalence
+Built simulation snapshot tb_ram_equivalence
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision6_RAM_Optimized/xsim.dir/tb_ram_equivalence/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct 11 15:58:45 2026...

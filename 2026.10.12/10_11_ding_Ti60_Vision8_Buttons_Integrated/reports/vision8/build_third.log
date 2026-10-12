@@ -1,0 +1,39 @@
+WARNING: cannot find correct IV value
+Running: efx_run_map.py Ti60_Demo --family Titanium --device Ti60F225 --project_xml D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\Ti60_Demo.xml --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\W0_FIFO --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\R0_FIFO --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\dsi_tx --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\csi_rx --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\DdrCtrl --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\W0_FIFO_8 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\W0_FIFO_64 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\FIFO_W48R24 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\R0_FIFO_8 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\R0_FIFO_16 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\W0_FIFO_32 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\W0_FIFO_16 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\BlockRam90x1024 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\FIFO36x512 --output_dir outflow --opt root=example_top --opt veri_options=verilog_mode=verilog_2k,vhdl_mode=vhdl_2008 work-dir=work_syn write_efx_verilog=on I=ip/W0_FIFO I=src/parallel I=ip/R0_FIFO I=ip/dsi_tx I=ip/csi_rx I=ip/DdrCtrl I=ip/W0_FIFO_8 I=ip/W0_FIFO_64 I=ip/FIFO_W48R24 I=ip/R0_FIFO_8 I=ip/R0_FIFO_16 I=ip/W0_FIFO_32 I=ip/W0_FIFO_16 I=ip/BlockRam90x1024 I=ip/FIFO36x512
+   map :	PASS 
+Running: efx_run_pt_unified.py Ti60_Demo Titanium Ti60F225 --output_dir outflow --timing_model C4 --project_xml Ti60_Demo.xml
+   interface :	PASS 
+Running: efx_run_pnr.py Ti60_Demo --prj --family Titanium --device Ti60F225 --timing_model C4 --sim --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\W0_FIFO --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\R0_FIFO --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\dsi_tx --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\csi_rx --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\DdrCtrl --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\W0_FIFO_8 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\W0_FIFO_64 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\FIFO_W48R24 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\R0_FIFO_8 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\R0_FIFO_16 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\W0_FIFO_32 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\W0_FIFO_16 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\BlockRam90x1024 --dir D:\yilingsi_fpga\Efinity_Project\2026.10.11\10_11_liu_Ti60_Vision8_Buttons_Integrated\ip\FIFO36x512 --output_dir outflow --opt sdc_file=Ti60_Demo.pt.sdc --opt work_dir=work_pnr optimization_level=TIMING_2 seed=2 placer_effort_level=4 max_threads=32 print_critical_path=10 beneficial_skew=on
+   pnr :	PASS 
+Running: efx_run_pgm.py Ti60_Demo --family Titanium --device Ti60F225 --output_dir outflow --opt mode=active width=4 enable_roms=on spi_low_power_mode=off io_weak_pullup=on oscillator_clock_divider=DIV4 enable_crc_check=on bitstream_compression=on active_capture_clk_edge=negedge release_tri_then_reset=on enable_external_master_clock=off jtag_usercode=0xFFFFFFFF four_byte_addressing=off
+   pgm :	PASS 
+Running: export_bitstream.py hex_to_bin outflow\Ti60_Demo.bit outflow\Ti60_Demo.bit.bin
+   export_bitstream :	PASS 
+Running: export_bitstream.py hex_to_bin outflow\Ti60_Demo.hex outflow\Ti60_Demo.hex.bin
+   export_bitstream :	PASS 
+{
+  "resources": {
+    "XLRs": {
+      "used": 45157,
+      "available": 60800
+    },
+    "Memory Blocks": {
+      "used": 222,
+      "available": 256
+    },
+    "DSP Blocks": {
+      "used": 35,
+      "available": 160
+    },
+    "Global Clocks (GBUF)": {
+      "used": 14,
+      "available": 32
+    }
+  },
+  "min_setup_slack_ns": 0.303,
+  "min_hold_slack_ns": 0.026,
+  "bit_sha256": "d7c41a1307c5477873903926e8f2889ef9127f492825653a0e4ab412fa685630",
+  "hex_sha256": "ef1d2d8812f19b8f23c37b79d7e0ac8c899dcb8a8c9eaef0cddb673278f2e4bf",
+  "physical_board_test": "not performed; user must confirm camera video and diagnostic lights"
+}
+New bitstream generated. This script does not program hardware.

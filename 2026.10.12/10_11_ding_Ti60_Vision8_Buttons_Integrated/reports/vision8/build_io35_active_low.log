@@ -1,0 +1,29 @@
+Python path configuration:
+  PYTHONHOME = (not set)
+  PYTHONPATH = (not set)
+  program name = 'C:\Efinity\2025.1\python311\bin\python.exe'
+  isolated = 0
+  environment = 1
+  user site = 1
+  safe_path = 0
+  import site = 1
+  is in build tree = 1
+  stdlib dir = 'C:\Efinity\2025.1\Lib'
+  sys._base_executable = 'C:\\Efinity\\2025.1\\python311\\bin\\python.exe'
+  sys.base_prefix = 'C:\\Efinity\\2025.1'
+  sys.base_exec_prefix = 'C:\\Efinity\\2025.1'
+  sys.platlibdir = 'DLLs'
+  sys.executable = 'C:\\Efinity\\2025.1\\python311\\bin\\python.exe'
+  sys.prefix = 'C:\\Efinity\\2025.1'
+  sys.exec_prefix = 'C:\\Efinity\\2025.1'
+  sys.path = [
+    'C:\\Efinity\\2025.1\\python311\\bin\\python311.zip',
+    'C:\\Efinity\\2025.1\\python311\\bin',
+    'C:\\Efinity\\2025.1\\Lib',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x0000c210 (most recent call first):
+  <no Python frame>

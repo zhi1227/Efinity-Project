@@ -1,0 +1,28 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_h5_raster -s tb_h5_raster --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.raster_xy(WIDTH=320)
+Compiling module work.gesture_wizard(COUNTDOWN_FRAMES=...
+Compiling module work.gesture_skin_learn(WIDTH=320,HEI...
+Compiling module work.ep1_window7(WIDTH=320)
+Compiling module work.ep1_disk
+Compiling module work.line_buffer_3x3(WIDTH=320,DWIDTH...
+Compiling module work.ep1_morph(DILATE=1)
+Compiling module work.ep1_morph
+Compiling module work.video_delay(BITS=3,LATENCY=2017)
+Compiling module work.gesture_sample16
+Compiling module work.gesture_palm_evidence
+Compiling module work.gesture_templates
+Compiling module work.gesture_stabilizer(WIDTH=320,HEI...
+Compiling module work.gesture_wave(WIDTH=320,HEIGHT=24...
+Compiling module work.ep1_classify
+Compiling module work.ep1_gesture(WIDTH=320,HEIGHT=240...
+Compiling module work.gesture_branch(WIDTH=320,HEIGHT=...
+Compiling module work.tb_h5_raster
+Built simulation snapshot tb_h5_raster

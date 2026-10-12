@@ -24,6 +24,7 @@ incremental_db/
 *.wdb
 transcript
 __pycache__/
+*.pyc
 .Xil/
 .workbuddy/
 xsim.dir/
@@ -53,6 +54,10 @@ sim_modular/
 
 # Quartus compilation outputs for bundled reference projects
 /2026.10.01/FPGA-Edge-Detection-Project1/par/output_files/
+
+# Temporary simulation runs and dated snapshots in the 10.12 project drop
+/2026.10.12/10_11_ding_Ti60_Vision8_Buttons_Integrated/backups/
+/2026.10.12/10_11_ding_Ti60_Vision8_Buttons_Integrated/sim_*/
 
 # Keep the tested Ti60 bitstream and timing report, not intermediate netlists
 /Ti60F225_GitHub_FPGA_Sobel_Port/outflow/*

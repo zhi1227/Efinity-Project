@@ -1,0 +1,2433 @@
+{
+  "conflicting_net_labels": [],
+  "schematic_pcb_mismatches": [
+    {
+      "component": "3V3",
+      "pin": "1",
+      "pcb": "$1N39",
+      "schematic": []
+    },
+    {
+      "component": "R1",
+      "pin": "1",
+      "pcb": "$1N39",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "3",
+      "pcb": "$1N165",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "5",
+      "pcb": "$1N153",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "7",
+      "pcb": "$1N164",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "9",
+      "pcb": "$1N162",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "18",
+      "pcb": "$1N100",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "16",
+      "pcb": "$1N159",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "14",
+      "pcb": "$1N155",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "12",
+      "pcb": "$1N157",
+      "schematic": []
+    },
+    {
+      "component": "U2",
+      "pin": "16",
+      "pcb": "$1N110",
+      "schematic": []
+    },
+    {
+      "component": "U2",
+      "pin": "14",
+      "pcb": "$1N121",
+      "schematic": []
+    },
+    {
+      "component": "R12",
+      "pin": "1",
+      "pcb": "$1N110",
+      "schematic": []
+    },
+    {
+      "component": "R13",
+      "pin": "1",
+      "pcb": "$1N121",
+      "schematic": []
+    },
+    {
+      "component": "C1",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C1",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C2",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C2",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C3",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C3",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C4",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C4",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C5",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C5",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C6",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C6",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C7",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C7",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C8",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C8",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "R3",
+      "pin": "1",
+      "pcb": "$1N100",
+      "schematic": []
+    },
+    {
+      "component": "R4",
+      "pin": "1",
+      "pcb": "$1N159",
+      "schematic": []
+    },
+    {
+      "component": "R5",
+      "pin": "1",
+      "pcb": "$1N155",
+      "schematic": []
+    },
+    {
+      "component": "R6",
+      "pin": "1",
+      "pcb": "$1N157",
+      "schematic": []
+    },
+    {
+      "component": "R7",
+      "pin": "2",
+      "pcb": "$1N162",
+      "schematic": []
+    },
+    {
+      "component": "R8",
+      "pin": "2",
+      "pcb": "$1N164",
+      "schematic": []
+    },
+    {
+      "component": "R9",
+      "pin": "2",
+      "pcb": "$1N153",
+      "schematic": []
+    },
+    {
+      "component": "R10",
+      "pin": "2",
+      "pcb": "$1N165",
+      "schematic": []
+    },
+    {
+      "component": "R14",
+      "pin": "2",
+      "pcb": "EPD_CS",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "R14",
+      "pin": "1",
+      "pcb": "3V3",
+      "schematic": [
+        "EPD_CS"
+      ]
+    },
+    {
+      "component": "R15",
+      "pin": "2",
+      "pcb": "EPD_RST",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "R15",
+      "pin": "1",
+      "pcb": "3V3",
+      "schematic": [
+        "EPD_RST"
+      ]
+    },
+    {
+      "component": "R17",
+      "pin": "2",
+      "pcb": "FLASH_CS",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "R17",
+      "pin": "1",
+      "pcb": "3V3",
+      "schematic": [
+        "FLASH_CS"
+      ]
+    },
+    {
+      "component": "R18",
+      "pin": "2",
+      "pcb": "EPD_BUSY",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "R18",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "EPD_BUSY"
+      ]
+    },
+    {
+      "component": "R19",
+      "pin": "2",
+      "pcb": "FLASH_MISO",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "R19",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "FLASH_MISO"
+      ]
+    },
+    {
+      "component": "5V",
+      "pin": "1",
+      "pcb": "$1N253",
+      "schematic": []
+    },
+    {
+      "component": "P2",
+      "pin": "1",
+      "pcb": "5V",
+      "schematic": []
+    },
+    {
+      "component": "P2",
+      "pin": "3",
+      "pcb": "5V",
+      "schematic": []
+    },
+    {
+      "component": "P2",
+      "pin": "4",
+      "pcb": "GND",
+      "schematic": []
+    },
+    {
+      "component": "R20",
+      "pin": "1",
+      "pcb": "$1N253",
+      "schematic": []
+    }
+  ],
+  "pins": [
+    {
+      "component": "J1",
+      "pin": "1",
+      "pcb": "USER_3V3_IO0",
+      "schematic": [
+        "USER_3V3_IO0"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "3",
+      "pcb": "USER_3V3_IO2",
+      "schematic": [
+        "USER_3V3_IO2"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "5",
+      "pcb": "USER_3V3_IO4",
+      "schematic": [
+        "USER_3V3_IO4"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "7",
+      "pcb": "USER_3V3_IO6",
+      "schematic": [
+        "USER_3V3_IO6"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "9",
+      "pcb": "USER_3V3_IO8",
+      "schematic": [
+        "USER_3V3_IO8"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "11",
+      "pcb": "5V",
+      "schematic": [
+        "5V"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "13",
+      "pcb": "USER_3V3_IO10",
+      "schematic": [
+        "USER_3V3_IO10"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "15",
+      "pcb": "USER_3V3_IO12",
+      "schematic": [
+        "USER_3V3_IO12"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "19",
+      "pcb": "USER_3V3_IO16",
+      "schematic": [
+        "USER_3V3_IO16"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "21",
+      "pcb": "USER_3V3_IO18",
+      "schematic": [
+        "USER_3V3_IO18"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "23",
+      "pcb": "USER_3V3_IO20",
+      "schematic": [
+        "USER_3V3_IO20"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "25",
+      "pcb": "USER_3V3_IO22",
+      "schematic": [
+        "USER_3V3_IO22"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "27",
+      "pcb": "USER_3V3_IO24",
+      "schematic": [
+        "USER_3V3_IO24"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "29",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "31",
+      "pcb": "USER_3V3_IO26",
+      "schematic": [
+        "USER_3V3_IO26"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "33",
+      "pcb": "USER_3V3_IO28",
+      "schematic": [
+        "USER_3V3_IO28"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "35",
+      "pcb": "USER_3V3_IO30",
+      "schematic": [
+        "USER_3V3_IO30"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "37",
+      "pcb": "USER_3V3_IO32",
+      "schematic": [
+        "USER_3V3_IO32"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "39",
+      "pcb": "USER_3V3_IO34",
+      "schematic": [
+        "USER_3V3_IO34"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "2",
+      "pcb": "USER_3V3_IO1",
+      "schematic": [
+        "USER_3V3_IO1"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "4",
+      "pcb": "USER_3V3_IO3",
+      "schematic": [
+        "USER_3V3_IO3"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "6",
+      "pcb": "USER_3V3_IO5",
+      "schematic": [
+        "USER_3V3_IO5"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "8",
+      "pcb": "USER_3V3_IO7",
+      "schematic": [
+        "USER_3V3_IO7"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "10",
+      "pcb": "USER_3V3_IO9",
+      "schematic": [
+        "USER_3V3_IO9"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "12",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "14",
+      "pcb": "USER_3V3_IO11",
+      "schematic": [
+        "USER_3V3_IO11"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "16",
+      "pcb": "USER_3V3_IO13",
+      "schematic": [
+        "USER_3V3_IO13"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "18",
+      "pcb": "USER_3V3_IO15",
+      "schematic": [
+        "USER_3V3_IO15"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "20",
+      "pcb": "USER_3V3_IO17",
+      "schematic": [
+        "USER_3V3_IO17"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "22",
+      "pcb": "USER_3V3_IO19",
+      "schematic": [
+        "USER_3V3_IO19"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "24",
+      "pcb": "USER_3V3_IO21",
+      "schematic": [
+        "USER_3V3_IO21"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "26",
+      "pcb": "USER_3V3_IO23",
+      "schematic": [
+        "USER_3V3_IO23"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "28",
+      "pcb": "USER_3V3_IO25",
+      "schematic": [
+        "USER_3V3_IO25"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "30",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "32",
+      "pcb": "USER_3V3_IO27",
+      "schematic": [
+        "USER_3V3_IO27"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "34",
+      "pcb": "USER_3V3_IO29",
+      "schematic": [
+        "USER_3V3_IO29"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "36",
+      "pcb": "USER_3V3_IO31",
+      "schematic": [
+        "USER_3V3_IO31"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "38",
+      "pcb": "USER_3V3_IO33",
+      "schematic": [
+        "USER_3V3_IO33"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "40",
+      "pcb": "USER_3V3_IO35",
+      "schematic": [
+        "USER_3V3_IO35"
+      ]
+    },
+    {
+      "component": "J1",
+      "pin": "17",
+      "pcb": "USER_3V3_IO14",
+      "schematic": [
+        "USER_3V3_IO14"
+      ]
+    },
+    {
+      "component": "3V3",
+      "pin": "1",
+      "pcb": "$1N39",
+      "schematic": []
+    },
+    {
+      "component": "3V3",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "J3",
+      "pin": "6",
+      "pcb": "FLASH_MOSI",
+      "schematic": [
+        "FLASH_MOSI"
+      ]
+    },
+    {
+      "component": "J3",
+      "pin": "5",
+      "pcb": "FLASH_CLK",
+      "schematic": [
+        "FLASH_CLK"
+      ]
+    },
+    {
+      "component": "J3",
+      "pin": "4",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "J3",
+      "pin": "3",
+      "pcb": "FLASH_MISO",
+      "schematic": [
+        "FLASH_MISO"
+      ]
+    },
+    {
+      "component": "J3",
+      "pin": "2",
+      "pcb": "FLASH_CS",
+      "schematic": [
+        "FLASH_CS"
+      ]
+    },
+    {
+      "component": "J3",
+      "pin": "1",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "1",
+      "pcb": "USER_3V3_IO0",
+      "schematic": [
+        "USER_3V3_IO0"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "2",
+      "pcb": "USER_3V3_IO1",
+      "schematic": [
+        "USER_3V3_IO1"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "3",
+      "pcb": "USER_3V3_IO3",
+      "schematic": [
+        "USER_3V3_IO3"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "4",
+      "pcb": "USER_3V3_IO5",
+      "schematic": [
+        "USER_3V3_IO5"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "5",
+      "pcb": "USER_3V3_IO7",
+      "schematic": [
+        "USER_3V3_IO7"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "6",
+      "pcb": "USER_3V3_IO8",
+      "schematic": [
+        "USER_3V3_IO8"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "7",
+      "pcb": "USER_3V3_IO9",
+      "schematic": [
+        "USER_3V3_IO9"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "8",
+      "pcb": "USER_3V3_IO11",
+      "schematic": [
+        "USER_3V3_IO11"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "9",
+      "pcb": "USER_3V3_IO12",
+      "schematic": [
+        "USER_3V3_IO12"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "10",
+      "pcb": "USER_3V3_IO13",
+      "schematic": [
+        "USER_3V3_IO13"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "11",
+      "pcb": "USER_3V3_IO15",
+      "schematic": [
+        "USER_3V3_IO15"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "12",
+      "pcb": "USER_3V3_IO17",
+      "schematic": [
+        "USER_3V3_IO17"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "13",
+      "pcb": "USER_3V3_IO18",
+      "schematic": [
+        "USER_3V3_IO18"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "14",
+      "pcb": "USER_3V3_IO19",
+      "schematic": [
+        "USER_3V3_IO19"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "15",
+      "pcb": "USER_3V3_IO25",
+      "schematic": [
+        "USER_3V3_IO25"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "16",
+      "pcb": "USER_3V3_IO26",
+      "schematic": [
+        "USER_3V3_IO26"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "17",
+      "pcb": "USER_3V3_IO27",
+      "schematic": [
+        "USER_3V3_IO27"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "18",
+      "pcb": "USER_3V3_IO28",
+      "schematic": [
+        "USER_3V3_IO28"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "19",
+      "pcb": "USER_3V3_IO30",
+      "schematic": [
+        "USER_3V3_IO30"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "20",
+      "pcb": "USER_3V3_IO29",
+      "schematic": [
+        "USER_3V3_IO29"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "21",
+      "pcb": "USER_3V3_IO31",
+      "schematic": [
+        "USER_3V3_IO31"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "22",
+      "pcb": "USER_3V3_IO34",
+      "schematic": [
+        "USER_3V3_IO34"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "23",
+      "pcb": "USER_3V3_IO33",
+      "schematic": [
+        "USER_3V3_IO33"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "24",
+      "pcb": "USER_3V3_IO35",
+      "schematic": [
+        "USER_3V3_IO35"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "25",
+      "pcb": "USER_3V3_IO32",
+      "schematic": [
+        "USER_3V3_IO32"
+      ]
+    },
+    {
+      "component": "J4",
+      "pin": "26",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "R1",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "R1",
+      "pin": "1",
+      "pcb": "$1N39",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "1",
+      "pcb": "BUF_NOE",
+      "schematic": [
+        "BUF_NOE"
+      ]
+    },
+    {
+      "component": "U1",
+      "pin": "2",
+      "pcb": "USER_3V3_IO14",
+      "schematic": [
+        "USER_3V3_IO14"
+      ]
+    },
+    {
+      "component": "U1",
+      "pin": "3",
+      "pcb": "$1N165",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "4",
+      "pcb": "USER_3V3_IO2",
+      "schematic": [
+        "USER_3V3_IO2"
+      ]
+    },
+    {
+      "component": "U1",
+      "pin": "5",
+      "pcb": "$1N153",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "6",
+      "pcb": "USER_3V3_IO4",
+      "schematic": [
+        "USER_3V3_IO4"
+      ]
+    },
+    {
+      "component": "U1",
+      "pin": "7",
+      "pcb": "$1N164",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "8",
+      "pcb": "USER_3V3_IO6",
+      "schematic": [
+        "USER_3V3_IO6"
+      ]
+    },
+    {
+      "component": "U1",
+      "pin": "9",
+      "pcb": "$1N162",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "10",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "U1",
+      "pin": "20",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "U1",
+      "pin": "19",
+      "pcb": "BUF_NOE",
+      "schematic": [
+        "BUF_NOE"
+      ]
+    },
+    {
+      "component": "U1",
+      "pin": "18",
+      "pcb": "$1N100",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "17",
+      "pcb": "USER_3V3_IO20",
+      "schematic": [
+        "USER_3V3_IO20"
+      ]
+    },
+    {
+      "component": "U1",
+      "pin": "16",
+      "pcb": "$1N159",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "15",
+      "pcb": "USER_3V3_IO23",
+      "schematic": [
+        "USER_3V3_IO23"
+      ]
+    },
+    {
+      "component": "U1",
+      "pin": "14",
+      "pcb": "$1N155",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "13",
+      "pcb": "USER_3V3_IO24",
+      "schematic": [
+        "USER_3V3_IO24"
+      ]
+    },
+    {
+      "component": "U1",
+      "pin": "12",
+      "pcb": "$1N157",
+      "schematic": []
+    },
+    {
+      "component": "U1",
+      "pin": "11",
+      "pcb": "USER_3V3_IO16",
+      "schematic": [
+        "USER_3V3_IO16"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "1",
+      "pcb": "BUF_NOE",
+      "schematic": [
+        "BUF_NOE"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "2",
+      "pcb": "EPD2_BUSY",
+      "schematic": [
+        "EPD2_BUSY"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "3",
+      "pcb": "",
+      "schematic": []
+    },
+    {
+      "component": "U2",
+      "pin": "4",
+      "pcb": "EPD_BUSY",
+      "schematic": [
+        "EPD_BUSY"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "5",
+      "pcb": "",
+      "schematic": []
+    },
+    {
+      "component": "U2",
+      "pin": "6",
+      "pcb": "FLASH_MISO",
+      "schematic": [
+        "FLASH_MISO"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "7",
+      "pcb": "",
+      "schematic": []
+    },
+    {
+      "component": "U2",
+      "pin": "8",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "9",
+      "pcb": "",
+      "schematic": []
+    },
+    {
+      "component": "U2",
+      "pin": "10",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "20",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "19",
+      "pcb": "BUF_NOE",
+      "schematic": [
+        "BUF_NOE"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "18",
+      "pcb": "EPD2_BUSY_BUF",
+      "schematic": [
+        "EPD2_BUSY_BUF"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "17",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "16",
+      "pcb": "$1N110",
+      "schematic": []
+    },
+    {
+      "component": "U2",
+      "pin": "15",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "14",
+      "pcb": "$1N121",
+      "schematic": []
+    },
+    {
+      "component": "U2",
+      "pin": "13",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "U2",
+      "pin": "12",
+      "pcb": "",
+      "schematic": []
+    },
+    {
+      "component": "U2",
+      "pin": "11",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "R2",
+      "pin": "2",
+      "pcb": "BUF_NOE",
+      "schematic": [
+        "BUF_NOE"
+      ]
+    },
+    {
+      "component": "R2",
+      "pin": "1",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "R12",
+      "pin": "2",
+      "pcb": "USER_3V3_IO10",
+      "schematic": [
+        "USER_3V3_IO10"
+      ]
+    },
+    {
+      "component": "R12",
+      "pin": "1",
+      "pcb": "$1N110",
+      "schematic": []
+    },
+    {
+      "component": "R13",
+      "pin": "2",
+      "pcb": "USER_3V3_IO21",
+      "schematic": [
+        "USER_3V3_IO21"
+      ]
+    },
+    {
+      "component": "R13",
+      "pin": "1",
+      "pcb": "$1N121",
+      "schematic": []
+    },
+    {
+      "component": "C1",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C1",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C2",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C2",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C3",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C3",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C4",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C4",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C5",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C5",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C6",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C6",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C7",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C7",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C8",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C8",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "CN1",
+      "pin": "1",
+      "pcb": "BUF_NOE",
+      "schematic": [
+        "BUF_NOE"
+      ]
+    },
+    {
+      "component": "CN1",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "R3",
+      "pin": "2",
+      "pcb": "EPD_DIN",
+      "schematic": [
+        "EPD_DIN"
+      ]
+    },
+    {
+      "component": "R3",
+      "pin": "1",
+      "pcb": "$1N100",
+      "schematic": []
+    },
+    {
+      "component": "R4",
+      "pin": "2",
+      "pcb": "EPD_CLK",
+      "schematic": [
+        "EPD_CLK"
+      ]
+    },
+    {
+      "component": "R4",
+      "pin": "1",
+      "pcb": "$1N159",
+      "schematic": []
+    },
+    {
+      "component": "R5",
+      "pin": "2",
+      "pcb": "EPD_CS",
+      "schematic": [
+        "EPD_CS"
+      ]
+    },
+    {
+      "component": "R5",
+      "pin": "1",
+      "pcb": "$1N155",
+      "schematic": []
+    },
+    {
+      "component": "R6",
+      "pin": "2",
+      "pcb": "EPD_DC",
+      "schematic": [
+        "EPD_DC"
+      ]
+    },
+    {
+      "component": "R6",
+      "pin": "1",
+      "pcb": "$1N157",
+      "schematic": []
+    },
+    {
+      "component": "R7",
+      "pin": "2",
+      "pcb": "$1N162",
+      "schematic": []
+    },
+    {
+      "component": "R7",
+      "pin": "1",
+      "pcb": "EPD_RST",
+      "schematic": [
+        "EPD_RST"
+      ]
+    },
+    {
+      "component": "R8",
+      "pin": "2",
+      "pcb": "$1N164",
+      "schematic": []
+    },
+    {
+      "component": "R8",
+      "pin": "1",
+      "pcb": "FLASH_CS",
+      "schematic": [
+        "FLASH_CS"
+      ]
+    },
+    {
+      "component": "R9",
+      "pin": "2",
+      "pcb": "$1N153",
+      "schematic": []
+    },
+    {
+      "component": "R9",
+      "pin": "1",
+      "pcb": "FLASH_CLK",
+      "schematic": [
+        "FLASH_CLK"
+      ]
+    },
+    {
+      "component": "R10",
+      "pin": "2",
+      "pcb": "$1N165",
+      "schematic": []
+    },
+    {
+      "component": "R10",
+      "pin": "1",
+      "pcb": "FLASH_MOSI",
+      "schematic": [
+        "FLASH_MOSI"
+      ]
+    },
+    {
+      "component": "R14",
+      "pin": "2",
+      "pcb": "EPD_CS",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "R14",
+      "pin": "1",
+      "pcb": "3V3",
+      "schematic": [
+        "EPD_CS"
+      ]
+    },
+    {
+      "component": "R15",
+      "pin": "2",
+      "pcb": "EPD_RST",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "R15",
+      "pin": "1",
+      "pcb": "3V3",
+      "schematic": [
+        "EPD_RST"
+      ]
+    },
+    {
+      "component": "R17",
+      "pin": "2",
+      "pcb": "FLASH_CS",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "R17",
+      "pin": "1",
+      "pcb": "3V3",
+      "schematic": [
+        "FLASH_CS"
+      ]
+    },
+    {
+      "component": "R18",
+      "pin": "2",
+      "pcb": "EPD_BUSY",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "R18",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "EPD_BUSY"
+      ]
+    },
+    {
+      "component": "R19",
+      "pin": "2",
+      "pcb": "FLASH_MISO",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "R19",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "FLASH_MISO"
+      ]
+    },
+    {
+      "component": "5V",
+      "pin": "1",
+      "pcb": "$1N253",
+      "schematic": []
+    },
+    {
+      "component": "5V",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "J6",
+      "pin": "1",
+      "pcb": "5V",
+      "schematic": [
+        "5V"
+      ]
+    },
+    {
+      "component": "J6",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "J6",
+      "pin": "3",
+      "pcb": "USER_3V3_IO28",
+      "schematic": [
+        "USER_3V3_IO28"
+      ]
+    },
+    {
+      "component": "J7",
+      "pin": "1",
+      "pcb": "5V",
+      "schematic": [
+        "5V"
+      ]
+    },
+    {
+      "component": "J7",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "J7",
+      "pin": "3",
+      "pcb": "USER_3V3_IO29",
+      "schematic": [
+        "USER_3V3_IO29"
+      ]
+    },
+    {
+      "component": "J8",
+      "pin": "1",
+      "pcb": "5V",
+      "schematic": [
+        "5V"
+      ]
+    },
+    {
+      "component": "J8",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "J8",
+      "pin": "3",
+      "pcb": "USER_3V3_IO34",
+      "schematic": [
+        "USER_3V3_IO34"
+      ]
+    },
+    {
+      "component": "J9",
+      "pin": "1",
+      "pcb": "5V",
+      "schematic": [
+        "5V"
+      ]
+    },
+    {
+      "component": "J9",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "J9",
+      "pin": "3",
+      "pcb": "USER_3V3_IO35",
+      "schematic": [
+        "USER_3V3_IO35"
+      ]
+    },
+    {
+      "component": "P1",
+      "pin": "1",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "P1",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "P1",
+      "pin": "3",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "P1",
+      "pin": "4",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "P2",
+      "pin": "1",
+      "pcb": "5V",
+      "schematic": []
+    },
+    {
+      "component": "P2",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "P2",
+      "pin": "3",
+      "pcb": "5V",
+      "schematic": []
+    },
+    {
+      "component": "P2",
+      "pin": "4",
+      "pcb": "GND",
+      "schematic": []
+    },
+    {
+      "component": "R20",
+      "pin": "2",
+      "pcb": "5V",
+      "schematic": [
+        "5V"
+      ]
+    },
+    {
+      "component": "R20",
+      "pin": "1",
+      "pcb": "$1N253",
+      "schematic": []
+    },
+    {
+      "component": "SCREW1",
+      "pin": "1",
+      "pcb": "",
+      "schematic": []
+    },
+    {
+      "component": "SCREW2",
+      "pin": "1",
+      "pcb": "",
+      "schematic": []
+    },
+    {
+      "component": "SCREW3",
+      "pin": "1",
+      "pcb": "",
+      "schematic": []
+    },
+    {
+      "component": "SCREW4",
+      "pin": "1",
+      "pcb": "",
+      "schematic": []
+    },
+    {
+      "component": "CN2",
+      "pin": "11",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "CN2",
+      "pin": "9",
+      "pcb": "EPD_PWR",
+      "schematic": [
+        "EPD_PWR"
+      ]
+    },
+    {
+      "component": "CN2",
+      "pin": "8",
+      "pcb": "EPD_BUSY",
+      "schematic": [
+        "EPD_BUSY"
+      ]
+    },
+    {
+      "component": "CN2",
+      "pin": "7",
+      "pcb": "EPD_RST",
+      "schematic": [
+        "EPD_RST"
+      ]
+    },
+    {
+      "component": "CN2",
+      "pin": "6",
+      "pcb": "EPD_DC",
+      "schematic": [
+        "EPD_DC"
+      ]
+    },
+    {
+      "component": "CN2",
+      "pin": "5",
+      "pcb": "EPD_CS",
+      "schematic": [
+        "EPD_CS"
+      ]
+    },
+    {
+      "component": "CN2",
+      "pin": "4",
+      "pcb": "EPD_CLK",
+      "schematic": [
+        "EPD_CLK"
+      ]
+    },
+    {
+      "component": "CN2",
+      "pin": "3",
+      "pcb": "EPD_DIN",
+      "schematic": [
+        "EPD_DIN"
+      ]
+    },
+    {
+      "component": "CN2",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "CN2",
+      "pin": "1",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "CN2",
+      "pin": "10",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "1",
+      "pcb": "BUF_NOE",
+      "schematic": [
+        "BUF_NOE"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "2",
+      "pcb": "USER_3V3_IO22",
+      "schematic": [
+        "USER_3V3_IO22"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "3",
+      "pcb": "",
+      "schematic": []
+    },
+    {
+      "component": "U3",
+      "pin": "4",
+      "pcb": "USER_3V3_IO8",
+      "schematic": [
+        "USER_3V3_IO8"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "5",
+      "pcb": "EPD2_PWR_BUF",
+      "schematic": [
+        "EPD2_PWR_BUF"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "6",
+      "pcb": "USER_3V3_IO9",
+      "schematic": [
+        "USER_3V3_IO9"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "7",
+      "pcb": "EPD2_RST_BUF",
+      "schematic": [
+        "EPD2_RST_BUF"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "8",
+      "pcb": "USER_3V3_IO11",
+      "schematic": [
+        "USER_3V3_IO11"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "9",
+      "pcb": "EPD2_DC_BUF",
+      "schematic": [
+        "EPD2_DC_BUF"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "10",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "20",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "19",
+      "pcb": "BUF_NOE",
+      "schematic": [
+        "BUF_NOE"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "18",
+      "pcb": "EPD_PWR_BUF",
+      "schematic": [
+        "EPD_PWR_BUF"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "17",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "16",
+      "pcb": "EPD2_DIN_BUF",
+      "schematic": [
+        "EPD2_DIN_BUF"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "15",
+      "pcb": "USER_3V3_IO15",
+      "schematic": [
+        "USER_3V3_IO15"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "14",
+      "pcb": "EPD2_CLK_BUF",
+      "schematic": [
+        "EPD2_CLK_BUF"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "13",
+      "pcb": "USER_3V3_IO13",
+      "schematic": [
+        "USER_3V3_IO13"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "12",
+      "pcb": "EPD2_CS_BUF",
+      "schematic": [
+        "EPD2_CS_BUF"
+      ]
+    },
+    {
+      "component": "U3",
+      "pin": "11",
+      "pcb": "USER_3V3_IO12",
+      "schematic": [
+        "USER_3V3_IO12"
+      ]
+    },
+    {
+      "component": "CN3",
+      "pin": "11",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "CN3",
+      "pin": "9",
+      "pcb": "EPD2_PWR",
+      "schematic": [
+        "EPD2_PWR"
+      ]
+    },
+    {
+      "component": "CN3",
+      "pin": "8",
+      "pcb": "EPD2_BUSY",
+      "schematic": [
+        "EPD2_BUSY"
+      ]
+    },
+    {
+      "component": "CN3",
+      "pin": "7",
+      "pcb": "EPD2_RST",
+      "schematic": [
+        "EPD2_RST"
+      ]
+    },
+    {
+      "component": "CN3",
+      "pin": "6",
+      "pcb": "EPD2_DC",
+      "schematic": [
+        "EPD2_DC"
+      ]
+    },
+    {
+      "component": "CN3",
+      "pin": "5",
+      "pcb": "EPD2_CS",
+      "schematic": [
+        "EPD2_CS"
+      ]
+    },
+    {
+      "component": "CN3",
+      "pin": "4",
+      "pcb": "EPD2_CLK",
+      "schematic": [
+        "EPD2_CLK"
+      ]
+    },
+    {
+      "component": "CN3",
+      "pin": "3",
+      "pcb": "EPD2_DIN",
+      "schematic": [
+        "EPD2_DIN"
+      ]
+    },
+    {
+      "component": "CN3",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "CN3",
+      "pin": "1",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "CN3",
+      "pin": "10",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "R21",
+      "pin": "2",
+      "pcb": "EPD_PWR",
+      "schematic": [
+        "EPD_PWR"
+      ]
+    },
+    {
+      "component": "R21",
+      "pin": "1",
+      "pcb": "EPD_PWR_BUF",
+      "schematic": [
+        "EPD_PWR_BUF"
+      ]
+    },
+    {
+      "component": "R22",
+      "pin": "2",
+      "pcb": "EPD2_DIN",
+      "schematic": [
+        "EPD2_DIN"
+      ]
+    },
+    {
+      "component": "R22",
+      "pin": "1",
+      "pcb": "EPD2_DIN_BUF",
+      "schematic": [
+        "EPD2_DIN_BUF"
+      ]
+    },
+    {
+      "component": "R23",
+      "pin": "2",
+      "pcb": "EPD2_CLK",
+      "schematic": [
+        "EPD2_CLK"
+      ]
+    },
+    {
+      "component": "R23",
+      "pin": "1",
+      "pcb": "EPD2_CLK_BUF",
+      "schematic": [
+        "EPD2_CLK_BUF"
+      ]
+    },
+    {
+      "component": "R24",
+      "pin": "2",
+      "pcb": "EPD2_CS",
+      "schematic": [
+        "EPD2_CS"
+      ]
+    },
+    {
+      "component": "R24",
+      "pin": "1",
+      "pcb": "EPD2_CS_BUF",
+      "schematic": [
+        "EPD2_CS_BUF"
+      ]
+    },
+    {
+      "component": "R25",
+      "pin": "2",
+      "pcb": "EPD2_DC",
+      "schematic": [
+        "EPD2_DC"
+      ]
+    },
+    {
+      "component": "R25",
+      "pin": "1",
+      "pcb": "EPD2_DC_BUF",
+      "schematic": [
+        "EPD2_DC_BUF"
+      ]
+    },
+    {
+      "component": "R26",
+      "pin": "2",
+      "pcb": "EPD2_RST",
+      "schematic": [
+        "EPD2_RST"
+      ]
+    },
+    {
+      "component": "R26",
+      "pin": "1",
+      "pcb": "EPD2_RST_BUF",
+      "schematic": [
+        "EPD2_RST_BUF"
+      ]
+    },
+    {
+      "component": "R27",
+      "pin": "2",
+      "pcb": "EPD2_PWR",
+      "schematic": [
+        "EPD2_PWR"
+      ]
+    },
+    {
+      "component": "R27",
+      "pin": "1",
+      "pcb": "EPD2_PWR_BUF",
+      "schematic": [
+        "EPD2_PWR_BUF"
+      ]
+    },
+    {
+      "component": "R28",
+      "pin": "2",
+      "pcb": "USER_3V3_IO17",
+      "schematic": [
+        "USER_3V3_IO17"
+      ]
+    },
+    {
+      "component": "R28",
+      "pin": "1",
+      "pcb": "EPD2_BUSY_BUF",
+      "schematic": [
+        "EPD2_BUSY_BUF"
+      ]
+    },
+    {
+      "component": "R29",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "R29",
+      "pin": "1",
+      "pcb": "EPD2_CS",
+      "schematic": [
+        "EPD2_CS"
+      ]
+    },
+    {
+      "component": "R30",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "R30",
+      "pin": "1",
+      "pcb": "EPD2_RST",
+      "schematic": [
+        "EPD2_RST"
+      ]
+    },
+    {
+      "component": "R31",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "R31",
+      "pin": "1",
+      "pcb": "EPD_PWR",
+      "schematic": [
+        "EPD_PWR"
+      ]
+    },
+    {
+      "component": "R32",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "R32",
+      "pin": "1",
+      "pcb": "EPD2_PWR",
+      "schematic": [
+        "EPD2_PWR"
+      ]
+    },
+    {
+      "component": "R33",
+      "pin": "2",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "R33",
+      "pin": "1",
+      "pcb": "EPD2_BUSY",
+      "schematic": [
+        "EPD2_BUSY"
+      ]
+    },
+    {
+      "component": "C9",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C9",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    },
+    {
+      "component": "C10",
+      "pin": "2",
+      "pcb": "3V3",
+      "schematic": [
+        "3V3"
+      ]
+    },
+    {
+      "component": "C10",
+      "pin": "1",
+      "pcb": "GND",
+      "schematic": [
+        "GND"
+      ]
+    }
+  ],
+  "new_vs_original_mismatches": [],
+  "note": "Existing anonymous net names and swapped nonpolar passive pins are retained; full native ERC is required."
+}

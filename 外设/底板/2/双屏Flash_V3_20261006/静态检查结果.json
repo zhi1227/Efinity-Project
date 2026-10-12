@@ -1,0 +1,376 @@
+{
+  "scope": "Layer-aware analytical checks, excludes poured copper, silk and manufacturer rules. Native DRC still required.",
+  "new_or_changed_clearance_issues": [],
+  "unchanged_legacy_clearance_issues": [
+    {
+      "a": "e214",
+      "a_net": "USER_3V3_IO29",
+      "b": "J4.19",
+      "b_net": "USER_3V3_IO30",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e226",
+      "a_net": "USER_3V3_IO26",
+      "b": "J4.17",
+      "b_net": "USER_3V3_IO27",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        2
+      ]
+    },
+    {
+      "a": "e274",
+      "a_net": "USER_3V3_IO25",
+      "b": "e223",
+      "b_net": "USER_3V3_IO26",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e703",
+      "a_net": "USER_3V3_IO20",
+      "b": "U1.18",
+      "b_net": "$1N100",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e704",
+      "a_net": "USER_3V3_IO20",
+      "b": "U1.18",
+      "b_net": "$1N100",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e359",
+      "a_net": "USER_3V3_IO17",
+      "b": "J4.11",
+      "b_net": "USER_3V3_IO15",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e366",
+      "a_net": "USER_3V3_IO13",
+      "b": "J4.9",
+      "b_net": "USER_3V3_IO12",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e369",
+      "a_net": "USER_3V3_IO11",
+      "b": "J4.7",
+      "b_net": "USER_3V3_IO9",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e421",
+      "a_net": "$1N155",
+      "b": "e552",
+      "b_net": "$1N157",
+      "gap_mm": 0.10656,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e421",
+      "a_net": "$1N155",
+      "b": "e558",
+      "b_net": "$1N157",
+      "gap_mm": 0.10656,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e422",
+      "a_net": "$1N155",
+      "b": "e552",
+      "b_net": "$1N157",
+      "gap_mm": 0.10656,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e422",
+      "a_net": "$1N155",
+      "b": "e558",
+      "b_net": "$1N157",
+      "gap_mm": 0.10656,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e419",
+      "a_net": "$1N100",
+      "b": "e705",
+      "b_net": "USER_3V3_IO20",
+      "gap_mm": 0.102,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e419",
+      "a_net": "$1N100",
+      "b": "e718",
+      "b_net": "USER_3V3_IO20",
+      "gap_mm": 0.102,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e420",
+      "a_net": "$1N100",
+      "b": "e705",
+      "b_net": "USER_3V3_IO20",
+      "gap_mm": 0.102,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e773",
+      "a_net": "USER_3V3_IO23",
+      "b": "R4.1",
+      "b_net": "$1N159",
+      "gap_mm": 0.17241,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e774",
+      "a_net": "USER_3V3_IO23",
+      "b": "R4.1",
+      "b_net": "$1N159",
+      "gap_mm": 0.17241,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e775",
+      "a_net": "USER_3V3_IO23",
+      "b": "R4.1",
+      "b_net": "$1N159",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e776",
+      "a_net": "USER_3V3_IO23",
+      "b": "R4.1",
+      "b_net": "$1N159",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e1791",
+      "a_net": "EPD_RST",
+      "b": "e417",
+      "b_net": "USER_3V3_IO16",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        2
+      ]
+    },
+    {
+      "a": "e1791",
+      "a_net": "EPD_RST",
+      "b": "e1701",
+      "b_net": "GND",
+      "gap_mm": 0.177,
+      "type": "clearance",
+      "layers": [
+        2
+      ]
+    },
+    {
+      "a": "e564",
+      "a_net": "EPD_CLK",
+      "b": "e559",
+      "b_net": "EPD_DC",
+      "gap_mm": 0.19178,
+      "type": "clearance",
+      "layers": [
+        2
+      ]
+    },
+    {
+      "a": "e565",
+      "a_net": "EPD_CLK",
+      "b": "e559",
+      "b_net": "EPD_DC",
+      "gap_mm": 0.19178,
+      "type": "clearance",
+      "layers": [
+        2
+      ]
+    },
+    {
+      "a": "e573",
+      "a_net": "EPD_CLK",
+      "b": "e559",
+      "b_net": "EPD_DC",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        2
+      ]
+    },
+    {
+      "a": "e713",
+      "a_net": "USER_3V3_IO20",
+      "b": "e707",
+      "b_net": "EPD_DIN",
+      "gap_mm": 0.16654,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e714",
+      "a_net": "USER_3V3_IO20",
+      "b": "e707",
+      "b_net": "EPD_DIN",
+      "gap_mm": 0.16654,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e715",
+      "a_net": "USER_3V3_IO20",
+      "b": "e707",
+      "b_net": "EPD_DIN",
+      "gap_mm": 0.152,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e716",
+      "a_net": "USER_3V3_IO20",
+      "b": "e707",
+      "b_net": "EPD_DIN",
+      "gap_mm": 0.16654,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e1613",
+      "a_net": "GND",
+      "b": "240f15242cbc624c",
+      "b_net": "FLASH_CS",
+      "gap_mm": 0.19662,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    },
+    {
+      "a": "e717",
+      "a_net": "USER_3V3_IO20",
+      "b": "e707",
+      "b_net": "EPD_DIN",
+      "gap_mm": 0.16654,
+      "type": "clearance",
+      "layers": [
+        1
+      ]
+    }
+  ],
+  "pad_connectivity_without_pours": {
+    "3V3": [
+      [
+        "J1.29",
+        "R1.2",
+        "C3.2",
+        "C4.2",
+        "R14.1",
+        "R15.1"
+      ],
+      [
+        "J3.1",
+        "U1.20",
+        "U2.20",
+        "R2.1",
+        "C1.2",
+        "C2.2",
+        "C7.2",
+        "C8.2",
+        "R17.1",
+        "P1.3"
+      ],
+      [
+        "C5.2",
+        "P1.1",
+        "U3.20",
+        "CN3.1",
+        "R29.2",
+        "R30.2",
+        "C9.2",
+        "C10.2"
+      ],
+      [
+        "C6.2"
+      ],
+      [
+        "CN2.1"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/src/parallel/face_grid_regions.v" into library work
+INFO: [VRFC 10-311] analyzing module face_grid_regions
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_count_filter.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_count_filter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_uart.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_uart
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_controls.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_key
+INFO: [VRFC 10-311] analyzing module vision8_controls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_fifo.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_ascii.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_ascii
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_frames.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_frames
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_slots.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_slots
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_base_axi.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_base_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/vision8_ddr.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_ddr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/ip/W0_FIFO_8/W0_FIFO_8.sv" into library work
+INFO: [VRFC 10-311] analyzing module W0_FIFO_8
+INFO: [VRFC 10-311] analyzing module efx_fifo_gray2bin_e28a7d4c8cc34a9cb9a97c74b3f9b99f
+INFO: [VRFC 10-311] analyzing module efx_fifo_bin2gray_e28a7d4c8cc34a9cb9a97c74b3f9b99f
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/ip/W0_FIFO_8/W0_FIFO_8.sv:249]
+INFO: [VRFC 10-311] analyzing module efx_fifo_top_e28a7d4c8cc34a9cb9a97c74b3f9b99f
+INFO: [VRFC 10-311] analyzing module efx_fifo_ram_e28a7d4c8cc34a9cb9a97c74b3f9b99f
+INFO: [VRFC 10-311] analyzing module efx_fifo_ctl_e28a7d4c8cc34a9cb9a97c74b3f9b99f
+INFO: [VRFC 10-311] analyzing module efx_resetsync_e28a7d4c8cc34a9cb9a97c74b3f9b99f
+INFO: [VRFC 10-311] analyzing module efx_asyncreg_e28a7d4c8cc34a9cb9a97c74b3f9b99f
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/ip/R0_FIFO_16/R0_FIFO_16.sv" into library work
+INFO: [VRFC 10-311] analyzing module R0_FIFO_16
+INFO: [VRFC 10-311] analyzing module efx_fifo_gray2bin_6027459dad3e4cdabe6337b18ba70805
+INFO: [VRFC 10-311] analyzing module efx_fifo_bin2gray_6027459dad3e4cdabe6337b18ba70805
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/ip/R0_FIFO_16/R0_FIFO_16.sv:249]
+INFO: [VRFC 10-311] analyzing module efx_fifo_top_6027459dad3e4cdabe6337b18ba70805
+INFO: [VRFC 10-311] analyzing module efx_fifo_ram_6027459dad3e4cdabe6337b18ba70805
+INFO: [VRFC 10-311] analyzing module efx_fifo_ctl_6027459dad3e4cdabe6337b18ba70805
+INFO: [VRFC 10-311] analyzing module efx_resetsync_6027459dad3e4cdabe6337b18ba70805
+INFO: [VRFC 10-311] analyzing module efx_asyncreg_6027459dad3e4cdabe6337b18ba70805
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_vision8_controls.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_vision8_controls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_io29_freeze_ddr.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_io29_freeze_ddr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_vision8_ddr.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_vision8_ddr

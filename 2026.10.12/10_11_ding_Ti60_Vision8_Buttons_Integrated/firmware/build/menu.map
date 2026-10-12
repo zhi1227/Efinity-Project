@@ -1,0 +1,140 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x00000000f9000000 0x0000000000004000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD C:\Users\Lenovo\AppData\Local\Temp\cccnc76y.o
+LOAD C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+LOAD C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+LOAD C:\Users\Lenovo\AppData\Local\Temp\cc0OCHiv.o
+LOAD C:\Users\Lenovo\AppData\Local\Temp\ccEfr8DV.o
+
+.text           0x00000000f9000000      0x4bc
+ *(.text.start)
+ .text.start    0x00000000f9000000       0x3c C:\Users\Lenovo\AppData\Local\Temp\cccnc76y.o
+                0x00000000f9000000                _start
+ *(.text*)
+ .text          0x00000000f900003c        0x0 C:\Users\Lenovo\AppData\Local\Temp\cccnc76y.o
+ .text          0x00000000f900003c        0x0 C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+ .text.startup  0x00000000f900003c       0x90 C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+                0x00000000f900003c                main
+ .text          0x00000000f90000cc      0x2a8 C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+                0x00000000f90000cc                epaper_start
+                0x00000000f9000108                epaper_service
+ .text          0x00000000f9000374        0x0 C:\Users\Lenovo\AppData\Local\Temp\cc0OCHiv.o
+ .text          0x00000000f9000374      0x148 C:\Users\Lenovo\AppData\Local\Temp\ccEfr8DV.o
+                0x00000000f9000374                epaper_image_reset
+                0x00000000f9000390                epaper_image_next
+                0x00000000f9000484                epaper_image_complete
+
+.rodata         0x00000000f90004bc     0x2642
+ *(.rodata*)
+ .rodata        0x00000000f90004bc       0x7e C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+ *fill*         0x00000000f900053a        0x2 
+ .rodata        0x00000000f900053c     0x25c2 C:\Users\Lenovo\AppData\Local\Temp\cc0OCHiv.o
+                0x00000000f900053c                epaper_image_packed
+                0x00000000f9002afc                epaper_image_packed_size
+ *(.srodata*)
+
+.rela.dyn       0x00000000f9002b00        0x0
+ .rela.text.start
+                0x00000000f9002b00        0x0 C:\Users\Lenovo\AppData\Local\Temp\cccnc76y.o
+
+.data           0x00000000f9002afe        0x2
+                0x00000000f9002b00                . = ALIGN (0x4)
+ *fill*         0x00000000f9002afe        0x2 
+                0x00000000f9003300                __global_pointer$ = (. + 0x800)
+ *(.data*)
+ .data          0x00000000f9002b00        0x0 C:\Users\Lenovo\AppData\Local\Temp\cccnc76y.o
+ .data          0x00000000f9002b00        0x0 C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+ .data          0x00000000f9002b00        0x0 C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+ .data          0x00000000f9002b00        0x0 C:\Users\Lenovo\AppData\Local\Temp\cc0OCHiv.o
+ .data          0x00000000f9002b00        0x0 C:\Users\Lenovo\AppData\Local\Temp\ccEfr8DV.o
+ *(.sdata*)
+
+.bss            0x00000000f9002b00       0x18
+                0x00000000f9002b00                . = ALIGN (0x4)
+                0x00000000f9002b00                _bss_start = .
+ *(.bss*)
+ .bss           0x00000000f9002b00        0x0 C:\Users\Lenovo\AppData\Local\Temp\cccnc76y.o
+ .bss           0x00000000f9002b00        0x0 C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+ .bss           0x00000000f9002b00       0x10 C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+ .bss           0x00000000f9002b10        0x0 C:\Users\Lenovo\AppData\Local\Temp\cc0OCHiv.o
+ .bss           0x00000000f9002b10        0x7 C:\Users\Lenovo\AppData\Local\Temp\ccEfr8DV.o
+ *(.sbss*)
+ *(COMMON)
+                0x00000000f9002b18                . = ALIGN (0x4)
+ *fill*         0x00000000f9002b17        0x1 
+                0x00000000f9002b18                _bss_end = .
+                0x00000000f9004000                _stack_top = (ORIGIN (RAM) + LENGTH (RAM))
+                0x0000000000000001                ASSERT ((_bss_end <= (_stack_top - 0x800)), Firmware leaves less than 2 KiB stack)
+OUTPUT(firmware/build/menu.elf elf32-littleriscv)
+
+.debug_line     0x0000000000000000      0xf1b
+ .debug_line    0x0000000000000000       0x81 C:\Users\Lenovo\AppData\Local\Temp\cccnc76y.o
+ .debug_line    0x0000000000000081      0x270 C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+ .debug_line    0x00000000000002f1      0x788 C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+ .debug_line    0x0000000000000a79       0xff C:\Users\Lenovo\AppData\Local\Temp\cc0OCHiv.o
+ .debug_line    0x0000000000000b78      0x3a3 C:\Users\Lenovo\AppData\Local\Temp\ccEfr8DV.o
+
+.debug_info     0x0000000000000000      0xa29
+ .debug_info    0x0000000000000000       0x26 C:\Users\Lenovo\AppData\Local\Temp\cccnc76y.o
+ .debug_info    0x0000000000000026      0x17b C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+ .debug_info    0x00000000000001a1      0x615 C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+ .debug_info    0x00000000000007b6       0xe2 C:\Users\Lenovo\AppData\Local\Temp\cc0OCHiv.o
+ .debug_info    0x0000000000000898      0x191 C:\Users\Lenovo\AppData\Local\Temp\ccEfr8DV.o
+
+.debug_abbrev   0x0000000000000000      0x3ef
+ .debug_abbrev  0x0000000000000000       0x14 C:\Users\Lenovo\AppData\Local\Temp\cccnc76y.o
+ .debug_abbrev  0x0000000000000014       0xd9 C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+ .debug_abbrev  0x00000000000000ed      0x1a5 C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+ .debug_abbrev  0x0000000000000292       0x6c C:\Users\Lenovo\AppData\Local\Temp\cc0OCHiv.o
+ .debug_abbrev  0x00000000000002fe       0xf1 C:\Users\Lenovo\AppData\Local\Temp\ccEfr8DV.o
+
+.debug_aranges  0x0000000000000000       0x98
+ .debug_aranges
+                0x0000000000000000       0x20 C:\Users\Lenovo\AppData\Local\Temp\cccnc76y.o
+ .debug_aranges
+                0x0000000000000020       0x20 C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+ .debug_aranges
+                0x0000000000000040       0x20 C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+ .debug_aranges
+                0x0000000000000060       0x18 C:\Users\Lenovo\AppData\Local\Temp\cc0OCHiv.o
+ .debug_aranges
+                0x0000000000000078       0x20 C:\Users\Lenovo\AppData\Local\Temp\ccEfr8DV.o
+
+.debug_str      0x0000000000000000      0x32b
+ .debug_str     0x0000000000000000       0x73 C:\Users\Lenovo\AppData\Local\Temp\cccnc76y.o
+ .debug_str     0x0000000000000073      0x149 C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+                                        0x1ed (size before relaxing)
+ .debug_str     0x00000000000001bc       0xff C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+                                        0x2db (size before relaxing)
+ .debug_str     0x00000000000002bb       0x18 C:\Users\Lenovo\AppData\Local\Temp\cc0OCHiv.o
+                                        0x1a9 (size before relaxing)
+ .debug_str     0x00000000000002d3       0x58 C:\Users\Lenovo\AppData\Local\Temp\ccEfr8DV.o
+                                        0x22a (size before relaxing)
+
+.debug_loc      0x0000000000000000      0x667
+ .debug_loc     0x0000000000000000       0x75 C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+ .debug_loc     0x0000000000000075      0x56b C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+ .debug_loc     0x00000000000005e0       0x87 C:\Users\Lenovo\AppData\Local\Temp\ccEfr8DV.o
+
+.debug_ranges   0x0000000000000000       0xb8
+ .debug_ranges  0x0000000000000000       0x58 C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+ .debug_ranges  0x0000000000000058       0x60 C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+
+.comment        0x0000000000000000       0x33
+ .comment       0x0000000000000000       0x33 C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+                                         0x34 (size before relaxing)
+ .comment       0x0000000000000033       0x34 C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+ .comment       0x0000000000000033       0x34 C:\Users\Lenovo\AppData\Local\Temp\cc0OCHiv.o
+ .comment       0x0000000000000033       0x34 C:\Users\Lenovo\AppData\Local\Temp\ccEfr8DV.o
+
+.debug_frame    0x0000000000000000       0xbc
+ .debug_frame   0x0000000000000000       0x34 C:\Users\Lenovo\AppData\Local\Temp\ccMbk5PN.o
+ .debug_frame   0x0000000000000034       0x48 C:\Users\Lenovo\AppData\Local\Temp\ccWoHj26.o
+ .debug_frame   0x000000000000007c       0x40 C:\Users\Lenovo\AppData\Local\Temp\ccEfr8DV.o

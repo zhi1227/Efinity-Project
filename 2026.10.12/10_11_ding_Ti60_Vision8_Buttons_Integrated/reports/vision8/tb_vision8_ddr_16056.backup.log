@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Oct 11 17:42:05 2026
+# Process ID: 16056
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim_vision8
+# Command line: xsim.exe -log ../reports/vision8/tb_vision8_ddr.log -mode tcl -source {xsim.dir/tb_vision8_ddr/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim_vision8/../reports/vision8/tb_vision8_ddr.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim_vision8\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_vision8_ddr/xsim_script.tcl
+# xsim {tb_vision8_ddr} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+AW 00000000 len=127
+camera state= 1 ptr=   2048 bytes=      0 good=1 overflow=0 ready=0 writes=          1 wowner=1 wpending=1
+aw=00000000 av=0 ready=0 caw=1 cready=0 wd=0 br=1 bv=1 wb=        128 burst=  0
+Fatal: DDR timeout state bytes=      0 id=         0 owner=0
+Time: 10 ms  Iteration: 0  Process: /tb_vision8_ddr/Initial100_70  File: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_vision8_ddr.sv
+$finish called at time : 10 ms
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 219.434 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:42:13 2026...

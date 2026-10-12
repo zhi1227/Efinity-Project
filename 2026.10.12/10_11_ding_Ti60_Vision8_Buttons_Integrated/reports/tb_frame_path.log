@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Oct 11 18:04:40 2026
+# Process ID: 48752
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated
+# Command line: xsim.exe -log reports/tb_frame_path.log -mode tcl -source {xsim.dir/tb_frame_path/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/reports/tb_frame_path.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_frame_path/xsim_script.tcl
+# xsim {tb_frame_path} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: camera bytes -> AXI memory -> RGB565 FIFO, stalled bursts, empty/short rejection, freeze/live ownership
+$finish called at time : 392796 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_frame_path.sv" Line 67
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 18:04:42 2026...

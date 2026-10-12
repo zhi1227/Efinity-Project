@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Oct  7 18:47:12 2026
+# Process ID: 31920
+# Current directory: D:/FPGA/Ti60_Vision6_WaveFix
+# Command line: xsim.exe -log reports/tb_matrix8.log -mode tcl -source {xsim.dir/tb_matrix8/xsim_script.tcl}
+# Log file: D:/FPGA/Ti60_Vision6_WaveFix/reports/tb_matrix8.log
+# Journal file: D:/FPGA/Ti60_Vision6_WaveFix\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_matrix8/xsim_script.tcl
+# xsim {tb_matrix8} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS: three exact 8x8 bitmaps, idle grid, cell gaps, wave highlight, no removed gesture icon
+$finish called at time : 238595 ns : File "D:/FPGA/Ti60_Vision6_WaveFix/sim/tb_matrix8.sv" Line 22
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct  7 18:47:17 2026...

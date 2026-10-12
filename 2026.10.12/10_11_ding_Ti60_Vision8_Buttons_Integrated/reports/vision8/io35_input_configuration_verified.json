@@ -1,0 +1,34 @@
+{
+  "io28_gpio_unchanged": true,
+  "io28_receiver_unchanged": true,
+  "top_level_unchanged": true,
+  "io35_input_matches_io28": true,
+  "common_configuration": {
+    "gpio": {
+      "mode": "input",
+      "bus_name": "",
+      "io_standard": "1.8 V LVCMOS"
+    },
+    "input": {
+      "name_ddio_lo": "",
+      "conn_type": "normal",
+      "is_register": "false",
+      "clock_name": "",
+      "is_clock_inverted": "false",
+      "pull_option": "none",
+      "is_schmitt_trigger": "false",
+      "ddio_type": "none",
+      "is_bus_hold": "false",
+      "delay": "0",
+      "is_serial": "false",
+      "is_dyn_delay": "false",
+      "fastclk_name": ""
+    }
+  },
+  "io35_pressed": 0,
+  "io35_released": 1,
+  "gpio_resources": {
+    "io28": "C1 / GPIOL_N_16",
+    "io35": "B9 / GPIOT_P_11"
+  }
+}
