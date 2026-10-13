@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 13 13:24:06 2026
+# Process ID: 38028
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim_shared_font
+# Command line: xsim.exe -log ../reports/cpu_font_ram/tb_shared_glyphs.log -mode tcl -source {xsim.dir/tb_shared_glyphs/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim_shared_font/../reports/cpu_font_ram/tb_shared_glyphs.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim_shared_font\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_shared_glyphs/xsim_script.tcl
+# xsim {tb_shared_glyphs} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: 65536 HDMI and 32768 LVDS glyph addresses match original under independent simultaneous clocks
+$finish called at time : 880830720 ps : File "D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim_shared_font/tb_shared_glyphs.sv" Line 17
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 13 13:24:08 2026...

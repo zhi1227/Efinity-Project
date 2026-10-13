@@ -1,0 +1,9 @@
+[Runtime] SpinalHDL dev    git head : 81793df2c4f55a20f7eff1130c4bb74a4b11319f
+[Runtime] JVM max memory : 4028.0MiB
+[Runtime] Current date : 2026.10.12 14:51:32
+[Progress] at 0.000 : Elaborate components
+[Info] No CounterService was found. Generating legacy counters and timer
+[Progress] at 1.376 : Checks and transforms
+[Progress] at 1.882 : Generate Verilog to hardware/netlist
+[Warning] 352 signals were pruned. You can call printPruned on the backend report to get more informations.
+[Done] at 2.169

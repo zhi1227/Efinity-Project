@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Oct  7 18:46:34 2026
+# Process ID: 36644
+# Current directory: D:/FPGA/Ti60_Vision6_WaveFix
+# Command line: xsim.exe -log reports/tb_h4_skin.log -mode tcl -source {xsim.dir/tb_h4_skin/xsim_script.tcl}
+# Log file: D:/FPGA/Ti60_Vision6_WaveFix/reports/tb_h4_skin.log
+# Journal file: D:/FPGA/Ti60_Vision6_WaveFix\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_h4_skin/xsim_script.tcl
+# xsim {tb_h4_skin} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS: pale fingertip, palm and shadow segmentation; skin calibration; white/blue/dark background rejection
+$finish called at time : 21450 ns : File "D:/FPGA/Ti60_Vision6_WaveFix/sim/tb_h4_skin.sv" Line 22
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct  7 18:46:38 2026...

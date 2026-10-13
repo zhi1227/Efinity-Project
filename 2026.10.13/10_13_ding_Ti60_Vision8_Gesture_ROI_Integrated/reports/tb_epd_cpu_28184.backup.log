@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Oct 10 23:04:32 2026
+# Process ID: 28184
+# Current directory: D:/Efinity-Project/pingmu/vision6_epaper_static/sim_epaper
+# Command line: xsim.exe -log ../reports/tb_epd_cpu.log -mode tcl -source {xsim.dir/tb_epd_cpu/xsim_script.tcl}
+# Log file: D:/Efinity-Project/pingmu/vision6_epaper_static/sim_epaper/../reports/tb_epd_cpu.log
+# Journal file: D:/Efinity-Project/pingmu/vision6_epaper_static/sim_epaper\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_epd_cpu/xsim_script.tcl
+# xsim {tb_epd_cpu} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS: real RISC-V firmware, 30033 SPI bytes, both image planes, reset, BUSY and live LVDS menu
+$finish called at time : 106557774323 ps : File "D:/Efinity-Project/pingmu/vision6_epaper_static/sim/tb_epd_cpu.sv" Line 63
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:05:21 . Memory (MB): peak = 224.773 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 10 23:10:01 2026...

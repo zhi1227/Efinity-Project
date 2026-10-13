@@ -1,0 +1,43 @@
+{
+  "elapsed_seconds": 143.319,
+  "completed_utc": "2026-10-13T04:46:13.3174Z",
+  "project": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.13\\10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated",
+  "tests": [
+    {
+      "bench": "tb_gesture_roi_rgb",
+      "status": "PASS",
+      "log": "reports/roi_integration/tb_gesture_roi_rgb.log",
+      "timestamp_basis": "first elaboration capture creation UTC and completed simulator log write UTC",
+      "completed_utc": "2026-10-13T04:45:24.9071816Z",
+      "coverage": [
+        "real RGB skin/morphology/CCL pipeline at proportional 320x240 raster",
+        "expanded left/right/top/bottom areas",
+        "CCL rejects left/right/top clipping",
+        "bottom wrist across ROI accepted to y=226",
+        "empty scene rejected",
+        "SOURCE_TAGGED=1: 71 distinct and 3 duplicate camera result IDs across 74 frames"
+      ],
+      "started_utc": "2026-10-13T04:43:49.9986638Z",
+      "elapsed_seconds": 95.422
+    },
+    {
+      "elapsed_seconds": 13.713,
+      "completed_utc": "2026-10-13T04:46:13.3155128Z",
+      "bench": "tb_roi_shared_overlay",
+      "status": "PASS",
+      "coverage": [
+        "SHARED_FONT=1 with active independent HDMI/LCD clocks",
+        "all four new guide sides are two pixels",
+        "former guide sides disappear",
+        "palm sample instruction square fixed",
+        "complete right HUD classes 0/1/2/3 match legacy font pixels",
+        "pure capture removes guide and HUD"
+      ],
+      "started_utc": "2026-10-13T04:45:59.5876818Z",
+      "log": "reports/roi_integration/tb_roi_shared_overlay.log"
+    }
+  ],
+  "tool": "Vivado 2018.3 XSim",
+  "started_utc": "2026-10-13T04:43:49.9986638Z",
+  "physical_board_test": "not performed"
+}

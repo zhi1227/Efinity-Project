@@ -1,0 +1,6 @@
+Passed: tb_vision8_controls
+Passed: tb_vision8_fifo
+Passed: tb_vision8_ddr
+Passed: tb_vision8_frames
+Passed: tb_vision8_faces
+Passed: tb_vision8_gesture

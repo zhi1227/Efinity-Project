@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 13 12:45:31 2026
+# Process ID: 18056
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim_roi_integration
+# Command line: xsim.exe -log ../reports/roi_integration/tb_roi_shared_overlay.log -mode tcl -source {xsim.dir/tb_roi_shared_overlay/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim_roi_integration/../reports/roi_integration/tb_roi_shared_overlay.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim_roi_integration\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_roi_shared_overlay/xsim_script.tcl
+# xsim {tb_roi_shared_overlay} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+Fatal: Overlay 1084,104 got 30343d expected ffcb55
+Time: 1006 ns  Iteration: 0  Process: /tb_roi_shared_overlay/sample  File: D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim/tb_roi_shared_overlay.sv
+$finish called at time : 1006 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 13 12:45:36 2026...

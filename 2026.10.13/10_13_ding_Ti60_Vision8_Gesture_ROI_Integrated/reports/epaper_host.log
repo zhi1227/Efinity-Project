@@ -1,0 +1,1 @@
+PASS: firmware normal/wraparound, stuck BUSY, missing BUSY, overflow, TX timeout; terminal states remain idle

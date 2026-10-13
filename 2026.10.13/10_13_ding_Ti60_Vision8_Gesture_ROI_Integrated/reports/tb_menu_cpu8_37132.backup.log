@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Oct 12 15:00:00 2026
+# Process ID: 37132
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_cpu8
+# Command line: xsim.exe -log ../reports/tb_menu_cpu8.log -mode tcl -source {xsim.dir/tb_menu_cpu8/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_cpu8/../reports/tb_menu_cpu8.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_cpu8\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_menu_cpu8/xsim_script.tcl
+# xsim {tb_menu_cpu8} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: CPU8 mode 0, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+Fatal: Timeout: CPU/menu failed to complete
+Time: 450 ms  Iteration: 0  Process: /tb_menu_cpu8/Initial15_432  File: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim/tb_menu_cpu8.sv
+$finish called at time : 450 ms
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:09:32 . Memory (MB): peak = 218.617 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 15:09:35 2026...

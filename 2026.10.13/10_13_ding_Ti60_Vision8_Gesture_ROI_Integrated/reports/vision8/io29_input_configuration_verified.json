@@ -1,0 +1,13 @@
+{
+  "IO28": "unchanged configuration and receiver",
+  "IO29": {
+    "connector": "J7 / DC3-40 pin 34",
+    "fpga_pin": "D1 / GPIOL_P_16",
+    "mode": "input",
+    "standard": "1.8 V LVCMOS",
+    "pressed": 0,
+    "released": 1
+  },
+  "IO35": "button assignment removed",
+  "backup": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.11\\10_11_liu_Ti60_Vision8_Buttons_Integrated\\backups\\before_io29_migration_20261011_194803"
+}

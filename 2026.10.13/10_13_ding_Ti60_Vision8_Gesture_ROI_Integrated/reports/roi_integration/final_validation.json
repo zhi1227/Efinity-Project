@@ -1,0 +1,286 @@
+{
+  "verified_utc": "2026-10-13T05:24:47.332653+00:00",
+  "original_projects": {
+    "main": {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.13\\10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized",
+      "unchanged_files": 2624,
+      "unchanged": true
+    },
+    "reference": {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.13\\10.12 guo Gesture_ROI_full_project",
+      "unchanged_files": 683,
+      "unchanged": true
+    }
+  },
+  "production_changes": [
+    "src/parallel/gesture_config.vh"
+  ],
+  "checked_build_inputs": 488,
+  "baseline": {
+    "resources": {
+      "XLRs": {
+        "used": 47482,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 212,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 35,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.295,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "424576e28488ed22f552cd1ef69cf0e4129e4c831812045d46985ca2aa5ca0c6",
+    "hex_sha256": "8f974975c20ee7b62316441b762e0dd2f9b338bf83a5906a59ca90e002321c2f",
+    "build_input_manifest_sha256": "f83b7ccbb36fe9d465f0bf49fe9252b8b7c88166f2ac0a02f3cab97e92991a46",
+    "physical_board_test": "not performed; simulation and compilation only"
+  },
+  "merged": {
+    "resources": {
+      "XLRs": {
+        "used": 47600,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 212,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 35,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.302,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "4c792affefd7b4a758db5c49d6ebac321ea63baed3a80798eff0a4dc13f5d348",
+    "hex_sha256": "bf630272704d063a9874855d6477fc1c3bc39c8d5ecbf03af82f97c8c6eec116",
+    "build_input_manifest_sha256": "2472f1c2ec12277730f540457ac8bad3e871f71fc2f2ab88a745128b2ac2c1b6",
+    "physical_board_test": "not performed; simulation and compilation only"
+  },
+  "retained_regression_count": 28,
+  "retained_regressions": [
+    {
+      "name": "tb_h5_palm",
+      "log": "reports/tb_h5_palm.log",
+      "sha256": "a38bd2a5cfaf5701b9b0ae27822757dc39143ef0ddafcb8271a375daecf43293",
+      "pass": true
+    },
+    {
+      "name": "tb_h5_wave",
+      "log": "reports/tb_h5_wave.log",
+      "sha256": "f616c1d5ab518d5b2d85431ab73d02e715a9a8a14fa6ef4170279638c30ed558",
+      "pass": true
+    },
+    {
+      "name": "tb_h5_raster",
+      "log": "reports/tb_h5_raster.log",
+      "sha256": "998f5acfc35790913804d05b736bbeb4a943a40c529edd54906f2dd073a101a6",
+      "pass": true
+    },
+    {
+      "name": "tb_h4_controls",
+      "log": "reports/tb_h4_controls.log",
+      "sha256": "b999af5337e2fae54f74094047eb81d10d241cc4efd7c7bd64d7bff61854cd17",
+      "pass": true
+    },
+    {
+      "name": "tb_h4_skin",
+      "log": "reports/tb_h4_skin.log",
+      "sha256": "4d3bfc9654d98363e6ce51ac28cfd9e804bcf1934d7a0b22270ad775c3af4038",
+      "pass": true
+    },
+    {
+      "name": "tb_h4_templates",
+      "log": "reports/tb_h4_templates.log",
+      "sha256": "6005a044fd966b0d22c3a8e7c0fc5f122ffe057bbfb14af5d4a0c718a6fbf3b1",
+      "pass": true
+    },
+    {
+      "name": "tb_h4_overlay",
+      "log": "reports/tb_h4_overlay.log",
+      "sha256": "0c1a387c17ff082e7adab5f02b3222fcdb4dba96b78174f2d91098c03d45f19f",
+      "pass": true
+    },
+    {
+      "name": "tb_controls6",
+      "log": "reports/tb_controls6.log",
+      "sha256": "a22b0de2e33b47071f58e5eed0cea61ef01aec00eb6a4f90075d391314a1c142",
+      "pass": true
+    },
+    {
+      "name": "tb_matrix8",
+      "log": "reports/tb_matrix8.log",
+      "sha256": "6e5c40b0b3933f215b2d6e782b76abc2e0a807642d63543f8dfa64ebc2511c3c",
+      "pass": true
+    },
+    {
+      "name": "tb_vision6",
+      "log": "reports/tb_vision6.log",
+      "sha256": "2a5af02cfe6142938c5f310420d9b4fafc773f22a27520e550690b23fa25f4f6",
+      "pass": true
+    },
+    {
+      "name": "tb_h5_ui",
+      "log": "reports/tb_h5_ui.log",
+      "sha256": "e19207ce122271c9e7e25569738a14e00d2dc394daa4d0afb16139cc52da3678",
+      "pass": true
+    },
+    {
+      "name": "tb_i2c6",
+      "log": "reports/tb_i2c6.log",
+      "sha256": "301c4eee662bacecc1d1c30f0054868edca9455ddfba511f58e9b1e93ed2a737",
+      "pass": true
+    },
+    {
+      "name": "tb_health6",
+      "log": "reports/tb_health6.log",
+      "sha256": "6704e104a25da577f442223d6c91788f98e8053a300f6ca0d8ec1bd16f2eb5e3",
+      "pass": true
+    },
+    {
+      "name": "tb_frame_path",
+      "log": "reports/tb_frame_path.log",
+      "sha256": "5c7131fe8281062521028f916366cc076b6c6f4e0399a6b149154f5e8aadf3b1",
+      "pass": true
+    },
+    {
+      "name": "tb_menu_cdc6",
+      "log": "reports/tb_menu_cdc6.log",
+      "sha256": "a9f775862e80c730248de90e380b25fd26039021e58fbb285edeeed88ed278ba",
+      "pass": true
+    },
+    {
+      "name": "tb_vision8_controls",
+      "log": "reports/vision8/tb_vision8_controls.log",
+      "sha256": "7e884b9d02ebec7cb07ecfc96205cca458a0399e4238467523a66add6f546ed5",
+      "pass": true
+    },
+    {
+      "name": "tb_vision8_fifo",
+      "log": "reports/vision8/tb_vision8_fifo.log",
+      "sha256": "611502f02a7c414fbc3d7bb92025862cddfaa918424fe2c05598f7b485863d1c",
+      "pass": true
+    },
+    {
+      "name": "tb_vision8_ddr",
+      "log": "reports/vision8/tb_vision8_ddr.log",
+      "sha256": "3db77651adcb28c7dcf29f263c3edffcc13b5f98b7d3cce3cafae0fd9c3c970f",
+      "pass": true
+    },
+    {
+      "name": "tb_vision8_frames",
+      "log": "reports/vision8/tb_vision8_frames.log",
+      "sha256": "41118f7b7a03542e406c9be0381b238c9935d8e753d7092dee3bb94164b81435",
+      "pass": true
+    },
+    {
+      "name": "tb_vision8_faces",
+      "log": "reports/vision8/tb_vision8_faces.log",
+      "sha256": "09dc586d9da3c527c34af6c6279514241b2de52028e42407ff0e973be85bd679",
+      "pass": true
+    },
+    {
+      "name": "tb_vision8_gesture",
+      "log": "reports/vision8/tb_vision8_gesture.log",
+      "sha256": "80db808668512f8f32389c89b04a65aa41e6b9550e4eeb3504395e73f273801f",
+      "pass": true
+    },
+    {
+      "name": "tb_io29_freeze_ddr",
+      "log": "reports/vision8/tb_io29_freeze_ddr.log",
+      "sha256": "1c2d005d666296e7ee617501360987b16d13642c586e892689c318ff264fec5f",
+      "pass": true
+    },
+    {
+      "name": "tb_menu8_pixels",
+      "log": "reports/vision8/tb_menu8_pixels.log",
+      "sha256": "34a34d2a7019a6c3ae6e513d8b122c1fdbae94b1129fce8b444c49c2eb1a3201",
+      "pass": true
+    },
+    {
+      "name": "tb_menu_cpu8",
+      "log": "reports/tb_menu_cpu8.log",
+      "sha256": "85555af9e337c80f991d14eb2e3759c87bdfec82d160a2da3ec386869df03346",
+      "pass": true
+    },
+    {
+      "name": "tb_epd_cpu",
+      "log": "reports/tb_epd_cpu.log",
+      "sha256": "750c37a36f3a2c585724d0e324a9cb0d49cfcea0498e233c5af978a886880013",
+      "pass": true
+    },
+    {
+      "name": "tb_shared_glyphs",
+      "log": "reports/cpu_font_ram/tb_shared_glyphs.log",
+      "sha256": "b724417f1493aee25c6ff4d2698b6499aa164d73722f8335494544809e20c210",
+      "pass": true
+    },
+    {
+      "name": "tb_shared_ui",
+      "log": "reports/cpu_font_ram/tb_shared_ui.log",
+      "sha256": "6caf380707c534db6b3fd799c2eae70bed3ed9a19bd13f12cdef57274a1a49d8",
+      "pass": true
+    },
+    {
+      "name": "tb_cache_stress",
+      "log": "reports/cpu_font_ram/tb_cache_stress.log",
+      "sha256": "ea786481bffac4091515811e8f2d3d9c6038c6a079ebb79c681ca9fff03e9c53",
+      "pass": true
+    }
+  ],
+  "roi_results": {
+    "elapsed_seconds": 143.319,
+    "completed_utc": "2026-10-13T04:46:13.3174Z",
+    "project": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.13\\10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated",
+    "tests": [
+      {
+        "bench": "tb_gesture_roi_rgb",
+        "status": "PASS",
+        "log": "reports/roi_integration/tb_gesture_roi_rgb.log",
+        "timestamp_basis": "first elaboration capture creation UTC and completed simulator log write UTC",
+        "completed_utc": "2026-10-13T04:45:24.9071816Z",
+        "coverage": [
+          "real RGB skin/morphology/CCL pipeline at proportional 320x240 raster",
+          "expanded left/right/top/bottom areas",
+          "CCL rejects left/right/top clipping",
+          "bottom wrist across ROI accepted to y=226",
+          "empty scene rejected",
+          "SOURCE_TAGGED=1: 71 distinct and 3 duplicate camera result IDs across 74 frames"
+        ],
+        "started_utc": "2026-10-13T04:43:49.9986638Z",
+        "elapsed_seconds": 95.422
+      },
+      {
+        "elapsed_seconds": 13.713,
+        "completed_utc": "2026-10-13T04:46:13.3155128Z",
+        "bench": "tb_roi_shared_overlay",
+        "status": "PASS",
+        "coverage": [
+          "SHARED_FONT=1 with active independent HDMI/LCD clocks",
+          "all four new guide sides are two pixels",
+          "former guide sides disappear",
+          "palm sample instruction square fixed",
+          "complete right HUD classes 0/1/2/3 match legacy font pixels",
+          "pure capture removes guide and HUD"
+        ],
+        "started_utc": "2026-10-13T04:45:59.5876818Z",
+        "log": "reports/roi_integration/tb_roi_shared_overlay.log"
+      }
+    ],
+    "tool": "Vivado 2018.3 XSim",
+    "started_utc": "2026-10-13T04:43:49.9986638Z",
+    "physical_board_test": "not performed"
+  },
+  "physical_board_test": "not performed; fresh simulation and compilation only"
+}

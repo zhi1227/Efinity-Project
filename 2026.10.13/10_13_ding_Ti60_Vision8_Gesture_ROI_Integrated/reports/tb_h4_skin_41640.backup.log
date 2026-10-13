@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Oct 11 16:06:06 2026
+# Process ID: 41640
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision6_RAM_Optimized
+# Command line: xsim.exe -log reports/tb_h4_skin.log -mode tcl -source {xsim.dir/tb_h4_skin/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision6_RAM_Optimized/reports/tb_h4_skin.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision6_RAM_Optimized\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_h4_skin/xsim_script.tcl
+# xsim {tb_h4_skin} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: pale fingertip, palm and shadow segmentation; skin calibration; white/blue/dark background rejection
+$finish called at time : 21450 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision6_RAM_Optimized/sim/tb_h4_skin.sv" Line 22
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 16:06:10 2026...

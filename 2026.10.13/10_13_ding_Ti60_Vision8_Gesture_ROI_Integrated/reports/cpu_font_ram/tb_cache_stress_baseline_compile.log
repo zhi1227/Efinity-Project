@@ -1,0 +1,35 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_Buttons_Integrated/vendor/EfxSapphireSoc.v" into library work
+INFO: [VRFC 10-311] analyzing module EfxSapphireSoc
+INFO: [VRFC 10-311] analyzing module BmbToApb3Bridge
+INFO: [VRFC 10-311] analyzing module BmbSpiXdrMasterCtrl
+INFO: [VRFC 10-311] analyzing module BmbUartCtrl
+INFO: [VRFC 10-311] analyzing module BmbClint
+INFO: [VRFC 10-311] analyzing module BmbDecoder_3
+INFO: [VRFC 10-311] analyzing module BmbUnburstify
+INFO: [VRFC 10-311] analyzing module BmbOnChipRam
+INFO: [VRFC 10-311] analyzing module BmbDecoder_2
+INFO: [VRFC 10-311] analyzing module BmbArbiter
+INFO: [VRFC 10-311] analyzing module BmbDecoder_1
+INFO: [VRFC 10-311] analyzing module BmbExclusiveMonitor
+INFO: [VRFC 10-311] analyzing module BmbDecoder
+INFO: [VRFC 10-311] analyzing module BufferCC_4
+INFO: [VRFC 10-311] analyzing module SystemDebugger
+INFO: [VRFC 10-311] analyzing module JtagBridgeNoTap
+INFO: [VRFC 10-311] analyzing module VexRiscv
+INFO: [VRFC 10-311] analyzing module BufferCC_3
+INFO: [VRFC 10-311] analyzing module BufferCC_2
+INFO: [VRFC 10-311] analyzing module StreamFifo_3
+INFO: [VRFC 10-311] analyzing module StreamFifo_2
+INFO: [VRFC 10-311] analyzing module TopLevel
+INFO: [VRFC 10-311] analyzing module StreamFifo
+INFO: [VRFC 10-311] analyzing module UartCtrl
+INFO: [VRFC 10-311] analyzing module StreamArbiter
+INFO: [VRFC 10-311] analyzing module FlowCCByToggle
+INFO: [VRFC 10-311] analyzing module DataCache
+INFO: [VRFC 10-311] analyzing module InstructionCache
+INFO: [VRFC 10-311] analyzing module UartCtrlRx
+INFO: [VRFC 10-311] analyzing module UartCtrlTx
+INFO: [VRFC 10-311] analyzing module BufferCC_1
+INFO: [VRFC 10-311] analyzing module BufferCC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_cache_stress/tb_cache_stress.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_cache_stress

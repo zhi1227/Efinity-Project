@@ -1,0 +1,25 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_gesture_roi_rgb/xsim_script.tcl
+# xsim {tb_gesture_roi_rgb} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+Accepted RGB scene 0 bbox (18,80)..(62,170)
+Accepted RGB scene 1 bbox (214,80)..(245,170)
+Accepted RGB scene 2 bbox (100,17)..(170,65)
+Accepted RGB scene 3 bbox (100,185)..(170,224)
+Rejected RGB scene 4 CCL flags 1
+Rejected RGB scene 5 CCL flags 3
+Rejected RGB scene 6 CCL flags 1
+Accepted RGB scene 7 bbox (100,185)..(150,226)
+Rejected RGB scene 8 CCL flags 0
+PASS: real RGB expanded four sides; CCL left/right/top clipping rejected; bottom wrist accepted; empty rejected; SOURCE_TAGGED distinct=71 duplicate=3 across 74 frames
+$finish called at time : 79920900 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim/tb_gesture_roi_rgb.sv" Line 80
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:24 . Memory (MB): peak = 219.754 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 13 12:45:24 2026...

@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Oct 11 17:56:03 2026
+# Process ID: 48788
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim_vision8
+# Command line: xsim.exe -log ../reports/vision8/tb_vision8_faces.log -mode tcl -source {xsim.dir/tb_vision8_faces/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim_vision8/../reports/vision8/tb_vision8_faces.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim_vision8\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_vision8_faces/xsim_script.tcl
+# xsim {tb_vision8_faces} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: real CCL nine separated regions/8+ and empty source frames; count confirmation rejects duplicate replay, preserves freeze and marks camera loss unknown
+$finish called at time : 90070 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_vision8_faces.sv" Line 27
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:56:05 2026...

@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Oct 12 15:32:46 2026
+# Process ID: 19060
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_cache_stress
+# Command line: xsim.exe -log ../reports/cpu_font_ram/tb_cache_stress_baseline.log -mode tcl -source {xsim.dir/tb_cache_stress/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_cache_stress/../reports/cpu_font_ram/tb_cache_stress_baseline.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_cache_stress\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_cache_stress/xsim_script.tcl
+# xsim {tb_cache_stress} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: real CPU cache stress: 1KiB index aliases, full address tags, byte/halfword masks, instruction conflict misses, fence; cycles=38611
+$finish called at time : 386115 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_cache_stress/tb_cache_stress.sv" Line 15
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 15:32:50 2026...

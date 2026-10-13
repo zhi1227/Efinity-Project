@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Oct 12 15:05:05 2026
+# Process ID: 36204
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_shared_font
+# Command line: xsim.exe -log ../reports/cpu_font_ram/tb_shared_ui.log -mode tcl -source {xsim.dir/tb_shared_ui/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_shared_font/../reports/cpu_font_ram/tb_shared_ui.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_shared_font\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_shared_ui/xsim_script.tcl
+# xsim {tb_shared_ui} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: menu8 pixels mode 0 digits 140 selection 133 step 16 face 0
+PASS: menu8 pixels mode 1 digits 119 selection 158 step 29 face 0
+PASS: menu8 pixels mode 2 digits 132 selection 141 step 38 face 0
+PASS: menu8 pixels mode 3 digits 131 selection 133 step 16 face 0
+PASS: menu8 pixels mode 4 digits 132 selection 158 step 29 face 0
+PASS: menu8 pixels mode 5 digits 131 selection 141 step 38 face 0
+PASS: menu8 pixels mode 6 digits 141 selection 133 step 16 face 51
+PASS: menu8 pixels mode 7 digits 126 selection 158 step 29 face 0
+PASS: all eight shared UI images pixel-exact versus original, concurrent HDMI port;, thresholds, LOW/HIGH/LINK, step and face 8+ glyphs
+$finish called at time : 49152440 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_shared_font/tb_shared_ui.sv" Line 47
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:53 . Memory (MB): peak = 218.113 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 15:06:03 2026...

@@ -1,0 +1,18 @@
+{
+  "menu": {
+    "glyphs": 148,
+    "banks": 5,
+    "valid_words_equal": 2368
+  },
+  "vision6": {
+    "glyphs": 209,
+    "banks": 7,
+    "valid_words_equal": 3344
+  },
+  "numeric_line_31": "PASS",
+  "shared": {
+    "characters": 256,
+    "words": 4096,
+    "pixels_equal_for_both_original_fonts": true
+  }
+}

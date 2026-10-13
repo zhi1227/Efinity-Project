@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Oct 11 17:49:31 2026
+# Process ID: 46204
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated
+# Command line: xsim.exe -log reports/tb_h5_wave.log -mode tcl -source {xsim.dir/tb_h5_wave/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/reports/tb_h5_wave.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_h5_wave/xsim_script.tcl
+# xsim {tb_h5_wave} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: wrist-only and translational wave, two blurred frames, static jitter/one-way/unknown/thumb/heart rejection, timeout, removal, target change and disable
+$finish called at time : 6610 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_h5_wave.sv" Line 38
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:49:33 2026...

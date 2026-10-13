@@ -1,0 +1,26 @@
+{
+  "resources": {
+    "XLRs": {
+      "used": 45048,
+      "available": 60800
+    },
+    "Memory Blocks": {
+      "used": 222,
+      "available": 256
+    },
+    "DSP Blocks": {
+      "used": 35,
+      "available": 160
+    },
+    "Global Clocks (GBUF)": {
+      "used": 14,
+      "available": 32
+    }
+  },
+  "min_setup_slack_ns": 0.326,
+  "min_hold_slack_ns": 0.027,
+  "bit_sha256": "af60e891f2e6fe29f4dedee675321f499afe6f57b67b9b5d236192f553e5abe1",
+  "hex_sha256": "8a861aff84e0131ee0c48733d89dc308fbdbee38a26b9df170ddd72f9bf36c77",
+  "build_input_manifest_sha256": "b28b2e7c7f7f377098f9e4f155420fbc2eae96ec6af8f0491a3c95b58b0c15e5",
+  "physical_board_test": "not performed; simulation and compilation only"
+}

@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Oct 12 15:20:39 2026
+# Process ID: 31224
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_cpu_fast
+# Command line: xsim.exe -log ../reports/cpu_font_ram/tb_cpu_fast.log -mode tcl -source {xsim.dir/tb_cpu_fast/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_cpu_fast/../reports/cpu_font_ram/tb_cpu_fast.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_cpu_fast\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_cpu_fast/xsim_script.tcl
+# xsim {tb_cpu_fast} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PROBE cycle0 PCxxxxxxxx status0123 pendingxxxxx modex
+PASS: real CPU mode 0 coherent status and synthetic frame-boundary commit
+PROBE cycle10000 PCf900010c status0121 pending10121 mode0
+PASS: real CPU mode 1 coherent status and synthetic frame-boundary commit
+PROBE cycle20000 PCf9000160 status0122 pending10122 mode1
+PASS: real CPU mode 2 coherent status and synthetic frame-boundary commit
+PROBE cycle30000 PCf90001f0 status0123 pending10123 mode2
+PASS: real CPU mode 3 coherent status and synthetic frame-boundary commit
+PROBE cycle40000 PCf90003bc status0124 pending10124 mode3
+PROBE cycle50000 PCf90001d8 status0124 pending10124 mode3
+PASS: real CPU mode 4 coherent status and synthetic frame-boundary commit
+PROBE cycle60000 PCf900046c status0125 pending10125 mode4
+PASS: real CPU mode 5 coherent status and synthetic frame-boundary commit
+PROBE cycle70000 PCf9000084 status0126 pending10126 mode5
+PROBE cycle80000 PCf900027c status0126 pending10126 mode5
+PASS: real CPU mode 6 coherent status and synthetic frame-boundary commit
+PROBE cycle90000 PCf9000124 status0127 pending10127 mode6
+PROBE cycle100000 PCf9000260 status0127 pending10127 mode6
+PASS: real CPU mode 7 coherent status and synthetic frame-boundary commit
+PASS: real CPU all eight coherent status bundles with shared font
+$finish called at time : 2108796646 ps : File "D:/yilingsi_fpga/Efinity_Project/2026.10.12/10_12_ding_Ti60_Vision8_CPU_Font_RAM_Optimized/sim_cpu_fast/tb_cpu_fast.sv" Line 23
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 218.078 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 15:20:51 2026...

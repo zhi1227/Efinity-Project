@@ -1,0 +1,114 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/vendor/EfxSapphireSoc.v" into library work
+INFO: [VRFC 10-311] analyzing module EfxSapphireSoc
+INFO: [VRFC 10-311] analyzing module BmbToApb3Bridge
+INFO: [VRFC 10-311] analyzing module BmbSpiXdrMasterCtrl
+INFO: [VRFC 10-311] analyzing module BmbUartCtrl
+INFO: [VRFC 10-311] analyzing module BmbClint
+INFO: [VRFC 10-311] analyzing module BmbDecoder_3
+INFO: [VRFC 10-311] analyzing module BmbUnburstify
+INFO: [VRFC 10-311] analyzing module BmbOnChipRam
+INFO: [VRFC 10-311] analyzing module BmbDecoder_2
+INFO: [VRFC 10-311] analyzing module BmbArbiter
+INFO: [VRFC 10-311] analyzing module BmbDecoder_1
+INFO: [VRFC 10-311] analyzing module BmbExclusiveMonitor
+INFO: [VRFC 10-311] analyzing module BmbDecoder
+INFO: [VRFC 10-311] analyzing module BufferCC_4
+INFO: [VRFC 10-311] analyzing module SystemDebugger
+INFO: [VRFC 10-311] analyzing module JtagBridgeNoTap
+INFO: [VRFC 10-311] analyzing module VexRiscv
+INFO: [VRFC 10-311] analyzing module BufferCC_3
+INFO: [VRFC 10-311] analyzing module BufferCC_2
+INFO: [VRFC 10-311] analyzing module StreamFifo_3
+INFO: [VRFC 10-311] analyzing module StreamFifo_2
+INFO: [VRFC 10-311] analyzing module TopLevel
+INFO: [VRFC 10-311] analyzing module StreamFifo
+INFO: [VRFC 10-311] analyzing module UartCtrl
+INFO: [VRFC 10-311] analyzing module StreamArbiter
+INFO: [VRFC 10-311] analyzing module FlowCCByToggle
+INFO: [VRFC 10-311] analyzing module DataCache
+INFO: [VRFC 10-311] analyzing module InstructionCache
+INFO: [VRFC 10-311] analyzing module UartCtrlRx
+INFO: [VRFC 10-311] analyzing module UartCtrlTx
+INFO: [VRFC 10-311] analyzing module BufferCC_1
+INFO: [VRFC 10-311] analyzing module BufferCC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/menu_glyph_rom.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_glyph_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/menu_renderer.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_renderer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/menu8_renderer.v" into library work
+INFO: [VRFC 10-311] analyzing module menu8_renderer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/menu_lcd_apb.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_lcd_apb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/spi_write_byte.v" into library work
+INFO: [VRFC 10-311] analyzing module spi_write_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/epd_apb.v" into library work
+INFO: [VRFC 10-311] analyzing module epd_apb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/rtl/riscv_menu_top.v" into library work
+INFO: [VRFC 10-311] analyzing module riscv_menu_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_epd_cpu.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_epd_cpu
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_epd_cpu -s tb_epd_cpu --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.BufferCC_2
+Compiling module work.BufferCC_3
+Compiling module work.InstructionCache
+Compiling module work.DataCache
+Compiling module work.VexRiscv
+Compiling module work.BufferCC_1
+Compiling module work.FlowCCByToggle
+Compiling module work.JtagBridgeNoTap
+Compiling module work.SystemDebugger
+Compiling module work.BufferCC_4
+Compiling module work.BmbDecoder
+Compiling module work.BmbExclusiveMonitor
+Compiling module work.BmbDecoder_1
+Compiling module work.StreamArbiter
+Compiling module work.BmbArbiter
+Compiling module work.BmbDecoder_2
+Compiling module work.BmbOnChipRam
+Compiling module work.BmbUnburstify
+Compiling module work.BmbDecoder_3
+Compiling module work.BmbClint
+Compiling module work.UartCtrlTx
+Compiling module work.BufferCC
+Compiling module work.UartCtrlRx
+Compiling module work.UartCtrl
+Compiling module work.StreamFifo
+Compiling module work.BmbUartCtrl
+Compiling module work.TopLevel
+Compiling module work.StreamFifo_2
+Compiling module work.StreamFifo_3
+Compiling module work.BmbSpiXdrMasterCtrl
+Compiling module work.BmbToApb3Bridge
+Compiling module work.EfxSapphireSoc
+Compiling module work.menu_glyph_rom
+Compiling module work.menu_renderer
+Compiling module work.menu_lcd_apb_default
+Compiling module work.spi_write_byte(HALF_PERIOD=2)
+Compiling module work.epd_apb(CLK_HZ=100000,SPI_HALF_P...
+Compiling module work.riscv_menu_top(EPD_CLK_HZ=100000...
+Compiling module work.tb_epd_cpu
+Built simulation snapshot tb_epd_cpu
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_epd_cpu/xsim_script.tcl
+# xsim {tb_epd_cpu} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: real RISC-V firmware, 30033 SPI bytes, both image planes, reset, BUSY and live LVDS menu
+$finish called at time : 159618159701 ps : File "D:/yilingsi_fpga/Efinity_Project/2026.10.11/10_11_liu_Ti60_Vision8_Buttons_Integrated/sim/tb_epd_cpu.sv" Line 63
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:10:04 . Memory (MB): peak = 219.652 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 17:48:27 2026...

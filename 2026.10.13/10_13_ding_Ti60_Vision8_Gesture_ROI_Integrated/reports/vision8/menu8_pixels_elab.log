@@ -1,0 +1,23 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_menu8_pixels -s tb_menu8_pixels --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/rtl/menu8_renderer.v" Line 2. Module menu8_renderer doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/rtl/menu_glyph_rom.v" Line 2. Module menu_glyph_rom_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.menu_glyph_rom_default
+Compiling module work.menu8_renderer
+Compiling module work.tb_menu8_pixels
+Built simulation snapshot tb_menu8_pixels
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim_menu8_pixels/xsim.dir/tb_menu8_pixels/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 13 12:57:46 2026...

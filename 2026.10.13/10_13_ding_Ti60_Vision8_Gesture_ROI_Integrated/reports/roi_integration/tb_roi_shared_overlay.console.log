@@ -1,0 +1,16 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_roi_shared_overlay/xsim_script.tcl
+# xsim {tb_roi_shared_overlay} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: SHARED_FONT=1 new two-pixel ROI sides and old edges removed; palm square/right HUD unchanged; 521389 pixels equal legacy font with 372425 concurrent LCD reads; pure capture strips overlays
+$finish called at time : 5213956 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim/tb_roi_shared_overlay.sv" Line 76
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 218.039 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 13 12:46:13 2026...
