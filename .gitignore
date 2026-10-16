@@ -64,12 +64,26 @@ sim_modular/
 /2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/backups/
 /2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim_*/
 
+# 10.16 IO28 button-fix project: omit generated simulation run folders and
+# the identical project copy stored with technical-document drafting files.
+/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim_*/
+/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/firmware/build/
+/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol*.bin
+/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/reference/**/firmware/build/
+/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/reference/**/outflow/
+/技术文档/ding_技术文档/最新项目/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/
+
 # Keep authored SystemVerilog benches under this project's sim/ directory
 !/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim/
 !/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim/*.sv
 !/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim/*.v
 !/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim/*.c
 !/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim/*.md
+!/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim/
+!/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim/*.sv
+!/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim/*.v
+!/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim/*.c
+!/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim/*.md
 
 # Keep the tested Ti60 bitstream and timing report, not intermediate netlists
 /Ti60F225_GitHub_FPGA_Sobel_Port/outflow/*

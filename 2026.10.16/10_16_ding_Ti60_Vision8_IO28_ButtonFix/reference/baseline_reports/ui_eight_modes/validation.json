@@ -1,0 +1,164 @@
+{
+  "tests": [
+    {
+      "log": "reports/vision8/tb_vision8_controls.log",
+      "status": "PASS",
+      "sha256": "e77121596712a03767a9e785fcd8c63b57b8943a0691352a09b55867b3f4ff58"
+    },
+    {
+      "log": "reports/vision8/tb_vision8_faces.log",
+      "status": "PASS",
+      "sha256": "97a9bb2b8725ec039c488d2d1e3b739bcd2735de4dd6a87ce9626a3bab938fe7"
+    },
+    {
+      "log": "reports/vision8/tb_vision8_frames.log",
+      "status": "PASS",
+      "sha256": "999d123c6739b58f56d5120ebbc95fcf9065b5e803129b32eeb5c79ceca1715c"
+    },
+    {
+      "log": "reports/vision8/tb_io29_freeze_ddr.log",
+      "status": "PASS",
+      "sha256": "c3be0eebfc759d7acb52d421da049921174e4691974b662b7a603396b5e7a938"
+    },
+    {
+      "log": "reports/vision8/tb_menu8_pixels.log",
+      "status": "PASS",
+      "sha256": "9a094b4eed70d4e61f9dfa41cf9795b6564acdaa5e7fc61933a176d492135342"
+    },
+    {
+      "log": "reports/ui_refresh/tb_ui_fonts.log",
+      "status": "PASS",
+      "sha256": "960dbfe31e55f66ba2f4a0c33ba7976b256da1f94a5e8c07b3fed943259a1b4d"
+    },
+    {
+      "log": "reports/roi_integration/tb_roi_shared_overlay.log",
+      "status": "PASS",
+      "sha256": "9128ffcd95218eeaecd90347a5902d984952dbf6c3d20013ab3d8eea203c0678"
+    },
+    {
+      "log": "reports/roi_integration/tb_vision6.log",
+      "status": "PASS",
+      "sha256": "f4e9a18e9695f4f44b9d065416aafb29d58678fb94e3468e603dd8e3a1d84e08"
+    },
+    {
+      "log": "reports/tb_menu_cpu8.log",
+      "status": "PASS",
+      "sha256": "bb7ebcf13c3f4f727e8c18c04f98bf3700ad62a8b76bf922b183f5b2d65b0490"
+    }
+  ],
+  "build": {
+    "resources": {
+      "XLRs": {
+        "used": 48237,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 222,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 38,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.298,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "c5897d89d372f84120cfddf1c6c788fdf731ae4a0722152dcbc69e1527100c50",
+    "hex_sha256": "d7da9727a5fbef8fb3b211335dc72941900562a87865ba121a4d8ed57d1f7c27",
+    "build_input_manifest_sha256": "27057f991527d0bfce1379e7c29a8d459aed644255d36b8a7966267b67c0dc63",
+    "physical_board_test": "not performed; simulation and compilation only"
+  },
+  "io35": {
+    "fpga_pin": "B9",
+    "gpio": "GPIOT_P_11",
+    "header": "P4 pin 40",
+    "idle": 0,
+    "pressed": 1
+  },
+  "images": [
+    {
+      "path": "reports/ui_refresh/menu_0.png",
+      "sha256": "14aa89164d66c97e3de936b99a62d85d29632c49ae9f2b2a7f135f4b807a0441"
+    },
+    {
+      "path": "reports/ui_refresh/menu_1.png",
+      "sha256": "5b09d95479f4e29af1c1bc42db589934a0dd0771493f499219b432e3d3bbc70e"
+    },
+    {
+      "path": "reports/ui_refresh/menu_2.png",
+      "sha256": "d46e1bb66a7f60eefdbbd475d8243bff9bae9d92e697e99b29be81bc19c90506"
+    },
+    {
+      "path": "reports/ui_refresh/menu_3.png",
+      "sha256": "dfdb75a413b6385dd9dbd872b6615c7254723977f916bd23dc1944f056feea96"
+    },
+    {
+      "path": "reports/ui_refresh/menu_4.png",
+      "sha256": "698adb496a8f60344ef9c672acf0d201aea960191f33bfe20a3c3d62cfda09a8"
+    },
+    {
+      "path": "reports/ui_refresh/menu_5.png",
+      "sha256": "5dc107536361194cff43304958689888b4d2af1fe7c4ce2ff7c986070eb40701"
+    },
+    {
+      "path": "reports/ui_refresh/menu_6.png",
+      "sha256": "fd2e7a37d520d336696e909cf3de9fcb5c727fe84563a11c2031efe54255863e"
+    },
+    {
+      "path": "reports/ui_refresh/menu_7.png",
+      "sha256": "5c9bdceb59ed83afa2acc5b1c5255e8ca8259a47603914e115ded6bdaaad0a8e"
+    },
+    {
+      "path": "reports/ui_refresh/menu_8.png",
+      "sha256": "4b7fb2f1a293869a2c3a526a797fdd9eabd2d0ede6d04ba531d824d457886203"
+    },
+    {
+      "path": "reports/ui_refresh/menu_9.png",
+      "sha256": "18c68fb3cd3840af331914d73f7b698868ec8b1ddf18c7aff996aa5f8d47e533"
+    },
+    {
+      "path": "reports/ui_refresh/menu_10.png",
+      "sha256": "5846598c02ba3486e4742c69e0df4a2fdd87121b1b9e9322c1f3a8fd1b334dab"
+    },
+    {
+      "path": "reports/ui_refresh/menu_11.png",
+      "sha256": "a6c13656ef75e6bcab46447efd9fbaca34c2001eaedeb2ade2fc2acc3682f063"
+    },
+    {
+      "path": "reports/ui_refresh/menu_12.png",
+      "sha256": "b03ccd0b533d26f3c2ad7536a886326b67b341369f3b497bcc78e73892052a23"
+    },
+    {
+      "path": "reports/ui_refresh/menu_13.png",
+      "sha256": "f61048851a4abd3c036bc5ffb34e3cec7296d990f6e390c621fa941042c187cf"
+    },
+    {
+      "path": "reports/ui_refresh/menu_14.png",
+      "sha256": "67c12e780e2540678e37e99d0ab9cc4d2e282313a01f090824b4e9144a7946e6"
+    },
+    {
+      "path": "reports/ui_refresh/menu_15.png",
+      "sha256": "5508ba3b7a4b309f56543cecc851d627f5acd5113837ec45b9d87081d68b7560"
+    },
+    {
+      "path": "reports/ui_refresh/menu_16.png",
+      "sha256": "c9a872976a7e784291d86950058704bbae10811c950bf32d1ceeb1ee32180da1"
+    }
+  ],
+  "retained_assets": {
+    "src/parallel/gesture_config.vh": "049b82a19073c4cc49631a5ed7f492ec2d3fbbdf9d7c2bc364f7c551b7b4bfa6",
+    "EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol0.bin": "73decce2b7c0562cfa61578898bfe5632ea142c1f9b7bc4edf75f68ff6c19607",
+    "EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol1.bin": "cedc4adb60165ac28ccf5c0f4e58b87dda821da021785a681e237e746e4d457f",
+    "EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol2.bin": "f0da3a861721ecbc4edb16fce37f99a90a73885d7f7563df5f72570d66e53785",
+    "EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol3.bin": "a0e8f4bfffa292608c5360c077ed969b907235f2335fc13703d9eeb848449199",
+    "image/ARTWORK.md": "d4a383673bfca3474e287fe40101e2041f807fd616fea116b3ca9b6bfa7d2669",
+    "image/character_calligraphy_source.png": "0382ba248a2c0c69c6cbf3501ea6769d4066601fb764d7f504b80a4dad01824e",
+    "image/epaper.hex": "fc92f55f6e7191b70c6977a8c5c4423d334f559495592f47fe2ff526fddc03fa",
+    "image/epaper_preview.png": "48936783284a07794fdd84f04a0b3ff54a838d9624ea706e135963a982508841"
+  },
+  "physical_board_test": "not performed"
+}

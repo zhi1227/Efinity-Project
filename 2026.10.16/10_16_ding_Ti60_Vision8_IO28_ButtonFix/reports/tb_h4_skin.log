@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Oct 16 00:53:51 2026
+# Process ID: 40192
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix
+# Command line: xsim.exe -log reports/tb_h4_skin.log -mode tcl -source {xsim.dir/tb_h4_skin/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/reports/tb_h4_skin.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_h4_skin/xsim_script.tcl
+# xsim {tb_h4_skin} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: pale fingertip, palm and shadow segmentation; skin calibration; white/blue/dark background rejection
+$finish called at time : 21450 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim/tb_h4_skin.sv" Line 22
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Oct 16 00:53:56 2026...

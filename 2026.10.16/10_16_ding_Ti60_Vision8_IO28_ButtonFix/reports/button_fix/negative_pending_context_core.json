@@ -1,0 +1,12 @@
+{
+  "result": "EXPECTED_FAILURE_OBSERVED",
+  "expected_failure": "Fatal: same-edge context change leaked pending long",
+  "original_source": "D:\\Github_Project\\fpga_build\\vision8_io28_fix_20261016_run1\\rtl\\vision8_controls.v",
+  "original_source_sha256": "E527270F996AB36D7AA4CB7B23D336F43AB0230729E6CCA66B6BDAD169A45A5C",
+  "saved_source": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.16\\10_16_ding_Ti60_Vision8_IO28_ButtonFix\\sim_button_fix\\negative_pending_context_core\\vision8_controls_before.v",
+  "saved_source_sha256": "E527270F996AB36D7AA4CB7B23D336F43AB0230729E6CCA66B6BDAD169A45A5C",
+  "testbench": "tb_vision8_key_boundary",
+  "testbench_sha256": "E35908AC5475D236EBD7DB8E17B04DB8D8888D4C03A89B21728FAC470C7B484D",
+  "log": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.16\\10_16_ding_Ti60_Vision8_IO28_ButtonFix\\reports\\button_fix\\negative_pending_context_core.log",
+  "board_programmed": false
+}

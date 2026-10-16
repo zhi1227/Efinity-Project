@@ -1,0 +1,166 @@
+{
+  "baseline_zip": "D:\\桌面\\WorkPlace\\tmp\\vision8_before_eight_cards_20261013_233604.zip",
+  "changed_files": [
+    {
+      "path": "example_top.v",
+      "old_sha256": "e574fc3d95d6bad580c0eefa97d4f68a4a40b05be7b7a7fde9b0380bc0d4000f",
+      "new_sha256": "59f60d8cde3d2f8d09fa3f786b9691d61abc1e8c2845b32cf042176c55892414"
+    },
+    {
+      "path": "menu_font.hex",
+      "old_sha256": "bc6c9319459a376c50d24553c3e8af8e0d715e3c44f4dc6763ba5db20b2c2665",
+      "new_sha256": "3dc9aa7d1514e4bd594e688b5f824d68c4565a7f5d95a939945cf07889c0fd66"
+    },
+    {
+      "path": "menu_font_bank0.hex",
+      "old_sha256": "5210006d1f144b5812e7421015b54ef5a8223f684c8ddf4470dadbad7cb72f60",
+      "new_sha256": "21d31e807217ec84d611b840e251bb8493953c692ff578c472bec7b6a978d643"
+    },
+    {
+      "path": "menu_font_bank1.hex",
+      "old_sha256": "0fe66613192341c59e12e604b78905136cbb1e60ef4574cd81b61f8a3aad4db2",
+      "new_sha256": "4d0d157dd3e07d981139535b755299a1d4566071789ee77255157281ad4148a8"
+    },
+    {
+      "path": "menu_font_bank2.hex",
+      "old_sha256": "157140437d1caed14619db8d4b6db42e6c959b7679a5b20de657cb7d765c0bcd",
+      "new_sha256": "3a5c2b71e535abc3de68c04ce67e5db6efdbea675c5e29b218fa48aec0792ed6"
+    },
+    {
+      "path": "menu_font_bank3.hex",
+      "old_sha256": "97cd9ccf7c179f3983084c8638df308c89a5947a62d4aad352e1d698af7c5ae0",
+      "new_sha256": "9aa6f271024554fc9a45ae65a2030627e8223d84c7c058a09c6b8010c8cad3d2"
+    },
+    {
+      "path": "menu_font_bank4.hex",
+      "old_sha256": "aa72236a27319f16c9acfbcfbf95f30e3c1d658920afbe10b8b0dbd2ad8c50e2",
+      "new_sha256": "5cd0e8f49be7cfe50d75fcca2fbe958ee4f7af3c0308fbcc42fc82f6a45202d2"
+    },
+    {
+      "path": "README.md",
+      "old_sha256": "47e25b5e0a5e9def995450fed8b92cf34fe07d3f855691a3b02e4b2fb0e5ae5c",
+      "new_sha256": "5f9b85e2ee3b25eefda109fb1be310a69d19600f9bd4b7e7fb69ebc497b08f33"
+    },
+    {
+      "path": "shared_font.hex",
+      "old_sha256": "c4c1f7250e0f69a425a9397daf0df88b00e102e225fac1c4c15a085a54824fad",
+      "new_sha256": "a974b49245ea10254844f17096754588f3972251b6a75ef235f89b51d7114bc2"
+    },
+    {
+      "path": "shared_font_bank0.hex",
+      "old_sha256": "5210006d1f144b5812e7421015b54ef5a8223f684c8ddf4470dadbad7cb72f60",
+      "new_sha256": "21d31e807217ec84d611b840e251bb8493953c692ff578c472bec7b6a978d643"
+    },
+    {
+      "path": "shared_font_bank1.hex",
+      "old_sha256": "34d878a10e715bccbd762f7a40c1539753aa36f57e3c751bef757d5fa7697ba9",
+      "new_sha256": "020c4f76e72928f9c1edf2a9f0ff71a42c9557f808472fd8202f15e3f7f1c7a5"
+    },
+    {
+      "path": "shared_font_bank2.hex",
+      "old_sha256": "db868e15e6ad96a17860148f87462815f464492a8d7a99398e3450ddb6baf29c",
+      "new_sha256": "cff4d563d582aa417d67506180bb244ea07923b2e2bf44297152d67a7ed6beb9"
+    },
+    {
+      "path": "shared_font_bank3.hex",
+      "old_sha256": "04b5d151815abff2605f6a0078b41ea0a6a3db771540dbb054462a9fd78fe31c",
+      "new_sha256": "8b10af8d65b67d7adcffe9ba9cdd4f2ca03a769ad066314222f6ade758e84196"
+    },
+    {
+      "path": "shared_font_bank4.hex",
+      "old_sha256": "deb25bf0a7e75ee2edbb6440d049c8a069630e4f2437c5a0c27bd9b27033dae5",
+      "new_sha256": "701e25df8f8e63ab7101f12987d2833e305debb85732f7e5fdea4c6204ab3f3c"
+    },
+    {
+      "path": "shared_font_bank5.hex",
+      "old_sha256": "09e14573aa52cb1001629f3043a12820e539c4b5c3a6057d9a40d5660cd88909",
+      "new_sha256": "510357922337f55dd3e43cdeab6bf59266a6057246b438a20af9d9ae84cbf34c"
+    },
+    {
+      "path": "shared_font_bank6.hex",
+      "old_sha256": "e9c11c7e9b20d0f6b7948b71172bf1c703cd80fb7a8a416823d979f611f45e75",
+      "new_sha256": "f586f7fc25e53c20ba512b94a4209706a58b38f2316ff800298c2a4b064fd460"
+    },
+    {
+      "path": "shared_font_bank7.hex",
+      "old_sha256": "92dc8641eafe38b7d55b4f7a8e70f89f155766984eddcb0bdf3058d22c3cce0b",
+      "new_sha256": "ac0cd79e7cd5389f1e4eb3c60f4095534315e3c4fc52aa1acddbade87e8ce841"
+    },
+    {
+      "path": "shared_font_bank8.hex",
+      "old_sha256": "79a8cc6a67cbba5858b53eac744ef6e1bd935a8a2e741a4136d63fd4606c8ee4",
+      "new_sha256": "b2e311416844f9ecb6ce01a65a5fc3acde0e856d73b40205ef1e9ec7c97aa7f6"
+    },
+    {
+      "path": "UI更新说明_20261013.md",
+      "old_sha256": "f5caaaac2bcf3e838f635b91e1276480463cea7bdc232bdb0019e8bfc30eefde",
+      "new_sha256": "db3dc0b8d8f8e7cd32cc15be8a7841d73a858cfc215be11213580afa5b2c77ed"
+    },
+    {
+      "path": "rtl/menu8_renderer.v",
+      "old_sha256": "962eefecdbff895e8d32cc0b6e4953e64d06a2f2e31782ee2913f95814f2146b",
+      "new_sha256": "edba7a1523c47141efbed44eaaa53dae3a46f199e835a29f8895bdfeafed319a"
+    },
+    {
+      "path": "rtl/menu_glyph_rom.v",
+      "old_sha256": "6174e9b55200003d64ff4c418b69d3374bbafd5912a595741af48fd32d691fcf",
+      "new_sha256": "1417ebacce462fec76a6dac4526a66462124c0d0e3acdd6a0a1190740ee069c8"
+    },
+    {
+      "path": "rtl/menu_lcd_apb.v",
+      "old_sha256": "bb98bde0044b62a61b933513a49213757858a8ef80c61986de81448bcb41f784",
+      "new_sha256": "e9dcdfc1ab874cd417cbc81eb09065742b1b4787355c64ee33c62b4835bcda17"
+    },
+    {
+      "path": "rtl/vision6_glyph_rom.v",
+      "old_sha256": "0b6de53c556bab2fc7ee788c7a66e2158fc40b7dd01a6a1b71a68e930a239028",
+      "new_sha256": "7abce957b579d749652c37a4ec6b2979b0884089459ad7cf00a21465a1106ccb"
+    },
+    {
+      "path": "rtl/vision8_controls.v",
+      "old_sha256": "7fca82f1beefd4cf07d3ece5aa3d8ccebad516147c7c9cdefa4dbf360f3de7ac",
+      "new_sha256": "98c7f191366a1c2daecb64168f0ad0cdfc0099e3e112c7d8c6300211aa30feda"
+    },
+    {
+      "path": "rtl/vision8_frames.v",
+      "old_sha256": "f9d6e82781d42e57bab510db0233afcb99046c5c4976d234ef3a8fc29eea9eb7",
+      "new_sha256": "5be9b6b36bda04c4d4a1410faf83377c221f4bf2d0789bdea56f03ceb71de853"
+    },
+    {
+      "path": "sim/tb_menu8_pixels.sv",
+      "old_sha256": "d3dcc54b09163166a93dec8a6b42eee8d25d79db9d7876ad5abc7e80367c7434",
+      "new_sha256": "9f07d713e1c6f8e1fe09d291e0b4988bbd2f613e4a73dbd43e5aa3477492457c"
+    },
+    {
+      "path": "sim/tb_menu_cpu8.sv",
+      "old_sha256": "9ece808d9f67b488aefd62ab86cdbbecddf16a23ff21b1ea6500b7877ca9d37f",
+      "new_sha256": "8a66e02b4e3b69394f3a60e42be72008d2c153ffd91f61b47a3d179a93399439"
+    },
+    {
+      "path": "sim/tb_vision8_controls.sv",
+      "old_sha256": "be6c9910131886b6861a7a215d8a2ba54ed81318630025411c3ebd43232a17d6",
+      "new_sha256": "28e8162c3d15a13d28e28c64177e5b056c16477a66292f193ec08ba6b9e5bf90"
+    },
+    {
+      "path": "sim/tb_vision8_frames.sv",
+      "old_sha256": "75f7c2e5847c29d24d33d7656c483e3149ceefa5a7944e4045e9289079de39f5",
+      "new_sha256": "3b02c17fe8e1d2e7819878dd42be12a635898a36d89c845ec803904cc869549e"
+    },
+    {
+      "path": "tools/generate_font.py",
+      "old_sha256": "af297943a6a90b018874a9b6ed6bae3c27771e3d19d8b81bda541048db9ce810",
+      "new_sha256": "e8e1fb69c249740ac173246a2d9aaad199a5d1d0dc44ce99fba1d86a276ec5c6"
+    },
+    {
+      "path": "tools/render_eight_modes.py",
+      "old_sha256": null,
+      "new_sha256": "bfc349c1da53eca1ff14273a55ef12b1a303cd06f709e633f284a0246668f70c"
+    },
+    {
+      "path": "tools/verify_eight_modes.py",
+      "old_sha256": null,
+      "new_sha256": "d0f607fbff9f39c47c0a25a76c44856cac5a3eedd250741b71fb0b9ae6b39388"
+    }
+  ],
+  "retained_assets_match_backup": true
+}

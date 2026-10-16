@@ -1,0 +1,7 @@
+{
+  "started_utc": "2026-10-13T04:41:58.741007+00:00",
+  "production_change": "src/parallel/gesture_config.vh four ROI macros only",
+  "baseline_ram": 212,
+  "baseline_xlr": 47482,
+  "baseline_dsp": 35
+}
