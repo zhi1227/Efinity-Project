@@ -1,0 +1,131 @@
+{
+  "revision": "official_isp_comparison_v3",
+  "completed_utc": "2026-10-15T15:40:13.327015+00:00",
+  "project": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.15\\10_15_ding_Ti60_Vision8_RGB_Balance",
+  "backup": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.15\\10_15_ding_Ti60_Vision8_RGB_Balance\\backups\\before_official_isp_20261015_231222",
+  "official_reference": {
+    "official_path": "D:\\yilingsi_fpga\\VF-Ti60F225_HDK_V2.1_20251009\\VF-Ti60F225_HDK_V2.1_20251009\\07-FPGA_HDL_Image-2023.2\\02-1_Ti60_OV5640_LCD-HDMI_1080P60\\src\\cmos_i2c\\I2C_OV5640_1280720_Config.v",
+    "sha256": "8bfd15d55c9fb358356d4792c616bf471bab52606df9c4a71865455d7ff99be1",
+    "pre_change_normalized_equal": true,
+    "reference_copy": "reference\\official_camera_20251009\\I2C_OV5640_1280720_Config.v",
+    "candidate_sensor_change": "Only register 0x5000 bit7 (A7 -> 27); original lens table kept; AWB/AEC/format unchanged",
+    "previous_revision_user_observation": "User reports yellow/green/purple central rings still present",
+    "official_example_same_camera_test": "User confirmed not yet tested"
+  },
+  "changed_build_inputs": [
+    "src/cmos_i2c/I2C_OV5640_1280720_Config.v",
+    "src/parallel/rgb_balance_config.vh"
+  ],
+  "retained_baseline_files_unchanged": 644,
+  "intentional_baseline_exception": "src/cmos_i2c/I2C_OV5640_1280720_Config.v",
+  "test_count": 7,
+  "tests": [
+    {
+      "log": "reports/official_isp/tb_camera_official_isp.log",
+      "status": "PASS",
+      "sha256": "31efd915c43a83ccf75dc292b55b362a6ab44e7858c886088e8048d31395211c"
+    },
+    {
+      "log": "reports/official_isp/tb_i2c6.log",
+      "status": "PASS",
+      "sha256": "0c0cfb73c3d02823682394775725c015f98dcc1ac8cbf87982b661ae50d9cee3"
+    },
+    {
+      "log": "reports/rgb_balance/official_isp_bypass/tb_camera_rgb_balance.log",
+      "status": "PASS",
+      "sha256": "e6d9505e22d0a42ed8e747eebdc142c3f78f0734bde6fc875f48415df5795861"
+    },
+    {
+      "log": "reports/rgb_balance/tb_camera_fifo_endian.log",
+      "status": "PASS",
+      "sha256": "3d0eaabf13f27ed6317c47e16e4f691b624a3d5c96e40a2fd98bb85925c5349c"
+    },
+    {
+      "log": "reports/rgb_balance/tb_camera_fifo_frame_path.log",
+      "status": "PASS",
+      "sha256": "84182f331d80298095a4b4aafb10d285cd96479f684e2f72c8f5d9d126dc0e69"
+    },
+    {
+      "log": "reports/rgb_balance/tb_camera_rgb_fifo.log",
+      "status": "PASS",
+      "sha256": "816e07a37e9a2110e71ea5de737345b1ce3631a6a0dae8876c65c485e2d7d1de"
+    },
+    {
+      "log": "reports/rgb_balance/tb_camera_fifo_model_path.log",
+      "status": "PASS",
+      "sha256": "473a53619ed8f71129392d8bf7e26fce0af639d9a8ff67199db51e2286fcde22"
+    }
+  ],
+  "builds": {
+    "A_official_lenc_on": {
+      "resources": {
+        "XLRs": {
+          "used": 48664,
+          "available": 60800
+        },
+        "Memory Blocks": {
+          "used": 222,
+          "available": 256
+        },
+        "DSP Blocks": {
+          "used": 38,
+          "available": 160
+        },
+        "Global Clocks (GBUF)": {
+          "used": 14,
+          "available": 32
+        }
+      },
+      "min_setup_slack_ns": 0.312,
+      "min_hold_slack_ns": 0.026,
+      "bit_sha256": "5d74121b3ebcfaf4af91719dd521159d6094965a4b79c99f45b19de62166a663",
+      "hex_sha256": "9fadd641bb58817583dcf72f48236b50db7c8a1369327be81d0cc082d0acbfec",
+      "build_input_manifest_sha256": "494a05cc6b41a21e94c458dc6bb310a419855f4db94fa649e20893d068892849",
+      "physical_board_test": "not performed; simulation and compilation only"
+    },
+    "B_candidate_lenc_off": {
+      "resources": {
+        "XLRs": {
+          "used": 49351,
+          "available": 60800
+        },
+        "Memory Blocks": {
+          "used": 222,
+          "available": 256
+        },
+        "DSP Blocks": {
+          "used": 38,
+          "available": 160
+        },
+        "Global Clocks (GBUF)": {
+          "used": 14,
+          "available": 32
+        }
+      },
+      "min_setup_slack_ns": 0.3,
+      "min_hold_slack_ns": 0.022,
+      "bit_sha256": "3f4e810fd4148f8284d3a2d90e895412aef3564e7eeb85f1222f061678d78f2d",
+      "hex_sha256": "5a3bc6f0b78541af820ce4c1a8abe439bff8f3139efeba1529e70ac9f969a78a",
+      "build_input_manifest_sha256": "d17bd6e0ce40f18cf933871c786078d0790b77987c24fe1c3f15f13977031f15",
+      "physical_board_test": "not performed; simulation and compilation only"
+    }
+  },
+  "download_files": {
+    "A_official_lenc_on": {
+      "bit": "outflow/Ti60_Demo_Camera_V3_Official_LENC_On.bit",
+      "hex": "outflow/Ti60_Demo_Camera_V3_Official_LENC_On.hex"
+    },
+    "B_candidate_lenc_off": {
+      "bit": "outflow/Ti60_Demo_Camera_V3_LENC_Off.bit",
+      "hex": "outflow/Ti60_Demo_Camera_V3_LENC_Off.hex"
+    }
+  },
+  "default_variant": "B_candidate_lenc_off",
+  "fpga_spatial_rgb_correction": false,
+  "A": "Official sensor table, LENC on, FPGA gain bypass",
+  "B": "Only 0x5000 bit7 cleared, LENC off, FPGA gain bypass",
+  "previous_board_feedback": "User reports V2 colour rings remain",
+  "hardware_programming": "not performed",
+  "physical_board_test": "not performed for V3",
+  "optical_diagnosis": "Lens-table mismatch is a hypothesis; pending controlled A/B board comparison"
+}

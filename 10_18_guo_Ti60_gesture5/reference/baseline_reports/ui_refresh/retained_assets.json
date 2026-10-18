@@ -1,0 +1,14 @@
+{
+  "retained_hdmi_glyphs_pixel_equal": true,
+  "unchanged_files": [
+    "src/parallel/gesture_config.vh",
+    "EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol0.bin",
+    "EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol1.bin",
+    "EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol2.bin",
+    "EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol3.bin",
+    "image/ARTWORK.md",
+    "image/character_calligraphy_source.png",
+    "image/epaper.hex",
+    "image/epaper_preview.png"
+  ]
+}

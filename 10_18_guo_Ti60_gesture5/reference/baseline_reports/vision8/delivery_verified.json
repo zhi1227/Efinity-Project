@@ -1,0 +1,97 @@
+{
+  "baseline": {
+    "resources": {
+      "XLRs": {
+        "used": 35425,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 215,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 37,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.302,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "e9306ab9808ee7fcdf4e946d53f8186ab49615d153c21bdcfdfea6b406c33f0c",
+    "hex_sha256": "ed572dbb02c7643506c182f1346476a8111841cbd2e5b989fb06e1b7c9fec9d6",
+    "physical_board_test": "not performed; user must confirm camera video and diagnostic lights"
+  },
+  "final": {
+    "resources": {
+      "XLRs": {
+        "used": 44982,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 222,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 35,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.305,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "76e326c869986a812e4900001939cf03d7af58235d99f3bc309e99b2606c80a7",
+    "hex_sha256": "be1f22d3f9299711504bcd1ca15650c0e18475b940837d23b99fad47a55400aa",
+    "build_input_manifest_sha256": "ab84e91cecbb2509c7535944389b214c3860038bc76d24a0192b495f3d42d291",
+    "physical_board_test": "not performed; simulation and compilation only"
+  },
+  "preservation": {
+    "ram_baseline": {
+      "files_checked": 1512,
+      "changed": [],
+      "added": []
+    },
+    "historical_original": {
+      "files_checked": 840,
+      "changed": [],
+      "added": []
+    },
+    "unchanged_canny_pipeline_files": 11
+  },
+  "tests": {
+    "retained_benches": [
+      "tb_h5_palm",
+      "tb_h5_wave",
+      "tb_h5_raster",
+      "tb_h4_controls",
+      "tb_h4_skin",
+      "tb_h4_templates",
+      "tb_h4_overlay",
+      "tb_controls6",
+      "tb_matrix8",
+      "tb_vision6",
+      "tb_h5_ui",
+      "tb_i2c6",
+      "tb_health6",
+      "tb_frame_path",
+      "tb_menu_cdc6"
+    ],
+    "new_benches": [
+      "controls",
+      "fifo",
+      "ddr",
+      "frames",
+      "faces",
+      "gesture"
+    ],
+    "real_cpu8": "PASS",
+    "ui_pixels": "PASS",
+    "epd_cpu": "PASS"
+  },
+  "physical_board_test": false
+}

@@ -1,0 +1,198 @@
+{
+  "tests": [
+    {
+      "test": "tb_h5_palm",
+      "log": "reports/tb_h5_palm.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_h5_wave",
+      "log": "reports/tb_h5_wave.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_h5_raster",
+      "log": "reports/tb_h5_raster.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_h4_controls",
+      "log": "reports/tb_h4_controls.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_h4_skin",
+      "log": "reports/tb_h4_skin.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_h4_templates",
+      "log": "reports/tb_h4_templates.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_h4_overlay",
+      "log": "reports/tb_h4_overlay.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_controls6",
+      "log": "reports/tb_controls6.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_matrix8",
+      "log": "reports/tb_matrix8.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_vision6",
+      "log": "reports/tb_vision6.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_h5_ui",
+      "log": "reports/tb_h5_ui.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_i2c6",
+      "log": "reports/tb_i2c6.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_health6",
+      "log": "reports/tb_health6.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_frame_path",
+      "log": "reports/tb_frame_path.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_menu_cdc6",
+      "log": "reports/tb_menu_cdc6.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_vision8_controls",
+      "log": "reports/vision8/tb_vision8_controls.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_vision8_fifo",
+      "log": "reports/vision8/tb_vision8_fifo.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_vision8_ddr",
+      "log": "reports/vision8/tb_vision8_ddr.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_vision8_frames",
+      "log": "reports/vision8/tb_vision8_frames.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_vision8_faces",
+      "log": "reports/vision8/tb_vision8_faces.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_vision8_gesture",
+      "log": "reports/vision8/tb_vision8_gesture.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_io29_freeze_ddr",
+      "log": "reports/vision8/tb_io29_freeze_ddr.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_shared_glyphs",
+      "log": "reports/cpu_font_ram/tb_shared_glyphs.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_shared_ui",
+      "log": "reports/cpu_font_ram/tb_shared_ui.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_cache_stress",
+      "log": "reports/cpu_font_ram/tb_cache_stress.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_cpu_fast",
+      "log": "reports/cpu_font_ram/tb_cpu_fast.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_menu_cpu8",
+      "log": "reports/tb_menu_cpu8.log",
+      "result": "PASS"
+    },
+    {
+      "test": "tb_epd_cpu",
+      "log": "reports/tb_epd_cpu.log",
+      "result": "PASS"
+    }
+  ],
+  "test_benches_passed": 28,
+  "build": {
+    "resources": {
+      "XLRs": {
+        "used": 47482,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 212,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 35,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.295,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "424576e28488ed22f552cd1ef69cf0e4129e4c831812045d46985ca2aa5ca0c6",
+    "hex_sha256": "8f974975c20ee7b62316441b762e0dd2f9b338bf83a5906a59ca90e002321c2f",
+    "build_input_manifest_sha256": "f83b7ccbb36fe9d465f0bf49fe9252b8b7c88166f2ac0a02f3cab97e92991a46",
+    "physical_board_test": "not performed; simulation and compilation only"
+  },
+  "baseline": {
+    "resources": {
+      "XLRs": {
+        "used": 44982,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 222,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 35,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.305,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "76e326c869986a812e4900001939cf03d7af58235d99f3bc309e99b2606c80a7",
+    "hex_sha256": "be1f22d3f9299711504bcd1ca15650c0e18475b940837d23b99fad47a55400aa",
+    "build_input_manifest_sha256": "ab84e91cecbb2509c7535944389b214c3860038bc76d24a0192b495f3d42d291",
+    "physical_board_test": "not performed; simulation and compilation only"
+  },
+  "physical_test": "Not performed"
+}

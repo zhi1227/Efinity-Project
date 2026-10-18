@@ -1,0 +1,140 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x00000000f9000000 0x0000000000004000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD C:\Users\Aqi'Glow\AppData\Local\Temp\ccQrlmZo.o
+LOAD C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+LOAD C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+LOAD C:\Users\Aqi'Glow\AppData\Local\Temp\cciIihMC.o
+LOAD C:\Users\Aqi'Glow\AppData\Local\Temp\ccF4yslN.o
+
+.text           0x00000000f9000000      0x4bc
+ *(.text.start)
+ .text.start    0x00000000f9000000       0x3c C:\Users\Aqi'Glow\AppData\Local\Temp\ccQrlmZo.o
+                0x00000000f9000000                _start
+ *(.text*)
+ .text          0x00000000f900003c        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccQrlmZo.o
+ .text          0x00000000f900003c        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+ .text.startup  0x00000000f900003c       0x90 C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+                0x00000000f900003c                main
+ .text          0x00000000f90000cc      0x2a8 C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+                0x00000000f90000cc                epaper_start
+                0x00000000f9000108                epaper_service
+ .text          0x00000000f9000374        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\cciIihMC.o
+ .text          0x00000000f9000374      0x148 C:\Users\Aqi'Glow\AppData\Local\Temp\ccF4yslN.o
+                0x00000000f9000374                epaper_image_reset
+                0x00000000f9000390                epaper_image_next
+                0x00000000f9000484                epaper_image_complete
+
+.rodata         0x00000000f90004bc     0x2642
+ *(.rodata*)
+ .rodata        0x00000000f90004bc       0x7e C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+ *fill*         0x00000000f900053a        0x2 
+ .rodata        0x00000000f900053c     0x25c2 C:\Users\Aqi'Glow\AppData\Local\Temp\cciIihMC.o
+                0x00000000f900053c                epaper_image_packed
+                0x00000000f9002afc                epaper_image_packed_size
+ *(.srodata*)
+
+.rela.dyn       0x00000000f9002b00        0x0
+ .rela.text.start
+                0x00000000f9002b00        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccQrlmZo.o
+
+.data           0x00000000f9002afe        0x2
+                0x00000000f9002b00                . = ALIGN (0x4)
+ *fill*         0x00000000f9002afe        0x2 
+                0x00000000f9003300                __global_pointer$ = (. + 0x800)
+ *(.data*)
+ .data          0x00000000f9002b00        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccQrlmZo.o
+ .data          0x00000000f9002b00        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+ .data          0x00000000f9002b00        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+ .data          0x00000000f9002b00        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\cciIihMC.o
+ .data          0x00000000f9002b00        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccF4yslN.o
+ *(.sdata*)
+
+.bss            0x00000000f9002b00       0x18
+                0x00000000f9002b00                . = ALIGN (0x4)
+                0x00000000f9002b00                _bss_start = .
+ *(.bss*)
+ .bss           0x00000000f9002b00        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccQrlmZo.o
+ .bss           0x00000000f9002b00        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+ .bss           0x00000000f9002b00       0x10 C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+ .bss           0x00000000f9002b10        0x0 C:\Users\Aqi'Glow\AppData\Local\Temp\cciIihMC.o
+ .bss           0x00000000f9002b10        0x7 C:\Users\Aqi'Glow\AppData\Local\Temp\ccF4yslN.o
+ *(.sbss*)
+ *(COMMON)
+                0x00000000f9002b18                . = ALIGN (0x4)
+ *fill*         0x00000000f9002b17        0x1 
+                0x00000000f9002b18                _bss_end = .
+                0x00000000f9004000                _stack_top = (ORIGIN (RAM) + LENGTH (RAM))
+                0x0000000000000001                ASSERT ((_bss_end <= (_stack_top - 0x800)), Firmware leaves less than 2 KiB stack)
+OUTPUT(firmware/build/menu.elf elf32-littleriscv)
+
+.debug_line     0x0000000000000000      0xf2b
+ .debug_line    0x0000000000000000       0x81 C:\Users\Aqi'Glow\AppData\Local\Temp\ccQrlmZo.o
+ .debug_line    0x0000000000000081      0x274 C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+ .debug_line    0x00000000000002f5      0x78c C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+ .debug_line    0x0000000000000a81      0x103 C:\Users\Aqi'Glow\AppData\Local\Temp\cciIihMC.o
+ .debug_line    0x0000000000000b84      0x3a7 C:\Users\Aqi'Glow\AppData\Local\Temp\ccF4yslN.o
+
+.debug_info     0x0000000000000000      0xa29
+ .debug_info    0x0000000000000000       0x26 C:\Users\Aqi'Glow\AppData\Local\Temp\ccQrlmZo.o
+ .debug_info    0x0000000000000026      0x17b C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+ .debug_info    0x00000000000001a1      0x615 C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+ .debug_info    0x00000000000007b6       0xe2 C:\Users\Aqi'Glow\AppData\Local\Temp\cciIihMC.o
+ .debug_info    0x0000000000000898      0x191 C:\Users\Aqi'Glow\AppData\Local\Temp\ccF4yslN.o
+
+.debug_abbrev   0x0000000000000000      0x3ef
+ .debug_abbrev  0x0000000000000000       0x14 C:\Users\Aqi'Glow\AppData\Local\Temp\ccQrlmZo.o
+ .debug_abbrev  0x0000000000000014       0xd9 C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+ .debug_abbrev  0x00000000000000ed      0x1a5 C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+ .debug_abbrev  0x0000000000000292       0x6c C:\Users\Aqi'Glow\AppData\Local\Temp\cciIihMC.o
+ .debug_abbrev  0x00000000000002fe       0xf1 C:\Users\Aqi'Glow\AppData\Local\Temp\ccF4yslN.o
+
+.debug_aranges  0x0000000000000000       0x98
+ .debug_aranges
+                0x0000000000000000       0x20 C:\Users\Aqi'Glow\AppData\Local\Temp\ccQrlmZo.o
+ .debug_aranges
+                0x0000000000000020       0x20 C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+ .debug_aranges
+                0x0000000000000040       0x20 C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+ .debug_aranges
+                0x0000000000000060       0x18 C:\Users\Aqi'Glow\AppData\Local\Temp\cciIihMC.o
+ .debug_aranges
+                0x0000000000000078       0x20 C:\Users\Aqi'Glow\AppData\Local\Temp\ccF4yslN.o
+
+.debug_str      0x0000000000000000      0x347
+ .debug_str     0x0000000000000000       0x8f C:\Users\Aqi'Glow\AppData\Local\Temp\ccQrlmZo.o
+ .debug_str     0x000000000000008f      0x149 C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+                                        0x209 (size before relaxing)
+ .debug_str     0x00000000000001d8       0xff C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+                                        0x2f7 (size before relaxing)
+ .debug_str     0x00000000000002d7       0x18 C:\Users\Aqi'Glow\AppData\Local\Temp\cciIihMC.o
+                                        0x1c5 (size before relaxing)
+ .debug_str     0x00000000000002ef       0x58 C:\Users\Aqi'Glow\AppData\Local\Temp\ccF4yslN.o
+                                        0x246 (size before relaxing)
+
+.debug_loc      0x0000000000000000      0x667
+ .debug_loc     0x0000000000000000       0x75 C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+ .debug_loc     0x0000000000000075      0x56b C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+ .debug_loc     0x00000000000005e0       0x87 C:\Users\Aqi'Glow\AppData\Local\Temp\ccF4yslN.o
+
+.debug_ranges   0x0000000000000000       0xb8
+ .debug_ranges  0x0000000000000000       0x58 C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+ .debug_ranges  0x0000000000000058       0x60 C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+
+.comment        0x0000000000000000       0x33
+ .comment       0x0000000000000000       0x33 C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+                                         0x34 (size before relaxing)
+ .comment       0x0000000000000033       0x34 C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+ .comment       0x0000000000000033       0x34 C:\Users\Aqi'Glow\AppData\Local\Temp\cciIihMC.o
+ .comment       0x0000000000000033       0x34 C:\Users\Aqi'Glow\AppData\Local\Temp\ccF4yslN.o
+
+.debug_frame    0x0000000000000000       0xbc
+ .debug_frame   0x0000000000000000       0x34 C:\Users\Aqi'Glow\AppData\Local\Temp\ccOZHU7w.o
+ .debug_frame   0x0000000000000034       0x48 C:\Users\Aqi'Glow\AppData\Local\Temp\ccX2Rtfx.o
+ .debug_frame   0x000000000000007c       0x40 C:\Users\Aqi'Glow\AppData\Local\Temp\ccF4yslN.o

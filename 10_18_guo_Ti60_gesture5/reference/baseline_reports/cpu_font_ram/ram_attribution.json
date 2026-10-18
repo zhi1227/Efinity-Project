@@ -1,0 +1,24 @@
+{
+  "before": {
+    "all": 222,
+    "instruction_cache": 6,
+    "data_cache": 6,
+    "register_file": 4,
+    "program_ram": 16,
+    "HDMI_font": 7,
+    "LVDS_font": 5,
+    "shared_font": 0,
+    "other": 178
+  },
+  "after": {
+    "all": 212,
+    "instruction_cache": 2,
+    "data_cache": 4,
+    "register_file": 4,
+    "program_ram": 16,
+    "HDMI_font": 0,
+    "LVDS_font": 0,
+    "shared_font": 8,
+    "other": 178
+  }
+}

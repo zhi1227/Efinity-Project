@@ -1,0 +1,7 @@
+{
+  "sapphire_source": "D:\\Efinity\\ipm\\ip\\efx_tsemac\\fpga\\Ti60F225_devkit\\ip\\sapphire\\source\\hardware\\netlist\\EfxSapphireSoc.v",
+  "sapphire_sha256": "b311fc2d40d90035110ad62691e239188d297d208fd2877934ecc5547df37d46",
+  "lcd_reference": "C:\\Users\\Aqi'Glow\\Desktop\\fpga易灵思\\电子屏幕VD-LVDS-7TH_HDK_V3.3_20251111\\VD-LVDS-7TH_HDK_V3.3_20251111\\03_FPGA_Demo\\3_Elitestek_Ti60_Demo\\05_LVDS_LCD_Test_1024600",
+  "changes_to_sapphire_rtl": "RAM optimization copy: on-chip program RAM reduced from 32 KiB to 16 KiB; byte-lane depths 8192 -> 4096, word address width 13 -> 12, and BmbDecoder_2 range mask 0x7fff -> 0x3fff. CPU, caches, peripherals and clocks unchanged. RAM initialization files contain our compiled program.",
+  "original_settings_note": "sapphire_original_settings.json describes the original generator configuration; this copy applies the bounded RAM edit to the generated RTL directly, with matching linker/init files and real-CPU simulation. Regenerating Sapphire requires applying the 16 KiB setting again."
+}

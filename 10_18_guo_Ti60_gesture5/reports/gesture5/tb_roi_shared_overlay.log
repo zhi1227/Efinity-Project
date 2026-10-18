@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Oct 18 16:21:19 2026
+# Process ID: 46216
+# Current directory: D:/Codex/Tasks/2026-10-18/github-project/work/gesture5/project
+# Command line: xsim.exe -log reports/tb_roi_shared_overlay.log -mode tcl -source {xsim.dir/tb_roi_shared_overlay/xsim_script.tcl}
+# Log file: D:/Codex/Tasks/2026-10-18/github-project/work/gesture5/project/reports/tb_roi_shared_overlay.log
+# Journal file: D:/Codex/Tasks/2026-10-18/github-project/work/gesture5/project\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_roi_shared_overlay/xsim_script.tcl
+# xsim {tb_roi_shared_overlay} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS: HDMI diagnostics removed across entire former label/bar area; health bits have no pixel effect
+PASS: SHARED_FONT=1 new two-pixel ROI sides and old edges removed; palm square/right HUD unchanged; 825037 pixels equal legacy font with 589317 concurrent LCD reads; pure capture strips overlays
+$finish called at time : 8250436 ns : File "D:/Codex/Tasks/2026-10-18/github-project/work/gesture5/project/sim/tb_roi_shared_overlay.sv" Line 83
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 224.297 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 18 16:21:35 2026...

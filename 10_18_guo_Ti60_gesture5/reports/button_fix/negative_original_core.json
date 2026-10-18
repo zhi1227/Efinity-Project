@@ -1,0 +1,12 @@
+{
+  "result": "EXPECTED_FAILURE_OBSERVED",
+  "expected_failure": "Fatal: short and long overlap",
+  "original_source": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.15\\10_15_ding_Ti60_Vision8_RGB_Balance\\rtl\\vision8_controls.v",
+  "original_source_sha256": "98C7F191366A1C2DAECB64168F0AD0CDFC0099E3E112C7D8C6300211AA30FEDA",
+  "saved_source": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.16\\10_16_ding_Ti60_Vision8_IO28_ButtonFix\\sim_button_fix\\negative_original_core\\vision8_controls_before.v",
+  "saved_source_sha256": "98C7F191366A1C2DAECB64168F0AD0CDFC0099E3E112C7D8C6300211AA30FEDA",
+  "testbench": "tb_vision8_key_boundary",
+  "testbench_sha256": "E35908AC5475D236EBD7DB8E17B04DB8D8888D4C03A89B21728FAC470C7B484D",
+  "log": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.16\\10_16_ding_Ti60_Vision8_IO28_ButtonFix\\reports\\button_fix\\negative_original_core.log",
+  "board_programmed": false
+}

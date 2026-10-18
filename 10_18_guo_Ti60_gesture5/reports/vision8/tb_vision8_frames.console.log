@@ -1,0 +1,26 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_vision8_frames/xsim_script.tcl
+# xsim {tb_vision8_frames} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+CHECK: PiP case=10 mode=1 enabled=1 full raster pixels=3072 AUX words=96
+CHECK: PiP case=11 mode=1 enabled=0 full raster pixels=3072 AUX words=0
+CHECK: PiP case=20 mode=2 enabled=1 full raster pixels=3072 AUX words=96
+CHECK: PiP case=21 mode=2 enabled=0 full raster pixels=3072 AUX words=0
+CHECK: PiP case=30 mode=3 enabled=1 full raster pixels=3072 AUX words=96
+CHECK: PiP case=31 mode=3 enabled=0 full raster pixels=3072 AUX words=0
+CHECK: PiP case=40 mode=1 enabled=1 full raster pixels=3072 AUX words=96
+CHECK: PiP case=41 mode=1 enabled=0 full raster pixels=3072 AUX words=0
+CHECK: PiP case=42 mode=1 enabled=1 full raster pixels=3072 AUX words=96
+CHECK: PiP case=50 mode=0 enabled=0 full raster pixels=3072 AUX words=0
+CHECK: PiP case=51 mode=4 enabled=0 full raster pixels=3072 AUX words=0
+PASS: frame-bound PiP/compare compositor, supported modes 1/2/3 normal AUX RGB565 pixels and border position, PiP-off main restoration, frame-bound enable/disable, processed 2x2 sampling, four captures/fifth replacement, bound source/config metadata, safe clear cancellation and underflow recovery
+$finish called at time : 1848940 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim/tb_vision8_frames.sv" Line 129
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Oct 16 01:08:17 2026...

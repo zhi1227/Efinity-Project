@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Oct 18 16:30:13 2026
+# Process ID: 45372
+# Current directory: D:/Codex/Tasks/2026-10-18/github-project/work/gesture5/project
+# Command line: xsim.exe -log reports/tb_gesture5_ui.log -mode tcl -source {xsim.dir/tb_gesture5_ui/xsim_script.tcl}
+# Log file: D:/Codex/Tasks/2026-10-18/github-project/work/gesture5/project/reports/tb_gesture5_ui.log
+# Journal file: D:/Codex/Tasks/2026-10-18/github-project/work/gesture5/project\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_gesture5_ui/xsim_script.tcl
+# xsim {tb_gesture5_ui} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+PASS: full 720p OK/V enrolment instructions, OK/V result icons and labels, partial-enrolment readiness and existing thumb UI
+$finish called at time : 55296266 ns : File "D:/Codex/Tasks/2026-10-18/github-project/work/gesture5/project/sim/tb_gesture5_ui.sv" Line 46
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:30 . Memory (MB): peak = 223.773 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 18 16:30:45 2026...
