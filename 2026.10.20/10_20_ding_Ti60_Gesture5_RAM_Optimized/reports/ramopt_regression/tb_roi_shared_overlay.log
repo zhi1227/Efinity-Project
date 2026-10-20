@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 20 02:36:51 2026
+# Process ID: 45568
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_fast
+# Command line: xsim.exe -log D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ramopt_regression\tb_roi_shared_overlay.log -mode tcl -source {xsim.dir/tb_roi_shared_overlay/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ramopt_regression/tb_roi_shared_overlay.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_fast\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_roi_shared_overlay/xsim_script.tcl
+# xsim {tb_roi_shared_overlay} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: HDMI diagnostics removed across entire former label/bar area; health bits have no pixel effect
+PASS: SHARED_FONT=1 new two-pixel ROI sides and old edges removed; palm square/right HUD unchanged; 564397 pixels equal legacy font with 403145 concurrent LCD reads; pure capture strips overlays
+$finish called at time : 5644036 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/tb_roi_shared_overlay.sv" Line 83
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:15 . Memory (MB): peak = 218.391 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 02:37:11 2026...

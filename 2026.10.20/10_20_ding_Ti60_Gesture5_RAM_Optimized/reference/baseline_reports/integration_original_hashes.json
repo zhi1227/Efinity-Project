@@ -1,0 +1,9 @@
+{
+  "example_top.v": "8ad6a8053a9dae8c7f24cf7a9a922e063870f2848c384e1373d0520cd42b1efe",
+  "Ti60_Demo.xml": "7117eea7cf0955c628493569c3749cdb0495762457f511b5a47b5e9b73f3bce8",
+  "Ti60_Demo.peri.xml": "d44619af1d16cfd87a046244c4f0a3d3ea31ffff38d12c9017d0d4247d88f8ab",
+  "firmware/main.c": "30e5e92fca15e5dda8245ebae1baf7a2e7cdcf1592a7bbf4f5a9c07050586fb3",
+  "rtl/riscv_menu_top.v": "c9e92f3fe3436017106fbbb79a92f1ddc052f568d59a02f704d5abd65f1580dd",
+  "tools/build_firmware.ps1": "37577d8ee957b450fe6fe30a10e3a57b46fc77441181a013b2838f3ed375234b",
+  "README.md": "b8e5515cad07942fbde55f90f65892b5c48449f13324456e0fb5149120a137ff"
+}

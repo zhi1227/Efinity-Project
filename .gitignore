@@ -73,6 +73,14 @@ sim_modular/
 /2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/reference/**/outflow/
 /技术文档/ding_技术文档/最新项目/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/
 
+# 10.20 RAM-optimized five-gesture release: keep the final bit/hex and reports,
+# but omit generated run directories, firmware build products and trial builds.
+/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_*/
+/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/firmware/build/
+/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol*.bin
+/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/*/
+/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/**/outflow/
+
 # Keep authored SystemVerilog benches under this project's sim/ directory
 !/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim/
 !/2026.10.13/10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated/sim/*.sv
@@ -84,6 +92,10 @@ sim_modular/
 !/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim/*.v
 !/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim/*.c
 !/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim/*.md
+!/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/
+!/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/*.sv
+!/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/*.v
+!/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/*.c
 
 # Keep the tested Ti60 bitstream and timing report, not intermediate netlists
 /Ti60F225_GitHub_FPGA_Sobel_Port/outflow/*

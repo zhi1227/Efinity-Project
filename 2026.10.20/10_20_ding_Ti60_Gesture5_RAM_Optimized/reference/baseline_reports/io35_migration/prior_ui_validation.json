@@ -1,0 +1,142 @@
+{
+  "tests": [
+    {
+      "log": "reports/vision8/tb_vision8_controls.log",
+      "status": "PASS",
+      "sha256": "885f48e5f2d244a105d43bea9bafc2df295035fcbb264a49e373fc17b3bfd7d3"
+    },
+    {
+      "log": "reports/vision8/tb_vision8_faces.log",
+      "status": "PASS",
+      "sha256": "dc866d7e842ab3d3c50c0dfd40f9f4545c674a8cfcf953e6d772346a998be3c2"
+    },
+    {
+      "log": "reports/vision8/tb_vision8_frames.log",
+      "status": "PASS",
+      "sha256": "923289d28df4e32e0120974c3b7e138c6f6f143e64b0b3a9839991eac61171a9"
+    },
+    {
+      "log": "reports/vision8/tb_io29_freeze_ddr.log",
+      "status": "PASS",
+      "sha256": "3f25bcf701a3824000fba2750ac540239ccdb3afc8d865a37b515d066fb16fba"
+    },
+    {
+      "log": "reports/vision8/tb_menu8_pixels.log",
+      "status": "PASS",
+      "sha256": "61f67e1fd1d9999d82d547b6075183ab38ad66af923c46c0d955f0f901e4bdff"
+    },
+    {
+      "log": "reports/ui_refresh/tb_ui_fonts.log",
+      "status": "PASS",
+      "sha256": "c0d29abd72ce0cd24d430310cf1ebb29d5202831ecbd36b5791f75498e3b6217"
+    },
+    {
+      "log": "reports/roi_integration/tb_roi_shared_overlay.log",
+      "status": "PASS",
+      "sha256": "b6eadba57b440e8b3248e02af318ddc6d195d01c71b8327450812052c36c9353"
+    },
+    {
+      "log": "reports/tb_menu_cpu8.log",
+      "status": "PASS",
+      "sha256": "cc4f5c6b0cf5fcbba2b5bdb4c51e2d18c0cf02f1ecb0e0dbe19f8eeb68257b58"
+    }
+  ],
+  "build": {
+    "resources": {
+      "XLRs": {
+        "used": 48109,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 222,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 37,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.319,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "6a17983a963c27190f7b1ca1ff1bcd3db310db9bd4ab714f90368696d4d57908",
+    "hex_sha256": "d87a9ba49940d566f2db9fc48ba83f341a6a266c31afe610ad3edcd3420ac577",
+    "build_input_manifest_sha256": "2c8bcd1d035a0ffd3aadcf30804bf576fad109354b86d392b63b1d081de39c13",
+    "physical_board_test": "not performed; simulation and compilation only"
+  },
+  "io34": {
+    "fpga_pin": "A9",
+    "gpio": "GPIOT_N_11",
+    "header": "P4 pin 39",
+    "idle": 0,
+    "pressed": 1
+  },
+  "images": [
+    {
+      "path": "reports/ui_refresh/menu_0.png",
+      "sha256": "d6550de5d0c1dffe2a98463d2dee7ece437df813fe882161336816c5b4550f7c"
+    },
+    {
+      "path": "reports/ui_refresh/menu_1.png",
+      "sha256": "b1a4c7e6966006b438a7703deda45c82ab7e5b06fdd1580efeaab4fe2a9ac574"
+    },
+    {
+      "path": "reports/ui_refresh/menu_2.png",
+      "sha256": "f101d24cf50797025d1cbd6b5c6751aed956c3b419f19f644ef93138b00bf22c"
+    },
+    {
+      "path": "reports/ui_refresh/menu_3.png",
+      "sha256": "a917da7112149813d859fdc419a530f27d4d7e92ae1ec122120ee71ebb4a9bd3"
+    },
+    {
+      "path": "reports/ui_refresh/menu_4.png",
+      "sha256": "c6c93de4ec4bded40b548279f277b97c1836a87deb234b17dd28b87e38409dfd"
+    },
+    {
+      "path": "reports/ui_refresh/menu_5.png",
+      "sha256": "58ce95bbc4833b43c9c6ad7abe04d7a3bf2f4a2cd153d6fe9384ce2f4c48274c"
+    },
+    {
+      "path": "reports/ui_refresh/menu_6.png",
+      "sha256": "9166f35ddb353d020278cdc8611d8401dd245bb57c8cb01b60c65a783de57d8a"
+    },
+    {
+      "path": "reports/ui_refresh/menu_7.png",
+      "sha256": "b5ae8482fb3672331d537f244d2fc2fb5e8799ad13c0a5da876a1a5e87963145"
+    },
+    {
+      "path": "reports/ui_refresh/menu_8.png",
+      "sha256": "a106c14a81278870f7182517a055f6bb0215fc76b4ffdfddba4ce6881f11df84"
+    },
+    {
+      "path": "reports/ui_refresh/menu_9.png",
+      "sha256": "ef8254cba79a4ab6b4d8658d822dd34e73ae6cd332ff9f3cc362a967a0d6bc8a"
+    },
+    {
+      "path": "reports/ui_refresh/menu_10.png",
+      "sha256": "7c9becb06e7f898154882867d7942f53d330882b43204f4d59b9a251a8d11f9a"
+    },
+    {
+      "path": "reports/ui_refresh/menu_11.png",
+      "sha256": "4cb56b61df35b5e3b350cec4381120c2675aa9d3d2779079f784d87834e84c73"
+    }
+  ],
+  "retained_assets": {
+    "retained_hdmi_glyphs_pixel_equal": true,
+    "unchanged_files": [
+      "src/parallel/gesture_config.vh",
+      "EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol0.bin",
+      "EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol1.bin",
+      "EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol2.bin",
+      "EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol3.bin",
+      "image/ARTWORK.md",
+      "image/character_calligraphy_source.png",
+      "image/epaper.hex",
+      "image/epaper_preview.png"
+    ]
+  },
+  "physical_board_test": "not performed"
+}

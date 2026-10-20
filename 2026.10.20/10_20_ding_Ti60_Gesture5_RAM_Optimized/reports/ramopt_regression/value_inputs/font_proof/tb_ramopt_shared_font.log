@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 20 03:02:05 2026
+# Process ID: 40872
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_font
+# Command line: xsim.exe -log D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font\tb_ramopt_shared_font.log -mode tcl -source {xsim.dir/tb_ramopt_shared_font/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font/tb_ramopt_shared_font.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_font\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_ramopt_shared_font/xsim_script.tcl
+# xsim {tb_ramopt_shared_font} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: compressed shared font all 8192 addresses, independent 74.4/48 MHz clocks, original one-edge latency, random simultaneous reads and 501424 exact pixels (19050 HDMI rows, 12289 LVDS rows)
+$finish called at time : 256030163 ps : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_font/tb_ramopt_shared_font.sv" Line 49
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 03:02:07 2026...

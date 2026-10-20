@@ -1,0 +1,317 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-19T19:27:11.791579+00:00",
+  "stage": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_RAM_Optimized\\reports\\ram_optimization_20261020\\font_frequency_full_map",
+  "parent": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_RAM_Optimized",
+  "hardware_validation": "not performed",
+  "copy_policy": "Only staging outflow files and three specified build reports; copy2 preserves timestamps; no source edits",
+  "source_input_files": 504,
+  "source_input_manifest_sha256": "d8761b3be836eb8aef59b0c09661dfde5635b56acf0dcc14c9fbc72795079cad",
+  "stage_verified": {
+    "resources": {
+      "XLRs": {
+        "used": 52744,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 184,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 39,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.305,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "eeff07af4fe66d40d9b2ad88b486102a97ff7034ab6e7644e8149910da30e439",
+    "hex_sha256": "c6c5ba289253abd3aa01a1acfe768d464da7dc19c18068d099c8fdd8db34d39a",
+    "build_input_manifest_sha256": "d8761b3be836eb8aef59b0c09661dfde5635b56acf0dcc14c9fbc72795079cad",
+    "physical_board_test": "not performed; simulation and compilation only"
+  },
+  "parent_verified": {
+    "resources": {
+      "XLRs": {
+        "used": 52744,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 184,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 39,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.305,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "eeff07af4fe66d40d9b2ad88b486102a97ff7034ab6e7644e8149910da30e439",
+    "hex_sha256": "c6c5ba289253abd3aa01a1acfe768d464da7dc19c18068d099c8fdd8db34d39a",
+    "build_input_manifest_sha256": "d8761b3be836eb8aef59b0c09661dfde5635b56acf0dcc14c9fbc72795079cad",
+    "physical_board_test": "not performed; simulation and compilation only"
+  },
+  "final_bit_sha256": "eeff07af4fe66d40d9b2ad88b486102a97ff7034ab6e7644e8149910da30e439",
+  "final_hex_sha256": "c6c5ba289253abd3aa01a1acfe768d464da7dc19c18068d099c8fdd8db34d39a",
+  "copied_files": [
+    {
+      "path": "outflow/Ti60_Demo-post.bsd",
+      "sha256": "fa61299a1acbb62d63bb65ac9b251aa22e8580c49217c73e37fae7429ba6b7ac",
+      "mtime_ns": 1792437453501323300
+    },
+    {
+      "path": "outflow/Ti60_Demo.bit",
+      "sha256": "eeff07af4fe66d40d9b2ad88b486102a97ff7034ab6e7644e8149910da30e439",
+      "mtime_ns": 1792437993081352100
+    },
+    {
+      "path": "outflow/Ti60_Demo.bit.bin",
+      "sha256": "23177ba11ee479c67b4ff0fba4aac6fe2054d9e4c16e9f58a74591060ba6e644",
+      "mtime_ns": 1792437993495870900
+    },
+    {
+      "path": "outflow/Ti60_Demo.cdc.rpt",
+      "sha256": "d4fa455902f55e338ffe0f3deddc3e2910fc4e080778cc0ae0a4d699428d1fb1",
+      "mtime_ns": 1792437983477961300
+    },
+    {
+      "path": "outflow/Ti60_Demo.clstdb",
+      "sha256": "eb1aa3de9abec7477a1a47db9d090fe5482ae555f9dc714315028eeba885ace4",
+      "mtime_ns": 1792437461658903700
+    },
+    {
+      "path": "outflow/Ti60_Demo.clstmap",
+      "sha256": "6dcdcd0977992681049e25f375f5306bcef1912a54234b8f86e72e2bfae768a0",
+      "mtime_ns": 1792437462999285200
+    },
+    {
+      "path": "outflow/Ti60_Demo.cnst",
+      "sha256": "ad1cd63eeea68ee7cee6bb69e3fc76dc8207463e9e015825b9760b42da0cc9be",
+      "mtime_ns": 1792437463453321000
+    },
+    {
+      "path": "outflow/Ti60_Demo.dsgnlib",
+      "sha256": "724a7b0b94b2dde900f1373219134a157bd546b49af2a53e51618936b0b76384",
+      "mtime_ns": 1792437461485533100
+    },
+    {
+      "path": "outflow/Ti60_Demo.dsp_control_sets.csv",
+      "sha256": "a264a528cb465938d36778ad876fcef48bc5b311dffcb9728cd71da2bcaedf42",
+      "mtime_ns": 1792437458551600700
+    },
+    {
+      "path": "outflow/Ti60_Demo.err.log",
+      "sha256": "d0b7d06116ac7f279ad132dcd5db9b3ca55b9566e7d8c21186d6e734e16177eb",
+      "mtime_ns": 1792437320393048900
+    },
+    {
+      "path": "outflow/Ti60_Demo.hex",
+      "sha256": "c6c5ba289253abd3aa01a1acfe768d464da7dc19c18068d099c8fdd8db34d39a",
+      "mtime_ns": 1792437993167983500
+    },
+    {
+      "path": "outflow/Ti60_Demo.hex.bin",
+      "sha256": "5c80b0f4b32f05aba9d761a9324d98f2539db251fdc32433b53cd50169b6f205",
+      "mtime_ns": 1792437993739545800
+    },
+    {
+      "path": "outflow/Ti60_Demo.hold_fixing.rpt",
+      "sha256": "200c335ea1bec776c8c446dead4b49b8a76408b4916c12eb075c67581ec688fd",
+      "mtime_ns": 1792437928178463700
+    },
+    {
+      "path": "outflow/Ti60_Demo.info.log",
+      "sha256": "afca61606426a3198cc54796b13b8ef940eef6db3914892022737aad1426bd36",
+      "mtime_ns": 1792437444701210800
+    },
+    {
+      "path": "outflow/Ti60_Demo.interface.csv",
+      "sha256": "e86babc03e6a4d13f2fec6bb6cbd6559787155e7b026a1f984085dc44a549bae",
+      "mtime_ns": 1792437451891001600
+    },
+    {
+      "path": "outflow/Ti60_Demo.interface.io",
+      "sha256": "6d8f7a82809e5ca7511535d1d8cf3984042448a40d72154f34278f54073fb8c5",
+      "mtime_ns": 1792437463475326000
+    },
+    {
+      "path": "outflow/Ti60_Demo.log",
+      "sha256": "ab8e9dae452f2e746cc8906857fc2feb6d1b25501ad0feb7518db839daea9f00",
+      "mtime_ns": 1792437993739545800
+    },
+    {
+      "path": "outflow/Ti60_Demo.lpf",
+      "sha256": "79ec3a9fc371a4d6f2e10e0b2516c7c48db37f45f6c9b7c5236d65e4e7dfff90",
+      "mtime_ns": 1792437453725462500
+    },
+    {
+      "path": "outflow/Ti60_Demo.map.out",
+      "sha256": "fb0e5d10576d2e9fe6188eeed1d5957817de4836bb8e1d46b83dc036e8b8c611",
+      "mtime_ns": 1792437444924097600
+    },
+    {
+      "path": "outflow/Ti60_Demo.map.rpt",
+      "sha256": "a31366e218571c07cfa3315ad9a983fe278fa43ee082342dcfe8db7941968759",
+      "mtime_ns": 1792437444068893800
+    },
+    {
+      "path": "outflow/Ti60_Demo.map.v",
+      "sha256": "6483bc756ebe20c177b1bbb21be9d749f3a1f5d1ed7d033de7c3abfb8e27af36",
+      "mtime_ns": 1792437444701210800
+    },
+    {
+      "path": "outflow/Ti60_Demo.netlist",
+      "sha256": "6e026795a4f4f8daee2f4c4820394a2a1ef9c91ef8253804a58fdd0c43083e25",
+      "mtime_ns": 1792437461600335600
+    },
+    {
+      "path": "outflow/Ti60_Demo.pgm.out",
+      "sha256": "55c9147c2fb9e269db1a012bd82e75887951aff15cc8eae4c5e39d21777a389c",
+      "mtime_ns": 1792437993188490700
+    },
+    {
+      "path": "outflow/Ti60_Demo.pinout.csv",
+      "sha256": "a67f8d388ba6a531bf07a5568fd267916962fca8f5498b862385de49da75b16f",
+      "mtime_ns": 1792437451874495100
+    },
+    {
+      "path": "outflow/Ti60_Demo.pinout.rpt",
+      "sha256": "88094e4666756c080502a72726a18c54c066e0b3e71860ff48a60efe26787dbf",
+      "mtime_ns": 1792437451874495100
+    },
+    {
+      "path": "outflow/Ti60_Demo.place",
+      "sha256": "4844e0a862ad0fe546909825311d377a51aac4dd0e535aede5029d98541608ea",
+      "mtime_ns": 1792437907954550300
+    },
+    {
+      "path": "outflow/Ti60_Demo.place.out",
+      "sha256": "a846be5ddca9181b4625ee62d4002bc4e638c04db19b3724459f2f3177ec7597",
+      "mtime_ns": 1792437908016218200
+    },
+    {
+      "path": "outflow/Ti60_Demo.place.rpt",
+      "sha256": "a0fc3df13e30be8f94824bda6befda3d5622131cd20bedee77dcaf7bf43836a8",
+      "mtime_ns": 1792437463489851500
+    },
+    {
+      "path": "outflow/Ti60_Demo.prevpr.v",
+      "sha256": "93c47c5e8d1bc3923823471d03adb1e30d10062b08c0804e9e41db2f21f5d65c",
+      "mtime_ns": 1792437986989676300
+    },
+    {
+      "path": "outflow/Ti60_Demo.pt.rpt",
+      "sha256": "fe8787b0b6fac82ced4653f277e964427a965692c82b9f5840e656704f8102b3",
+      "mtime_ns": 1792437451826855300
+    },
+    {
+      "path": "outflow/Ti60_Demo.pt.rpt.xml",
+      "sha256": "f5a77e10589c204dde6e17742fd4fcc7372d0f8a51b744a16e81e2c6eb4487a6",
+      "mtime_ns": 1792437451828685200
+    },
+    {
+      "path": "outflow/Ti60_Demo.pt.sdc",
+      "sha256": "fdb0eb4a53df703cd9475487093a63a8fd4b8e3ca614a34540728c5b9d9fad4c",
+      "mtime_ns": 1792437453447055400
+    },
+    {
+      "path": "outflow/Ti60_Demo.pt_timing.rpt",
+      "sha256": "29bfa62c972180d368e835b768aaa7b3f975d7ce2c4d8a151e9e0328cfbcd1ca",
+      "mtime_ns": 1792437453448562800
+    },
+    {
+      "path": "outflow/Ti60_Demo.raminfo.pb",
+      "sha256": "95655b9c823882e7bb5eccbb30272589faac2210bb90b59448e9b4f790ba3cb9",
+      "mtime_ns": 1792437443864638000
+    },
+    {
+      "path": "outflow/Ti60_Demo.res.csv",
+      "sha256": "1c3674438b15c025b6db49c672457c6f3537b9ff2a97646f5e39013f4a9ea49d",
+      "mtime_ns": 1792437444879578100
+    },
+    {
+      "path": "outflow/Ti60_Demo.route.out",
+      "sha256": "7ec766c648df2c7588d26a2755b6f799e5cc69dacf86a85fc5bccfc8adb2d0ad",
+      "mtime_ns": 1792437991631461900
+    },
+    {
+      "path": "outflow/Ti60_Demo.route.rpt",
+      "sha256": "0d6d12819c711bbae0a289b6a86e10de46ab37b2f9d8195796b4e99930421879",
+      "mtime_ns": 1792437991652967700
+    },
+    {
+      "path": "outflow/Ti60_Demo.route.rpt.xml",
+      "sha256": "c5575520a8c7d756df3563097a1292cea6ce1d8f47fa67ae3caa9c527a6efbd2",
+      "mtime_ns": 1792437991652967700
+    },
+    {
+      "path": "outflow/Ti60_Demo.rs",
+      "sha256": "5464ea888a1671c62825e9a8fa58a2dba2da5061b54f239edc3bdf04c36319a1",
+      "mtime_ns": 1792437460617650700
+    },
+    {
+      "path": "outflow/Ti60_Demo.timing.rpt",
+      "sha256": "349277915a1f132fbb8763dd5f8fcb4472076fa9867804a47910ef9d3d346e97",
+      "mtime_ns": 1792437983476961100
+    },
+    {
+      "path": "outflow/Ti60_Demo.troutingtraces",
+      "sha256": "301b38447c0ea3503cbb0c0eb104cd2e738ec0169bd2c231603703d7efd91d39",
+      "mtime_ns": 1792437957466000300
+    },
+    {
+      "path": "outflow/Ti60_Demo.vdb",
+      "sha256": "2861b817676857f6a3d641578cde8afaa68dbd1a5b733697b26a062ad05cbdb7",
+      "mtime_ns": 1792437444045878500
+    },
+    {
+      "path": "outflow/Ti60_Demo.warn.log",
+      "sha256": "4273daef3797b09efcccaa471a5521bbdd4624b7a0651f4a814340e6690436cf",
+      "mtime_ns": 1792437443948704000
+    },
+    {
+      "path": "outflow/Ti60_Demo_or.ini",
+      "sha256": "bbe3d20fa88eb0aa7511e0fff61ec7f76398fa7b05f5c17ee146a69e4681c4ef",
+      "mtime_ns": 1792437453464393500
+    },
+    {
+      "path": "outflow/Ti60_Demo_template.v",
+      "sha256": "504fabe2a067d8e143da18d66ba87415315862dbe70fc9f10073c4d9f06f13a1",
+      "mtime_ns": 1792437453464393500
+    },
+    {
+      "path": "outflow/debug_profile.mark_debug.json",
+      "sha256": "bb38161b03e8464335e13784eae33e41d75df83dec47b716ed82a716c5e0a986",
+      "mtime_ns": 1792437324266107400
+    },
+    {
+      "path": "outflow/design_issue.xml",
+      "sha256": "ddee1b39a332690c6f93cb6b7d66d816bfdac7721200303b088ebf866d74b954",
+      "mtime_ns": 1792437451740085500
+    },
+    {
+      "path": "reports/build_verified.json",
+      "sha256": "58669286c3432bf967f04343f774c50e050ecb6ed616c7704b05305e589dacab",
+      "mtime_ns": 1792437994297803900
+    },
+    {
+      "path": "reports/efinity_build.log",
+      "sha256": "84b6ac7eeade5e167808fd84b6b685f28aa3330787a58402cec91da2e39ec324",
+      "mtime_ns": 1792437993748546100
+    },
+    {
+      "path": "reports/vision8/build_input_sha256.json",
+      "sha256": "d8761b3be836eb8aef59b0c09661dfde5635b56acf0dcc14c9fbc72795079cad",
+      "mtime_ns": 1792437319613979600
+    }
+  ],
+  "ended_utc": "2026-10-19T19:27:13.926474+00:00"
+}

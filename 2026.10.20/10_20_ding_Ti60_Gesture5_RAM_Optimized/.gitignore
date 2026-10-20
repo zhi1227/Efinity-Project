@@ -1,0 +1,6 @@
+/work_syn/
+/work_pnr/
+/outflow/*
+!/outflow/*.bit
+!/outflow/*.hex
+!/outflow/*.timing.rpt

@@ -1,0 +1,15 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_vision8_key_boundary -s tb_vision8_key_boundary --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/rtl/vision8_controls.v" Line 4. Module vision8_key(DEBOUNCE=80,LONG_CYCLES=8000) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/rtl/vision8_controls.v" Line 4. Module vision8_key_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.vision8_key(DEBOUNCE=80,LONG_CYC...
+Compiling module work.vision8_key_default
+Compiling module work.tb_vision8_key_boundary
+Built simulation snapshot tb_vision8_key_boundary

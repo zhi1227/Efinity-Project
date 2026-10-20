@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 20 03:07:20 2026
+# Process ID: 27824
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_final
+# Command line: xsim.exe -log D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ramopt_regression\final_suite\tb_gesture5_templates_ramopt.log -mode tcl -source {xsim.dir/tb_gesture5_templates_ramopt/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ramopt_regression/final_suite/tb_gesture5_templates_ramopt.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_final\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_gesture5_templates_ramopt/xsim_script.tcl
+# xsim {tb_gesture5_templates_ramopt} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: personalized five-class enrollment (restored/adapted bench), incomplete-set suppression, sparse noise/translation tolerance, unknown/solid/invalid rejection, ambiguity and freeze persistence
+$finish called at time : 138050 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/tb_gesture5_templates_ramopt.sv" Line 39
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 03:07:24 2026...

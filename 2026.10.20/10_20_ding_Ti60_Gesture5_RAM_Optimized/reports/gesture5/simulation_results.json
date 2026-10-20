@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-18",
+  "tests": [
+    {
+      "bench": "tb_h4_templates",
+      "result": "PASS",
+      "log": "reports/gesture5/tb_h4_templates.log",
+      "log_sha256": "b7fc5c2aab46263b773904585ecad1160108518b0160c2493186521c8932d0fb"
+    },
+    {
+      "bench": "tb_h4_controls",
+      "result": "PASS",
+      "log": "reports/gesture5/tb_h4_controls.log",
+      "log_sha256": "3f44830028ae917ebc4d8fc2a7cdb5e4f5784f20bfa575bfffcb77483f773d1c"
+    },
+    {
+      "bench": "tb_matrix8",
+      "result": "PASS",
+      "log": "reports/gesture5/tb_matrix8.log",
+      "log_sha256": "f2e7079b9980eed96b180dbf5f9bd00817a5a7fdfcb237b695beb826de569cdb"
+    },
+    {
+      "bench": "tb_h5_palm",
+      "result": "PASS",
+      "log": "reports/gesture5/tb_h5_palm.log",
+      "log_sha256": "cc369e36f36174c5925bdd567d60117eb6742ef3dddca9341690724761d4d62f"
+    },
+    {
+      "bench": "tb_h5_wave",
+      "result": "PASS",
+      "log": "reports/gesture5/tb_h5_wave.log",
+      "log_sha256": "68ef149d75dd154370296fbb922d2095b8e59106c0573b686094f791d5ff8fee"
+    },
+    {
+      "bench": "tb_vision8_gesture",
+      "result": "PASS",
+      "log": "reports/gesture5/tb_vision8_gesture.log",
+      "log_sha256": "5024e15ffdfccbe435b8799d3ce9023902828750f5adc793ed11534cece663f7"
+    },
+    {
+      "bench": "tb_h4_overlay",
+      "result": "PASS",
+      "log": "reports/gesture5/tb_h4_overlay.log",
+      "log_sha256": "4de34d41ce6053168a244726e09defd85a5419ffd7f720a390eac2e59226747e"
+    },
+    {
+      "bench": "tb_roi_shared_overlay",
+      "result": "PASS",
+      "log": "reports/gesture5/tb_roi_shared_overlay.log",
+      "log_sha256": "849b0918529da749bf0427744224c8e007acbaa1ad037dc2ff8eca265d36745f"
+    },
+    {
+      "bench": "tb_gesture5_rgb",
+      "result": "PASS",
+      "log": "reports/gesture5/tb_gesture5_rgb.log",
+      "log_sha256": "a16708272eed4440b881315f0fe194c19e3b3796109ef99b76054fa338493552"
+    },
+    {
+      "bench": "tb_gesture5_ui",
+      "result": "PASS",
+      "log": "reports/gesture5/tb_gesture5_ui.log",
+      "log_sha256": "95a25d4a2b667452f1f6ba436ff3d7d73ca31a22aa1dc643657abb20dac95e8b"
+    },
+    {
+      "bench": "tb_h5_raster",
+      "result": "PASS",
+      "log": "reports/gesture5/tb_h5_raster.log",
+      "log_sha256": "971b2958151e0d2fb1d4e2d88394fdfb10d1e08a312a56b458da1ae2dc2050a1"
+    }
+  ],
+  "hardware_validation": "not performed"
+}

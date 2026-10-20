@@ -1,0 +1,16 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_ramopt_buffers/xsim_script.tcl
+# xsim {tb_ramopt_buffers} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: RAM buffers exact equivalence; 90000 clocks, 9 line configurations, 3 window7 widths, 14 delay configurations; DE gaps, cropped coordinates, wraparound, asynchronous mid-stream resets
+$finish called at time : 900 us : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt/tb_ramopt_buffers.sv" Line 71
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 219.766 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 03:02:18 2026...

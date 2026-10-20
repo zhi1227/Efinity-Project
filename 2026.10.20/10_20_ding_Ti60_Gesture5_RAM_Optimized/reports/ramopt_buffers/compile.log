@@ -1,0 +1,21 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/src/vision/line_buffer_3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module line_buffer_3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/src/gesture/ep1_skin.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_skin
+INFO: [VRFC 10-311] analyzing module ep1_window7
+INFO: [VRFC 10-311] analyzing module ep1_disk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/src/parallel/video_delay.v" into library work
+INFO: [VRFC 10-311] analyzing module video_delay
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt/line_buffer_3x3_baseline.v" into library work
+INFO: [VRFC 10-311] analyzing module line_buffer_3x3_baseline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt/ep1_skin_baseline.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_skin_baseline
+INFO: [VRFC 10-311] analyzing module ep1_window7_baseline
+INFO: [VRFC 10-311] analyzing module ep1_disk_baseline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt/video_delay_baseline.v" into library work
+INFO: [VRFC 10-311] analyzing module video_delay_baseline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt/tb_ramopt_buffers.sv" into library work
+INFO: [VRFC 10-311] analyzing module ramopt_line_case
+INFO: [VRFC 10-311] analyzing module ramopt_window7_case
+INFO: [VRFC 10-311] analyzing module ramopt_delay_case
+INFO: [VRFC 10-311] analyzing module tb_ramopt_buffers

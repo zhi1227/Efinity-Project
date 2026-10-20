@@ -1,0 +1,51 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_cache_stress -s tb_cache_stress --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.BufferCC_2
+Compiling module work.BufferCC_3
+Compiling module work.InstructionCache
+Compiling module work.DataCache
+Compiling module work.VexRiscv
+Compiling module work.BufferCC_1
+Compiling module work.FlowCCByToggle
+Compiling module work.JtagBridgeNoTap
+Compiling module work.SystemDebugger
+Compiling module work.BufferCC_4
+Compiling module work.BmbDecoder
+Compiling module work.BmbExclusiveMonitor
+Compiling module work.BmbDecoder_1
+Compiling module work.StreamArbiter
+Compiling module work.BmbArbiter
+Compiling module work.BmbDecoder_2
+Compiling module work.BmbOnChipRam
+Compiling module work.BmbUnburstify
+Compiling module work.BmbDecoder_3
+Compiling module work.BmbClint
+Compiling module work.UartCtrlTx
+Compiling module work.BufferCC
+Compiling module work.UartCtrlRx
+Compiling module work.UartCtrl
+Compiling module work.StreamFifo
+Compiling module work.BmbUartCtrl
+Compiling module work.TopLevel
+Compiling module work.StreamFifo_2
+Compiling module work.StreamFifo_3
+Compiling module work.BmbSpiXdrMasterCtrl
+Compiling module work.BmbToApb3Bridge
+Compiling module work.EfxSapphireSoc
+Compiling module work.tb_cache_stress
+Built simulation snapshot tb_cache_stress
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_cache_stress/xsim.dir/tb_cache_stress/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 20 02:33:54 2026...

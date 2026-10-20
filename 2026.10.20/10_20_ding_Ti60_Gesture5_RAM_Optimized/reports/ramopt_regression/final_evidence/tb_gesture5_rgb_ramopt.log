@@ -1,0 +1,60 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 20 03:26:09 2026
+# Process ID: 43728
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_frequency_main
+# Command line: xsim.exe -log D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ramopt_regression\frequency_suite\main\tb_gesture5_rgb_ramopt.log -mode tcl -source {xsim.dir/tb_gesture5_rgb_ramopt/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ramopt_regression/frequency_suite/main/tb_gesture5_rgb_ramopt.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_frequency_main\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_gesture5_rgb_ramopt/xsim_script.tcl
+# xsim {tb_gesture5_rgb_ramopt} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+Enrolled 1 in 9 frames
+Enrolled 2 in 8 frames
+Enrolled 3 in 8 frames
+Enrolled 4 in 8 frames
+Enrolled 5 in 8 frames
+WRIST tilt=0 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=2 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=4 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=6 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=8 cls=1 lean=119 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=10 cls=1 lean=125 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=12 cls=1 lean=125 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=12 cls=1 lean=130 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=10 cls=1 lean=130 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=8 cls=1 lean=125 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=6 cls=1 lean=125 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=4 cls=1 lean=119 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=2 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=0 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=-2 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=-4 cls=1 lean=120 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=-6 cls=1 lean=119 phase=2 dir=0 extreme=120 credit=6 cx=159
+WRIST tilt=-8 cls=1 lean=111 phase=2 dir=2 extreme=111 credit=6 cx=159
+WRIST tilt=-10 cls=1 lean=111 phase=3 dir=2 extreme=111 credit=6 cx=159
+WRIST tilt=-12 cls=1 lean=109 phase=3 dir=2 extreme=109 credit=6 cx=159
+WRIST return=-12 cls=1 lean=108 phase=3 dir=2 cx=159
+WRIST return=-10 cls=1 lean=108 phase=3 dir=2 cx=159
+WRIST return=-8 cls=1 lean=109 phase=3 dir=2 cx=159
+WRIST return=-6 cls=1 lean=111 phase=3 dir=2 cx=159
+WRIST return=-4 cls=1 lean=111 phase=3 dir=2 cx=159
+WRIST return=-2 cls=1 lean=119 phase=3 dir=2 cx=159
+WRIST return=0 cls=1 lean=120 phase=3 dir=2 cx=159
+WRIST return=2 cls=1 lean=120 phase=3 dir=2 cx=159
+WRIST return=4 cls=1 lean=120 phase=3 dir=2 cx=159
+WRIST return=6 cls=1 lean=120 phase=3 dir=2 cx=159
+WRIST return=8 cls=1 lean=119 phase=3 dir=2 cx=159
+WRIST return=10 cls=1 lean=125 phase=3 dir=2 cx=159
+WRIST return=12 cls=1 lean=125 phase=3 dir=2 cx=159
+Independent evidence used on 33 tilted-palm frames
+PASS: five-class RGB-to-template button enrollment (new adapted bench) and changed-shape wrist-wave; multi-tone fingers; learned thumb/heart/OK/V/dynamic wave; static/jitter/fist/blank rejection; freeze and mode persistence
+$finish called at time : 267840230 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/tb_gesture5_rgb_ramopt.sv" Line 89
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:03:18 . Memory (MB): peak = 219.656 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 03:29:31 2026...

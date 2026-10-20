@@ -1,0 +1,7 @@
+[
+  "example_top.v",
+  "rtl/menu_glyph_rom.v",
+  "rtl/vision8_controls.v",
+  "Ti60_Demo.peri.xml",
+  "Ti60_Demo.pt.sdc"
+]

@@ -1,0 +1,9 @@
+{
+  "stage": "D:\\Github_Project\\fpga_build\\vision8_io28_fix_20261016_run2",
+  "status": "cancelled_at_user_request",
+  "cancelled_utc": "2026-10-15T17:10:21.135641+00:00",
+  "reason": "User requested stopping bitstream compilation; future compilation/download by user",
+  "new_bit_or_hex_delivered": false,
+  "final_timing_verified": false,
+  "hardware_programmed": false
+}

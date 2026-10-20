@@ -1,0 +1,12 @@
+{
+  "original_vision8_controls.v": {
+    "source": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.15\\10_15_ding_Ti60_Vision8_RGB_Balance\\rtl\\vision8_controls.v",
+    "sha256": "98c7f191366a1c2daecb64168f0ad0cdfc0099e3e112c7d8c6300211aa30feda",
+    "use": "expected-failure counterexample only, not an active FPGA input"
+  },
+  "first_fix_vision8_controls.v": {
+    "source": "D:\\Github_Project\\fpga_build\\vision8_io28_fix_20261016_run1\\rtl\\vision8_controls.v",
+    "sha256": "e527270f996ab36d7aa4cb7b23d336f43ab0230729e6cca66b6bdad169a45a5c",
+    "use": "expected-failure counterexample only, not an active FPGA input"
+  }
+}

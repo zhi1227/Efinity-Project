@@ -1,0 +1,15 @@
+param([string]$VivadoBin='E:\Xilinx\Vivado\2019.2\bin')
+$ErrorActionPreference='Stop'
+Push-Location (Split-Path -Parent $PSScriptRoot)
+try {
+ & (Join-Path $VivadoBin 'xvlog.bat') '--sv' 'rtl/menu_status_cdc.v' 'sim/tb_menu_cdc.sv' 'rtl/menu_glyph_rom.v' 'rtl/menu_renderer.v' 'sim/tb_menu_render.sv'
+ if($LASTEXITCODE){throw 'xvlog failed'}
+ foreach($bench in @('tb_menu_cdc','tb_menu_render')) {
+   & (Join-Path $VivadoBin 'xelab.bat') $bench '-s' $bench '--relax'
+   if($LASTEXITCODE){throw 'xelab failed'}
+   & (Join-Path $VivadoBin 'xsim.bat') $bench '-runall' '-log' "reports/$bench.log"
+   if($LASTEXITCODE){throw 'xsim failed'}
+   if(!(Select-String -LiteralPath "reports/$bench.log" -SimpleMatch 'PASS:')){throw 'No PASS result'}
+   if(Select-String -LiteralPath "reports/$bench.log" -Pattern 'Fatal:|Error:'){throw 'Simulation failed'}
+ }
+} finally {Pop-Location}

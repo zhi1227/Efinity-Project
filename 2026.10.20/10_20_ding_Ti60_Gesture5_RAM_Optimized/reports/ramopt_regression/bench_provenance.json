@@ -1,0 +1,42 @@
+{
+  "restored_original_sim": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.16\\10_16_ding_Ti60_Vision8_IO28_ButtonFix\\sim",
+  "adapted_current_tests": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.19\\20261019_edge_optimized_Ti60_gesture5\\sim",
+  "adaptations": [
+    {
+      "old": "tb_h4_controls",
+      "new": "tb_gesture5_controls_new",
+      "changes": "Five enrollment steps instead of three; no production changes."
+    },
+    {
+      "old": "tb_h4_templates",
+      "new": "tb_gesture5_templates_ramopt",
+      "changes": "Trained mask 5 bits/31; five synthetic bitmaps; serial query wait 430 cycles; all-five-trained requirement. Retains ambiguity/noise/translation/empty/invalid/freeze checks."
+    },
+    {
+      "old": "tb_h5_raster",
+      "new": "tb_gesture5_rgb_ramopt",
+      "changes": "Five RGB silhouettes including connected OK ring and V fingers; five enrollment steps and trained mask=31; untrained fist moved to synthetic scene 6. Retains changed-palm wrist wave, jitter, blank, freeze and mode-persistence checks."
+    },
+    {
+      "old": "tb_matrix8",
+      "new": "tb_matrix5_ramopt",
+      "changes": "Checks six IDs (idle plus five hand classes) against exact production 64-bit patterns; undefined class moved from 4 to 6."
+    },
+    {
+      "old": "tb_roi_shared_overlay",
+      "new": "tb_gesture5_shared_overlay_ramopt",
+      "changes": "Trained mask 5 bits/31; scans classes 0..5; explicitly checks OK and V labels. Same ROI geometry and per-pixel shared/local font equivalence."
+    },
+    {
+      "old": "tb_frame_path mock modules",
+      "new": "CAMERA_FIFO_VENDOR_IP define in regression driver",
+      "changes": "Use actual production FIFO IP, avoiding historical mocks that omit added reset-busy port. No production interface changes."
+    }
+  ],
+  "legacy_diagnostic_only": [
+    "Initial tb_h5_raster result fails old three-step completion expectation; replaced by full five-step RGB bench.",
+    "Historical g4 blank-icon matrix test is replaced by explicit five-class bitmap test."
+  ],
+  "v1_production_manifest": "reports/ramopt_regression/v1_production_sha256.json",
+  "tool_environment": "XSim 2018.3 MinGW GCC cannot load in Codex sandbox (DLL relocation); same installed executable and all tests run successfully with require_escalated. No global tool, PATH, registry, or DLL modifications."
+}

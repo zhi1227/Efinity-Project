@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Oct 18 16:21:40 2026
+# Process ID: 40872
+# Current directory: D:/Codex/Tasks/2026-10-18/github-project/work/gesture5/project
+# Command line: xsim.exe -log reports/tb_gesture5_rgb.log -mode tcl -source {xsim.dir/tb_gesture5_rgb/xsim_script.tcl}
+# Log file: D:/Codex/Tasks/2026-10-18/github-project/work/gesture5/project/reports/tb_gesture5_rgb.log
+# Journal file: D:/Codex/Tasks/2026-10-18/github-project/work/gesture5/project\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_gesture5_rgb/xsim_script.tcl
+# xsim {tb_gesture5_rgb} -autoloadwcfg -runall
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run -all
+Enrolled 1 in 9 frames
+Enrolled 2 in 8 frames
+Enrolled 3 in 8 frames
+Enrolled 4 in 8 frames
+Enrolled 5 in 8 frames
+RGB class 2 recognized, distance 0
+RGB class 3 recognized, distance 0
+RGB class 4 recognized, distance 0
+RGB class 5 recognized, distance 0
+PASS: five-step RGB skin/morphology/CCL/template enrollment; thumb, heart, OK and V recognition; fist/blank rejection, static palm, freeze/mode persistence
+$finish called at time : 156600230 ns : File "D:/Codex/Tasks/2026-10-18/github-project/work/gesture5/project/sim/tb_gesture5_rgb.sv" Line 62
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:39 . Memory (MB): peak = 223.984 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 18 16:23:24 2026...

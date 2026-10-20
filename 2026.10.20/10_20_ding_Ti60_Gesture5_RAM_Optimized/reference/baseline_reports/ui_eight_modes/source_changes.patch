@@ -1,0 +1,1416 @@
+--- before/example_top.v
++++ after/example_top.v
+@@ -901,6 +901,7 @@
+  always @(posedge clk_pixel)if(!rstn_pixel)begin freeze_meta_pixel<=0;freeze_pixel<=0;end
+  else begin freeze_meta_pixel<=freeze_active_axi;freeze_pixel<=freeze_meta_pixel;end
+  wire[2:0]user_mode;wire[1:0]capture_algorithm,threshold_selected,threshold_step;
++ wire settings_open;
+  wire pip_enable,capture_pulse,clear_pulse,gesture_short,gesture_long;
+  wire[11:0]threshold_pending_low,threshold_pending_high;wire[15:0]parameter_version;
+  wire[31:0]source_id_axi,source_id_pixel,base_axi_errors,memory_errors;wire main_frame_ok_axi,main_frame_ok_pixel;
+@@ -910,7 +911,7 @@
+  else begin input_vs_q<=lcd_vs;if(lcd_vs&&!input_vs_q)input_user_mode<=user_mode;end
+  vision8_controls controls(
+   .clk(clk_pixel),.rst_n(rstn_pixel),.frame_start(lcd_vs&&!input_vs_q),.io28(io28_button_i),.io29(io29_button_i),.io35(io35_button_i),.k1_n(key_mode_n),.k2_n(key_freeze_n),
+-  .capture_busy(capture_busy),.learning(gesture_learning),.rx(uart_rx_i),.pure_o(pure_capture),.detect_extra(detect_maintenance),.skin_lower(skin_lower),.user_mode(user_mode),.capture_alg(capture_algorithm),
++  .capture_busy(capture_busy),.learning(gesture_learning),.rx(uart_rx_i),.pure_o(pure_capture),.detect_extra(detect_maintenance),.skin_lower(skin_lower),.settings_open(settings_open),.user_mode(user_mode),.capture_alg(capture_algorithm),
+   .pip_enable(pip_enable),.freeze_request(freeze_request),.capture(capture_pulse),.clear(clear_pulse),.gesture_short(gesture_short),.gesture_long(gesture_long),
+   .low(threshold_pending_low),.high(threshold_pending_high),.selected(threshold_selected),.step_select(threshold_step),
+   .low_active(threshold_low),.high_active(threshold_high),.version(parameter_version),.backend_mode(display_mode));
+@@ -1048,7 +1049,7 @@
+  parallel_video #(.SHARED_FONT(1),.SOURCE_TAGGED(1),.HUD_ENABLE(1),.CANNY_GAUSSIAN(1),.GESTURE_DEBUG(0)) u_parallel(
+  .shared_addr(font_hdmi_addr),.shared_bits(font_hdmi_bits),
+  .clk(clk_pixel),.rst_n(rstn_pixel),.rgb_i({lcd_red,lcd_green,lcd_blue}),.de_i(lcd_de),.vs_i(lcd_vs),.hs_i(lcd_hs),
+- .mode_i(capture_lock&&user_mode==4?capture_backend:display_mode),.low_i(capture_lock?capture_low:threshold_pending_low),.high_i(capture_lock?capture_high:threshold_pending_high),.rgb_o(face_overlay_rgb),.de_o(face_overlay_de),.vs_o(face_overlay_vs),.hs_o(face_overlay_hs),
++ .mode_i(capture_lock&&user_mode==7?capture_backend:display_mode),.low_i(capture_lock?capture_low:threshold_pending_low),.high_i(capture_lock?capture_high:threshold_pending_high),.rgb_o(face_overlay_rgb),.de_o(face_overlay_de),.vs_o(face_overlay_vs),.hs_o(face_overlay_hs),
+  .overrun(face_overrun),.freeze_i(freeze_pixel),.mode_committed_o(mode_committed),.frozen_committed_o(frozen_committed),
+  .pure_i(pure_capture),.detect_i(detect_enable),.skin_lower_i(skin_lower),.health_i(camera_health_pixel),
+  .gesture_short_i(gesture_short),.gesture_long_i(gesture_long),.gesture_learning_o(gesture_learning),.source_id_i(source_id_pixel),
+@@ -1121,7 +1122,7 @@
+  // Independent 1024x600 LVDS menu; reuse the existing 48/336 MHz PLL.
+  wire [12:0] menu_status;
+  wire[639:0]menu8_status,menu8_pixel;
+- assign menu8_pixel={shot_metadata,5'd0,(|capture_errors),(|aux_underflows),(|base_axi_errors),(|memory_errors),capture_algorithm,valid_tiles,source_id_pixel,parameter_version,threshold_step,threshold_selected,threshold_high,threshold_low,
++ assign menu8_pixel={shot_metadata,4'd0,settings_open,(|capture_errors),(|aux_underflows),(|base_axi_errors),(|memory_errors),capture_algorithm,valid_tiles,source_id_pixel,parameter_version,threshold_step,threshold_selected,threshold_high,threshold_low,
+  gesture_countdown,gesture_state,gesture_trained,gesture_class,face_count,face_saturated,face_valid,capture_busy,pip_enable,camera_health_pixel,frozen_committed,output_user_mode};
+  menu_status_cdc #(.BITS(640)) menu8_cdc(clk_pixel,rst_pixel,menu8_pixel,clk_lvds_1x,rst_lvds_1x,menu8_status);
+  wire menu_reset;
+--- before/README.md
++++ after/README.md
+@@ -1,37 +1,41 @@
+-# 2026-10-13：Vision8 LVDS 界面更新与 IO35 阈值入口
++# Vision8：八模式流水切换与独立阈值页
+ 
+-本次在扩大手势 ROI 的八模式工程上恢复旧版 LVDS 深蓝卡片风格，移除 LVDS/HDMI 模块运行状态显示；右下角加入 IO35 阈值页入口，模式7在中央显示实时人数候选。详细操作、接线、RTL仿真图片和验证方式见 [UI更新说明_20261013.md](UI更新说明_20261013.md)。
++LVDS 主页面按照片的深蓝卡片风格显示全部八个模式，IO28 切换时高亮条带拖尾流动；右下角 IO35 入口打开独立的 Canny 阈值设置页。LOW/HIGH 使用大号数字实时显示。模式7在中央显示人脸候选数量。LVDS/HDMI 模块状态灯条已移除。
+ 
+-共享字库扩为261字符，视频和固件保持原功能；手势ROI仍为 **(40,40)～(1000,680)**。新编译结果：XLR 47,588/60,800，RAM 222/256，DSP 37/160，最差建立余量 +0.304 ns，保持余量 +0.026 ns。下载使用 `outflow/Ti60_Demo.bit` / `.hex`，本次未上板烧录。
++| 模式 | 显示/功能 |
++| --- | --- |
++| 1 | 原图 |
++| 2 | Canny 黑白边缘 |
++| 3 | 彩色红边 |
++| 4 | 赛博边缘 |
++| 5 | 彩边对照：左彩色、右 Canny 边缘 |
++| 6 | 手势识别 |
++| 7 | 人脸识别 / 实时候选数量 |
++| 8 | 四帧对比 |
+ 
+ ## 当前按钮操作
+ 
+-原四路按钮保留现有接线，新增IO35沿用IO28接收方式；短按在松开时生效，长按约 2 秒。
++| 按钮 | 模式页面 | 独立阈值页面 |
++| --- | --- | --- |
++| IO28 | 短按 1→8→1；模式2～4长按开关彩色画中画 | 短按关闭设置并切至下一模式 |
++| **IO35 / P4 第40脚 / FPGA B9** | 短按打开阈值页 | 短按返回原模式 |
++| IO29 | 普通模式冻结/恢复；模式6录入期间禁止冻结；模式8短按保存、长按清空 | 短按减少阈值；长按冻结/恢复 |
++| 板载 K1 | 模式6长按录入、短按确认手型 | 短按 LOW/HIGH/LINK；长按步长1/4/8 |
++| 板载 K2 | 模式8选择保存的处理算法 | 增加阈值 |
+ 
+-| 按钮 | 当前用途 |
+-| --- | --- |
+-| 外接 IO28 / J6 / DC3-40 第33脚 | 短按切换模式1～8；模式2～4长按开关彩色画中画 |
+-| 外接 **IO35 / P4 第40脚 / B9** | **短按进入阈值页，再短按返回原模式；空闲低、按下高** |
+-| 外接 IO29 / J7 / DC3-40 第34脚 | 普通模式冻结/恢复；模式5短按抓拍、长按清空；模式6短按减阈值、长按冻结；模式8非录入期间冻结/恢复 |
+-| 板载 K1 | 模式6短按 LOW/HIGH/LINK、长按步长1/4/8；模式8长按进入/重新录入，短按确认步骤 |
+-| 板载 K2 | 模式5选择抓拍算法；模式6增加阈值 |
++IO28、IO35 空闲低/按下高；IO29、K1、K2 空闲高/按下低。约20ms消抖，短按松开生效，长按约2秒。打开/关闭设置不切换 HDMI 算法、不解除原冻结、不清空阈值。长按 IO35 不触发页面切换。按住键跨页面/模式时取消该次按键，防止误操作。
+ 
+-八模式仍为原图、Canny、Sobel红边、Sobel赛博、四帧对比、阈值调节、人脸候选统计、手势识别。Canny 默认低/高阈值40/80，范围 `1 ≤ LOW < HIGH ≤ 2040`，参数在帧边界生效。
++Canny 默认 LOW=40、HIGH=80，限制 `1 ≤ LOW < HIGH ≤ 2040`，参数在视频帧边界生效。设置页面不是 Canny 算法模式，也不占用模式编号。串口 `0`～`7` 对应上述模式1～8；`m` 切到下一模式并退出设置。
+ 
+-## 扩大后的手势操作
++## 手势与人数
+ 
+-1. IO28 短按切到第8模式。长按板载 K1 约2秒进入录入。
+-2. 张掌时先让掌心盖住原来的粉色小框（实际32×32采样，中心560,360），短按板载 K1 确认，按屏幕约2秒倒计时保持稳定。
+-3. 按提示依次录入点赞、单手比心，均用板载 K1 短按确认。随后检测可在扩大后的大框内进行。
+-4. 指尖和左右两侧保持在大框内，底部继续允许手腕伸出。右侧轮廓预览位置不变。模式切换和冻结恢复保留样本；重新下载、上电或复位后重新录入。
++IO28 切到模式6，长按板载 K1 进入录入；张掌、点赞、单手比心按提示逐次短按 K1 确认。采样小框与手势 ROI `(40,40)～(1000,680)` 保持原位置。模式7使用现有肤色轮廓候选计数：有效空画面0，超过显示范围8+，无有效结果--；冻结保留当前数量。墨水屏人物图片和固件未修改。
+ 
+-本轮保留真实时间倒计时和摄像头源帧去重。电子纸仍显示原开机图片；外接图片 Flash、编码器和 Canny 算法优化仍留待后续。
++## 交付与复现
+ 
+-## 复现与交付
++完整按键、硬件接线、RTL 仿真效果图及复现命令见 [UI更新说明](UI更新说明_20261013.md)。当前版本以 `reports/build_verified.json` 和 `reports/ui_eight_modes/validation.json` 的源码哈希及结果为准。下载文件为 `outflow/Ti60_Demo.bit` / `.hex`；未上板烧录。
+ 
+-界面更新的测试和英文临时目录编译步骤见 [UI更新说明](UI更新说明_20261013.md#复现)。本机使用 Vivado 2019.2 XSim 与 Efinity 2025.1。
+-
+-当前构建证据为 `reports/build_verified.json`，UI专项验收为 `reports/ui_refresh/validation.json`。`reports/roi_integration/final_validation.json` 和下方旧报告属于更新前的历史版本，不代表本次修改后的工程。
++`reports/io35_migration`、`reports/ui_refresh/validation.json` 和下方旧说明均为此前版本的历史证据；其中模式顺序与资源数字不能用于本次版本。
+ 
+ ## 历史说明存档
+ 
+--- before/UI更新说明_20261013.md
++++ after/UI更新说明_20261013.md
+@@ -1,21 +1,24 @@
+-# LVDS 界面更新与 IO35 阈值入口
++# 八模式流水切换与独立 Canny 阈值页
+ 
+-新工程采用旧工程照片中的深蓝渐变底、六张彩色图标卡片、选中描边与下划线、LIVE/HOLD 标记。LVDS 仍为 1024×600，使用逐像素逻辑与字库，不增加显示帧缓存或 DDR 视频带宽。
++LVDS 为1024×600、48 MHz 像素时钟。主页面采用深蓝渐变底、八张彩色图标卡片、选中描边和流水高亮条、LIVE/HOLD 标记。逐像素绘制，不增加显示帧缓存或 DDR 视频带宽。
+ 
+-## 页面与按键
++## 模式与页面
+ 
+-上方卡片对应模式 1、2、3、4、5、8；模式 6 对应右下角阈值区，模式 7 在中央显示人数。IO28 仍按 1～8 顺序循环。
++模式顺序固定为：**1 原图、2 Canny、3 彩色红边、4 赛博边缘、5 彩边对照、6 手势识别、7 人脸识别、8 四帧对比**。模式5复用原工程的左彩色/右 Canny 对照通路；手势与四帧保存的内部控制、DDR通路、HDMI标签和界面编号一起调整。
+ 
+-| 按键 | 操作 |
+-| --- | --- |
+-| IO28 | 短按切换模式；模式 2～4 长按开关彩色画中画 |
+-| **IO35** | **短按进入 Canny 阈值页，再短按返回进入前的模式** |
+-| K1（阈值页） | 短按选择 LOW/HIGH/LINK；长按切换步长 1/4/8 |
+-| K2（阈值页） | 增加所选阈值 |
+-| IO29（阈值页） | 短按减少阈值；长按冻结/恢复 |
+-| IO29（其他页） | 原有冻结、抓帧、清空操作保持；手势录入期间禁止冻结 |
++IO28 短按切换时，高亮条带两段拖尾向下一卡片流动，约10个显示帧（178ms）抵达相邻卡片；8→1从右侧环绕回左侧。连续切换会从当前高亮位置继续移动。动画位置只在消隐区改变，整帧保持一致。
+ 
+-短按在消抖后的松开沿生效，长按约 2 秒。IO35 长按不触发切换；跨模式按住再松开不会误操作。进入/退出阈值页解除冻结，阈值保留；阈值仍在视频帧边界生效，范围 `1 ≤ LOW < HIGH ≤ 2040`。若通过 IO28 或串口进入阈值页，IO35 返回 Canny 模式 2。IO28 与 IO35 同时产生事件时优先 IO28；串口保持原有优先级。
++IO35 打开**独立设置页面**，不是八模式中的任意一项。页面仅显示阈值与设置操作：左右两个面板分别标注低阈值 LOW 和高阈值 HIGH，四位数字单字符格64×128像素；选中边框、LOW/HIGH/LINK 和步长实时显示。没有触摸操作。
++
++| 按键 | 模式页面 | 阈值页面 |
++| --- | --- | --- |
++| IO28 | 短按切到下一模式；模式2～4长按开关彩色画中画 | 短按关闭设置并切到下一模式 |
++| IO35 | 短按进入阈值设置 | 短按返回进入前的模式 |
++| IO29 | 普通模式冻结/恢复；模式6录入时不冻结；模式8保存/长按清空 | 短按减少；长按冻结/恢复 |
++| K1 | 模式6长按录入、短按确认手型 | 短按选 LOW/HIGH/LINK；长按改步长1/4/8 |
++| K2 | 模式8选择保存的算法 | 增加所选阈值 |
++
++打开/关闭设置保持当前算法、冻结状态与已调阈值。若需在 HDMI 观察 Canny 变化，先选模式2再按 IO35。参数限制 `1 ≤ LOW < HIGH ≤ 2040`，LINK 联动保持差值，抵达上下限时停止；参数在视频帧边界生效，LVDS也按帧更新。短按松开生效，长按约2秒。IO35长按不切页；跨页面/模式的按住再松开不触发旧功能。IO28优先于IO35，串口保留更高优先级。串口数字0～7对应模式1～8，模式命令退出设置。
+ 
+ ### IO35 接线
+ 
+@@ -29,52 +32,48 @@
+ 
+ 位置依据 Ti60-F225_Button_Board_V1.1_20230915 底板原理图第 7 页和 Ti60_F225_Core_V1.4 核心板管脚表。底板 P4 默认是经 TXS0108E 转换的 3.3 V 侧；FPGA 管脚为 1.8 V 侧。外接按钮应像 IO28 一样提供稳定的空闲低电平，不能悬空。
+ 
+-## 人数显示与诊断移除
++## 人数与诊断显示
+ 
+-- 仅模式 7 显示和更新中央大号计数，其他模式显示各自说明。
+-- 使用现有肤色轮廓候选计数结果，保留源帧去重、连续帧确认、冻结逻辑。有效空画面显示 `0`，饱和显示 `8+`，无有效画面显示 `--`；冻结时标记 HOLD，并说明保留当前人数。
+-- LVDS 的 CFG/ACK/PCLK/VS/DDR/CAL/BUF/RGB 状态文字及灯条、HDMI 对应模块运行状态叠加均移除。
+-- 摄像头与 DDR 的内部就绪检测仍服务于数据通路和识别有效性判断。手势识别指引、检测框、四帧图像信息保留。
+-- 手势 ROI 仍是 `(40,40)～(1000,680)`；墨水屏人物和原固件图片未修改。
++仅模式7在屏幕中央显示实时人脸候选数量，其他模式显示各自说明；设置页优先显示阈值。算法保留原有肤色轮廓候选检测、源帧去重、连续确认和冻结逻辑，不新增人脸身份识别。有效空画面0、饱和8+、无效--；冻结有HOLD标记。
+ 
+-## RTL 仿真效果图
++LVDS/HDMI模块运行状态文字与灯条已移除。摄像头/DDR内部就绪信号仍用于有效性与数据通路控制。手势指引、检测框、四帧信息保留。ROI `(40,40)～(1000,680)`、墨水屏人物和原固件不变。
+ 
+-下图由实际 `menu8_renderer` 输出转换而来；不是概念效果图。阈值和人数是仿真输入样例。
++## 实际 RTL 输出
+ 
+-![原图模式](reports/ui_refresh/menu_0.png)
++下图来自 HDL 仿真输出的RGB流，数值为仿真输入样例。
+ 
+-![阈值调节](reports/ui_refresh/menu_5.png)
++![八模式主页面](reports/ui_eight_modes/menu_0.png)
+ 
+-![人数统计](reports/ui_refresh/menu_6.png)
++![独立大字阈值页](reports/ui_eight_modes/menu_12.png)
+ 
+-模式 7 的 0 人、3 人、冻结及无效状态分别见 `reports/ui_refresh/menu_8.png`～`menu_11.png`。完整 CPU 仿真还检查固件启动、状态跨时钟传递、帧边界提交与 LVDS 编码。
++![模式7实时人数](reports/ui_eight_modes/menu_6.png)
++
++目录中 `menu_0`～`menu_7` 对应八模式；8～11为0人、3人、冻结、无效；12～14为阈值默认/边界/更新；15～16为流水移动和8→1环绕中的实际帧。
+ 
+ ## 复现
+-
+-本机 XSim 为 `D:\Vivado\Vivado\2019.2\bin`，Efinity 为 `D:\Efinity`。相关测试：
+ 
+ ```powershell
+ & .\tools\test_vision8.ps1 -VivadoBin 'D:\Vivado\Vivado\2019.2\bin' -Benches @('tb_vision8_controls','tb_vision8_faces','tb_vision8_frames','tb_io29_freeze_ddr')
+ & .\tools\test_menu8_pixels.ps1 -VivadoBin 'D:\Vivado\Vivado\2019.2\bin'
+ & .\tools\test_ui_fonts.ps1 -VivadoBin 'D:\Vivado\Vivado\2019.2\bin'
+ & .\tools\test_gesture_roi.ps1 -VivadoBin 'D:\Vivado\Vivado\2019.2\bin' -Benches @('tb_roi_shared_overlay')
+-& .\tools\test_cpu8.ps1 -VivadoBin 'D:\Vivado\Vivado\2019.2\bin'
++& .\tools\test_cpu8.ps1
++# Pillow Python:
++python .\tools\render_eight_modes.py
+ ```
+ 
+-`tools/generate_font.py` 使用 Pillow 与微软雅黑字体，同时生成 LVDS、HDMI 和双时钟共享字库。当前共享字库为 261 个字符，9 个 512×16 位 ROM 分组；两个端口都保持单周期读取。`prepare_shared_font.py` 也调用此生成器，不再从不存在的旧工程覆盖 RTL。
++字库由 `tools/generate_font.py` 生成，268字符，9组512×16 ROM，两个端口保持一个时钟读延迟。新增设置标志使用640位状态包的bit123，原有CPU完整传送状态包，LVDS按帧提交；无需修改CPU/墨水屏固件。
+ 
+-Efinity 的 Windows 综合工具无法处理本工程中文路径，需使用一个**新的、全英文可写临时目录**，例如将下列 `$stage` 换成实际路径：
++Efinity 需要全英文构建路径，下面stage须为新的可写目录：
+ 
+ ```powershell
+-$stage = 'C:\fpga_build\vision8_ui'
++$stage = 'C:\fpga_build\vision8_eight_modes'
+ python .\tools\stage_build.py prepare $stage
+ & (Join-Path $stage 'tools\build_fpga.ps1') -Efinity 'D:\Efinity'
+ python .\tools\stage_build.py collect $stage
+-python .\tools\verify_build.py
++python .\tools\verify_eight_modes.py
+ ```
+ 
+-编译时不要修改源文件；回收脚本会检查输入哈希，只有已经通过资源、时序和产物哈希验证的 bitstream 才会回写。最终结果以 `reports/build_verified.json` 与 `reports/ui_refresh/validation.json` 为准。`outflow/Ti60_Demo.bit` 用于 SRAM/JTAG，`.hex` 用于配置 Flash。本次未连接实物板卡验证或烧录。
++开始编译后不修改输入文件。收集时检查源文件哈希；生成文件、资源和建立/保持时序见 `reports/build_verified.json`，专项证据见 `reports/ui_eight_modes/validation.json`。`.bit`用于SRAM/JTAG，`.hex`用于配置Flash。仿真与编译不代替实物验证，本次未上板烧录。
+ 
+-本次编译结果：47,588 XLR、222 RAM、37 DSP，最差建立/保持余量分别为 +0.304 ns / +0.026 ns；完整明细和 SHA256 见上述验证报告。
+-
+-IO35 迁移重新执行了按键、DDR 冻结恢复、字库和八模式 UI 仿真；12张截图仅入口数字变化。此前完整 CPU、人数检测与 HDMI 回归作为继承证据保留，未在本次迁移重复运行。新编译的建立/保持时序均通过，专项验收见 `reports/io35_migration/validation.json`；可用 `python tools/verify_io35.py` 复核。
++`reports/io35_migration`、`reports/ui_refresh/validation.json` 与 `tools/verify_io35.py` 仅用于此前版本审计；本次改变模式编号和页面后不再适用。
+--- before/rtl/menu8_renderer.v
++++ after/rtl/menu8_renderer.v
+@@ -1,151 +1,169 @@
+-// 1024x600 streaming UI; coherent CPU status and two-clock pixel latency.
+-// Six familiar icon cards plus dedicated threshold (mode 6) and count (mode 7) areas.
++// 1024x600 streaming UI. Eight mode cards and an independent threshold page.
++// Two-clock font/pixel pipeline; all animation registers advance in blanking.
+ module menu8_renderer #(parameter SHARED_FONT=0)(input clk,reset,input[10:0]x,input[9:0]y,input visible,
+- input[639:0]state_i,output reg[23:0]rgb,output reg de,output[12:0]shared_addr,input[15:0]shared_bits);
+- wire[2:0]mode=state_i[2:0];wire held=state_i[3];
++ input[639:0]state_i,output reg[23:0]rgb,output reg de,output[12:0]shared_addr,input[15:0]shared_bits,
++ input frame_tick);
++ wire[2:0]mode=state_i[2:0];wire held=state_i[3],settings=state_i[123];
+  wire[11:0]low=state_i[48:37],high=state_i[60:49];
+  wire[1:0]sel=state_i[62:61],step=state_i[64:63];
+  function [23:0] accent;
+  input [2:0] n;
+  begin case(n)
+-   0:accent=24'h58D8E8;1:accent=24'h82B5FF;2:accent=24'hB8A0FF;
+-   3:accent=24'h65DBAB;4:accent=24'hFFAD72;default:accent=24'hFA93C3;
++   0:accent=24'h58D8E8;1:accent=24'h82B5FF;2:accent=24'hFF867F;
++   3:accent=24'hB8A0FF;4:accent=24'hEBD084;5:accent=24'hFA93C3;
++   6:accent=24'h65DBAB;default:accent=24'hFFAD72;
+  endcase end
+  endfunction
+- reg [2:0] tile;
+- reg [10:0] lx;
++ // Circular 928-pixel rail. At one mode per press, travel takes ten frames.
++ // A second press retargets the moving light without snapping to a card.
++ reg[9:0]flow_pos;
++ wire[9:0]flow_target={7'd0,mode}*10'd116;
++ wire[10:0]distance=flow_target>=flow_pos?{1'b0,flow_target}-{1'b0,flow_pos}:11'd928+{1'b0,flow_target}-{1'b0,flow_pos};
++ wire[6:0]flow_step=distance>192?7'd64:7'd12;
++ wire[10:0]next_flow={1'b0,flow_pos}+flow_step;
++ always @(posedge clk)begin
++  if(reset)flow_pos<=0;
++  else if(frame_tick)begin
++   if(settings||distance<=flow_step)flow_pos<=flow_target;
++   else flow_pos<=next_flow>=928?next_flow-928:next_flow;
++  end
++ end
++ wire[10:0]rail_x=x-11'd48;
++ wire[10:0]phase=rail_x>=flow_pos?rail_x-flow_pos:rail_x+11'd928-flow_pos;
++ reg [2:0] tile;reg [10:0] lx;
+  always @* begin
+-   if(x>=828) begin tile=5;lx=x-828;end
+-   else if(x>=672) begin tile=4;lx=x-672;end
+-   else if(x>=516) begin tile=3;lx=x-516;end
+-   else if(x>=360) begin tile=2;lx=x-360;end
+-   else if(x>=204) begin tile=1;lx=x-204;end
++   if(x>=860)begin tile=7;lx=x-860;end
++   else if(x>=744)begin tile=6;lx=x-744;end
++   else if(x>=628)begin tile=5;lx=x-628;end
++   else if(x>=512)begin tile=4;lx=x-512;end
++   else if(x>=396)begin tile=3;lx=x-396;end
++   else if(x>=280)begin tile=2;lx=x-280;end
++   else if(x>=164)begin tile=1;lx=x-164;end
+    else begin tile=0;lx=x-48;end
+  end
+- wire tile_area=x>=48 && x<976 && lx<144 && y>=128 && y<272;
+- wire tile_selected=(mode<5 && tile==mode)||(mode==7 && tile==5);
+- wire round_inside=(lx>=10 && lx<134)||(y>=138 && y<262);
+- wire outer_edge=(lx<3||lx>=141||y<131||y>=269);
+- wire [7:0] ix=lx[7:0];
+- wire [7:0] iy=y-10'd160;
+- // Shared 64-pixel symbol coordinates. Combinational arithmetic stays local.
+- wire signed [8:0] cx=$signed({1'b0,ix})-9'sd72;
+- wire signed [8:0] cy=$signed({1'b0,iy})-9'sd36;
+- wire [17:0] radius2=cx*cx+cy*cy;
+- wire ring=radius2>=625 && radius2<=784;
+- wire head=radius2>=196 && radius2<=289 && iy<53;
+- wire bracket=(ix>=31 && ix<=113 && (iy==0||iy==1||iy==70||iy==71) && (ix<49||ix>95)) ||
+-              ((ix==31||ix==32||ix==112||ix==113) && ((iy<18)||(iy>=54 && iy<72)));
+- wire rect=(ix>=75 && ix<=119 && iy>=26 && iy<=67) && (ix<78||ix>116||iy<29||iy>64);
+- wire signed [8:0] sx=$signed({1'b0,ix})-9'sd49;
+- wire signed [8:0] sy=$signed({1'b0,iy})-9'sd29;
+- wire [17:0] sr=sx*sx+sy*sy;
+- wire small_ring=sr>=324 && sr<=441;
+- reg icon_on;reg [23:0] icon_color;
+- always @* begin
+-   icon_on=0;icon_color=accent(tile);
+-   case(tile)
+-     0:begin
+-       icon_on=iy>=12 && iy<64 && ix>=32 && ix<112;
+-       if(ix<58) icon_color=24'hFA8F9E;
+-       else if(ix<85) icon_color=24'h64DDB4;else icon_color=24'h79B8FF;
+-     end
+-     1:icon_on=ring || (ix>=44 && ix<=100 && (iy==70||iy==71));
+-     2:begin icon_on=ring||bracket;icon_color=24'hFF786C;end
+-     4:begin
+-       if(ix>=32 && ix<112 && iy>=8 && iy<66) begin
+-         if(ix<70) begin icon_on=1;icon_color=ix[4]?24'h64DDB4:24'h79B8FF;end
+-         else icon_on=(ix<74 || iy<11 || iy>=63 || ix>=109 || iy==ix-56);
+-       end
+-     end
+-     3:begin
+-       if(ix>=35 && ix<=109 && iy>=0 && iy<=73) begin
+-         icon_on=1;icon_color=24'h34505C;
+-         if(ring) icon_color=iy[4]?24'hFF40E0:24'h00FFFF;
+-         else if(ix>=43 && ix<50 && iy>=8 && iy<65) icon_color=24'h80B9AC;
+-       end
+-     end
+-     5:icon_on=head || (iy>=55 && iy<60 && ix>=52 && ix<=92) || (ix>=105 && ix<110 && iy>=8 && iy<55);
+-   endcase
++ wire tile_area=x>=48&&x<964&&lx<104&&y>=124&&y<266;
++ wire tile_selected=tile==mode;
++ wire cut_inside=(lx>=8&&lx<96)||(y>=132&&y<258);
++ wire outer_edge=lx<2||lx>=102||y<126||y>=264;
++ wire[7:0]ix=lx[7:0]+8'd20,iy=y-10'd172;
++ wire signed[8:0]cx=$signed({1'b0,ix})-9'sd72,cy=$signed({1'b0,iy})-9'sd36;
++ wire[17:0]radius2=cx*cx+cy*cy;
++ wire ring=radius2>=625&&radius2<=784;
++ wire head=radius2>=196&&radius2<=289&&iy<53;
++ wire bracket=(ix>=31&&ix<=113&&(iy==0||iy==1||iy==70||iy==71)&&(ix<49||ix>95))||
++              ((ix==31||ix==32||ix==112||ix==113)&&((iy<18)||(iy>=54&&iy<72)));
++ reg icon_on;reg[23:0]icon_color;
++ always @*begin
++  icon_on=0;icon_color=accent(tile);
++  case(tile)
++   0:begin icon_on=iy>=12&&iy<64&&ix>=32&&ix<112;
++    if(ix<58)icon_color=24'hFA8F9E;else if(ix<85)icon_color=24'h64DDB4;else icon_color=24'h79B8FF;
++   end
++   1:icon_on=ring||(ix>=44&&ix<=100&&(iy==70||iy==71));
++   2:icon_on=ring||bracket;
++   3:begin
++    if(ix>=35&&ix<=109&&iy<=73)begin icon_on=1;icon_color=24'h34505C;
++     if(ring)icon_color=iy[4]?24'hFF40E0:24'h00FFFF;
++     else if(ix>=43&&ix<50&&iy>=8&&iy<65)icon_color=24'h80B9AC;
++    end
++   end
++   7:begin
++    icon_on=ix>=36&&ix<108&&iy>=4&&iy<68;
++    if(ix>=69&&ix<75||iy>=33&&iy<39)icon_on=0;
++    icon_color=iy<36?(ix<72?24'h79B8FF:24'h64DDB4):(ix<72?24'hFFAD72:24'hB8A0FF);
++   end
++   4:begin
++    if(ix>=32&&ix<112&&iy>=8&&iy<66)begin
++     if(ix<70)begin icon_on=1;icon_color=ix[4]?24'h64DDB4:24'h79B8FF;end
++     else icon_on=ix<74||iy<11||iy>=63||ix>=109||iy==ix-56;
++    end
++   end
++   6:icon_on=head||bracket||(iy>=57&&iy<62&&ix>=52&&ix<=92);
++   5:icon_on=head||(iy>=55&&iy<60&&ix>=52&&ix<=92)||(ix>=105&&ix<110&&iy>=8&&iy<55);
++  endcase
+  end
+- reg[5:0]line_id,ci;reg[3:0]fr,fc;reg text_on;
+- reg[23:0]bg,fg;reg[10:0]tx;reg[9:0]ty;reg[11:0]number;reg[1:0]position;
+- reg[7:0]br,bg_green,bb;
+- wire[1:0]column=x<208?0:x<360?1:x<512?2:3;
+- wire[10:0]mx=x-(56+column*152);
+- wire[127:0]meta=state_i[128+column*128+:128];
+- function[3:0]decimal;input[11:0]v;input[1:0]p;
+- begin case(p)0:decimal=v/1000;1:decimal=(v/100)%10;2:decimal=(v/10)%10;default:decimal=v%10;endcase end endfunction
+- always @*begin
+-  line_id=0;ci=0;fr=0;fc=0;text_on=0;tx=0;ty=0;number=0;position=0;
+-  br=8'd9+{4'd0,y[9:6]};bg_green=8'd18+{3'd0,y[9:5]};bb=8'd36+{3'd0,y[9:5]};
+-  bg={br,bg_green,bb};fg=24'hecf4ff;
+-  if((y==96||y==540)&&x>=48&&x<976)bg=24'h2c405c;
+-  if(tile_area&&round_inside)begin
+-   bg=tile_selected?24'h294263:24'h17283e;
+-   if(tile_selected&&outer_edge)bg=accent(tile);
+-   if(iy<80&&icon_on)bg=icon_color;
+-  end
+-  if(y>=313&&y<316&&lx<144&&x>=48&&x<976&&tile_selected)bg=accent(tile);
+-  if(x>=840&&x<976&&y>=36&&y<72)bg=held?24'h5c4328:24'h1b4b49;
+-  // Dedicated threshold entry. Values remain visible in every mode.
+-  if(x>=720&&x<976&&y>=398&&y<524)begin
+-   bg=mode==5?24'h243e59:24'h17283e;
+-   if(x<723||x>=973||y<401||y>=521)bg=mode==5?24'h82b5ff:24'h314863;
+-  end
+-  if(mode==5&&y>=424&&y<476&&x>=56&&x<552)begin
+-   if(x<296)bg=(sel==0||sel==2)?24'h254d55:24'h17283e;
+-   else if(x>=312)bg=(sel==1||sel==2)?24'h254d55:24'h17283e;
+-  end
+-  // Current mode title and description; mode 7 reserves the center for the count.
+-  if(x>=48&&x<784&&y>=38&&y<70)begin line_id=0;tx=x-48;ty=y-38;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;end
+-  else if(x>=864&&x<960&&y>=46&&y<62)begin line_id=held?10:9;tx=x-864;ty=y-46;ci=tx>>4;fr=ty;fc=tx;text_on=1;end
+-  else if(x>=48&&x<976&&lx<144&&y>=287&&y<303)begin line_id=tile==5?8:1+tile;tx=lx;ty=y-287;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=tile_selected?24'hffffff:24'ha3b5cd;end
+-  else if(mode!=6&&x>=56&&x<960&&y>=346&&y<378)begin line_id=16+mode;tx=x-56;ty=y-346;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;end
+-  else if(mode!=6&&x>=56&&x<696&&y>=398&&y<414)begin line_id=24+mode;tx=x-56;ty=y-398;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hafc3dc;end
+-  // Threshold panel: labels and four decimal digits, selected field highlighted.
+-  if(mode==5)begin
+-   if(y>=438&&y<454&&((x>=64&&x<128)||(x>=320&&x<384)))begin line_id=x<300?35:36;tx=x-(x<300?64:320);ty=y-438;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'h82b5ff;end
+-   if(y>=434&&y<466&&((x>=144&&x<272)||(x>=400&&x<528)))begin
+-    number=x<300?low:high;tx=x-(x<300?144:400);ty=y-434;line_id=63;ci=decimal(number,tx>>5);fr=ty>>1;fc=tx>>1;text_on=1;
+-   end
+-   if(y>=486&&y<502&&x>=56&&x<120)begin line_id=37;tx=x-56;ty=y-486;ci=(sel==0?0:sel==1?4:9)+(tx>>4);fr=ty;fc=tx;text_on=1;fg=24'h65dbab;end
+-   if(y>=486&&y<502&&x>=320&&x<384)begin line_id=38;tx=x-320;ty=y-486;ci=tx>>4;fr=ty;fc=tx;text_on=1;end
+-   if(y>=486&&y<502&&x>=400&&x<416)begin line_id=63;ci=step==0?1:step==1?4:8;fr=y-486;fc=x-400;text_on=1;end
+-   if(y>=512&&y<528&&x>=56&&x<672)begin line_id=39;tx=x-56;ty=y-512;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hafc3dc;end
+-  end
+-  // Mode 7 only: 0..8 / 8+, invalid --, and explicit frozen labeling.
+-  if(mode==6)begin
+-   if(x>=416&&x<608&&y>=338&&y<370)begin line_id=11;tx=x-416;ty=y-338;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;end
+-   if(x>=432&&x<560&&y>=390&&y<454)begin
+-    tx=x-432;ty=y-390;line_id=63;ci=!state_i[14]?16:(tx<64?state_i[19:16]:(state_i[15]?17:18));fr=ty>>2;fc=tx>>2;text_on=1;fg=24'h65dbab;
+-   end
+-   if(x>=568&&x<600&&y>=414&&y<446)begin line_id=15;ci=0;fr=(y-414)>>1;fc=(x-568)>>1;text_on=1;end
+-   if(x>=328&&x<696&&y>=476&&y<492)begin line_id=!state_i[14]?14:held?13:12;tx=x-328;ty=y-476;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hafc3dc;end
+-   if(x>=328&&x<696&&y>=508&&y<524)begin line_id=30;tx=x-328;ty=y-508;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'h65dbab;end
+-  end
+-  if(mode<4||mode==7)begin
+-   if(x>=56&&x<688&&y>=438&&y<454&&mode==7)begin line_id=state_i[28:26]!=0?46:45;tx=x-56;ty=y-438;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hfa93c3;end
+-   if(x>=56&&x<360&&y>=478&&y<494)begin line_id=42;tx=x-56;ty=y-478;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'h65dbab;end
+-   if(x>=56&&x<360&&y>=506&&y<522)begin line_id=43;tx=x-56;ty=y-506;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'ha3b5cd;end
+-  end
+-  // Retain useful captured-frame metadata; these are images, not module diagnostics.
+-  if(mode==4&&x>=56&&x<664&&mx<144&&state_i[113+column])begin
+-   if(y>=438&&y<454)begin line_id=1+meta[97:96];tx=mx;ty=y-438;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hffad72;end
+-   if(y>=466&&y<482&&((mx<64)||(mx>=80&&mx<144)))begin line_id=63;tx=mx-(mx<64?0:80);number=mx<64?meta[83:72]:meta[95:84];ci=decimal(number,tx>>4);fr=y-466;fc=tx;text_on=1;end
+-   if(y>=494&&y<510&&mx<128)begin line_id=63;ci=meta[24+(7-(mx>>4))*4+:4];fr=y-494;fc=mx;text_on=1;fg=24'ha3b5cd;end
+-  end
+-  if(x>=744&&x<952&&y>=414&&y<430)begin line_id=32;tx=x-744;ty=y-414;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'h82b5ff;end
+-  if(x>=744&&x<808&&((y>=444&&y<460)||(y>=470&&y<486)))begin line_id=y<460?35:36;tx=x-744;ty=y-(y<460?444:470);ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'ha3b5cd;end
+-  if(x>=824&&x<888&&((y>=444&&y<460)||(y>=470&&y<486)))begin number=y<460?low:high;tx=x-824;ty=y-(y<460?444:470);line_id=63;ci=decimal(number,tx>>4);fr=ty;fc=tx;text_on=1;fg=24'hecf4ff;end
+-  if(x>=744&&x<952&&y>=498&&y<514)begin line_id=mode==5?34:33;tx=x-744;ty=y-498;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'h82b5ff;end
+-  if(x>=56&&x<376&&y>=558&&y<574)begin line_id=40;tx=x-56;ty=y-558;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hb8c9de;end
+-  if(x>=400&&x<960&&y>=558&&y<574)begin line_id=mode==5?49:mode==4?(state_i[13]?44:28):mode==7?31:41;tx=x-400;ty=y-558;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hb8c9de;end
+- end
+- wire[15:0]bits;menu_glyph_rom #(.SHARED_FONT(SHARED_FONT)) font(clk,line_id,ci,fr,bits,shared_addr,shared_bits);
+- reg[3:0]cq;reg tq,dq;reg[23:0]bq,fq;
+- always @(posedge clk)begin
+-  if(reset)begin cq<=0;tq<=0;dq<=0;bq<=0;fq<=0;rgb<=0;de<=0;end
+-  else begin cq<=fc;tq<=text_on;dq<=visible;bq<=bg;fq<=fg;rgb<=dq?((tq&&bits[15-cq])?fq:bq):0;de<=dq;end
+- end
++ reg[5:0]line_id,ci;reg[3:0]fr,fc;reg text_on;
++ reg[23:0]bg,fg;reg[10:0]tx;reg[9:0]ty;reg[11:0]number;
++ reg[7:0]br,bg_green,bb;
++ wire[1:0]column=x<208?0:x<360?1:x<512?2:3;
++ wire[10:0]mx=x-(56+column*152);
++ wire[127:0]meta=state_i[128+column*128+:128];
++ function[3:0]decimal;input[11:0]v;input[1:0]p;
++ begin case(p)0:decimal=v/1000;1:decimal=(v/100)%10;2:decimal=(v/10)%10;default:decimal=v%10;endcase end endfunction
++ always @*begin
++  line_id=0;ci=0;fr=0;fc=0;text_on=0;tx=0;ty=0;number=0;
++  br=8'd9+{4'd0,y[9:6]};bg_green=8'd18+{3'd0,y[9:5]};bb=8'd36+{3'd0,y[9:5]};
++  bg={br,bg_green,bb};fg=24'hecf4ff;
++  if((y==96||y==540)&&x>=48&&x<976)bg=24'h2c405c;
++  if(x>=840&&x<976&&y>=36&&y<72)bg=held?24'h5c4328:24'h1b4b49;
++  if(x>=48&&x<800&&y>=38&&y<70)begin line_id=settings?52:0;tx=x-48;ty=y-38;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;end
++  if(x>=864&&x<960&&y>=46&&y<62)begin line_id=held?10:9;tx=x-864;ty=y-46;ci=tx>>4;fr=ty;fc=tx;text_on=1;end
++  if(!settings)begin
++   if(tile_area&&cut_inside)begin
++    bg=tile_selected?24'h294263:24'h17283e;
++    if(tile_selected&&outer_edge)bg=accent(tile);
++    if(iy<80&&icon_on)bg=icon_color;
++   end
++   // Moving head and two progressively dimmer trailing sections, including wrap.
++   if(x>=48&&x<976&&y>=304&&y<310)begin
++    bg=24'h22354e;
++    if(phase<104)bg=accent(mode);
++    else if(distance!=0&&phase>=904)bg=24'h426b87;
++    else if(distance!=0&&phase>=880)bg=24'h2d465f;
++   end
++   if(x>=48&&x<964&&lx>=36&&lx<68&&y>=140&&y<156)begin line_id=1+tile;tx=lx-36;ty=y-140;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=tile_selected?24'hffffff:24'h7f96b6;end
++   if(x>=48&&x<964&&lx>=4&&lx<100&&y>=280&&y<296)begin line_id=1+tile;tx=lx-4;ty=y-280;ci=3+(tx>>4);fr=ty;fc=tx;text_on=1;fg=tile_selected?24'hffffff:24'ha3b5cd;end
++   if(mode!=6&&x>=56&&x<960&&y>=346&&y<378)begin line_id=16+mode;tx=x-56;ty=y-346;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;end
++   if(mode!=6&&x>=56&&x<968&&y>=398&&y<414)begin line_id=24+mode;tx=x-56;ty=y-398;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hafc3dc;end
++   // Only mode 7 paints the live count. Unknown data is --; saturation is 8+.
++   if(mode==6)begin
++    if(x>=416&&x<608&&y>=338&&y<370)begin line_id=11;tx=x-416;ty=y-338;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;end
++    if(x>=432&&x<560&&y>=390&&y<454)begin tx=x-432;ty=y-390;line_id=63;ci=!state_i[14]?16:(tx<64?state_i[19:16]:(state_i[15]?17:18));fr=ty>>2;fc=tx>>2;text_on=1;fg=24'h65dbab;end
++    if(x>=568&&x<600&&y>=414&&y<446)begin line_id=15;ci=0;fr=(y-414)>>1;fc=(x-568)>>1;text_on=1;end
++    if(x>=328&&x<696&&y>=476&&y<492)begin line_id=!state_i[14]?14:held?13:12;tx=x-328;ty=y-476;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hafc3dc;end
++   end
++   if(mode==5&&x>=56&&x<688&&y>=438&&y<454)begin line_id=state_i[28:26]!=0?46:45;tx=x-56;ty=y-438;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hfa93c3;end
++   if(mode==7&&x>=56&&x<664&&mx<144&&state_i[113+column])begin
++    if(y>=438&&y<454)begin line_id=1+meta[97:96];tx=mx;ty=y-438;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hffad72;end
++    if(y>=466&&y<482&&((mx<64)||(mx>=80&&mx<144)))begin line_id=63;tx=mx-(mx<64?0:80);number=mx<64?meta[83:72]:meta[95:84];ci=decimal(number,tx>>4);fr=y-466;fc=tx;text_on=1;end
++    if(y>=494&&y<510&&mx<128)begin line_id=63;ci=meta[24+(7-(mx>>4))*4+:4];fr=y-494;fc=mx;text_on=1;fg=24'ha3b5cd;end
++   end
++   // IO35 is a separate settings entry, not a ninth algorithm card.
++   if(x>=728&&x<976&&y>=460&&y<524)begin
++    bg=24'h17283e;if(x<730||x>=974||y<462||y>=522)bg=24'h426487;
++    if(x>=752&&x<960&&y>=470&&y<486)begin line_id=32;tx=x-752;ty=y-470;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'h82b5ff;end
++    if(x>=752&&x<960&&y>=498&&y<514)begin line_id=33;tx=x-752;ty=y-498;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hb8c9de;end
++   end
++   if(x>=56&&x<376&&y>=558&&y<574)begin line_id=40;tx=x-56;ty=y-558;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hb8c9de;end
++   if(x>=400&&x<976&&y>=558&&y<574)begin line_id=mode==7?(state_i[13]?44:31):mode==5?29:41;tx=x-400;ty=y-558;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hb8c9de;end
++  end else begin
++   // Independent full page: the four-digit values use 64 x 128 pixel cells.
++   if(y>=136&&y<412&&((x>=48&&x<496)||(x>=528&&x<976)))begin
++    bg=24'h17283e;
++    if((x<496&&(sel==0||sel==2))||(x>=528&&(sel==1||sel==2)))begin
++     bg=24'h203b50;
++     if(x<51||(x>=493&&x<496)||(x>=528&&x<531)||x>=973||y<139||y>=409)bg=x<496?24'h65dbab:24'h82b5ff;
++    end
++   end
++   if(x>=64&&x<960&&y>=108&&y<124)begin line_id=60;tx=x-64;ty=y-108;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hafc3dc;end
++   if(y>=164&&y<196&&((x>=80&&x<464)||(x>=560&&x<944)))begin line_id=x<496?53:54;tx=x-(x<496?80:560);ty=y-164;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;fg=x<496?24'h65dbab:24'h82b5ff;end
++   if(y>=228&&y<356&&((x>=144&&x<400)||(x>=624&&x<880)))begin number=x<496?low:high;tx=x-(x<496?144:624);ty=y-228;line_id=63;ci=decimal(number,tx>>6);fr=ty>>3;fc=tx>>2;text_on=1;fg=24'hecf4ff;end
++   if(y>=444&&y<476)begin
++    if(x>=64&&x<192)begin line_id=59;tx=x-64;ty=y-444;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;end
++    if(x>=232&&x<360)begin line_id=37;tx=x-232;ty=y-444;ci=(sel==0?0:sel==1?4:9)+(tx>>5);fr=ty>>1;fc=tx>>1;text_on=1;fg=24'h65dbab;end
++    if(x>=568&&x<696)begin line_id=38;tx=x-568;ty=y-444;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;end
++    if(x>=728&&x<760)begin line_id=63;ci=step==0?1:step==1?4:8;fr=(y-444)>>1;fc=(x-728)>>1;text_on=1;fg=24'h82b5ff;end
++   end
++   if(y>=500&&y<516&&x>=64&&x<496)begin line_id=55;tx=x-64;ty=y-500;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hafc3dc;end
++   if(y>=500&&y<516&&x>=568&&x<960)begin line_id=56;tx=x-568;ty=y-500;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hafc3dc;end
++   if(y>=558&&y<574&&x>=56&&x<616)begin line_id=39;tx=x-56;ty=y-558;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hb8c9de;end
++   if(y>=558&&y<574&&x>=656&&x<976)begin line_id=58;tx=x-656;ty=y-558;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'h82b5ff;end
++  end
++ end
++ wire[15:0]bits;menu_glyph_rom #(.SHARED_FONT(SHARED_FONT)) font(clk,line_id,ci,fr,bits,shared_addr,shared_bits);
++ reg[3:0]cq;reg tq,dq;reg[23:0]bq,fq;
++ always @(posedge clk)begin
++  if(reset)begin cq<=0;tq<=0;dq<=0;bq<=0;fq<=0;rgb<=0;de<=0;end
++  else begin cq<=fc;tq<=text_on;dq<=visible;bq<=bg;fq<=fg;rgb<=dq?((tq&&bits[15-cq])?fq:bq):0;de<=dq;end
++ end
+ endmodule
+--- before/rtl/menu_lcd_apb.v
++++ after/rtl/menu_lcd_apb.v
+@@ -50,7 +50,7 @@
+  wire [10:0] x=h-11'd160;
+  wire [9:0] y=v-10'd23;
+  generate if(V8_ENABLE)begin:ui8
+- menu8_renderer #(.SHARED_FONT(SHARED_FONT)) renderer(clk,reset,x,y,visible,active8,rgb,de,shared_addr,shared_bits);
++ menu8_renderer #(.SHARED_FONT(SHARED_FONT)) renderer(clk,reset,x,y,visible,active8,rgb,de,shared_addr,shared_bits,(h==2 && v==0));
+  end else begin:ui6
+  menu_renderer #(.SHARED_FONT(SHARED_FONT)) renderer(.clk(clk),.reset(reset),.x(x),.y(y),.visible(visible),
+    .mode(active_state[3:0]),.held(active_state[4]),.ready(active_state[16]),.health(active_state[12:5]),
+--- before/rtl/vision8_controls.v
++++ after/rtl/vision8_controls.v
+@@ -1,11 +1,11 @@
+ // IO28 / IO35 idle low, pressed high. IO29 and board keys are active low.
+ // Context is bound at the debounced press; changing mode cancels held actions.
+ module vision8_key #(parameter DEBOUNCE=1488000,LONG_CYCLES=148800000)(
+- input clk,rst_n,key_n,input[2:0]context_i,
++ input clk,rst_n,key_n,input[3:0]context_i,
+  output reg short_o,long_o);
+  localparam DB=DEBOUNCE<2?1:$clog2(DEBOUNCE),LB=LONG_CYCLES<2?1:$clog2(LONG_CYCLES);
+  (* async_reg="true" *)reg meta,sync;
+- reg stable,armed,held,fired,cancel;reg[2:0]bound;
++ reg stable,armed,held,fired,cancel;reg[3:0]bound;
+  reg[DB-1:0]deb;reg[LB-1:0]duration;
+  always @(posedge clk)begin
+   if(!rst_n)begin meta<=0;sync<=0;stable<=0;armed<=0;held<=0;fired<=0;cancel<=0;bound<=0;deb<=0;duration<=0;short_o<=0;long_o<=0;end
+@@ -28,7 +28,7 @@
+ module vision8_controls #(parameter DEBOUNCE=1488000,LONG_CYCLES=148800000)(
+  input clk,rst_n,frame_start,io28,io29,k1_n,k2_n,io35,
+  input capture_busy,learning,rx,
+- output reg[2:0]user_mode,output reg[1:0]capture_alg,
++ output reg settings_open,output reg[2:0]user_mode,output reg[1:0]capture_alg,
+  output reg pip_enable,freeze_request,output reg capture,clear,
+  output reg gesture_short,gesture_long,
+  output reg[11:0]low,high,output reg[1:0]selected,step_select,
+@@ -36,23 +36,23 @@
+  output[3:0]backend_mode,output reg pure_o,detect_extra,output reg[7:0]skin_lower);
+  wire[3:0]s,l;
+  wire threshold_short,threshold_long;
+- reg[2:0]threshold_return_mode;
+- vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) a(clk,rst_n,~io28,user_mode,s[0],l[0]);
+- vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) b(clk,rst_n,io29,user_mode,s[1],l[1]);
+- vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) c(clk,rst_n,k1_n,user_mode,s[2],l[2]);
+- vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) d(clk,rst_n,k2_n,user_mode,s[3],l[3]);
+- vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) threshold_key(clk,rst_n,~io35,user_mode,threshold_short,threshold_long);
++ wire[3:0]key_context={settings_open,user_mode};
++ vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) a(clk,rst_n,~io28,key_context,s[0],l[0]);
++ vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) b(clk,rst_n,io29,key_context,s[1],l[1]);
++ vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) c(clk,rst_n,k1_n,key_context,s[2],l[2]);
++ vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) d(clk,rst_n,k2_n,key_context,s[3],l[3]);
++ vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) threshold_key(clk,rst_n,~io35,key_context,threshold_short,threshold_long);
+  wire[11:0]step=step_select==0?12'd1:step_select==1?12'd4:12'd8;
+  wire[11:0]inc_limit=selected==0?high-1:12'd2040;
+  wire[11:0]dec_limit=selected==1?low+1:12'd1;
+  reg[11:0]delta;
+  wire serial_valid;wire[7:0]serial_data;reg diagnostic;reg[3:0]diagnostic_mode;
+  vision8_uart serial(clk,rst_n,rx,serial_valid,serial_data);
+- wire[1:0]algorithm=user_mode==4?capture_alg:user_mode[1:0];
+- assign backend_mode=diagnostic?diagnostic_mode:user_mode==7?4'd15:user_mode==5?4'd1:user_mode==6?4'd0:
++ wire[1:0]algorithm=user_mode==7?capture_alg:user_mode[1:0];
++ assign backend_mode=diagnostic?diagnostic_mode:user_mode==5?4'd15:user_mode==4?4'd14:user_mode==6?4'd0:
+   algorithm==0?4'd0:algorithm==1?4'd1:algorithm==2?4'd10:4'd9;
+  always @(posedge clk)begin
+-  if(!rst_n)begin user_mode<=0;threshold_return_mode<=1;capture_alg<=0;pip_enable<=0;freeze_request<=0;capture<=0;clear<=0;gesture_short<=0;gesture_long<=0;
++  if(!rst_n)begin user_mode<=0;settings_open<=0;capture_alg<=0;pip_enable<=0;freeze_request<=0;capture<=0;clear<=0;gesture_short<=0;gesture_long<=0;
+    low<=40;high<=80;low_active<=40;high_active<=80;selected<=0;step_select<=0;version<=0;delta<=0;pure_o<=0;detect_extra<=0;skin_lower<=10;diagnostic<=0;diagnostic_mode<=0;end
+   else begin
+    capture<=0;clear<=0;gesture_short<=0;gesture_long<=0;
+@@ -60,21 +60,15 @@
+     low_active<=low;high_active<=high;
+     if(low!=low_active||high!=high_active)version<=version+1'b1;
+    end
+-   if(s[0])begin user_mode<=user_mode+1'b1;freeze_request<=0;diagnostic<=0;pure_o<=0;threshold_return_mode<=1;end
++   if(s[0])begin user_mode<=user_mode+1'b1;freeze_request<=0;diagnostic<=0;pure_o<=0;settings_open<=0;end
+    else if(threshold_short)begin
+-    // A dedicated shortcut; release returns to the mode that opened the page.
+-    // Ordinary IO28 / UART navigation resets the return destination to Canny.
+-    if(user_mode==5)user_mode<=threshold_return_mode;
+-    else begin threshold_return_mode<=user_mode;user_mode<=5;end
+-    freeze_request<=0;diagnostic<=0;pure_o<=0;
++    // A settings page, independent of the eight processing modes.
++    // Keep the HDMI algorithm and freeze state unchanged when opening/closing.
++    settings_open<=~settings_open;
+    end
+    else begin
+-    if(l[0]&&user_mode>=1&&user_mode<=3)pip_enable<=~pip_enable;
+-    if(user_mode==4)begin
+-     if(s[1]&&!capture_busy)capture<=1;
+-     if(l[1])clear<=1;
+-     if(s[3]&&!capture_busy)capture_alg<=capture_alg+1'b1;
+-    end else if(user_mode==5)begin
++    if(!settings_open&&l[0]&&user_mode>=1&&user_mode<=3)pip_enable<=~pip_enable;
++    if(settings_open)begin
+      if(s[2])selected<=selected==2?0:selected+1'b1;
+      if(l[2])step_select<=step_select==2?0:step_select+1'b1;
+      if(l[1])freeze_request<=~freeze_request;
+@@ -88,6 +82,10 @@
+       else low<=low-dec_limit<step?dec_limit:low-step;
+      end
+     end else if(user_mode==7)begin
++     if(s[1]&&!capture_busy)capture<=1;
++     if(l[1])clear<=1;
++     if(s[3]&&!capture_busy)capture_alg<=capture_alg+1'b1;
++    end else if(user_mode==5)begin
+      gesture_short<=s[2];gesture_long<=l[2];
+      if(l[2])freeze_request<=0;
+      else if(s[1]&&!learning)freeze_request<=~freeze_request;
+@@ -95,7 +93,7 @@
+    end
+    // UART remains available for maintenance. Human modes are 0..7 here.
+    if(serial_valid)begin
+-    if((serial_data>="0"&&serial_data<="7")||serial_data=="m"||serial_data=="r"||serial_data=="p"||serial_data=="g"||serial_data=="c"||serial_data=="t")threshold_return_mode<=1;
++    if((serial_data>="0"&&serial_data<="7")||serial_data=="m"||serial_data=="r"||serial_data=="p"||serial_data=="g"||serial_data=="c"||serial_data=="t")settings_open<=0;
+     if(serial_data>="0"&&serial_data<="7")begin user_mode<=serial_data-"0";diagnostic<=0;pure_o<=0;freeze_request<=0;end
+     else case(serial_data)
+      "m":begin user_mode<=user_mode+1'b1;diagnostic<=0;pure_o<=0;freeze_request<=0;end
+--- before/rtl/vision8_frames.v
++++ after/rtl/vision8_frames.v
+@@ -1,155 +1,150 @@
+-// Pixel-domain capture directory, pre-HUD downsampling and final-raster compositor.
+-// Five DDR slots permit replacing a full four-tile directory atomically.
+-module vision8_frames #(parameter WIDTH=1280,HEIGHT=720)(
+- input clk,rst_n,input[2:0]mode_i,input[1:0]algorithm_i,
+- input pip_i,capture_i,clear_i,freeze_active,input[31:0]source_id,
+- input[11:0]low_i,high_i,input[15:0]version_i,input source_ok,processing_ok,
+- input[3:0]face_count,input face_valid,face_saturated,
+- input[23:0]rgb_i,input de_i,vs_i,hs_i,
+- input[15:0]result_i,input result_de,result_vs,input[10:0]result_x,input[9:0]result_y,
+- output reg[23:0]rgb_o,output reg de_o,vs_o,hs_o,
+- output busy,lock_source,main_enable,output[2:0]mode_committed,output[11:0]capture_low,capture_high,output[3:0]capture_backend,
+- output reg snap_begin,snap_end,output reg[2:0]snap_slot,output reg snap_bad,snap_reset,
+- output reg snap_wr,output reg[31:0]snap_data,input snap_full,
+- input snap_done,snap_ok,
+- output reg aux_request,output reg[1:0]aux_kind,output reg[15:0]aux_directory,
+- input aux_ack,input[31:0]aux_data,input aux_empty,input aux_frame_ready,
+- output aux_rd,output reg[3:0]valid_tiles,
+- output reg[511:0]metadata,output reg[31:0]underflows,capture_errors);
+- localparam HALF_W=WIDTH/2,HALF_H=HEIGHT/2,PIXELS=HALF_W*HALF_H;
+- reg[2:0]state,mode_active;reg[1:0]warm,next_tile;reg[2:0]temporary;
+- reg vsq,rvsq,pair_phase;reg[15:0]first_pixel;
+- reg[18:0]samples;reg cancelled;reg[6:0]reset_count;
+- reg[1:0]bound_alg;reg[11:0]bound_low,bound_high;reg[15:0]bound_version;reg[31:0]bound_id;
+- reg[11:0]directory,pending_directory;reg[3:0]pending_valid;reg publish;
+- reg[2:0]old_slot;reg[511:0]pending_metadata;
+- reg done_meta,done_sync,done_seen,ok_meta,ok_sync;
+- reg ack_meta,ack_sync,ready_meta,ready_sync;
+- reg[10:0]x;reg[9:0]y;reg pixel_half,invalid_frame,pip_active;
+- wire frame_blank=vs_i&&!vsq,process_start=result_vs&&!rvsq;
+- wire[1:0]tile={y>=HALF_H,x>=HALF_W};
+- wire pip_area=x>=WIDTH-WIDTH/4-16&&x<WIDTH-16&&y>=16&&y<16+HEIGHT/4;
+- wire compare_pixel=mode_active==4&&valid_tiles[tile];
+- wire use_aux=de_i&&(compare_pixel||(pip_active&&pip_area));
+- wire read_pixel=use_aux&&!invalid_frame&&ready_sync&&!aux_empty;
+- assign aux_rd=read_pixel&&pixel_half;
+- wire[15:0]aux_pixel=pixel_half?aux_data[31:16]:aux_data[15:0];
+- wire[23:0]expanded={aux_pixel[15:11],aux_pixel[15:13],aux_pixel[10:5],aux_pixel[10:9],aux_pixel[4:0],aux_pixel[4:2]};
+- wire[10:0]local_x=x>=HALF_W?x-HALF_W:x;
+- wire[9:0]local_y=y>=HALF_H?y-HALF_H:y;
+- wire[127:0]tile_meta=metadata[tile*128+:128];
+- reg[383:0]label;reg[7:0]label_char;reg[10:0]label_x;reg[9:0]label_y;
+- reg label_area;integer c;reg[11:0]label_low,label_high;
+- function[7:0]hexchar;input[3:0]n;begin hexchar=n<10?8'h30+n:8'h41+n-10;end endfunction
+- function[7:0]digit;input[11:0]v;input[1:0]pos;
+- begin case(pos)0:digit=48+v/1000;1:digit=48+(v/100)%10;2:digit=48+(v/10)%10;default:digit=48+v%10;endcase end endfunction
+- always @*begin
+-  label=0;label_char=32;label_x=0;label_y=0;label_area=0;c=0;label_low=low_i;label_high=high_i;
+-  if(mode_active==4)begin
+-   label_x=local_x-8;label_y=local_y-8;label_area=local_x>=8&&local_x<584&&local_y>=8&&local_y<24;
+-   if(valid_tiles[tile])begin
+-    case(tile_meta[97:96])0:label={"RAW   L:0000 H:0000 F:00000000 V:0000",88'd0};1:label={"CANNY L:0000 H:0000 F:00000000 V:0000",88'd0};
+-     2:label={"RED   L:0040 H:0040 F:00000000 V:0000",88'd0};default:label={"CYBER L:0040 H:0040 F:00000000 V:0000",88'd0};endcase
+-    label_low=tile_meta[83:72];label_high=tile_meta[95:84];
+-   end else label={"EMPTY - IO29 CAPTURE",232'd0};
+-  end else if(mode_active>=5)begin
+-   label_x=x-16;label_y=y-8;label_area=x>=16&&x<592&&y>=8&&y<40;
+-   case(mode_active)
+-    5:label={"06 THRESH L:0000 H:0000",200'd0};
+-    6:label={"07 FACE CANDIDATES: - ",216'd0};
+-    7:label={"08 GESTURE - BOARD K1 ENROL",176'd0};
+-   endcase
+-  end
+-  c=label_x/12;
+-  if(c<48)label_char=label[383-c*8-:8];
+-  if(mode_active==4&&valid_tiles[tile])begin
+-   if(c>=8&&c<12&&tile_meta[97:96]<2)label_char=digit(label_low,c-8);
+-   if(c>=15&&c<19&&tile_meta[97:96]<2)label_char=digit(label_high,c-15);
+-   if(c>=22&&c<30)label_char=hexchar(tile_meta[24+(29-c)*4+:4]);
+-   if(c>=33&&c<37)label_char=hexchar(tile_meta[56+(36-c)*4+:4]);
+-  end
+-  if(mode_active==5)begin
+-   if(c>=12&&c<16)label_char=digit(label_low,c-12);
+-   if(c>=19&&c<23)label_char=digit(label_high,c-19);
+-  end
+-  if(mode_active==6&&c==19)label_char=face_valid?hexchar(face_count):"-";
+-  if(mode_active==6&&c==20)label_char=face_saturated?"+":" ";
+- end
+- wire label_ink;
+- vision8_ascii text(label_char,mode_active==4?label_y[3:1]:label_y[4:2],(label_x%12)>>1,label_ink);
+- assign mode_committed=mode_active;
+- assign busy=state!=0||publish;
+- assign lock_source=state!=0;
+- assign main_enable=mode_i!=4||state!=0;
+- assign capture_low=bound_low;assign capture_high=bound_high;
+- assign capture_backend=bound_alg==0?4'd0:bound_alg==1?4'd1:bound_alg==2?4'd10:4'd9;
+- always @(posedge clk)begin
+-  if(!rst_n)begin
+-   state<=0;mode_active<=0;warm<=0;next_tile<=0;temporary<=4;vsq<=1;rvsq<=1;pair_phase<=0;first_pixel<=0;samples<=0;cancelled<=0;reset_count<=0;
+-   bound_alg<=0;bound_low<=40;bound_high<=80;bound_version<=0;bound_id<=0;directory<=12'h688;pending_directory<=12'h688;pending_valid<=0;publish<=0;old_slot<=0;pending_metadata<=0;
+-   snap_begin<=0;snap_end<=0;snap_slot<=4;snap_bad<=0;snap_reset<=1;snap_wr<=0;snap_data<=0;aux_request<=0;aux_kind<=0;aux_directory<=0;
+-   valid_tiles<=0;metadata<=0;underflows<=0;capture_errors<=0;done_meta<=0;done_sync<=0;done_seen<=0;ok_meta<=0;ok_sync<=0;
+-   ack_meta<=0;ack_sync<=0;ready_meta<=0;ready_sync<=0;x<=0;y<=0;pixel_half<=0;invalid_frame<=0;pip_active<=0;rgb_o<=0;de_o<=0;vs_o<=0;hs_o<=0;
+-  end else begin
+-   vsq<=vs_i;rvsq<=result_vs;snap_wr<=0;
+-   done_meta<=snap_done;done_sync<=done_meta;ok_meta<=snap_ok;ok_sync<=ok_meta;
+-   ack_meta<=aux_ack;ack_sync<=ack_meta;ready_meta<=aux_frame_ready;ready_sync<=ready_meta;
+-   if(!vs_i)begin x<=0;y<=0;end else if(de_i)begin if(x==WIDTH-1)begin x<=0;y<=y+1'b1;end else x<=x+1'b1;end
+-   de_o<=de_i;vs_o<=vs_i;hs_o<=hs_i;rgb_o<=de_i?rgb_i:24'd0;
+-   if(mode_active==4&&de_i)rgb_o<=24'h142235;
+-   if(read_pixel)begin rgb_o<=expanded;pixel_half<=~pixel_half;end
+-   else if(use_aux&&!invalid_frame&&(!ready_sync||aux_empty))begin invalid_frame<=1;underflows<=underflows+1'b1;end
+-   if(pip_active&&de_i&&x>=WIDTH-WIDTH/4-18&&x<WIDTH-14&&y>=14&&y<18+HEIGHT/4&&
+-    (x<WIDTH-WIDTH/4-16||x>=WIDTH-16||y<16||y>=16+HEIGHT/4))rgb_o<=24'h35d499;
+-   if(mode_active==4&&de_i&&(x==HALF_W||y==HALF_H))rgb_o<=24'h35d499;
+-   if(label_area&&de_i)rgb_o<=label_ink?24'he7f3ff:24'h132336;
+-   if(frame_blank)begin
+-    mode_active<=mode_i;pip_active<=pip_i&&mode_i>=1&&mode_i<=3;pixel_half<=0;invalid_frame<=0;
+-    if(publish)begin directory<=pending_directory;valid_tiles<=pending_valid;metadata<=pending_metadata;publish<=0;end
+-    if(clear_i)begin valid_tiles<=0;pending_valid<=0;next_tile<=0;publish<=0;metadata<=0;end
+-    if(ack_sync==aux_request)begin
+-     aux_kind<=mode_i==4?2'd2:(pip_i&&mode_i>=1&&mode_i<=3?2'd1:2'd0);
+-     aux_directory<=publish?{pending_valid,pending_directory}:{valid_tiles,directory};
+-     aux_request<=~aux_request;
+-    end else invalid_frame<=1;
+-   end
+-   if(clear_i)begin cancelled<=1;valid_tiles<=0;pending_valid<=0;publish<=0;next_tile<=0;metadata<=0;end
+-   if(state!=0&&mode_i!=4)cancelled<=1;
+-   case(state)
+-    0:begin snap_reset<=1;if(capture_i&&mode_i==4&&source_ok&&ack_sync==aux_request)begin state<=1;warm<=0;cancelled<=0;bound_alg<=algorithm_i;bound_low<=low_i;bound_high<=high_i;bound_version<=version_i;end end
+-    1:if(process_start&&freeze_active)begin warm<=0;bound_id<=source_id;state<=2;end
+-    2:if(process_start)begin
+-     if(source_id!=bound_id)begin bound_id<=source_id;warm<=0;end
+-     else if(warm==1)begin state<=3;reset_count<=0;snap_slot<=temporary;end else warm<=warm+1'b1;
+-    end
+-    3:begin
+-     snap_reset<=0;
+-     if(reset_count==63)begin snap_begin<=~snap_begin;state<=4;end else reset_count<=reset_count+1'b1;
+-    end
+-    4:if(process_start)begin state<=5;samples<=0;pair_phase<=0;snap_bad<=cancelled||!source_ok||!processing_ok;end
+-    5:begin
+-     if(result_de&&!result_x[0]&&!result_y[0])begin
+-      samples<=samples+1'b1;
+-      if(!pair_phase)begin first_pixel<=result_i;pair_phase<=1;end
+-      else begin snap_wr<=!snap_full;snap_data<={result_i,first_pixel};pair_phase<=0;if(snap_full)snap_bad<=1;end
+-      if(result_x==WIDTH-2&&result_y==HEIGHT-2)begin
+-       snap_bad<=snap_bad||snap_full||cancelled||clear_i||!source_ok||!processing_ok||source_id!=bound_id||samples!=PIXELS-1;
+-       snap_end<=~snap_end;state<=6;
+-      end
+-     end
+-    end
+-    6:if(done_sync!=done_seen)begin
+-     done_seen<=done_sync;
+-     if(ok_sync&&!snap_bad&&!cancelled&&!clear_i&&mode_i==4)begin
+-      old_slot=directory[next_tile*3+:3];
+-      pending_directory<=directory;pending_directory[next_tile*3+:3]<=temporary;
+-      pending_valid<=valid_tiles|(4'b1<<next_tile);pending_metadata<=metadata;
+-      pending_metadata[next_tile*128+:128]<={30'd0,bound_alg,bound_high,bound_low,bound_version,bound_id,24'd0};
+-      temporary<=old_slot;next_tile<=next_tile+1'b1;publish<=1;
+-     end else capture_errors<=capture_errors+1'b1;
+-     state<=0;
+-    end
+-   endcase
+-  end
+- end
+-endmodule
++// Pixel-domain capture directory, pre-HUD downsampling and final-raster compositor.
++// Five DDR slots permit replacing a full four-tile directory atomically.
++module vision8_frames #(parameter WIDTH=1280,HEIGHT=720)(
++ input clk,rst_n,input[2:0]mode_i,input[1:0]algorithm_i,
++ input pip_i,capture_i,clear_i,freeze_active,input[31:0]source_id,
++ input[11:0]low_i,high_i,input[15:0]version_i,input source_ok,processing_ok,
++ input[3:0]face_count,input face_valid,face_saturated,
++ input[23:0]rgb_i,input de_i,vs_i,hs_i,
++ input[15:0]result_i,input result_de,result_vs,input[10:0]result_x,input[9:0]result_y,
++ output reg[23:0]rgb_o,output reg de_o,vs_o,hs_o,
++ output busy,lock_source,main_enable,output[2:0]mode_committed,output[11:0]capture_low,capture_high,output[3:0]capture_backend,
++ output reg snap_begin,snap_end,output reg[2:0]snap_slot,output reg snap_bad,snap_reset,
++ output reg snap_wr,output reg[31:0]snap_data,input snap_full,
++ input snap_done,snap_ok,
++ output reg aux_request,output reg[1:0]aux_kind,output reg[15:0]aux_directory,
++ input aux_ack,input[31:0]aux_data,input aux_empty,input aux_frame_ready,
++ output aux_rd,output reg[3:0]valid_tiles,
++ output reg[511:0]metadata,output reg[31:0]underflows,capture_errors);
++ localparam HALF_W=WIDTH/2,HALF_H=HEIGHT/2,PIXELS=HALF_W*HALF_H;
++ reg[2:0]state,mode_active;reg[1:0]warm,next_tile;reg[2:0]temporary;
++ reg vsq,rvsq,pair_phase;reg[15:0]first_pixel;
++ reg[18:0]samples;reg cancelled;reg[6:0]reset_count;
++ reg[1:0]bound_alg;reg[11:0]bound_low,bound_high;reg[15:0]bound_version;reg[31:0]bound_id;
++ reg[11:0]directory,pending_directory;reg[3:0]pending_valid;reg publish;
++ reg[2:0]old_slot;reg[511:0]pending_metadata;
++ reg done_meta,done_sync,done_seen,ok_meta,ok_sync;
++ reg ack_meta,ack_sync,ready_meta,ready_sync;
++ reg[10:0]x;reg[9:0]y;reg pixel_half,invalid_frame,pip_active;
++ wire frame_blank=vs_i&&!vsq,process_start=result_vs&&!rvsq;
++ wire[1:0]tile={y>=HALF_H,x>=HALF_W};
++ wire pip_area=x>=WIDTH-WIDTH/4-16&&x<WIDTH-16&&y>=16&&y<16+HEIGHT/4;
++ wire compare_pixel=mode_active==7&&valid_tiles[tile];
++ wire use_aux=de_i&&(compare_pixel||(pip_active&&pip_area));
++ wire read_pixel=use_aux&&!invalid_frame&&ready_sync&&!aux_empty;
++ assign aux_rd=read_pixel&&pixel_half;
++ wire[15:0]aux_pixel=pixel_half?aux_data[31:16]:aux_data[15:0];
++ wire[23:0]expanded={aux_pixel[15:11],aux_pixel[15:13],aux_pixel[10:5],aux_pixel[10:9],aux_pixel[4:0],aux_pixel[4:2]};
++ wire[10:0]local_x=x>=HALF_W?x-HALF_W:x;
++ wire[9:0]local_y=y>=HALF_H?y-HALF_H:y;
++ wire[127:0]tile_meta=metadata[tile*128+:128];
++ reg[383:0]label;reg[7:0]label_char;reg[10:0]label_x;reg[9:0]label_y;
++ reg label_area;integer c;reg[11:0]label_low,label_high;
++ function[7:0]hexchar;input[3:0]n;begin hexchar=n<10?8'h30+n:8'h41+n-10;end endfunction
++ function[7:0]digit;input[11:0]v;input[1:0]pos;
++ begin case(pos)0:digit=48+v/1000;1:digit=48+(v/100)%10;2:digit=48+(v/10)%10;default:digit=48+v%10;endcase end endfunction
++ always @*begin
++  label=0;label_char=32;label_x=0;label_y=0;label_area=0;c=0;label_low=low_i;label_high=high_i;
++  if(mode_active==7)begin
++   label_x=local_x-8;label_y=local_y-8;label_area=local_x>=8&&local_x<584&&local_y>=8&&local_y<24;
++   if(valid_tiles[tile])begin
++    case(tile_meta[97:96])0:label={"RAW   L:0000 H:0000 F:00000000 V:0000",88'd0};1:label={"CANNY L:0000 H:0000 F:00000000 V:0000",88'd0};
++     2:label={"RED   L:0040 H:0040 F:00000000 V:0000",88'd0};default:label={"CYBER L:0040 H:0040 F:00000000 V:0000",88'd0};endcase
++    label_low=tile_meta[83:72];label_high=tile_meta[95:84];
++   end else label={"EMPTY - IO29 CAPTURE",232'd0};
++  end else if(mode_active>=5)begin
++   label_x=x-16;label_y=y-8;label_area=x>=16&&x<592&&y>=8&&y<40;
++   case(mode_active)
++    6:label={"07 FACE CANDIDATES: - ",216'd0};
++    5:label={"06 GESTURE - BOARD K1 ENROL",176'd0};
++   endcase
++  end
++  c=label_x/12;
++  if(c<48)label_char=label[383-c*8-:8];
++  if(mode_active==7&&valid_tiles[tile])begin
++   if(c>=8&&c<12&&tile_meta[97:96]<2)label_char=digit(label_low,c-8);
++   if(c>=15&&c<19&&tile_meta[97:96]<2)label_char=digit(label_high,c-15);
++   if(c>=22&&c<30)label_char=hexchar(tile_meta[24+(29-c)*4+:4]);
++   if(c>=33&&c<37)label_char=hexchar(tile_meta[56+(36-c)*4+:4]);
++  end
++  if(mode_active==6&&c==19)label_char=face_valid?hexchar(face_count):"-";
++  if(mode_active==6&&c==20)label_char=face_saturated?"+":" ";
++ end
++ wire label_ink;
++ vision8_ascii text(label_char,mode_active==7?label_y[3:1]:label_y[4:2],(label_x%12)>>1,label_ink);
++ assign mode_committed=mode_active;
++ assign busy=state!=0||publish;
++ assign lock_source=state!=0;
++ assign main_enable=mode_i!=7||state!=0;
++ assign capture_low=bound_low;assign capture_high=bound_high;
++ assign capture_backend=bound_alg==0?4'd0:bound_alg==1?4'd1:bound_alg==2?4'd10:4'd9;
++ always @(posedge clk)begin
++  if(!rst_n)begin
++   state<=0;mode_active<=0;warm<=0;next_tile<=0;temporary<=4;vsq<=1;rvsq<=1;pair_phase<=0;first_pixel<=0;samples<=0;cancelled<=0;reset_count<=0;
++   bound_alg<=0;bound_low<=40;bound_high<=80;bound_version<=0;bound_id<=0;directory<=12'h688;pending_directory<=12'h688;pending_valid<=0;publish<=0;old_slot<=0;pending_metadata<=0;
++   snap_begin<=0;snap_end<=0;snap_slot<=4;snap_bad<=0;snap_reset<=1;snap_wr<=0;snap_data<=0;aux_request<=0;aux_kind<=0;aux_directory<=0;
++   valid_tiles<=0;metadata<=0;underflows<=0;capture_errors<=0;done_meta<=0;done_sync<=0;done_seen<=0;ok_meta<=0;ok_sync<=0;
++   ack_meta<=0;ack_sync<=0;ready_meta<=0;ready_sync<=0;x<=0;y<=0;pixel_half<=0;invalid_frame<=0;pip_active<=0;rgb_o<=0;de_o<=0;vs_o<=0;hs_o<=0;
++  end else begin
++   vsq<=vs_i;rvsq<=result_vs;snap_wr<=0;
++   done_meta<=snap_done;done_sync<=done_meta;ok_meta<=snap_ok;ok_sync<=ok_meta;
++   ack_meta<=aux_ack;ack_sync<=ack_meta;ready_meta<=aux_frame_ready;ready_sync<=ready_meta;
++   if(!vs_i)begin x<=0;y<=0;end else if(de_i)begin if(x==WIDTH-1)begin x<=0;y<=y+1'b1;end else x<=x+1'b1;end
++   de_o<=de_i;vs_o<=vs_i;hs_o<=hs_i;rgb_o<=de_i?rgb_i:24'd0;
++   if(mode_active==7&&de_i)rgb_o<=24'h142235;
++   if(read_pixel)begin rgb_o<=expanded;pixel_half<=~pixel_half;end
++   else if(use_aux&&!invalid_frame&&(!ready_sync||aux_empty))begin invalid_frame<=1;underflows<=underflows+1'b1;end
++   if(pip_active&&de_i&&x>=WIDTH-WIDTH/4-18&&x<WIDTH-14&&y>=14&&y<18+HEIGHT/4&&
++    (x<WIDTH-WIDTH/4-16||x>=WIDTH-16||y<16||y>=16+HEIGHT/4))rgb_o<=24'h35d499;
++   if(mode_active==7&&de_i&&(x==HALF_W||y==HALF_H))rgb_o<=24'h35d499;
++   if(label_area&&de_i)rgb_o<=label_ink?24'he7f3ff:24'h132336;
++   if(frame_blank)begin
++    mode_active<=mode_i;pip_active<=pip_i&&mode_i>=1&&mode_i<=3;pixel_half<=0;invalid_frame<=0;
++    if(publish)begin directory<=pending_directory;valid_tiles<=pending_valid;metadata<=pending_metadata;publish<=0;end
++    if(clear_i)begin valid_tiles<=0;pending_valid<=0;next_tile<=0;publish<=0;metadata<=0;end
++    if(ack_sync==aux_request)begin
++     aux_kind<=mode_i==7?2'd2:(pip_i&&mode_i>=1&&mode_i<=3?2'd1:2'd0);
++     aux_directory<=publish?{pending_valid,pending_directory}:{valid_tiles,directory};
++     aux_request<=~aux_request;
++    end else invalid_frame<=1;
++   end
++   if(clear_i)begin cancelled<=1;valid_tiles<=0;pending_valid<=0;publish<=0;next_tile<=0;metadata<=0;end
++   if(state!=0&&mode_i!=7)cancelled<=1;
++   case(state)
++    0:begin snap_reset<=1;if(capture_i&&mode_i==7&&source_ok&&ack_sync==aux_request)begin state<=1;warm<=0;cancelled<=0;bound_alg<=algorithm_i;bound_low<=low_i;bound_high<=high_i;bound_version<=version_i;end end
++    1:if(process_start&&freeze_active)begin warm<=0;bound_id<=source_id;state<=2;end
++    2:if(process_start)begin
++     if(source_id!=bound_id)begin bound_id<=source_id;warm<=0;end
++     else if(warm==1)begin state<=3;reset_count<=0;snap_slot<=temporary;end else warm<=warm+1'b1;
++    end
++    3:begin
++     snap_reset<=0;
++     if(reset_count==63)begin snap_begin<=~snap_begin;state<=4;end else reset_count<=reset_count+1'b1;
++    end
++    4:if(process_start)begin state<=5;samples<=0;pair_phase<=0;snap_bad<=cancelled||!source_ok||!processing_ok;end
++    5:begin
++     if(result_de&&!result_x[0]&&!result_y[0])begin
++      samples<=samples+1'b1;
++      if(!pair_phase)begin first_pixel<=result_i;pair_phase<=1;end
++      else begin snap_wr<=!snap_full;snap_data<={result_i,first_pixel};pair_phase<=0;if(snap_full)snap_bad<=1;end
++      if(result_x==WIDTH-2&&result_y==HEIGHT-2)begin
++       snap_bad<=snap_bad||snap_full||cancelled||clear_i||!source_ok||!processing_ok||source_id!=bound_id||samples!=PIXELS-1;
++       snap_end<=~snap_end;state<=6;
++      end
++     end
++    end
++    6:if(done_sync!=done_seen)begin
++     done_seen<=done_sync;
++     if(ok_sync&&!snap_bad&&!cancelled&&!clear_i&&mode_i==7)begin
++      old_slot=directory[next_tile*3+:3];
++      pending_directory<=directory;pending_directory[next_tile*3+:3]<=temporary;
++      pending_valid<=valid_tiles|(4'b1<<next_tile);pending_metadata<=metadata;
++      pending_metadata[next_tile*128+:128]<={30'd0,bound_alg,bound_high,bound_low,bound_version,bound_id,24'd0};
++      temporary<=old_slot;next_tile<=next_tile+1'b1;publish<=1;
++     end else capture_errors<=capture_errors+1'b1;
++     state<=0;
++    end
++   endcase
++  end
++ end
++endmodule
+--- before/sim/tb_menu8_pixels.sv
++++ after/sim/tb_menu8_pixels.sv
+@@ -1,53 +1,75 @@
+ `timescale 1ns/1ps
+ module tb_menu8_pixels;
+- reg clk=0,reset=1,visible=0;always #5 clk=~clk;
++ reg clk=0,reset=1,visible=0,tick=0;always #5 clk=~clk;
+  reg[10:0]x=0;reg[9:0]y=0;reg[639:0]state=0;
+  wire[23:0]rgb,local_rgb,health_rgb;wire de,local_de,health_de;
+  wire[12:0]addr;wire[15:0]bits;
+  shared_glyph_rom rom(clk,13'd0,,clk,addr,bits);
+- menu8_renderer #(.SHARED_FONT(1)) dut(clk,reset,x,y,visible,state,rgb,de,addr,bits);
+- menu8_renderer local_dut(clk,reset,x,y,visible,state,local_rgb,local_de,,16'd0);
++ menu8_renderer #(.SHARED_FONT(1)) dut(clk,reset,x,y,visible,state,rgb,de,addr,bits,tick);
++ menu8_renderer local_dut(clk,reset,x,y,visible,state,local_rgb,local_de,,16'd0,tick);
+  wire[639:0]flipped_health=state^640'hff0;
+- menu8_renderer health_dut(clk,reset,x,y,visible,flipped_health,health_rgb,health_de,,16'd0);
++ menu8_renderer health_dut(clk,reset,x,y,visible,flipped_health,health_rgb,health_de,,16'd0,tick);
+  always @(negedge clk)if(!reset)begin
+   if(de!==local_de||de!==health_de||rgb!==local_rgb||rgb!==health_rgb)$fatal(1,"font parity / health dependency %d,%d",x,y);
+   if(de&&(^rgb===1'bx))$fatal(1,"Unknown UI pixel");
+  end
+- integer f,scenario,mode,px,py,n,numbers,face_digits,selected_pixels;
++ integer f,scenario,mode,px,py,n,numbers,face_digits,card_labels;
++ reg[9:0]last_flow;
++ task frame_tick;begin @(negedge clk);tick=1;@(negedge clk);tick=0;end endtask
+  task save_pixel;begin
+   if(de)begin
+    $fwrite(f,"%c%c%c",rgb[23:16],rgb[15:8],rgb[7:0]);
+-   if(n%1024>=824&&n%1024<888&&n/1024>=444&&n/1024<460&&rgb==24'hecf4ff)numbers=numbers+1;
++   if(n%1024>=144&&n%1024<400&&n/1024>=228&&n/1024<356&&rgb==24'hecf4ff)numbers=numbers+1;
+    if(n%1024>=432&&n%1024<560&&n/1024>=390&&n/1024<454&&rgb==24'h65dbab)face_digits=face_digits+1;
+-   if(n/1024==313&&rgb!=24'h0d1b2d)selected_pixels=selected_pixels+1;
++   if(n/1024>=280&&n/1024<296&&n%1024>=48&&n%1024<976&&(rgb==24'ha3b5cd||rgb==24'hffffff))card_labels=card_labels+1;
+    n=n+1;
+   end
+  end endtask
+  initial begin
+   repeat(4)@(negedge clk);reset=0;
+-  for(scenario=0;scenario<12;scenario=scenario+1)begin
++  // Real frame pulses only: no active-raster movement, bounded wrap, retargeting.
++  state[2:0]=1;repeat(3)frame_tick();if(dut.flow_pos!=36)$fatal(1,"waterfall did not advance twelve pixels per frame");
++  last_flow=dut.flow_pos;repeat(100)@(negedge clk);if(dut.flow_pos!=last_flow)$fatal(1,"animation moved without frame pulse");
++  state[2:0]=2;repeat(40)frame_tick();if(dut.flow_pos!=232)$fatal(1,"rapid retarget failed");
++  state[2:0]=7;repeat(40)frame_tick();if(dut.flow_pos!=812)$fatal(1,"last mode rail position");
++  state[2:0]=0;repeat(9)frame_tick();if(dut.flow_pos!=920)$fatal(1,"wrap should travel forward, not jump backward");
++  frame_tick();if(dut.flow_pos!=0)$fatal(1,"wrap landing");
++  for(scenario=0;scenario<17;scenario=scenario+1)begin
+    mode=scenario<8?scenario:6;
++   if(scenario==15)mode=1;if(scenario==16)mode=0;
+    state=0;state[2:0]=mode;state[11:4]=255;state[48:37]=40+mode;state[60:49]=80+mode;
+    state[62:61]=mode%3;state[64:63]=mode%3;state[14]=1;state[19:16]=mode==6?8:0;state[15]=mode==6;
+-   if(scenario>=8)begin state[15]=0;state[19:16]=scenario==8?0:3;state[3]=scenario==10;state[14]=scenario!=11;end
+-   if(mode==4)begin
++   if(scenario>=8&&scenario<12)begin state[15]=0;state[19:16]=scenario==8?0:3;state[3]=scenario==10;state[14]=scenario!=11;end
++   if(scenario>=12&&scenario<=14)begin
++    state[123]=1;state[48:37]=scenario==13?2000:scenario==14?41:40;
++    state[60:49]=scenario==13?2040:scenario==14?81:80;
++    state[62:61]=scenario==12?0:scenario==13?2:1;state[64:63]=scenario==13?2:0;
++   end
++   if(mode==7)begin
+     state[116:113]=15;
+     for(integer k=0;k<4;k=k+1)begin
+      state[128+k*128+96+:2]=k;state[128+k*128+72+:12]=40+k*10;
+      state[128+k*128+84+:12]=80+k*10;state[128+k*128+24+:32]=32'h12345670+k;
+     end
+    end
++   if(scenario==15)begin state[2:0]=0;repeat(40)frame_tick();state[2:0]=1;repeat(3)frame_tick();end
++   else if(scenario==16)begin state[2:0]=7;repeat(40)frame_tick();state[2:0]=0;repeat(3)frame_tick();end
++   else repeat(40)frame_tick();
++   last_flow=dut.flow_pos;
+    f=$fopen($sformatf("reports/menu_%0d.ppm",scenario),"wb");if(!f)$fatal(1,"PPM open");
+-   $fwrite(f,"P6\n1024 600\n255\n");n=0;numbers=0;face_digits=0;selected_pixels=0;
++   $fwrite(f,"P6\n1024 600\n255\n");n=0;numbers=0;face_digits=0;card_labels=0;
+    for(py=0;py<600;py=py+1)for(px=0;px<1024;px=px+1)begin
+     @(negedge clk);save_pixel();x=px;y=py;visible=1;
++    if(dut.flow_pos!=last_flow)$fatal(1,"flow tearing inside raster");
+    end
+    @(negedge clk);save_pixel();visible=0;
+    repeat(4)begin @(negedge clk);save_pixel();end
+    $fclose(f);
+-   if(n!=614400||numbers<20||(mode==6&&face_digits<40)||(mode!=6&&face_digits!=0))$fatal(1,"Missing/gated text scenario%0d pixels%0d numbers%0d face%0d",scenario,n,numbers,face_digits);
+-   $display("PASS: UI scenario %0d mode %0d numbers %0d face %0d",scenario,mode,numbers,face_digits);
++   if(n!=614400)$fatal(1,"pixel count");
++   if(state[123]&&(numbers<500||card_labels!=0))$fatal(1,"full settings page missing large digits or leaking cards");
++   if(!state[123]&&(card_labels<150||(mode==6&&face_digits<40)||(mode!=6&&face_digits!=0)))$fatal(1,"mode labels / gated count scenario %0d face %0d",scenario,face_digits);
++   $display("PASS: UI scenario %0d mode %0d settings %0d digits %0d face %0d cards %0d",scenario,mode,state[123],numbers,face_digits,card_labels);
+   end
+-  $display("PASS: all eight UI modes, face 8+/0/3/frozen/invalid, thresholds, full shared/local pixel parity, health-independent output");$finish;
++  $display("PASS: all eight UI modes, independent full-screen thresholds, live values, face 8+/0/3/frozen/invalid, frame-based flow/wrap/retargeting, shared/local parity, health-independent output");$finish;
+  end
+ endmodule
+--- before/sim/tb_menu_cpu8.sv
++++ after/sim/tb_menu_cpu8.sv
+@@ -41,7 +41,7 @@
+      // Deliberately change midway through an active raster on later iterations.
+      @(negedge source_clk);state={8'(8'hF0+i),i==5,modes[i][3:0]};expected=17'h10000|state;
+      state8=0;state8[2:0]=i;state8[11:4]=8'hff;state8[48:37]=40+i;state8[60:49]=80+i;
+-     state8[19:16]=i;state8[14]=1;state8[116:113]=i==4?4'hf:0;
++     state8[123]=(i==1||i==3);state8[19:16]=i;state8[14]=1;state8[116:113]=i==7?4'hf:0;
+      state8[639:128]={16{32'h12345678+i}};expected8=state8;
+      wait(dut.display.pending==expected);
+      wait(dut.display.active_state==expected);wait(dut.display.active8==expected8);
+@@ -56,7 +56,7 @@
+          if(^recovered===1'bx) $fatal(1,"Unknown pixel");
+          $fwrite(file,"%c%c%c",recovered[23:16],recovered[15:8],recovered[7:0]);
+          pixels=pixels+1;line_pixels=line_pixels+1;
+-         if(((pixels-1)%1024)>=824&&((pixels-1)%1024)<888&&((pixels-1)/1024)>=444&&((pixels-1)/1024)<460&&recovered==24'hecf4ff)numeric_pixels=numeric_pixels+1;
++         if(((pixels-1)%1024)>=48&&((pixels-1)%1024)<800&&((pixels-1)/1024)>=38&&((pixels-1)/1024)<70&&recovered==24'hecf4ff)numeric_pixels=numeric_pixels+1;
+        end
+        if(prev_de && !dut.de) begin
+          if(line_pixels!=1024) $fatal(1,"Wrong line length %0d",line_pixels);
+@@ -65,13 +65,13 @@
+        prev_de=dut.de;
+      end
+      $fclose(file);
+-     if(numeric_pixels<20)$fatal(1,"Threshold digits missing: %0d",numeric_pixels);
++     if(numeric_pixels<20)$fatal(1,"UI title missing: %0d",numeric_pixels);
+      if(pixels!=614400 || lines!=600 || cycles<853438 || cycles>853441)
+        $fatal(1,"Frame size/timing failed: pixels=%0d lines=%0d cycles=%0d",pixels,lines,cycles);
+      $display("PASS: CPU8 mode %0d, RISC-V write, frame commit, %0d pixels, %0d clocks",modes[i],pixels,cycles);
+      wait(dut.display.v==200);
+    end
+-   $display("PASS: CPU8 all eight menu modes, LIVE/HOLD, CPU boot, CDC, LVDS packing, frame timing");
++   $display("PASS: CPU8 all eight mode bundles, independent settings flag, LIVE/HOLD, CPU boot, CDC, LVDS packing, frame timing");
+    $finish;
+  end
+ endmodule
+--- before/sim/tb_vision8_controls.sv
++++ after/sim/tb_vision8_controls.sv
+@@ -2,12 +2,12 @@
+ module tb_vision8_controls;
+  reg clk=0,rst=0,fs=0;always #5 clk=~clk;
+  reg[3:0]keys=4'b1110;reg io35=0;reg busy=0,learning=0;
+- wire[2:0]mode;wire[1:0]alg,sel,step;wire pip,held,cap,clear,gs,gl;
++ wire[2:0]mode;wire[1:0]alg,sel,step;wire settings,pip,held,cap,clear,gs,gl;
+  wire[11:0]lo,hi,la,ha;wire[15:0]ver;wire[3:0]backend;
+  integer captures=0,clears=0,longs=0;
+  vision8_controls #(.DEBOUNCE(3),.LONG_CYCLES(24)) dut(
+  .clk(clk),.rst_n(rst),.frame_start(fs),.io35(io35),.io28(keys[0]),.io29(keys[1]),.k1_n(keys[2]),.k2_n(keys[3]),
+- .capture_busy(busy),.learning(learning),.rx(1'b1),.user_mode(mode),.capture_alg(alg),.pip_enable(pip),.freeze_request(held),.capture(cap),.clear(clear),
++ .capture_busy(busy),.learning(learning),.rx(1'b1),.settings_open(settings),.user_mode(mode),.capture_alg(alg),.pip_enable(pip),.freeze_request(held),.capture(cap),.clear(clear),
+  .gesture_short(gs),.gesture_long(gl),.low(lo),.high(hi),.selected(sel),.step_select(step),.low_active(la),.high_active(ha),.version(ver),.backend_mode(backend),.pure_o(),.detect_extra(),.skin_lower());
+  always @(posedge clk)begin if(cap)captures=captures+1;if(clear)clears=clears+1;if(gl)longs=longs+1;end
+  task cycles(input integer n);repeat(n)@(negedge clk);endtask
+@@ -32,9 +32,22 @@
+   nextmode();if(mode!=1||backend!=1)$fatal(1,"Canny mapping");
+   press(0,40);if(!pip||mode!=1)$fatal(1,"long PiP repeated short");
+   nextmode();if(mode!=2||backend!=10)$fatal(1,"red mapping");nextmode();if(mode!=3||backend!=9)$fatal(1,"cyber mapping");
+-  nextmode();if(mode!=4)$fatal(1,"compare mode");press(1,10);if(captures!=1)$fatal(1,"capture action");
++  nextmode();if(mode!=4||backend!=14)$fatal(1,"mode 5 color/edge comparison mapping");
++  press(1,10);if(!held||captures)$fatal(1,"color/edge comparison must freeze, not capture");
++  nextmode();if(mode!=5||backend!=15||held)$fatal(1,"mode 6 gesture mapping");
++  press(2,40);if(longs!=1)$fatal(1,"mode 6 K1 enrolment");
++  learning=1;press(1,10);if(held)$fatal(1,"freeze during enrolment");learning=0;press(1,10);if(!held)$fatal(1,"gesture freeze");
++  nextmode();if(mode!=6||backend!=0||held)$fatal(1,"mode 7 face mapping");
++  nextmode();if(mode!=7)$fatal(1,"mode 8 four-frame comparison");press(1,10);if(captures!=1)$fatal(1,"mode 8 capture action");
+   busy=1;press(1,10);if(captures!=1)$fatal(1,"queued busy capture");press(1,40);if(clears!=1)$fatal(1,"clear action");busy=0;
+-  press(3,10);if(alg!=1)$fatal(1,"context algorithm");nextmode();if(mode!=5||backend!=1)$fatal(1,"threshold mode");
++  press(3,10);if(alg!=1||backend!=1)$fatal(1,"four-frame algorithm selection");
++  nextmode();if(mode!=0||held||settings)$fatal(1,"eight-mode wrap");
++  // IO35 opens a distinct page without changing the processing mode or freeze.
++  repeat(6)begin io35=1;cycles(1);io35=0;cycles(1);end cycles(12);
++  if(settings)$fatal(1,"IO35 bounce switched page");
++  press(1,10);if(!held)$fatal(1,"freeze before settings");
++  io35=1;cycles(10);if(settings)$fatal(1,"IO35 must fire on release");
++  io35=0;cycles(12);if(!settings||mode!=0||backend!=0||!held)$fatal(1,"independent settings entry preserves algorithm/freeze");
+   press(3,10);if(lo!=41||la!=40)$fatal(1,"pending threshold");fs=1;cycles(1);fs=0;cycles(1);if(la!=41||ver!=1)$fatal(1,"frame commit");
+   press(2,10);if(sel!=1)$fatal(1,"HIGH selection");press(3,10);if(hi!=81)$fatal(1,"high increment");
+   press(2,10);if(sel!=2)$fatal(1,"LINK selection");press(2,40);if(step!=1)$fatal(1,"step 4");
+@@ -42,29 +55,28 @@
+   repeat(550)press(3,10);if(hi!=2040||lo!=2000)$fatal(1,"upper saturation %d %d",lo,hi);
+   repeat(550)press(1,10);if(lo!=1||hi!=41)$fatal(1,"lower saturation");
+   press(2,10);if(sel!=0)$fatal(1,"LOW selection");repeat(30)press(3,10);if(lo!=40||hi!=41)$fatal(1,"LOW<HIGH clamp");
+-  // Hold a context key across a mode change: its release has no action.
+-  keys[3]=0;cycles(8);nextmode();keys[3]=1;cycles(15);if(mode!=6||lo!=40)$fatal(1,"context leaked");
+-  nextmode();if(mode!=7||backend!=15)$fatal(1,"gesture mapping");press(2,40);if(longs!=1)$fatal(1,"board K1 enrolment");
+-  learning=1;press(1,10);if(held)$fatal(1,"freeze during enrolment");learning=0;press(1,10);if(!held)$fatal(1,"gesture freeze");
+-  nextmode();if(mode!=0||held)$fatal(1,"mode wrap");
+-  repeat(6)begin io35=1;cycles(1);io35=0;cycles(1);end cycles(12);
+-  if(mode!=0)$fatal(1,"IO35 bounce switched page");
+-  io35=1;cycles(10);if(mode!=0)$fatal(1,"IO35 must fire on release");
+-  io35=0;cycles(12);if(mode!=5||backend!=1)$fatal(1,"IO35 threshold entry");
+-  press(3,10);if(lo!=40||hi!=41)$fatal(1,"K2 threshold clamp changed");
+-  io35=1;cycles(10);io35=0;cycles(12);if(mode!=0)$fatal(1,"IO35 return to original mode");
+-  io35=1;cycles(40);io35=0;cycles(12);if(mode!=0)$fatal(1,"IO35 long release leaked short");
+-  nextmode();nextmode(); // red mode
+-  io35=1;cycles(10);io35=0;cycles(12);if(mode!=5)$fatal(1,"IO35 entry from red");
+-  press(2,10);press(3,10);if(hi!=45)$fatal(1,"K2 increment in shortcut page");
+-  io35=1;cycles(10);io35=0;cycles(12);if(mode!=2||hi!=45)$fatal(1,"IO35 return/persistence");
+-  io35=1;cycles(8);nextmode();io35=0;cycles(12);if(mode!=3)$fatal(1,"IO35 held context leaked");
+-  nextmode();nextmode(); // entry via IO28; shortcut returns to Canny
+-  io35=1;cycles(10);io35=0;cycles(12);if(mode!=1)$fatal(1,"IO28 threshold default return");
++  // A held key is cancelled across page changes, even though mode is unchanged.
++  keys[2]=0;cycles(8);io35=1;cycles(10);io35=0;cycles(12);keys[2]=1;cycles(15);
++  if(settings||mode!=0||sel!=0||step!=1||!held)$fatal(1,"page context leaked K1 action");
++  io35=1;cycles(40);io35=0;cycles(12);if(settings)$fatal(1,"IO35 long release leaked short");
++  // Every algorithm can open/close settings; no ninth mode or lost selection.
++  for(integer m=0;m<8;m=m+1)begin
++   io35=1;cycles(10);io35=0;cycles(12);
++   if(!settings||mode!=m)$fatal(1,"settings changed user mode %0d",m);
++   if(m==1&&backend!=1||m==4&&backend!=14||m==5&&backend!=15)$fatal(1,"settings changed algorithm");
++   press(2,10);if(gs||gl||captures!=1||clears!=1)$fatal(1,"settings key leaked to algorithm");
++   io35=1;cycles(10);io35=0;cycles(12);if(settings||mode!=m)$fatal(1,"settings return");
++   nextmode();
++  end
++  // A mode press exits settings, advances once, and invalidates held page keys.
++  io35=1;cycles(10);io35=0;cycles(12);
++  keys[3]=0;cycles(8);nextmode();keys[3]=1;cycles(15);
++  if(mode!=1||settings||lo!=40||hi!=41)$fatal(1,"mode/page transition leaked threshold edit");
++  io35=1;cycles(8);nextmode();io35=0;cycles(12);if(mode!=2||settings)$fatal(1,"IO35 held context leaked");
+   rst=0;io35=1;cycles(4);rst=1;cycles(60);io35=0;cycles(12);
+-  if(mode!=0)$fatal(1,"IO35 boot-held release triggered entry");
+-  $display("PASS: IO35 active-high shortcut, bounce, release, long suppression, context, return, retained thresholds and boot held");
+-  $display("PASS: Vision8 unchanged IO28 mode/PiP, IO29 active-low freeze/resume/capture/clear/threshold, four keys, bounce, long suppression, context binding, frame threshold commits and all clamps");$finish;
++  if(mode!=0||settings)$fatal(1,"IO35 boot-held release triggered entry");
++  $display("PASS: IO35 active-high shortcut, independent page for all eight algorithms, no mode/freeze loss, page context cancellation, boot/bounce/long suppression");
++  $display("PASS: Vision8 requested 1 RAW / 2 Canny / 3 RED / 4 CYBER / 5 SPLIT / 6 GESTURE / 7 FACE / 8 FOUR-FRAME mapping, frame threshold commits and all clamps");$finish;
+  end
+  initial begin #2000000;$fatal(1,"timeout");end
+ endmodule
+--- before/sim/tb_vision8_frames.sv
++++ after/sim/tb_vision8_frames.sv
+@@ -1,58 +1,61 @@
+-`timescale 1ns/1ps
+-module tb_vision8_frames;
+- reg clk=0,rst=0;always #5 clk=~clk;
+- reg[2:0]mode=4;reg[1:0]alg=0;reg cap=0,clr=0,pip=0,de=0,vs=0;reg[10:0]x=0;reg[9:0]y=0;
+- reg[15:0]pixel=0;reg[31:0]id=1;reg[11:0]low=40,high=80;reg[15:0]ver=3;
+- wire busy,lock,main_en,sb,se,bad,sreset,sw,req,ar;wire[2:0]ss;wire[31:0]sd;
+- wire[1:0]kind;wire[15:0]dir;wire[3:0]valid;wire[511:0]meta;wire[31:0]uf,ce;
+- wire[23:0]out;wire od,ov,oh;
+- reg ack=0,done=0,ok=1,empty=0;reg[31:0]adata=32'h07e0f800;
+- vision8_frames #(.WIDTH(64),.HEIGHT(48))dut(
+- .clk(clk),.rst_n(rst),.mode_i(mode),.algorithm_i(alg),.pip_i(pip),.capture_i(cap),.clear_i(clr),.freeze_active(1'b1),.source_id(id),
+- .low_i(low),.high_i(high),.version_i(ver),.source_ok(1'b1),.processing_ok(1'b1),.face_count(4'd0),.face_valid(1'b0),.face_saturated(1'b0),
+- .rgb_i(24'h112233),.de_i(de),.vs_i(vs),.hs_i(1'b1),.result_i(pixel),.result_de(de),.result_vs(vs),.result_x(x),.result_y(y),
+- .rgb_o(out),.de_o(od),.vs_o(ov),.hs_o(oh),.busy(busy),.lock_source(lock),.main_enable(main_en),.capture_low(),.capture_high(),.capture_backend(),
+- .snap_begin(sb),.snap_end(se),.snap_slot(ss),.snap_bad(bad),.snap_reset(sreset),.snap_wr(sw),.snap_data(sd),.snap_full(1'b0),.snap_done(done),.snap_ok(ok),
+- .aux_request(req),.aux_kind(kind),.aux_directory(dir),.aux_ack(ack),.aux_data(adata),.aux_empty(empty),.aux_frame_ready(1'b1),.aux_rd(ar),.valid_tiles(valid),.metadata(meta),.underflows(uf),.capture_errors(ce));
+- integer words=0,end_delay=0,generation=0;reg end_seen=0;reg[15:0]first,second;
+- function[15:0]sample(input integer n);integer xx,yy;begin xx=(n%32)*2;yy=(n/32)*2;sample=generation*4096+yy*64+xx;end endfunction
+- always @(negedge clk)begin
+-  ack=req;
+-  if(sw)begin first=sample(words*2);second=sample(words*2+1);if(sd!=={second,first})$fatal(1,"downsample pair=%d got %h expected %h",words,sd,{second,first});words=words+1;end
+-  if(se!=end_seen)begin end_seen=se;end_delay=120;end
+-  if(end_delay!=0)begin end_delay=end_delay-1;if(end_delay==1)done=~done;end
+- end
+- task cycles(input integer n);repeat(n)@(negedge clk);endtask
+- task frame;
+-  integer xx,yy;begin
+-   vs=0;de=0;cycles(40);vs=1;cycles(20);
+-   for(yy=0;yy<48;yy=yy+1)begin
+-    for(xx=0;xx<64;xx=xx+1)begin @(negedge clk);de=1;x=xx;y=yy;pixel=generation*4096+yy*64+xx;end
+-    @(negedge clk);de=0;cycles(16);
+-   end
+-   vs=0;de=0;cycles(160);
+-  end
+- endtask
+- task take;
+-  begin words=0;cap=1;cycles(1);cap=0;repeat(5)frame();if(busy||words!=384)$fatal(1,"capture did not finish busy=%b words=%d",busy,words);end
+- endtask
+- integer i;reg[11:0]old_directory;
+- initial begin
+-  cycles(6);rst=1;cycles(15);frame();
+-  for(i=0;i<4;i=i+1)begin alg=i;generation=i;id=i+10;low=40+i;high=80+i;ver=i+3;take();
+-   if(valid!==((1<<(i+1))-1))$fatal(1,"tile publication order");
+-   if(meta[i*128+24+:32]!==id||meta[i*128+72+:12]!==low||meta[i*128+96+:2]!==alg)$fatal(1,"bound metadata");
+-  end
+-  old_directory=dut.directory;generation=4;id=20;alg=0;take();
+-  if(dut.directory[11:3]!==old_directory[11:3]||dut.directory[2:0]!==3)$fatal(1,"fifth capture replacement");
+-  if(meta[55:24]!=20)$fatal(1,"replacement source tag");
+-  // Clear during capture cancels its publication but still drains the last frame.
+-  words=0;cap=1;cycles(1);cap=0;frame();frame();frame();clr=1;cycles(1);clr=0;frame();frame();
+-  if(valid!=0||meta!=0||ce!=1||busy)$fatal(1,"clear/cancel left stale tiles");
+-  // Once an AUX underflow occurs, the remaining frame cannot consume stale data.
+-  mode=1;pip=1;empty=1;frame();if(uf!=1)$fatal(1,"PiP underrun counter");empty=0;
+-  if(ar)$fatal(1,"invalid frame consumed tail");frame();if(uf!=1)$fatal(1,"underflow did not recover next frame");
+-  $display("PASS: frame-bound PiP/compare compositor, processed 2x2 sampling, four captures/fifth replacement, bound source/config metadata, safe clear cancellation and underflow recovery");$finish;
+- end
+- initial begin #5000000;$fatal(1,"frames timeout");end
+-endmodule
++`timescale 1ns/1ps
++module tb_vision8_frames;
++ reg clk=0,rst=0;always #5 clk=~clk;
++ reg[2:0]mode=7;reg[1:0]alg=0;reg cap=0,clr=0,pip=0,de=0,vs=0;reg[10:0]x=0;reg[9:0]y=0;
++ reg[15:0]pixel=0;reg[31:0]id=1;reg[11:0]low=40,high=80;reg[15:0]ver=3;
++ wire busy,lock,main_en,sb,se,bad,sreset,sw,req,ar;wire[2:0]ss;wire[31:0]sd;
++ wire[1:0]kind;wire[15:0]dir;wire[3:0]valid;wire[511:0]meta;wire[31:0]uf,ce;
++ wire[23:0]out;wire od,ov,oh;
++ reg ack=0,done=0,ok=1,empty=0;reg[31:0]adata=32'h07e0f800;
++ vision8_frames #(.WIDTH(64),.HEIGHT(48))dut(
++ .clk(clk),.rst_n(rst),.mode_i(mode),.algorithm_i(alg),.pip_i(pip),.capture_i(cap),.clear_i(clr),.freeze_active(1'b1),.source_id(id),
++ .low_i(low),.high_i(high),.version_i(ver),.source_ok(1'b1),.processing_ok(1'b1),.face_count(4'd0),.face_valid(1'b0),.face_saturated(1'b0),
++ .rgb_i(24'h112233),.de_i(de),.vs_i(vs),.hs_i(1'b1),.result_i(pixel),.result_de(de),.result_vs(vs),.result_x(x),.result_y(y),
++ .rgb_o(out),.de_o(od),.vs_o(ov),.hs_o(oh),.busy(busy),.lock_source(lock),.main_enable(main_en),.capture_low(),.capture_high(),.capture_backend(),
++ .snap_begin(sb),.snap_end(se),.snap_slot(ss),.snap_bad(bad),.snap_reset(sreset),.snap_wr(sw),.snap_data(sd),.snap_full(1'b0),.snap_done(done),.snap_ok(ok),
++ .aux_request(req),.aux_kind(kind),.aux_directory(dir),.aux_ack(ack),.aux_data(adata),.aux_empty(empty),.aux_frame_ready(1'b1),.aux_rd(ar),.valid_tiles(valid),.metadata(meta),.underflows(uf),.capture_errors(ce));
++ integer words=0,end_delay=0,generation=0;reg end_seen=0;reg[15:0]first,second;
++ function[15:0]sample(input integer n);integer xx,yy;begin xx=(n%32)*2;yy=(n/32)*2;sample=generation*4096+yy*64+xx;end endfunction
++ always @(negedge clk)begin
++  ack=req;
++  if(sw)begin first=sample(words*2);second=sample(words*2+1);if(sd!=={second,first})$fatal(1,"downsample pair=%d got %h expected %h",words,sd,{second,first});words=words+1;end
++  if(se!=end_seen)begin end_seen=se;end_delay=120;end
++  if(end_delay!=0)begin end_delay=end_delay-1;if(end_delay==1)done=~done;end
++ end
++ task cycles(input integer n);repeat(n)@(negedge clk);endtask
++ task frame;
++  integer xx,yy;begin
++   vs=0;de=0;cycles(40);vs=1;cycles(20);
++   for(yy=0;yy<48;yy=yy+1)begin
++    for(xx=0;xx<64;xx=xx+1)begin @(negedge clk);de=1;x=xx;y=yy;pixel=generation*4096+yy*64+xx;end
++    @(negedge clk);de=0;cycles(16);
++   end
++   vs=0;de=0;cycles(160);
++  end
++ endtask
++ task take;
++  begin words=0;cap=1;cycles(1);cap=0;repeat(5)frame();if(busy||words!=384)$fatal(1,"capture did not finish busy=%b words=%d",busy,words);end
++ endtask
++ integer i;reg[11:0]old_directory;
++ initial begin
++  cycles(6);rst=1;cycles(15);
++  mode=4;frame();if(!main_en||kind!=0)$fatal(1,"mode 5 split must retain main source, not four-frame AUX");
++  cap=1;cycles(1);cap=0;cycles(5);if(busy)$fatal(1,"mode 5 incorrectly accepted capture");
++  mode=7;frame();if(main_en||kind!=2)$fatal(1,"mode 8 must select saved four-frame AUX");
++  for(i=0;i<4;i=i+1)begin alg=i;generation=i;id=i+10;low=40+i;high=80+i;ver=i+3;take();
++   if(valid!==((1<<(i+1))-1))$fatal(1,"tile publication order");
++   if(meta[i*128+24+:32]!==id||meta[i*128+72+:12]!==low||meta[i*128+96+:2]!==alg)$fatal(1,"bound metadata");
++  end
++  old_directory=dut.directory;generation=4;id=20;alg=0;take();
++  if(dut.directory[11:3]!==old_directory[11:3]||dut.directory[2:0]!==3)$fatal(1,"fifth capture replacement");
++  if(meta[55:24]!=20)$fatal(1,"replacement source tag");
++  // Clear during capture cancels its publication but still drains the last frame.
++  words=0;cap=1;cycles(1);cap=0;frame();frame();frame();clr=1;cycles(1);clr=0;frame();frame();
++  if(valid!=0||meta!=0||ce!=1||busy)$fatal(1,"clear/cancel left stale tiles");
++  // Once an AUX underflow occurs, the remaining frame cannot consume stale data.
++  mode=1;pip=1;empty=1;frame();if(uf!=1)$fatal(1,"PiP underrun counter");empty=0;
++  if(ar)$fatal(1,"invalid frame consumed tail");frame();if(uf!=1)$fatal(1,"underflow did not recover next frame");
++  $display("PASS: frame-bound PiP/compare compositor, processed 2x2 sampling, four captures/fifth replacement, bound source/config metadata, safe clear cancellation and underflow recovery");$finish;
++ end
++ initial begin #5000000;$fatal(1,"frames timeout");end
++endmodule
+--- before/tools/generate_font.py
++++ after/tools/generate_font.py
+@@ -5,13 +5,14 @@
+ P=Path(__file__).resolve().parents[1]
+ lcd=['']*64
+ lcd[0]='VISION 八模式视觉系统'
+-lcd[1:9]=['01 原图','02 Canny','03 彩色红边','04 赛博边缘','05 四帧对比','06 阈值调节','07 人脸数量','08 手势互动']
++lcd[1:9]=['01 原图','02 Canny','03 彩色红边','04 赛博边缘','05 彩边对照','06 手势识别','07 人脸识别','08 四帧对比']
+ lcd[9:16]=['LIVE','HOLD','人脸数量','当前画面 / 肤色轮廓候选','已冻结 / 保留当前人数','等待有效画面','人']
+-lcd[16:24]=['原图：摄像头彩色画面','Canny：黑白边缘','红边：彩色轮廓','赛博：霓虹边缘','四帧：保存画面对比','Canny 阈值调节','人脸数量','手势：招手 点赞 比心']
+-lcd[24:32]=['IO29 冻结 / 恢复画面','长按 IO28 开关彩色画中画','长按 IO28 开关彩色画中画','长按 IO28 开关彩色画中画','IO29 保存；长按清空；K2 换算法','K1 选择；长按切换步长 1 / 4 / 8','IO29 冻结 / 恢复人数','长按 K1 录入；短按确认手型']
++lcd[16:24]=['原图：摄像头彩色画面','Canny：黑白边缘','红边：彩色轮廓','赛博：霓虹边缘','对照：彩色画面与黑白边缘','手势：招手 点赞 比心','人脸识别 / 实时人数','四帧：保存画面对比']
++lcd[24:32]=['IO29 冻结 / 恢复画面','长按 IO28 开关彩色画中画','长按 IO28 开关彩色画中画','长按 IO28 开关彩色画中画','IO29 冻结 / 恢复画面','长按 K1 录入；短按确认手型','IO29 冻结 / 恢复人数','IO29 保存；长按清空；K2 换算法']
+ lcd[32:40]=['Canny 阈值','IO35 短按进入','IO35 短按返回','LOW','HIGH','LOW HIGH LINK','STEP','IO29 减小 / K2 增大']
+ lcd[40:48]=['IO28 切换模式','IO29 冻结 / 恢复','07 人脸数量','切换至模式7显示','正在抓帧，请稍候','手势反馈显示在 HDMI','正在录入，请保持手型','当前画面实时更新']
+ lcd[48:52]=['已保存','长按 IO29 冻结 / 恢复','FRAME','版本']
++lcd[52:63]=['Canny 阈值调节','低阈值 / LOW','高阈值 / HIGH','K1 选择 LOW / HIGH / LINK','长按 K1 切换步长','LOW < HIGH','IO35 返回模式选择','当前选择','调节立即更新，参数按帧生效','彩边对照','模式选择']
+ lcd[63]='0123456789ABCDEF-+ '
+ hdmi=json.loads((P/'tools/hdmi_text.json').read_text(encoding='utf-8'))
+ font=ImageFont.truetype('C:/Windows/Fonts/msyh.ttc',14)
+--- before/tools/render_eight_modes.py
++++ after/tools/render_eight_modes.py
+@@ -0,0 +1,17 @@
++"""Convert exact simulated RGB frames to PNG; no reconstructed mockups."""
++from pathlib import Path
++from PIL import Image,ImageDraw,ImageFont
++P=Path(__file__).resolve().parents[1]
++R=P/'reports/ui_eight_modes';R.mkdir(parents=True,exist_ok=True)
++font=ImageFont.truetype('C:/Windows/Fonts/msyh.ttc',18)
++labels=['01 原图','02 Canny','03 彩色红边','04 赛博边缘','05 彩边对照','06 手势识别','07 人脸识别','08 四帧对比','零人','三人','人数冻结','人数无效','阈值：LOW选中','阈值：LINK / 上限','阈值：HIGH / 已更新','流水移动中','8→1环绕中']
++frames=[]
++for n in range(17):
++ source=P/f'sim_menu8_pixels/reports/menu_{n}.ppm'
++ if not source.is_file() or source.stat().st_size!=1843216: continue
++ im=Image.open(source);im.load();im.save(R/f'menu_{n}.png');frames.append((n,im))
++sheet=Image.new('RGB',(1024,((len(frames)+1)//2)*332),'#091224');d=ImageDraw.Draw(sheet)
++for k,(n,im) in enumerate(frames):
++ x=(k%2)*512;y=(k//2)*332;sheet.paste(im.resize((512,300)),(x,y));d.text((x+20,y+305),labels[n],font=font,fill='#ecf4ff')
++sheet.save(R/'overview.png')
++print(f'Converted {len(frames)} actual HDL frames')
+--- before/tools/verify_eight_modes.py
++++ after/tools/verify_eight_modes.py
+@@ -0,0 +1,80 @@
++"""Audit this UI delivery using current tests, actual pixels and build hashes."""
++from pathlib import Path
++import hashlib
++import json
++import subprocess
++import sys
++import xml.etree.ElementTree as ET
++
++P = Path(__file__).resolve().parents[1]
++R = P / 'reports/ui_eight_modes'
++
++def sha(path):
++    return hashlib.sha256(path.read_bytes()).hexdigest()
++
++subprocess.run([sys.executable, str(P / 'tools/verify_build.py')], check=True)
++tests = {
++    'reports/vision8/tb_vision8_controls.log':'PASS: IO35 active-high shortcut',
++    'reports/vision8/tb_vision8_faces.log':'PASS: real CCL nine separated regions',
++    'reports/vision8/tb_vision8_frames.log':'PASS: frame-bound PiP/compare compositor',
++    'reports/vision8/tb_io29_freeze_ddr.log':'PASS: IO29 active-low button',
++    'reports/vision8/tb_menu8_pixels.log':'PASS: all eight UI modes',
++    'reports/ui_refresh/tb_ui_fonts.log':'PASS: all 64 lines',
++    'reports/roi_integration/tb_roi_shared_overlay.log':'PASS: HDMI diagnostics removed',
++    'reports/roi_integration/tb_vision6.log':'PASS: six modes, full raster, same-image split',
++    'reports/tb_menu_cpu8.log':'PASS: CPU8 all eight mode bundles',
++}
++evidence = []
++for rel, signature in tests.items():
++    path = P / rel
++    text = path.read_text(encoding='utf-8-sig', errors='replace')
++    assert signature in text and 'Fatal:' not in text and 'Error:' not in text, rel
++    assert path.stat().st_mtime >= (P / 'rtl/vision8_controls.v').stat().st_mtime, f'Stale log: {rel}'
++    evidence.append({'log':rel, 'status':'PASS', 'sha256':sha(path)})
++
++ns = {'p':'http://www.efinixinc.com/peri_design_db'}
++tree = ET.parse(P / 'Ti60_Demo.peri.xml')
++ports = [e for e in tree.iter() if e.tag.endswith('comp_gpio') and e.get('name') == 'io35_button_i']
++assert len(ports) == 1 and ports[0].get('gpio_def') == 'GPIOT_P_11'
++assert 'B9,GPIOT_P_11,io35_button_i.P,Input' in (P / 'outflow/Ti60_Demo.pinout.csv').read_text()
++
++# PPMs are the exact RGB stream captured by the HDL testbench.
++def pixels(n):
++    data = (P / f'sim_menu8_pixels/reports/menu_{n}.ppm').read_bytes()
++    header = b'P6\n1024 600\n255\n'
++    assert data.startswith(header) and len(data) == len(header)+1024*600*3
++    return data[len(header):]
++
++def count_crop(n):
++    data = pixels(n)
++    return b''.join(data[(y*1024+432)*3:(y*1024+560)*3] for y in range(390,454))
++
++assert count_crop(9) == count_crop(10), 'Frozen count changed'
++assert len({count_crop(n) for n in (6,8,9,11)}) == 4, '8+, zero, three and invalid must differ'
++for n in range(17):
++    pixels(n)
++    assert (R / f'menu_{n}.png').is_file()
++
++# The settings page changes only its values when given a new threshold snapshot.
++def crop(n,x0,y0,x1,y1):
++    data=pixels(n)
++    return b''.join(data[(y*1024+x0)*3:(y*1024+x1)*3] for y in range(y0,y1))
++assert crop(12,144,228,400,356)!=crop(14,144,228,400,356), 'LOW is stale'
++assert crop(12,624,228,880,356)!=crop(14,624,228,880,356), 'HIGH is stale'
++assert crop(1,48,304,976,310)!=crop(15,48,304,976,310), 'Flow frame equals settled state'
++assert crop(0,48,304,976,310)!=crop(16,48,304,976,310), 'Wrap frame equals settled state'
++retained=json.loads((R/'retained_assets.json').read_text(encoding='utf-8'))
++for rel,digest in retained.items():
++    assert sha(P/rel)==digest, 'Changed retained asset: '+rel
++lines=json.loads((P/'reports/menu_font.json').read_text(encoding='utf-8'))['lines']
++assert lines[1:9]==['01 原图','02 Canny','03 彩色红边','04 赛博边缘','05 彩边对照','06 手势识别','07 人脸识别','08 四帧对比']
++result = {
++    'tests':evidence,
++    'build':json.loads((P / 'reports/build_verified.json').read_text()),
++    'io35':{'fpga_pin':'B9','gpio':'GPIOT_P_11','header':'P4 pin 40','idle':0,'pressed':1},
++    'images':[{'path':f'reports/ui_refresh/menu_{n}.png','sha256':sha(R / f'menu_{n}.png')} for n in range(17)],
++    'retained_assets':retained,
++    'physical_board_test':'not performed',
++}
++(R / 'validation.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
++print('PASS: eight-mode delivery: 9 fresh test logs, 17 RTL frames, independent thresholds, live digits, animated wrap, counts, IO35 pin, source/bitstream/timing verified')

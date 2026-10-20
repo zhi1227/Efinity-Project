@@ -1,0 +1,29 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_vision8_controls -s negative_pending_context_controls --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim_button_fix/negative_pending_context_controls/vision8_controls_before.v" Line 39. Module vision8_controls(DEBOUNCE=3,LONG_CYCLES=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim_button_fix/negative_pending_context_controls/vision8_controls_before.v" Line 4. Module vision8_key(DEBOUNCE=3,LONG_CYCLES=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim_button_fix/negative_pending_context_controls/vision8_controls_before.v" Line 4. Module vision8_key(DEBOUNCE=3,LONG_CYCLES=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim_button_fix/negative_pending_context_controls/vision8_controls_before.v" Line 4. Module vision8_key(DEBOUNCE=3,LONG_CYCLES=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim_button_fix/negative_pending_context_controls/vision8_controls_before.v" Line 4. Module vision8_key(DEBOUNCE=3,LONG_CYCLES=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim_button_fix/negative_pending_context_controls/vision8_controls_before.v" Line 4. Module vision8_key(DEBOUNCE=3,LONG_CYCLES=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/rtl/vision8_uart.v" Line 1. Module vision8_uart doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.vision8_key(DEBOUNCE=3,LONG_CYCL...
+Compiling module work.vision8_uart
+Compiling module work.vision8_controls(DEBOUNCE=3,LONG...
+Compiling module work.tb_vision8_controls
+Built simulation snapshot negative_pending_context_controls
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim_button_fix/negative_pending_context_controls/xsim.dir/negative_pending_context_controls/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 16 00:57:01 2026...

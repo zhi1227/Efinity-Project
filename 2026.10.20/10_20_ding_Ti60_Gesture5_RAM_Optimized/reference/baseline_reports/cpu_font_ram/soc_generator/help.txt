@@ -1,0 +1,75 @@
+Usage: EfxRiscvAxiDdrSocGen [options]
+
+  --help                   prints this usage text
+  --toplevelName <value>   Set the name of the toplevel module. Default EfxSapphireSoc
+  --ramHex <value>         Set the main memory boot content with an hex file. Default software/standalone/bootloader/build/bootloader.hex
+  --noRamHex
+  --customInstruction <value>
+                           Add custom instruction interface. Default false
+  --Linux <value>          Default false
+  --Atomic <value>         Default false
+  --ddrAEnable <value>     Turn off ddrA
+  --noDdrAClock            Turn off ddrA clock domain
+  --axiAEnable <value>     Turn off axiA
+  --ddrAIdWidth <value>    Default 8
+  --axiAIdWidth <value>    Default 8
+  --reducedCsr             Turn of some not so usefull CSR
+  --Fpu <value>            Turn on the FPU generation with double support
+  --withFpuFloat           Turn on the FPU generation without double support
+  --FpuDouble <value>      Turn on the FPU generation with double support
+  --cpuCount <value>       Default 1
+  --hardwareBreakpoints <value>
+                           Default 0
+  --softTap <value>        Add a jtag tap to the SoC. Default false
+  --withRiscvDebugPriv     Implement the debug following the official RISC-V spec. Default false
+  --iCacheSize <value>     At least 32 and multiple of 32. Default 8192
+  --dCacheSize <value>     At least 32 and multiple of 32. Default 8192
+  --iCacheWays <value>     At least 1 and power of 2. Default 2
+  --dCacheWays <value>     At least 1 and power of 2. Default 2
+  --systemFrequency <value>
+                           CPU and peripheral frequency (if no peripheralClock specified) Default 50000000
+  --peripheralFrequency <value>
+                           Peripherals frequency (set the UART baudrate at reset). Same as systemFrequency by default
+  --PeripheralClock <value>
+                           All the peripherals will use a dedicated clock. You will have to set peripheralFrequency too
+  --usbFrequency <value>   USB frequency, should be a multiple of 12 MHz of at least 48 Mhz
+  --ddrADataWidth <value>  Default 128
+  --uartBaudrate <value>   Default 115200
+  --ddrAAxi4               Default false
+  --ddrANoBurst            Default false
+  --lowArea <value>        How much the design should aim at reducing area (from 0 to 10), 10 meaning minimal area usage 0
+  --noClint                Default false
+  --ddrAAddress <value>    Default 0x1000
+  --ddrASize <value>       Default 0xf7fff000
+  --apbBridgeAddress <value>
+                           Default 0xf8000000
+  --apbBridgeSize <value>  Default 0x1000000
+  --onChipRamAddress <value>
+                           Default 0xf9000000
+  --onChipRamSize <value>  At least 1 KB to host the flash bootloader. Default 0x800
+  --axiAAddress <value>    Default 0xfa000000
+  --axiASize <value>       Default 0x1000000
+  --bsp <value>            Path to the bsp folder, default bsp/efinix/EfxSapphireSoc
+  --resetVector <value>    Address at which the CPU program counter is set during reset. default 4177526784
+  --clusterInterconnectDataWidth <value>
+                           Force the cluster interconnect to a set data width
+  --Compressed <value>     Enable RISC-V compressed instructions
+  --L1I <value>            Disable CPU instruction caches
+  --L1D <value>            Disable CPU data caches
+  --noMulDiv               Disable RVM
+  --noBarrelShifter        Use a small bit shifter instead of the full barrel shifter
+  --titanium               Default false
+  --withNaxRiscv           Default VexRiscv
+  --additionalJtagTapMax <value>
+                           Allow having additional jtag tap on the jtag chain, up to the given number. Default 0
+  --interrupt <value>
+  --apbSlave <value>       Add a new APB3 slave with the given name and memory mapping (relative to the apbBridge) Ex : --apbSlave name=portName,address=0x800000,size=4096
+  --uart <value>           Add a new UART with the given name, address (relative to the apbBridge) and interrupt id,  Ex : --uart name=portName,address=0x123000,interruptId=2
+  --spi <value>            Add a new SPI with the given name, address (relative to the apbBridge) and interrupt id,  Ex : --spi name=portName,address=0x123000,interruptId=2
+  --timer <value>          Add a new timer controller with the given name, address (relative to the apbBridge), and a few parameters Ex : --timer name=timerA,address=0x99000,prescalerWidth=8,interruptBase=16,countersWidth=12/16/32    for a triple timer of 12 bits, 16 bits, 32 bits
+  --i2c <value>            Add a new I2C with the given name, address (relative to the apbBridge) and interrupt id,  Ex : --i2c name=portName,address=0x123000,interruptId=2
+  --rmii <value>           Add a new RMII with the given name, address (relative to the apbBridge) and interrupt id,  Ex : --i2c name=portName,address=0x123000,interruptId=2
+  --watchdog <value>       Enable the watchdog hardware generation  Ex : --watchdog name=system_watchdog,address=0x123000,interruptId=2,prescalerWidth=24,counters=3,countersWidth=16
+  --usb-ohci <value>       Add a USB OHCI controller (host)  Ex : --usb-ohci name=system_usb_ohci,address=0x200000,interruptId=22,ports=1
+  --gpio <value>           Add a new GPIO ctrl with the given name, address (relative to the apbBridge), width and interrupt mapping (pin->interruptId) Ex : --gpio name=io_gpioA,address=0x000000,width=8,interrupts=0->12/2->13
+  --ddrMaster <value>      Add a new DDR AXI master with the given name, and data width,  Ex : --ddrMaster name=portName,dataWidth=32

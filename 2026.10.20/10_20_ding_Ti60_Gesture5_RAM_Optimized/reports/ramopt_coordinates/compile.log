@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/src/parallel/face_grid_regions.v" into library work
+INFO: [VRFC 10-311] analyzing module face_grid_regions
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/src/gesture/ep1_components.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_classify
+INFO: [VRFC 10-311] analyzing module ep1_gesture
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_coordinates/face_grid_regions_baseline.v" into library work
+INFO: [VRFC 10-311] analyzing module face_grid_regions_baseline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_coordinates/ep1_components_baseline.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_classify_baseline
+INFO: [VRFC 10-311] analyzing module ep1_gesture_baseline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_coordinates/tb_ramopt_coordinates.sv" into library work
+INFO: [VRFC 10-311] analyzing module ramopt_face_case
+INFO: [VRFC 10-311] analyzing module ramopt_ccl_case
+INFO: [VRFC 10-311] analyzing module tb_ramopt_coordinates

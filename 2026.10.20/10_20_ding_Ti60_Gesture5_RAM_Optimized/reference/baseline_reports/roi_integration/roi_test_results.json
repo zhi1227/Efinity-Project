@@ -1,0 +1,19 @@
+{
+  "elapsed_seconds": 370.009,
+  "tool": "Vivado XSim (see logs for version)",
+  "started_utc": "2026-10-13T15:45:45.7396493Z",
+  "project": "D:\\桌面\\WorkPlace\\10_13_ding_Ti60_Vision8_Gesture_ROI_Integrated",
+  "physical_board_test": "not performed",
+  "tests": [
+    {
+      "status": "PASS",
+      "elapsed_seconds": 369.007,
+      "log": "reports/roi_integration/tb_vision6.log",
+      "completed_utc": "2026-10-13T15:51:55.7467546Z",
+      "coverage": null,
+      "started_utc": "2026-10-13T15:45:46.7285952Z",
+      "bench": "tb_vision6"
+    }
+  ],
+  "completed_utc": "2026-10-13T15:51:55.7481569Z"
+}

@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "started_at": "2026-10-19T19:02:03.2676227Z",
+  "baseline_sha256": {
+    "src/gesture/ep1_skin.v": "14cbc1febac2953a1e381ede64527e456f37ff955244dd07788f3ade09b7af9e",
+    "src/parallel/video_delay.v": "128321d215d194dd5322a2ff3cb69dba4746baf7ecc89b037c3ea33ea3fcca03",
+    "src/vision/line_buffer_3x3.v": "1d2ed996a21eb9b31ae408797c8510f768e025d5548924ebc40f4dfef65e48e7"
+  },
+  "hardware_validation": "not performed",
+  "ended_at": "2026-10-19T19:02:18.7172499Z",
+  "log": "reports/ramopt_buffers/equivalence.log",
+  "bench_sha256": "86f209564da85524ef5eec27a8657fd43d9c3dae2895f1b98ad61afabfd83daa",
+  "optimized_sha256": {
+    "src/gesture/ep1_skin.v": "e7485ff7e4cdf4567ff149aa21b6c943e128c821aa3fffdc6c93862449745d6e",
+    "src/parallel/video_delay.v": "af07254404321ecc7aa05e715a4798ad87c27586832f7c4e8c4b5a7de79a7123",
+    "src/vision/line_buffer_3x3.v": "7bccd92923bad462bfd95bd1d18fbfab980cfbfeb2058335582e251ce22377a3"
+  },
+  "log_sha256": "e7a80360120b2105e180faf4c76010f1d9016c74a43ba3b31c2dcfd67f526b97",
+  "delay_configurations": 14,
+  "baseline_project": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_Gesture5_RAM_Baseline",
+  "bench": "sim_ramopt/tb_ramopt_buffers.sv",
+  "window7_widths": 3,
+  "line_configurations": 9,
+  "clocks": 90000
+}

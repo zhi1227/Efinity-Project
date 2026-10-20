@@ -1,0 +1,14 @@
+{
+  "purpose": "Documentation of actual RTL settings; not a vendor generator configuration",
+  "instruction_cache_bytes": 1024,
+  "data_cache_bytes": 1024,
+  "cache_line_bytes": 64,
+  "cache_ways": 1,
+  "tag_entries_each": 16,
+  "tag_width_bits": 24,
+  "tag_storage": "explicit flip-flops",
+  "on_chip_program_ram_bytes": 16384,
+  "firmware_unchanged": true,
+  "preparation_tool": "tools/prepare_cpu_font_ram.py",
+  "original_vendor_configuration": "sapphire_original_settings.json"
+}

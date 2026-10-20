@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Oct 16 01:08:01 2026
+# Process ID: 41072
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim_vision8
+# Command line: xsim.exe -log ../reports/vision8/tb_vision8_ddr.log -mode tcl -source {xsim.dir/tb_vision8_ddr/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim_vision8/../reports/vision8/tb_vision8_ddr.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim_vision8\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_vision8_ddr/xsim_script.tcl
+# xsim {tb_vision8_ddr} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+AW 00000000 len=127
+AW 00000800 len=127
+AW 00001000 len=127
+AW 01200000 len= 31
+AW 01200200 len= 31
+AW 01200400 len= 31
+AW 00400000 len=127
+AW 00400800 len=127
+AW 00401000 len=127
+AW 01200000 len= 31
+AW 01200200 len= 31
+AW 01200400 len= 31
+PASS: real vendor camera/main FIFOs, simultaneous DDR clients, stable stalls, B-response commit/error, snapshot packing, compare/PiP readback and restart drain; W=         12 R=         33
+$finish called at time : 307076 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim/tb_vision8_ddr.sv" Line 112
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Oct 16 01:08:06 2026...

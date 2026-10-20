@@ -1,0 +1,14 @@
+{
+  "attempts": [
+    {
+      "name": "tb_h5_raster (restored historical three-class bench)",
+      "status": "obsolete_expectation",
+      "log": "reports/ramopt_regression/tb_h5_raster.log",
+      "sha256": "83bfdf4e822a154e6512876a476841cd3b56d182b0e331d19ad9c7ee37439fdd",
+      "cause": "Bench enrolled 3 classes and expected wizard completion; current production correctly requires 5.",
+      "replacement": "tb_gesture5_rgb_ramopt",
+      "production_change_to_bypass_assertion": false
+    }
+  ],
+  "environment_issue": "Vivado MinGW GCC DLL relocation in sandbox; same installed compiler executes normally with require_escalated; no tool or registry modifications."
+}

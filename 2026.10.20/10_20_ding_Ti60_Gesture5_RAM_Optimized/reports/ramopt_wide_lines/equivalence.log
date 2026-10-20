@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 20 03:02:21 2026
+# Process ID: 47524
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/wide_line_candidate/s
+# Command line: xsim.exe -log ../equivalence.log -mode tcl -source {xsim.dir/tb_wide/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/wide_line_candidate/s/../equivalence.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/wide_line_candidate/s\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_wide/xsim_script.tcl
+# xsim {tb_wide} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: wide banked line cycle-exact equivalence, 18 configurations, 90000 clocks; widths1/2/3/4/5/8/9/10/12/14, 1280/640/319 columns, sparse DE/crop/illegal columns/reset
+$finish called at time : 900 us : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/wide_line_candidate/s/tb_wide.sv" Line 36
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 219.484 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 03:02:31 2026...

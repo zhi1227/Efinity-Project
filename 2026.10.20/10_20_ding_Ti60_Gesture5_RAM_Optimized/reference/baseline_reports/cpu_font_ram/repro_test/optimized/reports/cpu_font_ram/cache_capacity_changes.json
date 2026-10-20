@@ -1,0 +1,54 @@
+{
+  "InstructionCache": {
+    "bytes": 1024,
+    "changes": [
+      [
+        "\\[\\s*9\\s*:\\s*0\\s*\\]",
+        2
+      ],
+      [
+        "\\[\\s*21\\s*:\\s*0\\s*\\]",
+        4
+      ],
+      [
+        "\\[\\s*19\\s*:\\s*0\\s*\\]",
+        2
+      ],
+      [
+        "\\[\\s*5\\s*:\\s*0\\s*\\]",
+        3
+      ],
+      [
+        "\\[\\s*6\\s*:\\s*0\\s*\\]",
+        1
+      ]
+    ],
+    "tag_storage": "16 x 24 bit explicit flip-flops; unchanged synchronous read-before-write"
+  },
+  "DataCache": {
+    "bytes": 1024,
+    "changes": [
+      [
+        "\\[\\s*9\\s*:\\s*0\\s*\\]",
+        4
+      ],
+      [
+        "\\[\\s*21\\s*:\\s*0\\s*\\]",
+        4
+      ],
+      [
+        "\\[\\s*19\\s*:\\s*0\\s*\\]",
+        4
+      ],
+      [
+        "\\[\\s*5\\s*:\\s*0\\s*\\]",
+        6
+      ],
+      [
+        "\\[\\s*6\\s*:\\s*0\\s*\\]",
+        1
+      ]
+    ],
+    "tag_storage": "16 x 24 bit explicit flip-flops; unchanged synchronous read-before-write"
+  }
+}

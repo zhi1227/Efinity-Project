@@ -1,0 +1,128 @@
+[
+  {
+    "bench": "tb_vision8_key_boundary",
+    "status": "PASS",
+    "seconds": 8.61
+  },
+  {
+    "bench": "tb_vision8_controls",
+    "status": "PASS",
+    "seconds": 8.34
+  },
+  {
+    "bench": "tb_vision8_fifo",
+    "status": "PASS",
+    "seconds": 7.94
+  },
+  {
+    "bench": "tb_vision8_ddr",
+    "status": "PASS",
+    "seconds": 10.19
+  },
+  {
+    "bench": "tb_vision8_frames",
+    "status": "PASS",
+    "seconds": 9.38
+  },
+  {
+    "bench": "tb_vision8_faces",
+    "status": "PASS",
+    "seconds": 8.08
+  },
+  {
+    "bench": "tb_io29_freeze_ddr",
+    "status": "PASS",
+    "seconds": 12.41
+  },
+  {
+    "bench": "tb_vision8_gesture",
+    "status": "PASS",
+    "seconds": 8.98
+  },
+  {
+    "bench": "tb_h5_palm",
+    "status": "PASS",
+    "seconds": 8.03
+  },
+  {
+    "bench": "tb_h5_wave",
+    "status": "PASS",
+    "seconds": 8.88
+  },
+  {
+    "bench": "tb_gesture5_controls_new",
+    "status": "PASS",
+    "seconds": 8.14
+  },
+  {
+    "bench": "tb_gesture5_templates_ramopt",
+    "status": "PASS",
+    "seconds": 3.86
+  },
+  {
+    "bench": "tb_roi_shared_overlay",
+    "status": "PASS",
+    "seconds": 26.84
+  },
+  {
+    "bench": "tb_h4_skin",
+    "status": "PASS",
+    "seconds": 8.38
+  },
+  {
+    "bench": "tb_h4_overlay",
+    "status": "PASS",
+    "seconds": 13.81
+  },
+  {
+    "bench": "tb_h5_raster",
+    "status": "FAIL",
+    "seconds": 59.73,
+    "error": "tb_h5_raster_console.log\n\n****** xsim v2018.3 (64-bit)\n  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018\n  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018\n    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_h5_raster/xsim_script.tcl\n# xsim {tb_h5_raster} -autoloadwcfg -runall\nVivado Simulator 2018.3\nTime resolution is 1 ps\nrun -all\nEnrolled 1 in 9 frames\nEnrolled 2 in 8 frames\nEnrolled 3 in 8 frames\nFatal: Three samples missing\nTime: 43200130 ns  Iteration: 0  Process: /tb_h5_raster/Initial41_46  File: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/tb_h5_raster.sv\n$finish called at time : 43200130 ns\nrun: Time (s): cpu = 00:00:00 ; elapsed = 00:00:50 . Memory (MB): peak = 218.246 ; gain = 0.000\nexit\nINFO: [Common 17-206] Exiting xsim at Tue Oct 20 02:38:33 2026...\n"
+  },
+  {
+    "bench": "tb_controls6",
+    "status": "PASS",
+    "seconds": 9.55
+  },
+  {
+    "bench": "tb_matrix8",
+    "status": "PASS",
+    "seconds": 9.5
+  },
+  {
+    "bench": "tb_vision6",
+    "status": "PASS",
+    "seconds": 557.44
+  },
+  {
+    "bench": "tb_h5_ui",
+    "status": "PASS",
+    "seconds": 46.42
+  },
+  {
+    "bench": "tb_i2c6",
+    "status": "PASS",
+    "seconds": 10.01
+  },
+  {
+    "bench": "tb_health6",
+    "status": "PASS",
+    "seconds": 12.47
+  },
+  {
+    "bench": "tb_frame_path",
+    "status": "PASS",
+    "seconds": 8.89
+  },
+  {
+    "bench": "tb_menu_cdc6",
+    "status": "PASS",
+    "seconds": 10.05
+  },
+  {
+    "bench": "tb_camera_rgb_fifo",
+    "status": "PASS",
+    "seconds": 12.23
+  }
+]
