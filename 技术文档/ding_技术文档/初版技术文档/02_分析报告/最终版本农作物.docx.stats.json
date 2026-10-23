@@ -1,0 +1,394 @@
+{
+  "paragraphs": 1407,
+  "tables": 5,
+  "images": 14,
+  "sections": 1,
+  "styles_used": {
+    "Title": 1,
+    "Normal": 620,
+    "Heading 1": 11,
+    "Heading 2": 39,
+    "List Paragraph": 151,
+    "Plain Text": 4,
+    "Normal (Web)": 94,
+    "Heading 3": 39,
+    "HTML Preformatted": 416,
+    "paragraph": 32
+  },
+  "headings": [
+    {
+      "style": "Title",
+      "text": "农作物多源智能感知与实时诊断系统"
+    },
+    {
+      "style": "Heading 1",
+      "text": "项目概述"
+    },
+    {
+      "style": "Heading 2",
+      "text": "选题背景与意义"
+    },
+    {
+      "style": "Heading 2",
+      "text": "1.2  项目目标"
+    },
+    {
+      "style": "Heading 2",
+      "text": "技术规格"
+    },
+    {
+      "style": "Heading 1",
+      "text": "需求分析与系统设计"
+    },
+    {
+      "style": "Heading 2",
+      "text": "2.1 选题背景与意义"
+    },
+    {
+      "style": "Heading 3",
+      "text": "功能需求"
+    },
+    {
+      "style": "Heading 3",
+      "text": "性能需求"
+    },
+    {
+      "style": "Heading 2",
+      "text": "系统架构设计"
+    },
+    {
+      "style": "Heading 3",
+      "text": "顶层架构"
+    },
+    {
+      "style": "Heading 3",
+      "text": "状态机设计"
+    },
+    {
+      "style": "Heading 3",
+      "text": "时序设计"
+    },
+    {
+      "style": "Heading 2",
+      "text": "接口设计"
+    },
+    {
+      "style": "Heading 3",
+      "text": "模块功能概述"
+    },
+    {
+      "style": "Heading 3",
+      "text": "输入接口规格"
+    },
+    {
+      "style": "Heading 3",
+      "text": "输出接口规格"
+    },
+    {
+      "style": "Heading 1",
+      "text": "详细设计与实现"
+    },
+    {
+      "style": "Heading 2",
+      "text": "核心算法设计（核心模块：core_code）"
+    },
+    {
+      "style": "Heading 3",
+      "text": "rgb_to_hsv —— 色彩空间转换"
+    },
+    {
+      "style": "Heading 3",
+      "text": "gaussian_filter —— 高斯平滑去噪"
+    },
+    {
+      "style": "Heading 3",
+      "text": "sobel —— 边缘梯度检测"
+    },
+    {
+      "style": "Heading 3",
+      "text": "morphological_open —— 形态学开运算"
+    },
+    {
+      "style": "Heading 2",
+      "text": "关键模块设计"
+    },
+    {
+      "style": "Heading 3",
+      "text": "[ddr3_ctrl_2port模块]"
+    },
+    {
+      "style": "Heading 3",
+      "text": "功能描述："
+    },
+    {
+      "style": "Heading 3",
+      "text": "端口定义："
+    },
+    {
+      "style": "Heading 2",
+      "text": "逻辑设计："
+    },
+    {
+      "style": "Heading 3",
+      "text": "顶层结构与时钟域"
+    },
+    {
+      "style": "Heading 3",
+      "text": "写路径（16-bit → 128-bit → DDR3）"
+    },
+    {
+      "style": "Heading 3",
+      "text": "读路径（DDR3 → 128-bit → 16-bit）"
+    },
+    {
+      "style": "Heading 3",
+      "text": "仲裁与事务管理"
+    },
+    {
+      "style": "Heading 3",
+      "text": "地址与帧区间"
+    },
+    {
+      "style": "Heading 3",
+      "text": "复位/就绪与帧同步"
+    },
+    {
+      "style": "Heading 2",
+      "text": "资源使用设计"
+    },
+    {
+      "style": "Heading 3",
+      "text": "LUT 使用策略："
+    },
+    {
+      "style": "Heading 3",
+      "text": "寄存器使用"
+    },
+    {
+      "style": "Heading 3",
+      "text": "存储资源规划:"
+    },
+    {
+      "style": "Heading 1",
+      "text": "LLM 辅助设计优化记录"
+    },
+    {
+      "style": "Heading 2",
+      "text": "架构设计阶段LLM辅助"
+    },
+    {
+      "style": "Heading 3",
+      "text": "系统架构咨询"
+    },
+    {
+      "style": "Heading 2",
+      "text": "1) 顶层分工与数据流"
+    },
+    {
+      "style": "Heading 2",
+      "text": "2) 模块划分"
+    },
+    {
+      "style": "Heading 2",
+      "text": "3) 时钟/复位/跨域"
+    },
+    {
+      "style": "Heading 2",
+      "text": "4) 带宽与时延（以720p、RGB565、30 fps为例）"
+    },
+    {
+      "style": "Heading 2",
+      "text": "5) 可配参数与寄存器框架"
+    },
+    {
+      "style": "Heading 2",
+      "text": "6) 资源与功耗要点"
+    },
+    {
+      "style": "Heading 2",
+      "text": "7) 风险与备选"
+    },
+    {
+      "style": "Heading 2",
+      "text": "状态机设计优化"
+    },
+    {
+      "style": "Heading 2",
+      "text": "精简版状态机骨架（可直接改名/改端口套用）"
+    },
+    {
+      "style": "Heading 2",
+      "text": "怎么把它落到你的工程里"
+    },
+    {
+      "style": "Heading 2",
+      "text": "实现阶段LLM辅助"
+    },
+    {
+      "style": "Heading 3",
+      "text": "代码优化"
+    },
+    {
+      "style": "Heading 2",
+      "text": "问题与优化点（简洁版）"
+    },
+    {
+      "style": "Heading 2",
+      "text": "优化后代码（接口不变，可直接替换）"
+    },
+    {
+      "style": "Heading 2",
+      "text": "总结（对齐你的关注点）"
+    },
+    {
+      "style": "Heading 3",
+      "text": "时序优化"
+    },
+    {
+      "style": "Heading 2",
+      "text": "调试阶段LLM辅助"
+    },
+    {
+      "style": "Heading 3",
+      "text": "仿真问题解决"
+    },
+    {
+      "style": "Heading 3",
+      "text": ""
+    },
+    {
+      "style": "Heading 3",
+      "text": "一步修复（任选其一，推荐都做）"
+    },
+    {
+      "style": "Heading 2",
+      "text": "LLM辅助总结"
+    },
+    {
+      "style": "Heading 3",
+      "text": "效果评估："
+    },
+    {
+      "style": "Heading 1",
+      "text": "综合实现结果"
+    },
+    {
+      "style": "Heading 2",
+      "text": "资源使用报告"
+    },
+    {
+      "style": "Heading 2",
+      "text": "时序性能报告"
+    },
+    {
+      "style": "Heading 1",
+      "text": ""
+    },
+    {
+      "style": "Heading 1",
+      "text": "创新点与特色"
+    },
+    {
+      "style": "Heading 2",
+      "text": "设计创新点"
+    },
+    {
+      "style": "Heading 2",
+      "text": "工程实现特色"
+    },
+    {
+      "style": "Heading 2",
+      "text": "LLM 辅助方法创新"
+    },
+    {
+      "style": "Heading 1",
+      "text": "未来改进方向"
+    },
+    {
+      "style": "Heading 2",
+      "text": "当前不足"
+    },
+    {
+      "style": "Heading 2",
+      "text": "改进计划"
+    },
+    {
+      "style": "Heading 3",
+      "text": "多类病虫害分类识别（PL 分割 + PS 轻量分类）"
+    },
+    {
+      "style": "Heading 3",
+      "text": "实时数据存储与统计预测"
+    },
+    {
+      "style": "Heading 3",
+      "text": "降功耗与架构优化"
+    },
+    {
+      "style": "Heading 3",
+      "text": "联动除害执行（喷洒闭环）"
+    },
+    {
+      "style": "Heading 2",
+      "text": "后续发展方向"
+    },
+    {
+      "style": "Heading 1",
+      "text": "结论"
+    },
+    {
+      "style": "Heading 2",
+      "text": "项目完成情况"
+    },
+    {
+      "style": "Heading 3",
+      "text": "工程成果"
+    },
+    {
+      "style": "Heading 2",
+      "text": "目标达成度"
+    },
+    {
+      "style": "Heading 2",
+      "text": "项目价值"
+    },
+    {
+      "style": "Heading 3",
+      "text": "技术价值"
+    },
+    {
+      "style": "Heading 3",
+      "text": "工程与学习价值"
+    },
+    {
+      "style": "Heading 3",
+      "text": "社会与落地价值"
+    },
+    {
+      "style": "Heading 1",
+      "text": "参考文献"
+    },
+    {
+      "style": "Heading 1",
+      "text": "附录"
+    },
+    {
+      "style": "Heading 2",
+      "text": "系统源代码目录树"
+    }
+  ],
+  "inline_shapes": 16,
+  "core_properties": {
+    "title": "",
+    "author": "huawei",
+    "subject": ""
+  },
+  "page": {
+    "page_width": 7560310,
+    "page_height": 10692130,
+    "orientation": "PORTRAIT (0)",
+    "left_margin": 1143000,
+    "right_margin": 1143000
+  },
+  "headers_footers": []
+}

@@ -1,0 +1,15 @@
+Canny 阈值调节——完整工程
+
+这是可独立打开的完整工程，已包含 14 组 IP 配置及生成源码、SDC 约束、引脚/接口配置、RISC-V 固件和全部字库。
+
+1. 将整个压缩包解压到同一个目录，保留所有子文件夹。
+2. 在 Efinity 中打开本目录的 Ti60_Demo.xml。
+3. 如果此前已打开缺少文件的 Canny_threshold_update 工程，先关闭该工程再重新打开。
+4. 可直接使用 outflow/Ti60_Demo.bit（JTAG）或 outflow/Ti60_Demo.hex（SPI Active）。
+5. 重新编译使用 Efinity Compile，或 tools/build_fpga.ps1；不要移除 Ti60_Demo.pt.sdc，也不要改用默认时序约束。
+
+按键：任意模式长按 K1 约 2 秒进入/退出；调节中短按 K1 减小，短按 K2 增大，长按 K2 切换高/低阈值。
+右下角实时显示两项数值；默认低 40、高 80；设置在退出后保留，复位/重新上电恢复默认。
+
+所附下载文件来自 2026-10-09 已通过综合、布局布线及时序检查的构建，未上板实测。
+本次补齐工程依赖，不改动算法和按键逻辑。可运行 tools/verify_project_files.py 检查本地依赖是否齐全。

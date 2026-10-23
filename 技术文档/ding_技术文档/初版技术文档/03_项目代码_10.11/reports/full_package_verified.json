@@ -1,0 +1,15 @@
+{
+  "project": "C:\\Users\\Aqi'Glow\\Documents\\Codex\\2026-10-09\\d-gitku-efinity-project-main-efinity\\work\\unzip\\Canny_threshold_full_project",
+  "design_and_ip_sources": 74,
+  "ip_settings": 14,
+  "sdc_files": 1,
+  "checked_files": 144,
+  "missing_files": [],
+  "checked_at": "2026-10-10T10:22:44.576839+08:00",
+  "extracted_archive_synthesis": "PASS",
+  "hardware_logic_changed": false,
+  "bitstream_build_date": "2026-10-09",
+  "physical_board_test": "not performed",
+  "bit_sha256": "809fd251efe5dcbcd3482d1b6fc2ff8902497e64b18fd6de13ebbab97af723d2",
+  "hex_sha256": "e9b38d4c99abddcd8e3924bac2dc1dca60aa6431369b507b44259db198407516"
+}

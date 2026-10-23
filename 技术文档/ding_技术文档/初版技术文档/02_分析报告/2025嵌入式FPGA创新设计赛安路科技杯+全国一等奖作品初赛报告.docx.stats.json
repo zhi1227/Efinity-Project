@@ -1,0 +1,137 @@
+{
+  "paragraphs": 315,
+  "tables": 1,
+  "images": 28,
+  "sections": 1,
+  "styles_used": {
+    "Title": 4,
+    "章标题": 2,
+    "Body Text": 226,
+    "Normal": 44,
+    "Heading 1": 3,
+    "Heading 2": 14,
+    "List Paragraph": 7,
+    "Heading 3": 5,
+    "参考文献条目": 10
+  },
+  "headings": [
+    {
+      "style": "Title",
+      "text": ""
+    },
+    {
+      "style": "Title",
+      "text": ""
+    },
+    {
+      "style": "Title",
+      "text": ""
+    },
+    {
+      "style": "Title",
+      "text": "多模态智能四探针半导体测试仪"
+    },
+    {
+      "style": "Heading 1",
+      "text": "作品概述"
+    },
+    {
+      "style": "Heading 2",
+      "text": "功能与特性"
+    },
+    {
+      "style": "Heading 2",
+      "text": "应用领域"
+    },
+    {
+      "style": "Heading 2",
+      "text": "主要技术特点"
+    },
+    {
+      "style": "Heading 2",
+      "text": "主要性能指标"
+    },
+    {
+      "style": "Heading 2",
+      "text": "主要创新点"
+    },
+    {
+      "style": "Heading 2",
+      "text": "设计流程"
+    },
+    {
+      "style": "Heading 1",
+      "text": "系统组成及功能说明"
+    },
+    {
+      "style": "Heading 2",
+      "text": "2.1整体介绍"
+    },
+    {
+      "style": "Heading 2",
+      "text": "2.2硬件系统介绍"
+    },
+    {
+      "style": "Heading 3",
+      "text": "硬件整体介绍；"
+    },
+    {
+      "style": "Heading 3",
+      "text": "机械设计介绍"
+    },
+    {
+      "style": "Heading 3",
+      "text": "电路各模块介绍（从总体到局部，逐级给出各模块的具体设计图，并标记"
+    },
+    {
+      "style": "Heading 2",
+      "text": "2.3软件系统介绍"
+    },
+    {
+      "style": "Heading 1",
+      "text": "完成情况及性能参数"
+    },
+    {
+      "style": "Heading 2",
+      "text": "整体介绍（整个系统实物的正面、斜45°全局性照片）"
+    },
+    {
+      "style": "Heading 2",
+      "text": "工程成果（分硬件实物、软件界面等设计结果）"
+    },
+    {
+      "style": "Heading 2",
+      "text": "特性成果"
+    },
+    {
+      "style": "Heading 3",
+      "text": "3.3.1 关键性能指标（实测/工程值）"
+    },
+    {
+      "style": "Heading 2",
+      "text": "总结"
+    },
+    {
+      "style": "Heading 3",
+      "text": "4.44.1 可扩展之处"
+    },
+    {
+      "style": "Heading 2",
+      "text": "心得体会"
+    }
+  ],
+  "inline_shapes": 28,
+  "core_properties": {
+    "title": "",
+    "author": "倥闹盗硬纯",
+    "subject": ""
+  },
+  "page": {
+    "page_width": 7560310,
+    "page_height": 10692130,
+    "orientation": "PORTRAIT (0)",
+    "left_margin": 1143000,
+    "right_margin": 1143000
+  },
+  "headers_footers": []
+}

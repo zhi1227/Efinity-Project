@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" font-family="Microsoft YaHei, Segoe UI, sans-serif">
+  <rect width="1200" height="720" fill="#f7f9fc"/>
+  <text x="600" y="40" font-size="24" font-weight="700" fill="#1f2d3d" text-anchor="middle">项目开发流程 → 技术文档章节映射（七阶段主干）</text>
+  <text x="600" y="66" font-size="13" fill="#5a6b7d" text-anchor="middle">每个阶段都必须产出「可写进文档的证据」：表、图、报告截图、实测数据</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 z" fill="#4a7fbf"/>
+    </marker>
+  </defs>
+
+  <!-- stage boxes -->
+  <g font-size="13">
+    <!-- row template: x=40, w=250, h=118 -->
+    <!-- 1 -->
+    <rect x="36" y="100" width="252" height="122" rx="10" fill="#ffffff" stroke="#7fa8d8"/>
+    <rect x="36" y="100" width="252" height="26" rx="10" fill="#e8f1fb"/>
+    <text x="162" y="118" font-weight="700" fill="#1b4f8a" text-anchor="middle">① 需求分析</text>
+    <text x="50" y="146" fill="#243447">明确指标 / 精度 / 场景约束</text>
+    <text x="50" y="168" fill="#8a5a1f">产出：性能需求表</text>
+    <text x="50" y="188" fill="#8a5a1f">　　　指标→参数映射表</text>
+    <text x="50" y="210" fill="#5a6b7d">→ 1.1 功能与特性 · 1.4 指标</text>
+
+    <!-- 2 -->
+    <rect x="320" y="100" width="252" height="122" rx="10" fill="#ffffff" stroke="#7fa8d8"/>
+    <rect x="320" y="100" width="252" height="26" rx="10" fill="#e8f1fb"/>
+    <text x="446" y="118" font-weight="700" fill="#1b4f8a" text-anchor="middle">② 选型与原型验证</text>
+    <text x="334" y="146" fill="#243447">平台选型 + Python/OpenCV 先行</text>
+    <text x="334" y="168" fill="#8a5a1f">产出：算法对比表、参数扫描表</text>
+    <text x="334" y="188" fill="#8a5a1f">　　　原型运行截图</text>
+    <text x="334" y="210" fill="#5a6b7d">→ 1.6 设计流程 · 详细设计</text>
+
+    <!-- 3 -->
+    <rect x="604" y="100" width="252" height="122" rx="10" fill="#ffffff" stroke="#7fa8d8"/>
+    <rect x="604" y="100" width="252" height="26" rx="10" fill="#e8f1fb"/>
+    <text x="730" y="118" font-weight="700" fill="#1b4f8a" text-anchor="middle">③ 架构与模块划分</text>
+    <text x="618" y="146" fill="#243447">顶层框图/数据流/时钟域/接口</text>
+    <text x="618" y="168" fill="#8a5a1f">产出：系统框图、模块职责表</text>
+    <text x="618" y="188" fill="#8a5a1f">　　　引脚与接口规格表</text>
+    <text x="618" y="210" fill="#5a6b7d">→ 2.1 / 2.2.3 / 2.3.1</text>
+
+    <!-- 4 -->
+    <rect x="888" y="100" width="276" height="122" rx="10" fill="#ffffff" stroke="#7fa8d8"/>
+    <rect x="888" y="100" width="276" height="26" rx="10" fill="#e8f1fb"/>
+    <text x="1026" y="118" font-weight="700" fill="#1b4f8a" text-anchor="middle">④ 算法硬件化·流水线集成</text>
+    <text x="902" y="146" fill="#243447">定点化 / 位宽规划 / valid-done 握手</text>
+    <text x="902" y="168" fill="#8a5a1f">产出：定点化表、流水线时序图</text>
+    <text x="902" y="188" fill="#8a5a1f">　　　缓冲与带宽估算</text>
+    <text x="902" y="210" fill="#5a6b7d">→ 详细设计·核心算法</text>
+
+    <!-- 5 -->
+    <rect x="888" y="272" width="276" height="122" rx="10" fill="#ffffff" stroke="#7fa8d8"/>
+    <rect x="888" y="272" width="276" height="26" rx="10" fill="#e8f1fb"/>
+    <text x="1026" y="290" font-weight="700" fill="#1b4f8a" text-anchor="middle">⑤ 资源/时序/功耗优化</text>
+    <text x="902" y="318" fill="#243447">LUT·BRAM·DSP / 时序余量 / 功耗</text>
+    <text x="902" y="340" fill="#8a5a1f">产出：资源报告、时序报告截图</text>
+    <text x="902" y="360" fill="#8a5a1f">　　　功耗估算表（动态+静态）</text>
+    <text x="902" y="382" fill="#5a6b7d">→ 综合实现结果 · 3.3 特性成果</text>
+
+    <!-- 6 -->
+    <rect x="604" y="272" width="252" height="122" rx="10" fill="#ffffff" stroke="#7fa8d8"/>
+    <rect x="604" y="272" width="252" height="26" rx="10" fill="#e8f1fb"/>
+    <text x="730" y="290" font-weight="700" fill="#1b4f8a" text-anchor="middle">⑥ 软硬件联调与标定</text>
+    <text x="618" y="318" fill="#243447">协议校核 / 计量标定 / 闭环验证</text>
+    <text x="618" y="340" fill="#8a5a1f">产出：串口/上位机截图、协议帧表</text>
+    <text x="618" y="360" fill="#8a5a1f">　　　标定曲线、误差分析</text>
+    <text x="618" y="382" fill="#5a6b7d">→ 3.2 工程成果 · 3.3</text>
+
+    <!-- 7 -->
+    <rect x="320" y="272" width="252" height="122" rx="10" fill="#ffffff" stroke="#7fa8d8"/>
+    <rect x="320" y="272" width="252" height="26" rx="10" fill="#e8f1fb"/>
+    <text x="446" y="290" font-weight="700" fill="#1b4f8a" text-anchor="middle">⑦ 长稳测试与参数固化</text>
+    <text x="334" y="318" fill="#243447">连续运行 / 误码率 / 均匀性 / 重复性</text>
+    <text x="334" y="340" fill="#8a5a1f">产出：稳定性记录表</text>
+    <text x="334" y="360" fill="#8a5a1f">　　　对比表（本方案 vs 传统）</text>
+    <text x="334" y="382" fill="#5a6b7d">→ 3.3 特性成果 · 4.1 可扩展</text>
+
+    <!-- output -->
+    <rect x="36" y="272" width="252" height="122" rx="10" fill="#fff6e8" stroke="#d9a441"/>
+    <text x="162" y="300" font-weight="700" fill="#8a5a1f" text-anchor="middle">成果固化</text>
+    <text x="50" y="326" fill="#243447">• 系统框图 + 实物照（正面/45°）</text>
+    <text x="50" y="348" fill="#243447">• 性能指标表（≤12 行）</text>
+    <text x="50" y="370" fill="#243447">• 资源/时序/功耗三张报告图</text>
+    <text x="50" y="392" fill="#243447">• 创新点 4~6 条 + 心得踩坑记</text>
+  </g>
+
+  <!-- connectors -->
+  <g stroke="#4a7fbf" stroke-width="2" fill="none" marker-end="url(#ar)">
+    <path d="M288 161 L318 161"/>
+    <path d="M572 161 L602 161"/>
+    <path d="M856 161 L886 161"/>
+    <path d="M1026 222 L1026 270"/>
+    <path d="M886 333 L858 333"/>
+    <path d="M602 333 L574 333"/>
+    <path d="M318 333 L290 333"/>
+  </g>
+
+  <!-- two threads -->
+  <rect x="36" y="440" width="1128" height="112" rx="10" fill="#eef7f1" stroke="#7cc39a"/>
+  <text x="60" y="468" font-size="14" font-weight="700" fill="#1f7a4d">两条贯穿全程的隐形主线（建议在文档中显式写出）</text>
+  <text x="60" y="496" font-size="13" fill="#243447">主线 A · 验证前置：先在 PC 端用 Python/OpenCV/MATLAB 跑通算法与参数，再转 HDL 硬件实现 —— 人脸检测文档总结为「软件验证先行、硬件优化跟进」。</text>
+  <text x="60" y="520" font-size="13" fill="#243447">主线 B · 统一接口的模块化并行开发：项目初期各成员围绕统一接口独立开发模块，只约定输入/输出约束即可完成功能，最后集成联调。</text>
+  <text x="60" y="544" font-size="13" fill="#8a5a1f">收益：① 界面/协议/引脚表天然成为文档素材；② 人力并行后仍能收敛；③ 移植与迭代成本显著降低。</text>
+
+  <!-- stage-doc mapping strip -->
+  <rect x="36" y="576" width="1128" height="112" rx="10" fill="#ffffff" stroke="#c9d6e4"/>
+  <text x="60" y="604" font-size="14" font-weight="700" fill="#1b4f8a">文档章节落位速查</text>
+  <g font-size="12.5" fill="#243447">
+    <text x="60" y="630">第一章 作品概述 ← 阶段 ①②</text>
+    <text x="360" y="630">第二章 系统组成及功能说明 ← 阶段 ③④</text>
+    <text x="760" y="630">第三章 完成情况及性能参数 ← 阶段 ⑤⑥⑦</text>
+    <text x="60" y="656">第四章 总结（可扩展之处 + 心得体会）← 阶段 ⑦ 与全程复盘</text>
+    <text x="60" y="680" fill="#8a5a1f">加分章节：LLM/AI 辅助设计优化记录（架构咨询→代码优化→时序优化→仿真调试→效果评估，每段都留「优化前后」对照证据）</text>
+  </g>
+</svg>

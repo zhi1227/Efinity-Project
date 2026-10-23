@@ -1,0 +1,401 @@
+{
+  "paragraphs": 301,
+  "tables": 22,
+  "images": 4,
+  "headings": [
+    {
+      "style": "Title",
+      "text": "基于 Ti60 FPGA 的\n实时图像边缘检测系统"
+    },
+    {
+      "style": "Heading 3",
+      "text": "摘要"
+    },
+    {
+      "style": "Heading 1",
+      "text": "目录"
+    },
+    {
+      "style": "Heading 1",
+      "text": "一 作品概述与功能划分"
+    },
+    {
+      "style": "Heading 2",
+      "text": "选题与设计目标"
+    },
+    {
+      "style": "Heading 2",
+      "text": "两部分功能安排"
+    },
+    {
+      "style": "Heading 2",
+      "text": "主要技术规格"
+    },
+    {
+      "style": "Heading 2",
+      "text": "验证组织"
+    },
+    {
+      "style": "Heading 1",
+      "text": "二 赛题四功能设计：基础要求对应"
+    },
+    {
+      "style": "Heading 2",
+      "text": "基础要求与当前实现"
+    },
+    {
+      "style": "Heading 2",
+      "text": "数据通路与显示方式"
+    },
+    {
+      "style": "Heading 2",
+      "text": "实时性与验收口径"
+    },
+    {
+      "style": "Heading 1",
+      "text": "赛题四功能设计：高阶挑战对应"
+    },
+    {
+      "style": "Heading 2",
+      "text": "指南列出的六项挑战"
+    },
+    {
+      "style": "Heading 2",
+      "text": "当前交互与算法边界"
+    },
+    {
+      "style": "Heading 2",
+      "text": "高阶功能演示入口"
+    },
+    {
+      "style": "Heading 1",
+      "text": "系统组成与硬件设计"
+    },
+    {
+      "style": "Heading 2",
+      "text": "总体数据流"
+    },
+    {
+      "style": "Heading 2",
+      "text": "硬件组成"
+    },
+    {
+      "style": "Heading 1",
+      "text": "时钟复位与视频接口"
+    },
+    {
+      "style": "Heading 2",
+      "text": "时钟域与跨域关系"
+    },
+    {
+      "style": "Heading 2",
+      "text": "视频扫描参数"
+    },
+    {
+      "style": "Heading 2",
+      "text": "外设连接要点"
+    },
+    {
+      "style": "Heading 1",
+      "text": "图像预处理与行缓存"
+    },
+    {
+      "style": "Heading 2",
+      "text": "灰度变换与定点位宽"
+    },
+    {
+      "style": "Heading 2",
+      "text": "3×3 行缓存"
+    },
+    {
+      "style": "Heading 2",
+      "text": "中值与高斯滤波"
+    },
+    {
+      "style": "Heading 1",
+      "text": "Sobel 梯度与二值边缘"
+    },
+    {
+      "style": "Heading 2",
+      "text": "梯度计算"
+    },
+    {
+      "style": "Heading 2",
+      "text": "四方向量化"
+    },
+    {
+      "style": "Heading 2",
+      "text": "阈值比较与输出"
+    },
+    {
+      "style": "Heading 1",
+      "text": "赛题功能的显示与演示入口"
+    },
+    {
+      "style": "Heading 2",
+      "text": "与基础要求及高阶挑战对应的模式"
+    },
+    {
+      "style": "Heading 2",
+      "text": "灰度与边缘分屏"
+    },
+    {
+      "style": "Heading 2",
+      "text": "按键与串口选择"
+    },
+    {
+      "style": "Heading 2",
+      "text": "圆形／矩形识别观察"
+    },
+    {
+      "style": "Heading 1",
+      "text": "DDR3 帧缓存与冻结控制"
+    },
+    {
+      "style": "Heading 2",
+      "text": "数据组织与地址分配"
+    },
+    {
+      "style": "Heading 2",
+      "text": "冻结与恢复机制"
+    },
+    {
+      "style": "Heading 2",
+      "text": "带宽口径"
+    },
+    {
+      "style": "Heading 1",
+      "text": "高斯 Canny 流水线"
+    },
+    {
+      "style": "Heading 2",
+      "text": "处理结构"
+    },
+    {
+      "style": "Heading 2",
+      "text": "非极大值抑制与双阈值"
+    },
+    {
+      "style": "Heading 2",
+      "text": "局部连接及算法边界"
+    },
+    {
+      "style": "Heading 1",
+      "text": "像素坐标与多路时序对齐"
+    },
+    {
+      "style": "Heading 2",
+      "text": "延迟计算口径"
+    },
+    {
+      "style": "Heading 2",
+      "text": "完整控制包与有效判定"
+    },
+    {
+      "style": "Heading 2",
+      "text": "帧边界提交"
+    },
+    {
+      "style": "Heading 1",
+      "text": "中央区域圆形／矩形识别"
+    },
+    {
+      "style": "Heading 2",
+      "text": "输入与适用场景"
+    },
+    {
+      "style": "Heading 2",
+      "text": "两帧统计过程"
+    },
+    {
+      "style": "Heading 2",
+      "text": "输出与观察"
+    },
+    {
+      "style": "Heading 1",
+      "text": "按键串口与参数提交"
+    },
+    {
+      "style": "Heading 2",
+      "text": "按键同步与消抖"
+    },
+    {
+      "style": "Heading 2",
+      "text": "UART 字节协议"
+    },
+    {
+      "style": "Heading 2",
+      "text": "仲裁与功能边界"
+    },
+    {
+      "style": "Heading 1",
+      "text": "三 额外扩展功能"
+    },
+    {
+      "style": "Heading 2",
+      "text": "功能范围"
+    },
+    {
+      "style": "Heading 2",
+      "text": "扩展显示模式"
+    },
+    {
+      "style": "Heading 2",
+      "text": "幅值、滤波与状态观察"
+    },
+    {
+      "style": "Heading 1",
+      "text": "人脸候选区域检测"
+    },
+    {
+      "style": "Heading 2",
+      "text": "YCbCr 三通道肤色判定"
+    },
+    {
+      "style": "Heading 2",
+      "text": "多数滤波与腐蚀"
+    },
+    {
+      "style": "Heading 2",
+      "text": "检测含义与适用条件"
+    },
+    {
+      "style": "Heading 1",
+      "text": "网格连通域与候选框发布"
+    },
+    {
+      "style": "Heading 2",
+      "text": "占据网格与后台搜索"
+    },
+    {
+      "style": "Heading 2",
+      "text": "几何筛选"
+    },
+    {
+      "style": "Heading 2",
+      "text": "帧级延迟与超时"
+    },
+    {
+      "style": "Heading 1",
+      "text": "四 实现结果与验证"
+    },
+    {
+      "style": "Heading 2",
+      "text": "资源利用率"
+    },
+    {
+      "style": "Heading 2",
+      "text": "时序分析"
+    },
+    {
+      "style": "Heading 2",
+      "text": "完成状态与结果解释"
+    },
+    {
+      "style": "Heading 1",
+      "text": "RTL 仿真测试结果"
+    },
+    {
+      "style": "Heading 2",
+      "text": "回归入口与覆盖范围"
+    },
+    {
+      "style": "Heading 2",
+      "text": "测试结论的边界"
+    },
+    {
+      "style": "Heading 1",
+      "text": "波形复核与构建版本"
+    },
+    {
+      "style": "Heading 2",
+      "text": "独立波形复核"
+    },
+    {
+      "style": "Heading 2",
+      "text": "当前构建与历史下载"
+    },
+    {
+      "style": "Heading 2",
+      "text": "工程清单核对"
+    },
+    {
+      "style": "Heading 1",
+      "text": "五 构建操作与分组演示"
+    },
+    {
+      "style": "Heading 2",
+      "text": "工程打开与构建"
+    },
+    {
+      "style": "Heading 2",
+      "text": "下载与运行"
+    },
+    {
+      "style": "Heading 2",
+      "text": "分组演示与验收"
+    },
+    {
+      "style": "Heading 1",
+      "text": "六 设计特点与后续改进"
+    },
+    {
+      "style": "Heading 2",
+      "text": "设计特点"
+    },
+    {
+      "style": "Heading 2",
+      "text": "现有局限与改进方向"
+    },
+    {
+      "style": "Heading 2",
+      "text": "总结"
+    },
+    {
+      "style": "Heading 1",
+      "text": "附录一 参数与接口速查"
+    },
+    {
+      "style": "Heading 2",
+      "text": "主要编译期参数"
+    },
+    {
+      "style": "Heading 2",
+      "text": "关键接口约定"
+    },
+    {
+      "style": "Heading 1",
+      "text": "附录二 工程索引与参考资料"
+    },
+    {
+      "style": "Heading 2",
+      "text": "主要工程文件"
+    },
+    {
+      "style": "Heading 2",
+      "text": "工程证据索引"
+    },
+    {
+      "style": "Heading 2",
+      "text": "参考技术文档与赛题依据"
+    }
+  ],
+  "styles_used": {
+    "Normal": 203,
+    "Title": 1,
+    "Heading 3": 1,
+    "Heading 1": 24,
+    "Heading 2": 68,
+    "Caption": 4
+  },
+  "inline_shapes": 4,
+  "sections": 1,
+  "equations": 0,
+  "core_properties": {
+    "author": "郭亚琪",
+    "title": "基于 Ti60 FPGA 的实时图像边缘检测系统：赛题四技术文档",
+    "last_modified_by": "郭亚琪",
+    "revision": 1
+  },
+  "headers_footers": []
+}

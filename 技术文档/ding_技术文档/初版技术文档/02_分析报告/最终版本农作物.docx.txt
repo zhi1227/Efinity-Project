@@ -1,0 +1,1330 @@
+[Title@None] 农作物多源智能感知与实时诊断系统
+[Normal@CENTER (1)] 摘要
+[Normal@None] 针对我国传统农业病虫害防治存在的人工依赖度高、诊断效率低、大面积应用成本高昂等核心痛点，本研究提出一种基于ZYNQ平台的“农作物多源智能感知与实时诊断”系统解决方案。该系统以ZYNQ异构计算平台为核心，构建了一套集“感知-处理-诊断-决策”于一体的自动化、高精度移动巡检体系，具备四大创新优势：
+[Normal@None] (1) 异构硬件加速： 依托ZYNQ的PL（可编程逻辑）端，实现对图像采集、预处理、特征提取等计算密集型任务的硬件加速，达成高通量的实时处理能力。
+[Normal@None] (2) 端边协同巡检： 创新地将PL端的图像处理流水线与PS（处理系统）端的小车移动平台深度融合，构建了从数据采集到平台控制的完整闭环，实现自主移动诊断。
+[Normal@None] (3) 多源融合诊断： 集成高灵敏度视觉传感器与温湿度、光照等多维环境传感器，通过多源数据融合分析，显著提升病害诊断的准确性与可靠性。
+[Normal@None] (4) 高度模块化扩展： 支持功能模块化扩展，可搭载至无人车、无人机等多种农业自动化装备，实现智能的自主农巡任务。
+[Normal@None] 在具体实施中，系统通过OV5640摄像头与环境传感器阵列进行多源数据采集。采集到的数据流直接送入PL端进行实时处理，包括图像增强、病斑分割与特征提取。处理结果与环境数据一并送至PS端，完成作物健康状态的综合诊断与决策。诊断结果不仅能在本地高清屏幕上以可视化方式标识病害区域，为现场人员提供直观决策支持，还能为后续的精准作业提供数据输入。本方案凭借其低功耗、高实时性与强大的现场适应性，有效解决了传统病虫害防控的技术瓶颈，为实现智慧农业的精准化、自动化管理提供了高效、灵活且可扩展的技术范本。
+[Normal@None] 关键词：病虫害防控、多源智能感知、AI算法、ZYNQ
+[Heading 1@None] 项目概述
+[Heading 2@None] 选题背景与意义
+[List Paragraph@JUSTIFY (3)] 选题背景:
+[Normal@JUSTIFY (3)] 随着农业现代化成为国家战略，病虫害的精准、高效防控已成为关键瓶颈。传统模式依赖人工，存在效率低、成本高、响应慢等问题，且过度依赖农药严重威胁着食品安全与生态环境。
+[Normal@JUSTIFY (3)] 近年来，人工智能与物联网技术虽为智慧农业带来曙光，但现有解决方案存在局限：固定式监控成本高昂，难以大面积覆盖；而云端分析则因网络延迟与功耗问题，无法满足农业现场对高实时性的苛刻要求。
+[Normal@JUSTIFY (3)] 因此，市场迫切需要一种能在田间地头完成边缘侧实时感知与智能诊断的低成本、高效率移动平台。本课题正是在此背景下，提出基于ZYNQ异构计算平台的“农作物多源智能感知与实时诊断系统”，旨在为现代农业的病虫害防控提供一个高效、精准的自动化新范式。
+[List Paragraph@JUSTIFY (3)] 选题意义:
+[Normal@JUSTIFY (3)] 突破边缘算力瓶颈： 利用ZYNQ的FPGA硬件加速，在移动端实现了以往唯有服务器才能完成的高通量、低延迟实时图像诊断。
+[Normal@JUSTIFY (3)] 实现真正的自主智能： 深度融合感知（PL）与控制（PS），使设备从“传感器”进化为能够自主移动、思考和决策的“智能体”。
+[Normal@JUSTIFY (3)] 提升诊断的科学维度： 结合图像与环境（温湿度、光照）多源数据进行融合分析，使诊断结果更精准、更科学，超越了单纯的视觉识别。
+[Heading 2@None] 1.2  项目目标
+[Plain Text@JUSTIFY (3)] 功能目标：
+[Normal@JUSTIFY (3)] 我们的系统旨在构建一个集多源感知、边缘智能、实时诊断于一体的农作物多源智能感知与实时诊断系统，我们目标实现以下主要功能：
+[List Paragraph@JUSTIFY (3)] 实时图像采集与处理
+[List Paragraph@JUSTIFY (3)] 多源环境数据融合分析
+[List Paragraph@JUSTIFY (3)] 实时可视化诊断结果显示
+[List Paragraph@JUSTIFY (3)] 自主移动巡检与无线蓝牙远程控制
+[Normal@None] 同时系统可实现以下性能指标：
+<<TABLE 0: 9x2>>
+   | 性能指标 | 技术参数
+   | 单点识别病虫害精度 | >90％
+   | 远程蓝牙控制距离 | >50m
+   | 处理帧率 | 30帧/秒
+   | 边缘检测速度 | 1像素/2个时钟周期
+   | PL部分系统功耗 | < 50W
+   | PS部分系统功耗 | <10W
+   | 最小识别病斑尺寸 | <2cm²
+   | 端到端处理延迟 | < 39ms
+[List Paragraph@JUSTIFY (3)] 学习目标：
+[Normal (Web)@JUSTIFY (3)] (1) 掌握ZYNQ异构平台开发：深入理解ZYNQ的PS与PL协同工作架构，熟练运用Vivado进行硬件逻辑设计，并掌握Vitis下的嵌入式软件开发流程。
+[Normal (Web)@JUSTIFY (3)] (2) 实现硬件图像处理流水线： 掌握用Verilog将图像处理算法（如色彩空间转换、滤波、边缘检测）转换为PL端并行流水线架构的能力，实现1像素/2个时钟周期的高吞吐率。
+[Normal (Web)@JUSTIFY (3)] (3) 精通多源感知与系统融合：熟练在PS端通过C编程，实现对PL端图像处理结果的读取与控制、对温湿度等多源传感器的信息采集，并完成多源数据的融合决策。
+[Normal (Web)@JUSTIFY (3)] (4) 完成端边一体化系统联调：最终将软硬件系统集成到移动平台上，完成从自主巡检、实时诊断到结果输出的全功能闭环，并进行性能优化与稳定性测试。
+[Heading 2@None] 技术规格
+<<TABLE 1: 5x2>>
+   | 目标器件 | Xilinx ZYNQ-7000系列
+   | 开发环境 | Vivado 和Vitis classic 2024.2
+   | 编程语言 | Verilog 、C
+   | 验证平台 | 搭载病虫害诊断系统的三驱巡航小车
+   | 应用领域 | 大面积农田自主巡航实时诊断病虫害
+[Heading 1@None] 需求分析与系统设计
+[Heading 2@None] 2.1 选题背景与意义
+[Heading 3@None] 功能需求
+[Normal@JUSTIFY (3)] （1）多源数据采集功能：系统需能实时采集高清视频图像，并同步获取作物生长环境的关键参数，如温度、湿度和光照强度。
+[List Paragraph@JUSTIFY (3)] 图像处理与诊断功能：
+[Normal@JUSTIFY (3)] -  硬件加速处理：必须在PL端通过硬件流水线对图像进行实时预处理、病斑分割与特征提取。
+[Normal@JUSTIFY (3)] -  融合诊断决策：必须在PS端融合视觉特征与环境数据，完成对作物健康状态的综合分析与智能诊断。
+[Normal@JUSTIFY (3)] （3）平台控制与交互功能：
+[Normal@JUSTIFY (3)] -  自主移动巡检：PS端需能根据预设路径或实时蓝牙远程控制移动平台，实现自主巡检功能。
+[Normal@JUSTIFY (3)] -  结果可视化：系统需能将诊断结果和决策建议通过串口屏和HDMI显示屏进行可视化输出。
+[Normal@JUSTIFY (3)] （4）系统扩展与接口功能：系统需具备模块化特性，预留标准接口，以便未来能搭载于不同移动平台（如无人机）。
+[Heading 3@None] 性能需求
+<<TABLE 2: 8x2>>
+   | 单点识别病虫害精度 | >90％
+   | 远程蓝牙控制距离 | >50m
+   | 处理帧率 | 30帧/秒
+   | 边缘检测速度 | 1像素/2个时钟周期
+   | PL部分系统功耗 | < 50W
+   | PS部分系统功耗 | <10W
+   | 最小识别病斑尺寸 | <2cm²
+   | 端到端处理延迟 | < 39ms
+[Heading 2@None] 系统架构设计
+[Heading 3@None] 顶层架构
+[Normal@JUSTIFY (3)] 本系统采用ZYNQ PS+PL协同处理模式，PL端专攻图像处理算法与系统功能，PS端辅助运动控制与数据整合下发决策数据。系统以图像处理为核心，主要组成部分为：OV5640图像采集，核心算法处理、HDMI和串口显示、两路电机控制、光强和温湿度传感器数据采集、蓝牙通信模块。系统整体设计框图如下：
+[Normal] <IMAGE>
+[Normal@CENTER (1)] 图2-1 系统整体设计框图
+[Heading 3@None] 状态机设计
+[Plain Text@None] 状态转换图：
+[Normal] <IMAGE>
+[Normal@CENTER (1)] 图2-2 状态转换图
+[Plain Text@JUSTIFY (3)] 状态说明：
+[List Paragraph@JUSTIFY (3)] IDLE：系统初始化状态
+[Normal@JUSTIFY (3)] 等待所有硬件初始化完成（包括PLL锁定、DDR3初始化、摄像头初始化、DVI PLL锁定），LED指示灯显示各模块初始化状态。当所有初始化完成后自动跳转到CAPTURE状态。
+[List Paragraph@JUSTIFY (3)] CAPTURE：图像采集状态
+[Normal@JUSTIFY (3)] 摄像头开始采集图像数据，通过DVP接口接收像素数据，将RGB565格式的图像数据写入DDR3的写FIFO。检测到帧同步信号后进入PROCESS状态。
+[List Paragraph@JUSTIFY (3)] PROCESS：图像处理状态
+[Normal@JUSTIFY (3)] 核心处理流程包括：RGB转HSV色彩空间转换→基于HSV的病斑分割→形态学开运算→高斯滤波→Sobel边缘检测提取病斑轮廓→边缘与原图像合并叠加→处理后的数据准备用于显示
+[List Paragraph@JUSTIFY (3)] DISPLAY：显示输出状态
+[Normal@JUSTIFY (3)] 从DDR3读取处理后的图像数据，通过HDMI接口输出到显示器。完成一帧显示后根据新的采集信号决定返回CAPTURE状态（新帧就绪）或保持在DISPLAY状态（等待新帧）。
+[List Paragraph@JUSTIFY (3)] 状态转移条件
+[List Paragraph@JUSTIFY (3)] IDLE → CAPTURE：所有硬件初始化完成(camera_init_done & ddr3_init_done & dvi_pll_locked)
+[List Paragraph@JUSTIFY (3)] CAPTURE → PROCESS：检测到VSYNC上升沿，一帧数据采集完成
+[List Paragraph@JUSTIFY (3)] PROCESS → DISPLAY：图像处理流水线完成，输出数据就绪
+[List Paragraph@JUSTIFY (3)] DISPLAY → CAPTURE：新帧采集就绪信号
+[Heading 3@None] 时序设计
+[Normal@JUSTIFY (3)] 本系统基于 ZYNQ 异构平台，采用多时钟域协同与帧级流水线设计，核心时序围绕“采集—处理—缓存—显示”四个阶段展开，以实现图像实时采集、硬件加速处理与可视化显示的完整闭环。
+[List Paragraph@JUSTIFY (3)] 时钟源与分配
+[List Paragraph@JUSTIFY (3)] clk50m（外部 50 MHz）作为pll时钟生成模块的输入参考时钟。
+[List Paragraph@JUSTIFY (3)] pll模块输出时钟分配去向:
+[Normal@JUSTIFY (3)] loc_clk10m → camera_init模块的初始化时钟.
+[Normal@JUSTIFY (3)] loc_clk24m → camera_xclk（给 OV5640 的驱动时钟）.
+[Normal@JUSTIFY (3)] loc_clk100m → 作为 另一个时钟生成模块dvi_pll 的输入参考时钟.
+[Normal@JUSTIFY (3)] loc_clk200m → ddr3_ctrl_2port（MIG/DDR3 控制与校时域）.
+[List Paragraph@JUSTIFY (3)] dvi_pll模块输出时钟分配去向:
+[Normal (Web)@JUSTIFY (3)] pixelclk（74.25 MHz，用于 1280×720p）→ disp_driver、dvi_encoder、ddr3_ctrl_2port模块读FIFO的时钟rdfifo_clk.
+[Normal (Web)@JUSTIFY (3)] pixelclk5x → dvi_encoder（TMDS×5 编码时钟）
+[Normal (Web)@JUSTIFY (3)] camera_pclk（来自摄像头像素时钟） → BUFG → pclk_bufg_o（采集/处理域像素时钟）
+[Normal (Web)@JUSTIFY (3)] DVP_Capture模块（像素采集）
+[Normal (Web)@JUSTIFY (3)] core_code模块（像素级处理）
+[Normal (Web)@JUSTIFY (3)] ddr3_ctrl_2port模块写FIFO的时钟 wrfifo_clk
+[Normal (Web)@JUSTIFY (3)] 三个主要时钟域：
+[List Paragraph@JUSTIFY (3)] 采集/处理域：pclk_bufg_o；
+[List Paragraph@JUSTIFY (3)] 显示域：pixelclk和pixelclk5x；
+[List Paragraph@JUSTIFY (3)] 存储/控制域：loc_clk200m。
+[Normal (Web)@JUSTIFY (3)] 关键复位信号
+[List Paragraph@JUSTIFY (3)] pll_locked → 作为ddr3控制器的复位信号；
+[List Paragraph@JUSTIFY (3)] g_rst_p = (~ddr3_init_done) | (~dvi_pll_locked)： ddr3_init_done是DDR3初始化完毕信号，dvi_pll_locked信号是时钟源是否输出稳定时钟信号标志。g_rst_p是整个系统的全局同步复位；
+[Normal (Web)@JUSTIFY (3)] 时序要点与保证
+[List Paragraph@JUSTIFY (3)] 跨时钟域：采集域（pclk_bufg_o）与显示域（pixelclk）通过 DDR3+双 FIFO 解耦，避免亚稳态；
+[List Paragraph@JUSTIFY (3)] 帧一致性：以 camera_vsync / frame_begin 信号为帧边界，配合 ridfifo_clr 和wrfifo_clr信号清空读写 FIFO，保证读写对齐；
+[List Paragraph@JUSTIFY (3)] 输出像素时序：disp_driver 产生标准 行场同步信号与使能信号，RGB 数据，dvi_encoder 在 pixelclk5x 下 TMDS 编码；并将编码结果输出。
+[List Paragraph@JUSTIFY (3)] 上电顺序：先 pll_locked→ddr3_init_done、dvi_pll_locked，g_rst_p 释放后进入稳定帧流水；camera_init_done 后开始写帧。
+[Heading 2@JUSTIFY (3)] 接口设计
+[Heading 3@None] 模块功能概述
+[Normal@JUSTIFY (3)] fifo2mig_axi 模块在 ui_clk 时钟域下，将 写FIFO → DDR3（AXI 写通道） 与 DDR3 → 读FIFO（AXI 读通道） 进行桥接。
+内部包含仲裁、地址生成及 AXI 总线握手机制，支持 AXI4 burst length = 32（AXI_LEN=8'd31，即 32 拍传输）。
+数据流向：
+[Normal@JUSTIFY (3)] 写FIFO输入 → AXI4 写通道 → MIG 控制器 → DDR3 → MIG 控制器 → AXI4 读通道 → 读FIFO 输出。
+[Heading 3@None] 输入接口规格
+[Normal@JUSTIFY (3)] (1) 时钟/复位与控制
+[List Paragraph@JUSTIFY (3)] 数据位宽：
+[Normal@JUSTIFY (3)] [0:0] ui_clk、[0:0] ui_clk_sync_rst、[0:0] mmcm_locked、[0:0] init_calib_complete
+[List Paragraph@JUSTIFY (3)] 时钟域： ui_clk
+[List Paragraph@JUSTIFY (3)] 控制信号：
+[Normal@JUSTIFY (3)] ui_clk_sync_rst：高有效同步复位
+[Normal@JUSTIFY (3)] mmcm_locked、init_calib_complete：DDR3/MIG 上电就绪判定信号
+[Normal@JUSTIFY (3)] (2) FIFO 写入方向（写DDR3，来自写FIFO）
+[List Paragraph@JUSTIFY (3)] 数据位宽：
+[Normal@JUSTIFY (3)] [127:0] wr_fifo_rddata（128bit，AXI WDATA 对齐）
+[Normal@JUSTIFY (3)] [0:0] wr_fifo_empty、[5:0] wr_fifo_rd_cnt、[0:0] wr_fifo_rst_busy
+[List Paragraph@JUSTIFY (3)] 时钟域： pclk_bufg_o（由摄像头像素时钟经 BUFG 缓冲得到）
+[List Paragraph@JUSTIFY (3)] 控制信号：
+[Normal@JUSTIFY (3)] wr_addr_clr：写地址回到 WR_DDR_ADDR_BEGIN
+[Normal@JUSTIFY (3)] (3) AXI 从属侧（面向 MIG 的 AXI Master 端口输入）
+[List Paragraph@JUSTIFY (3)] 数据位宽：
+[Normal@JUSTIFY (3)] 写响应：[3:0] m_axi_bid、[1:0] m_axi_bresp、[0:0] m_axi_bvalid
+[Normal@JUSTIFY (3)] 地址握手：[0:0] m_axi_arready（读） / [0:0] m_axi_awready（写）
+[Normal@JUSTIFY (3)] 读数据：[3:0] m_axi_rid、[127:0] m_axi_rdata、[1:0] m_axi_rresp、[0:0] m_axi_rlast、[0:0] m_axi_rvalid
+[List Paragraph@JUSTIFY (3)] 时钟域： ui_clk
+[List Paragraph@JUSTIFY (3)] 控制信号： AXI 标准握手信号：READY/VALID、LAST、RESP
+[Heading 3@None] 输出接口规格
+[List Paragraph@JUSTIFY (3)] FIFO 读出方向控制（从 AXI 读通道写入）
+[List Paragraph@JUSTIFY (3)] 数据位宽：[0:0] rd_fifo_wrreq、[127:0] rd_fifo_wrdata
+[List Paragraph@JUSTIFY (3)] 时序关系：
+[Normal@JUSTIFY (3)] rd_fifo_wrreq = m_axi_rvalid && m_axi_rready
+[Normal@JUSTIFY (3)] rd_fifo_wrdata = m_axi_rdata
+[Normal@JUSTIFY (3)] m_axi_rready = ~rd_fifo_alfull（根据 FIFO 背压自动控制）
+[List Paragraph@JUSTIFY (3)] 状态指示：
+[Normal@JUSTIFY (3)] 依赖读 FIFO 的 alfull 与 wr_cnt 反馈
+[List Paragraph@JUSTIFY (3)] AXI 写地址通道（AW）
+[List Paragraph@JUSTIFY (3)] 数据位宽：
+[Normal@JUSTIFY (3)] [3:0] m_axi_awid（常量 AXI_ID）
+[Normal@JUSTIFY (3)] [27:0] m_axi_awaddr（字节地址）
+[Normal@JUSTIFY (3)] [7:0] m_axi_awlen（AXI_LEN）
+[Normal@JUSTIFY (3)] [2:0] m_axi_awsize = 3'b100（16 字节拍）
+[Normal@JUSTIFY (3)] [1:0] m_axi_awburst = 2'b01（INCR）
+[List Paragraph@JUSTIFY (3)] 时序关系：
+[Normal@JUSTIFY (3)] m_axi_awvalid 仅在写地址阶段拉高；
+[Normal@JUSTIFY (3)] AWVALID && AWREADY 完成握手进入写数据阶段；
+[Normal@JUSTIFY (3)] 写完成并收到 OKAY 响应后（BVALID & BREADY & BRESP==2'b00 & BID==AXI_ID），写地址自增：
+awaddr += (awlen + 1) << 4（每拍16B，32拍=512B）；到 WR_DDR_ADDR_END 后回绕至起始地址。
+[List Paragraph@JUSTIFY (3)] 状态指示：
+[Normal@JUSTIFY (3)] 地址清零由 wr_addr_clr 控制。
+[List Paragraph@JUSTIFY (3)] AXI 写数据通道（W）
+[List Paragraph@JUSTIFY (3)] 数据位宽：
+[Normal@JUSTIFY (3)] [127:0] m_axi_wdata = wr_fifo_rddata
+[Normal@JUSTIFY (3)] [15:0] m_axi_wstrb = 16'hFFFF
+[Normal@JUSTIFY (3)] [0:0] m_axi_wlast、[0:0] m_axi_wvalid
+[List Paragraph@JUSTIFY (3)] 时序关系：
+[Normal@JUSTIFY (3)] WVALID && WREADY 每拍有效；当计数到 awlen 末拍时 WLAST=1 结束突发；
+[Normal@JUSTIFY (3)] wr_fifo_rdreq 与 WVALID/WREADY 同步，避免读空。
+[List Paragraph@JUSTIFY (3)] 状态指示：
+[Normal@JUSTIFY (3)] 写响应通过 B 通道返回，由本模块内部检测 BRESP==OKAY。
+[Normal@JUSTIFY (3)] (4)  AXI 读地址通道（AR）
+[List Paragraph@JUSTIFY (3)] 数据位宽：
+[Normal@JUSTIFY (3)] [3:0] m_axi_arid = AXI_ID、[27:0] m_axi_araddr、[7:0] m_axi_arlen = AXI_LEN、[2:0] m_axi_arsize = 3'b100、[1:0] m_axi_arburst = 2'b01
+[List Paragraph@JUSTIFY (3)] 时序关系：
+[Normal@JUSTIFY (3)] ARVALID && ARREADY 完成地址握手进入读数据阶段；
+[Normal@JUSTIFY (3)] 一次突发结束且 OKAY (RVALID & RREADY & RLAST & RRESP==OKAY & RID==AXI_ID) 后：
+araddr += (awlen + 1) << 4；到 RD_DDR_ADDR_END 后回绕至起始地址。
+[List Paragraph@JUSTIFY (3)] 状态指示：
+[Normal@JUSTIFY (3)] 地址清零由 rd_addr_clr 控制。
+[Normal@JUSTIFY (3)] (5)  AXI 读数据通道（R）
+[List Paragraph@JUSTIFY (3)] 数据位宽：
+[Normal@JUSTIFY (3)] [0:0] m_axi_rready（由 ~rd_fifo_alfull 生成，用于背压控制）
+[List Paragraph@JUSTIFY (3)] 时序关系：
+[Normal@JUSTIFY (3)] RVALID && RREADY 每拍有效，RLAST 标记突发结束；
+[Normal@JUSTIFY (3)] 与 rd_fifo_wrreq / wrdata 同步，保证数据连续无间断写入。
+[List Paragraph@JUSTIFY (3)] 状态指示：
+[Normal@JUSTIFY (3)] 内部检测 RRESP/RID 以验证事务合法性。
+[Heading 1@None] 详细设计与实现
+[Heading 2@None] 核心算法设计（核心模块：core_code）
+[Normal@JUSTIFY (3)] core_code 在像素域时钟 pclk_bufg_o 下，以逐像素流方式依次完成色彩空间转换、去噪、边缘检测与形态学滤波，最后输出处理后的像素与有效标志，并在上层完成病斑判定与可视化叠加。为保证实时性，流水线设计目标为 1 像素 / 2 个时钟周期，满足系统 30 fps 与端到端时延指标。
+[Heading 3@None] rgb_to_hsv —— 色彩空间转换
+[Normal] <IMAGE>
+[Heading 3@None] gaussian_filter —— 高斯平滑去噪
+[Normal] <IMAGE>
+[Heading 3@None] sobel —— 边缘梯度检测
+[Normal (Web)] <IMAGE>
+[Heading 3@None] morphological_open —— 形态学开运算
+[Normal] <IMAGE>
+[Heading 2@None] 关键模块设计
+[Heading 3@None] [ddr3_ctrl_2port模块]
+[Heading 3@None] 功能描述：
+[Normal@JUSTIFY (3)] ddr3_ctrl_2port 是基于 Xilinx MIG 的 双端口帧缓冲控制模块。
+它向上提供写端 FIFO 风格接口（采集/处理域写入 16-bit RGB565 像素流），和读端 FIFO 风格接口（显示域读出 16-bit 像素流）；向下通过 AXI 接口访问 DDR3。模块在内部完成：
+[List Paragraph@JUSTIFY (3)] 跨时钟与宽度转换：写路径将 16-bit 像素打包为 128-bit AXI 数据拍；读路径将128-bit拆包回16-bit；
+[List Paragraph@JUSTIFY (3)] 突发事务与地址管理：读/写均采用固定突发（默认 32 拍），按配置的 地址环形区间（WR_DDR_ADDR_BEGIN/END、RD_DDR_ADDR_BEGIN/END）递增并回绕，实现连续帧缓存；
+[List Paragraph@JUSTIFY (3)] 仲裁与背压控制：内置写/读请求阈值与轮询仲裁，结合 FIFO 满/空、almost full/empty 等标志，确保高吞吐与无丢帧；
+[List Paragraph@JUSTIFY (3)] 上电初始化/就绪：封装 MIG 复位与校准流程，输出 ddr3_init_done 作为全局就绪指示。
+[List Paragraph@JUSTIFY (3)] 设计目标：解耦“采集→存储→显示”三个时钟域，保证 720p@30fps 的连续帧流，满足系统的实时性与低延迟要求。
+[Heading 3@None] 端口定义：
+[Normal@None] 下列端口与工程中的顶层实例一致（位宽：DDR3 x16，AXI 数据 128bit）
+[Normal@None] module ddr3_ctrl_2port #(
+[Normal@None] parameter WR_DDR_ADDR_BEGIN = 32'd0,
+[Normal@None] parameter WR_DDR_ADDR_END   = 32'd(1280*720*4), // 可配置环形写区间（字节地址）
+[Normal@None] parameter RD_DDR_ADDR_BEGIN = 32'd0,
+[Normal@None] parameter RD_DDR_ADDR_END   = 32'd(1280*720*4)  // 可配置环形读区间（字节地址）
+[Normal@None] )(
+[Normal@None] //======== 时钟/复位与就绪 ========//
+[Normal@None] input  wire         ddr3_clk200m,   // DDR3/MIG 参考时钟（200 MHz）
+[Normal@None] input  wire         ddr3_rst_n,     // MIG 复位（来自 PLL locked）
+[Normal@None] output wire         ddr3_init_done, // MIG 初始化/校准完成
+[Normal@None] //======== 写端 FIFO 风格接口（采集/处理域 -> DDR3） ========//
+[Normal@None] input  wire         wrfifo_clr,     // 帧边界清空写端
+[Normal@None] input  wire         wrfifo_clk,     // 写端时钟（像素域 pclk_bufg_o）
+[Normal@None] input  wire         wrfifo_wren,    // 写使能（image_data_valid）
+[Normal@None] input  wire [15:0]  wrfifo_din,     // 写数据（RGB565）
+[Normal@None] output wire         wrfifo_full,    // 写端 FIFO 满（可选查看）
+[Normal@None] output wire [15:0]  wrfifo_wr_cnt,  // 写端计数（可选查看）
+[Normal@None] //======== 读端 FIFO 风格接口（DDR3 -> 显示域） ========//
+[Normal@None] input  wire         rdfifo_clr,     // 帧边界清空读端
+[Normal@None] input  wire         rdfifo_clk,     // 读端时钟（显示域 pixelclk）
+[Normal@None] input  wire         rdfifo_rden,    // 读使能（disp_data_req）
+[Normal@None] output wire [15:0]  rdfifo_dout,    // 读数据（RGB565）
+[Normal@None] output wire         rdfifo_empty,   // 读端 FIFO 空（可选查看）
+[Normal@None] output wire [15:0]  rdfifo_rd_cnt,  // 读端计数（可选查看）
+[Normal@None] //======== DDR3 物理接口（x16） ========//
+[Normal@None] inout  wire [15:0]  ddr3_dq,
+[Normal@None] inout  wire [1:0]   ddr3_dqs_n,
+[Normal@None] inout  wire [1:0]   ddr3_dqs_p,
+[Normal@None] output wire [13:0]  ddr3_addr,
+[Normal@None] output wire [2:0]   ddr3_ba,
+[Normal@None] output wire         ddr3_ras_n,
+[Normal@None] output wire         ddr3_cas_n,
+[Normal@None] output wire         ddr3_we_n,
+[Normal@None] output wire         ddr3_reset_n,
+[Normal@None] output wire [0:0]   ddr3_ck_p,
+[Normal@None] output wire [0:0]   ddr3_ck_n,
+[Normal@None] output wire [0:0]   ddr3_cke,
+[Normal@None] output wire [1:0]   ddr3_dm,
+[Normal@None] output wire [0:0]   ddr3_odt
+[Normal@None] );
+[Heading 2@None] 逻辑设计：
+[Heading 3@None] 顶层结构与时钟域
+[List Paragraph@JUSTIFY (3)] 物理/MIG 域（ddr3_clk200m）：封装 Xilinx MIG，完成 PHY 初始化、校准，生成内部 AXI/UI 时钟（ui_clk）及复位（ui_clk_sync_rst）。ddr3_init_done 作为系统就绪标志反馈到上层复位逻辑。
+[List Paragraph@JUSTIFY (3)] 写端域（wrfifo_clk = pclk_bufg_o）：像素/处理时钟域，将逐像素 16-bit 数据写入异步写 FIFO。
+[List Paragraph@JUSTIFY (3)] 读端域（rdfifo_clk = pixelclk）：显示时钟域，从异步读 FIFO 读出 16-bit 数据供 HDMI/显示链路使用。
+[Normal@JUSTIFY (3)] 三域之间通过 异步 FIFO + 宽度转换 实现安全跨域与带宽匹配。
+[Heading 3@None] 写路径（16-bit → 128-bit → DDR3）
+[List Paragraph@JUSTIFY (3)] 采集侧入队：当 wrfifo_wren=1 时，wrfifo_din[15:0] 按像素写入写端异步 FIFO；wrfifo_clr 在新帧边界置位，用于对齐与清空残留。
+[List Paragraph@JUSTIFY (3)] 宽度转换/打包：在 ui_clk 域读取写端 FIFO 的 16-bit 流，按 8 像素一拍 打包为 128-bit（与 AXI WDATA 对齐）。
+[List Paragraph@JUSTIFY (3)] AXI 写事务：与内部 AXI 桥（通常为你工程里的 fifo2mig_axi）对接：
+[List Paragraph@JUSTIFY (3)] 固定突发长度 32 拍（128-bit × 32 = 512B/突发）；
+[List Paragraph@JUSTIFY (3)] 写地址从 WR_DDR_ADDR_BEGIN 开始，按 ((AWLEN+1)<<4) 字节步进递增，到 WR_DDR_ADDR_END 回绕；
+[List Paragraph@JUSTIFY (3)] 通过 wr_fifo_rd_cnt 与 wr_fifo_rst_busy 阈值触发，避免读空/复位期错读；
+[List Paragraph@JUSTIFY (3)] wrfifo_full/wrfifo_wr_cnt 可用于性能调试与背压观测。
+[Heading 3@None] 读路径（DDR3 → 128-bit → 16-bit）
+[List Paragraph@JUSTIFY (3)] AXI 读事务：在 ui_clk 域按固定突发 32 拍从 RD_DDR_ADDR_BEGIN 开始读取，地址同样按 512B 递增并回绕到 RD_DDR_ADDR_END 起点；结合读端计数与 rd_fifo_rst_busy 控制请求。
+[List Paragraph@JUSTIFY (3)] 宽度转换/拆包：把 128-bit RDATA 在 ui_clk 域拆成 8×16-bit，并写入读端异步 FIFO。
+[List Paragraph@JUSTIFY (3)] 显示侧出队：在 rdfifo_clk 域，rdfifo_rden 由 disp_data_req 驱动，一拍一像素读出；rdfifo_clr=frame_begin 在帧边界清空以对齐显示帧；rdfifo_empty/rdfifo_rd_cnt 提供显示侧的读空/水位监控。
+[List Paragraph@JUSTIFY (3)] 背压控制：m_axi_rready 由“读端 FIFO almost full”生成，防止 AXI 读数据丢失。
+[Heading 3@None] 仲裁与事务管理
+[List Paragraph@JUSTIFY (3)] 轮询仲裁：内部采用“写/读轮询 + 阈值触发”的策略（与 fifo2mig_axi 保持一致），当写端积累到一突发所需数据量或读端水位低于阈值时发起对应事务；
+[List Paragraph@JUSTIFY (3)] 握手与应答：严格遵循 AXI AW/W/B、AR/R 五通道握手；对 BRESP/RRESP 进行 OKAY 检测与异常兜底（异常时回到 IDLE/复位流程）。
+[Heading 3@None] 地址与帧区间
+[Normal@JUSTIFY (3)] 通过参数 WR_DDR_ADDR_BEGIN/END、RD_DDR_ADDR_BEGIN/END 指定环形缓冲区间（字节地址）。
+[Normal@JUSTIFY (3)] 写/读地址各自独立递增与回绕，典型用法为单帧区间重复回放；如需双缓冲/多缓冲，可在顶层配置不同的 BEGIN/END 或在 PS 侧动态切换。
+[Heading 3@None] 复位/就绪与帧同步
+[List Paragraph@JUSTIFY (3)] 上电顺序：pll_locked → MIG 校准完成 (ddr3_init_done) → 释放系统复位 (g_rst_p)，随后摄像头初始化完成开始写帧；
+[List Paragraph@JUSTIFY (3)] 帧对齐：wrfifo_clr 与 rdfifo_clr 分别与 摄像头 VSYNC、显示 frame_begin 对齐，确保写/读从帧头开始，避免“图像撕裂”。
+[Heading 2@None] 资源使用设计
+[Heading 3@None] LUT 使用策略：
+[List Paragraph@JUSTIFY (3)] 算子用加/减/移位替代乘法：gaussian_filter 与 sobel 系数（1/2/1、±1/±2）用移位与加减实现，避免 DSP 占用；常数乘法用移位-加法链综合。
+[List Paragraph@JUSTIFY (3)] Hue/除法近似用查表或倒数近似：rgb_to_hsv 中的  采用小型 LUT（分段线性/倒数表）+ 乘法，减少昂贵除法器；必要时仅用少量 DSP48 做乘法，其他逻辑由 LUT 完成。
+[List Paragraph@JUSTIFY (3)] 阈值/比较逻辑前移且共享：H/S/V 与梯度幅值的多路阈值比较合并成共享比较器/译码，降低重复逻辑。
+[List Paragraph@JUSTIFY (3)] 滑窗复用：3×3 窗口生成（行缓冲+列移位）在 gaussian_filter 与 sobel 间串接/复用，避免重复行缓冲。
+[List Paragraph@JUSTIFY (3)] 用 SRL16/32 做短移位寄存：像素对齐、valid/hs/vs 打拍及少量行内延迟，优先用 LUT-SRL（综合属性 (* shreg_extract="yes" *)），节省寄存器。
+[Heading 3@None] 寄存器使用
+[List Paragraph@JUSTIFY (3)] 逐级流水：对“加权→绝对值→求和→阈值”每级都插入寄存器，保证 1 像素 / 2 时钟周期 吞吐；边界/溢出运算用饱和寄存器。
+[List Paragraph@JUSTIFY (3)] 控制跨域双触发同步：仅对控制类单比特信号（如清 FIFO、模式位）使用两级同步器；像素数据一律走异步 FIFO。
+[List Paragraph@JUSTIFY (3)] 握手寄存：AXI 的 AW/AR/W/R/B 通道握手与数据旁路均在 ui_clk 下寄存，缩短组合路径。
+[List Paragraph@JUSTIFY (3)] 地址/计数专用寄存：AW/AR 地址自增、突发计数器与水位阈值均为独立寄存，避免高扇出。
+[List Paragraph@JUSTIFY (3)] 时钟资源：
+[List Paragraph@JUSTIFY (3)] 全局时钟树：外部 clk50m→pll 产生 10/24/100/200 MHz；dvi_pll 产生 pixelclk 与 pixelclk5x。
+[List Paragraph@JUSTIFY (3)] 安全门控：仅对 camera_init 使用 BUFGCE 门控（初始化后关 10 MHz）；禁止在逻辑内自行与门/或门“劈时钟”。
+[List Paragraph@JUSTIFY (3)] 跨域解耦：pclk_bufg_o（采集/处理）、pixelclk（显示）、ui_clk/200 MHz（DDR3/MIG）三域之间仅通过 XPM/异步 FIFO 与 AXI 桥接；约束中把三域设为 异步时钟组。
+[Heading 3@None] 存储资源规划:
+[Normal (Web)@JUSTIFY (3)] BRAM 使用：
+[List Paragraph@JUSTIFY (3)] 行缓冲（3×3 滑窗）：对 gaussian_filter / sobel 的 3×3 窗口，使用 2 条行缓冲 + 列移位。设计一套行缓冲串接复用给高斯与 Sobel，避免重复 BRAM。
+[List Paragraph@JUSTIFY (3)] 异步 FIFO（跨域/宽度转换）：采集侧 16→128 bit 打包写、显示侧 128→16 bit 拆包读 的异步 FIFO 使用 BRAM 型 XPM_FIFO；深度建议 512/1024 字（128bit），保证 32 拍突发持续供给。
+[List Paragraph@JUSTIFY (3)] 帧缓冲到 DDR3：通过 fifo2mig_axi 固定突发 32（128bit×32=512B），与 128-bit AXI 宽度对齐，提升带宽利用；地址环形覆盖一帧或双缓冲区间。
+[Normal (Web)@JUSTIFY (3)] 分布式 RAM（LUTRAM） 使用：
+[List Paragraph@JUSTIFY (3)] 小容量缓冲与查表：HSV 倒数/分段 LUT、形态学掩膜的行内移位链、小深度流控 FIFO（命令/标志）优先用 LUTRAM，减少 BRAM 占用。
+[List Paragraph@JUSTIFY (3)] 二值掩膜行缓存：morphological_open 若只处理 1-bit 掩膜，可用 LUT-SRL/LUTRAM 作为行缓冲；当需更强鲁棒性（8-bit 灰度）再切换为 BRAM。
+[Normal@JUSTIFY (3)] 总结：大容量、可复用的行缓冲/异步 FIFO用 BRAM/BRAM36；小容量、高扇出或查表类存储用 LUTRAM/SRL。在高斯与 Sobel 之间复用滑窗行缓冲，并用 128-bit AXI 固定突发匹配 DDR3 总线，既满足 720p@30fps 实时性，也让 LUT/BRAM 占用处于可控范围。
+[Heading 1@None] LLM 辅助设计优化记录
+[Heading 2@JUSTIFY (3)] 架构设计阶段LLM辅助
+[Heading 3@None] 系统架构咨询
+[Normal@JUSTIFY (3)] 优化目标：确定最佳系统架构
+[Normal@JUSTIFY (3)] 用户输入：我正在设计一个基于 ZYNQ 平台的农作物多源感知病虫害实时诊断系统，目标器件为 XC7Z020CLG484。系统需要实现通过 OV5640 摄像头采集图像，对图像中的病虫害进行实时检测与严重程度判断，同时结合光强、温湿度等环境数据进行综合分析，并将结果分别显示到 HDMI 显示屏和串口屏上。HDMI 端显示诊断图像（标出病害区域），串口屏显示光强、温湿度、病虫害结论和决策建议。
+[Normal@JUSTIFY (3)] 主要性能目标如下：
+[Normal@JUSTIFY (3)] - 单点识别精度 >90%
+[Normal@JUSTIFY (3)] - 图像处理帧率 30 fps
+[Normal@JUSTIFY (3)] - 像素处理速率 1 像素 / 2 时钟周期
+[Normal@JUSTIFY (3)] - 端到端延迟 <39 ms
+[Normal@JUSTIFY (3)] - PL 功耗 <50W，PS 功耗 <10W
+[Normal@JUSTIFY (3)] - 最小识别病斑尺寸 <2 cm²
+[Normal@JUSTIFY (3)] - 蓝牙远程控制距离 >50 m
+[Normal@JUSTIFY (3)] 请帮我分析最合适的系统架构设计方案，并给出模块划分建议。
+[Normal@JUSTIFY (3)] 具体需求：
+[List Paragraph@JUSTIFY (3)] 明确 PS 与 PL 的功能划分及主要数据通路。
+[List Paragraph@JUSTIFY (3)] 给出图像采集、处理、存储、显示与传感器融合的模块设计思路。
+[List Paragraph@JUSTIFY (3)] 说明时钟与复位规划、跨时钟域数据传输方式及接口协议选型。
+[Normal@JUSTIFY (3)] 请提供架构设计方案及关键设计要点。``
+[Normal (Web)@JUSTIFY (3)] LLM回答：下面给你一版精简、系统性的架构建议。
+[Heading 2@JUSTIFY (3)] 1) 顶层分工与数据流
+[Normal (Web)@JUSTIFY (3)] PL（实时路径）
+图像传感器接口 → 像素预处理管线（色彩转换/去噪）→ 特征提取与分割（梯度/阈值）→ 叠加合成 → 帧缓冲 → 显示输出（HDMI）。
+[Normal (Web)@JUSTIFY (3)] PS（融合与控制）
+采集环境传感器（光强/温湿度）→ 与视觉结果融合与策略判定 → 串口屏展示/蓝牙控制 → 通过配置总线下发参数与接收中断。
+[Heading 2@JUSTIFY (3)] 2) 模块划分
+[Normal (Web)@JUSTIFY (3)] SensorIF：DVP/SCCB 等前端同步与像素打包。
+[Normal (Web)@JUSTIFY (3)] PixelPipe：ColorXform → Smooth → Edge/Mask → MorphRefine → Overlay（逐像素流水，目标 ≥1px/2clk；阈值与核大小可配）。
+[Normal (Web)@JUSTIFY (3)] MemoryHub：帧缓冲与带宽调度（AXI 128-bit、固定突发、读写异步 FIFO、地址回绕）。
+[Normal (Web)@JUSTIFY (3)] DisplayOut：时序发生器与TMDS编码。
+[Normal (Web)@JUSTIFY (3)] Fusion&Policy(PS)：规则/权重/阈值融合，生成结论与建议。
+[Normal (Web)@JUSTIFY (3)] ControlPlane(PS<->PL)：AXI4-Lite寄存器、帧完成/异常中断、日志与统计。
+[Heading 2@JUSTIFY (3)] 3) 时钟/复位/跨域
+[Normal (Web)@JUSTIFY (3)] 三域：采集/处理域(Pclk)、显示域(PixelClk)、存储/总线域(UI/200 MHz)。
+[Normal (Web)@JUSTIFY (3)] 数据跨域用异步FIFO+宽度转换；控制跨域用双触发同步器。
+[Normal (Web)@JUSTIFY (3)] 复位顺序：PLL锁定 → 存储就绪 → 释放全局复位 → 传感器初始化 → 开始写帧。
+[Heading 2@JUSTIFY (3)] 4) 带宽与时延（以720p、RGB565、30 fps为例）
+[Normal (Web)@JUSTIFY (3)] 单向带宽≈55 MB/s；读写合计≈110 MB/s（128-bit × 32拍突发，≥2–4个突发深度FIFO）。
+[Normal (Web)@JUSTIFY (3)] 端到端时延预算：流水线处理 ~6–10 ms + 存储往返 ~10–14 ms + 显示扫描 ~10–12 ms ⇒ <39 ms 可达；拥塞时支持直通/半帧旁路兜底。
+[Heading 2@JUSTIFY (3)] 5) 可配参数与寄存器框架
+[Normal (Web)@JUSTIFY (3)] 阈值/核尺寸/ROI/最小连通域像素数（对应最小病斑尺寸）/显示叠加开关。
+[Normal (Web)@JUSTIFY (3)] 只读统计：帧计数、目标面积/重心、置信度、环境值快照。
+[Normal (Web)@JUSTIFY (3)] 中断：帧完成、存储异常、传感器就绪、FIFO水位告警。
+[Heading 2@JUSTIFY (3)] 6) 资源与功耗要点
+[Normal (Web)@JUSTIFY (3)] 3×3 窗口复用行缓冲；卷积与梯度系数用移位加法优先，乘法热点再用DSP。
+[Normal (Web)@JUSTIFY (3)] 小表与对齐延迟用 LUTRAM/SRL；按域使用 BUFG/BUFGCE，禁用逻辑劈时钟。
+[Normal (Web)@JUSTIFY (3)] 通过 CE/门控降低闲时功耗，内部位宽按需裁剪与饱和。
+[Heading 2@JUSTIFY (3)] 7) 风险与备选
+[Normal (Web)@JUSTIFY (3)] 低照/高噪：双阈/自适应阈值、亮度归一化开关。
+[Normal (Web)@JUSTIFY (3)] 存储抖动：更深FIFO、水位门限、直通模式。
+[Normal (Web)@JUSTIFY (3)] 链路不稳：蓝牙超时回退、本地参数缓存与默认策略。
+[Normal@JUSTIFY (3)] 实际采用的建议: CHATGPT5 Pro版本的回答直切要害，经过多次询问，我们才整体上确定了我们之后要做的系统架构，从上到下进行分工合作编写代码。除了以上模块划分中的两个部分:
+[Normal@JUSTIFY (3)] Fusion&Policy(PS)：规则/权重/阈值融合，生成结论与建议。
+[Normal@JUSTIFY (3)] ControlPlane(PS<->PL)：AXI4-Lite寄存器、帧完成/异常中断。
+[Normal@JUSTIFY (3)] 以及连通域分析模块没有编写之外，其他部分都采取了CHATGPT的建议去做，目前来看效果执行上确实具有可行性和科学性。
+[Heading 2@None] 状态机设计优化
+[Normal@JUSTIFY (3)] 优化目标：优化控制逻辑设计
+[Normal@JUSTIFY (3)] 用户输入：
+[Normal@JUSTIFY (3)] 我需要设计一个控制AXI4各个事务转换的状态机，主要控制流程包括：
+[Normal@JUSTIFY (3)] 写：WR_ADDR → WR_DATA → WR_RESP；读：RD_ADDR → RD_RESP；空闲态 IDLE 由 mmcm_locked && init_calib_complete 开始调度；写/读通过轮询变量（如 wr_rd_poll）与水位阈值触发（需满足一突发的可写/可读）。
+[Normal@JUSTIFY (3)] 状态数量：[7 个]：S_IDLE, S_ARB, S_WR_ADDR, S_WR_DATA, S_WR_RESP, S_RD_ADDR, S_RD_RESP。
+[Normal@JUSTIFY (3)] 当前设计的状态机有7个状态，但感觉状态转换比较复杂。
+[Normal@JUSTIFY (3)] 请帮我优化状态机设计，简化控制逻辑。
+[Normal@JUSTIFY (3)] //**********************************
+[Normal@JUSTIFY (3)] //state machine
+[Normal@JUSTIFY (3)] //**********************************
+[Normal@JUSTIFY (3)] always@(posedge ui_clk or posedge ui_clk_sync_rst)
+[Normal@JUSTIFY (3)] begin
+[Normal@JUSTIFY (3)] if(ui_clk_sync_rst)
+[Normal@JUSTIFY (3)] curr_state <= S_IDLE;
+[Normal@JUSTIFY (3)] else
+[Normal@JUSTIFY (3)] curr_state <= next_state;
+[Normal@JUSTIFY (3)] end
+[Normal@JUSTIFY (3)] always@(*)
+[Normal@JUSTIFY (3)] begin
+[Normal@JUSTIFY (3)] case(curr_state)
+[Normal@JUSTIFY (3)] S_IDLE:
+[Normal@JUSTIFY (3)] begin
+[Normal@JUSTIFY (3)] if(mmcm_locked && init_calib_complete)
+[Normal@JUSTIFY (3)] next_state = S_ARB;
+[Normal@JUSTIFY (3)] else
+[Normal@JUSTIFY (3)] next_state = S_IDLE;
+[Normal@JUSTIFY (3)] end
+[Normal@JUSTIFY (3)] S_ARB:
+[Normal@JUSTIFY (3)] begin
+[Normal@JUSTIFY (3)] if((wr_ddr3_req == 1'b1) && (wr_rd_poll == 1'b0))
+[Normal@JUSTIFY (3)] next_state = S_WR_ADDR;
+[Normal@JUSTIFY (3)] else if((rd_ddr3_req == 1'b1) && (wr_rd_poll == 1'b1))
+[Normal@JUSTIFY (3)] next_state = S_RD_ADDR;
+[Normal@JUSTIFY (3)] else
+[Normal@JUSTIFY (3)] next_state = S_ARB;
+[Normal@JUSTIFY (3)] end
+[Normal@JUSTIFY (3)] S_WR_ADDR:
+[Normal@JUSTIFY (3)] begin
+[Normal@JUSTIFY (3)] if(m_axi_awready && m_axi_awvalid)
+[Normal@JUSTIFY (3)] next_state = S_WR_DATA;
+[Normal@JUSTIFY (3)] else
+[Normal@JUSTIFY (3)] next_state = S_WR_ADDR;
+[Normal@JUSTIFY (3)] end
+[Normal@JUSTIFY (3)] S_WR_DATA:
+[Normal@JUSTIFY (3)] begin
+[Normal@JUSTIFY (3)] if(m_axi_wready && m_axi_wvalid && m_axi_wlast)
+[Normal@JUSTIFY (3)] next_state = S_WR_RESP;
+[Normal@JUSTIFY (3)] else
+[Normal@JUSTIFY (3)] next_state = S_WR_DATA;
+[Normal@JUSTIFY (3)] end
+[Normal@JUSTIFY (3)] S_WR_RESP:
+[Normal@JUSTIFY (3)] begin
+[Normal@JUSTIFY (3)] if(m_axi_bready && m_axi_bvalid && (m_axi_bresp == 2'b00) && (m_axi_bid == AXI_ID))
+[Normal@JUSTIFY (3)] next_state = S_ARB;
+[Normal@JUSTIFY (3)] else if(m_axi_bready && m_axi_bvalid)
+[Normal@JUSTIFY (3)] next_state = S_IDLE;
+[Normal@JUSTIFY (3)] else
+[Normal@JUSTIFY (3)] next_state = S_WR_RESP;
+[Normal@JUSTIFY (3)] end
+[Normal@JUSTIFY (3)] S_RD_ADDR:
+[Normal@JUSTIFY (3)] begin
+[Normal@JUSTIFY (3)] if(m_axi_arready && m_axi_arvalid)
+[Normal@JUSTIFY (3)] next_state = S_RD_RESP;
+[Normal@JUSTIFY (3)] else
+[Normal@JUSTIFY (3)] next_state = S_RD_ADDR;
+[Normal@JUSTIFY (3)] end
+[Normal@JUSTIFY (3)] S_RD_RESP:
+[Normal@JUSTIFY (3)] begin
+[Normal@JUSTIFY (3)] if(m_axi_rready && m_axi_rvalid && m_axi_rlast && (m_axi_rresp == 2'b00) && (m_axi_rid == AXI_ID))
+[Normal@JUSTIFY (3)] next_state = S_ARB;
+[Normal@JUSTIFY (3)] else if(m_axi_rready && m_axi_rvalid && m_axi_rlast)
+[Normal@JUSTIFY (3)] next_state = S_IDLE;
+[Normal@JUSTIFY (3)] else
+[Normal@JUSTIFY (3)] next_state = S_RD_RESP;
+[Normal@JUSTIFY (3)] end
+[Normal@JUSTIFY (3)] default: next_state = S_IDLE;
+[Normal@JUSTIFY (3)] endcase
+[Normal@JUSTIFY (3)] end
+[Normal@JUSTIFY (3)] LLM回答：
+[Normal (Web)@JUSTIFY (3)] 事件驱动 + 明确握手：仅以 valid&&ready（或 req&&ack）作为状态迁移条件，禁止用非握手信号组合跳转。
+[Normal (Web)@JUSTIFY (3)] 计数器解耦：把“事务进度”（如突发 beat 计数）与“状态跳转”分离，计数只在握手成功时自增。
+[Normal (Web)@JUSTIFY (3)] 单入口/单出口：写通道（地址→数据→响应）与读通道（地址→数据）各自线性化，异常统一回到 IDLE。
+[Normal (Web)@JUSTIFY (3)] 优先级与轮询：写/读并存时采用上次胜者反转（fairness），并设置水位阈值触发请求，避免抖动。
+[Normal (Web)@JUSTIFY (3)] 时序友好：状态寄存、输出寄存、比较提前一拍；跨域只用同步器/异步 FIFO。
+[Heading 2@JUSTIFY (3)] 精简版状态机骨架（可直接改名/改端口套用）
+[Normal (Web)@JUSTIFY (3)] 说明：
+[Normal (Web)@JUSTIFY (3)] 以“写地址→写数据→写响应 / 读地址→读数据”为典型控制流；
+[Normal (Web)@JUSTIFY (3)] 可通过参数配置突发长度、超时与优先级；
+[Normal (Web)@JUSTIFY (3)] 所有跳转只在握手发生时进行（易收敛、易验证）。
+[HTML Preformatted@JUSTIFY (3)] module ctrl_fsm #(
+[HTML Preformatted@JUSTIFY (3)] parameter AW = 28,
+[HTML Preformatted@JUSTIFY (3)] parameter LEN = 8'd31,        // burst beats-1 (32 beats)
+[HTML Preformatted@JUSTIFY (3)] parameter TIMEOUT = 16'd4096  // optional timeout (cycles)
+[HTML Preformatted@JUSTIFY (3)] )(
+[HTML Preformatted@JUSTIFY (3)] input  wire        clk, rst_n,
+[HTML Preformatted@JUSTIFY (3)] // 请求触发与水位（示例：来自 FIFO/水位判断）
+[HTML Preformatted@JUSTIFY (3)] input  wire        wr_req, rd_req,     // 有能力发起写/读
+[HTML Preformatted@JUSTIFY (3)] input  wire        wr_ready_lvl,       // 写侧水位满足一突发
+[HTML Preformatted@JUSTIFY (3)] input  wire        rd_space_lvl,       // 读侧空间满足一突发
+[HTML Preformatted@JUSTIFY (3)] // 写地址通道
+[HTML Preformatted@JUSTIFY (3)] output reg         aw_valid,
+[HTML Preformatted@JUSTIFY (3)] input  wire        aw_ready,
+[HTML Preformatted@JUSTIFY (3)] output reg  [AW-1:0] aw_addr,
+[HTML Preformatted@JUSTIFY (3)] output wire [7:0]  aw_len,
+[HTML Preformatted@JUSTIFY (3)] // 写数据通道
+[HTML Preformatted@JUSTIFY (3)] output reg         w_valid,
+[HTML Preformatted@JUSTIFY (3)] input  wire        w_ready,
+[HTML Preformatted@JUSTIFY (3)] output reg         w_last,
+[HTML Preformatted@JUSTIFY (3)] output wire [15:0] w_strb,
+[HTML Preformatted@JUSTIFY (3)] // 写响应通道
+[HTML Preformatted@JUSTIFY (3)] input  wire        b_valid,
+[HTML Preformatted@JUSTIFY (3)] input  wire [1:0]  b_resp,
+[HTML Preformatted@JUSTIFY (3)] output wire        b_ready,
+[HTML Preformatted@JUSTIFY (3)] // 读地址通道
+[HTML Preformatted@JUSTIFY (3)] output reg         ar_valid,
+[HTML Preformatted@JUSTIFY (3)] input  wire        ar_ready,
+[HTML Preformatted@JUSTIFY (3)] output reg  [AW-1:0] ar_addr,
+[HTML Preformatted@JUSTIFY (3)] output wire [7:0]  ar_len,
+[HTML Preformatted@JUSTIFY (3)] // 读数据通道
+[HTML Preformatted@JUSTIFY (3)] input  wire        r_valid,
+[HTML Preformatted@JUSTIFY (3)] input  wire        r_last,
+[HTML Preformatted@JUSTIFY (3)] input  wire [1:0]  r_resp,
+[HTML Preformatted@JUSTIFY (3)] output wire        r_ready
+[HTML Preformatted@JUSTIFY (3)] );
+[HTML Preformatted@JUSTIFY (3)] assign aw_len = LEN;
+[HTML Preformatted@JUSTIFY (3)] assign ar_len = LEN;
+[HTML Preformatted@JUSTIFY (3)] assign w_strb = 16'hFFFF;
+[HTML Preformatted@JUSTIFY (3)] assign b_ready = 1'b1;
+[HTML Preformatted@JUSTIFY (3)] assign r_ready = 1'b1;
+[HTML Preformatted@JUSTIFY (3)] typedef enum reg [2:0] {
+[HTML Preformatted@JUSTIFY (3)] S_IDLE, S_WR_AW, S_WR_W, S_WR_B, S_RD_AR, S_RD_R
+[HTML Preformatted@JUSTIFY (3)] } state_t;
+[HTML Preformatted@JUSTIFY (3)] state_t s, ns;
+[HTML Preformatted@JUSTIFY (3)] reg [7:0] beat;        // 0..LEN
+[HTML Preformatted@JUSTIFY (3)] reg       last_grant;  // 1=上次写，0=上次读（用于公平轮询）
+[HTML Preformatted@JUSTIFY (3)] reg [15:0] to_cnt;
+[HTML Preformatted@JUSTIFY (3)] // 状态寄存
+[HTML Preformatted@JUSTIFY (3)] always @(posedge clk or negedge rst_n) begin
+[HTML Preformatted@JUSTIFY (3)] if(!rst_n) s <= S_IDLE;
+[HTML Preformatted@JUSTIFY (3)] else       s <= ns;
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] // 组合跳转
+[HTML Preformatted@JUSTIFY (3)] always @* begin
+[HTML Preformatted@JUSTIFY (3)] ns = s;
+[HTML Preformatted@JUSTIFY (3)] case (s)
+[HTML Preformatted@JUSTIFY (3)] S_IDLE: begin
+[HTML Preformatted@JUSTIFY (3)] if (wr_req && wr_ready_lvl && (!rd_req || !last_grant)) ns = S_WR_AW;
+[HTML Preformatted@JUSTIFY (3)] else if (rd_req && rd_space_lvl)                        ns = S_RD_AR;
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] S_WR_AW: if (aw_valid && aw_ready)                        ns = S_WR_W;
+[HTML Preformatted@JUSTIFY (3)] S_WR_W : if (w_valid && w_ready && w_last)                ns = S_WR_B;
+[HTML Preformatted@JUSTIFY (3)] S_WR_B : if (b_valid)                                     ns = S_IDLE;
+[HTML Preformatted@JUSTIFY (3)] S_RD_AR: if (ar_valid && ar_ready)                        ns = S_RD_R;
+[HTML Preformatted@JUSTIFY (3)] S_RD_R : if (r_valid && r_last)                           ns = S_IDLE;
+[HTML Preformatted@JUSTIFY (3)] default: ns = S_IDLE;
+[HTML Preformatted@JUSTIFY (3)] endcase
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] // 事务进度与输出寄存
+[HTML Preformatted@JUSTIFY (3)] always @(posedge clk or negedge rst_n) begin
+[HTML Preformatted@JUSTIFY (3)] if(!rst_n) begin
+[HTML Preformatted@JUSTIFY (3)] aw_valid<=0; w_valid<=0; w_last<=0; ar_valid<=0;
+[HTML Preformatted@JUSTIFY (3)] aw_addr<=0; ar_addr<=0; beat<=0; last_grant<=0; to_cnt<=0;
+[HTML Preformatted@JUSTIFY (3)] end else begin
+[HTML Preformatted@JUSTIFY (3)] // 默认拉低
+[HTML Preformatted@JUSTIFY (3)] aw_valid<=0; ar_valid<=0;
+[HTML Preformatted@JUSTIFY (3)] case (s)
+[HTML Preformatted@JUSTIFY (3)] S_IDLE: begin
+[HTML Preformatted@JUSTIFY (3)] beat <= 0; to_cnt <= 0;
+[HTML Preformatted@JUSTIFY (3)] if (ns==S_WR_AW) begin
+[HTML Preformatted@JUSTIFY (3)] aw_valid <= 1'b1;
+[HTML Preformatted@JUSTIFY (3)] // aw_addr <= <外部地址寄存或回绕逻辑>;
+[HTML Preformatted@JUSTIFY (3)] end else if (ns==S_RD_AR) begin
+[HTML Preformatted@JUSTIFY (3)] ar_valid <= 1'b1;
+[HTML Preformatted@JUSTIFY (3)] // ar_addr <= <外部地址寄存或回绕逻辑>;
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] // 写地址握手
+[HTML Preformatted@JUSTIFY (3)] S_WR_AW: begin
+[HTML Preformatted@JUSTIFY (3)] aw_valid <= ~aw_ready; // 直到握手成功
+[HTML Preformatted@JUSTIFY (3)] if (aw_valid && aw_ready) begin
+[HTML Preformatted@JUSTIFY (3)] w_valid <= 1'b1;
+[HTML Preformatted@JUSTIFY (3)] w_last  <= 1'b0;
+[HTML Preformatted@JUSTIFY (3)] beat    <= 0;
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] // 写数据突发
+[HTML Preformatted@JUSTIFY (3)] S_WR_W: begin
+[HTML Preformatted@JUSTIFY (3)] if (w_valid && w_ready) begin
+[HTML Preformatted@JUSTIFY (3)] if (beat == LEN) w_last <= 1'b1;
+[HTML Preformatted@JUSTIFY (3)] if (w_last) begin
+[HTML Preformatted@JUSTIFY (3)] w_valid <= 1'b0;
+[HTML Preformatted@JUSTIFY (3)] w_last  <= 1'b0;
+[HTML Preformatted@JUSTIFY (3)] end else begin
+[HTML Preformatted@JUSTIFY (3)] beat <= beat + 1'b1;
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] // 写响应
+[HTML Preformatted@JUSTIFY (3)] S_WR_B: begin
+[HTML Preformatted@JUSTIFY (3)] if (b_valid) last_grant <= 1'b1; // 记录写胜
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] // 读地址握手
+[HTML Preformatted@JUSTIFY (3)] S_RD_AR: begin
+[HTML Preformatted@JUSTIFY (3)] ar_valid <= ~ar_ready; // 直到握手成功
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] // 读数据突发
+[HTML Preformatted@JUSTIFY (3)] S_RD_R: begin
+[HTML Preformatted@JUSTIFY (3)] if (r_valid && r_last) last_grant <= 1'b0; // 记录读胜
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] endcase
+[HTML Preformatted@JUSTIFY (3)] // 可选：简单超时保护（任一非 IDLE 态超时则回到空闲）
+[HTML Preformatted@JUSTIFY (3)] if (s!=S_IDLE) begin
+[HTML Preformatted@JUSTIFY (3)] to_cnt <= to_cnt + 1'b1;
+[HTML Preformatted@JUSTIFY (3)] if (to_cnt == TIMEOUT) begin
+[HTML Preformatted@JUSTIFY (3)] // 清通道 strobe，回空闲
+[HTML Preformatted@JUSTIFY (3)] aw_valid<=0; ar_valid<=0; w_valid<=0; w_last<=0;
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] end
+[HTML Preformatted@JUSTIFY (3)] endmodule
+[Heading 2@JUSTIFY (3)] 怎么把它落到你的工程里
+[Normal (Web)@JUSTIFY (3)] 如果你控制的是FIFO↔总线这类流程：
+[Normal (Web)@JUSTIFY (3)] wr_req/rd_req 由“水位≥一突发/空间≥一突发”的组合产生；
+[Normal (Web)@JUSTIFY (3)] aw_addr/ar_addr 的自增与回绕放到外层地址发生器（或在本模块里加上 BEGIN/END 参数）。
+[Normal (Web)@JUSTIFY (3)] 如果是传感器/I²C/SPI这类流程：
+[Normal (Web)@JUSTIFY (3)] 把 AW/W/B/AR/R 五段，替换为你的起始→地址→数据→应答→停止子阶段，握手条件改成你的 busy/ack/ready。
+[Normal (Web)@JUSTIFY (3)] 验证要点：
+[Normal (Web)@JUSTIFY (3)] 每个通道只以握手为跳转条件；
+[Normal (Web)@JUSTIFY (3)] beat 只在握手时计数；
+[Normal (Web)@JUSTIFY (3)] 异常/超时回到 IDLE，地址与内部计数器同步清理。
+[Normal (Web)@JUSTIFY (3)] 如果你把具体接口信号名/握手条件/水位阈值告诉我（或贴上现有代码片段），我可以把这份骨架替换成你工程的信号名并补上地址自增/回绕等细节，直接可用。
+[Normal@JUSTIFY (3)] 优化实施：
+[Normal@JUSTIFY (3)] 本次状态机优化在不改动外部端口与突发参数的前提下，将原有“仲裁+读写”多分支流程收敛为线性化的六态（IDLE/WR_AW/WR_W/WR_B/RD_AR/RD_R），把仲裁合并到 IDLE，并且所有迁移仅由握手 valid&&ready/last 触发；写读突发的 beat 计数与 WLAST 生成解耦于状态、只在握手成功时递增，读写地址自增严格区分 awlen/arlen 且按 ((LEN+1)<<4) 字节步长回绕；仲裁改为“上次胜者反转+水位阈值”以避免抖动与饥饿，背压对齐为 wr_fifo_rdreq ≡ W通道握手、rd_fifo_wrreq ≡ R通道握手、rready=~alfull，并补充统一的超时/异常回退到 IDLE 的兜底路径。整体结果是控制逻辑更清晰、时序更易收敛（关键路径缩短）、资源与翻转减少（功耗下降），读写在背压场景下表现更稳健。
+[Heading 2@None] 实现阶段LLM辅助
+[Heading 3@None] 代码优化
+[Normal@JUSTIFY (3)] 优化目标： 提升代码质量和性能
+[Normal@JUSTIFY (3)] 用户输入：
+[Normal@JUSTIFY (3)] 以下是我的rgb_to_hsv模块Verilog代码，主要功能是将RGB色域数据转换到HSV色域数据。
+[Normal@JUSTIFY (3)] 请帮我检查代码质量，并提供优化建议，特别是在时序、面积和功耗方面。
+[Normal@None] module rgb_to_hsv (
+[Normal@None] input clk,
+[Normal@None] input reset_n,
+[Normal@None] input [7:0]rgb_r,
+[Normal@None] input [7:0]rgb_g,
+[Normal@None] input [7:0]rgb_b,
+[Normal@None] input vs,
+[Normal@None] input hs,
+[Normal@None] input de,
+[Normal@None] output [8:0]hsv_h,
+[Normal@None] output [8:0]hsv_s,
+[Normal@None] output [7:0]hsv_v,
+[Normal@None] output hsv_vs,
+[Normal@None] output hsv_hs,
+[Normal@None] output hsv_de);
+[Normal@None] reg [7:0]max;
+[Normal@None] reg	[7:0]min;
+[Normal@None] reg	[13:0]rgb_r_r;
+[Normal@None] reg	[13:0]rgb_g_r;
+[Normal@None] reg	[13:0]rgb_b_r;
+[Normal@None] reg [13:0]rgb_r_r2;
+[Normal@None] reg	[13:0]rgb_g_r2;
+[Normal@None] reg	[13:0]rgb_b_r2;
+[Normal@None] reg	[7:0]max_r;
+[Normal@None] wire [7:0]max_min;
+[Normal@None] assign	max_min=max-min;
+[Normal@None] reg  [7:0]max_min_r;
+[Normal@None] wire [13:0]max60;
+[Normal@None] assign max60=max*60;
+[Normal@None] wire [13:0] g_b;
+[Normal@None] wire [13:0] b_r;
+[Normal@None] wire [13:0] r_g;
+[Normal@None] assign	g_b=(rgb_g_r>=rgb_b_r)?(rgb_g_r-rgb_b_r):(rgb_b_r-rgb_g_r);
+[Normal@None] assign  b_r=(rgb_b_r>=rgb_r_r)?(rgb_b_r-rgb_r_r):(rgb_r_r-rgb_b_r);
+[Normal@None] assign  r_g=(rgb_r_r>=rgb_g_r)?(rgb_r_r-rgb_g_r):(rgb_g_r-rgb_r_r);
+[Normal@None] reg [13:0]temp;
+[Normal@None] reg	[13:0]hsv_h_r;
+[Normal@None] reg	[15:0]hsv_s_r;
+[Normal@None] reg	[7:0]hsv_v_r;
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)begin
+[Normal@None] rgb_r_r<=0;
+[Normal@None] rgb_g_r<=0;
+[Normal@None] rgb_b_r<=0;
+[Normal@None] end
+[Normal@None] else begin
+[Normal@None] rgb_r_r<=60*rgb_r;
+[Normal@None] rgb_g_r<=60*rgb_g;
+[Normal@None] rgb_b_r<=60*rgb_b;
+[Normal@None] end
+[Normal@None] end
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)begin
+[Normal@None] rgb_r_r2<=0;
+[Normal@None] rgb_g_r2<=0;
+[Normal@None] rgb_b_r2<=0;
+[Normal@None] end
+[Normal@None] else begin
+[Normal@None] rgb_r_r2<=rgb_r_r;
+[Normal@None] rgb_g_r2<=rgb_g_r;
+[Normal@None] rgb_b_r2<=rgb_b_r;
+[Normal@None] end
+[Normal@None] end
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)
+[Normal@None] max<=0;
+[Normal@None] else if((rgb_r>=rgb_b)&&(rgb_r>=rgb_g))
+[Normal@None] max<=rgb_r;
+[Normal@None] else if((rgb_g>=rgb_b)&&(rgb_g>=rgb_r))
+[Normal@None] max<=rgb_g;
+[Normal@None] else if((rgb_b>=rgb_r)&&(rgb_b>=rgb_g))
+[Normal@None] max<=rgb_b;
+[Normal@None] end
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)
+[Normal@None] min<=0;
+[Normal@None] else if((rgb_r<=rgb_b)&&(rgb_r<=rgb_g))
+[Normal@None] min<=rgb_r;
+[Normal@None] else if((rgb_g<=rgb_b)&&(rgb_g<=rgb_r))
+[Normal@None] min<=rgb_g;
+[Normal@None] else if((rgb_b<=rgb_r)&&(rgb_b<=rgb_g))
+[Normal@None] min<=rgb_b;
+[Normal@None] end
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)
+[Normal@None] max_min_r<=0;
+[Normal@None] else
+[Normal@None] max_min_r<=max_min;
+[Normal@None] end
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)
+[Normal@None] temp<=0;
+[Normal@None] else if(max_min!=0)begin
+[Normal@None] if(rgb_r_r==max60)
+[Normal@None] temp<=g_b/{6'b0,max_min};
+[Normal@None] else if(rgb_g_r==max60)
+[Normal@None] temp<=b_r/{6'b0,max_min};
+[Normal@None] else if(rgb_b_r==max60)
+[Normal@None] temp<=r_g/{6'b0,max_min};
+[Normal@None] end
+[Normal@None] else if(max_min==0)
+[Normal@None] temp<=0;
+[Normal@None] end
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)
+[Normal@None] max_r<=0;
+[Normal@None] else
+[Normal@None] max_r<=max;
+[Normal@None] end
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)
+[Normal@None] hsv_h_r<=0;
+[Normal@None] else if(max_r==0)
+[Normal@None] hsv_h_r<=0;
+[Normal@None] else if(rgb_r_r2==60*max_r)
+[Normal@None] hsv_h_r<=(rgb_g_r2>=rgb_b_r2)?temp:(14'd360-temp);
+[Normal@None] else if(rgb_g_r2==60*max_r)
+[Normal@None] hsv_h_r<=(rgb_b_r2>=rgb_r_r2)?(temp+120):(14'd120-temp);
+[Normal@None] else if(rgb_b_r2==60*max_r)
+[Normal@None] hsv_h_r<=(rgb_r_r2>=rgb_g_r2)?(temp+240):(14'd240-temp);
+[Normal@None] end
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)
+[Normal@None] hsv_s_r<=0;
+[Normal@None] else if(max_r==0)
+[Normal@None] hsv_s_r<=0;
+[Normal@None] else
+[Normal@None] hsv_s_r<={max_min_r,8'b0}/{8'b0,max_r};
+[Normal@None] end
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)
+[Normal@None] hsv_v_r<=0;
+[Normal@None] else
+[Normal@None] hsv_v_r<=max_r;
+[Normal@None] end
+[Normal@None] reg [2:0]vs_delay;
+[Normal@None] reg	[2:0]hs_delay;
+[Normal@None] reg	[2:0]de_delay;
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)begin
+[Normal@None] vs_delay<=0;
+[Normal@None] hs_delay<=0;
+[Normal@None] de_delay<=0;
+[Normal@None] end
+[Normal@None] else begin
+[Normal@None] vs_delay <= { vs_delay[1:0],vs};
+[Normal@None] hs_delay <= { hs_delay[1:0],hs};
+[Normal@None] de_delay <= { de_delay[1:0],de};
+[Normal@None] end
+[Normal@None] end
+[Normal@None] assign hsv_vs=vs_delay[2];
+[Normal@None] assign hsv_hs=hs_delay[2];
+[Normal@None] assign hsv_de=de_delay[2];
+[Normal@None] assign hsv_h=hsv_h_r[8:0];
+[Normal@None] assign hsv_s=hsv_s_r[8:0];
+[Normal@None] assign hsv_v=hsv_v_r;
+[Normal@None] endmodule
+[Normal@None] 请重点关注：
+[Normal@None] 1. 时序优化
+[Normal@None] 2. 资源使用优化
+[Normal@None] 3. 代码规范性
+[Normal@JUSTIFY (3)] LLM回答：
+[Normal (Web)@JUSTIFY (3)] 下面先给出面向时序/面积/功耗的重点改进建议（直击你这版代码的问题），然后附上可直接替换的精简版实现（接口完全一致），默认不占 DSP、吞吐 1px/clk，可按需要再开 LUT 版倒数表。
+[Heading 2@JUSTIFY (3)] 问题与优化点（简洁版）
+[Normal (Web)@JUSTIFY (3)] 乘 60 的实现：60*X 改为移位组合：(X<<6) - (X<<2)，减少乘法器与时序负担。
+[Normal (Web)@JUSTIFY (3)] 除法热点：g_b/max_min、b_r/max_min、r_g/max_min、(delta*256)/max 建议改为倒数乘法：num * recip(den)；recip(1..255) 用 256×12bit LUT 或一次牛顿迭代，既快又省。下面代码提供“直除/倒数”二选一宏。
+[Normal (Web)@JUSTIFY (3)] 流水线与对齐：你当前只有 3 拍对齐（vs/hs/de）但前面已串多级寄存，会跑偏。改为统一 LAT 参数自动补偿。
+[Normal (Web)@JUSTIFY (3)] 比较与选择：max/min 用并行比较网络；Hue 的扇区选择只比较未缩放的 r/g/b 与 max/min，避免重复乘法比较。
+[Normal (Web)@JUSTIFY (3)] 时钟门控：处理链路用 de 做 clock enable，空白期不翻转寄存器，降功耗。
+[Normal (Web)@JUSTIFY (3)] 代码规范：全用非阻塞赋值、常量/位宽统一、局部参数化、函数封装 mult60()。
+[Heading 2@JUSTIFY (3)] 优化后代码（接口不变，可直接替换）
+[Normal (Web)@JUSTIFY (3)] 说明：
+[Normal (Web)@JUSTIFY (3)] 默认 不使用 LUT 倒数，与原始语义一致（工具会综合除法器）；若要更省资源，在顶端把 USE_RECIP_LUT 置 1 并实现 recip_q12 小 ROM 即可。
+[Normal (Web)@JUSTIFY (3)] LAT 会自动对齐 vs/hs/de。CE=de 可降低功耗。
+[HTML Preformatted@None] module rgb_to_hsv (
+[HTML Preformatted@None] input         clk,
+[HTML Preformatted@None] input         reset_n,
+[HTML Preformatted@None] input  [7:0]  rgb_r,
+[HTML Preformatted@None] input  [7:0]  rgb_g,
+[HTML Preformatted@None] input  [7:0]  rgb_b,
+[HTML Preformatted@None] input         vs,
+[HTML Preformatted@None] input         hs,
+[HTML Preformatted@None] input         de,
+[HTML Preformatted@None] output [8:0]  hsv_h,   // 0..360 (9bit，单位：度)
+[HTML Preformatted@None] output [8:0]  hsv_s,   // 0..255 标准化
+[HTML Preformatted@None] output [7:0]  hsv_v,   // 0..255
+[HTML Preformatted@None] output        hsv_vs,
+[HTML Preformatted@None] output        hsv_hs,
+[HTML Preformatted@None] output        hsv_de
+[HTML Preformatted@None] );
+[HTML Preformatted@None] // ========= 可选项：0=直接除法（便于替换），1=倒数查表（推荐上板）
+[HTML Preformatted@None] localparam USE_RECIP_LUT = 0;
+[HTML Preformatted@None] localparam integer LAT = 6; // 管线级数，自动对齐 vs/hs/de
+[HTML Preformatted@None] // ========= 工具函数：乘 60（不占 DSP）
+[HTML Preformatted@None] function [13:0] mult60;
+[HTML Preformatted@None] input [7:0] x;
+[HTML Preformatted@None] begin
+[HTML Preformatted@None] // 60*x = (64-4)*x = (x<<6) - (x<<2)
+[HTML Preformatted@None] mult60 = {x,6'b0} - {x,2'b0};
+[HTML Preformatted@None] end
+[HTML Preformatted@None] endfunction
+[HTML Preformatted@None] // ========= S0: 输入寄存 + CE（de）
+[HTML Preformatted@None] reg [7:0] r0,g0,b0;
+[HTML Preformatted@None] reg       de0;
+[HTML Preformatted@None] always @(posedge clk or negedge reset_n) begin
+[HTML Preformatted@None] if (!reset_n) begin
+[HTML Preformatted@None] r0<=0; g0<=0; b0<=0; de0<=1'b0;
+[HTML Preformatted@None] end else begin
+[HTML Preformatted@None] de0 <= de;
+[HTML Preformatted@None] if (de) begin
+[HTML Preformatted@None] r0 <= rgb_r;
+[HTML Preformatted@None] g0 <= rgb_g;
+[HTML Preformatted@None] b0 <= rgb_b;
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end
+[HTML Preformatted@None] // ========= S1: max/min/delta 与 V
+[HTML Preformatted@None] reg [7:0] max1, min1, delta1, v1;
+[HTML Preformatted@None] reg       de1;
+[HTML Preformatted@None] always @(posedge clk or negedge reset_n) begin
+[HTML Preformatted@None] if (!reset_n) begin
+[HTML Preformatted@None] max1<=0; min1<=0; delta1<=0; v1<=0; de1<=1'b0;
+[HTML Preformatted@None] end else begin
+[HTML Preformatted@None] de1 <= de0;
+[HTML Preformatted@None] // 并行比较网络
+[HTML Preformatted@None] // max
+[HTML Preformatted@None] max1 <= (r0>=g0 && r0>=b0) ? r0 :
+[HTML Preformatted@None] (g0>=b0)           ? g0 : b0;
+[HTML Preformatted@None] // min
+[HTML Preformatted@None] min1 <= (r0<=g0 && r0<=b0) ? r0 :
+[HTML Preformatted@None] (g0<=b0)           ? g0 : b0;
+[HTML Preformatted@None] v1   <= max1; // 先暂存，下一拍更新更严格可再寄存
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end
+[HTML Preformatted@None] // 用下一拍计算 delta，避免组合环
+[HTML Preformatted@None] always @(posedge clk or negedge reset_n) begin
+[HTML Preformatted@None] if (!reset_n) delta1 <= 8'd0;
+[HTML Preformatted@None] else          delta1 <= max1 - min1;
+[HTML Preformatted@None] end
+[HTML Preformatted@None] // ========= S2: 计算 60*R/G/B 与色差的绝对值
+[HTML Preformatted@None] reg [13:0] r60_2,g60_2,b60_2;
+[HTML Preformatted@None] reg [13:0] g_b60_2, b_r60_2, r_g60_2;
+[HTML Preformatted@None] reg [7:0]  max2, min2, delta2, v2;
+[HTML Preformatted@None] reg        de2;
+[HTML Preformatted@None] always @(posedge clk or negedge reset_n) begin
+[HTML Preformatted@None] if (!reset_n) begin
+[HTML Preformatted@None] r60_2<=0; g60_2<=0; b60_2<=0;
+[HTML Preformatted@None] g_b60_2<=0; b_r60_2<=0; r_g60_2<=0;
+[HTML Preformatted@None] max2<=0; min2<=0; delta2<=0; v2<=0; de2<=1'b0;
+[HTML Preformatted@None] end else begin
+[HTML Preformatted@None] de2    <= de1;
+[HTML Preformatted@None] max2   <= max1;
+[HTML Preformatted@None] min2   <= min1;
+[HTML Preformatted@None] delta2 <= delta1;
+[HTML Preformatted@None] v2     <= max1;
+[HTML Preformatted@None] r60_2  <= mult60(r0);
+[HTML Preformatted@None] g60_2  <= mult60(g0);
+[HTML Preformatted@None] b60_2  <= mult60(b0);
+[HTML Preformatted@None] g_b60_2<= (g0>=b0) ? mult60(g0-b0) : mult60(b0-g0);
+[HTML Preformatted@None] b_r60_2<= (b0>=r0) ? mult60(b0-r0) : mult60(r0-b0);
+[HTML Preformatted@None] r_g60_2<= (r0>=g0) ? mult60(r0-g0) : mult60(g0-r0);
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end
+[HTML Preformatted@None] // ========= S3: temp = 60*|diff| / delta；同时准备扇区判断
+[HTML Preformatted@None] // 支持两种实现：除法 or 倒数乘法（Q12）
+[HTML Preformatted@None] reg [13:0] temp_deg_3;      // 0..360
+[HTML Preformatted@None] reg [7:0]  delta3, max3;
+[HTML Preformatted@None] reg [7:0]  r3,g3,b3;        // 未缩放的原色用于扇区判定
+[HTML Preformatted@None] reg        de3;
+[HTML Preformatted@None] generate
+[HTML Preformatted@None] if (USE_RECIP_LUT==0) begin : GEN_DIV_DIRECT
+[HTML Preformatted@None] // 直接除法（综合器会插入除法单元，简单直观）
+[HTML Preformatted@None] always @(posedge clk or negedge reset_n) begin
+[HTML Preformatted@None] if (!reset_n) begin
+[HTML Preformatted@None] temp_deg_3<=0; delta3<=0; max3<=0; r3<=0; g3<=0; b3<=0; de3<=1'b0;
+[HTML Preformatted@None] end else begin
+[HTML Preformatted@None] de3    <= de2;
+[HTML Preformatted@None] delta3 <= delta2;
+[HTML Preformatted@None] max3   <= max2;
+[HTML Preformatted@None] r3 <= r0; g3 <= g0; b3 <= b0; // 与 S2 同周期采样也可
+[HTML Preformatted@None] if (delta2!=0) begin
+[HTML Preformatted@None] // 选哪个色差取决于哪个通道为 max（下一拍再判断更稳）
+[HTML Preformatted@None] // 这里先存三个候选，下一拍按扇区取用
+[HTML Preformatted@None] // 先暂存 r/g/b 的三个候选，下一拍再 mux
+[HTML Preformatted@None] temp_deg_3 <= 14'd0; // 延后一拍在 S4 计算
+[HTML Preformatted@None] end else begin
+[HTML Preformatted@None] temp_deg_3 <= 14'd0;
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end else begin : GEN_RECIP
+[HTML Preformatted@None] // LUT 倒数方案（Q12）：temp = (diff60 * recip(delta)) >> 12
+[HTML Preformatted@None] wire [11:0] recip_q12;
+[HTML Preformatted@None] recip_q12_lut u_recip(.d(delta2[7:0]), .q(recip_q12)); // 1..255 → 4096/d
+[HTML Preformatted@None] reg  [25:0] mul_tmp;
+[HTML Preformatted@None] always @(posedge clk or negedge reset_n) begin
+[HTML Preformatted@None] if (!reset_n) begin
+[HTML Preformatted@None] temp_deg_3<=0; delta3<=0; max3<=0; r3<=0; g3<=0; b3<=0; de3<=1'b0;
+[HTML Preformatted@None] end else begin
+[HTML Preformatted@None] de3    <= de2;
+[HTML Preformatted@None] delta3 <= delta2;
+[HTML Preformatted@None] max3   <= max2;
+[HTML Preformatted@None] r3 <= r0; g3 <= g0; b3 <= b0;
+[HTML Preformatted@None] // 先占位，S4 再选择哪一路差分
+[HTML Preformatted@None] temp_deg_3 <= 14'd0;
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end
+[HTML Preformatted@None] endgenerate
+[HTML Preformatted@None] // ========= S4: Hue 扇区与最终 H/S/V 计算
+[HTML Preformatted@None] reg [13:0] h_deg4;
+[HTML Preformatted@None] reg [15:0] s_q8_4;
+[HTML Preformatted@None] reg [7:0]  v4;
+[HTML Preformatted@None] reg [7:0]  delta4, max4;
+[HTML Preformatted@None] reg [13:0] r60_4,g60_4,b60_4, gb60_4, br60_4, rg60_4;
+[HTML Preformatted@None] reg [7:0]  r4,g4,b4;
+[HTML Preformatted@None] reg        de4;
+[HTML Preformatted@None] always @(posedge clk or negedge reset_n) begin
+[HTML Preformatted@None] if (!reset_n) begin
+[HTML Preformatted@None] h_deg4<=0; s_q8_4<=0; v4<=0; delta4<=0; max4<=0; de4<=1'b0;
+[HTML Preformatted@None] r60_4<=0; g60_4<=0; b60_4<=0; gb60_4<=0; br60_4<=0; rg60_4<=0;
+[HTML Preformatted@None] r4<=0; g4<=0; b4<=0;
+[HTML Preformatted@None] end else begin
+[HTML Preformatted@None] de4    <= de3;
+[HTML Preformatted@None] delta4 <= delta3;
+[HTML Preformatted@None] max4   <= max3;
+[HTML Preformatted@None] v4     <= v2;
+[HTML Preformatted@None] r60_4  <= r60_2; g60_4 <= g60_2; b60_4 <= b60_2;
+[HTML Preformatted@None] gb60_4 <= g_b60_2; br60_4 <= b_r60_2; rg60_4 <= r_g60_2;
+[HTML Preformatted@None] r4 <= r3; g4 <= g3; b4 <= b3;
+[HTML Preformatted@None] // ---- Hue （把“除法”推迟到这里一次性做，便于选择扇区）----
+[HTML Preformatted@None] if (delta3==0) begin
+[HTML Preformatted@None] h_deg4 <= 14'd0;
+[HTML Preformatted@None] end else begin
+[HTML Preformatted@None] `ifdef NO_DIV   // 占位示例：如需宏控制
+[HTML Preformatted@None] `endif
+[HTML Preformatted@None] // 选择对应分子
+[HTML Preformatted@None] // R 为 max → 用 60*(G-B)/delta
+[HTML Preformatted@None] // G 为 max → 用 60*(B-R)/delta +/− 120
+[HTML Preformatted@None] // B 为 max → 用 60*(R-G)/delta +/− 240
+[HTML Preformatted@None] if ((r4>=g4) && (r4>=b4)) begin
+[HTML Preformatted@None] // R sector
+[HTML Preformatted@None] if (g4>=b4)
+[HTML Preformatted@None] h_deg4 <= gb60_4 / delta3;
+[HTML Preformatted@None] else
+[HTML Preformatted@None] h_deg4 <= 14'd360 - (gb60_4 / delta3);
+[HTML Preformatted@None] end else if ((g4>=r4) && (g4>=b4)) begin
+[HTML Preformatted@None] // G sector
+[HTML Preformatted@None] if (b4>=r4)
+[HTML Preformatted@None] h_deg4 <= (br60_4 / delta3) + 14'd120;
+[HTML Preformatted@None] else
+[HTML Preformatted@None] h_deg4 <= 14'd120 - (br60_4 / delta3);
+[HTML Preformatted@None] end else begin
+[HTML Preformatted@None] // B sector
+[HTML Preformatted@None] if (r4>=g4)
+[HTML Preformatted@None] h_deg4 <= (rg60_4 / delta3) + 14'd240;
+[HTML Preformatted@None] else
+[HTML Preformatted@None] h_deg4 <= 14'd240 - (rg60_4 / delta3);
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end
+[HTML Preformatted@None] // ---- Saturation （S = delta/max，放大到 0..255）----
+[HTML Preformatted@None] if (max3==0) s_q8_4 <= 16'd0;
+[HTML Preformatted@None] else         s_q8_4 <= {delta3,8'b0} / {8'b0,max3}; // 可切换为倒数乘法
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end
+[HTML Preformatted@None] // ========= S5: 输出寄存与对齐
+[HTML Preformatted@None] reg [8:0]  H5,S5;
+[HTML Preformatted@None] reg [7:0]  V5;
+[HTML Preformatted@None] reg        de5;
+[HTML Preformatted@None] always @(posedge clk or negedge reset_n) begin
+[HTML Preformatted@None] if (!reset_n) begin
+[HTML Preformatted@None] H5<=0; S5<=0; V5<=0; de5<=1'b0;
+[HTML Preformatted@None] end else begin
+[HTML Preformatted@None] de5 <= de4;
+[HTML Preformatted@None] H5  <= (h_deg4 > 14'd360) ? 9'd360 : h_deg4[8:0];
+[HTML Preformatted@None] S5  <= (s_q8_4[15:8] > 9'd255) ? 9'd255 : {1'b0, s_q8_4[15:8]};
+[HTML Preformatted@None] V5  <= v4;
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end
+[HTML Preformatted@None] // ========= 同步信号对齐（LAT 级移位）
+[HTML Preformatted@None] reg [LAT-1:0] vs_sh, hs_sh, de_sh;
+[HTML Preformatted@None] integer i;
+[HTML Preformatted@None] always @(posedge clk or negedge reset_n) begin
+[HTML Preformatted@None] if (!reset_n) begin
+[HTML Preformatted@None] vs_sh <= {LAT{1'b0}};
+[HTML Preformatted@None] hs_sh <= {LAT{1'b0}};
+[HTML Preformatted@None] de_sh <= {LAT{1'b0}};
+[HTML Preformatted@None] end else begin
+[HTML Preformatted@None] vs_sh <= {vs_sh[LAT-2:0], vs};
+[HTML Preformatted@None] hs_sh <= {hs_sh[LAT-2:0], hs};
+[HTML Preformatted@None] de_sh <= {de_sh[LAT-2:0], de};
+[HTML Preformatted@None] end
+[HTML Preformatted@None] end
+[HTML Preformatted@None] assign hsv_h  = H5;
+[HTML Preformatted@None] assign hsv_s  = S5;
+[HTML Preformatted@None] assign hsv_v  = V5;
+[HTML Preformatted@None] assign hsv_vs = vs_sh[LAT-1];
+[HTML Preformatted@None] assign hsv_hs = hs_sh[LAT-1];
+[HTML Preformatted@None] assign hsv_de = de_sh[LAT-1];
+[HTML Preformatted@None] endmodule
+[Normal (Web)@JUSTIFY (3)] 如要启用倒数 LUT：把 USE_RECIP_LUT=1，在 S3/S4 里用 recip_q12 将 /delta 与 /max 改为乘法右移（>>12）。LUT 仅 256×12 bit，可用 distributed ROM，时序与面积更好。
+[Heading 2@None] 总结（对齐你的关注点）
+[Normal (Web)@None] 时序：乘法去 DSP、除法集中且可替换为 LUT 倒数；比较/扇区/除法拆级，统一 LAT 对齐，易收敛。
+[Normal (Web)@None] 面积：移位加法替代乘法，recip LUT 仅 3Kb 级别；行内控制与寄存最小化。
+[Normal (Web)@None] 功耗：CE=de 的门控、最小化翻转；减少无效计算（空白期不运算）。
+[Normal (Web)@None] 规范：非阻塞赋值、位宽明确、函数封装/常量集中、可配置延迟与实现路径。
+[Normal (Web)@None] 需要我把 倒数 LUT（256×12） 也写成可综合的 case 或 readmemh ROM 给你吗？我可以再补一个小模块，方便你一键切到“无除法”版本。
+[Normal@None] 代码改进：
+[Normal@None] verilog
+[Normal@None] // 优化前代码片段
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)
+[Normal@None] temp<=0;
+[Normal@None] else if(max_min!=0)begin
+[Normal@None] if(rgb_r_r==max60)
+[Normal@None] temp<=g_b/{6'b0,max_min};
+[Normal@None] else if(rgb_g_r==max60)
+[Normal@None] temp<=b_r/{6'b0,max_min};
+[Normal@None] else if(rgb_b_r==max60)
+[Normal@None] temp<=r_g/{6'b0,max_min};
+[Normal@None] end
+[Normal@None] else if(max_min==0)
+[Normal@None] temp<=0;
+[Normal@None] end
+[Normal@None] // 优化后代码片段
+[Normal@None] //在数据有效之后的第二个clk上升沿,写入地址
+[Normal@None] LUT LUT0 (
+[Normal@None] .clka(clk),    // input wire clka
+[Normal@None] .addra(max_val),  // input wire [7 : 0] addra
+[Normal@None] .douta(lut_max_out)  // output wire [9 : 0] douta
+[Normal@None] );
+[Normal@None] LUT LUT1 (
+[Normal@None] .clka(clk),    // input wire clka
+[Normal@None] .addra(delta),  // input wire [7 : 0] addra
+[Normal@None] .douta(lut_delta_out)  // output wire [9 : 0] douta
+[Normal@None] );
+[Normal@None] //在数据有效之后的第二个clk上升沿,对rgb值再打一拍
+[Normal@None] reg [7:0]rgb_r_reg1;
+[Normal@None] reg [7:0]rgb_g_reg1;
+[Normal@None] reg [7:0]rgb_b_reg1;
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)begin
+[Normal@None] rgb_r_reg1 <= 8'd0;
+[Normal@None] rgb_g_reg1 <= 8'd0;
+[Normal@None] rgb_b_reg1 <= 8'd0;
+[Normal@None] end else if(rgb_valid_dly[0])begin
+[Normal@None] rgb_r_reg1 <= rgb_r_reg;
+[Normal@None] rgb_g_reg1 <= rgb_g_reg;
+[Normal@None] rgb_b_reg1 <= rgb_b_reg;
+[Normal@None] end
+[Normal@None] end
+[Normal@None] //在数据有效之后的第三个clk上升沿,根据查找表的输出值计算hsv参数
+[Normal@None] always@(posedge clk or negedge reset_n)begin
+[Normal@None] if(!reset_n)begin
+[Normal@None] hsv_h <= 9'd0;
+[Normal@None] hsv_s <= 8'd0;
+[Normal@None] hsv_v <= 8'd0;
+[Normal@None] end else if(rgb_valid_dly[1])begin
+[Normal@None] //计算饱和度S
+[Normal@None] if(max_val == 8'd0)begin
+[Normal@None] hsv_s <= 8'd0;
+[Normal@None] end else begin
+[Normal@None] if(max_val == delta)
+[Normal@None] hsv_s <= 8'd255;
+[Normal@None] else
+[Normal@None] hsv_s <= (((delta*255)*lut_max_out)>>10);
+[Normal@None] end
+[Normal@None] //计算色相H
+[Normal@None] if(delta == 8'd0)begin//1
+[Normal@None] hsv_h <= 9'd0;
+[Normal@None] end else begin
+[Normal@None] if(max_val == rgb_r_reg1)begin
+[Normal@None] if(rgb_g_reg1 >= rgb_b_reg1)begin//2
+[Normal@None] hsv_h <= ((60*({1'b0,rgb_g_reg1} - {1'b0,rgb_b_reg1})*lut_delta_out)>>10) + 9'd0;
+[Normal@None] end else begin//3
+[Normal@None] hsv_h <= ((60*({1'b0,rgb_g_reg1} - {1'b0,rgb_b_reg1})*lut_delta_out)>>10) + 9'd360;
+[Normal@None] end
+[Normal@None] end
+[Normal@None] else if(max_val == rgb_g_reg1)begin//4
+[Normal@None] hsv_h <= ((60*({1'b0,rgb_b_reg1} - {1'b0,rgb_r_reg1})*lut_delta_out)>>10) + 9'd120;
+[Normal@None] end
+[Normal@None] else if(max_val == rgb_b_reg1)begin//5
+[Normal@None] hsv_h <= ((60*({1'b0,rgb_r_reg1} - {1'b0,rgb_g_reg1})*lut_delta_out)>>10) + 9'd240;
+[Normal@None] end
+[Normal@None] end
+[Normal@None] //计算亮度V
+[Normal@None] hsv_v = max_val;
+[Normal@None] end
+[Normal@None] end
+[Normal@JUSTIFY (3)] 优化的部分:
+[Normal@JUSTIFY (3)] ①资源优化:使用查找表的形式，将原先很消耗LUT资源的除法运算转化为乘法运算，减少资源消耗；
+[Normal@JUSTIFY (3)] ②时序优化:降低数据在该模块流水线的停留时间，从原先的四个时钟延迟输出降低到三个时钟周期延迟输出数据；
+[Normal@JUSTIFY (3)] ③逻辑规范:将变量定义集中起来，便于管理。
+[Heading 3@None] 时序优化
+[Normal@JUSTIFY (3)] 优化目标：解决时序违例
+[Normal@JUSTIFY (3)] 用户输入：我的设计在综合后出现时序违例，关键路径延迟为 5.37 ns，
+[Normal@JUSTIFY (3)] 目标时钟周期为 5.00 ns（ui_clk=200 MHz）。违例路径主要在
+[Normal@JUSTIFY (3)] fifo2mig_axi：从写/读仲裁与阈值判断（wr_fifo_rd_cnt、rd_fifo_wr_cnt、wr_rd_poll）到 m_axi_awvalid/m_axi_awaddr 更新，以及 B 通道 OKAY 后的地址自增比较。
+[Normal@JUSTIFY (3)] （awaddr >= WR_DDR_ADDR_END ? 回绕 : +((LEN+1)<<4)）。
+[Normal@JUSTIFY (3)] 请帮我分析时序违例的原因，并提供优化建议。
+[Normal@JUSTIFY (3)] （附：Timing Summary 里 WNS = -0.37 ns；该路径跨多级比较器。）
+[Normal@JUSTIFY (3)] LLM回答：
+[Normal@JUSTIFY (3)] 根因：同一拍内串了“水位比较→仲裁→状态译码→地址比较→地址加法→多路选择→awvalid/awaddr 输出”，
+[Normal@JUSTIFY (3)] 组合锥过深；同时 aw/arb 信号扇出大，rready/backpressure 路径也有较高扇出。
+[Normal@JUSTIFY (3)] 建议：
+[Normal@JUSTIFY (3)] 1) 管线化地址回写：把“B通道OKAY捕获/回绕判断/地址自增”拆成两拍：
+[Normal@JUSTIFY (3)] A拍：锁存 bvalid&OKAY，生成 awaddr_inc_en_q 与 awaddr_wrap_q；
+[Normal@JUSTIFY (3)] B拍：awaddr_q <= wrap? BEGIN : awaddr_q + BURST_BYTES（预计算常量 512B）。
+[Normal@JUSTIFY (3)] 2) 预计算常量与早期比较：BURST_BYTES = (LEN+1)<<4 作为常量；阈值比较提前一拍打拍，
+[Normal@JUSTIFY (3)] 仲裁放在 IDLE，一律由 valid&&ready 驱动迁移（线性 WR_AW→WR_W→WR_B / RD_AR→RD_R）。
+[Normal@JUSTIFY (3)] 3) 降扇出：复制 rd_fifo_alfull 与 last_grant 两份（分别供 FSM 和 rready 使用），
+[Normal@JUSTIFY (3)] 对全局门控信号设 max_fanout 或本地寄存。
+[Normal@JUSTIFY (3)] 4) 输出寄存：awvalid/arvalid/wvalid/wlast 在各自状态内独立寄存，WLAST 仅在最后一拍产生；
+[Normal@JUSTIFY (3)] wr_fifo_rdreq、rd_fifo_wrreq 与 W/R 握手同拍生成。
+[Normal@JUSTIFY (3)] 5) 约束与CDC：将 ui_clk 与 pixelclk/pclk 分组异步；对异步FIFO内部 rst_busy 等标记 false_path；
+[Normal@JUSTIFY (3)] 两级同步器加 multicycle(2/1)；避免工具错误收敛到跨域路径。
+[Normal@JUSTIFY (3)] 6) 编码与实现：状态机 one-hot 或二进制皆可，保持单入口单出口；允许综合 retiming。```
+[Normal (Web)@JUSTIFY (3)] **时序优化措施：**
+[Normal (Web)@JUSTIFY (3)] - 把地址更新链路拆分为两拍：新增 awaddr_inc_en_q/awaddr_wrap_q；awaddr_q 下一拍完成回绕/累加；BURST_BYTES=512 常量化。
+[Normal@JUSTIFY (3)] - 仲裁合入 IDLE，仅以握手迁移；wr_req/rd_req 与“满一突发”阈值打拍；wvalid/wlast 与 beat 计数脱耦，仅握手时+1。
+[Normal@JUSTIFY (3)] - 复制高扇出信号：rd_fifo_alfull、last_grant 各自本地寄存，降低扇出；awvalid/arvalid、rready 均有本地输出寄存。
+[Normal@JUSTIFY (3)] - 约束：set_clock_groups -asynchronous（ui_clk vs pixelclk/pclk）；对异步 FIFO 的 *_rst_busy/灰度比较加 set_false_path；两级同步器加 set_multicycle_path -setup 2 -hold 1。
+[Normal@JUSTIFY (3)] - 结果：WNS 由 -0.37 ns 提升到 +0.28 ns（Fmax≈205–208 MHz），关键路径移出地址加法/比较锥；实现收敛稳定。
+[Heading 2@JUSTIFY (3)] 调试阶段LLM辅助
+[Heading 3@None] 仿真问题解决
+[Normal@JUSTIFY (3)] 问题描述：
+[Normal@JUSTIFY (3)] 本系统编写了一个高斯滤波模块gausser_filter,我编写完成后去做了仿真测试，我测试了记住数据一开始是正常的，但是后面我想直接数据输入值全部给最大值255，那么此时理论上来讲高斯滤波输出值应该也是255，但是实际输出却是127，其他情况时比如输入值全部为110的时候结果就是正常的，这就很让人感到奇怪。我就去问了CHATGPT 5
+[Normal@JUSTIFY (3)] 用户输入：
+[Normal@JUSTIFY (3)] 在仿真过程中遇到以下问题：
+[Normal@JUSTIFY (3)] 数据输入值全部给最大值255，那么此时理论上来讲高斯滤波输出值应该也是255，但是实际输出却是127。其他情况时比如输入值全部为110的时候结果就是正常的，这是为什么？
+[Normal@JUSTIFY (3)] 仿真波形显示：
+[Normal] <IMAGE>
+[Normal@JUSTIFY (3)] 请帮我分析可能的原因并提供调试建议。
+[Normal@JUSTIFY (3)] LLM回答：
+[Normal (Web)@JUSTIFY (3)] 你这个现象（255 → 127，而 110 → 110 正常）是典型的累加器位宽溢出造成的。
+[Normal (Web)@JUSTIFY (3)] 为什么一定是溢出？
+3×3 高斯核系数之和=16。对纯平坦场（所有像素相等）做卷积，理论输出应等于输入：
+[Normal (Web)@JUSTIFY (3)] 若输入=255：加权和=16×255=4080，右移4位（÷16）应得 255；
+[Normal (Web)@JUSTIFY (3)] 你实际看到 127，正好是 4080 在 11bit（0..2047）里取模后再 >>4：
+4080−2048=20324080 - 2048 = 20324080−2048=2032，2032>>4=1272032 >> 4 = 1272032>>4=127。——这就是少了1位的典型特征。
+[Normal (Web)@JUSTIFY (3)] 在哪儿少了1位？
+按 8bit 输入，累加器至少要 12bit（0..4095）。你模块里应保持：
+[HTML Preformatted@JUSTIFY (3)] reg [DATA_WIDTH+3:0] sum_data;  // DATA_WIDTH=8 时是 [11:0]，共12位 ✅
+[Normal (Web)@JUSTIFY (3)] 如果在你的版本里被改成了下面这种（很常见的一行误改），就会得到 127：
+[HTML Preformatted@JUSTIFY (3)] reg [DATA_WIDTH+2:0] sum_data;  // 只有11位 ❌  -> 255 会被折返成 127
+[Normal (Web)@JUSTIFY (3)] 或在别处发生隐式截断（比如在 shift_register_2taps、中间加权/相加时用了更窄的寄存器/线网），效果与上面一样——4080 被截到 2047，输出就变 127。
+[Heading 3@None] 一步修复（任选其一，推荐都做）
+[Normal (Web)@JUSTIFY (3)] 1. 确认/恢复位宽（至少 12bit）：
+[HTML Preformatted@JUSTIFY (3)] reg [DATA_WIDTH+3:0] sum_data;  // 保证 8bit 输入时 12bit 累加不溢出
+[Normal (Web)@JUSTIFY (3)] 2. 显式位扩展 + 移位代替乘法（防综合器在中间环节窄化）：
+[HTML Preformatted@JUSTIFY (3)] wire [11:0] c00 = {4'b0, row0_col0};
+[HTML Preformatted@JUSTIFY (3)] wire [11:0] c01 = {3'b0, row0_col1, 1'b0};  // *2
+[HTML Preformatted@JUSTIFY (3)] wire [11:0] c02 = {4'b0, row0_col2};
+[HTML Preformatted@JUSTIFY (3)] wire [11:0] c10 = {3'b0, row1_col0, 1'b0};  // *2
+[HTML Preformatted@JUSTIFY (3)] wire [11:0] c11 = {2'b0, row1_col1, 2'b0};  // *4
+[HTML Preformatted@JUSTIFY (3)] wire [11:0] c12 = {3'b0, row1_col2, 1'b0};  // *2
+[HTML Preformatted@JUSTIFY (3)] wire [11:0] c20 = {4'b0, row2_col0};
+[HTML Preformatted@JUSTIFY (3)] wire [11:0] c21 = {3'b0, row2_col1, 1'b0};  // *2
+[HTML Preformatted@JUSTIFY (3)] wire [11:0] c22 = {4'b0, row2_col2};
+[HTML Preformatted@JUSTIFY (3)] always @(posedge clk or posedge reset_p)
+[HTML Preformatted@JUSTIFY (3)] if (reset_p) sum_data <= 12'd0;
+[HTML Preformatted@JUSTIFY (3)] else if (signal_dly1[0])
+[HTML Preformatted@JUSTIFY (3)] sum_data <= c00+c01+c02+c10+c11+c12+c20+c21+c22;
+[HTML Preformatted@JUSTIFY (3)] assign data_out = sum_data >> 4;
+[Normal (Web)@JUSTIFY (3)] 3. 可选：饱和保护 + 平坦场断言（仿真更稳）
+[HTML Preformatted@JUSTIFY (3)] wire [11:0] sum_sat = (sum_data > 12'd4080) ? 12'd4080 : sum_data;
+[HTML Preformatted@JUSTIFY (3)] assign data_out = sum_sat >> 4;
+[HTML Preformatted@JUSTIFY (3)] // testbench 断言：平坦场输入应保持不变（注意管线延迟 LAT）
+[HTML Preformatted@JUSTIFY (3)] assert property (data_in_valid |-> data_out == $past(data_in, LAT));
+[Normal (Web)@JUSTIFY (3)] 旁注：你在更新 3×3 窗口时用了 if (data_in_hs && data_in_vs)，这会在行/帧边界把窗口清零，这是对的；但它不会把“255→127”的问题只出现在 255，而 110 正常——只有位宽不够才会出现这种“高亮塌一半”的特征。
+[Normal (Web)@JUSTIFY (3)] 总之：把累加器（以及中间加权/求和）的有效位宽确保到 12bit，或按上面的显式位扩展写法替换，纯白输入就会恢复为 255。
+[Normal@JUSTIFY (3)] 问题解决：
+[Normal] <IMAGE>
+[Normal@JUSTIFY (3)] 根据CHATGPT 5给出的两种可能情况，发现我们的数据位宽确实少了一位（如上图所示），这就导致了我刚才出现的数据不正常现象。另一种可能原因被我排除了，一位经过查看，发现shift_register_2taps模块的输入输出数据位宽为正常情况，故此通过CHATGPT 5解决了我这个高斯滤波仿真时遇到的奇怪问题。
+[Heading 2@None] LLM辅助总结
+[Heading 3@None] 效果评估：
+[List Paragraph@JUSTIFY (3)] 设计效率提升：在系统架构规划和模块划分阶段，我们通过向LLM咨询，在短时间内获得了多个可行的设计方案作为参考，大大缩短了初期的设计决策时间。在功能调试阶段，LLM能快速提供各种故障的排查方法，有效减少了盲目调试的时间。
+[List Paragraph@JUSTIFY (3)] 代码质量改善：LLM在代码优化方面为我们提供了关键帮助。如，针对RGB转HSV模块，它建议采用三级流水线设计和查找表替代复杂运算，我们采纳后成功将关键路径延迟降低了约15%，并提升了代码的可读性与可维护性。
+[List Paragraph@JUSTIFY (3)] 学习效果：通过LLM的解答，我们不仅解决了具体问题，更系统地理解了ZYNQ PS-PL协同设计中的“握手信号”同步、多时钟域时序约束等核心概念，将零散的知识点串联成了完整的知识体系。
+[List Paragraph@JUSTIFY (3)] 使用心得：
+[Normal@JUSTIFY (3)] 有效的prompt技巧：
+[List Paragraph@JUSTIFY (3)] 提供充分上下文：明确说明项目类型、目标器件和核心需求，LLM才能给出更贴切的建议。
+[List Paragraph@JUSTIFY (3)] 任务分解与具体化：将复杂问题分解为多个具体子问题，并限定技术等领域的讨论范围，能够显著提升交互效率。
+[List Paragraph@JUSTIFY (3)] 请求举例说明：使用“请给出一个Verilog代码示例”或“请对比这两种架构的优缺点”等的方式，更易于理解和实践。
+[Normal@JUSTIFY (3)] LLM擅长的领域：
+[List Paragraph@JUSTIFY (3)] 架构建议与模块划分：快速生成完善的系统级框图和建议。
+[List Paragraph@JUSTIFY (3)] 代码转换与优化：将算法思路转化为基础硬件代码，并提供初步的时序与面积优化建议。
+[List Paragraph@JUSTIFY (3)] 调试指导：根据错误现象，分析多种可能的错误原因，为我们提供完善的排查方向和解决方案。
+[Normal@JUSTIFY (3)] 需要人工判断的方面：
+[List Paragraph@JUSTIFY (3)] 关键设计与参数决策：LLM提供的方案是参考，最终的系统架构、状态机设计以及关键参数必须由开发者根据实际测试结果和深入理解来最终裁定。
+[List Paragraph@JUSTIFY (3)] 代码的功能正确性保证：LLM生成的代码可能存在错误情况或逻辑缺陷，必须通过严格的仿真和实测进行验证。
+[List Paragraph@JUSTIFY (3)] 深度时序分析与优化：对于复杂的时序违例，尤其是涉及跨时钟域和高速接口的部分，仍需要依赖专业工具和工程师的经验进行精准优化。
+[Heading 1@None] 综合实现结果
+[Heading 2@None] 资源使用报告
+[Normal] <IMAGE>
+[Heading 2@None] 时序性能报告
+<<TABLE 3: 8x4>>
+   | 时序指标 | 目标值 | 实际值(估算) | 裕量
+   | HDMI 像素时钟 PixelClk | 74.25 MHz | 75.96 MHz | +1.71 MHz
+   | TMDS ×5 时钟 PixelClk5x | 371.25 MHz | 372.39 MHz | +1.14 MHz
+   | 存储/总线域 UI/DDR 时钟 | 200.00 MHz | 205.35 MHz | +5.35 MHz
+   | 摄像头驱动 XCLK | 24.00 MHz | 24.58 MHz | +0.58 MHz
+   | 内部参考时钟 100M | 100.00 MHz | 102.30 MHz | +2.30 MHz
+   | 外部板载时钟 50M | 50.00 MHz | 50.18 MHz | +0.18 MHz
+   | 相机初始化时钟 10M | 10.00 MHz | 10.40 MHz | +0.40 MHz
+[Heading 1@None] 创新点与特色
+[Heading 2@None] 设计创新点
+[paragraph@JUSTIFY (3)] （1）算法架构创新
+[paragraph@JUSTIFY (3)] 创新性地将HSV色彩空间分析与边缘检测技术相结合，构建了适用于农业场景的病斑精准定位方法。
+[paragraph@JUSTIFY (3)] （2）硬件加速优化
+[paragraph@JUSTIFY (3)] 基于ZYNQ平台特点，实现了图像处理算法的硬件加速，显著提升系统的实时性能。
+[paragraph@JUSTIFY (3)] （3）异构架构优化分配
+[paragraph@JUSTIFY (3)] 通过深入研究PL-PS端的架构特性，实现控制任务与处理任务的精准划分与高效协同，系统整体性能明显提升。
+[paragraph@JUSTIFY (3)] （4）多源融合技术
+[paragraph@JUSTIFY (3)] 打破单一视觉感知的局限，引入温湿度、光照强度等环境参数进行融合分析，增强了系统的环境适应性与诊断可靠性。
+[paragraph@JUSTIFY (3)] （5）可扩展架构设计
+[paragraph@JUSTIFY (3)] 采用模块化接口设计，支持传统图像处理算法与深度AI学习模型的协同工作。
+[paragraph@JUSTIFY (3)] （6）移动检测一体化设计
+[paragraph@JUSTIFY (3)] 将FPGA图像处理系统创新性集成于移动巡检平台，打破传统固定式检测设备的空间限制。
+[Heading 2@JUSTIFY (3)] 工程实现特色
+[List Paragraph@JUSTIFY (3)] 本系统搭载于自主巡航的三驱小车上，可以自主的做到农作物病虫害实时诊断-显示诊断结果和决策的一体化流程，显著降低大面积农田病虫害排查的成本。
+[List Paragraph@JUSTIFY (3)] 显示结果方式富有特色，一屏HMDI显示屏显示实时采集到的图像处理结果，将病虫害边缘框出，另一个显示屏串口屏显示诊断结果和决策建议，辅助相关人员进行除害操作。
+[Heading 2@JUSTIFY (3)] LLM 辅助方法创新
+[Normal (Web)@JUSTIFY (3)] 将 LLM 作为“设计合作者”而非生成器：用结构化提问获取架构权衡与参数边界（突发长度、位宽、FIFO 深度）、用对比式提示优化 FSM/流水线级间寄存 与 功耗门控策略，在此基础上由人工做仿真与上板验证闭环；同时用 LLM 统一产出寄存器表/接口说明/测试清单等工程文档，形成“提示词模板→设计方案→验证要点→文档落地”的一体化流程，显著缩短从想法到可交付物的周期。
+[Heading 1@None] 未来改进方向
+[Heading 2@None] 当前不足
+[Normal@JUSTIFY (3)] (1) 无法对多种病虫害进行分类识别。
+[Normal@JUSTIFY (3)] (2) 没有对实时采集的数据做后期存储以便相关人员统计数据，做出预测。
+[Normal@JUSTIFY (3)] (3) 系统部分逻辑实现方式不好导致整体功耗较高，不利于本系统长期运行。
+[Normal@JUSTIFY (3)] (4) 对病虫害识别到之后没有做出实质性的操作，比如喷洒农药等除害操作，只是将诊断结果和决策建议显示出来，还没有根据诊断结果加上除害器件模块。
+[Heading 2@JUSTIFY (3)] 改进计划
+[Heading 3@None] 多类病虫害分类识别（PL 分割 + PS 轻量分类）
+[List Paragraph@JUSTIFY (3)] (1) 目标：在不降帧的前提下，实现多类别与等级识别。
+[List Paragraph@JUSTIFY (3)] (2) 做法：PL 做快速分割与候选提取；PS 采用 INT8 轻量模型（或 SVM）完成分类，必要时补充颜色直方图、GLCM、形状等特征。
+[List Paragraph@JUSTIFY (3)] (3) 接口/产出：新增“类别ID/置信度/ROI框”寄存器，帧完成中断携带结果。
+[List Paragraph@JUSTIFY (3)] (4) 验收：准确率≥90%，整帧分类耗时≤10 ms。
+[List Paragraph@JUSTIFY (3)] (5) 里程碑：数据与接口定稿 → 原型联调 → 上板验证与阈值固化。
+[Heading 3@None] 实时数据存储与统计预测
+[List Paragraph@JUSTIFY (3)] (1) 目标：现场数据可留痕、可回溯、可做趋势预警。
+[List Paragraph@JUSTIFY (3)] (2) 做法：PS 端本地落盘（CSV/SQLite）、DDR 环形缓存批量写入、日志按日切分；可选云端批量同步与简单预测。
+[List Paragraph@JUSTIFY (3)] (3) 接口/产出：数据表结构与导出指令；基础统计报表。
+[List Paragraph@JUSTIFY (3)] (4) 验收：丢失率<0.1%，单条写入≤5 ms。
+[List Paragraph@JUSTIFY (3)] (5) 里程碑：数据模型 → 本地写盘/导出 → 云端同步与预测（可选）。
+[Heading 3@None] 降功耗与架构优化
+[List Paragraph@JUSTIFY (3)] (1) 目标：30 fps 稳定下，PL 平均功耗下降 20–30%
+[List Paragraph@JUSTIFY (3)] (2) 做法：只对 ROI 做高斯/边缘/形态学；中间位宽裁剪（8b/1b），3×3 行缓冲复用；扩大 CE/门控，必要时分频；DDR 用 128-bit/32 拍突发与水位驱动，只写叠加帧/缩略图，面积/重心就地统计；传感器中断唤醒、蓝牙低功耗。
+[List Paragraph@JUSTIFY (3)] (3) 接口/产出：低功耗开关与水位阈值寄存器；功耗与水位日志。
+[List Paragraph@JUSTIFY (3)] (4) 验收：平均功耗下降≥20%，DDR 有效带宽占比提升≥10%。
+[List Paragraph@JUSTIFY (3)] (5) 里程碑：门控与阈值接入 → ROI-only/帧跳 → 写回裁剪评估。
+[Heading 3@None] 联动除害执行（喷洒闭环）
+[Normal (Web)@JUSTIFY (3)] (1) 目标：从诊断到执行形成闭环，支持点喷/条带喷洒并保证安全。
+[Normal (Web)@JUSTIFY (3)] (2) 做法：增配喷洒控制板（电磁阀/微泵 + PWM），建立“等级→流量/时长/喷幅”映射，加入延迟补偿与地理围栏；双确认、急停、环境限喷与药液/温度监测。
+[Normal (Web)@JUSTIFY (3)] (3) 接口/产出：PS 通过 GPIO/PWM/UART 控制；串口屏显示喷洒状态、药量统计与告警。
+[Normal (Web)@JUSTIFY (3)] (4) 验收：触发到执行≤200 ms，喷量误差≤±10%，异常停喷≤1 s。
+里程碑：电气与接口 → 策略与联锁 → 田间联动测试。
+[Heading 2@JUSTIFY (3)] 后续发展方向
+[List Paragraph@JUSTIFY (3)] 扩展多光谱成像：添加近红外、多光谱成像模块，实现对病害早期症状的更精准的识别，提升预警能力。
+[List Paragraph@JUSTIFY (3)] 集成无线通信：增加4G或5G通信模块，实现远程监控与数据上传，支持云端大数据分析和决策。
+[List Paragraph@JUSTIFY (3)] 升级AI模型：预留Deepseek等轻量级AI接口，可导入训练好的深度学习模型，提升识别的准确率。
+[List Paragraph@JUSTIFY (3)] 自主导航升级：集成激光雷达与SLAM技术，实现完全自主路径规划与动态避障，减少人工干预。
+[List Paragraph@JUSTIFY (3)] 实现精准施药：通过加装变量施药系统，实现检测-诊断-处理的完整流程，提升综合防治效果。
+[Heading 1@None] 结论
+[Heading 2@None] 项目完成情况
+[Heading 3@None] 工程成果
+[paragraph@JUSTIFY (3)] 1、机械成果
+[paragraph@JUSTIFY (3)] 本系统采用双层模块化地盘，集成动力、控制、传感与显示模块.下图为实物照片及关键细节，图中注明了简短说明。
+[paragraph] <IMAGE>
+[paragraph@None] 整体结构：由双层平台构成，最下层为电机及万向轮，中间层为电池和12V5V降压模块，上层为主控板，电机驱动，传感器及显示屏。
+[paragraph@None] 底盘与电源：电池、降压模块（12V→5V）。
+[paragraph@None] 控制与驱动：ZYNQ7020 与电机驱动。
+[paragraph@None] 传感与显示：OV5640 摄像头、光照、温湿度传感器、HDMI显示屏、串口屏。
+[paragraph@None] 轮组与支撑：驱动轮与前支撑万向轮。
+[paragraph@None] 电路成果
+[paragraph] <IMAGE>
+[paragraph@None] (1) 自制电源板原理图：
+[paragraph] <IMAGE>
+[paragraph@None] (2) 自制电源板的PCB:采用双层布线
+[paragraph] <IMAGE>
+[paragraph@JUSTIFY (3)] 8.1.2软件成果
+[paragraph@None] 成功集成调试好了的PS+PL联合运行并完成板验证。
+[Heading 2@None] 目标达成度
+<<TABLE 4: 9x3>>
+   | 指标 | 目标值 | 实际上板测试后的实际值
+   | 单点识别病虫害精度 | > 90％ | 89％
+   | 远程蓝牙控制距离 | > 50 m | 43 m
+   | 处理帧率 | 30 帧/秒 | 30 帧/秒
+   | 边缘检测速度 | 1 像素 / 2 时钟周期 | 1 像素 / 2 时钟周期
+   | PL 部分系统功耗 | < 50 W | 59W
+   | PS 部分系统功耗 | < 10 W | 2.4 W
+   | 最小识别病斑尺寸 | < 2 cm² | 1.6 cm²
+   | 端到端处理延迟 | < 39 ms | 36.56 ms
+[Heading 2@None] 项目价值
+[Heading 3@None] 技术价值
+[List Paragraph@None] 把“感知—处理—诊断—决策”完整闭环落在边缘侧：在田间地头就做实时分析，减少对网络和云端算力的依赖，真正可用、可部署。
+[List Paragraph@None] 在 ZYNQ 上实现异构加速与逐像素流水线，用合理的 CDC、AXI 帧缓冲与带宽调度把系统稳定性、时延与功耗都拉到工程可交付的水位；这些“看不见的细节”，才是产品级系统的底气。
+[List Paragraph@None] 多源数据融合（视觉 + 环境传感）让诊断更稳健，也为后续分类、预测和闭环执行留出了标准化接口与可扩展空间。
+[List Paragraph@None] 抽象出一套可复用的架构与模板（时钟/复位规划、行缓冲复用、128-bit 突发、低功耗开关），下一代方案或其他场景可以直接套用、快速迭代。
+[Heading 3@None] 工程与学习价值
+[List Paragraph@None] 走完了从算法到硬件的每一步：模型/阈值选择、RTL 设计、时序收敛、资源/功耗权衡、板级联调与可视化验证，建立了完整的“系统级思维”。
+[List Paragraph@None] 真正体会到“工程是权衡”：帧率与延迟、精度与功耗、体验与成本，很多决定没有完美答案，但我们会给出透明的理由与可验证的数据。
+[List Paragraph@None] 形成了可持续的数据与实验方法论：标注、统计、回放、A/B 对照与参数固化，为后续多类识别、预测与执行闭环打下扎实基础。
+[List Paragraph@None] 团队协作与规范产出（文档、寄存器表、脚本化流程）沉淀为资产，下一次会更快、更稳。
+[Heading 3@None] 社会与落地价值
+[Normal@None] 让精准农业从“概念”落到“工具”：更少的药、更准的喷、更快的处置，实打实降低成本与环境压力。面向普通农户与一线管理者，提供看得见的辅助决策与可追溯的数据，技术真正服务生产。
+[Normal@None] 这不是一堆代码的堆砌，而是把“看到—理解—行动”放进了一台可搬运、可维护、可升级的小系统里；它今天能用，明天还能长大。
+[Heading 1@None] 参考文献
+[Normal@JUSTIFY (3)] [1] Gonzalez, R. C., & Woods, R. E. (2018). Digital Image Processing (4th ed.). Pearson.
+[Normal@JUSTIFY (3)] [2] Xilinx. (2020). Zynq-7000 All Programmable SoC Technical Reference Manual.
+[Normal@JUSTIFY (3)] [3] Peiyuan Wang, Yong Fan, Lingfei Lu, Lu Liu, Lingling Fan, Mengyao Zhao, Yang Xie, Congjian Xu, and Fan Zhang. (2018). “NIR-II nanoprobes in-vivo assembly to improve image-guided surgery for metastatic ovarian cancer”. Nature Communications, 9, 29-33.
+[Normal@JUSTIFY (3)] [4] D. Demigny. (2002). “On optimal linear filtering for edge detection”. IEEE Trans. Image Process, 11, no. 7, 728-737.
+[Normal@JUSTIFY (3)] [5] R.Medina-Carnicer,A.Carmona-Poyato,R.Muñoz-Salinas and F.J.Madrid-Cuevas. (2020). “Determining hysteresis thresholds for edge detection by combining the advantages and disadvantages of thresholding method”. IEEE Trans. Image Process, 19, no. 1, 165-173.
+[Normal@JUSTIFY (3)] [6] M. A. Awal and B. Boashash. (2017). “An automatic fast optimization of quadratic time-frequency distribution using the hybrid genetic algorithm”. Signal Process, 131, 134-142.
+[Normal@JUSTIFY (3)] [7] Wanto Anjar,  Rizki Syafrika Deni,  Andini Silfia,  Surmayanti S,  Ginantra N L W S R, Aspan Henry. (2021). “Combination of Sobel + Prewitt Edge Detection Method with Roberts + Canny on Passion Flower Image Identification”. Journal of Physics: Conference Series,  1933.
+[Normal@JUSTIFY (3)] [8] SharifraziDanial, AlizadehsaniRoohallah, RoshanzamirMohamad, JoloudariJavadHassannataj, ShoeibiAfshin, JafariMahboobeh, HussainSadiq, SaniZahraAlizadeh, HasanzadehFereshteh, Khozeimeh Fahime, Khosravi Abbas, Nahavandi Saeid, Panahiazar Maryam, Zare Assef, Islam Sheikh Mohammed Shariful, Acharya U Rajendra. (2021). “Fusion of convolution neural network, support vector machine and Sobel filter for accurate detection of COVID-19 patients using X-ray images”. Biomedical Signal Processing and Control, 68, 102622-102622.
+[Normal@JUSTIFY (3)] [9] Cristina Ticala, Ioana Zelina, Camelia-M. Pintea. (2020). “Admissible Perturbation of Demicontractive Operators within Ant Algorithms for Medical Images Edge Detection”. Mathematics,  8.
+[Normal@JUSTIFY (3)] [10] Cho Woon, Chung Daewon, Hwang Gyungmin. (2019). “Design of Wavelet Digital Filter for Edge Detection of Medical MRI image”. 1st International Conference on Artificial Intelligence in Information and Communication (ICAIIC),  185-188.
+[Heading 1@None] 附录
+[Heading 2@None] 系统源代码目录树
+[Normal] <IMAGE>

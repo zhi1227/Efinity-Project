@@ -1,0 +1,124 @@
+===== 最终版本农作物.docx =====
+Title | 农作物多源智能感知与实时诊断系统
+Heading 1 | 项目概述
+Heading 2 | 选题背景与意义
+Heading 2 | 1.2  项目目标
+Heading 2 | 技术规格
+Heading 1 | 需求分析与系统设计
+Heading 2 | 2.1 选题背景与意义
+Heading 3 | 功能需求
+Heading 3 | 性能需求
+Heading 2 | 系统架构设计
+Heading 3 | 顶层架构
+Heading 3 | 状态机设计
+Heading 3 | 时序设计
+Heading 2 | 接口设计
+Heading 3 | 模块功能概述
+Heading 3 | 输入接口规格
+Heading 3 | 输出接口规格
+Heading 1 | 详细设计与实现
+Heading 2 | 核心算法设计（核心模块：core_code）
+Heading 3 | rgb_to_hsv —— 色彩空间转换
+Heading 3 | gaussian_filter —— 高斯平滑去噪
+Heading 3 | sobel —— 边缘梯度检测
+Heading 3 | morphological_open —— 形态学开运算
+Heading 2 | 关键模块设计
+Heading 3 | [ddr3_ctrl_2port模块]
+Heading 3 | 功能描述：
+Heading 3 | 端口定义：
+Heading 2 | 逻辑设计：
+Heading 3 | 顶层结构与时钟域
+Heading 3 | 写路径（16-bit → 128-bit → DDR3）
+Heading 3 | 读路径（DDR3 → 128-bit → 16-bit）
+Heading 3 | 仲裁与事务管理
+Heading 3 | 地址与帧区间
+Heading 3 | 复位/就绪与帧同步
+Heading 2 | 资源使用设计
+Heading 3 | LUT 使用策略：
+Heading 3 | 寄存器使用
+Heading 3 | 存储资源规划:
+Heading 1 | LLM 辅助设计优化记录
+Heading 2 | 架构设计阶段LLM辅助
+Heading 3 | 系统架构咨询
+Heading 2 | 1) 顶层分工与数据流
+Heading 2 | 2) 模块划分
+Heading 2 | 3) 时钟/复位/跨域
+Heading 2 | 4) 带宽与时延（以720p、RGB565、30 fps为例）
+Heading 2 | 5) 可配参数与寄存器框架
+Heading 2 | 6) 资源与功耗要点
+Heading 2 | 7) 风险与备选
+Heading 2 | 状态机设计优化
+Heading 2 | 精简版状态机骨架（可直接改名/改端口套用）
+Heading 2 | 怎么把它落到你的工程里
+Heading 2 | 实现阶段LLM辅助
+Heading 3 | 代码优化
+Heading 2 | 问题与优化点（简洁版）
+Heading 2 | 优化后代码（接口不变，可直接替换）
+Heading 2 | 总结（对齐你的关注点）
+Heading 3 | 时序优化
+Heading 2 | 调试阶段LLM辅助
+Heading 3 | 仿真问题解决
+Heading 3 | 
+Heading 3 | 一步修复（任选其一，推荐都做）
+Heading 2 | LLM辅助总结
+Heading 3 | 效果评估：
+Heading 1 | 综合实现结果
+Heading 2 | 资源使用报告
+Heading 2 | 时序性能报告
+Heading 1 | 
+Heading 1 | 创新点与特色
+Heading 2 | 设计创新点
+Heading 2 | 工程实现特色
+Heading 2 | LLM 辅助方法创新
+Heading 1 | 未来改进方向
+Heading 2 | 当前不足
+Heading 2 | 改进计划
+Heading 3 | 多类病虫害分类识别（PL 分割 + PS 轻量分类）
+Heading 3 | 实时数据存储与统计预测
+Heading 3 | 降功耗与架构优化
+Heading 3 | 联动除害执行（喷洒闭环）
+Heading 2 | 后续发展方向
+Heading 1 | 结论
+Heading 2 | 项目完成情况
+Heading 3 | 工程成果
+Heading 2 | 目标达成度
+Heading 2 | 项目价值
+Heading 3 | 技术价值
+Heading 3 | 工程与学习价值
+Heading 3 | 社会与落地价值
+Heading 1 | 参考文献
+Heading 1 | 附录
+Heading 2 | 系统源代码目录树
+
+styles: {"Title": 1, "Normal": 620, "Heading 1": 11, "Heading 2": 39, "List Paragraph": 151, "Plain Text": 4, "Normal (Web)": 94, "Heading 3": 39, "HTML Preformatted": 416, "paragraph": 32}
+
+===== 2025嵌入式FPGA创新设计赛安路科技杯+全国一等奖作品初赛报告.docx =====
+Title | 
+Title | 
+Title | 
+Title | 多模态智能四探针半导体测试仪
+Heading 1 | 作品概述
+Heading 2 | 功能与特性
+Heading 2 | 应用领域
+Heading 2 | 主要技术特点
+Heading 2 | 主要性能指标
+Heading 2 | 主要创新点
+Heading 2 | 设计流程
+Heading 1 | 系统组成及功能说明
+Heading 2 | 2.1整体介绍
+Heading 2 | 2.2硬件系统介绍
+Heading 3 | 硬件整体介绍；
+Heading 3 | 机械设计介绍
+Heading 3 | 电路各模块介绍（从总体到局部，逐级给出各模块的具体设计图，并标记
+Heading 2 | 2.3软件系统介绍
+Heading 1 | 完成情况及性能参数
+Heading 2 | 整体介绍（整个系统实物的正面、斜45°全局性照片）
+Heading 2 | 工程成果（分硬件实物、软件界面等设计结果）
+Heading 2 | 特性成果
+Heading 3 | 3.3.1 关键性能指标（实测/工程值）
+Heading 2 | 总结
+Heading 3 | 4.44.1 可扩展之处
+Heading 2 | 心得体会
+
+styles: {"Title": 4, "章标题": 2, "Body Text": 226, "Normal": 44, "Heading 1": 3, "Heading 2": 14, "List Paragraph": 7, "Heading 3": 5, "参考文献条目": 10}
+

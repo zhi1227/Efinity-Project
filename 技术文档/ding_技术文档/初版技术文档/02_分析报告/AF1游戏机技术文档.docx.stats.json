@@ -1,0 +1,31 @@
+{
+  "paragraphs": 200,
+  "tables": 29,
+  "images": 0,
+  "sections": 1,
+  "styles_used": {
+    "Heading 2": 1,
+    "Normal": 158,
+    "List Paragraph": 41
+  },
+  "headings": [
+    {
+      "style": "Heading 2",
+      "text": "AF1可穿戴游戏机"
+    }
+  ],
+  "inline_shapes": 39,
+  "core_properties": {
+    "title": "",
+    "author": "平芜春烬",
+    "subject": ""
+  },
+  "page": {
+    "page_width": 7560310,
+    "page_height": 10692130,
+    "orientation": "PORTRAIT (0)",
+    "left_margin": 1143000,
+    "right_margin": 1143000
+  },
+  "headers_footers": []
+}
