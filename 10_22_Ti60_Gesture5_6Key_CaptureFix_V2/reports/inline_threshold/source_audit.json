@@ -1,0 +1,77 @@
+{
+  "project": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold",
+  "started_utc": "2026-10-20T13:02:01.026184+00:00",
+  "hardware_programming": "not performed",
+  "mode": "source-only",
+  "audit_tool_sha256": "50f04bc30057d3c7e74fd4f062e918d90e832b7c0fa2b8974712e929eaeec021",
+  "original_protection": {
+    "status": "PASS",
+    "files": 6491,
+    "source": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_RAM_Optimized",
+    "manifest_sha256": "0ee81c99cf98d78053f1cc14c000ad63c9f3dacadb85cd8ce9e55f8329dc1347"
+  },
+  "sources": {
+    "status": "PASS",
+    "modified_production_inputs": [
+      "Ti60_Demo.peri.xml",
+      "Ti60_Demo.pt.sdc",
+      "example_top.v",
+      "menu_font.hex",
+      "menu_font_bank0.hex",
+      "menu_font_bank1.hex",
+      "menu_font_bank2.hex",
+      "menu_font_bank3.hex",
+      "menu_font_bank4.hex",
+      "rtl/menu8_renderer.v",
+      "rtl/menu_glyph_rom.v",
+      "rtl/shared_glyph_rom.v",
+      "rtl/vision6_glyph_rom.v",
+      "rtl/vision6_overlay.v",
+      "rtl/vision8_controls.v",
+      "rtl/vision8_frames.v",
+      "shared_font.hex",
+      "shared_font_bank0.hex",
+      "shared_font_bank1.hex",
+      "shared_font_bank2.hex",
+      "shared_font_bank3.hex",
+      "shared_font_bank4.hex",
+      "shared_font_bank5.hex",
+      "shared_font_bank6.hex",
+      "shared_font_bank7.hex",
+      "shared_font_bank8.hex",
+      "shared_font_index_bank0.hex",
+      "shared_font_index_bank1.hex",
+      "shared_font_index_bank2.hex",
+      "shared_font_index_bank3.hex",
+      "shared_font_index_bank4.hex",
+      "src/parallel/parallel_video.v"
+    ],
+    "new_production_inputs": [],
+    "protected_ip_cpu_runtime_collateral_files": 510,
+    "preserved_historical_ram_evidence_files": 2579,
+    "protected_camera_ddr_clock_reset_prefix": "identical except IO34 port",
+    "protected_top_instances": {
+      "camera_rgb_balance": "identical ports and parameters",
+      "vision8_ddr": "identical ports and parameters",
+      "rgb2dvi": "identical ports and parameters"
+    },
+    "protected_ram_modules": [
+      "rtl/gesture_branch.v",
+      "src/gesture/ep1_components.v",
+      "src/gesture/ep1_skin.v",
+      "src/parallel/face_grid_regions.v",
+      "src/parallel/video_delay.v",
+      "src/vision/line_buffer_3x3.v"
+    ],
+    "shared_font_ram_layout": "identical outside combinational dictionary functions",
+    "original_key_core": "identical",
+    "pin_changes": "IO34 GPIOT_N_11 input, 1.8 V LVCMOS only",
+    "new_sdc": [
+      "set_false_path -from [get_ports {io34_button_i}] -to [get_pins {controls/c/meta~FF|D}]"
+    ]
+  },
+  "status": "SOURCE_PASS",
+  "build": "not audited",
+  "tests": "not audited",
+  "ended_utc": "2026-10-20T13:02:25.447233+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "log": "reports/ramopt_wide_lines/equivalence.log",
+  "log_sha256": "762dbc42ad7d9993d095a93f967abec626629bd16e84034ee69965e1a370f800",
+  "reference_sha256": {
+    "reports/ram_optimization_20261020/wide_line_candidate/line_buffer_current.v": "15c0c69f69ffe2d440f848b96abee53b6f9320029b4a87475c66fddcb138819e"
+  },
+  "started_at": "2026-10-19T19:02:18.7452133Z",
+  "bench": "reports/ram_optimization_20261020/wide_line_candidate/s/tb_wide.sv",
+  "result": "PASS",
+  "hardware_validation": "not performed",
+  "ended_at": "2026-10-19T19:02:31.7314591Z",
+  "coverage": {
+    "features": [
+      "width1/2/3/4/5/8/9/10/12/14",
+      "1280/640/319",
+      "sparse DE",
+      "cropped coordinates",
+      "illegal reads",
+      "reset",
+      "all outputs cycle-exact"
+    ],
+    "configurations": 18,
+    "clocks": 90000
+  },
+  "bench_sha256": "0ded30b2628c3804ff2501792ebff1acf5b4f16f39ac4a2adbb15ca25c635b18",
+  "optimized_sha256": {
+    "src/vision/line_buffer_3x3.v": "7bccd92923bad462bfd95bd1d18fbfab980cfbfeb2058335582e251ce22377a3"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "result": "PASS",
+  "build_completed": true,
+  "canonical_input_count": 504,
+  "stage_input_differences": [],
+  "production_input_differences": [],
+  "bit_sha256": "eeff07af4fe66d40d9b2ad88b486102a97ff7034ab6e7644e8149910da30e439",
+  "hex_sha256": "c6c5ba289253abd3aa01a1acfe768d464da7dc19c18068d099c8fdd8db34d39a",
+  "stage_manifest_sha256": "d8761b3be836eb8aef59b0c09661dfde5635b56acf0dcc14c9fbc72795079cad",
+  "collect_performed_by_agent": false,
+  "verified_resources": {
+    "XLRs": {
+      "used": 52744,
+      "available": 60800
+    },
+    "Memory Blocks": {
+      "used": 184,
+      "available": 256
+    },
+    "DSP Blocks": {
+      "used": 39,
+      "available": 160
+    },
+    "Global Clocks (GBUF)": {
+      "used": 14,
+      "available": 32
+    }
+  },
+  "setup_ns": 0.305,
+  "hold_ns": 0.026
+}

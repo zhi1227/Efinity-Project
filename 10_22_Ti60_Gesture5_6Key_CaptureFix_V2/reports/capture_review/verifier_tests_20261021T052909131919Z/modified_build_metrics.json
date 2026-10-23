@@ -1,0 +1,75 @@
+{
+  "runs": [
+    {
+      "path": "reports/capture_review/runs/20261021T042833367396Z/result.json",
+      "benches": [
+        "tb_review_top",
+        "tb_review_controls",
+        "tb_review_hdmi_text",
+        "tb_review_done_cdc",
+        "tb_capturefix_chain",
+        "tb_capturefix_cancel_boundary",
+        "tb_capturefix_binding"
+      ]
+    },
+    {
+      "path": "reports/capture_review/runs/20261021T042859681725Z/result.json",
+      "benches": [
+        "tb_camera_rgb_fifo",
+        "tb_capture_exit_regression",
+        "tb_capturefix_abort",
+        "tb_capturefix_controls",
+        "tb_capturefix_faults",
+        "tb_capturefix_pip",
+        "tb_capturefix_rawphase",
+        "tb_capturefix_ui_select",
+        "tb_controls6",
+        "tb_frame_path",
+        "tb_gesture5_controls_new",
+        "tb_gesture5_rgb_ramopt",
+        "tb_gesture5_shared_overlay_ramopt",
+        "tb_gesture5_templates_ramopt",
+        "tb_h4_overlay",
+        "tb_h4_skin",
+        "tb_h5_palm",
+        "tb_h5_ui",
+        "tb_h5_wave",
+        "tb_health6",
+        "tb_i2c6",
+        "tb_io29_freeze_ddr",
+        "tb_matrix5_ramopt",
+        "tb_menu_cdc6",
+        "tb_vision8_ddr",
+        "tb_vision8_faces",
+        "tb_vision8_fifo",
+        "tb_vision8_gesture",
+        "tb_vision8_key_boundary"
+      ]
+    },
+    {
+      "path": "reports/capture_review/runs/20261021T042900437174Z/result.json",
+      "benches": [
+        "tb_capturefix_720p_pressure",
+        "tb_capturefix_full_load"
+      ]
+    },
+    {
+      "path": "reports/capture_review/runs/20261021T042856269670Z/result.json",
+      "benches": [
+        "tb_review_video_defaults",
+        "tb_inline_video_dynamic",
+        "tb_fourkey_font",
+        "tb_inline_cpu8",
+        "tb_inline_epd_cpu"
+      ]
+    },
+    {
+      "path": "reports/capture_review/runs/20261021T043323001295Z/result.json",
+      "benches": [
+        "tb_capturefix_menu"
+      ]
+    }
+  ],
+  "build": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\\reports\\capture_review\\verifier_tests_20261021T052909131919Z\\modified_build.json",
+  "batch_selection_note": "The video batch also compiled a menu bench with an obsolete step-hint probe. That menu root is excluded here and selected only from its separate corrected PASS run. Other independently elaborated roots retain their own testbench and all production/configuration/reference/runner hashes. Raw development failures are preserved."
+}

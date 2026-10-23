@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "isolated_fixture": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\reports\\inline_threshold\\audit_selftest_712f024e41f74845b6fafa0c25e5270a",
+  "checks": [
+    {
+      "name": "complete_fixture",
+      "status": "PASS",
+      "expected": "accepted",
+      "reason": "complete hash-bound fixture"
+    },
+    {
+      "name": "missing_final_marker",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Final test completion not reached: simulation.log"
+    },
+    {
+      "name": "missing_finish",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Final test completion not reached: simulation.log"
+    },
+    {
+      "name": "log_hash_changed",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Test log changed: simulation.log"
+    },
+    {
+      "name": "source_hash_changed",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Test source changed: bench.sv"
+    },
+    {
+      "name": "production_phase_changed",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Tests production manifest differs from current final build inputs"
+    },
+    {
+      "name": "test_not_pass",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Test not PASS: isolated_fixture"
+    },
+    {
+      "name": "empty_sources",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Test lacks source/bench provenance: isolated_fixture"
+    },
+    {
+      "name": "empty_markers",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Missing explicit completion markers: simulation.log"
+    },
+    {
+      "name": "duplicate_checks",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Duplicate test names"
+    },
+    {
+      "name": "mandatory_check_missing",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Missing mandatory checks: ['isolated_fixture']"
+    },
+    {
+      "name": "hash_keys_not_log_keys",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Log hash/marker key sets differ: isolated_fixture"
+    },
+    {
+      "name": "future_test_start_stale_log",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Stale test log: simulation.log"
+    },
+    {
+      "name": "predates_copy",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Tests began before the independent copy was verified"
+    },
+    {
+      "name": "failure_even_with_final_pass",
+      "status": "PASS",
+      "expected": "rejected",
+      "reason": "Failure in test log: simulation.log"
+    },
+    {
+      "name": "path_traversal",
+      "status": "PASS",
+      "expected": "rejected"
+    }
+  ],
+  "check_count": 16,
+  "production_sources_modified": false,
+  "old_verifiers_modified": false
+}

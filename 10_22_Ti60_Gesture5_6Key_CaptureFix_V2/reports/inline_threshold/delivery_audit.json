@@ -1,0 +1,380 @@
+{
+  "project": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold",
+  "started_utc": "2026-10-20T13:07:10.500124+00:00",
+  "hardware_programming": "not performed",
+  "mode": "full",
+  "audit_tool_sha256": "50f04bc30057d3c7e74fd4f062e918d90e832b7c0fa2b8974712e929eaeec021",
+  "original_protection": {
+    "status": "PASS",
+    "files": 6491,
+    "source": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_RAM_Optimized",
+    "manifest_sha256": "0ee81c99cf98d78053f1cc14c000ad63c9f3dacadb85cd8ce9e55f8329dc1347"
+  },
+  "sources": {
+    "status": "PASS",
+    "modified_production_inputs": [
+      "Ti60_Demo.peri.xml",
+      "Ti60_Demo.pt.sdc",
+      "example_top.v",
+      "menu_font.hex",
+      "menu_font_bank0.hex",
+      "menu_font_bank1.hex",
+      "menu_font_bank2.hex",
+      "menu_font_bank3.hex",
+      "menu_font_bank4.hex",
+      "rtl/menu8_renderer.v",
+      "rtl/menu_glyph_rom.v",
+      "rtl/shared_glyph_rom.v",
+      "rtl/vision6_glyph_rom.v",
+      "rtl/vision6_overlay.v",
+      "rtl/vision8_controls.v",
+      "rtl/vision8_frames.v",
+      "shared_font.hex",
+      "shared_font_bank0.hex",
+      "shared_font_bank1.hex",
+      "shared_font_bank2.hex",
+      "shared_font_bank3.hex",
+      "shared_font_bank4.hex",
+      "shared_font_bank5.hex",
+      "shared_font_bank6.hex",
+      "shared_font_bank7.hex",
+      "shared_font_bank8.hex",
+      "shared_font_index_bank0.hex",
+      "shared_font_index_bank1.hex",
+      "shared_font_index_bank2.hex",
+      "shared_font_index_bank3.hex",
+      "shared_font_index_bank4.hex",
+      "src/parallel/parallel_video.v"
+    ],
+    "new_production_inputs": [],
+    "protected_ip_cpu_runtime_collateral_files": 510,
+    "preserved_historical_ram_evidence_files": 2579,
+    "protected_camera_ddr_clock_reset_prefix": "identical except IO34 port",
+    "protected_top_instances": {
+      "camera_rgb_balance": "identical ports and parameters",
+      "vision8_ddr": "identical ports and parameters",
+      "rgb2dvi": "identical ports and parameters"
+    },
+    "protected_ram_modules": [
+      "rtl/gesture_branch.v",
+      "src/gesture/ep1_components.v",
+      "src/gesture/ep1_skin.v",
+      "src/parallel/face_grid_regions.v",
+      "src/parallel/video_delay.v",
+      "src/vision/line_buffer_3x3.v"
+    ],
+    "shared_font_ram_layout": "identical outside combinational dictionary functions",
+    "original_key_core": "identical",
+    "pin_changes": "IO34 GPIOT_N_11 input, 1.8 V LVCMOS only",
+    "new_sdc": [
+      "set_false_path -from [get_ports {io34_button_i}] -to [get_pins {controls/c/meta~FF|D}]"
+    ]
+  },
+  "build": {
+    "status": "PASS",
+    "resources": {
+      "XLRs": {
+        "used": 52399,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 184,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 39,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.298,
+    "min_hold_slack_ns": 0.026,
+    "bit_sha256": "fdb21780fc3224777bcf691f39baff0323c9d5252432787e0d542a19eee038d6",
+    "hex_sha256": "ba872a3f27c0a380147dc0410cdaf6d134008a34b19d7f47e737158c4d711f44",
+    "build_input_manifest_sha256": "9be4310f72c0b243654c8203e4ec40f706424c39f98d6527faa54ad48965fa36",
+    "physical_board_test": "not performed; simulation and compilation only",
+    "selected_build_sha256": "2664cf31df220252ba887298b789906409e69e15a9534b7df34a08dc73c0da2b",
+    "io34_map_sink": "controls/c/meta~FF",
+    "io34_pin": "A9/GPIOT_N_11, input, 1.8 V LVCMOS",
+    "original_button_pin_rows_unchanged": {
+      "io28_button_i": "C1,GPIOL_N_16,io28_button_i.N,Input,1B,1.8 V,1.8 V LVCMOS,,User IO/MIPI_GCLK/MIPI_RCLK",
+      "io29_button_i": "D1,GPIOL_P_16,io29_button_i.P,Input,1B,1.8 V,1.8 V LVCMOS,,User IO/MIPI_GCLK/MIPI_RCLK",
+      "io35_button_i": "B9,GPIOT_P_11,io35_button_i.P,Input,2B,1.8 V,1.8 V LVCMOS,,User IO"
+    },
+    "io34_map_references": [
+      "io34_button_i, io29_button_i, key_freeze_n, flash_data_o,",
+      "input io34_button_i /* verific EFX_ATTRIBUTE_PORT__IS_PRIMARY_INPUT=TRUE */ ;   // D:\\Github_Project\\fpga_build\\inline_threshold_20261020_final\\example_top.v(327)",
+      "EFX_FF \\controls/c/meta~FF  (.D(io34_button_i), .CE(1'b1), .CLK(clk_pixel),"
+    ],
+    "synchronizer_report": "No Synchronizer warnings to report.",
+    "cdc_scope": "Efinity synchronizer report only; not a formal CDC or MTBF certification"
+  },
+  "tests": {
+    "status": "PASS",
+    "check_count": 32,
+    "checks": [
+      {
+        "name": "controls_95",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/controls_95/tb_inline_controls.log"
+        ],
+        "sources": 4
+      },
+      {
+        "name": "io28_boundaries",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/io28_boundaries/tb_vision8_key_boundary.log"
+        ],
+        "sources": 4
+      },
+      {
+        "name": "video_dynamic",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/video_dynamic/tb_inline_video_dynamic.log"
+        ],
+        "sources": 97
+      },
+      {
+        "name": "video_defaults",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/video_defaults/tb_inline_video_defaults.log"
+        ],
+        "sources": 97
+      },
+      {
+        "name": "font_dualclock",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/font_dualclock/font_simulation.log"
+        ],
+        "sources": 40
+      },
+      {
+        "name": "ui_pixels",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/ui_pixels/menu_simulation.log"
+        ],
+        "sources": 40
+      },
+      {
+        "name": "capture_binding",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/capture_binding/tb_inline_capture.log"
+        ],
+        "sources": 98
+      },
+      {
+        "name": "retained_tb_vision8_key_boundary",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_vision8_key_boundary/tb_vision8_key_boundary.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_vision8_fifo",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_vision8_fifo/tb_vision8_fifo.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_vision8_ddr",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_vision8_ddr/tb_vision8_ddr.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_vision8_frames",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_vision8_frames/tb_vision8_frames.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_vision8_faces",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_vision8_faces/tb_vision8_faces.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_io29_freeze_ddr",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_io29_freeze_ddr/tb_io29_freeze_ddr.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_vision8_gesture",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_vision8_gesture/tb_vision8_gesture.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_h5_palm",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_h5_palm/tb_h5_palm.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_h5_wave",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_h5_wave/tb_h5_wave.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_gesture5_controls_new",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_gesture5_controls_new/tb_gesture5_controls_new.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_gesture5_templates_ramopt",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_gesture5_templates_ramopt/tb_gesture5_templates_ramopt.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_gesture5_rgb_ramopt",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_gesture5_rgb_ramopt/tb_gesture5_rgb_ramopt.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_gesture5_shared_overlay_ramopt",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_gesture5_shared_overlay_ramopt/tb_gesture5_shared_overlay_ramopt.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_h4_skin",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_h4_skin/tb_h4_skin.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_h4_overlay",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_h4_overlay/tb_h4_overlay.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_controls6",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_controls6/tb_controls6.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_matrix5_ramopt",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_matrix5_ramopt/tb_matrix5_ramopt.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_h5_ui",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_h5_ui/tb_h5_ui.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_i2c6",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_i2c6/tb_i2c6.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_health6",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_health6/tb_health6.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_frame_path",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_frame_path/tb_frame_path.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_menu_cdc6",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_menu_cdc6/tb_menu_cdc6.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "retained_tb_camera_rgb_fifo",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/retained_tb_camera_rgb_fifo/tb_camera_rgb_fifo.log"
+        ],
+        "sources": 120
+      },
+      {
+        "name": "cpu8_real",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/cpu8_real/simulation.log"
+        ],
+        "sources": 47
+      },
+      {
+        "name": "epaper_real",
+        "status": "PASS",
+        "logs": [
+          "reports/inline_threshold/final_logs/epaper_real/simulation.log"
+        ],
+        "sources": 47
+      }
+    ]
+  },
+  "tests_manifest_sha256": "031f2743a57db7ac3b45d83c9e75715c4f05e0a22464588a192eb1018b4f4b8d",
+  "status": "PASS",
+  "ended_utc": "2026-10-20T13:07:36.942529+00:00"
+}

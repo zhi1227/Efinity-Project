@@ -1,0 +1,27 @@
+{
+  "result": "PASS",
+  "log_sha256": "c181da1529857c91885e0df3a50168373f3602e434fc00aa0346d193480b8fc6",
+  "started_at": "2026-10-19T19:05:05.4922278Z",
+  "face_grids": [
+    "160x90",
+    "48x32"
+  ],
+  "bench": "sim_ramopt_coordinates/tb_ramopt_coordinates.sv",
+  "log": "reports/ramopt_coordinates/equivalence.log",
+  "baseline_sha256": {
+    "src/gesture/ep1_components.v": "1bb2b11a5f171a5225d2ab3efe7bad28be17f89dfeae4dad98debfd8df0dd3bf",
+    "src/parallel/face_grid_regions.v": "f843aa8cb7be6e15333a2db2fd52a17da544f5a5b64828ec485a24d8196b897d"
+  },
+  "optimized_sha256": {
+    "src/gesture/ep1_components.v": "5b16e305bbbdc4e5914fa81da68e6a176ece6443d815f69c2d1fdc409c020577",
+    "src/parallel/face_grid_regions.v": "67bae2498ca9b06d232ad12109899e6912c3b908692b911a4fa686b366fd2ef4"
+  },
+  "hardware_validation": "not performed",
+  "bench_sha256": "55aa04a1cf381840c91f8c8021257d49f74def146339b83a78fbf9a5a7c2c0d3",
+  "ended_at": "2026-10-19T19:05:26.9722941Z",
+  "ccl_modes": [
+    "10bit LABEL_CAP1024",
+    "10bit LABEL_CAP8",
+    "11bit LABEL_CAP1024"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "generator": "tools/compress_shared_font_ram.py",
+  "generator_sha256": "5e0e0c2d92cd119257a28bcf0343e1fb513c30399d49d382172b2625a91d1b14",
+  "production_regenerated": false,
+  "production_current_rtl_sha256": "cbbf674867a2fcef69bd5b087bc4968c5606a37bc876132650f97ece5a38c486",
+  "checks": [
+    {
+      "ordering": "value",
+      "default_invocation": true,
+      "matching_files": 6,
+      "reference": "reports\\ram_optimization_20261020\\font_candidates\\index_10_value_sorted",
+      "all_bytes_identical": true
+    },
+    {
+      "ordering": "frequency",
+      "default_invocation": false,
+      "matching_files": 6,
+      "reference": "reports\\ram_optimization_20261020\\font_candidates\\index_10",
+      "all_bytes_identical": true
+    }
+  ]
+}

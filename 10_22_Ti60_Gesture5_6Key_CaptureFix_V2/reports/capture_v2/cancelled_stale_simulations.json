@@ -1,0 +1,16 @@
+[
+  {
+    "pid": 37704,
+    "reason": "Explicitly cancelled stale pre-final-source duplicate; current source-bound acceptance remains active.",
+    "start": "2026-10-22T03:25:51.8864669+08:00",
+    "bench": "tb_inline_cpu8",
+    "run": "20261021T191315823693Z"
+  },
+  {
+    "pid": 25900,
+    "reason": "Explicitly cancelled stale pre-final-source duplicate; current source-bound acceptance remains active.",
+    "start": "2026-10-22T03:40:08.5548829+08:00",
+    "bench": "tb_review_video_defaults",
+    "run": "20261021T191326170350Z"
+  }
+]

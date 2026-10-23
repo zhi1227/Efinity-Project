@@ -1,0 +1,36 @@
+{
+  "result": "PASS",
+  "canonical_input_count": 504,
+  "only_differences": {
+    "rtl/shared_glyph_rom.v": {
+      "current_value": "0748af1bf5ad9c752de05890dbb3ec0e57989d7fb35e4c2a55a5308449a8e3df",
+      "candidate_frequency": "cbbf674867a2fcef69bd5b087bc4968c5606a37bc876132650f97ece5a38c486"
+    },
+    "shared_font_index_bank0.hex": {
+      "current_value": "ab9f4f21ede9d112ba8290bd19c9d2e974b17e7cb4bd0414762a09af8161e9ee",
+      "candidate_frequency": "476f91a475dba05c08086c241d41f0e7ed65ec8b83cb07fc59266b3cd31991a5"
+    },
+    "shared_font_index_bank1.hex": {
+      "current_value": "6d0654902b633e2382d11280f8100d1d37fd9d962b3b09531a0107b939c2f9c9",
+      "candidate_frequency": "8b9f47947b7fea4048c8c3601aea044b3dfc91ea773b0879c7236938999e424c"
+    },
+    "shared_font_index_bank2.hex": {
+      "current_value": "f0af0bb673af40e16aa1459808c5d275442ec8439393d93cca4e86f7f1c885d3",
+      "candidate_frequency": "5f89d921e81d07b2ef1fa9d3c11c65d92f76bcd778d74d799139d7c8a9e6a918"
+    },
+    "shared_font_index_bank3.hex": {
+      "current_value": "ce86e6382e9390f4d0efda49cb5d51391f2e7352e7e0147649ee78d95593c256",
+      "candidate_frequency": "c7195a663bd0c73922a79b985de8a5039aa1e52e5dbbfc1fcef014a8e207de58"
+    },
+    "shared_font_index_bank4.hex": {
+      "current_value": "695853ec7e347adbea6529413689194a11a0bd4b0ed3ba5c46189231905100b9",
+      "candidate_frequency": "2f25cf3c2918d18adf104ed4eb4c663698b1892d5bf65aaea4d6f3ee096f8a70"
+    }
+  },
+  "current_manifest_sha256": "0836d0cd931382a31b04a3dfe47e9adb32d4986f6d598d9f7fc8f83151a566ae",
+  "build_helpers_sha256": {
+    "build_fpga.ps1": "7eed1cb80c47776553899d1f2dd1cba88117bf6874e4be308625bd7ce993bbc1",
+    "verify_build.py": "c761647bd9fa34b236a42840e6d68866b82d0e725343b4b3288a08c3a088b20b"
+  },
+  "production_edited": false
+}

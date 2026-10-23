@@ -1,0 +1,92 @@
+[
+  {
+    "path": "reports/capture_fix/cpu8/inputs.json",
+    "status": "RUNNING",
+    "sha256": "90024ac2ce33c706cfca874886184fe292ba0fab12dbeb694f221e7627cef082",
+    "classification": "historical"
+  },
+  {
+    "path": "reports/capture_fix/epaper/inputs.json",
+    "status": "RUNNING",
+    "sha256": "9cb5f9d6b9e11b6f23956a91f12506f0d53d13d28bdac8d811ccf3071e175544",
+    "classification": "historical"
+  },
+  {
+    "path": "reports/capture_fix/tb_capture_exit_regression/20261020T151855118181Z/result.json",
+    "status": "RUNNING",
+    "sha256": "bae3d59dbba081439d037bd381ccbcab2e47a38981f19be7a0872bb100467457",
+    "classification": "historical"
+  },
+  {
+    "path": "reports/capture_fix/tb_capturefix_720p_pressure/20261020T153955208730Z/result.json",
+    "status": "FAIL",
+    "sha256": "dc3b62161488b0e347abf370f751e9a352b5cc18e52aa407edf100f17bd6f17a",
+    "classification": "historical"
+  },
+  {
+    "path": "reports/capture_fix/tb_capturefix_backpressure_debug/20261020T155450574129Z/result.json",
+    "status": "FAIL",
+    "sha256": "10c5941cc6c2b3f45fcf9960b8c945df2a897a8553794d53f7677ab570feb60f",
+    "classification": "historical"
+  },
+  {
+    "path": "reports/capture_fix/tb_capturefix_backpressure_debug/20261020T155614421594Z/result.json",
+    "status": "FAIL",
+    "sha256": "0203aabcf5f0cf2f1b662fe41da601ceb769b7bdcc5484a0379de46768ee9958",
+    "classification": "historical"
+  },
+  {
+    "path": "reports/capture_fix/tb_capturefix_backpressure_debug/20261020T155756431002Z/result.json",
+    "status": "FAIL",
+    "sha256": "2e31b61eb4586e8ae1a90dd1bc5e44b0449dbdf77ba062d22e2b06433f142afd",
+    "classification": "historical"
+  },
+  {
+    "path": "reports/capture_fix/tb_capturefix_chain/20261020T153041861548Z/result.json",
+    "status": "RUNNING",
+    "sha256": "0291b9259a1002f8d155158120e8c3a8341367e513da2838277a3f7a4f4aa39f",
+    "classification": "historical"
+  },
+  {
+    "path": "reports/capture_fix/tb_capturefix_faults/20261020T154838656701Z/result.json",
+    "status": "FAIL",
+    "sha256": "81092ab589a8536a168312095e3c4e8d572c560b4563ef1e7204ffa00dceca21",
+    "classification": "historical"
+  },
+  {
+    "path": "reports/capture_fix/tb_capturefix_pip/20261020T155151456774Z/result.json",
+    "status": "FAIL",
+    "sha256": "92838696612a3d2af37ef8dc1fe3291bac66c0ab43a2f2dca99e42aeabbb807c",
+    "classification": "historical"
+  },
+  {
+    "path": "reports/capture_review/runs/20261021T042411898270Z/result.json",
+    "status": "ERROR",
+    "sha256": "3089549f0ec3dc49f7f93775d521356a2dc140de396dc9c88fcbc1965ff7d901",
+    "classification": "development batch; selected bench evidence is explicit"
+  },
+  {
+    "path": "reports/capture_review/runs/20261021T042431112549Z/result.json",
+    "status": "FAIL",
+    "sha256": "94193c6976152ee1b2052a10100fed721c264912453cbe60a809fbc6c873e28d",
+    "classification": "development batch; selected bench evidence is explicit"
+  },
+  {
+    "path": "reports/capture_review/runs/20261021T042642618889Z/result.json",
+    "status": "ERROR",
+    "sha256": "b3f2cb09715e43161f78bec0dc07629a9624b3c8bc287bd2ca106da5dcab6a11",
+    "classification": "development batch; selected bench evidence is explicit"
+  },
+  {
+    "path": "reports/capture_review/runs/20261021T042656181192Z/result.json",
+    "status": "FAIL",
+    "sha256": "9fccb8b2ff2331f348f2b7dbdaa831e4e8f45882452dd7b8cc8c5211b974beb7",
+    "classification": "development batch; selected bench evidence is explicit"
+  },
+  {
+    "path": "reports/capture_review/runs/20261021T042856269670Z/result.json",
+    "status": "ERROR",
+    "sha256": "d3ef16c99d2ab82d74f463b54ff4686e0677f660d69fee10517f9151c022f2a1",
+    "classification": "development batch; selected bench evidence is explicit"
+  }
+]

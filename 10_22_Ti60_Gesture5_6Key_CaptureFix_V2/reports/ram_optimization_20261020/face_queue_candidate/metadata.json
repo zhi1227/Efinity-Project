@@ -1,0 +1,15 @@
+{
+  "production_source": "src/parallel/face_grid_regions.v",
+  "production_source_sha256": "90a30891f5e57b7b601968f62a30cb3c2496e62cba130224303e9c941172c2e8",
+  "candidate_source_sha256": "67bae2498ca9b06d232ad12109899e6912c3b908692b911a4fa686b366fd2ef4",
+  "production_changed": false,
+  "queue_capacity": 14400,
+  "full_chunks": 7,
+  "full_chunk_low_width": 10,
+  "full_chunk_high_width": 4,
+  "full_chunk_depth": 2048,
+  "tail_width": 14,
+  "tail_depth": 64,
+  "theoretical_queue_ram": 22,
+  "baseline_queue_ram": 28
+}

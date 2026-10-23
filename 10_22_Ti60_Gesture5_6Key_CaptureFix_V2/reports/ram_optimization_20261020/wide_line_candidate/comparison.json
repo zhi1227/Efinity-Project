@@ -1,0 +1,22 @@
+{
+  "scope": "Isolated WIDTH1280 DWIDTH8 line buffer synthesis; no route or board claim",
+  "candidate": {
+    "LUT4": 115,
+    "DSP24": 0,
+    "RAM10": 3,
+    "FF": 142,
+    "ADD": 23,
+    "DPRAM10": 0,
+    "DSP48": 0
+  },
+  "equivalence": "18 configurations, 90000 clocks; see equivalence.log",
+  "current": {
+    "LUT4": 80,
+    "DSP24": 0,
+    "RAM10": 4,
+    "FF": 140,
+    "ADD": 23,
+    "DPRAM10": 0,
+    "DSP48": 0
+  }
+}

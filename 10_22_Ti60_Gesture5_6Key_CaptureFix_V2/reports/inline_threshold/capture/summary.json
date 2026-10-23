@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "bench": "tb_inline_capture",
+      "status": "PASS",
+      "seconds": 52.8,
+      "log": "tb_inline_capture.log",
+      "log_sha256": "a00ed206bdd3655784b78019f4f1d742ee41f5c6e182943e76033bd5bf456fa5",
+      "completion_markers": [
+        "PASS: INLINE_CAPTURE_COMPLETE captures=4 locked_frames=16 HDMI_T_char_samples=46080 HDMI_T_pixels=46080; actual controls/parallel/frames, all four metadata profiles, version/source binding, pending changes isolated, sampled processed words exact",
+        "$finish called"
+      ]
+    }
+  ],
+  "excluded": []
+}

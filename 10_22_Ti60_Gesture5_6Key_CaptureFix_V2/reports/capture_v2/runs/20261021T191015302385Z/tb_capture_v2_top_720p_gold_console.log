@@ -1,0 +1,18 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_capture_v2_top_720p_gold/xsim_script.tcl
+# xsim {tb_capture_v2_top_720p_gold} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+Command failed: Simulator command interrupted.
+
+Simulation engine not responding
+The simulator has terminated in an unexpected manner.  Please review the simulation log (xsim.log) for details.
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:21 . Memory (MB): peak = 218.078 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 22 03:12:49 2026...

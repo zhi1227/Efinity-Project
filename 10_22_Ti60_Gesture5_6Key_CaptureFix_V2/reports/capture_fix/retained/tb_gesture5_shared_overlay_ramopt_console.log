@@ -1,0 +1,17 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_gesture5_shared_overlay_ramopt/xsim_script.tcl
+# xsim {tb_gesture5_shared_overlay_ramopt} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: HDMI diagnostics removed across entire former label/bar area; health bits have no pixel effect
+PASS: SHARED_FONT=1 five-class HUD/OK/V labels and new two-pixel ROI sides and old edges removed; palm square/right HUD unchanged; 825043 pixels equal legacy font with 589321 concurrent LCD reads; pure capture strips overlays
+$finish called at time : 8250496 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/sim/tb_gesture5_shared_overlay_ramopt.sv" Line 89
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:24 . Memory (MB): peak = 219.383 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 23:44:51 2026...

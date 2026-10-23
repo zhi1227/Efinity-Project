@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 20 20:39:53 2026
+# Process ID: 67936
+# Current directory: D:/Github_Project/fpga_build/inline_epaper_20261020T123943420341Z
+# Command line: xsim.exe -log D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\reports\inline_threshold\epaper\simulation.log -mode tcl -source {xsim.dir/tb_inline_epd_cpu/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_4Key_InlineThreshold/reports/inline_threshold/epaper/simulation.log
+# Journal file: D:/Github_Project/fpga_build/inline_epaper_20261020T123943420341Z\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_inline_epd_cpu/xsim_script.tcl
+# xsim {tb_inline_epd_cpu} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: inline real RISC-V firmware, 30033 SPI bytes, both image planes, reset, BUSY and live eight-mode LVDS menu/state
+$finish called at time : 181156119727 ps : File "D:/Github_Project/fpga_build/inline_epaper_20261020T123943420341Z/sim/tb_inline_epd_cpu.sv" Line 68
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:13:46 . Memory (MB): peak = 218.617 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 20:53:44 2026...

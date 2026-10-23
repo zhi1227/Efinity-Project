@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 1168,
+    "Name": "efx_pnr",
+    "Start": "2026-10-22T03:13:28.0768537+08:00",
+    "Reason": "Superseded development source snapshot; final source tests/build running separately"
+  },
+  {
+    "Id": 31984,
+    "Name": "xsimk",
+    "Start": "2026-10-22T03:13:03.1386497+08:00",
+    "Reason": "Superseded development source snapshot; final source tests/build running separately"
+  },
+  {
+    "Id": 58028,
+    "Name": "xsimk",
+    "Start": "2026-10-22T03:13:34.2843514+08:00",
+    "Reason": "Superseded development source snapshot; final source tests/build running separately"
+  }
+]

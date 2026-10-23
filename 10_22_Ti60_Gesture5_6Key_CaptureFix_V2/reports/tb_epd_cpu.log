@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 20 02:59:05 2026
+# Process ID: 50440
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_epaper
+# Command line: xsim.exe -log ../reports/tb_epd_cpu.log -mode tcl -source {xsim.dir/tb_epd_cpu/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_epaper/../reports/tb_epd_cpu.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_epaper\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_epd_cpu/xsim_script.tcl
+# xsim {tb_epd_cpu} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: real RISC-V firmware, 30033 SPI bytes, both image planes, reset, BUSY and live LVDS menu
+$finish called at time : 181156119727 ps : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/tb_epd_cpu.sv" Line 67
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:12:55 . Memory (MB): peak = 219.871 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 03:12:05 2026...

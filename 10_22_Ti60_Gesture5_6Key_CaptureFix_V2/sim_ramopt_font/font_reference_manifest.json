@@ -1,0 +1,22 @@
+{
+  "purpose": "Fixed pre-optimization font references; test runner must verify, never regenerate them.",
+  "baseline_source": "../10_20_Gesture5_RAM_Baseline",
+  "baseline_reference_rtl": "rtl/shared_glyph_rom.v",
+  "baseline_reference_rtl_sha256": "ee49270ddd720521665ffec9fa0baf64fe491940cf94ba7bc02899c9a4ad1454",
+  "reference_sha256": {
+    "shared_font.hex": "eab7faf1a964e66d8997c9c7e2133c5fab993ef0d7cb6311e797ca03e79f460a",
+    "shared_font_bank0.hex": "21d31e807217ec84d611b840e251bb8493953c692ff578c472bec7b6a978d643",
+    "shared_font_bank1.hex": "992dc029a15cb3936b3816d5eca3dce097a27ad13cfddcde5df4a16b68dbec89",
+    "shared_font_bank2.hex": "7965aa223585c5a8326dd3e51d596a410295d953d0d2dd4b64eed24c036ee62f",
+    "shared_font_bank3.hex": "823bae68f3f7b45f438e823b4c571baa6d53f1d95429c12b12c7700f9b2b043e",
+    "shared_font_bank4.hex": "58b504c7d5eb8030d5f0433e5ac02284f0751b6c1a62dd5605d898be6f717aa5",
+    "shared_font_bank5.hex": "8a5fac3058cb69f0e69258b27c8440d8018013760d8f61cbc53f27633a07c816",
+    "shared_font_bank6.hex": "f27397d32f7e212edc1ed98ffefd1b5c40f08ec84936dd421a1c56e9f903c810",
+    "shared_font_bank7.hex": "66f2b21d92b28b0910bb38706da89a82f02d89c73a4234abfa2c2416631c5311",
+    "shared_font_bank8.hex": "1280d1998e94742e7118676425ffefc91b2dee18cf7984bf0b4f2b96c47c9f18",
+    "sim_ramopt_font/shared_glyph_rom_reference.v": "a3b8fdf31a167e3e5ea7d03b512276402ecf9c46c51025342808b3551d0480e2",
+    "sim_ramopt_font/shared_font_expected_8192.hex": "d2e1aaf98436855fc9cb8d87dbb12f8a6113edc3712e44c35230aed1d9984b20"
+  },
+  "expected_rows": 8192,
+  "valid_original_rows": 4608
+}

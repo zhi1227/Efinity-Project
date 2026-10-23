@@ -1,0 +1,797 @@
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:14] No valid object(s) found for 'dsi_refclk_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:14] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:14] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:24] No valid object(s) found for 'clk_pixel_2x'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:24] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:24] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:29] No valid object(s) found for 'clk_54m'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:29] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:29] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:33] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:33] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:35] set_clock_groups: Defaulting to -exclusive since none of the required option was specified
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:341] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:341] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:342] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:342] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:347] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:347] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:348] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:348] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:546] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:546] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:546] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:547] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:547] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:547] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:548] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:548] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:548] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:549] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:549] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:549] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:550] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:550] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:550] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:551] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:551] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:551] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:552] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:552] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:552] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:553] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:553] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:553] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:554] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:554] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:554] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:555] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:555] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:555] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:556] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:556] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:556] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:557] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:557] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:557] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:558] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:558] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:558] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:559] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:559] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:559] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:560] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:560] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:560] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:561] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:561] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:561] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:562] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:562] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:562] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:563] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:563] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:563] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:564] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:564] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:564] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:565] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:565] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:565] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:566] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:566] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:566] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:567] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:567] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:567] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:568] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:568] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:568] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:569] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:569] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:569] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:570] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:570] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:570] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:571] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:571] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:571] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:572] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:572] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:572] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:573] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:573] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:573] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:574] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:574] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:574] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:575] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:575] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:575] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:576] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:576] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:576] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:577] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:577] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:577] Unable to run 'set_input_delay' constraint due to warnings found
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Router Setup
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : High utilization design detected; tuning for routability.
+INFO     : [Setup Parallel Routing Scheduler]
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Route Circuit with 32 threads
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Beneficial skew enabled! Optimizing clock skews ... 
+INFO     : Non-legalized beneficial skew improved geomean CPD by 0.00% (from 4179ps to 4179ps)
+INFO     : CSS improved CPD of clock tdqss_clk by 0.00% (from 1875ps to 1875ps)
+INFO     : CSS improved CPD of clock core_clk by 0.00% (from 4032ps to 4032ps)
+INFO     : CSS improved CPD of clock tac_clk by 0.00% (from 2003ps to 2003ps)
+INFO     : CSS improved CPD of clock twd_clk by 0.00% (from 1869ps to 1869ps)
+INFO     : CSS improved CPD of clock clk_sys by 0.00% (from 6844ps to 6844ps)
+INFO     : CSS improved CPD of clock clk_pixel by 0.03% (from 10503ps to 10500ps)
+INFO     : CSS improved CPD of clock clk_lvds_1x by 0.00% (from 13140ps to 13140ps)
+INFO     : CSS improved CPD of clock cmos_pclk by 0.00% (from 3485ps to 3485ps)
+INFO     : Discretized beneficial skew improved geomean CPD by 0.00% (from 4179ps to 4179ps in 4 iterations and 0.8 sec)
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Overridding delay budgets for 562 synchronizer-related pins
+
+INFO     : Iter  1: overlap=151822  heapops=13220207   (0%) cpd=236   frr=1.00  msec=4315
+INFO     : [Setup Delay Budgets | 673.1 ms]
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Hold Fixing
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Total min wire delay:  18032468
+INFO     : Hold fix wire delay:        330
+INFO     : Hold fix delay ratio:     0.00%
+INFO     : Pins requiring hold fix:  0.00%
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Iter  2: overlap=81781   heapops=11915729   (18%) cpd=236   frr=1.00  msec=2219
+INFO     : Iter  3: overlap=62046   heapops=11664411   (25%) cpd=236   frr=1.00  msec=2255
+INFO     : Iter  4: overlap=47747   heapops=11447952   (31%) cpd=236   frr=1.00  msec=2230
+INFO     : Iter  5: overlap=36965   heapops=10862122   (38%) cpd=236   frr=1.00  msec=2280
+INFO     : Iter  6: overlap=27709   heapops=10391734   (45%) cpd=236   frr=1.00  msec=2153
+INFO     : Iter  7: overlap=20038   heapops=9509001    (53%) cpd=236   frr=1.00  msec=2099
+INFO     : Iter  8: overlap=13643   heapops=8246995    (62%) cpd=236   frr=1.00  msec=1846
+INFO     : [Rebuild Parallel Routing Scheduler]
+INFO     : Iter  9: overlap=8641    heapops=6756842    (70%) cpd=236   frr=1.00  msec=1783
+INFO     : Iter 10: overlap=5527    heapops=5647801    (77%) cpd=236   frr=1.00  msec=1865
+INFO     : Iter 11: overlap=2999    heapops=4134521    (83%) cpd=236   frr=1.00  msec=1403
+INFO     : [Rebuild Parallel Routing Scheduler]
+INFO     : Iter 12: overlap=1460    heapops=2692155    (87%) cpd=236   frr=1.00  msec=1330
+INFO     : Iter 13: overlap=623     heapops=2101671    (90%) cpd=236   frr=1.00  msec=1081
+INFO     : Iter 14: overlap=275     heapops=1113149    (91%) cpd=236   frr=1.00  msec=818
+INFO     : [Rebuild Parallel Routing Scheduler]
+INFO     : Iter 15: overlap=122     heapops=627891     (92%) cpd=236   frr=1.00  msec=738
+INFO     : Iter 16: overlap=51      heapops=332003     (92%) cpd=236   frr=1.00  msec=480
+INFO     : Iter 17: overlap=30      heapops=195682     (92%) cpd=236   frr=1.00  msec=452
+INFO     : Iter 18: overlap=11      heapops=166794     (92%) cpd=236   frr=1.00  msec=455
+INFO     : Iter 19: overlap=5       heapops=145541     (92%) cpd=236   frr=1.00  msec=432
+INFO     : Iter 20: overlap=2       heapops=140164     (92%) cpd=236   frr=1.00  msec=445
+INFO     : Iter 21: overlap=3       heapops=138950     (92%) cpd=236   frr=1.00  msec=452
+INFO     : Iter 22: overlap=2       heapops=147236     (92%) cpd=236   frr=1.00  msec=452
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Beneficial skew enabled! Optimizing clock skews ... 
+INFO     : Non-legalized beneficial skew improved geomean CPD by 0.00% (from 4399ps to 4399ps)
+INFO     : CSS improved CPD of clock tdqss_clk by 0.00% (from 1940ps to 1940ps)
+INFO     : CSS improved CPD of clock core_clk by 0.00% (from 4103ps to 4103ps)
+INFO     : CSS improved CPD of clock tac_clk by 0.00% (from 2088ps to 2088ps)
+INFO     : CSS improved CPD of clock twd_clk by 0.00% (from 1944ps to 1944ps)
+INFO     : CSS improved CPD of clock clk_sys by 0.00% (from 7293ps to 7293ps)
+INFO     : CSS improved CPD of clock clk_pixel by 0.00% (from 11032ps to 11032ps)
+INFO     : CSS improved CPD of clock clk_lvds_1x by 0.00% (from 14583ps to 14583ps)
+INFO     : CSS improved CPD of clock cmos_pclk by 0.00% (from 3704ps to 3704ps)
+INFO     : Discretized beneficial skew improved geomean CPD by 0.00% (from 4399ps to 4399ps in 1 iterations and 1.0 sec)
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Iter 23: overlap=0       heapops=138824     (92%) cpd=236   frr=1.00  msec=1406
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing Result
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing Succeeded in 35.13 seconds taking 23 iterations! 
+INFO     : 
+INFO     : First iteration critical path delay = 0.236 ns 
+INFO     : Last iteration critical path delay  = 0.236 ns (ratio = 1.00)
+INFO     : Max Routing Heap Size = 57,787
+INFO     : Routing trace written to file 'outflow\Ti60_Demo.troutingtraces' 
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing took 41.7491 seconds.
+INFO     : 	Routing took 237.375 seconds (approximately) in total CPU time.
+INFO     : Routing virtual memory usage: begin = 378.644 MB, end = 613.536 MB, delta = 234.892 MB
+INFO     : 	Routing peak virtual memory usage = 2830.17 MB
+INFO     : Routing resident set memory usage: begin = 387.796 MB, end = 618.36 MB, delta = 230.564 MB
+INFO     : 	Routing peak resident set memory usage = 2840.89 MB
+           ***** Beginning stage final timing analysis ... *****
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:14] No valid object(s) found for 'dsi_refclk_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:14] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:14] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:24] No valid object(s) found for 'clk_pixel_2x'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:24] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:24] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:29] No valid object(s) found for 'clk_54m'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:29] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:29] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:33] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:33] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:35] set_clock_groups: Defaulting to -exclusive since none of the required option was specified
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:341] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:341] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:342] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:342] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:347] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:347] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:348] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:348] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:546] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:546] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:546] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:547] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:547] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:547] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:548] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:548] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:548] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:549] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:549] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:549] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:550] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:550] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:550] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:551] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:551] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:551] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:552] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:552] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:552] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:553] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:553] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:553] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:554] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:554] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:554] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:555] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:555] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:555] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:556] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:556] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:556] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:557] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:557] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:557] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:558] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:558] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:558] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:559] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:559] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:559] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:560] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:560] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:560] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:561] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:561] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:561] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:562] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:562] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:562] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:563] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:563] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:563] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:564] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:564] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:564] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:565] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:565] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:565] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:566] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:566] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:566] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:567] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:567] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:567] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:568] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:568] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:568] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:569] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:569] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:569] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:570] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:570] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:570] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:571] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:571] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:571] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:572] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:572] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:572] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:573] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:573] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:573] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:574] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:574] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:574] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:575] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:575] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:575] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:576] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:576] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:576] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:577] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:577] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:577] Unable to run 'set_input_delay' constraint due to warnings found
+Maximum possible analyzed clocks frequency
+ Clock Name  Period (ns)  Frequency (MHz)     Edge
+tdqss_clk        2.050       487.805         (R-R)
+core_clk         4.213       237.361         (R-R)
+tac_clk          2.198       454.959         (R-R)
+twd_clk          2.054       486.855         (R-R)
+clk_sys          7.403       135.080         (R-R)
+clk_pixel       11.142        89.750         (R-R)
+clk_lvds_1x     14.693        68.060         (R-R)
+cmos_pclk        7.628       131.096         (F-R)
+
+Geomean max period: 4.950
+
+Setup (Max) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+  tdqss_clk        tdqss_clk            2.604            0.554           (R-R)
+  tdqss_clk        core_clk             2.604            1.785           (R-R)
+  core_clk         tdqss_clk            2.604            1.323           (R-R)
+  core_clk         core_clk             5.208            0.995           (R-R)
+  core_clk         tac_clk              2.604            1.877           (R-R)
+  core_clk         twd_clk              0.541            0.305           (R-R)
+  tac_clk          core_clk             2.604            1.758           (R-R)
+  tac_clk          tac_clk              2.604            0.406           (R-R)
+  twd_clk          twd_clk              2.604            0.550           (R-R)
+  clk_sys          clk_sys             10.417            3.014           (R-R)
+  clk_pixel        clk_pixel           13.441            2.299           (R-R)
+  clk_pixel        clk_lvds_1x         15.000           13.709           (R-R)
+  clk_lvds_1x      clk_pixel           15.000           14.273           (R-R)
+  clk_lvds_1x      clk_lvds_1x         20.833            6.140           (R-R)
+  cmos_pclk        cmos_pclk           10.000            6.583           (R-R)
+  cmos_pclk        cmos_pclk            5.000            1.186           (F-R)
+
+Hold (Min) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+  tdqss_clk        tdqss_clk            0.000           0.097            (R-R)
+  tdqss_clk        core_clk             0.000           0.131            (R-R)
+  core_clk         tdqss_clk            0.000           0.054            (R-R)
+  core_clk         core_clk             0.000           0.030            (R-R)
+  core_clk         tac_clk              0.000           0.073            (R-R)
+  core_clk         twd_clk             -1.883           2.016            (R-R)
+  tac_clk          core_clk             0.000           0.168            (R-R)
+  tac_clk          tac_clk              0.000           0.030            (R-R)
+  twd_clk          twd_clk              0.000           0.052            (R-R)
+  clk_sys          clk_sys              0.000           0.033            (R-R)
+  clk_pixel        clk_pixel            0.000           0.026            (R-R)
+  clk_lvds_1x      clk_lvds_1x          0.000           0.034            (R-R)
+  cmos_pclk        cmos_pclk            0.000           0.097            (R-R)
+  cmos_pclk        cmos_pclk           -5.000           6.122            (F-R)
+
+INFO     : Write Timing Report to "outflow\Ti60_Demo.timing.rpt" ...
+INFO     : final timing analysis took 25.4722 seconds.
+INFO     : 	final timing analysis took 28.0156 seconds (approximately) in total CPU time.
+INFO     : final timing analysis virtual memory usage: begin = 680.512 MB, end = 834.972 MB, delta = 154.46 MB
+INFO     : 	final timing analysis peak virtual memory usage = 2830.17 MB
+INFO     : final timing analysis resident set memory usage: begin = 681.172 MB, end = 832.052 MB, delta = 150.88 MB
+INFO     : 	final timing analysis peak resident set memory usage = 2840.89 MB
+           ***** Ending stage final timing analysis *****
+           
+           ***** Beginning stage netlist pre-processing ... *****
+INFO     : Successfully Read in Verific binary Netlist dump file "outflow\Ti60_Demo.vdb".
+INFO     : ***** Beginning VDB Netlist Checker ... *****
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(11): Input/inout port clk_24m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(12): Input/inout port clk_25m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(21): Input/inout port clk_pixel_2x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(22): Input/inout port clk_pixel_10x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(30): Input/inout port dsi_refclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(31): Input/inout port dsi_byteclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(32): Input/inout port dsi_serclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(33): Input/inout port dsi_txcclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(61): Input/inout port clk_lvds_7x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(62): Input/inout port clk_27m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(63): Input/inout port clk_54m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(97): Input/inout port i_dqs_n_hi[1] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(98): Input/inout port i_dqs_n_lo[1] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(121): Input/inout port csi_ctl0_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(125): Input/inout port csi_ctl1_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(129): Input/inout port csi_scl_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(133): Input/inout port csi_sda_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(136): Input/inout port csi_rxc_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(137): Input/inout port csi_rxc_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(140): Input/inout port csi_rxc_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(147): Input/inout port csi_rxd0_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(148): Input/inout port csi_rxd0_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(149): Input/inout port csi_rxd0_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(156): Input/inout port csi_rxd1_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(157): Input/inout port csi_rxd1_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(158): Input/inout port csi_rxd1_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(165): Input/inout port csi_rxd2_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(166): Input/inout port csi_rxd2_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(167): Input/inout port csi_rxd2_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(174): Input/inout port csi_rxd3_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(175): Input/inout port csi_rxd3_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(176): Input/inout port csi_rxd3_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(235): Input/inout port dsi_txd0_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(236): Input/inout port dsi_txd0_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(237): Input/inout port dsi_txd1_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(238): Input/inout port dsi_txd1_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(239): Input/inout port dsi_txd2_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(240): Input/inout port dsi_txd2_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(241): Input/inout port dsi_txd3_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(242): Input/inout port dsi_txd3_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(269): Input/inout port cmos_ctl1_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(272): Input/inout port cmos_ctl2_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(275): Input/inout port cmos_ctl3_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(331): Input/inout port flash_data_i[3] is unconnected and will be removed. [VDB-8003]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5] is dangling. [VDB-8009]
+WARNING  : CE port of EFX_DSP48 instance u_parallel/u_shape/mult_53 is permanently disabled [VDB-8002]
+WARNING  : CE port of EFX_DSP48 instance u_parallel/u_shape/mult_54 is permanently disabled [VDB-8002]
+WARNING  : Found 85 warnings in the post-synthesis netlist.
+INFO     : VDB Netlist Checker took 0.0901723 seconds.
+INFO     : 	VDB Netlist Checker took 0.125 seconds (approximately) in total CPU time.
+INFO     : VDB Netlist Checker virtual memory usage: begin = 654.848 MB, end = 654.96 MB, delta = 0.112 MB
+INFO     : 	VDB Netlist Checker peak virtual memory usage = 2830.17 MB
+INFO     : VDB Netlist Checker resident set memory usage: begin = 659.576 MB, end = 659.688 MB, delta = 0.112 MB
+INFO     : 	VDB Netlist Checker peak resident set memory usage = 2840.89 MB
+INFO     : ***** Ending VDB Netlist Checker ... *****
+INFO     : Writing netlist 'example_top' to Verilog file 'outflow\Ti60_Demo.prevpr.v' [VDB-1030]
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Net clk_pixel_10x promoted to global due to interface constraints.
+INFO     : Net clk_lvds_7x promoted to global due to interface constraints.
+INFO     : Net clk_27m promoted to global due to interface constraints.
+INFO     : Net dsi_serclk_i promoted to global due to interface constraints.
+INFO     : Net dsi_byteclk_i promoted to global due to interface constraints.
+INFO     : Net dsi_txcclk_i promoted to global due to interface constraints.
+INFO     : Found 0 constant generator nets.
+INFO     : Pass 0: Swept away 6 nets with no fanout.
+INFO     : logical_block #0(clk_24m) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #1(clk_25m) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #5(clk_pixel_2x) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #9(dsi_refclk_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #33(clk_54m) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #149(i_dqs_n_hi[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #150(i_dqs_n_hi[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #151(i_dqs_n_lo[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #152(i_dqs_n_lo[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #171(csi_ctl0_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #174(csi_ctl1_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #177(csi_scl_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #180(csi_sda_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #181(csi_rxc_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #182(csi_rxc_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #185(csi_rxc_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #189(csi_rxd0_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #190(csi_rxd0_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #191(csi_rxd0_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #192(csi_rxd0_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #193(csi_rxd0_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #194(csi_rxd0_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #195(csi_rxd0_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #196(csi_rxd0_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #197(csi_rxd0_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #198(csi_rxd0_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #202(csi_rxd1_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #203(csi_rxd1_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #204(csi_rxd1_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #205(csi_rxd1_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #206(csi_rxd1_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #207(csi_rxd1_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #208(csi_rxd1_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #209(csi_rxd1_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #210(csi_rxd1_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #211(csi_rxd1_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #215(csi_rxd2_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #216(csi_rxd2_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #217(csi_rxd2_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #218(csi_rxd2_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #219(csi_rxd2_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #220(csi_rxd2_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #221(csi_rxd2_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #222(csi_rxd2_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #223(csi_rxd2_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #224(csi_rxd2_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #228(csi_rxd3_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #229(csi_rxd3_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #230(csi_rxd3_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #231(csi_rxd3_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #232(csi_rxd3_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #233(csi_rxd3_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #234(csi_rxd3_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #235(csi_rxd3_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #236(csi_rxd3_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #237(csi_rxd3_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #310(dsi_txd0_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #311(dsi_txd0_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #312(dsi_txd1_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #313(dsi_txd1_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #314(dsi_txd2_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #315(dsi_txd2_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #316(dsi_txd3_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #317(dsi_txd3_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #343(cmos_ctl1_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #346(cmos_ctl2_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #349(cmos_ctl3_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #462(flash_data_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #463(flash_data_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #464(flash_data_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #465(flash_data_i[0]) has no fanout.
+INFO     : Removing input.
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF #15838 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF #16196 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF #16197 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF #16198 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF #16199 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF #16200 has no fanout. Check synthesis flow
+INFO     : Pass 0: Swept away 71 blocks with no fanout.
+INFO     : Pass 1: Swept away 0 nets with no fanout.
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF #15838 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF #16196 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF #16197 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF #16198 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF #16199 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF #16200 has no fanout. Check synthesis flow
+INFO     : Pass 1: Swept away 0 blocks with no fanout.
+INFO     : Swept away 6 nets and 71 blocks in total.
+INFO     : Removed 0 LUT buffers
+INFO     : Sweept away 71 nodes
+INFO     : Successfully created VPR logical netlist from Verific binary DataBase file "outflow\Ti60_Demo.vdb".
+INFO     : Netlist pre-processing took 2.84224 seconds.
+INFO     : 	Netlist pre-processing took 1.84375 seconds (approximately) in total CPU time.
+INFO     : Netlist pre-processing virtual memory usage: begin = 565.248 MB, end = 3232.93 MB, delta = 2667.68 MB
+INFO     : 	Netlist pre-processing peak virtual memory usage = 3234.51 MB
+INFO     : Netlist pre-processing resident set memory usage: begin = 570.956 MB, end = 3236.98 MB, delta = 2666.02 MB
+INFO     : 	Netlist pre-processing peak resident set memory usage = 3238.55 MB
+           ***** Ending stage netlist pre-processing *****
+           
+           ***** Beginning stage packed netlist loading ... *****
+INFO     : Load Global Network took 0.916836 seconds.
+INFO     : 	Load Global Network took 0.140625 seconds (approximately) in total CPU time.
+INFO     : Load Global Network virtual memory usage: begin = 3232.93 MB, end = 3232.93 MB, delta = 0 MB
+INFO     : 	Load Global Network peak virtual memory usage = 3234.51 MB
+INFO     : Load Global Network resident set memory usage: begin = 3236.98 MB, end = 3236.98 MB, delta = 0.004 MB
+INFO     : 	Load Global Network peak resident set memory usage = 3238.55 MB
+INFO     : Reading C:/Efinity/2025.1/arch/.\rr_pb_hier_mapping.xml
+INFO     : Read proto netlist file work_pnr\Ti60_Demo.net_proto
+INFO     : Read proto netlist for file "work_pnr\Ti60_Demo.net_proto" took 0.042 seconds
+INFO     : Setup net and block data structure took 0.37 seconds
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Packed netlist loading took 1.55844 seconds.
+INFO     : 	Packed netlist loading took 0.75 seconds (approximately) in total CPU time.
+INFO     : Packed netlist loading virtual memory usage: begin = 3232.93 MB, end = 3234.51 MB, delta = 1.584 MB
+INFO     : 	Packed netlist loading peak virtual memory usage = 3234.51 MB
+INFO     : Packed netlist loading resident set memory usage: begin = 3236.98 MB, end = 3239.21 MB, delta = 2.232 MB
+INFO     : 	Packed netlist loading peak resident set memory usage = 3239.21 MB
+           ***** Ending stage packed netlist loading *****
+           
+INFO     : Run checks after load placement.
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully loaded placement data from "outflow\Ti60_Demo.place".
+           ***** Beginning stage bitstream generation ... *****
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Finished writing bitstream file work_pnr\Ti60_Demo.lbf.
+INFO     : Bitstream generation took 2.26207 seconds.
+INFO     : 	Bitstream generation took 2.04688 seconds (approximately) in total CPU time.
+INFO     : Bitstream generation virtual memory usage: begin = 684.424 MB, end = 860.272 MB, delta = 175.848 MB
+INFO     : 	Bitstream generation peak virtual memory usage = 3234.51 MB
+INFO     : Bitstream generation resident set memory usage: begin = 690.884 MB, end = 867.584 MB, delta = 176.7 MB
+INFO     : 	Bitstream generation peak resident set memory usage = 3239.46 MB
+           ***** Ending stage bitstream generation *****
+           
+INFO     : The entire flow of EFX_PNR took 537.651 seconds.
+INFO     : 	The entire flow of EFX_PNR took 1545.33 seconds (approximately) in total CPU time.
+INFO     : The entire flow of EFX_PNR virtual memory usage: begin = 19.912 MB, end = 859.672 MB, delta = 839.76 MB
+INFO     : 	The entire flow of EFX_PNR peak virtual memory usage = 3234.51 MB
+INFO     : The entire flow of EFX_PNR resident set memory usage: begin = 21.556 MB, end = 867.008 MB, delta = 845.452 MB
+INFO     : 	The entire flow of EFX_PNR peak resident set memory usage = 3239.46 MB

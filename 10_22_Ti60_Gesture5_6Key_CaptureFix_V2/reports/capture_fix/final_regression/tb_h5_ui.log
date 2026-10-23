@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Oct 21 00:08:48 2026
+# Process ID: 70712
+# Current directory: D:/Github_Project/fpga_build/capturefix_finalreg_20261021T000134
+# Command line: xsim.exe -log D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\reports\capture_fix\final_regression\tb_h5_ui.log -mode tcl -source {xsim.dir/tb_h5_ui/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/reports/capture_fix/final_regression/tb_h5_ui.log
+# Journal file: D:/Github_Project/fpga_build/capturefix_finalreg_20261021T000134\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_h5_ui/xsim_script.tcl
+# xsim {tb_h5_ui} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: full 720p H5 hand-lost, palm-unconfirmed, palm-ready, reverse-direction and wave-confirmed UI rasters
+$finish called at time : 46080226 ns : File "D:/Github_Project/fpga_build/capturefix_finalreg_20261021T000134/sim/tb_h5_ui.sv" Line 28
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:34 . Memory (MB): peak = 219.500 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct 21 00:09:27 2026...

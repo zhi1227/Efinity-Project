@@ -1,0 +1,85 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_ramopt_buffers -s tb_ramopt_buffers --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.line_buffer_3x3(DWIDTH=1)
+Compiling module work.line_buffer_3x3_baseline(DWIDTH=...
+Compiling module work.ramopt_line_case_default
+Compiling module work.line_buffer_3x3(DWIDTH=2)
+Compiling module work.line_buffer_3x3_baseline(DWIDTH=...
+Compiling module work.ramopt_line_case(DW=2)
+Compiling module work.line_buffer_3x3_default
+Compiling module work.line_buffer_3x3_baseline
+Compiling module work.ramopt_line_case(DW=8)
+Compiling module work.line_buffer_3x3(DWIDTH=12)
+Compiling module work.line_buffer_3x3_baseline(DWIDTH=...
+Compiling module work.ramopt_line_case(DW=12)
+Compiling module work.line_buffer_3x3(DWIDTH=14)
+Compiling module work.line_buffer_3x3_baseline(DWIDTH=...
+Compiling module work.ramopt_line_case(DW=14)
+Compiling module work.line_buffer_3x3(WIDTH=319,DWIDTH...
+Compiling module work.line_buffer_3x3_baseline(WIDTH=3...
+Compiling module work.ramopt_line_case(W=319)
+Compiling module work.line_buffer_3x3(WIDTH=640,DWIDTH...
+Compiling module work.line_buffer_3x3_baseline(WIDTH=6...
+Compiling module work.ramopt_line_case(W=640,DW=2)
+Compiling module work.ramopt_line_case(CROP=3)
+Compiling module work.ramopt_line_case(DW=14,CROP=3)
+Compiling module work.ep1_window7
+Compiling module work.ep1_window7_baseline
+Compiling module work.ramopt_window7_case_default
+Compiling module work.ep1_window7(WIDTH=640)
+Compiling module work.ep1_window7_baseline(WIDTH=640)
+Compiling module work.ramopt_window7_case(W=640)
+Compiling module work.ep1_window7(WIDTH=319)
+Compiling module work.ep1_window7_baseline(WIDTH=319)
+Compiling module work.ramopt_window7_case(W=319)
+Compiling module work.video_delay(BITS=19)
+Compiling module work.video_delay_baseline(BITS=19)
+Compiling module work.ramopt_delay_case
+Compiling module work.video_delay(BITS=8,LATENCY=6617)
+Compiling module work.video_delay_baseline(BITS=8,LATE...
+Compiling module work.ramopt_delay_case(B=8,L=6617)
+Compiling module work.video_delay(BITS=9,LATENCY=4963)
+Compiling module work.video_delay_baseline(BITS=9,LATE...
+Compiling module work.ramopt_delay_case(B=9,L=4963)
+Compiling module work.video_delay(BITS=3,LATENCY=8267)
+Compiling module work.video_delay_baseline(BITS=3,LATE...
+Compiling module work.ramopt_delay_case(B=3,L=8267)
+Compiling module work.video_delay(BITS=3,LATENCY=3309)
+Compiling module work.video_delay_baseline(BITS=3,LATE...
+Compiling module work.ramopt_delay_case(B=3,L=3309)
+Compiling module work.video_delay(BITS=1,LATENCY=6616)
+Compiling module work.video_delay_baseline(BITS=1,LATE...
+Compiling module work.ramopt_delay_case(B=1,L=6616)
+Compiling module work.video_delay(BITS=1,LATENCY=3309)
+Compiling module work.video_delay_baseline(BITS=1,LATE...
+Compiling module work.ramopt_delay_case(B=1,L=3309)
+Compiling module work.video_delay(BITS=8,LATENCY=1024)
+Compiling module work.video_delay_baseline(BITS=8,LATE...
+Compiling module work.ramopt_delay_case(B=8,L=1024)
+Compiling module work.video_delay(BITS=8,LATENCY=1025)
+Compiling module work.video_delay_baseline(BITS=8,LATE...
+Compiling module work.ramopt_delay_case(B=8,L=1025)
+Compiling module work.video_delay(BITS=8,LATENCY=1536)
+Compiling module work.video_delay_baseline(BITS=8,LATE...
+Compiling module work.ramopt_delay_case(B=8,L=1536)
+Compiling module work.video_delay(BITS=8,LATENCY=2048)
+Compiling module work.video_delay_baseline(BITS=8,LATE...
+Compiling module work.ramopt_delay_case(B=8,L=2048)
+Compiling module work.video_delay(BITS=20,LATENCY=1025...
+Compiling module work.video_delay_baseline(BITS=20,LAT...
+Compiling module work.ramopt_delay_case(B=20,L=1025)
+Compiling module work.video_delay_default
+Compiling module work.video_delay_baseline_default
+Compiling module work.ramopt_delay_case(B=48)
+Compiling module work.video_delay(BITS=1,LATENCY=16)
+Compiling module work.video_delay_baseline(BITS=1,LATE...
+Compiling module work.ramopt_delay_case(B=1,L=16)
+Compiling module work.tb_ramopt_buffers
+Built simulation snapshot tb_ramopt_buffers

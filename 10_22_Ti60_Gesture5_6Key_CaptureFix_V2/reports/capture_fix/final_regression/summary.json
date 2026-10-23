@@ -1,0 +1,350 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "bench": "tb_vision8_key_boundary",
+      "status": "PASS",
+      "seconds": 8.58,
+      "log": "tb_vision8_key_boundary.log",
+      "log_sha256": "bfaff01391cb2d3ff40d5558c98ebe0d9eab6ab1727f4b0a2f8db049512323c6",
+      "completion_markers": [
+        "PASS: vision8_key 74.4MHz defaults, 20ms/2s scaled timing, 500/1999/2000/5000ms, exact release-long collision with long priority and mutual exclusion",
+        "PASS: vision8_key released/held startup, reset while held, press/release bounce, one long per hold, no short after long, context away-and-back cancellation and rearm",
+        "PASS: vision8_key same-edge NBA context changes mask pending short/long before a new context can consume them",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_vision8_fifo",
+      "status": "PASS",
+      "seconds": 9.94,
+      "log": "tb_vision8_fifo.log",
+      "log_sha256": "a60761bda2036f603951b747602dbdecc9a90163becacf94ee683301df7ffb3b",
+      "completion_markers": [
+        "PASS: asynchronous FIFO registered RAM prefetch, full/empty wrap and random stalls",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_vision8_ddr",
+      "status": "PASS",
+      "seconds": 10.78,
+      "log": "tb_vision8_ddr.log",
+      "log_sha256": "a9010e03fc485e139c9306257c4a6ce54c2d069b542eb6c59571263bc26f3048",
+      "completion_markers": [
+        "PASS: real vendor camera/main FIFOs, simultaneous DDR clients, stable stalls, B-response commit/error, snapshot packing, compare/PiP readback and restart drain; W=         12 R=         33",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_vision8_faces",
+      "status": "PASS",
+      "seconds": 10.23,
+      "log": "tb_vision8_faces.log",
+      "log_sha256": "11f027053f70e581a708e12bd9815dcb636dd7b68646348201516afee3486bc8",
+      "completion_markers": [
+        "PASS: real CCL nine separated regions/8+ and empty source frames; count confirmation rejects duplicate replay, preserves freeze and marks camera loss unknown",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_io29_freeze_ddr",
+      "status": "PASS",
+      "seconds": 10.61,
+      "log": "tb_io29_freeze_ddr.log",
+      "log_sha256": "5ed78de23495510099772be936b7295ef5f516be08ac53a6bb79d6dcccaea0ba",
+      "completion_markers": [
+        "PASS: IO29 active-low button -> debounce/release -> freeze request -> DDR slot held while camera writes -> resume latest source -> re-freeze",
+        "PASS: real vendor camera/main FIFOs, simultaneous DDR clients, stable stalls, B-response commit/error, snapshot packing, compare/PiP readback and restart drain; W=         12 R=         40",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_h5_palm",
+      "status": "PASS",
+      "seconds": 9.03,
+      "log": "tb_h5_palm.log",
+      "log_sha256": "22a59e4639d0444f394c3fc0f07c3c70f94747d28c6f760366560453746141fa",
+      "completion_markers": [
+        "PASS: independent upright/sideways open-palm evidence, exact upper-hand centroid, thumb/heart/fist/checkerboard/empty/invalid rejection",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_h5_wave",
+      "status": "PASS",
+      "seconds": 9.06,
+      "log": "tb_h5_wave.log",
+      "log_sha256": "729982b5b1b19d965ec668bc87127d0b949112d9f4caf6f735db6f0e5f3bc866",
+      "completion_markers": [
+        "PASS: wrist-only and translational wave, two blurred frames, static jitter/one-way/unknown/thumb/heart rejection, timeout, removal, target change and disable",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_gesture5_controls_new",
+      "status": "PASS",
+      "seconds": 9.03,
+      "log": "tb_gesture5_controls_new.log",
+      "log_sha256": "b4f32e9240cd3f6c8cc627dfab688b2801b19163caadcbaf62d3f3ce4062392c",
+      "completion_markers": [
+        "PASS: legacy key module debounce, boot-held suppression, short/long exclusivity, five steps (new bench adapted from historical three-class test), colour failure, ambiguity, timeout and cancellation",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_gesture5_templates_ramopt",
+      "status": "PASS",
+      "seconds": 9.97,
+      "log": "tb_gesture5_templates_ramopt.log",
+      "log_sha256": "59f4332dc917af4c542d83200843d85ec0dd1a42c56a463d4a98a1e826383545",
+      "completion_markers": [
+        "PASS: personalized five-class enrollment (restored/adapted bench), incomplete-set suppression, sparse noise/translation tolerance, unknown/solid/invalid rejection, ambiguity and freeze persistence",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_gesture5_rgb_ramopt",
+      "status": "PASS",
+      "seconds": 253.66,
+      "log": "tb_gesture5_rgb_ramopt.log",
+      "log_sha256": "e4afac21854b8b3a2634fab6a6c59ac1b38b6867bdd8cf6c95ae36346d15be94",
+      "completion_markers": [
+        "PASS: five-class RGB-to-template button enrollment (new adapted bench) and changed-shape wrist-wave; multi-tone fingers; learned thumb/heart/OK/V/dynamic wave; static/jitter/fist/blank rejection; freeze and mode persistence",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_gesture5_shared_overlay_ramopt",
+      "status": "PASS",
+      "seconds": 37.51,
+      "log": "tb_gesture5_shared_overlay_ramopt.log",
+      "log_sha256": "1c78c252483c490073ac5fa3ec7341d466bb8d7527f53aa8fd8e278e4b714c2a",
+      "completion_markers": [
+        "PASS: HDMI diagnostics removed across entire former label/bar area; health bits have no pixel effect",
+        "PASS: SHARED_FONT=1 five-class HUD/OK/V labels and new two-pixel ROI sides and old edges removed; palm square/right HUD unchanged; 825043 pixels equal legacy font with 589321 concurrent LCD reads; pure capture strips overlays",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_h4_skin",
+      "status": "PASS",
+      "seconds": 10.31,
+      "log": "tb_h4_skin.log",
+      "log_sha256": "991b7b40e58a7b7ec779ea7507b71aa37ce68854542af81bc00da04ac66df965",
+      "completion_markers": [
+        "PASS: pale fingertip, palm and shadow segmentation; skin calibration; white/blue/dark background rejection",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_h4_overlay",
+      "status": "PASS",
+      "seconds": 15.44,
+      "log": "tb_h4_overlay.log",
+      "log_sha256": "8111f91db5ba5c5670d4fed1197629420e87b91c07b6ae74e63620767ed33fe8",
+      "completion_markers": [
+        "PASS: three HDMI matrix + Chinese/English results, idle on missing target, no cyan debug tint, pure capture removes every overlay",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_controls6",
+      "status": "PASS",
+      "seconds": 9.61,
+      "log": "tb_controls6.log",
+      "log_sha256": "bffbd4b5a0be2976d41b78a79403d65a03eef1f0cf070e894add0b1bcd65514f",
+      "completion_markers": [
+        "PASS: six-mode keys, UART, pure_en capture, optional detection and auxiliary modes",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_matrix5_ramopt",
+      "status": "PASS",
+      "seconds": 13.59,
+      "log": "tb_matrix5_ramopt.log",
+      "log_sha256": "519c6b8ba934cd2edc58a0710a84ac8ec82665a95603ead75aa57371128dc48d",
+      "completion_markers": [
+        "PASS: five exact 8x8 bitmaps, idle grid, cell gaps, wave highlight, unknown class blank icon",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_h5_ui",
+      "status": "PASS",
+      "seconds": 43.77,
+      "log": "tb_h5_ui.log",
+      "log_sha256": "e0d151d8f14b2c7932e644e0d745eab1b9a4df32f16d16e0039454d1ec8f61c0",
+      "completion_markers": [
+        "PASS: full 720p H5 hand-lost, palm-unconfirmed, palm-ready, reverse-direction and wave-confirmed UI rasters",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_i2c6",
+      "status": "PASS",
+      "seconds": 10.86,
+      "log": "tb_i2c6.log",
+      "log_sha256": "a3160db89aad15981c8eefbf0c2cbd1f9585cf7248e4eb4bdbf8719226e04a77",
+      "completion_markers": [
+        "PASS: SCCB retries and 10 ms software-reset settling",
+        "PASS: absent camera produces failed ACK status without hanging configuration",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_health6",
+      "status": "PASS",
+      "seconds": 13.91,
+      "log": "tb_health6.log",
+      "log_sha256": "14981f4280d805fdacab6dbe3e3edac1d755a4d30e3c4a36543890bf0c172ad1",
+      "completion_markers": [
+        "PASS: diagnostic activity, complete frame, RGB expiration and automatic missing-camera retry",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_frame_path",
+      "status": "PASS",
+      "seconds": 12.83,
+      "log": "tb_frame_path.log",
+      "log_sha256": "4b135d44da04b42cf6f21999fb557abf5d1a7347d3dd2f24d30081d96cbaa7ea",
+      "completion_markers": [
+        "PASS: camera bytes -> AXI memory -> RGB565 FIFO, stalled bursts, empty/short rejection, freeze/live ownership",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_menu_cdc6",
+      "status": "PASS",
+      "seconds": 12.34,
+      "log": "tb_menu_cdc6.log",
+      "log_sha256": "e105fd3276d70fb6da5f219d453f48e5b69a3a44d649a3bea79b75e3d3bccaf4",
+      "completion_markers": [
+        "PASS: CDC 1000 rapid changes, coherent payload, eventual state, reset recovery",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_camera_rgb_fifo",
+      "status": "PASS",
+      "seconds": 11.66,
+      "log": "tb_camera_rgb_fifo.log",
+      "log_sha256": "f4169ed654493efde09f83abe4b751fbe10a9a20cd6c367a318c2bdabd81fc57",
+      "completion_markers": [
+        "PASS: default camera_rgb_balance -> real W0_FIFO_8 -> stalled 128-bit memory -> real R0_FIFO_16; 10848 RGB565 pixels/21696 bytes/1356 words independently checked, RGB/white/gray/black, 720 rows with full edge and centre rows, byte order, delayed-VS final pixel and counts",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_capture_exit_regression",
+      "status": "PASS",
+      "seconds": 10.92,
+      "log": "tb_capture_exit_regression.log",
+      "log_sha256": "5ad3b6f50a07243419b47cbb12c5aca11145e3eb57b1a68472d70f77e96a1489",
+      "completion_markers": [
+        "PASS: capture exit releases source without waiting for missing freeze or VS",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_capturefix_controls",
+      "status": "PASS",
+      "seconds": 10.45,
+      "log": "tb_capturefix_controls.log",
+      "log_sha256": "22ac53ef0ac139802dd92e7a2e46741ae7a008007bea370054d11df6ebbce0b6",
+      "completion_markers": [
+        "PASS: six-key controls checks=59; paired saturation, independent thresholds, frame commits, context cancellation, frozen edits, mode mapping, FOUR exit clear",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_capturefix_chain",
+      "status": "PASS",
+      "seconds": 195.28,
+      "log": "tb_capturefix_chain.log",
+      "log_sha256": "b7ccc6e226e667d571416d381fe7601bdf11173e19187018904bbf4bd9a608fe",
+      "completion_markers": [
+        "PASS: cross-clock real camera/main vendor FIFOs, six-key controller, video pipeline, DDR writes and AUX compositor; 4 algorithms and fifth replacement; phase1..6 exit/reentry; raw=872532 display=113022 W=618 R=4987 seed=9126acd8",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_capturefix_abort",
+      "status": "PASS",
+      "seconds": 11.5,
+      "log": "tb_capturefix_abort.log",
+      "log_sha256": "02bdcc946d0e1f46f24f5f1e83bbbe504a0ba33b22753550a7607e792185e86f",
+      "completion_markers": [
+        "PASS: cancel phase=0 AW/W/B stable, unsuccessful completion without end token",
+        "PASS: cancel phase=1 AW/W/B stable, unsuccessful completion without end token",
+        "PASS: cancel phase=2 AW/W/B stable, unsuccessful completion without end token",
+        "PASS: cancel phase=3 AW/W/B stable, unsuccessful completion without end token",
+        "PASS: cancel phase=4 AW/W/B stable, unsuccessful completion without end token",
+        "PASS: real vendor camera/main FIFOs, simultaneous DDR clients, stable stalls, B-response commit/error, snapshot packing, compare/PiP readback and restart drain; W=         18 R=         41",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_capturefix_faults",
+      "status": "PASS",
+      "seconds": 196.11,
+      "log": "tb_capturefix_faults.log",
+      "log_sha256": "4a4288c59baeea98ffc2ebcca5d14df41a2e82ffdfeba9cfee3bfdb9b80c338d",
+      "completion_markers": [
+        "PASS: real cross-clock capture rejects missing last pixel, VS interruption, DDR BRESP error and actual snapshot FIFO backpressure; no partial publication, capture lock release, IO28 clear and valid recapture after every fault",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_capturefix_pip",
+      "status": "PASS",
+      "seconds": 10.97,
+      "log": "tb_capturefix_pip.log",
+      "log_sha256": "87e913218d5a1a208a97a874af9774ffab83024fb1c66d5f03826937a37c5c98",
+      "completion_markers": [
+        "PASS: frame-bound PiP/compare compositor, supported modes 1/2/3 normal AUX RGB565 pixels and border position, PiP-off main restoration, frame-bound enable/disable, underflow recovery",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_capturefix_ui_select",
+      "status": "PASS",
+      "seconds": 13.62,
+      "log": "tb_capturefix_ui_select.log",
+      "log_sha256": "39e74adcd015161fe2c31a4e95b2535c13e94c0e35842b31b153d5fc9ca39a5d",
+      "completion_markers": [
+        "PASS: Canny BOTH/HIGH/LOW label, digit highlight and all1/4/8 paired/individual step hints",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_vision8_gesture",
+      "status": "PASS",
+      "seconds": 11.12,
+      "log": "tb_vision8_gesture.log",
+      "log_sha256": "e01a121a59968c830fd9eff726985d61da8e85d74eb20242d54521389d36784c",
+      "completion_markers": [
+        "PASS: gesture publication gate accepts five distinct camera IDs and rejects replay votes; K1 enrolment uses elapsed-clock countdown/timeout and exits with mode change",
+        "$finish called"
+      ]
+    },
+    {
+      "bench": "tb_capturefix_rawphase",
+      "status": "PASS",
+      "seconds": 56.3,
+      "log": "tb_capturefix_rawphase.log",
+      "log_sha256": "c5f8055ca903741437482fdb618037ad71ecee04f712bd4b797fc4c81a033abe",
+      "completion_markers": [
+        "PASS: 128x96 RAW same-VS-phase regression; actual 74.4MHz raster,96MHz AXI,100MHz camera-byte producer; real main/vendor FIFO+snapshot+four AUX concurrently; seed9126acd8; raw_checked=442387 display_checked=98532 W=597 R=4107 no steady underflow",
+        "$finish called"
+      ]
+    }
+  ],
+  "excluded": [
+    "tb_vision8_controls/tb_inline_controls: superseded by tb_capturefix_controls",
+    "tb_vision8_frames: replaced by real chain and dedicated PiP tests",
+    "tb_vision6: separate seven-scene original equality regression"
+  ]
+}

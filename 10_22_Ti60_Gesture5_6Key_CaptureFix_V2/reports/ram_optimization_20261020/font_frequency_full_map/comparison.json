@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-20",
+  "experiment": "Full project map-only font dictionary ordering comparison",
+  "production_modified_by_experiment": false,
+  "frequency_map": "PASS",
+  "frequency_pnr": "PASS",
+  "source_input_count": 639,
+  "source_manifest": "full_map_comparison_inputs.json",
+  "source_manifest_sha256": "05e261992ee69ae78c9e3b9728c5566f5ba7f88654a968c458398afe0fcf2763",
+  "nonfont_source_changes_since_snapshot": [],
+  "value_primitive_resources": {
+    "EFX_ADD": 5934,
+    "EFX_LUT4": 33999,
+    "EFX_FF": 21613,
+    "EFX_SRL8": 532,
+    "EFX_RAM10": 175,
+    "EFX_DPRAM10": 9,
+    "EFX_DSP48": 32,
+    "EFX_DSP24": 9
+  },
+  "frequency_primitive_resources": {
+    "EFX_ADD": 5934,
+    "EFX_LUT4": 33281,
+    "EFX_FF": 21614,
+    "EFX_SRL8": 532,
+    "EFX_RAM10": 175,
+    "EFX_DPRAM10": 9,
+    "EFX_DSP48": 32,
+    "EFX_DSP24": 9
+  },
+  "frequency_minus_value": {
+    "EFX_ADD": 0,
+    "EFX_LUT4": -718,
+    "EFX_FF": 1,
+    "EFX_SRL8": 0,
+    "EFX_RAM10": 0,
+    "EFX_DPRAM10": 0,
+    "EFX_DSP48": 0,
+    "EFX_DSP24": 0
+  },
+  "value_font_hierarchy_lut4": 1170,
+  "frequency_font_hierarchy_lut4": 1521,
+  "value_map_sha256": "1c0feab36bdef8ee00f0f5758332a5495308ef08aef5f49a5b486fdb02f89c8f",
+  "frequency_map_sha256": "fb0e5d10576d2e9fe6188eeed1d5957817de4836bb8e1d46b83dc036e8b8c611",
+  "frequency_resource_hierarchy_sha256": "1c3674438b15c025b6db49c672457c6f3537b9ff2a97646f5e39013f4a9ea49d",
+  "recommendation": "Frequency order has 718 fewer global LUT4s and identical total RAM184; full-project resource result supersedes isolated font-only preference. Parent must evaluate final PNR; no production adoption performed.",
+  "value_map_reference": "comparison_reference/value_Ti60_Demo.map.out",
+  "frequency_map_reference": "comparison_reference/frequency_Ti60_Demo.map.out",
+  "value_resource_hierarchy_reference": "comparison_reference/value_Ti60_Demo.res.csv",
+  "value_resource_hierarchy_sha256": "b9a4f4803d9f4f73e95db56d02f7fa1ef4fa742ed6441dddc24e7d4c1bfc0f57",
+  "frequency_resource_hierarchy_reference": "comparison_reference/frequency_Ti60_Demo.res.csv",
+  "map_resources_reproduced_in_full_compile": true,
+  "initial_map_elapsed_seconds": 146.974,
+  "full_compile_repeat_map_elapsed_seconds": 125.031,
+  "subsequent_frequency_full_compile": "PASS; artifacts not collected by this agent",
+  "verified_final_resources": {
+    "XLRs": {
+      "used": 52744,
+      "available": 60800
+    },
+    "Memory Blocks": {
+      "used": 184,
+      "available": 256
+    },
+    "DSP Blocks": {
+      "used": 39,
+      "available": 160
+    },
+    "Global Clocks (GBUF)": {
+      "used": 14,
+      "available": 32
+    }
+  },
+  "min_setup_slack_ns": 0.305,
+  "min_hold_slack_ns": 0.026,
+  "bit_sha256": "eeff07af4fe66d40d9b2ad88b486102a97ff7034ab6e7644e8149910da30e439",
+  "hex_sha256": "c6c5ba289253abd3aa01a1acfe768d464da7dc19c18068d099c8fdd8db34d39a",
+  "production_canonical504_match_after_build": "PASS"
+}

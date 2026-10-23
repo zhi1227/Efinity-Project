@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-21T05:32:34.857311+00:00",
+  "delivery": "reports/capture_review/delivery.json",
+  "delivery_sha256": "d55bcfb2dbf6ad429359b4f38de99d7fb5ec3c1a892bd66a12da9397742a0a42",
+  "tests": 44,
+  "negative_cases": 9,
+  "negative_evidence": "reports/capture_review/verifier_tests_20261021T052909131919Z/result.json",
+  "metrics": {
+    "default_equal_pixels": 6451200,
+    "dynamic_pixels": 147456,
+    "menu_pixels": 5301248,
+    "font_pixels": 646144,
+    "cpu_packing_pixels": 4915200,
+    "epaper_spi_bytes": 30033,
+    "full_load_frames": 8
+  },
+  "protected_production_files": 474,
+  "protected_settings_files": 500,
+  "physical_board": "NOT_RUN"
+}

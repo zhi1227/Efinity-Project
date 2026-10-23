@@ -1,0 +1,10 @@
+{
+  "kind": "RTL simulation pixels; not a physical-board screenshot",
+  "source_sha256": {
+    "sim_inline_video/reports/hdmi_1.ppm": "00ca154cc9fd34331509c752e279565acb6ba551fba74c215b6b2fb2cd07ce01",
+    "sim_inline_video/reports/hdmi_2.ppm": "002d25e3e76a4dc4ae73cc80cae97897759204f309608f76d6a18dde5651a74c",
+    "sim_inline_video/reports/hdmi_3.ppm": "4d7fe65ae3b0aafeec20ccbc0307671365965ec12f86818a660c95ead8c42177",
+    "sim_inline_video/reports/hdmi_4.ppm": "1957f3bda789d9dbc9c78aafdfce3815280550bd83fc67f9349fb57cf570464f"
+  },
+  "comparison_log": "reports/inline_threshold/video/tb_inline_video_defaults.log"
+}

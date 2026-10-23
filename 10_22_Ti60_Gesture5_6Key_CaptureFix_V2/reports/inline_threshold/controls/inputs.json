@@ -1,0 +1,18 @@
+[
+  {
+    "path": "rtl/vision8_uart.v",
+    "sha256": "8a72249ef9640a3fde5b242b91a3411c0ce26801dda93ba4d611c6d2b3fb73f2"
+  },
+  {
+    "path": "rtl/vision8_controls.v",
+    "sha256": "51c4cc010164d920efd640ea8c71c31219e6162224665c68936f7b7ac265a74a"
+  },
+  {
+    "path": "sim/tb_vision8_key_boundary.sv",
+    "sha256": "e35908ac5475d236ebd7db8e17b04db8d8888d4c03a89b21728fac470c7b484d"
+  },
+  {
+    "path": "sim/tb_inline_controls.sv",
+    "sha256": "477faa2f3b755d04851e59ad503a4062b0bb0328a857bbaa1d06d965bc5a7187"
+  }
+]

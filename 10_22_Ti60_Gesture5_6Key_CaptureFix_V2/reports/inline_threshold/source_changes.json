@@ -1,0 +1,284 @@
+{
+  "original": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_RAM_Optimized",
+  "project": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold",
+  "changed": [
+    {
+      "path": "example_top.v",
+      "original_sha256": "0c165e913bf300510485194c4b0a901efc0fbd36fe3b0022fb0ebff77186ad0e",
+      "sha256": "7faf098fec56802ac296a2bdd3ed1adaa7833a5491677124be6ccc9c52e26b8f"
+    },
+    {
+      "path": "menu_font.hex",
+      "original_sha256": "e265e2ef135f000a275ec2a317a33fbdb34bb65c094cf9eeecd21c34df17edfb",
+      "sha256": "009711f7fab281ef598f70f21c0f4049fdabc7c8f7e4e85013de2b815c58360d"
+    },
+    {
+      "path": "menu_font_bank0.hex",
+      "original_sha256": "21d31e807217ec84d611b840e251bb8493953c692ff578c472bec7b6a978d643",
+      "sha256": "118a26b3e918636fdc5abd767a582fc61459451a60cbcadc413721cc77255f34"
+    },
+    {
+      "path": "menu_font_bank1.hex",
+      "original_sha256": "4d0d157dd3e07d981139535b755299a1d4566071789ee77255157281ad4148a8",
+      "sha256": "c7a51da6f63b01c9c6c578c0fc6e9d629ed90c13cb1e26f18aca24def64d8907"
+    },
+    {
+      "path": "menu_font_bank2.hex",
+      "original_sha256": "d79680b81ab36b63a41993eec6efd273a01a3a933ffe130abf7349540312d8f5",
+      "sha256": "7b2f0732afbcedab7f34b09bdfa239767ea98a9639cf617ce86f005f04fc7a4e"
+    },
+    {
+      "path": "menu_font_bank3.hex",
+      "original_sha256": "d7dca27cecca95d64fd844e80db86b14c46eb7ef949dcdff8706e7edbea7742c",
+      "sha256": "f66cd3a409478d6825d1702176a7a58342861bff7a9a4e458bd953736d745bb4"
+    },
+    {
+      "path": "menu_font_bank4.hex",
+      "original_sha256": "080f382b9b61188994d8b1edae828ab5ddf4444e54c93b5a4850f28757ff8a7d",
+      "sha256": "2f0de5cf474c2bad0406ca184e8833249bf76c7c8187ce3ce7da5ef74769b6b1"
+    },
+    {
+      "path": "README.md",
+      "original_sha256": "72cc06f66e5f7dfcae59293e4bf2e1f596799914c6540a11aee2cd1edd2174ad",
+      "sha256": "b828e3888fffe592e70c47ec68ee2a2fb7322d3659a4dba467105cf947936fb7"
+    },
+    {
+      "path": "rtl/menu8_renderer.v",
+      "original_sha256": "edba7a1523c47141efbed44eaaa53dae3a46f199e835a29f8895bdfeafed319a",
+      "sha256": "c4175ed7a7c0e3707cf44876180c3181ab05311a809111a0a0c2a270598f5e0d"
+    },
+    {
+      "path": "rtl/menu_glyph_rom.v",
+      "original_sha256": "d1f338564c4ea8c4d13887a1e35e5b6ea2a82b633f42ff089536882413271e56",
+      "sha256": "109143d06dfbe59fa786e34cd726a9764ccab295cca2a190b590ef894d211e8a"
+    },
+    {
+      "path": "rtl/shared_glyph_rom.v",
+      "original_sha256": "cbbf674867a2fcef69bd5b087bc4968c5606a37bc876132650f97ece5a38c486",
+      "sha256": "1c69fa957f1a4fd11dcd52a19a65babfae08a769a8ee993a484e2f36b37a8eef"
+    },
+    {
+      "path": "rtl/vision6_glyph_rom.v",
+      "original_sha256": "e8a4644c0b31dde2df0e2f2a52ae020e7b6c42ba7b3cee137e180b71805635b1",
+      "sha256": "09ce24462b9d48fd0e64800c0c697e641399f40ead38b0d67f6160cff6f86bbd"
+    },
+    {
+      "path": "rtl/vision6_overlay.v",
+      "original_sha256": "d3daed99eb681c60a25700fd7d9529f5389fbdabcd152793eb15e5aa7a527db5",
+      "sha256": "bc3bc6d9242d9b83af758d093c6136fef6890fedd7ff7252fec29c414fdba1a1"
+    },
+    {
+      "path": "rtl/vision8_controls.v",
+      "original_sha256": "0692051a7d51f2ba92aaeb49d1ab8e949d623dd87cb8ae96a4caf7ae40ff7e27",
+      "sha256": "51c4cc010164d920efd640ea8c71c31219e6162224665c68936f7b7ac265a74a"
+    },
+    {
+      "path": "rtl/vision8_frames.v",
+      "original_sha256": "5be9b6b36bda04c4d4a1410faf83377c221f4bf2d0789bdea56f03ceb71de853",
+      "sha256": "12f0b5cdb9a6523c2f02d72ad0e7783f34b522bdbb5bae8797d58b1e106efb0c"
+    },
+    {
+      "path": "shared_font.hex",
+      "original_sha256": "eab7faf1a964e66d8997c9c7e2133c5fab993ef0d7cb6311e797ca03e79f460a",
+      "sha256": "28b54dd46b8295aed7ab1b27aa2038bc2608dd23258c84cf6abb95da4c60002f"
+    },
+    {
+      "path": "shared_font_bank0.hex",
+      "original_sha256": "21d31e807217ec84d611b840e251bb8493953c692ff578c472bec7b6a978d643",
+      "sha256": "118a26b3e918636fdc5abd767a582fc61459451a60cbcadc413721cc77255f34"
+    },
+    {
+      "path": "shared_font_bank1.hex",
+      "original_sha256": "992dc029a15cb3936b3816d5eca3dce097a27ad13cfddcde5df4a16b68dbec89",
+      "sha256": "0ee90ec69ade33efa83a206348cc7885b8145c5cd3345b5f7531ee71ae9d1d8e"
+    },
+    {
+      "path": "shared_font_bank2.hex",
+      "original_sha256": "7965aa223585c5a8326dd3e51d596a410295d953d0d2dd4b64eed24c036ee62f",
+      "sha256": "bed8bae91125f8331602e5a7c10869ab47668b522c84e8633783f96ad1ea745c"
+    },
+    {
+      "path": "shared_font_bank3.hex",
+      "original_sha256": "823bae68f3f7b45f438e823b4c571baa6d53f1d95429c12b12c7700f9b2b043e",
+      "sha256": "c57da86027b4747bad529b31fc55c98429d37e243f5da8a1af3c80d1ba81eb0e"
+    },
+    {
+      "path": "shared_font_bank4.hex",
+      "original_sha256": "58b504c7d5eb8030d5f0433e5ac02284f0751b6c1a62dd5605d898be6f717aa5",
+      "sha256": "4cd5cb11c37eb2a9dfa860e226f9045cd48a09acc3cb0e194f91d43bb8e9dfab"
+    },
+    {
+      "path": "shared_font_bank5.hex",
+      "original_sha256": "8a5fac3058cb69f0e69258b27c8440d8018013760d8f61cbc53f27633a07c816",
+      "sha256": "8cd34c2d6ec3af55f1f87728e5f0365aa658ccda9d08d510355d39533c68d6f8"
+    },
+    {
+      "path": "shared_font_bank6.hex",
+      "original_sha256": "f27397d32f7e212edc1ed98ffefd1b5c40f08ec84936dd421a1c56e9f903c810",
+      "sha256": "e3e2e9e7422c01295532a09d8244501d204754d8fb7b4ac231258d58525917bc"
+    },
+    {
+      "path": "shared_font_bank7.hex",
+      "original_sha256": "66f2b21d92b28b0910bb38706da89a82f02d89c73a4234abfa2c2416631c5311",
+      "sha256": "f2a77489edd0c3e292f0328c1c7cbf84def69cc9b0eae11e3e4831b354d9a277"
+    },
+    {
+      "path": "shared_font_bank8.hex",
+      "original_sha256": "1280d1998e94742e7118676425ffefc91b2dee18cf7984bf0b4f2b96c47c9f18",
+      "sha256": "bbcd35d5a54a60649d586e03c1e4b885b936ff172992b4691cc25cddf896761f"
+    },
+    {
+      "path": "shared_font_index_bank0.hex",
+      "original_sha256": "476f91a475dba05c08086c241d41f0e7ed65ec8b83cb07fc59266b3cd31991a5",
+      "sha256": "855ec240b1705e11613b45ab6d4a059b6e8f7693665a54d33ddb368351925079"
+    },
+    {
+      "path": "shared_font_index_bank1.hex",
+      "original_sha256": "8b9f47947b7fea4048c8c3601aea044b3dfc91ea773b0879c7236938999e424c",
+      "sha256": "613a3358a58a706b1e07f54a2621bebee73fa64f13107e7736c1e18f9d4ad9cc"
+    },
+    {
+      "path": "shared_font_index_bank2.hex",
+      "original_sha256": "5f89d921e81d07b2ef1fa9d3c11c65d92f76bcd778d74d799139d7c8a9e6a918",
+      "sha256": "36a8a92619037247ac3c421d8221a896b5b2925f7a9397b4ab1db9006352bec5"
+    },
+    {
+      "path": "shared_font_index_bank3.hex",
+      "original_sha256": "c7195a663bd0c73922a79b985de8a5039aa1e52e5dbbfc1fcef014a8e207de58",
+      "sha256": "f2e2e16155b3eb331e94b2891b749d9d5c3853a2c542aa03d085d5e99dbcfb82"
+    },
+    {
+      "path": "shared_font_index_bank4.hex",
+      "original_sha256": "2f25cf3c2918d18adf104ed4eb4c663698b1892d5bf65aaea4d6f3ee096f8a70",
+      "sha256": "05630fdddf9dedbc3d056156a7be8e51f40bba137e64f0eb9dc7f434464dcaa7"
+    },
+    {
+      "path": "src/parallel/parallel_video.v",
+      "original_sha256": "70edf327fb67ff83ba05a8da983f8b0476ab89348c15939f22e8aa0c01f96615",
+      "sha256": "b007a84f313deaeee86943b06d01fbaf04dd4a260748374df6ef0d2b18c8a47a"
+    },
+    {
+      "path": "Ti60_Demo.peri.xml",
+      "original_sha256": "f791cb4e15978df611d58cccd0fc2e9db10d5e973ffee7c4ebb2f2ec828a0695",
+      "sha256": "7112e1c8b5f7a389c7e7d7b22fd430bf6b97aad5cbfdea49b3b4d464e96f195a"
+    },
+    {
+      "path": "Ti60_Demo.pt.sdc",
+      "original_sha256": "b872aa2a6fc65199eaec697b290a48a89f6daeee1aff1bfb1425bdd7e7ae89d0",
+      "sha256": "32fe1a6c7ce73198c8a148ce3eda2b0059a72f81a3d9642cbd196d91d753efd6"
+    },
+    {
+      "path": "tools/compress_shared_font_ram.py",
+      "original_sha256": "30fc0885645643e8d133e118aa7804947bbe5727b5c078f3b06d197871a8ffeb",
+      "sha256": "558f5287354562ee6d59443320a6b3ec7fc0559ea9d3e72406aa2c1864627f05"
+    },
+    {
+      "path": "tools/generate_font.py",
+      "original_sha256": "cd6d14a0823bfb89c06e802f657328a6083528268b5b657aad70cae6ee9a37a6",
+      "sha256": "f4992c2364e1d58ef7252b144363f5e368aea8b53ff909c0c3b8990e0933b6f4"
+    },
+    {
+      "path": "tools/hdmi_text.json",
+      "original_sha256": "0bcc54145474c0919d4f7addabec5192ad6cc5f6697dcdcd61700aa3df49f3f5",
+      "sha256": "7873a43c120575a06c6679ecdda120e427c68a6e27024e6b4df99451be8fc3ff"
+    }
+  ],
+  "added": [
+    {
+      "path": "README_4Key_InlineThreshold.md",
+      "sha256": "a22a4f2f68c5e56d05087dbcc241c782edba099e69f483817d5e525243f8510b"
+    },
+    {
+      "path": "sim/inline_reference/parallel_video_original.v",
+      "sha256": "ba25abf5f6c68cea1196ed47465987fdfc310c20e75ee78be99347be9ef3ba1e"
+    },
+    {
+      "path": "sim/inline_reference/vision6_overlay_original.v",
+      "sha256": "618b50bb7825464869c564d64665ff43d37b269476f2e8a54b667eca88943c85"
+    },
+    {
+      "path": "sim/tb_fourkey_font.sv",
+      "sha256": "8913d739c575cdae1ac5578cb2f7b7b28145b36805aaf3896fb20bd3ad7a0713"
+    },
+    {
+      "path": "sim/tb_fourkey_menu.sv",
+      "sha256": "7669e309a2bc3470529095a44e6f1eaf509bdf29f1ecb9a7c58f015cd75cb12b"
+    },
+    {
+      "path": "sim/tb_inline_capture.sv",
+      "sha256": "6f10777db3f39c98465342fda9356f8b9b3a8843a51a7276d91aec3c253e9342"
+    },
+    {
+      "path": "sim/tb_inline_controls.sv",
+      "sha256": "477faa2f3b755d04851e59ad503a4062b0bb0328a857bbaa1d06d965bc5a7187"
+    },
+    {
+      "path": "sim/tb_inline_cpu8.sv",
+      "sha256": "600d67fc64296b36150245ff3150871f58dc0e1acdbbeac902dd7f9da2cb7a7a"
+    },
+    {
+      "path": "sim/tb_inline_epd_cpu.sv",
+      "sha256": "40abf54751aa72c6c916e51174a79684263a82b0786171c127193bf1c827c9f4"
+    },
+    {
+      "path": "sim/tb_inline_video_defaults.sv",
+      "sha256": "2afa0812e64dc168d949c57b7911e714f30cc57a2ca6583a5d418151ded2870d"
+    },
+    {
+      "path": "sim/tb_inline_video_dynamic.sv",
+      "sha256": "2c5d182e58e066903d3761411e3a902e81c06db128420932badff2c0073fb4f9"
+    },
+    {
+      "path": "tools/audit_inline_build_details.py",
+      "sha256": "81a85040d7136d8657cedbe0ea8bbe201f21a9989f03babc4faaceab7575c7e8"
+    },
+    {
+      "path": "tools/finalize_inline_tests.py",
+      "sha256": "43b6e17c29a252841859d391a50e10a0cf0c276214ad0cf0371cbaa14ba12fc4"
+    },
+    {
+      "path": "tools/inline_threshold_build.py",
+      "sha256": "f0b985aad9cce2a904256dbb8488878c9c9e522fe57824d5c3139590bdee3695"
+    },
+    {
+      "path": "tools/report_inline_changes.py",
+      "sha256": "4b102c803684b5d208c8a31982ebf4cc3e12dcf8afe88711bb29701ad1b036da"
+    },
+    {
+      "path": "tools/test_fourkey_ui.py",
+      "sha256": "ad2dfcd10b764c807c92399b43a7e01408bb11087aa343e9f4c1792ff2db6742"
+    },
+    {
+      "path": "tools/test_inline_capture.py",
+      "sha256": "643d695f587dbfe8ee732b52a9de09e96d1a34d1d8d0337a30c4e61e6f132567"
+    },
+    {
+      "path": "tools/test_inline_controls.ps1",
+      "sha256": "7c84dbbf4b4a1df70bf9d8b97435b754bd71f11b017f7aae3ec44e6962e14d07"
+    },
+    {
+      "path": "tools/test_inline_cpu.py",
+      "sha256": "61762bb20c7a804514ae6d9894cf7e9b479b75722027c66549ac0cd9c47e97f3"
+    },
+    {
+      "path": "tools/test_inline_delivery_audit.py",
+      "sha256": "a544f4f235db78863abac1319b270bafe0481dd8609ce9d91e707fb0400290ab"
+    },
+    {
+      "path": "tools/test_inline_retained.py",
+      "sha256": "01023708082747d3642df3af3ae1562a2c8adf5a1f4442406ce5ed12680f80de"
+    },
+    {
+      "path": "tools/test_inline_video.py",
+      "sha256": "94e1842696d6a6f3f12ff3f69b8c80b5f945a25df2326a6e90768032747fbe53"
+    },
+    {
+      "path": "tools/verify_inline_threshold_delivery.py",
+      "sha256": "50f04bc30057d3c7e74fd4f062e918d90e832b7c0fa2b8974712e929eaeec021"
+    },
+    {
+      "path": "tools/write_inline_handoff.py",
+      "sha256": "1724e290287ebe03d464b0b594613a8c72c8a0f3410a9284abb73e8258f1da9a"
+    }
+  ]
+}

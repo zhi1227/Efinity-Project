@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_candidates/index_10_value_sorted/rtl/shared_glyph_rom.v" into library work
+INFO: [VRFC 10-311] analyzing module shared_glyph_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_candidates/index_10_value_sorted/sim_ramopt_font/shared_glyph_rom_reference.v" into library work
+INFO: [VRFC 10-311] analyzing module shared_glyph_rom_reference
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_candidates/index_10_value_sorted/sim_ramopt_font/tb_ramopt_shared_font.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_ramopt_shared_font

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "files": 9044,
+  "source": "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix",
+  "backup": "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\_backups\\CaptureFix_before_V2_20261022_025711",
+  "unix_checked": 1792612127.5774515,
+  "method": "Exact file-set and SHA-256 for both original and full backup; no originals written"
+}

@@ -1,0 +1,17 @@
+{
+  "original_reference": "shared_font.hex",
+  "original_sha256": "28b54dd46b8295aed7ab1b27aa2038bc2608dd23258c84cf6abb95da4c60002f",
+  "original_rows": 4608,
+  "valid_address_space": 8192,
+  "distinct_rows": 1167,
+  "index_low_bits": 10,
+  "dictionary_order": "frequency",
+  "index_high_bits": 1,
+  "index_bank_depth": 1024,
+  "index_bank_count": 5,
+  "high_index_nonzero_addresses": 143,
+  "latency_clocks": 1,
+  "independent_clock_ports": 2,
+  "reference_files_modified": false,
+  "roundtrip_all_8192_rows": "PASS"
+}

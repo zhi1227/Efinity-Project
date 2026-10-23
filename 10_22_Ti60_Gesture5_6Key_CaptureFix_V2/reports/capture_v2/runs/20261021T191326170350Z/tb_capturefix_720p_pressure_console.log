@@ -1,0 +1,27 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_capturefix_720p_pressure/xsim_script.tcl
+# xsim {tb_capturefix_720p_pressure} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+START capture 0 raster=5 main_good=1 bad=0
+STATE  1 count= 921600 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  5 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  6 count= 921600 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  8 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  0 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1
+Command failed: Simulator command interrupted.
+
+Simulation engine not responding
+The simulator has terminated in an unexpected manner.  Please review the simulation log (xsim.log) for details.
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:09:57 . Memory (MB): peak = 218.312 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 22 03:23:32 2026...

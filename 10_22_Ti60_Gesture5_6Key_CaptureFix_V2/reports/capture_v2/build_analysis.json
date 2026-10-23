@@ -1,0 +1,10 @@
+{
+  "before_count": 392,
+  "after_count": 393,
+  "added_groups": {
+    "[EFX-0011 VERI-WARNING] expression size 32 truncated to fit in target size 11 (VERI-1209) (<SOURCE>)": 1
+  },
+  "removed_groups": {},
+  "latch_multidriver_lines": [],
+  "review": "Added size-truncation warning is diagnostic label coordinate arithmetic. Production visible label_x range is 0..575, within 11 bits; outside visible area is masked. Existing DDR width warnings retained and bounded by fixed 1280x720 dimensions. No synthesis latch/multidriver warning matches. No constraints/frequencies changed."
+}

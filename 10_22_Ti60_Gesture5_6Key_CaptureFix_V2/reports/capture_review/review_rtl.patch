@@ -1,0 +1,136 @@
+--- before_audit/example_top.v
++++ current/example_top.v
+@@ -17,7 +17,7 @@
+ 	output 			sys_pll_rstn_o, 		
+ 	
+ 	input 			clk_sys,			//	Sys PLL 96MHz 
+-	input 			clk_pixel,			//	Sys PLL 74.25MHz
++	input 			clk_pixel,			//	Sys PLL 74.4MHz
+ 	input 			clk_pixel_2x,		//	Sys PLL 148.5MHz
+ 	input 			clk_pixel_10x,		//	Sys PLL 742.5MHz
+ 	
+@@ -321,7 +321,7 @@
+     // Keep the existing core-board keys and four Flash data lanes.
+     input epd_busy,
+     output epd_clk, epd_din, epd_cs_n, epd_dc, epd_rst_n,
+-    input key_mode_n, // board K1: enrolment / threshold selection
++    input key_mode_n, // board K1: PiP toggle; K2: Canny BOTH/HIGH/LOW selection
+     input io28_button_i,
+     input io35_button_i,
+     input io34_button_i, // P4.39 / A9, active-low external button
+@@ -896,8 +896,14 @@
+ 	
+ 	wire 			w_wframe_vsync; 
+ 	wire 	[7:0] 	w_axi_tp; 
++ wire [3:0] display_mode; wire [11:0] threshold_low,threshold_high;wire face_overrun;
++ wire pure_capture,detect_enable,detect_maintenance;wire[7:0]skin_lower;
+  wire freeze_active_axi,gesture_learning;
+- wire freeze_request,capture_busy,capture_lock,main_enable;wire[11:0]capture_low,capture_high;wire[3:0]capture_backend;
++ reg capture_freeze_req;
++ wire freeze_request,capture_busy,capture_lock,main_enable;
++ always @(posedge clk_pixel)if(!rstn_pixel)capture_freeze_req<=0;
++ else capture_freeze_req<=freeze_request||capture_lock;
++ wire[11:0]capture_low,capture_high;wire[3:0]capture_backend;
+  reg freeze_meta_pixel,freeze_pixel;
+  always @(posedge clk_pixel)if(!rstn_pixel)begin freeze_meta_pixel<=0;freeze_pixel<=0;end
+  else begin freeze_meta_pixel<=freeze_active_axi;freeze_pixel<=freeze_meta_pixel;end
+@@ -979,7 +985,7 @@
+ 		.rframe_data_en (lcd_request             ),
+ 		.rframe_data    (lcd_data           ),
+ 		
+-  .freeze_request(freeze_request||capture_lock),.frame_ready(frame_ready_axi),.freeze_active(freeze_active_axi),
++  .freeze_request(capture_freeze_req),.frame_ready(frame_ready_axi),.freeze_active(freeze_active_axi),
+         .read_frame_good(read_frame_good),.read_frame_bad(read_frame_bad),.main_frame_ok(main_frame_ok_axi),.main_enable(main_enable),.source_id(source_id_axi),.base_errors(base_axi_errors),.memory_errors(memory_errors),
+         .aux_request(aux_request),.aux_kind(aux_kind),.aux_directory(aux_directory),.aux_ack(aux_ack),.aux_frame_ready(aux_frame_ready),
+         .snap_abort(snap_abort),.snap_begin(snap_begin),.snap_end(snap_end),.snap_slot(snap_slot),.snap_bad(snap_bad),.snap_reset(snap_reset),.snap_wr(snap_wr),.snap_data(snap_data),.snap_full(snap_full),
+@@ -1045,8 +1051,6 @@
+ 
+  wire [23:0] face_overlay_rgb; wire face_overlay_de,face_overlay_vs,face_overlay_hs;
+  wire [3:0] mode_committed; wire frozen_committed;
+- wire [3:0] display_mode; wire [11:0] threshold_low,threshold_high;wire face_overrun;
+- wire pure_capture,detect_enable,detect_maintenance;wire[7:0]skin_lower;
+  assign detect_enable=user_mode==6||detect_maintenance;
+  camera_health u_camera_health(
+   .sys_clk(clk_sys),.sys_rst_n(rstn_sys),.cam_clk(cmos_pclk),.cam_vs(cmos_vsync),.cam_de(cmos_href),.cam_data(cmos_data),
+@@ -1143,7 +1147,7 @@
+  wire [12:0] menu_status;
+  wire[639:0]menu8_status,menu8_pixel;
+  // Keep all status field offsets, including five-gesture bits125:124.
+- // The former LOW field now carries the current single UI threshold T.
++ // LOW/HIGH fields carry the active Canny pair; other profiles use a single T.
+  wire[11:0]threshold_ui=output_user_mode==1||output_user_mode==4?threshold_low:
+   output_user_mode==2?threshold_red:output_user_mode==3?threshold_cyber:
+   output_user_mode==7?(capture_algorithm==1?threshold_high:capture_algorithm==2?threshold_red:capture_algorithm==3?threshold_cyber:12'd0):12'd0;
+--- before_audit/rtl/vision8_frames.v
++++ current/rtl/vision8_frames.v
+@@ -33,7 +33,8 @@
+  reg[1:0]bound_alg;reg[11:0]bound_low,bound_high;reg[15:0]bound_version;reg[31:0]bound_id;
+  reg[11:0]directory,pending_directory;reg[3:0]pending_valid;reg publish;
+  reg[2:0]old_slot;reg[511:0]pending_metadata;
+- reg done_meta,done_sync,done_seen,ok_meta,ok_sync;
++ (* async_reg="true" *)reg done_meta,done_sync,ok_meta,ok_sync;
++ reg done_seen;reg[1:0]done_wait;
+  reg ack_meta,ack_sync,ready_meta,ready_sync;
+  reg[10:0]x;reg[9:0]y;reg pixel_half,invalid_frame,pip_active;
+  wire frame_blank=vs_i&&!vsq,process_start=result_vs&&!rvsq;
+@@ -61,13 +62,13 @@
+     case(tile_meta[97:96])0:label={"RAW   T:----        F:00000000 V:0000",88'd0};1:label={"CANNY L:0000 H:0000 F:00000000 V:0000",88'd0};
+      2:label={"RED   T:0000        F:00000000 V:0000",88'd0};default:label={"CYBER T:0000        F:00000000 V:0000",88'd0};endcase
+     label_low=tile_meta[83:72];label_high=tile_meta[95:84];
+-   end else if(busy)label={"BUSY - CAPTURE / DRAIN",216'd0};
+-   else if(capture_errors!=0)label={"CAPTURE FAILED - RETRY",216'd0};
+-   else label={"EMPTY - IO29 CAPTURE",232'd0};
++   end else if(busy)label={"BUSY - CAPTURE / DRAIN",208'd0};
++   else if(capture_errors!=0)label={"CAPTURE FAILED - RETRY",208'd0};
++   else label={"EMPTY - IO29 CAPTURE",224'd0};
+   end else if(mode_active>=5)begin
+    label_x=x-16;label_y=y-8;label_area=x>=16&&x<592&&y>=8&&y<40;
+    case(mode_active)
+-    6:label={"08 FACE CANDIDATES: - ",216'd0};
++    6:label={"08 FACE CANDIDATES: - ",208'd0};
+     5:label={"07 GESTURE - IO34 ENROL",200'd0};
+    endcase
+   end
+@@ -79,8 +80,8 @@
+    if(c>=22&&c<30)label_char=hexchar(tile_meta[24+(29-c)*4+:4]);
+    if(c>=33&&c<37)label_char=hexchar(tile_meta[56+(36-c)*4+:4]);
+   end
+-  if(mode_active==6&&c==19)label_char=face_valid?hexchar(face_count):"-";
+-  if(mode_active==6&&c==20)label_char=face_saturated?"+":" ";
++  if(mode_active==6&&c==20)label_char=face_valid?hexchar(face_count):"-";
++  if(mode_active==6&&c==21)label_char=face_saturated?"+":" ";
+  end
+  wire label_ink;
+  vision8_ascii text(label_char,mode_active==7?label_y[3:1]:label_y[4:2],(label_x%12)>>1,label_ink);
+@@ -96,14 +97,20 @@
+    state<=0;mode_active<=0;warm<=0;next_tile<=0;temporary<=4;vsq<=1;rvsq<=1;pair_phase<=0;first_pixel<=0;samples<=0;cancelled<=0;reset_count<=0;
+    bound_alg<=0;bound_low<=40;bound_high<=80;bound_version<=0;bound_id<=0;directory<=12'h688;pending_directory<=12'h688;pending_valid<=0;publish<=0;old_slot<=0;pending_metadata<=0;
+    snap_begin<=0;snap_end<=0;snap_slot<=4;snap_bad<=0;snap_reset<=1;snap_wr<=0;snap_data<=0;aux_request<=0;aux_kind<=0;aux_directory<=0;
+-   valid_tiles<=0;metadata<=0;underflows<=0;capture_errors<=0;done_meta<=0;done_sync<=0;done_seen<=0;ok_meta<=0;ok_sync<=0;
++   valid_tiles<=0;metadata<=0;underflows<=0;capture_errors<=0;done_meta<=0;done_sync<=0;done_seen<=0;done_wait<=0;ok_meta<=0;ok_sync<=0;
+    ack_meta<=0;ack_sync<=0;ready_meta<=0;ready_sync<=0;x<=0;y<=0;pixel_half<=0;invalid_frame<=0;pip_active<=0;rgb_o<=0;de_o<=0;vs_o<=0;hs_o<=0;
+   end else begin
+    vsq<=vs_i;rvsq<=result_vs;snap_wr<=0;
+    previous_state<=state;
+    if(state==0||state>=7||state!=previous_state||(state==5&&result_de)||(state==2&&process_start&&frame_complete))watchdog<=0;
+    else if(!timeout)watchdog<=watchdog+1'b1;
+-   if(done_sync!=done_seen)begin done_seen<=done_sync;dma_done<=1;dma_ok<=ok_sync;end
++   // Bundled result remains stable until the next completion. Allow two
++   // extra pixel clocks after the synchronized event before sampling status.
++   if(done_sync!=done_seen)begin done_seen<=done_sync;done_wait<=2;end
++   else if(done_wait!=0)begin
++    done_wait<=done_wait-1'b1;
++    if(done_wait==1)begin dma_done<=1;dma_ok<=ok_sync;end
++   end
+    // Validate every coordinate, including the final odd row/column. Bind
+    // the source tag at the first valid sample, after the source CDC settles.
+    if(process_start)begin frame_count<=0;expected_x<=0;expected_y<=0;frame_bad<=0;end
+@@ -172,7 +179,7 @@
+      end
+      if(process_start)begin snap_bad<=1;cancelled<=1;snap_abort<=1;state<=7;capture_errors<=capture_errors+1'b1;end
+     end
+-    6:if(dma_done&&process_start)begin
++    6:if(dma_done&&process_start&&!leave_or_clear&&!timeout)begin
+      if(dma_ok&&!snap_bad&&!cancelled&&source_ok&&processing_ok&&source_id==bound_id&&mode_i==7)begin
+       old_slot=directory[next_tile*3+:3];
+       pending_directory<=directory;pending_directory[next_tile*3+:3]<=temporary;

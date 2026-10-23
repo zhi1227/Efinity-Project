@@ -1,0 +1,4922 @@
+--- original/example_top.v
++++ new/example_top.v
+@@ -324,6 +324,7 @@
+     input key_mode_n, // board K1: enrolment / threshold selection
+     input io28_button_i,
+     input io35_button_i,
++    input io34_button_i, // P4.39 / A9, active-low external button
+     input io29_button_i,
+     input key_freeze_n,
+     output [3:0] flash_data_o,
+@@ -903,18 +904,20 @@
+  wire[2:0]user_mode;wire[1:0]capture_algorithm,threshold_selected,threshold_step;
+  wire settings_open;
+  wire pip_enable,capture_pulse,clear_pulse,gesture_short,gesture_long;
+- wire[11:0]threshold_pending_low,threshold_pending_high;wire[15:0]parameter_version;
++ wire[11:0]threshold_pending_low,threshold_pending_high;
++ wire[11:0]threshold_pending_red,threshold_pending_cyber,threshold_red,threshold_cyber;wire[15:0]parameter_version;
+  wire[31:0]source_id_axi,source_id_pixel,base_axi_errors,memory_errors;wire main_frame_ok_axi,main_frame_ok_pixel;
+  menu_status_cdc #(.BITS(33)) source_tag_cdc(w_ddr3_ui_clk,w_ddr3_ui_rst,{main_frame_ok_axi,source_id_axi},clk_pixel,rst_pixel,{main_frame_ok_pixel,source_id_pixel});
+  reg input_vs_q;reg[2:0]input_user_mode;wire[2:0]output_user_mode;
+  always @(posedge clk_pixel)if(!rstn_pixel)begin input_vs_q<=1;input_user_mode<=0;end
+  else begin input_vs_q<=lcd_vs;if(lcd_vs&&!input_vs_q)input_user_mode<=user_mode;end
+  vision8_controls controls(
+-  .clk(clk_pixel),.rst_n(rstn_pixel),.frame_start(lcd_vs&&!input_vs_q),.io28(io28_button_i),.io29(io29_button_i),.io35(io35_button_i),.k1_n(key_mode_n),.k2_n(key_freeze_n),
++  .clk(clk_pixel),.rst_n(rstn_pixel),.frame_start(lcd_vs&&!input_vs_q),.io28(io28_button_i),.io29(io29_button_i),.io35(io35_button_i),.io34(io34_button_i),.k1_n(key_mode_n),.k2_n(key_freeze_n),
+   .capture_busy(capture_busy),.learning(gesture_learning),.rx(uart_rx_i),.pure_o(pure_capture),.detect_extra(detect_maintenance),.skin_lower(skin_lower),.settings_open(settings_open),.user_mode(user_mode),.capture_alg(capture_algorithm),
+   .pip_enable(pip_enable),.freeze_request(freeze_request),.capture(capture_pulse),.clear(clear_pulse),.gesture_short(gesture_short),.gesture_long(gesture_long),
+   .low(threshold_pending_low),.high(threshold_pending_high),.selected(threshold_selected),.step_select(threshold_step),
+-  .low_active(threshold_low),.high_active(threshold_high),.version(parameter_version),.backend_mode(display_mode));
++  .low_active(threshold_low),.high_active(threshold_high),
++  .red(threshold_pending_red),.cyber(threshold_pending_cyber),.red_active(threshold_red),.cyber_active(threshold_cyber),.version(parameter_version),.backend_mode(display_mode));
+  wire aux_request,aux_ack,aux_frame_ready,snap_begin,snap_end,snap_bad,snap_reset,snap_wr,snap_full,snap_done,snap_ok,aux_rd,aux_empty;
+  wire[1:0]aux_kind;wire[15:0]aux_directory;wire[2:0]snap_slot;
+  wire[31:0]snap_data,aux_data;
+@@ -1059,10 +1062,12 @@
+  wire[15:0]font_hdmi_bits,font_lvds_bits;
+  shared_glyph_rom u_shared_font(.clk_hdmi(clk_pixel),.addr_hdmi(font_hdmi_addr),.bits_hdmi(font_hdmi_bits),
+  .clk_lvds(clk_lvds_1x),.addr_lvds(font_lvds_addr),.bits_lvds(font_lvds_bits));
+- parallel_video #(.SHARED_FONT(1),.SOURCE_TAGGED(1),.HUD_ENABLE(1),.CANNY_GAUSSIAN(1),.GESTURE_DEBUG(0)) u_parallel(
++ parallel_video #(.INLINE_THRESHOLDS(1),.SHARED_FONT(1),.SOURCE_TAGGED(1),.HUD_ENABLE(1),.CANNY_GAUSSIAN(1),.GESTURE_DEBUG(0)) u_parallel(
+  .shared_addr(font_hdmi_addr),.shared_bits(font_hdmi_bits),
+  .clk(clk_pixel),.rst_n(rstn_pixel),.rgb_i({lcd_red,lcd_green,lcd_blue}),.de_i(lcd_de),.vs_i(lcd_vs),.hs_i(lcd_hs),
+- .mode_i(capture_lock&&user_mode==7?capture_backend:display_mode),.low_i(capture_lock?capture_low:threshold_pending_low),.high_i(capture_lock?capture_high:threshold_pending_high),.rgb_o(face_overlay_rgb),.de_o(face_overlay_de),.vs_o(face_overlay_vs),.hs_o(face_overlay_hs),
++ .mode_i(capture_lock&&user_mode==7?capture_backend:display_mode),.low_i(capture_lock?capture_low:threshold_pending_low),.high_i(capture_lock?capture_high:threshold_pending_high),
++ .red_i(capture_lock&&user_mode==7&&capture_backend==10?capture_high:threshold_pending_red),
++ .cyber_i(capture_lock&&user_mode==7&&capture_backend==9?capture_high:threshold_pending_cyber),.rgb_o(face_overlay_rgb),.de_o(face_overlay_de),.vs_o(face_overlay_vs),.hs_o(face_overlay_hs),
+  .overrun(face_overrun),.freeze_i(freeze_pixel),.mode_committed_o(mode_committed),.frozen_committed_o(frozen_committed),
+  .pure_i(pure_capture),.detect_i(detect_enable),.skin_lower_i(skin_lower),.health_i(camera_health_pixel),
+  .gesture_short_i(gesture_short),.gesture_long_i(gesture_long),.gesture_learning_o(gesture_learning),.source_id_i(source_id_pixel),
+@@ -1072,7 +1077,8 @@
+  wire[23:0]hdmi_rgb;wire hdmi_de,hdmi_vs,hdmi_hs;wire[3:0]valid_tiles;wire[511:0]shot_metadata;wire[31:0]aux_underflows,capture_errors;
+  vision8_frames frames(
+  .clk(clk_pixel),.rst_n(rstn_pixel),.mode_i(input_user_mode),.algorithm_i(capture_algorithm),.pip_i(pip_enable),.capture_i(capture_pulse),.clear_i(clear_pulse),
+- .freeze_active(freeze_pixel),.source_id(source_id_pixel),.low_i(threshold_low),.high_i(threshold_high),.version_i(parameter_version),.face_count(face_count),.face_valid(face_valid),.face_saturated(face_saturated),.source_ok(&camera_health_pixel[6:0]),.processing_ok(main_frame_ok_pixel),
++ .freeze_active(freeze_pixel),.source_id(source_id_pixel),.low_i(capture_algorithm==1?threshold_low:capture_algorithm==2?threshold_red:capture_algorithm==3?threshold_cyber:12'd0),
++ .high_i(capture_algorithm==1?threshold_high:capture_algorithm==2?threshold_red:capture_algorithm==3?threshold_cyber:12'd0),.version_i(parameter_version),.face_count(face_count),.face_valid(face_valid),.face_saturated(face_saturated),.source_ok(&camera_health_pixel[6:0]),.processing_ok(main_frame_ok_pixel),
+  .rgb_i(face_overlay_rgb),.de_i(face_overlay_de),.vs_i(face_overlay_vs),.hs_i(face_overlay_hs),.result_i(result565),.result_de(result_de),.result_vs(result_vs),.result_x(result_x),.result_y(result_y),
+  .rgb_o(hdmi_rgb),.de_o(hdmi_de),.vs_o(hdmi_vs),.hs_o(hdmi_hs),.mode_committed(output_user_mode),.busy(capture_busy),.lock_source(capture_lock),.main_enable(main_enable),.capture_low(capture_low),.capture_high(capture_high),.capture_backend(capture_backend),
+  .snap_begin(snap_begin),.snap_end(snap_end),.snap_slot(snap_slot),.snap_bad(snap_bad),.snap_reset(snap_reset),.snap_wr(snap_wr),.snap_data(snap_data),.snap_full(snap_full),.snap_done(snap_done),.snap_ok(snap_ok),
+@@ -1135,8 +1141,12 @@
+  // Independent 1024x600 LVDS menu; reuse the existing 48/336 MHz PLL.
+  wire [12:0] menu_status;
+  wire[639:0]menu8_status,menu8_pixel;
+- // Keep all existing status field offsets; use reserved bits 125:124 for models 4/5.
+- assign menu8_pixel={shot_metadata,2'd0,gesture_trained[4:3],settings_open,(|capture_errors),(|aux_underflows),(|base_axi_errors),(|memory_errors),capture_algorithm,valid_tiles,source_id_pixel,parameter_version,threshold_step,threshold_selected,threshold_high,threshold_low,
++ // Keep all status field offsets, including five-gesture bits125:124.
++ // The former LOW field now carries the current single UI threshold T.
++ wire[11:0]threshold_ui=output_user_mode==1||output_user_mode==4?threshold_high:
++  output_user_mode==2?threshold_red:output_user_mode==3?threshold_cyber:
++  output_user_mode==7?(capture_algorithm==1?threshold_high:capture_algorithm==2?threshold_red:capture_algorithm==3?threshold_cyber:12'd0):12'd0;
++ assign menu8_pixel={shot_metadata,2'd0,gesture_trained[4:3],settings_open,(|capture_errors),(|aux_underflows),(|base_axi_errors),(|memory_errors),capture_algorithm,valid_tiles,source_id_pixel,parameter_version,threshold_step,threshold_selected,threshold_high,threshold_ui,
+  gesture_countdown,gesture_state,gesture_trained[2:0],gesture_class,face_count,face_saturated,face_valid,capture_busy,pip_enable,camera_health_pixel,frozen_committed,output_user_mode};
+  menu_status_cdc #(.BITS(640)) menu8_cdc(clk_pixel,rst_pixel,menu8_pixel,clk_lvds_1x,rst_lvds_1x,menu8_status);
+  wire menu_reset;
+--- original/README.md
++++ new/README.md
+@@ -1,76 +1,17 @@
+-# 五手势 Vision8 RAM 优化版（2026-10-20）
++# 五手势 Vision8 四键与模式内阈值版（2026-10-20）
+ 
+-本工程从用户指定的 `2026.10.19/10_18_guo_Ti60_gesture5` 独立复制。原工程保持原样。
+-保留全部八模式、五类手势、720p画质、按键、阈值页、画中画、四帧、双屏和电子纸。
++在 Efinity 打开本目录 **Ti60_Demo.xml**。完整说明见 [README_4Key_InlineThreshold.md](README_4Key_InlineThreshold.md)。
+ 
+-本轮完整编译对比：RAM **222 → 184/256**（减少38块），XLR **49651 → 52744/60800**，DSP **38 → 39/160**。
+-综合、接口、布局布线、位流生成和setup/hold均通过；测试清单按V1/最终源码阶段分别列出。**尚未下载板卡验证。**
++本目录从同日期的 10_20_ding_Ti60_Gesture5_RAM_Optimized 完整独立复制，原工程保留。保留八模式和五手势，删除独立阈值页，模式2～5就地显示一个T及STEP：Canny默认80（内部40/80），红边默认40，赛博默认24。模式2/5共享Canny参数，其他两组独立保存。实时T/STEP显示在LVDS菜单，HDMI实时画面不新增数字；HDMI四帧标签显示保存时T。
+ 
+-最终位流为本目录 `outflow/Ti60_Demo.bit` 和 `.hex`。源码与位流哈希见 `reports/build_verified.json`，完整说明：[五手势主工程_RAM资源极限优化报告_20261020.md](<D:/yilingsi_fpga/Efinity_Project/2026.10.20/五手势主工程_RAM资源极限优化报告_20261020.md>)。
+-历史文档、旧台架结果和旧资源数字不代表本次交付；原README已封存为 `reports/ram_optimization_20261020/README_before.md`。
++四个外接键全部低有效。IO28短按下一模式；IO29冻结或四帧保存；IO34边缘模式减T、长按换步长，手势模式录入/确认，四帧模式换算法；IO35边缘模式加T、长按恢复当前算法默认。IO28长按仍只在模式2～4开关PiP。板载K1/K2暂不使用；新增两键尚未确定管脚，不添加悬空端口。
+ 
+-## 八模式的用途
++最终验收见 reports/inline_threshold/delivery_audit.json，实际构建见同目录 selected_build.json，UI/字库专用结果在 reports/fourkey。继承的RAM优化报告、旧日志和旧bit属于原版历史证据，不能代替本轮验证。未执行上板实测，不自动下载FPGA或写Flash。
+ 
+-IO28 短按按下表顺序循环，屏幕编号为 1～8；源码内部编号为 0～7。
++字体重新生成后必须执行频率索引压缩；不要运行历史prepare覆盖脚本。命令见完整说明。
+ 
+-| 屏幕模式 | 用处与主要操作 |
+-| --- | --- |
+-| 1 原图 | 查看摄像头彩色视频；IO29 短按冻结/恢复。当前空间RGB调色旁路，可在此模式观察白色、灰色和肤色。 |
+-| 2 Canny 黑白边缘 | 查看 Canny 边缘；IO28 长按开关右上角彩色画中画；通过 IO35 进入阈值页。 |
+-| 3 彩色红边 | 在彩色视频上显示 Sobel 红色边缘；支持彩色画中画。 |
+-| 4 赛博边缘 | 显示 Sobel 赛博风格边缘；支持彩色画中画。 |
+-| 5 彩边对照 | 同屏左侧彩色视频、右侧 Canny 边缘；用于观察同一画面的原图与提边效果。 |
+-| 6 手势识别 | 先依次录入张掌、点赞、单手比心、OK、V字，再进行五类识别；张掌往返摆动触发招手反馈。 |
+-| 7 人脸候选数量 | 显示满足当前肤色、轮廓、尺寸条件的候选数；有效空画面为0、超量为8+、无有效结果为--。这是候选检测，不是身份识别或累计进出人数。 |
+-| 8 四帧对比 | K2 选择原图/Canny/红边/赛博算法，IO29 短按依次保存到四格，长按清空；第5次覆盖第1格。 |
++<!-- INLINE_FINAL_RESULTS -->
+ 
+-四帧按处理结果降采样为 640×360 RGB565，记录算法、Canny 阈值及源帧编号；忙时忽略新抓拍和算法切换。已提交图片在模式切换后保留，存放于 DDR，断电或重新配置后丢失。画中画为 320×180 彩色摄像头图像。切换模式会请求恢复实时画面。
++本轮32项验收全部PASS；7帧720p共6,451,200算法有效像素与原版一致，另有95项四键控制、23项原功能回归及真实CPU/电子纸完整仿真。新完整构建：XLR 52399、RAM184、DSP39，setup/hold +0.298/+0.026ns。当前bit/hex已选入outflow，未上板下载。详见完整说明的结果表和已知物理接口告警。
+ 
+-电子纸仍由 RISC-V 在启动后显示原静态人物图片、全刷一次后休眠；不随手势或模式换图。当前没有接入旋转编码器或外接图片 Flash 换图功能。
+-
+-第一轮菜单预览：[八模式主菜单](reference/previous_ui_preview/menu_0.png)、[独立阈值页](reference/previous_ui_preview/menu_12.png)。图片来自第一轮HDL输出RGB流的仿真渲染，17帧已检查布局，**不是实物屏幕截图**。
+-
+-## 五键接线与完整操作
+-
+-| 按键 / 顶层端口 | 扩展口物理脚 | FPGA 球位 / GPIO | 空闲→按下 |
+-| --- | --- | --- | --- |
+-| IO28 / `io28_button_i` | P4 / DC3-40 第33脚 | C1 / GPIOL_N_16 | **高→低，沿用当前工程** |
+-| IO29 / `io29_button_i` | P4 / DC3-40 第34脚 | D1 / GPIOL_P_16 | 高→低 |
+-| IO35 / `io35_button_i` | P4 / DC3-40 第40脚 | B9 / GPIOT_P_11 | 低→高 |
+-| 板载 K1 / `key_mode_n` | 板载按钮，无需外接P4 | N2 / GPIOL_P_02 | 高→低 |
+-| 板载 K2 / `key_freeze_n` | 板载按钮，无需外接P4 | M2 / GPIOL_N_02 | 高→低 |
+-
+-FPGA侧为 **1.8 V LVCMOS 输入**；IO28保留 `pull_option=none`。P4的User_3V3信号经底板TXS0108E电平转换，默认连接器侧为3.3 V。TXS0108E自带上拉，IO28松开时由其保持高电平，按下由干接点拉到GND。不要将FPGA输入改成3.3 V或输出，也不要盲加下拉。IO35仍需明确的空闲低、按下高电平，不能把本次IO28的两线接地法直接套到IO35。
+-
+-全部按钮双级同步、约20 ms双边消抖。短按在松开时执行；IO28稳定按下满2秒时识别一次长按，继续按住不重复，松开不再补短按。上电或复位时已按住的按钮须先稳定松开再重新按下。按住按钮跨页面或模式时取消旧上下文动作；IO28只在模式2、3、4且未打开阈值设置页时由长按切换PiP。
+-
+-| 操作 | 普通模式页面 | 模式6 手势 | 模式8 四帧 | IO35 阈值设置页 |
+-| --- | --- | --- | --- | --- |
+-| IO28 短按 | 下一模式 | 下一模式，退出未完成录入 | 下一模式 | 关闭设置并切到下一模式 |
+-| IO28 长按 | 仅模式2～4开关画中画；其余无动作 | 无动作 | 无动作 | 无动作 |
+-| IO35 短按 | 打开阈值页 | 打开阈值页 | 打开阈值页 | 返回进入前的算法模式 |
+-| IO35 长按 | 无动作 | 无动作 | 无动作 | 无动作 |
+-| IO29 短按 | 冻结/恢复 | 仅非录入期间冻结/恢复 | 保存一帧；忙时忽略 | 减少所选阈值 |
+-| IO29 长按 | 无动作 | 无动作 | 清空四格 | 冻结/恢复 |
+-| K1 短按 | 无动作 | 确认当前录入步骤 | 无动作 | LOW→HIGH→LINK |
+-| K1 长按 | 无动作 | 进入/重新录入，并恢复实时画面 | 无动作 | 步长1→4→8 |
+-| K2 短按 | 无动作 | 无动作 | 原图→Canny→红边→赛博；忙时忽略 | 增加所选阈值 |
+-| K2 长按 | 无动作 | 无动作 | 无动作 | 无动作 |
+-
+-表中“普通模式”指模式1～5、7。打开/关闭阈值页保持原 HDMI 算法、冻结状态及已调阈值；要观察边缘变化，先选模式2再打开阈值页。Canny 默认 LOW=40/HIGH=80，限制 `1 ≤ LOW < HIGH ≤ 2040`；LINK 同增同减、保持间距，到边界停止。参数在帧边界生效。此页只调整 Canny，不调整 Sobel 或 RGB。
+-
+-## 手势录入与使用
+-
+-1. IO28 短按切到**模式6**，确认摄像头画面实时变化；长按板载 K1 约2秒进入录入。
+-2. 张开手掌，掌心完全盖住粉色小框（32×32采样，中心约560,360）。手和指尖放入大 ROI `(40,40)～(1000,680)`，只允许手腕从底部伸出。
+-3. K1 短按确认，按倒计时保持稳定约2秒；随后依次录入拇指向上的点赞、单手拇指/食指交叉比心、OK（拇指与食指闭合成环、其余三指展开）、V字胜利（食指中指分开、其余手指握紧），每步均由 K1 短按确认。点赞与比心保持轮廓明显不同，查看右侧黑白轮廓预览。
+-4. 完成后，张掌先等“手掌已确认”提示，再左右摆动并回摆；静止张掌、轻抖和单向移动不会触发招手。点赞、比心、OK、V字保持录入时的方向并停稳片刻。OK 的圆孔与 V 字的指缝应在右侧黑白预览中清晰可见；保持掌心朝向镜头，避免握紧或遮住指缝。
+-5. 肤色失败、轮廓不稳或手型太相似时，按屏幕提示调整位置/照明后重试；K1 长按从张掌重新录入。录入中切换模式会取消未完成流程。
+-
+-样本只在运行状态中保存：切换模式、冻结/恢复保留已录入样本；上电、复位或重新下载后重新录入。固定RGB参数改变后也应重新录入肤色与手势。此实现依赖个人轮廓模板和肤色条件，复杂背景、遮挡或姿态变化仍会影响效果。
+-
+-## 验证与构建
+-
+-在本目录执行 `tools/test_ramopt_delivery.ps1` 重跑测试；`tools/build_fpga.ps1` 完整编译；`python -B tools/verify_ram_optimization_delivery.py` 核验原工程保护、构建输入、资源、时序、位流及仿真证据。
+-工具路径和各项结果见上面的完整报告及 `reports/ramopt_regression/final_tests.json`。
+-不要直接执行历史 `prepare_*` 脚本覆盖当前源代码。没有执行JTAG或Flash写入。
++<!-- /INLINE_FINAL_RESULTS -->
+--- original/rtl/menu8_renderer.v
++++ new/rtl/menu8_renderer.v
+@@ -1,11 +1,12 @@
+-// 1024x600 streaming UI. Eight mode cards and an independent threshold page.
++// 1024x600 streaming UI. Eight mode cards; edge thresholds stay inline.
+ // Two-clock font/pixel pipeline; all animation registers advance in blanking.
+ module menu8_renderer #(parameter SHARED_FONT=0)(input clk,reset,input[10:0]x,input[9:0]y,input visible,
+  input[639:0]state_i,output reg[23:0]rgb,output reg de,output[12:0]shared_addr,input[15:0]shared_bits,
+  input frame_tick);
+- wire[2:0]mode=state_i[2:0];wire held=state_i[3],settings=state_i[123];
+- wire[11:0]low=state_i[48:37],high=state_i[60:49];
+- wire[1:0]sel=state_i[62:61],step=state_i[64:63];
++ wire[2:0]mode=state_i[2:0];wire held=state_i[3];
++ wire edge_mode=mode>=1&&mode<=4;
++ wire[11:0]threshold=state_i[48:37];
++ wire[1:0]step=state_i[64:63];
+  function [23:0] accent;
+  input [2:0] n;
+  begin case(n)
+@@ -24,7 +25,7 @@
+  always @(posedge clk)begin
+   if(reset)flow_pos<=0;
+   else if(frame_tick)begin
+-   if(settings||distance<=flow_step)flow_pos<=flow_target;
++   if(distance<=flow_step)flow_pos<=flow_target;
+    else flow_pos<=next_flow>=928?next_flow-928:next_flow;
+   end
+  end
+@@ -96,9 +97,9 @@
+   bg={br,bg_green,bb};fg=24'hecf4ff;
+   if((y==96||y==540)&&x>=48&&x<976)bg=24'h2c405c;
+   if(x>=840&&x<976&&y>=36&&y<72)bg=held?24'h5c4328:24'h1b4b49;
+-  if(x>=48&&x<800&&y>=38&&y<70)begin line_id=settings?52:0;tx=x-48;ty=y-38;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;end
++  if(x>=48&&x<800&&y>=38&&y<70)begin line_id=0;tx=x-48;ty=y-38;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;end
+   if(x>=864&&x<960&&y>=46&&y<62)begin line_id=held?10:9;tx=x-864;ty=y-46;ci=tx>>4;fr=ty;fc=tx;text_on=1;end
+-  if(!settings)begin
++  begin
+    if(tile_area&&cut_inside)begin
+     bg=tile_selected?24'h294263:24'h17283e;
+     if(tile_selected&&outer_edge)bg=accent(tile);
+@@ -125,39 +126,26 @@
+    if(mode==5&&x>=56&&x<688&&y>=438&&y<454)begin line_id=state_i[28:26]!=0?46:45;tx=x-56;ty=y-438;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hfa93c3;end
+    if(mode==7&&x>=56&&x<664&&mx<144&&state_i[113+column])begin
+     if(y>=438&&y<454)begin line_id=1+meta[97:96];tx=mx;ty=y-438;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hffad72;end
+-    if(y>=466&&y<482&&((mx<64)||(mx>=80&&mx<144)))begin line_id=63;tx=mx-(mx<64?0:80);number=mx<64?meta[83:72]:meta[95:84];ci=decimal(number,tx>>4);fr=y-466;fc=tx;text_on=1;end
++    if(meta[97:96]!=0&&y>=466&&y<482&&mx<112)begin
++     tx=mx;ty=y-466;fr=ty;fc=tx;text_on=1;
++     if(mx<48)begin line_id=35;ci=tx>>4;end
++     else begin line_id=63;tx=mx-48;number=meta[95:84];ci=decimal(number,tx>>4);fc=tx;end
++    end
+     if(y>=494&&y<510&&mx<128)begin line_id=63;ci=meta[24+(7-(mx>>4))*4+:4];fr=y-494;fc=mx;text_on=1;fg=24'ha3b5cd;end
+    end
+-   // IO35 is a separate settings entry, not a ninth algorithm card.
+-   if(x>=728&&x<976&&y>=460&&y<524)begin
+-    bg=24'h17283e;if(x<730||x>=974||y<462||y>=522)bg=24'h426487;
+-    if(x>=752&&x<960&&y>=470&&y<486)begin line_id=32;tx=x-752;ty=y-470;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'h82b5ff;end
+-    if(x>=752&&x<960&&y>=498&&y<514)begin line_id=33;tx=x-752;ty=y-498;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hb8c9de;end
++   // A single threshold and step are shown inside modes 2..5. The old
++   // settings/LOW/HIGH/LINK page and its IO35 entry card no longer exist.
++   if(edge_mode)begin
++    if(x>=48&&x<976&&y>=430&&y<534)begin bg=24'h17283e;if(x<50||x>=974||y<432||y>=532)bg=24'h426487;end
++    if(x>=64&&x<256&&y>=440&&y<472)begin line_id=32;tx=x-64;ty=y-440;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;fg=24'h82b5ff;end
++    if(x>=272&&x<400&&y>=440&&y<472)begin line_id=63;tx=x-272;ty=y-440;ci=decimal(threshold,tx>>5);fr=ty>>1;fc=tx>>1;text_on=1;end
++    if(x>=448&&x<512&&y>=448&&y<464)begin line_id=38;tx=x-448;ty=y-448;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hafc3dc;end
++    if(x>=544&&x<576&&y>=440&&y<472)begin line_id=63;ci=step==0?1:step==1?4:8;fr=(y-440)>>1;fc=(x-544)>>1;text_on=1;fg=24'h65dbab;end
++    if(x>=64&&x<960&&y>=482&&y<498)begin line_id=33;tx=x-64;ty=y-482;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hb8c9de;end
++    if(x>=64&&x<960&&y>=510&&y<526)begin line_id=34;tx=x-64;ty=y-510;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hb8c9de;end
+    end
+    if(x>=56&&x<376&&y>=558&&y<574)begin line_id=40;tx=x-56;ty=y-558;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hb8c9de;end
+    if(x>=400&&x<976&&y>=558&&y<574)begin line_id=mode==7?(state_i[13]?44:31):mode==5?29:41;tx=x-400;ty=y-558;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hb8c9de;end
+-  end else begin
+-   // Independent full page: the four-digit values use 64 x 128 pixel cells.
+-   if(y>=136&&y<412&&((x>=48&&x<496)||(x>=528&&x<976)))begin
+-    bg=24'h17283e;
+-    if((x<496&&(sel==0||sel==2))||(x>=528&&(sel==1||sel==2)))begin
+-     bg=24'h203b50;
+-     if(x<51||(x>=493&&x<496)||(x>=528&&x<531)||x>=973||y<139||y>=409)bg=x<496?24'h65dbab:24'h82b5ff;
+-    end
+-   end
+-   if(x>=64&&x<960&&y>=108&&y<124)begin line_id=60;tx=x-64;ty=y-108;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hafc3dc;end
+-   if(y>=164&&y<196&&((x>=80&&x<464)||(x>=560&&x<944)))begin line_id=x<496?53:54;tx=x-(x<496?80:560);ty=y-164;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;fg=x<496?24'h65dbab:24'h82b5ff;end
+-   if(y>=228&&y<356&&((x>=144&&x<400)||(x>=624&&x<880)))begin number=x<496?low:high;tx=x-(x<496?144:624);ty=y-228;line_id=63;ci=decimal(number,tx>>6);fr=ty>>3;fc=tx>>2;text_on=1;fg=24'hecf4ff;end
+-   if(y>=444&&y<476)begin
+-    if(x>=64&&x<192)begin line_id=59;tx=x-64;ty=y-444;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;end
+-    if(x>=232&&x<360)begin line_id=37;tx=x-232;ty=y-444;ci=(sel==0?0:sel==1?4:9)+(tx>>5);fr=ty>>1;fc=tx>>1;text_on=1;fg=24'h65dbab;end
+-    if(x>=568&&x<696)begin line_id=38;tx=x-568;ty=y-444;ci=tx>>5;fr=ty>>1;fc=tx>>1;text_on=1;end
+-    if(x>=728&&x<760)begin line_id=63;ci=step==0?1:step==1?4:8;fr=(y-444)>>1;fc=(x-728)>>1;text_on=1;fg=24'h82b5ff;end
+-   end
+-   if(y>=500&&y<516&&x>=64&&x<496)begin line_id=55;tx=x-64;ty=y-500;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hafc3dc;end
+-   if(y>=500&&y<516&&x>=568&&x<960)begin line_id=56;tx=x-568;ty=y-500;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hafc3dc;end
+-   if(y>=558&&y<574&&x>=56&&x<616)begin line_id=39;tx=x-56;ty=y-558;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'hb8c9de;end
+-   if(y>=558&&y<574&&x>=656&&x<976)begin line_id=58;tx=x-656;ty=y-558;ci=tx>>4;fr=ty;fc=tx;text_on=1;fg=24'h82b5ff;end
+   end
+  end
+  wire[15:0]bits;menu_glyph_rom #(.SHARED_FONT(SHARED_FONT)) font(clk,line_id,ci,fr,bits,shared_addr,shared_bits);
+--- original/rtl/menu_glyph_rom.v
++++ new/rtl/menu_glyph_rom.v
+@@ -1,522 +1,416 @@
+-// Generated glyphs, 157 characters; no framebuffer.
++// Generated glyphs, 144 characters; no framebuffer.
+ module menu_glyph_rom #(parameter SHARED_FONT=0)(input clk,input[5:0]line_id,input[5:0]char_index,input[3:0]row,output reg[15:0]bits,output[12:0]shared_addr,input[15:0]shared_bits);
+ reg[7:0]glyph;always @*begin glyph=0;case({line_id,char_index})
+-12'd0:glyph=8'd33;
+-12'd1:glyph=8'd23;
+-12'd2:glyph=8'd31;
+-12'd3:glyph=8'd23;
+-12'd4:glyph=8'd28;
+-12'd5:glyph=8'd27;
+-12'd7:glyph=8'd47;
+-12'd8:glyph=8'd101;
+-12'd9:glyph=8'd78;
+-12'd10:glyph=8'd133;
+-12'd11:glyph=8'd134;
+-12'd12:glyph=8'd122;
+-12'd13:glyph=8'd125;
++12'd0:glyph=8'd32;
++12'd1:glyph=8'd22;
++12'd2:glyph=8'd30;
++12'd3:glyph=8'd22;
++12'd4:glyph=8'd27;
++12'd5:glyph=8'd26;
++12'd7:glyph=8'd45;
++12'd8:glyph=8'd95;
++12'd9:glyph=8'd73;
++12'd10:glyph=8'd124;
++12'd11:glyph=8'd125;
++12'd12:glyph=8'd114;
++12'd13:glyph=8'd117;
+ 12'd64:glyph=8'd4;
+ 12'd65:glyph=8'd5;
+-12'd67:glyph=8'd57;
+-12'd68:glyph=8'd62;
++12'd67:glyph=8'd54;
++12'd68:glyph=8'd57;
+ 12'd128:glyph=8'd4;
+ 12'd129:glyph=8'd6;
+ 12'd131:glyph=8'd17;
+-12'd132:glyph=8'd35;
+-12'd133:glyph=8'd36;
+-12'd134:glyph=8'd36;
+-12'd135:glyph=8'd37;
++12'd132:glyph=8'd33;
++12'd133:glyph=8'd34;
++12'd134:glyph=8'd34;
++12'd135:glyph=8'd35;
+ 12'd192:glyph=8'd4;
+ 12'd193:glyph=8'd7;
+-12'd195:glyph=8'd81;
+-12'd196:glyph=8'd130;
+-12'd197:glyph=8'd123;
+-12'd198:glyph=8'd142;
++12'd195:glyph=8'd76;
++12'd196:glyph=8'd122;
++12'd197:glyph=8'd115;
++12'd198:glyph=8'd132;
+ 12'd256:glyph=8'd4;
+ 12'd257:glyph=8'd8;
+-12'd259:glyph=8'd139;
+-12'd260:glyph=8'd55;
+-12'd261:glyph=8'd142;
+-12'd262:glyph=8'd126;
++12'd259:glyph=8'd129;
++12'd260:glyph=8'd53;
++12'd261:glyph=8'd132;
++12'd262:glyph=8'd118;
+ 12'd320:glyph=8'd4;
+ 12'd321:glyph=8'd9;
+-12'd323:glyph=8'd81;
+-12'd324:glyph=8'd142;
+-12'd325:glyph=8'd72;
+-12'd326:glyph=8'd108;
++12'd323:glyph=8'd76;
++12'd324:glyph=8'd132;
++12'd325:glyph=8'd67;
++12'd326:glyph=8'd102;
+ 12'd384:glyph=8'd4;
+ 12'd385:glyph=8'd10;
+-12'd387:glyph=8'd85;
+-12'd388:glyph=8'd54;
+-12'd389:glyph=8'd136;
+-12'd390:glyph=8'd52;
++12'd387:glyph=8'd80;
++12'd388:glyph=8'd52;
++12'd389:glyph=8'd127;
++12'd390:glyph=8'd50;
+ 12'd448:glyph=8'd4;
+ 12'd449:glyph=8'd11;
+-12'd451:glyph=8'd40;
+-12'd452:glyph=8'd128;
+-12'd453:glyph=8'd136;
+-12'd454:glyph=8'd52;
++12'd451:glyph=8'd38;
++12'd452:glyph=8'd120;
++12'd453:glyph=8'd127;
++12'd454:glyph=8'd50;
+ 12'd512:glyph=8'd4;
+ 12'd513:glyph=8'd12;
+-12'd515:glyph=8'd60;
+-12'd516:glyph=8'd75;
+-12'd517:glyph=8'd72;
+-12'd518:glyph=8'd104;
+-12'd576:glyph=8'd25;
+-12'd577:glyph=8'd23;
+-12'd578:glyph=8'd33;
++12'd515:glyph=8'd56;
++12'd516:glyph=8'd70;
++12'd517:glyph=8'd67;
++12'd518:glyph=8'd98;
++12'd576:glyph=8'd24;
++12'd577:glyph=8'd22;
++12'd578:glyph=8'd32;
+ 12'd579:glyph=8'd19;
+-12'd640:glyph=8'd22;
+-12'd641:glyph=8'd28;
+-12'd642:glyph=8'd25;
++12'd640:glyph=8'd21;
++12'd641:glyph=8'd27;
++12'd642:glyph=8'd24;
+ 12'd643:glyph=8'd18;
+-12'd704:glyph=8'd40;
+-12'd705:glyph=8'd128;
+-12'd706:glyph=8'd94;
+-12'd707:glyph=8'd146;
+-12'd768:glyph=8'd79;
+-12'd769:glyph=8'd53;
+-12'd770:glyph=8'd111;
+-12'd771:glyph=8'd150;
++12'd704:glyph=8'd38;
++12'd705:glyph=8'd120;
++12'd706:glyph=8'd88;
++12'd707:glyph=8'd134;
++12'd768:glyph=8'd74;
++12'd769:glyph=8'd51;
++12'd770:glyph=8'd104;
++12'd771:glyph=8'd138;
+ 12'd773:glyph=8'd3;
+-12'd775:glyph=8'd127;
+-12'd776:glyph=8'd130;
+-12'd777:glyph=8'd141;
+-12'd778:glyph=8'd76;
+-12'd779:glyph=8'd43;
+-12'd780:glyph=8'd145;
+-12'd832:glyph=8'd74;
+-12'd833:glyph=8'd49;
+-12'd834:glyph=8'd124;
++12'd775:glyph=8'd119;
++12'd776:glyph=8'd122;
++12'd777:glyph=8'd131;
++12'd778:glyph=8'd71;
++12'd779:glyph=8'd41;
++12'd780:glyph=8'd133;
++12'd832:glyph=8'd69;
++12'd833:glyph=8'd47;
++12'd834:glyph=8'd116;
+ 12'd836:glyph=8'd3;
+-12'd838:glyph=8'd42;
+-12'd839:glyph=8'd112;
+-12'd840:glyph=8'd79;
+-12'd841:glyph=8'd53;
+-12'd842:glyph=8'd40;
+-12'd843:glyph=8'd94;
+-12'd896:glyph=8'd120;
+-12'd897:glyph=8'd82;
+-12'd898:glyph=8'd99;
+-12'd899:glyph=8'd93;
+-12'd900:glyph=8'd111;
+-12'd901:glyph=8'd150;
+-12'd960:glyph=8'd40;
+-12'd1024:glyph=8'd57;
+-12'd1025:glyph=8'd62;
+-12'd1026:glyph=8'd155;
+-12'd1027:glyph=8'd92;
+-12'd1028:glyph=8'd45;
+-12'd1029:glyph=8'd68;
+-12'd1030:glyph=8'd81;
+-12'd1031:glyph=8'd130;
+-12'd1032:glyph=8'd111;
+-12'd1033:glyph=8'd150;
++12'd838:glyph=8'd40;
++12'd839:glyph=8'd105;
++12'd840:glyph=8'd74;
++12'd841:glyph=8'd51;
++12'd842:glyph=8'd38;
++12'd843:glyph=8'd88;
++12'd896:glyph=8'd112;
++12'd897:glyph=8'd77;
++12'd898:glyph=8'd93;
++12'd899:glyph=8'd87;
++12'd900:glyph=8'd104;
++12'd901:glyph=8'd138;
++12'd960:glyph=8'd38;
++12'd1024:glyph=8'd54;
++12'd1025:glyph=8'd57;
++12'd1026:glyph=8'd142;
++12'd1027:glyph=8'd86;
++12'd1028:glyph=8'd43;
++12'd1029:glyph=8'd63;
++12'd1030:glyph=8'd76;
++12'd1031:glyph=8'd122;
++12'd1032:glyph=8'd104;
++12'd1033:glyph=8'd138;
+ 12'd1088:glyph=8'd17;
+-12'd1089:glyph=8'd35;
+-12'd1090:glyph=8'd36;
+-12'd1091:glyph=8'd36;
+-12'd1092:glyph=8'd37;
+-12'd1093:glyph=8'd155;
+-12'd1094:glyph=8'd153;
+-12'd1095:glyph=8'd113;
+-12'd1096:glyph=8'd142;
+-12'd1097:glyph=8'd126;
+-12'd1152:glyph=8'd123;
+-12'd1153:glyph=8'd142;
+-12'd1154:glyph=8'd155;
+-12'd1155:glyph=8'd81;
+-12'd1156:glyph=8'd130;
+-12'd1157:glyph=8'd141;
+-12'd1158:glyph=8'd76;
+-12'd1216:glyph=8'd139;
+-12'd1217:glyph=8'd55;
+-12'd1218:glyph=8'd155;
+-12'd1219:glyph=8'd149;
+-12'd1220:glyph=8'd132;
+-12'd1221:glyph=8'd142;
+-12'd1222:glyph=8'd126;
+-12'd1280:glyph=8'd72;
+-12'd1281:glyph=8'd108;
+-12'd1282:glyph=8'd155;
+-12'd1283:glyph=8'd81;
+-12'd1284:glyph=8'd130;
+-12'd1285:glyph=8'd111;
+-12'd1286:glyph=8'd150;
+-12'd1287:glyph=8'd38;
+-12'd1288:glyph=8'd153;
+-12'd1289:glyph=8'd113;
+-12'd1290:glyph=8'd142;
+-12'd1291:glyph=8'd126;
+-12'd1344:glyph=8'd85;
+-12'd1345:glyph=8'd54;
+-12'd1346:glyph=8'd155;
+-12'd1347:glyph=8'd87;
+-12'd1348:glyph=8'd85;
+-12'd1350:glyph=8'd107;
+-12'd1351:glyph=8'd140;
+-12'd1353:glyph=8'd104;
+-12'd1354:glyph=8'd83;
+-12'd1356:glyph=8'd28;
+-12'd1357:glyph=8'd24;
+-12'd1359:glyph=8'd33;
+-12'd1360:glyph=8'd69;
+-12'd1408:glyph=8'd40;
+-12'd1409:glyph=8'd128;
+-12'd1410:glyph=8'd136;
+-12'd1411:glyph=8'd52;
++12'd1089:glyph=8'd33;
++12'd1090:glyph=8'd34;
++12'd1091:glyph=8'd34;
++12'd1092:glyph=8'd35;
++12'd1093:glyph=8'd142;
++12'd1094:glyph=8'd140;
++12'd1095:glyph=8'd106;
++12'd1096:glyph=8'd132;
++12'd1097:glyph=8'd118;
++12'd1152:glyph=8'd115;
++12'd1153:glyph=8'd132;
++12'd1154:glyph=8'd142;
++12'd1155:glyph=8'd76;
++12'd1156:glyph=8'd122;
++12'd1157:glyph=8'd131;
++12'd1158:glyph=8'd71;
++12'd1216:glyph=8'd129;
++12'd1217:glyph=8'd53;
++12'd1218:glyph=8'd142;
++12'd1219:glyph=8'd137;
++12'd1220:glyph=8'd123;
++12'd1221:glyph=8'd132;
++12'd1222:glyph=8'd118;
++12'd1280:glyph=8'd67;
++12'd1281:glyph=8'd102;
++12'd1282:glyph=8'd142;
++12'd1283:glyph=8'd76;
++12'd1284:glyph=8'd122;
++12'd1285:glyph=8'd104;
++12'd1286:glyph=8'd138;
++12'd1287:glyph=8'd36;
++12'd1288:glyph=8'd140;
++12'd1289:glyph=8'd106;
++12'd1290:glyph=8'd132;
++12'd1291:glyph=8'd118;
++12'd1344:glyph=8'd80;
++12'd1345:glyph=8'd52;
++12'd1346:glyph=8'd142;
++12'd1347:glyph=8'd82;
++12'd1348:glyph=8'd80;
++12'd1350:glyph=8'd101;
++12'd1351:glyph=8'd130;
++12'd1353:glyph=8'd98;
++12'd1354:glyph=8'd78;
++12'd1356:glyph=8'd27;
++12'd1357:glyph=8'd23;
++12'd1359:glyph=8'd32;
++12'd1360:glyph=8'd64;
++12'd1408:glyph=8'd38;
++12'd1409:glyph=8'd120;
++12'd1410:glyph=8'd127;
++12'd1411:glyph=8'd50;
+ 12'd1413:glyph=8'd3;
+-12'd1415:glyph=8'd71;
+-12'd1416:glyph=8'd96;
+-12'd1417:glyph=8'd40;
+-12'd1418:glyph=8'd94;
+-12'd1472:glyph=8'd60;
+-12'd1473:glyph=8'd75;
+-12'd1474:glyph=8'd155;
+-12'd1475:glyph=8'd42;
+-12'd1476:glyph=8'd70;
+-12'd1477:glyph=8'd111;
+-12'd1478:glyph=8'd150;
+-12'd1479:glyph=8'd72;
+-12'd1480:glyph=8'd104;
+-12'd1536:glyph=8'd23;
+-12'd1537:glyph=8'd28;
++12'd1415:glyph=8'd66;
++12'd1416:glyph=8'd90;
++12'd1417:glyph=8'd38;
++12'd1418:glyph=8'd88;
++12'd1472:glyph=8'd56;
++12'd1473:glyph=8'd70;
++12'd1474:glyph=8'd142;
++12'd1475:glyph=8'd40;
++12'd1476:glyph=8'd65;
++12'd1477:glyph=8'd104;
++12'd1478:glyph=8'd138;
++12'd1479:glyph=8'd67;
++12'd1480:glyph=8'd98;
++12'd1536:glyph=8'd22;
++12'd1537:glyph=8'd27;
+ 12'd1538:glyph=8'd6;
+ 12'd1539:glyph=8'd13;
+-12'd1541:glyph=8'd49;
+-12'd1542:glyph=8'd124;
++12'd1541:glyph=8'd47;
++12'd1542:glyph=8'd116;
+ 12'd1544:glyph=8'd3;
+-12'd1546:glyph=8'd84;
+-12'd1547:glyph=8'd66;
+-12'd1548:glyph=8'd111;
+-12'd1549:glyph=8'd150;
+-12'd1600:glyph=8'd147;
+-12'd1601:glyph=8'd90;
+-12'd1603:glyph=8'd23;
+-12'd1604:glyph=8'd28;
++12'd1546:glyph=8'd79;
++12'd1547:glyph=8'd61;
++12'd1548:glyph=8'd104;
++12'd1549:glyph=8'd138;
++12'd1600:glyph=8'd135;
++12'd1601:glyph=8'd84;
++12'd1603:glyph=8'd22;
++12'd1604:glyph=8'd27;
+ 12'd1605:glyph=8'd6;
+ 12'd1606:glyph=8'd12;
+-12'd1608:glyph=8'd77;
+-12'd1609:glyph=8'd48;
+-12'd1610:glyph=8'd81;
+-12'd1611:glyph=8'd130;
+-12'd1612:glyph=8'd111;
+-12'd1613:glyph=8'd39;
+-12'd1614:glyph=8'd111;
+-12'd1664:glyph=8'd147;
+-12'd1665:glyph=8'd90;
+-12'd1667:glyph=8'd23;
+-12'd1668:glyph=8'd28;
++12'd1608:glyph=8'd72;
++12'd1609:glyph=8'd46;
++12'd1610:glyph=8'd76;
++12'd1611:glyph=8'd122;
++12'd1612:glyph=8'd104;
++12'd1613:glyph=8'd37;
++12'd1614:glyph=8'd104;
++12'd1664:glyph=8'd135;
++12'd1665:glyph=8'd84;
++12'd1667:glyph=8'd22;
++12'd1668:glyph=8'd27;
+ 12'd1669:glyph=8'd6;
+ 12'd1670:glyph=8'd12;
+-12'd1672:glyph=8'd77;
+-12'd1673:glyph=8'd48;
+-12'd1674:glyph=8'd81;
+-12'd1675:glyph=8'd130;
+-12'd1676:glyph=8'd111;
+-12'd1677:glyph=8'd39;
+-12'd1678:glyph=8'd111;
+-12'd1728:glyph=8'd147;
+-12'd1729:glyph=8'd90;
+-12'd1731:glyph=8'd23;
+-12'd1732:glyph=8'd28;
++12'd1672:glyph=8'd72;
++12'd1673:glyph=8'd46;
++12'd1674:glyph=8'd76;
++12'd1675:glyph=8'd122;
++12'd1676:glyph=8'd104;
++12'd1677:glyph=8'd37;
++12'd1678:glyph=8'd104;
++12'd1728:glyph=8'd135;
++12'd1729:glyph=8'd84;
++12'd1731:glyph=8'd22;
++12'd1732:glyph=8'd27;
+ 12'd1733:glyph=8'd6;
+ 12'd1734:glyph=8'd12;
+-12'd1736:glyph=8'd77;
+-12'd1737:glyph=8'd48;
+-12'd1738:glyph=8'd81;
+-12'd1739:glyph=8'd130;
+-12'd1740:glyph=8'd111;
+-12'd1741:glyph=8'd39;
+-12'd1742:glyph=8'd111;
+-12'd1792:glyph=8'd23;
+-12'd1793:glyph=8'd28;
++12'd1736:glyph=8'd72;
++12'd1737:glyph=8'd46;
++12'd1738:glyph=8'd76;
++12'd1739:glyph=8'd122;
++12'd1740:glyph=8'd104;
++12'd1741:glyph=8'd37;
++12'd1742:glyph=8'd104;
++12'd1792:glyph=8'd22;
++12'd1793:glyph=8'd27;
+ 12'd1794:glyph=8'd6;
+ 12'd1795:glyph=8'd13;
+-12'd1797:glyph=8'd49;
+-12'd1798:glyph=8'd124;
++12'd1797:glyph=8'd47;
++12'd1798:glyph=8'd116;
+ 12'd1800:glyph=8'd3;
+-12'd1802:glyph=8'd84;
+-12'd1803:glyph=8'd66;
+-12'd1804:glyph=8'd111;
+-12'd1805:glyph=8'd150;
+-12'd1856:glyph=8'd147;
+-12'd1857:glyph=8'd90;
+-12'd1859:glyph=8'd24;
+-12'd1860:glyph=8'd5;
+-12'd1862:glyph=8'd80;
+-12'd1863:glyph=8'd46;
+-12'd1864:glyph=8'd156;
+-12'd1865:glyph=8'd114;
+-12'd1866:glyph=8'd90;
+-12'd1867:glyph=8'd115;
+-12'd1868:glyph=8'd135;
+-12'd1869:glyph=8'd85;
+-12'd1870:glyph=8'd64;
+-12'd1920:glyph=8'd23;
+-12'd1921:glyph=8'd28;
++12'd1802:glyph=8'd79;
++12'd1803:glyph=8'd61;
++12'd1804:glyph=8'd104;
++12'd1805:glyph=8'd138;
++12'd1856:glyph=8'd22;
++12'd1857:glyph=8'd27;
++12'd1858:glyph=8'd7;
++12'd1859:glyph=8'd8;
++12'd1861:glyph=8'd135;
++12'd1862:glyph=8'd84;
++12'd1863:glyph=8'd75;
++12'd1864:glyph=8'd44;
++12'd1865:glyph=8'd143;
++12'd1866:glyph=8'd107;
++12'd1867:glyph=8'd84;
++12'd1868:glyph=8'd108;
++12'd1869:glyph=8'd126;
++12'd1920:glyph=8'd22;
++12'd1921:glyph=8'd27;
+ 12'd1922:glyph=8'd6;
+ 12'd1923:glyph=8'd13;
+-12'd1925:glyph=8'd49;
+-12'd1926:glyph=8'd124;
++12'd1925:glyph=8'd47;
++12'd1926:glyph=8'd116;
+ 12'd1928:glyph=8'd3;
+-12'd1930:glyph=8'd84;
+-12'd1931:glyph=8'd66;
+-12'd1932:glyph=8'd40;
+-12'd1933:glyph=8'd94;
+-12'd1984:glyph=8'd23;
+-12'd1985:glyph=8'd28;
++12'd1930:glyph=8'd79;
++12'd1931:glyph=8'd61;
++12'd1932:glyph=8'd38;
++12'd1933:glyph=8'd88;
++12'd1984:glyph=8'd22;
++12'd1985:glyph=8'd27;
+ 12'd1986:glyph=8'd6;
+ 12'd1987:glyph=8'd13;
+-12'd1989:glyph=8'd42;
+-12'd1990:glyph=8'd70;
+-12'd1991:glyph=8'd156;
+-12'd1992:glyph=8'd147;
+-12'd1993:glyph=8'd90;
+-12'd1994:glyph=8'd106;
+-12'd1995:glyph=8'd118;
+-12'd1996:glyph=8'd156;
+-12'd1997:glyph=8'd24;
+-12'd1998:glyph=8'd6;
+-12'd2000:glyph=8'd91;
+-12'd2001:glyph=8'd121;
+-12'd2002:glyph=8'd105;
+-12'd2048:glyph=8'd17;
+-12'd2049:glyph=8'd35;
+-12'd2050:glyph=8'd36;
+-12'd2051:glyph=8'd36;
+-12'd2052:glyph=8'd37;
+-12'd2054:glyph=8'd148;
+-12'd2055:glyph=8'd44;
+-12'd2112:glyph=8'd23;
+-12'd2113:glyph=8'd28;
++12'd1989:glyph=8'd40;
++12'd1990:glyph=8'd65;
++12'd1991:glyph=8'd143;
++12'd1992:glyph=8'd135;
++12'd1993:glyph=8'd84;
++12'd1994:glyph=8'd100;
++12'd1995:glyph=8'd111;
++12'd1996:glyph=8'd143;
++12'd1997:glyph=8'd22;
++12'd1998:glyph=8'd27;
++12'd1999:glyph=8'd7;
++12'd2000:glyph=8'd8;
++12'd2002:glyph=8'd85;
++12'd2003:glyph=8'd113;
++12'd2004:glyph=8'd99;
++12'd2048:glyph=8'd136;
++12'd2049:glyph=8'd42;
++12'd2051:glyph=8'd31;
++12'd2112:glyph=8'd22;
++12'd2113:glyph=8'd27;
+ 12'd2114:glyph=8'd7;
+-12'd2115:glyph=8'd9;
+-12'd2117:glyph=8'd114;
+-12'd2118:glyph=8'd90;
+-12'd2119:glyph=8'd144;
+-12'd2120:glyph=8'd46;
+-12'd2176:glyph=8'd23;
+-12'd2177:glyph=8'd28;
+-12'd2178:glyph=8'd7;
+-12'd2179:glyph=8'd9;
+-12'd2181:glyph=8'd114;
+-12'd2182:glyph=8'd90;
+-12'd2183:glyph=8'd143;
+-12'd2184:glyph=8'd61;
+-12'd2240:glyph=8'd25;
+-12'd2241:glyph=8'd28;
+-12'd2242:glyph=8'd34;
+-12'd2304:glyph=8'd22;
+-12'd2305:glyph=8'd23;
+-12'd2306:glyph=8'd21;
+-12'd2307:glyph=8'd22;
+-12'd2368:glyph=8'd25;
+-12'd2369:glyph=8'd28;
+-12'd2370:glyph=8'd34;
+-12'd2372:glyph=8'd22;
+-12'd2373:glyph=8'd23;
+-12'd2374:glyph=8'd21;
+-12'd2375:glyph=8'd22;
+-12'd2377:glyph=8'd25;
+-12'd2378:glyph=8'd23;
+-12'd2379:glyph=8'd27;
+-12'd2380:glyph=8'd24;
+-12'd2432:glyph=8'd31;
+-12'd2433:glyph=8'd32;
++12'd2115:glyph=8'd8;
++12'd2117:glyph=8'd48;
++12'd2118:glyph=8'd68;
++12'd2120:glyph=8'd3;
++12'd2122:glyph=8'd22;
++12'd2123:glyph=8'd27;
++12'd2124:glyph=8'd7;
++12'd2125:glyph=8'd9;
++12'd2127:glyph=8'd60;
++12'd2128:glyph=8'd62;
++12'd2176:glyph=8'd135;
++12'd2177:glyph=8'd84;
++12'd2179:glyph=8'd22;
++12'd2180:glyph=8'd27;
++12'd2181:glyph=8'd7;
++12'd2182:glyph=8'd8;
++12'd2184:glyph=8'd49;
++12'd2185:glyph=8'd97;
++12'd2186:glyph=8'd135;
++12'd2187:glyph=8'd143;
++12'd2188:glyph=8'd135;
++12'd2189:glyph=8'd84;
++12'd2191:glyph=8'd22;
++12'd2192:glyph=8'd27;
++12'd2193:glyph=8'd7;
++12'd2194:glyph=8'd9;
++12'd2196:glyph=8'd61;
++12'd2197:glyph=8'd39;
++12'd2240:glyph=8'd31;
++12'd2242:glyph=8'd14;
++12'd2432:glyph=8'd30;
++12'd2433:glyph=8'd31;
+ 12'd2434:glyph=8'd19;
+-12'd2435:glyph=8'd29;
+-12'd2496:glyph=8'd23;
+-12'd2497:glyph=8'd28;
+-12'd2498:glyph=8'd6;
+-12'd2499:glyph=8'd13;
+-12'd2501:glyph=8'd50;
+-12'd2502:glyph=8'd73;
+-12'd2504:glyph=8'd3;
+-12'd2506:glyph=8'd24;
+-12'd2507:glyph=8'd6;
+-12'd2509:glyph=8'd65;
+-12'd2510:glyph=8'd67;
+-12'd2560:glyph=8'd23;
+-12'd2561:glyph=8'd28;
++12'd2435:glyph=8'd28;
++12'd2560:glyph=8'd22;
++12'd2561:glyph=8'd27;
+ 12'd2562:glyph=8'd6;
+ 12'd2563:glyph=8'd12;
+-12'd2565:glyph=8'd51;
+-12'd2566:glyph=8'd91;
+-12'd2567:glyph=8'd101;
+-12'd2568:glyph=8'd78;
+-12'd2624:glyph=8'd23;
+-12'd2625:glyph=8'd28;
++12'd2565:glyph=8'd49;
++12'd2566:glyph=8'd85;
++12'd2567:glyph=8'd95;
++12'd2568:glyph=8'd73;
++12'd2624:glyph=8'd22;
++12'd2625:glyph=8'd27;
+ 12'd2626:glyph=8'd6;
+ 12'd2627:glyph=8'd13;
+-12'd2629:glyph=8'd49;
+-12'd2630:glyph=8'd124;
++12'd2629:glyph=8'd47;
++12'd2630:glyph=8'd116;
+ 12'd2632:glyph=8'd3;
+-12'd2634:glyph=8'd84;
+-12'd2635:glyph=8'd66;
++12'd2634:glyph=8'd79;
++12'd2635:glyph=8'd61;
+ 12'd2688:glyph=8'd4;
+ 12'd2689:glyph=8'd11;
+-12'd2691:glyph=8'd40;
+-12'd2692:glyph=8'd128;
+-12'd2693:glyph=8'd94;
+-12'd2694:glyph=8'd146;
+-12'd2752:glyph=8'd51;
+-12'd2753:glyph=8'd91;
+-12'd2754:glyph=8'd129;
+-12'd2755:glyph=8'd101;
+-12'd2756:glyph=8'd78;
++12'd2691:glyph=8'd38;
++12'd2692:glyph=8'd120;
++12'd2693:glyph=8'd88;
++12'd2694:glyph=8'd134;
++12'd2752:glyph=8'd49;
++12'd2753:glyph=8'd85;
++12'd2754:glyph=8'd121;
++12'd2755:glyph=8'd95;
++12'd2756:glyph=8'd73;
+ 12'd2757:glyph=8'd11;
+-12'd2758:glyph=8'd97;
+-12'd2759:glyph=8'd116;
+-12'd2816:glyph=8'd102;
+-12'd2817:glyph=8'd63;
+-12'd2818:glyph=8'd86;
+-12'd2819:glyph=8'd75;
+-12'd2820:glyph=8'd154;
+-12'd2821:glyph=8'd137;
+-12'd2822:glyph=8'd117;
+-12'd2823:glyph=8'd43;
+-12'd2880:glyph=8'd85;
+-12'd2881:glyph=8'd54;
+-12'd2882:glyph=8'd59;
+-12'd2883:glyph=8'd151;
+-12'd2884:glyph=8'd97;
+-12'd2885:glyph=8'd116;
+-12'd2886:glyph=8'd63;
+-12'd2888:glyph=8'd22;
++12'd2758:glyph=8'd91;
++12'd2759:glyph=8'd109;
++12'd2816:glyph=8'd96;
++12'd2817:glyph=8'd58;
++12'd2818:glyph=8'd81;
++12'd2819:glyph=8'd70;
++12'd2820:glyph=8'd141;
++12'd2821:glyph=8'd128;
++12'd2822:glyph=8'd110;
++12'd2823:glyph=8'd41;
++12'd2880:glyph=8'd80;
++12'd2881:glyph=8'd52;
++12'd2882:glyph=8'd55;
++12'd2883:glyph=8'd139;
++12'd2884:glyph=8'd91;
++12'd2885:glyph=8'd109;
++12'd2886:glyph=8'd58;
++12'd2888:glyph=8'd21;
+ 12'd2889:glyph=8'd18;
+-12'd2890:glyph=8'd26;
+-12'd2891:glyph=8'd23;
+-12'd2944:glyph=8'd102;
+-12'd2945:glyph=8'd63;
+-12'd2946:glyph=8'd80;
+-12'd2947:glyph=8'd46;
+-12'd2948:glyph=8'd154;
+-12'd2949:glyph=8'd137;
+-12'd2950:glyph=8'd42;
+-12'd2951:glyph=8'd89;
+-12'd2952:glyph=8'd85;
+-12'd2953:glyph=8'd64;
+-12'd3008:glyph=8'd79;
+-12'd3009:glyph=8'd53;
+-12'd3010:glyph=8'd111;
+-12'd3011:glyph=8'd150;
+-12'd3012:glyph=8'd71;
+-12'd3013:glyph=8'd96;
+-12'd3014:glyph=8'd98;
+-12'd3015:glyph=8'd95;
+-12'd3072:glyph=8'd74;
+-12'd3073:glyph=8'd42;
+-12'd3074:glyph=8'd70;
+-12'd3136:glyph=8'd147;
+-12'd3137:glyph=8'd90;
+-12'd3139:glyph=8'd23;
+-12'd3140:glyph=8'd28;
++12'd2890:glyph=8'd25;
++12'd2891:glyph=8'd22;
++12'd2944:glyph=8'd96;
++12'd2945:glyph=8'd58;
++12'd2946:glyph=8'd75;
++12'd2947:glyph=8'd44;
++12'd2948:glyph=8'd141;
++12'd2949:glyph=8'd128;
++12'd2950:glyph=8'd40;
++12'd2951:glyph=8'd83;
++12'd2952:glyph=8'd80;
++12'd2953:glyph=8'd59;
++12'd3008:glyph=8'd74;
++12'd3009:glyph=8'd51;
++12'd3010:glyph=8'd104;
++12'd3011:glyph=8'd138;
++12'd3012:glyph=8'd66;
++12'd3013:glyph=8'd90;
++12'd3014:glyph=8'd92;
++12'd3015:glyph=8'd89;
++12'd3072:glyph=8'd69;
++12'd3073:glyph=8'd40;
++12'd3074:glyph=8'd65;
++12'd3136:glyph=8'd135;
++12'd3137:glyph=8'd84;
++12'd3139:glyph=8'd22;
++12'd3140:glyph=8'd27;
+ 12'd3141:glyph=8'd6;
+ 12'd3142:glyph=8'd13;
+-12'd3144:glyph=8'd49;
+-12'd3145:glyph=8'd124;
++12'd3144:glyph=8'd47;
++12'd3145:glyph=8'd116;
+ 12'd3147:glyph=8'd3;
+-12'd3149:glyph=8'd84;
+-12'd3150:glyph=8'd66;
++12'd3149:glyph=8'd79;
++12'd3150:glyph=8'd61;
+ 12'd3200:glyph=8'd20;
+-12'd3201:glyph=8'd30;
++12'd3201:glyph=8'd29;
+ 12'd3202:glyph=8'd15;
+-12'd3203:glyph=8'd26;
++12'd3203:glyph=8'd25;
+ 12'd3204:glyph=8'd19;
+-12'd3264:glyph=8'd109;
+-12'd3265:glyph=8'd100;
+-12'd3328:glyph=8'd17;
+-12'd3329:glyph=8'd35;
+-12'd3330:glyph=8'd36;
+-12'd3331:glyph=8'd36;
+-12'd3332:glyph=8'd37;
+-12'd3334:glyph=8'd148;
+-12'd3335:glyph=8'd44;
+-12'd3336:glyph=8'd138;
+-12'd3337:glyph=8'd131;
+-12'd3392:glyph=8'd41;
+-12'd3393:glyph=8'd148;
+-12'd3394:glyph=8'd44;
+-12'd3396:glyph=8'd3;
+-12'd3398:glyph=8'd25;
+-12'd3399:glyph=8'd28;
+-12'd3400:glyph=8'd34;
+-12'd3456:glyph=8'd152;
+-12'd3457:glyph=8'd148;
+-12'd3458:glyph=8'd44;
+-12'd3460:glyph=8'd3;
+-12'd3462:glyph=8'd22;
+-12'd3463:glyph=8'd23;
+-12'd3464:glyph=8'd21;
+-12'd3465:glyph=8'd22;
+-12'd3520:glyph=8'd24;
+-12'd3521:glyph=8'd5;
+-12'd3523:glyph=8'd145;
+-12'd3524:glyph=8'd88;
+-12'd3526:glyph=8'd25;
+-12'd3527:glyph=8'd28;
+-12'd3528:glyph=8'd34;
+-12'd3530:glyph=8'd3;
+-12'd3532:glyph=8'd22;
+-12'd3533:glyph=8'd23;
+-12'd3534:glyph=8'd21;
+-12'd3535:glyph=8'd22;
+-12'd3537:glyph=8'd3;
+-12'd3539:glyph=8'd25;
+-12'd3540:glyph=8'd23;
+-12'd3541:glyph=8'd27;
+-12'd3542:glyph=8'd24;
+-12'd3584:glyph=8'd147;
+-12'd3585:glyph=8'd90;
+-12'd3587:glyph=8'd24;
+-12'd3588:glyph=8'd5;
+-12'd3590:glyph=8'd51;
+-12'd3591:glyph=8'd91;
+-12'd3592:glyph=8'd103;
+-12'd3593:glyph=8'd147;
+-12'd3648:glyph=8'd25;
+-12'd3649:glyph=8'd28;
+-12'd3650:glyph=8'd34;
+-12'd3652:glyph=8'd14;
+-12'd3654:glyph=8'd22;
+-12'd3655:glyph=8'd23;
+-12'd3656:glyph=8'd21;
+-12'd3657:glyph=8'd22;
+-12'd3712:glyph=8'd23;
+-12'd3713:glyph=8'd28;
+-12'd3714:glyph=8'd7;
+-12'd3715:glyph=8'd9;
+-12'd3717:glyph=8'd143;
+-12'd3718:glyph=8'd61;
+-12'd3719:glyph=8'd101;
+-12'd3720:glyph=8'd78;
+-12'd3721:glyph=8'd145;
+-12'd3722:glyph=8'd88;
+-12'd3776:glyph=8'd79;
+-12'd3777:glyph=8'd53;
+-12'd3778:glyph=8'd145;
+-12'd3779:glyph=8'd88;
+-12'd3840:glyph=8'd138;
+-12'd3841:glyph=8'd131;
+-12'd3842:glyph=8'd119;
+-12'd3843:glyph=8'd56;
+-12'd3844:glyph=8'd98;
+-12'd3845:glyph=8'd95;
+-12'd3846:glyph=8'd154;
+-12'd3847:glyph=8'd58;
+-12'd3848:glyph=8'd94;
+-12'd3849:glyph=8'd90;
+-12'd3850:glyph=8'd75;
+-12'd3851:glyph=8'd110;
+-12'd3852:glyph=8'd93;
+-12'd3904:glyph=8'd81;
+-12'd3905:glyph=8'd142;
+-12'd3906:glyph=8'd72;
+-12'd3907:glyph=8'd108;
+-12'd3968:glyph=8'd101;
+-12'd3969:glyph=8'd78;
+-12'd3970:glyph=8'd145;
+-12'd3971:glyph=8'd88;
++12'd3264:glyph=8'd103;
++12'd3265:glyph=8'd94;
+ 12'd4032:glyph=8'd4;
+ 12'd4033:glyph=8'd5;
+ 12'd4034:glyph=8'd6;
+@@ -569,131 +463,118 @@
+ 8'd29:common_glyph=9'd29;
+ 8'd30:common_glyph=9'd30;
+ 8'd31:common_glyph=9'd31;
+-8'd32:common_glyph=9'd32;
+-8'd33:common_glyph=9'd34;
+-8'd34:common_glyph=9'd35;
+-8'd35:common_glyph=9'd36;
+-8'd36:common_glyph=9'd40;
+-8'd37:common_glyph=9'd43;
+-8'd38:common_glyph=9'd48;
+-8'd39:common_glyph=9'd51;
+-8'd40:common_glyph=9'd56;
+-8'd41:common_glyph=9'd58;
+-8'd42:common_glyph=9'd62;
+-8'd43:common_glyph=9'd64;
+-8'd44:common_glyph=9'd65;
+-8'd45:common_glyph=9'd66;
+-8'd46:common_glyph=9'd68;
+-8'd47:common_glyph=9'd69;
+-8'd48:common_glyph=9'd70;
+-8'd49:common_glyph=9'd73;
+-8'd50:common_glyph=9'd75;
+-8'd51:common_glyph=9'd78;
+-8'd52:common_glyph=9'd80;
+-8'd53:common_glyph=9'd82;
+-8'd54:common_glyph=9'd84;
+-8'd55:common_glyph=9'd89;
+-8'd56:common_glyph=9'd90;
+-8'd57:common_glyph=9'd91;
+-8'd58:common_glyph=9'd92;
+-8'd59:common_glyph=9'd94;
+-8'd60:common_glyph=9'd103;
+-8'd61:common_glyph=9'd104;
+-8'd62:common_glyph=9'd106;
+-8'd63:common_glyph=9'd108;
+-8'd64:common_glyph=9'd109;
+-8'd65:common_glyph=9'd111;
+-8'd66:common_glyph=9'd113;
+-8'd67:common_glyph=9'd114;
+-8'd68:common_glyph=9'd117;
+-8'd69:common_glyph=9'd121;
+-8'd70:common_glyph=9'd122;
+-8'd71:common_glyph=9'd124;
+-8'd72:common_glyph=9'd125;
+-8'd73:common_glyph=9'd126;
+-8'd74:common_glyph=9'd129;
+-8'd75:common_glyph=9'd130;
+-8'd76:common_glyph=9'd132;
+-8'd77:common_glyph=9'd133;
+-8'd78:common_glyph=9'd134;
+-8'd79:common_glyph=9'd136;
+-8'd80:common_glyph=9'd137;
+-8'd81:common_glyph=9'd139;
+-8'd82:common_glyph=9'd140;
+-8'd83:common_glyph=9'd141;
+-8'd84:common_glyph=9'd143;
+-8'd85:common_glyph=9'd145;
+-8'd86:common_glyph=9'd147;
+-8'd87:common_glyph=9'd149;
+-8'd88:common_glyph=9'd150;
+-8'd89:common_glyph=9'd151;
+-8'd90:common_glyph=9'd153;
+-8'd91:common_glyph=9'd155;
+-8'd92:common_glyph=9'd159;
+-8'd93:common_glyph=9'd161;
+-8'd94:common_glyph=9'd162;
+-8'd95:common_glyph=9'd165;
+-8'd96:common_glyph=9'd167;
+-8'd97:common_glyph=9'd168;
+-8'd98:common_glyph=9'd171;
+-8'd99:common_glyph=9'd172;
+-8'd100:common_glyph=9'd175;
+-8'd101:common_glyph=9'd183;
+-8'd102:common_glyph=9'd184;
+-8'd103:common_glyph=9'd185;
+-8'd104:common_glyph=9'd186;
+-8'd105:common_glyph=9'd187;
+-8'd106:common_glyph=9'd189;
+-8'd107:common_glyph=9'd192;
+-8'd108:common_glyph=9'd193;
+-8'd109:common_glyph=9'd195;
+-8'd110:common_glyph=9'd199;
+-8'd111:common_glyph=9'd201;
+-8'd112:common_glyph=9'd202;
+-8'd113:common_glyph=9'd203;
+-8'd114:common_glyph=9'd210;
+-8'd115:common_glyph=9'd211;
+-8'd116:common_glyph=9'd212;
+-8'd117:common_glyph=9'd214;
+-8'd118:common_glyph=9'd216;
+-8'd119:common_glyph=9'd217;
+-8'd120:common_glyph=9'd218;
+-8'd121:common_glyph=9'd220;
+-8'd122:common_glyph=9'd223;
+-8'd123:common_glyph=9'd226;
+-8'd124:common_glyph=9'd227;
+-8'd125:common_glyph=9'd228;
+-8'd126:common_glyph=9'd229;
+-8'd127:common_glyph=9'd230;
+-8'd128:common_glyph=9'd234;
+-8'd129:common_glyph=9'd236;
+-8'd130:common_glyph=9'd237;
+-8'd131:common_glyph=9'd238;
+-8'd132:common_glyph=9'd239;
+-8'd133:common_glyph=9'd241;
+-8'd134:common_glyph=9'd243;
+-8'd135:common_glyph=9'd245;
+-8'd136:common_glyph=9'd246;
+-8'd137:common_glyph=9'd249;
+-8'd138:common_glyph=9'd250;
+-8'd139:common_glyph=9'd252;
+-8'd140:common_glyph=9'd253;
+-8'd141:common_glyph=9'd254;
+-8'd142:common_glyph=9'd255;
+-8'd143:common_glyph=9'd256;
+-8'd144:common_glyph=9'd257;
+-8'd145:common_glyph=9'd259;
+-8'd146:common_glyph=9'd264;
+-8'd147:common_glyph=9'd266;
+-8'd148:common_glyph=9'd267;
+-8'd149:common_glyph=9'd269;
+-8'd150:common_glyph=9'd270;
+-8'd151:common_glyph=9'd273;
+-8'd152:common_glyph=9'd274;
+-8'd153:common_glyph=9'd275;
+-8'd154:common_glyph=9'd276;
+-8'd155:common_glyph=9'd277;
+-8'd156:common_glyph=9'd278;
++8'd32:common_glyph=9'd33;
++8'd33:common_glyph=9'd35;
++8'd34:common_glyph=9'd39;
++8'd35:common_glyph=9'd42;
++8'd36:common_glyph=9'd47;
++8'd37:common_glyph=9'd50;
++8'd38:common_glyph=9'd55;
++8'd39:common_glyph=9'd57;
++8'd40:common_glyph=9'd61;
++8'd41:common_glyph=9'd63;
++8'd42:common_glyph=9'd64;
++8'd43:common_glyph=9'd65;
++8'd44:common_glyph=9'd67;
++8'd45:common_glyph=9'd68;
++8'd46:common_glyph=9'd69;
++8'd47:common_glyph=9'd72;
++8'd48:common_glyph=9'd74;
++8'd49:common_glyph=9'd77;
++8'd50:common_glyph=9'd79;
++8'd51:common_glyph=9'd81;
++8'd52:common_glyph=9'd83;
++8'd53:common_glyph=9'd88;
++8'd54:common_glyph=9'd89;
++8'd55:common_glyph=9'd91;
++8'd56:common_glyph=9'd100;
++8'd57:common_glyph=9'd103;
++8'd58:common_glyph=9'd105;
++8'd59:common_glyph=9'd106;
++8'd60:common_glyph=9'd108;
++8'd61:common_glyph=9'd110;
++8'd62:common_glyph=9'd111;
++8'd63:common_glyph=9'd114;
++8'd64:common_glyph=9'd118;
++8'd65:common_glyph=9'd119;
++8'd66:common_glyph=9'd121;
++8'd67:common_glyph=9'd122;
++8'd68:common_glyph=9'd123;
++8'd69:common_glyph=9'd126;
++8'd70:common_glyph=9'd127;
++8'd71:common_glyph=9'd129;
++8'd72:common_glyph=9'd130;
++8'd73:common_glyph=9'd131;
++8'd74:common_glyph=9'd133;
++8'd75:common_glyph=9'd134;
++8'd76:common_glyph=9'd136;
++8'd77:common_glyph=9'd137;
++8'd78:common_glyph=9'd138;
++8'd79:common_glyph=9'd140;
++8'd80:common_glyph=9'd142;
++8'd81:common_glyph=9'd144;
++8'd82:common_glyph=9'd146;
++8'd83:common_glyph=9'd147;
++8'd84:common_glyph=9'd149;
++8'd85:common_glyph=9'd151;
++8'd86:common_glyph=9'd155;
++8'd87:common_glyph=9'd157;
++8'd88:common_glyph=9'd158;
++8'd89:common_glyph=9'd161;
++8'd90:common_glyph=9'd163;
++8'd91:common_glyph=9'd164;
++8'd92:common_glyph=9'd167;
++8'd93:common_glyph=9'd168;
++8'd94:common_glyph=9'd171;
++8'd95:common_glyph=9'd179;
++8'd96:common_glyph=9'd180;
++8'd97:common_glyph=9'd181;
++8'd98:common_glyph=9'd182;
++8'd99:common_glyph=9'd183;
++8'd100:common_glyph=9'd185;
++8'd101:common_glyph=9'd188;
++8'd102:common_glyph=9'd189;
++8'd103:common_glyph=9'd191;
++8'd104:common_glyph=9'd196;
++8'd105:common_glyph=9'd197;
++8'd106:common_glyph=9'd198;
++8'd107:common_glyph=9'd205;
++8'd108:common_glyph=9'd206;
++8'd109:common_glyph=9'd207;
++8'd110:common_glyph=9'd209;
++8'd111:common_glyph=9'd211;
++8'd112:common_glyph=9'd212;
++8'd113:common_glyph=9'd214;
++8'd114:common_glyph=9'd217;
++8'd115:common_glyph=9'd220;
++8'd116:common_glyph=9'd221;
++8'd117:common_glyph=9'd222;
++8'd118:common_glyph=9'd223;
++8'd119:common_glyph=9'd224;
++8'd120:common_glyph=9'd228;
++8'd121:common_glyph=9'd230;
++8'd122:common_glyph=9'd231;
++8'd123:common_glyph=9'd232;
++8'd124:common_glyph=9'd234;
++8'd125:common_glyph=9'd236;
++8'd126:common_glyph=9'd238;
++8'd127:common_glyph=9'd239;
++8'd128:common_glyph=9'd242;
++8'd129:common_glyph=9'd245;
++8'd130:common_glyph=9'd246;
++8'd131:common_glyph=9'd247;
++8'd132:common_glyph=9'd248;
++8'd133:common_glyph=9'd250;
++8'd134:common_glyph=9'd255;
++8'd135:common_glyph=9'd257;
++8'd136:common_glyph=9'd258;
++8'd137:common_glyph=9'd260;
++8'd138:common_glyph=9'd261;
++8'd139:common_glyph=9'd264;
++8'd140:common_glyph=9'd265;
++8'd141:common_glyph=9'd266;
++8'd142:common_glyph=9'd267;
++8'd143:common_glyph=9'd268;
+ default:common_glyph=0;endcase end
+ assign shared_addr={common_glyph,row};
+ generate if(SHARED_FONT)begin:shared_font_read
+--- original/rtl/shared_glyph_rom.v
++++ new/rtl/shared_glyph_rom.v
+@@ -11,174 +11,149 @@
+  begin
+   row_high=1'd0;
+   case(address)
+-   13'd564: row_high=1'h1;
+-   13'd565: row_high=1'h1;
+-   13'd566: row_high=1'h1;
+-   13'd763: row_high=1'h1;
+-   13'd777: row_high=1'h1;
+-   13'd920: row_high=1'h1;
+-   13'd936: row_high=1'h1;
+-   13'd950: row_high=1'h1;
+-   13'd951: row_high=1'h1;
++   13'd549: row_high=1'h1;
++   13'd550: row_high=1'h1;
++   13'd747: row_high=1'h1;
++   13'd761: row_high=1'h1;
++   13'd904: row_high=1'h1;
++   13'd918: row_high=1'h1;
++   13'd919: row_high=1'h1;
++   13'd934: row_high=1'h1;
++   13'd935: row_high=1'h1;
++   13'd983: row_high=1'h1;
++   13'd998: row_high=1'h1;
+    13'd999: row_high=1'h1;
+-   13'd1014: row_high=1'h1;
+    13'd1015: row_high=1'h1;
+-   13'd1031: row_high=1'h1;
++   13'd1016: row_high=1'h1;
+    13'd1032: row_high=1'h1;
+-   13'd1048: row_high=1'h1;
+-   13'd1063: row_high=1'h1;
+-   13'd1084: row_high=1'h1;
+-   13'd1149: row_high=1'h1;
+-   13'd1211: row_high=1'h1;
+-   13'd1253: row_high=1'h1;
+-   13'd1267: row_high=1'h1;
+-   13'd1274: row_high=1'h1;
+-   13'd1275: row_high=1'h1;
++   13'd1047: row_high=1'h1;
++   13'd1068: row_high=1'h1;
++   13'd1133: row_high=1'h1;
++   13'd1195: row_high=1'h1;
++   13'd1237: row_high=1'h1;
++   13'd1251: row_high=1'h1;
++   13'd1258: row_high=1'h1;
++   13'd1276: row_high=1'h1;
+    13'd1292: row_high=1'h1;
+-   13'd1308: row_high=1'h1;
+-   13'd1339: row_high=1'h1;
+-   13'd1366: row_high=1'h1;
+-   13'd1367: row_high=1'h1;
+-   13'd1467: row_high=1'h1;
+-   13'd1468: row_high=1'h1;
+-   13'd1481: row_high=1'h1;
+-   13'd1501: row_high=1'h1;
+-   13'd1517: row_high=1'h1;
+-   13'd1597: row_high=1'h1;
+-   13'd1629: row_high=1'h1;
+-   13'd1738: row_high=1'h1;
+-   13'd1749: row_high=1'h1;
+-   13'd1771: row_high=1'h1;
+-   13'd1780: row_high=1'h1;
+-   13'd1798: row_high=1'h1;
+-   13'd1799: row_high=1'h1;
+-   13'd1818: row_high=1'h1;
+-   13'd1892: row_high=1'h1;
+-   13'd1900: row_high=1'h1;
+-   13'd1909: row_high=1'h1;
+-   13'd1917: row_high=1'h1;
+-   13'd1928: row_high=1'h1;
+-   13'd1997: row_high=1'h1;
+-   13'd2001: row_high=1'h1;
+-   13'd2012: row_high=1'h1;
+-   13'd2025: row_high=1'h1;
+-   13'd2045: row_high=1'h1;
+-   13'd2108: row_high=1'h1;
++   13'd1323: row_high=1'h1;
++   13'd1350: row_high=1'h1;
++   13'd1351: row_high=1'h1;
++   13'd1435: row_high=1'h1;
++   13'd1453: row_high=1'h1;
++   13'd1690: row_high=1'h1;
++   13'd1701: row_high=1'h1;
++   13'd1723: row_high=1'h1;
++   13'd1732: row_high=1'h1;
++   13'd1750: row_high=1'h1;
++   13'd1751: row_high=1'h1;
++   13'd1770: row_high=1'h1;
++   13'd1844: row_high=1'h1;
++   13'd1852: row_high=1'h1;
++   13'd1861: row_high=1'h1;
++   13'd1869: row_high=1'h1;
++   13'd1880: row_high=1'h1;
++   13'd1949: row_high=1'h1;
++   13'd1953: row_high=1'h1;
++   13'd1977: row_high=1'h1;
++   13'd2060: row_high=1'h1;
++   13'd2061: row_high=1'h1;
++   13'd2076: row_high=1'h1;
+    13'd2109: row_high=1'h1;
+-   13'd2124: row_high=1'h1;
+-   13'd2125: row_high=1'h1;
+    13'd2157: row_high=1'h1;
+-   13'd2205: row_high=1'h1;
+-   13'd2215: row_high=1'h1;
+-   13'd2221: row_high=1'h1;
+-   13'd2227: row_high=1'h1;
++   13'd2167: row_high=1'h1;
++   13'd2179: row_high=1'h1;
++   13'd2188: row_high=1'h1;
++   13'd2196: row_high=1'h1;
++   13'd2199: row_high=1'h1;
++   13'd2217: row_high=1'h1;
+    13'd2232: row_high=1'h1;
+-   13'd2236: row_high=1'h1;
+-   13'd2244: row_high=1'h1;
+    13'd2247: row_high=1'h1;
+-   13'd2265: row_high=1'h1;
+-   13'd2280: row_high=1'h1;
+-   13'd2295: row_high=1'h1;
++   13'd2248: row_high=1'h1;
++   13'd2267: row_high=1'h1;
++   13'd2291: row_high=1'h1;
+    13'd2296: row_high=1'h1;
+-   13'd2315: row_high=1'h1;
+-   13'd2316: row_high=1'h1;
++   13'd2307: row_high=1'h1;
++   13'd2311: row_high=1'h1;
++   13'd2328: row_high=1'h1;
++   13'd2332: row_high=1'h1;
+    13'd2339: row_high=1'h1;
+-   13'd2344: row_high=1'h1;
+-   13'd2355: row_high=1'h1;
+-   13'd2359: row_high=1'h1;
+-   13'd2376: row_high=1'h1;
+-   13'd2380: row_high=1'h1;
+-   13'd2387: row_high=1'h1;
++   13'd2364: row_high=1'h1;
++   13'd2372: row_high=1'h1;
++   13'd2388: row_high=1'h1;
++   13'd2392: row_high=1'h1;
++   13'd2419: row_high=1'h1;
++   13'd2423: row_high=1'h1;
+    13'd2428: row_high=1'h1;
+-   13'd2436: row_high=1'h1;
+    13'd2452: row_high=1'h1;
+    13'd2456: row_high=1'h1;
+-   13'd2483: row_high=1'h1;
+-   13'd2487: row_high=1'h1;
++   13'd2460: row_high=1'h1;
++   13'd2471: row_high=1'h1;
++   13'd2476: row_high=1'h1;
+    13'd2492: row_high=1'h1;
+-   13'd2516: row_high=1'h1;
++   13'd2499: row_high=1'h1;
+    13'd2520: row_high=1'h1;
+-   13'd2524: row_high=1'h1;
+    13'd2535: row_high=1'h1;
+-   13'd2540: row_high=1'h1;
+-   13'd2556: row_high=1'h1;
+-   13'd2563: row_high=1'h1;
+-   13'd2584: row_high=1'h1;
+-   13'd2599: row_high=1'h1;
+-   13'd2601: row_high=1'h1;
+-   13'd2613: row_high=1'h1;
+-   13'd2617: row_high=1'h1;
+-   13'd2651: row_high=1'h1;
+-   13'd2669: row_high=1'h1;
+-   13'd2771: row_high=1'h1;
+-   13'd2779: row_high=1'h1;
++   13'd2537: row_high=1'h1;
++   13'd2587: row_high=1'h1;
++   13'd2605: row_high=1'h1;
++   13'd2707: row_high=1'h1;
++   13'd2715: row_high=1'h1;
++   13'd2746: row_high=1'h1;
++   13'd2788: row_high=1'h1;
++   13'd2793: row_high=1'h1;
++   13'd2809: row_high=1'h1;
+    13'd2810: row_high=1'h1;
++   13'd2836: row_high=1'h1;
+    13'd2852: row_high=1'h1;
+-   13'd2857: row_high=1'h1;
+-   13'd2873: row_high=1'h1;
+-   13'd2874: row_high=1'h1;
+-   13'd2916: row_high=1'h1;
+-   13'd2996: row_high=1'h1;
+-   13'd3012: row_high=1'h1;
+-   13'd3028: row_high=1'h1;
+-   13'd3045: row_high=1'h1;
++   13'd2932: row_high=1'h1;
++   13'd2964: row_high=1'h1;
++   13'd3021: row_high=1'h1;
++   13'd3051: row_high=1'h1;
+    13'd3068: row_high=1'h1;
+-   13'd3085: row_high=1'h1;
+-   13'd3115: row_high=1'h1;
+-   13'd3132: row_high=1'h1;
+-   13'd3133: row_high=1'h1;
+-   13'd3146: row_high=1'h1;
+-   13'd3164: row_high=1'h1;
+-   13'd3190: row_high=1'h1;
+-   13'd3349: row_high=1'h1;
+-   13'd3357: row_high=1'h1;
+-   13'd3373: row_high=1'h1;
+-   13'd3379: row_high=1'h1;
+-   13'd3414: row_high=1'h1;
+-   13'd3419: row_high=1'h1;
+-   13'd3426: row_high=1'h1;
+-   13'd3443: row_high=1'h1;
+-   13'd3446: row_high=1'h1;
+-   13'd3451: row_high=1'h1;
+-   13'd3493: row_high=1'h1;
+-   13'd3508: row_high=1'h1;
+-   13'd3524: row_high=1'h1;
+-   13'd3549: row_high=1'h1;
+-   13'd3554: row_high=1'h1;
++   13'd3082: row_high=1'h1;
++   13'd3100: row_high=1'h1;
++   13'd3269: row_high=1'h1;
++   13'd3299: row_high=1'h1;
++   13'd3334: row_high=1'h1;
++   13'd3339: row_high=1'h1;
++   13'd3346: row_high=1'h1;
++   13'd3363: row_high=1'h1;
++   13'd3366: row_high=1'h1;
++   13'd3371: row_high=1'h1;
++   13'd3428: row_high=1'h1;
++   13'd3453: row_high=1'h1;
++   13'd3458: row_high=1'h1;
++   13'd3462: row_high=1'h1;
++   13'd3466: row_high=1'h1;
++   13'd3467: row_high=1'h1;
++   13'd3532: row_high=1'h1;
++   13'd3545: row_high=1'h1;
++   13'd3548: row_high=1'h1;
+    13'd3558: row_high=1'h1;
+-   13'd3562: row_high=1'h1;
+-   13'd3563: row_high=1'h1;
+-   13'd3628: row_high=1'h1;
+-   13'd3641: row_high=1'h1;
+-   13'd3644: row_high=1'h1;
+-   13'd3654: row_high=1'h1;
+-   13'd3655: row_high=1'h1;
+-   13'd3661: row_high=1'h1;
+-   13'd3669: row_high=1'h1;
+-   13'd3675: row_high=1'h1;
+-   13'd3691: row_high=1'h1;
+-   13'd3692: row_high=1'h1;
+-   13'd3701: row_high=1'h1;
+-   13'd3732: row_high=1'h1;
+-   13'd3756: row_high=1'h1;
+-   13'd3773: row_high=1'h1;
+-   13'd3860: row_high=1'h1;
+-   13'd3864: row_high=1'h1;
+-   13'd3865: row_high=1'h1;
+-   13'd3901: row_high=1'h1;
+-   13'd4029: row_high=1'h1;
+-   13'd4042: row_high=1'h1;
+-   13'd4075: row_high=1'h1;
+-   13'd4086: row_high=1'h1;
+-   13'd4102: row_high=1'h1;
+-   13'd4118: row_high=1'h1;
+-   13'd4140: row_high=1'h1;
+-   13'd4166: row_high=1'h1;
+-   13'd4188: row_high=1'h1;
+-   13'd4245: row_high=1'h1;
+-   13'd4294: row_high=1'h1;
+-   13'd4372: row_high=1'h1;
+-   13'd4373: row_high=1'h1;
++   13'd3559: row_high=1'h1;
++   13'd3573: row_high=1'h1;
++   13'd3579: row_high=1'h1;
++   13'd3595: row_high=1'h1;
++   13'd3596: row_high=1'h1;
++   13'd3605: row_high=1'h1;
++   13'd3636: row_high=1'h1;
++   13'd3660: row_high=1'h1;
++   13'd3677: row_high=1'h1;
++   13'd3725: row_high=1'h1;
++   13'd3748: row_high=1'h1;
++   13'd3752: row_high=1'h1;
++   13'd3753: row_high=1'h1;
++   13'd3789: row_high=1'h1;
++   13'd3917: row_high=1'h1;
++   13'd3930: row_high=1'h1;
++   13'd3963: row_high=1'h1;
++   13'd3974: row_high=1'h1;
++   13'd4012: row_high=1'h1;
++   13'd4022: row_high=1'h1;
++   13'd4101: row_high=1'h1;
++   13'd4150: row_high=1'h1;
++   13'd4228: row_high=1'h1;
++   13'd4229: row_high=1'h1;
+    default: ;
+   endcase
+  end
+@@ -194,1191 +169,1166 @@
+    11'd4: decode_row=16'h1ff8;
+    11'd5: decode_row=16'h600;
+    11'd6: decode_row=16'h80;
+-   11'd7: decode_row=16'h13fc;
+-   11'd8: decode_row=16'h1008;
++   11'd7: decode_row=16'h1008;
++   11'd8: decode_row=16'h13fc;
+    11'd9: decode_row=16'h100;
+-   11'd10: decode_row=16'h660;
+-   11'd11: decode_row=16'hc60;
++   11'd10: decode_row=16'hc60;
++   11'd11: decode_row=16'h660;
+    11'd12: decode_row=16'h2004;
+    11'd13: decode_row=16'h3c0;
+    11'd14: decode_row=16'h1188;
+    11'd15: decode_row=16'h800;
+-   11'd16: decode_row=16'hc30;
+-   11'd17: decode_row=16'h1830;
+-   11'd18: decode_row=16'h1ffc;
+-   11'd19: decode_row=16'h200;
+-   11'd20: decode_row=16'h420;
+-   11'd21: decode_row=16'hc00;
+-   11'd22: decode_row=16'h1060;
+-   11'd23: decode_row=16'h17fe;
+-   11'd24: decode_row=16'h60;
+-   11'd25: decode_row=16'h1000;
+-   11'd26: decode_row=16'h27e4;
+-   11'd27: decode_row=16'h1818;
+-   11'd28: decode_row=16'h1860;
+-   11'd29: decode_row=16'hc20;
+-   11'd30: decode_row=16'h20;
+-   11'd31: decode_row=16'h380;
++   11'd16: decode_row=16'h1830;
++   11'd17: decode_row=16'hc30;
++   11'd18: decode_row=16'h1060;
++   11'd19: decode_row=16'h17fe;
++   11'd20: decode_row=16'h60;
++   11'd21: decode_row=16'h200;
++   11'd22: decode_row=16'h1000;
++   11'd23: decode_row=16'h1860;
++   11'd24: decode_row=16'h1ffc;
++   11'd25: decode_row=16'h420;
++   11'd26: decode_row=16'hc00;
++   11'd27: decode_row=16'hc20;
++   11'd28: decode_row=16'h27e4;
++   11'd29: decode_row=16'h1818;
++   11'd30: decode_row=16'h460;
++   11'd31: decode_row=16'h7e0;
+    11'd32: decode_row=16'h2424;
+-   11'd33: decode_row=16'h460;
+-   11'd34: decode_row=16'h7e0;
+-   11'd35: decode_row=16'h1020;
+-   11'd36: decode_row=16'h3ff8;
+-   11'd37: decode_row=16'h400;
+-   11'd38: decode_row=16'h430;
+-   11'd39: decode_row=16'h1040;
+-   11'd40: decode_row=16'h13fe;
+-   11'd41: decode_row=16'h1904;
+-   11'd42: decode_row=16'h300c;
+-   11'd43: decode_row=16'h300;
+-   11'd44: decode_row=16'h640;
+-   11'd45: decode_row=16'h7c0;
+-   11'd46: decode_row=16'h17fc;
+-   11'd47: decode_row=16'h3ffe;
+-   11'd48: decode_row=16'h7ffc;
+-   11'd49: decode_row=16'hc10;
+-   11'd50: decode_row=16'h1840;
+-   11'd51: decode_row=16'h1880;
+-   11'd52: decode_row=16'h1ffe;
+-   11'd53: decode_row=16'h318c;
+-   11'd54: decode_row=16'h40;
+-   11'd55: decode_row=16'h240;
+-   11'd56: decode_row=16'h418;
+-   11'd57: decode_row=16'h620;
+-   11'd58: decode_row=16'h880;
+-   11'd59: decode_row=16'hff8;
+-   11'd60: decode_row=16'h1018;
+-   11'd61: decode_row=16'h11fc;
+-   11'd62: decode_row=16'h120c;
+-   11'd63: decode_row=16'h1810;
+-   11'd64: decode_row=16'h1bfc;
+-   11'd65: decode_row=16'h2420;
+-   11'd66: decode_row=16'hc;
++   11'd33: decode_row=16'h20;
++   11'd34: decode_row=16'h400;
++   11'd35: decode_row=16'h1040;
++   11'd36: decode_row=16'h13fe;
++   11'd37: decode_row=16'h1904;
++   11'd38: decode_row=16'h300c;
++   11'd39: decode_row=16'h3ff8;
++   11'd40: decode_row=16'h300;
++   11'd41: decode_row=16'h380;
++   11'd42: decode_row=16'h430;
++   11'd43: decode_row=16'h640;
++   11'd44: decode_row=16'h7c0;
++   11'd45: decode_row=16'h1020;
++   11'd46: decode_row=16'h3ffe;
++   11'd47: decode_row=16'h7ffc;
++   11'd48: decode_row=16'h17fc;
++   11'd49: decode_row=16'h1840;
++   11'd50: decode_row=16'h1ffe;
++   11'd51: decode_row=16'h318c;
++   11'd52: decode_row=16'h240;
++   11'd53: decode_row=16'h418;
++   11'd54: decode_row=16'hff8;
++   11'd55: decode_row=16'h1018;
++   11'd56: decode_row=16'h11fc;
++   11'd57: decode_row=16'h120c;
++   11'd58: decode_row=16'h1810;
++   11'd59: decode_row=16'h1880;
++   11'd60: decode_row=16'h1bfc;
++   11'd61: decode_row=16'h2420;
++   11'd62: decode_row=16'hc;
++   11'd63: decode_row=16'h40;
++   11'd64: decode_row=16'h620;
++   11'd65: decode_row=16'h7f0;
++   11'd66: decode_row=16'h880;
+    11'd67: decode_row=16'h990;
+-   11'd68: decode_row=16'h1204;
+-   11'd69: decode_row=16'h1248;
+-   11'd70: decode_row=16'h8;
+-   11'd71: decode_row=16'h810;
+-   11'd72: decode_row=16'h830;
+-   11'd73: decode_row=16'hcc0;
+-   11'd74: decode_row=16'hfc0;
+-   11'd75: decode_row=16'hff0;
+-   11'd76: decode_row=16'h1084;
+-   11'd77: decode_row=16'h1324;
+-   11'd78: decode_row=16'h2184;
+-   11'd79: decode_row=16'h2344;
+-   11'd80: decode_row=16'h3000;
++   11'd68: decode_row=16'hc10;
++   11'd69: decode_row=16'h1204;
++   11'd70: decode_row=16'h1248;
++   11'd71: decode_row=16'h3000;
++   11'd72: decode_row=16'h8;
++   11'd73: decode_row=16'h830;
++   11'd74: decode_row=16'h840;
++   11'd75: decode_row=16'hcc0;
++   11'd76: decode_row=16'hfc0;
++   11'd77: decode_row=16'hff0;
++   11'd78: decode_row=16'h1084;
++   11'd79: decode_row=16'h1324;
++   11'd80: decode_row=16'h2184;
+    11'd81: decode_row=16'h3244;
+    11'd82: decode_row=16'h37fc;
+    11'd83: decode_row=16'h37fe;
+    11'd84: decode_row=16'h7c;
+    11'd85: decode_row=16'h3e0;
+-   11'd86: decode_row=16'h7f0;
+-   11'd87: decode_row=16'h840;
+-   11'd88: decode_row=16'hc40;
+-   11'd89: decode_row=16'h1004;
+-   11'd90: decode_row=16'h1304;
+-   11'd91: decode_row=16'h1800;
+-   11'd92: decode_row=16'h1820;
+-   11'd93: decode_row=16'h1998;
+-   11'd94: decode_row=16'h2464;
+-   11'd95: decode_row=16'h3fe0;
+-   11'd96: decode_row=16'h7020;
+-   11'd97: decode_row=16'h18;
+-   11'd98: decode_row=16'h1c0;
+-   11'd99: decode_row=16'h608;
+-   11'd100: decode_row=16'h730;
+-   11'd101: decode_row=16'h820;
+-   11'd102: decode_row=16'h860;
+-   11'd103: decode_row=16'hce0;
+-   11'd104: decode_row=16'hf00;
+-   11'd105: decode_row=16'h1080;
+-   11'd106: decode_row=16'h1098;
+-   11'd107: decode_row=16'h1100;
+-   11'd108: decode_row=16'h1104;
+-   11'd109: decode_row=16'h110c;
+-   11'd110: decode_row=16'h1198;
+-   11'd111: decode_row=16'h11f8;
+-   11'd112: decode_row=16'h19fc;
+-   11'd113: decode_row=16'h203c;
+-   11'd114: decode_row=16'h2204;
+-   11'd115: decode_row=16'h2404;
+-   11'd116: decode_row=16'h25fc;
+-   11'd117: decode_row=16'h3220;
+-   11'd118: decode_row=16'h33fc;
+-   11'd119: decode_row=16'h3800;
+-   11'd120: decode_row=16'h381c;
+-   11'd121: decode_row=16'h3f24;
+-   11'd122: decode_row=16'h73fc;
+-   11'd123: decode_row=16'hc0;
+-   11'd124: decode_row=16'he0;
+-   11'd125: decode_row=16'h260;
+-   11'd126: decode_row=16'h5a0;
+-   11'd127: decode_row=16'h700;
+-   11'd128: decode_row=16'h780;
+-   11'd129: decode_row=16'h808;
+-   11'd130: decode_row=16'he60;
+-   11'd131: decode_row=16'hf80;
+-   11'd132: decode_row=16'h1070;
+-   11'd133: decode_row=16'h10f0;
+-   11'd134: decode_row=16'h1300;
+-   11'd135: decode_row=16'h1330;
+-   11'd136: decode_row=16'h1870;
+-   11'd137: decode_row=16'h1990;
+-   11'd138: decode_row=16'h1c20;
+-   11'd139: decode_row=16'h1c38;
+-   11'd140: decode_row=16'h1e38;
+-   11'd141: decode_row=16'h1ff0;
+-   11'd142: decode_row=16'h2000;
+-   11'd143: decode_row=16'h2080;
+-   11'd144: decode_row=16'h2084;
+-   11'd145: decode_row=16'h2104;
+-   11'd146: decode_row=16'h2124;
+-   11'd147: decode_row=16'h2180;
+-   11'd148: decode_row=16'h2244;
+-   11'd149: decode_row=16'h27fe;
+-   11'd150: decode_row=16'h2fa4;
+-   11'd151: decode_row=16'h2ff4;
+-   11'd152: decode_row=16'h3004;
+-   11'd153: decode_row=16'h3008;
+-   11'd154: decode_row=16'h3040;
+-   11'd155: decode_row=16'h3c20;
+-   11'd156: decode_row=16'h3dfc;
+-   11'd157: decode_row=16'h3f44;
+-   11'd158: decode_row=16'h3f7c;
+-   11'd159: decode_row=16'h3fa4;
+-   11'd160: decode_row=16'h47fe;
+-   11'd161: decode_row=16'h5ffe;
+-   11'd162: decode_row=16'h6004;
+-   11'd163: decode_row=16'h6186;
+-   11'd164: decode_row=16'h10;
+-   11'd165: decode_row=16'h1e0;
+-   11'd166: decode_row=16'h204;
+-   11'd167: decode_row=16'h208;
+-   11'd168: decode_row=16'h280;
+-   11'd169: decode_row=16'h2c0;
+-   11'd170: decode_row=16'h340;
+-   11'd171: decode_row=16'h3fc;
+-   11'd172: decode_row=16'h410;
+-   11'd173: decode_row=16'h5b0;
+-   11'd174: decode_row=16'h7fe;
+-   11'd175: decode_row=16'h80c;
+-   11'd176: decode_row=16'h818;
+-   11'd177: decode_row=16'h8c0;
+-   11'd178: decode_row=16'h980;
+-   11'd179: decode_row=16'hbfc;
+-   11'd180: decode_row=16'hd80;
+-   11'd181: decode_row=16'hdb0;
+-   11'd182: decode_row=16'hffc;
+-   11'd183: decode_row=16'h104c;
+-   11'd184: decode_row=16'h1090;
+-   11'd185: decode_row=16'h10c0;
+-   11'd186: decode_row=16'h10c4;
+-   11'd187: decode_row=16'h1110;
+-   11'd188: decode_row=16'h1118;
+-   11'd189: decode_row=16'h1190;
+-   11'd190: decode_row=16'h1220;
+-   11'd191: decode_row=16'h1308;
+-   11'd192: decode_row=16'h130c;
+-   11'd193: decode_row=16'h1310;
+-   11'd194: decode_row=16'h1360;
+-   11'd195: decode_row=16'h13f8;
+-   11'd196: decode_row=16'h18c0;
+-   11'd197: decode_row=16'h18c6;
+-   11'd198: decode_row=16'h19a4;
+-   11'd199: decode_row=16'h2040;
+-   11'd200: decode_row=16'h20c0;
+-   11'd201: decode_row=16'h21a4;
+-   11'd202: decode_row=16'h2384;
+-   11'd203: decode_row=16'h23fe;
+-   11'd204: decode_row=16'h2490;
+-   11'd205: decode_row=16'h24d0;
+-   11'd206: decode_row=16'h25a4;
+-   11'd207: decode_row=16'h2608;
+-   11'd208: decode_row=16'h2644;
+-   11'd209: decode_row=16'h2664;
+-   11'd210: decode_row=16'h2a30;
+-   11'd211: decode_row=16'h2ffc;
+-   11'd212: decode_row=16'h2ffe;
+-   11'd213: decode_row=16'h3060;
+-   11'd214: decode_row=16'h30c0;
+-   11'd215: decode_row=16'h3180;
+-   11'd216: decode_row=16'h3188;
+-   11'd217: decode_row=16'h3210;
+-   11'd218: decode_row=16'h3224;
+-   11'd219: decode_row=16'h3820;
+-   11'd220: decode_row=16'h3e30;
+-   11'd221: decode_row=16'h3e48;
+-   11'd222: decode_row=16'h3f84;
+-   11'd223: decode_row=16'h5168;
+-   11'd224: decode_row=16'h6006;
+-   11'd225: decode_row=16'h7060;
+-   11'd226: decode_row=16'h79fc;
+-   11'd227: decode_row=16'h7c20;
+-   11'd228: decode_row=16'h7f04;
+-   11'd229: decode_row=16'h7ff8;
+-   11'd230: decode_row=16'h48;
+-   11'd231: decode_row=16'h58;
+-   11'd232: decode_row=16'h64;
+-   11'd233: decode_row=16'h84;
+-   11'd234: decode_row=16'h104;
+-   11'd235: decode_row=16'h1fc;
+-   11'd236: decode_row=16'h304;
+-   11'd237: decode_row=16'h3f0;
+-   11'd238: decode_row=16'h406;
+-   11'd239: decode_row=16'h424;
+-   11'd240: decode_row=16'h440;
+-   11'd241: decode_row=16'h4c0;
+-   11'd242: decode_row=16'h610;
+-   11'd243: decode_row=16'h630;
+-   11'd244: decode_row=16'h670;
+-   11'd245: decode_row=16'h824;
+-   11'd246: decode_row=16'h844;
+-   11'd247: decode_row=16'h870;
+-   11'd248: decode_row=16'h878;
+-   11'd249: decode_row=16'h884;
+-   11'd250: decode_row=16'h8b0;
+-   11'd251: decode_row=16'h8fc;
+-   11'd252: decode_row=16'ha30;
+-   11'd253: decode_row=16'hc18;
+-   11'd254: decode_row=16'hc24;
+-   11'd255: decode_row=16'hc44;
+-   11'd256: decode_row=16'hc48;
+-   11'd257: decode_row=16'hc66;
+-   11'd258: decode_row=16'hc86;
+-   11'd259: decode_row=16'hcb0;
+-   11'd260: decode_row=16'he00;
+-   11'd261: decode_row=16'he04;
+-   11'd262: decode_row=16'he78;
+-   11'd263: decode_row=16'hec0;
+-   11'd264: decode_row=16'hf78;
+-   11'd265: decode_row=16'hfe0;
+-   11'd266: decode_row=16'hffe;
+-   11'd267: decode_row=16'h1010;
+-   11'd268: decode_row=16'h1028;
+-   11'd269: decode_row=16'h1184;
+-   11'd270: decode_row=16'h118c;
+-   11'd271: decode_row=16'h1238;
+-   11'd272: decode_row=16'h124c;
+-   11'd273: decode_row=16'h1264;
+-   11'd274: decode_row=16'h1270;
+-   11'd275: decode_row=16'h131c;
+-   11'd276: decode_row=16'h13f0;
+-   11'd277: decode_row=16'h140c;
+-   11'd278: decode_row=16'h1420;
+-   11'd279: decode_row=16'h1430;
+-   11'd280: decode_row=16'h1554;
+-   11'd281: decode_row=16'h161c;
+-   11'd282: decode_row=16'h1630;
+-   11'd283: decode_row=16'h1844;
+-   11'd284: decode_row=16'h1846;
+-   11'd285: decode_row=16'h1898;
+-   11'd286: decode_row=16'h18d8;
+-   11'd287: decode_row=16'h18e0;
+-   11'd288: decode_row=16'h18f0;
+-   11'd289: decode_row=16'h1900;
+-   11'd290: decode_row=16'h1918;
+-   11'd291: decode_row=16'h1988;
+-   11'd292: decode_row=16'h198c;
+-   11'd293: decode_row=16'h199c;
+-   11'd294: decode_row=16'h19e0;
+-   11'd295: decode_row=16'h19f8;
+-   11'd296: decode_row=16'h1a04;
+-   11'd297: decode_row=16'h1a0c;
+-   11'd298: decode_row=16'h1b24;
+-   11'd299: decode_row=16'h1c00;
+-   11'd300: decode_row=16'h1c18;
+-   11'd301: decode_row=16'h1c60;
+-   11'd302: decode_row=16'h1cc8;
+-   11'd303: decode_row=16'h1d04;
+-   11'd304: decode_row=16'h1da4;
+-   11'd305: decode_row=16'h1e10;
+-   11'd306: decode_row=16'h1e30;
+-   11'd307: decode_row=16'h1e60;
+-   11'd308: decode_row=16'h1ef8;
+-   11'd309: decode_row=16'h1f38;
+-   11'd310: decode_row=16'h1f7e;
+-   11'd311: decode_row=16'h1f80;
+-   11'd312: decode_row=16'h1f98;
+-   11'd313: decode_row=16'h1fd0;
+-   11'd314: decode_row=16'h200c;
+-   11'd315: decode_row=16'h2028;
+-   11'd316: decode_row=16'h20c4;
+-   11'd317: decode_row=16'h2144;
+-   11'd318: decode_row=16'h2160;
+-   11'd319: decode_row=16'h21c0;
+-   11'd320: decode_row=16'h2224;
+-   11'd321: decode_row=16'h227c;
+-   11'd322: decode_row=16'h2346;
+-   11'd323: decode_row=16'h2400;
+-   11'd324: decode_row=16'h2444;
+-   11'd325: decode_row=16'h2470;
+-   11'd326: decode_row=16'h2498;
+-   11'd327: decode_row=16'h2530;
+-   11'd328: decode_row=16'h264c;
+-   11'd329: decode_row=16'h26a4;
+-   11'd330: decode_row=16'h26fc;
+-   11'd331: decode_row=16'h2704;
+-   11'd332: decode_row=16'h2784;
+-   11'd333: decode_row=16'h27c4;
+-   11'd334: decode_row=16'h27fc;
+-   11'd335: decode_row=16'h2bc8;
+-   11'd336: decode_row=16'h2c20;
+-   11'd337: decode_row=16'h2d00;
+-   11'd338: decode_row=16'h2d2c;
+-   11'd339: decode_row=16'h2db4;
+-   11'd340: decode_row=16'h2ff8;
+-   11'd341: decode_row=16'h3006;
+-   11'd342: decode_row=16'h307c;
+-   11'd343: decode_row=16'h3080;
+-   11'd344: decode_row=16'h30fc;
+-   11'd345: decode_row=16'h3110;
+-   11'd346: decode_row=16'h3124;
+-   11'd347: decode_row=16'h31e0;
+-   11'd348: decode_row=16'h31f0;
+-   11'd349: decode_row=16'h324c;
+-   11'd350: decode_row=16'h3258;
+-   11'd351: decode_row=16'h3310;
+-   11'd352: decode_row=16'h3370;
+-   11'd353: decode_row=16'h33fe;
+-   11'd354: decode_row=16'h340c;
+-   11'd355: decode_row=16'h344c;
+-   11'd356: decode_row=16'h3488;
+-   11'd357: decode_row=16'h35fc;
+-   11'd358: decode_row=16'h3620;
+-   11'd359: decode_row=16'h3630;
+-   11'd360: decode_row=16'h3644;
+-   11'd361: decode_row=16'h3818;
+-   11'd362: decode_row=16'h3840;
+-   11'd363: decode_row=16'h3860;
+-   11'd364: decode_row=16'h38f0;
+-   11'd365: decode_row=16'h3998;
+-   11'd366: decode_row=16'h3bfc;
+-   11'd367: decode_row=16'h3c00;
+-   11'd368: decode_row=16'h3c3c;
+-   11'd369: decode_row=16'h3c60;
+-   11'd370: decode_row=16'h3d04;
+-   11'd371: decode_row=16'h3d68;
+-   11'd372: decode_row=16'h3da0;
+-   11'd373: decode_row=16'h3e08;
+-   11'd374: decode_row=16'h3e60;
+-   11'd375: decode_row=16'h3f40;
+-   11'd376: decode_row=16'h3f48;
+-   11'd377: decode_row=16'h3f60;
+-   11'd378: decode_row=16'h3f78;
+-   11'd379: decode_row=16'h3fc0;
+-   11'd380: decode_row=16'h4808;
+-   11'd381: decode_row=16'h5040;
+-   11'd382: decode_row=16'h5060;
+-   11'd383: decode_row=16'h57fe;
+-   11'd384: decode_row=16'h5904;
+-   11'd385: decode_row=16'h6086;
+-   11'd386: decode_row=16'h7040;
+-   11'd387: decode_row=16'h718e;
+-   11'd388: decode_row=16'h7204;
+-   11'd389: decode_row=16'h7208;
+-   11'd390: decode_row=16'h7304;
+-   11'd391: decode_row=16'h7306;
+-   11'd392: decode_row=16'h73f4;
+-   11'd393: decode_row=16'h73fe;
+-   11'd394: decode_row=16'h7446;
+-   11'd395: decode_row=16'h7524;
+-   11'd396: decode_row=16'h7704;
+-   11'd397: decode_row=16'h77fe;
+-   11'd398: decode_row=16'h7800;
+-   11'd399: decode_row=16'h7818;
+-   11'd400: decode_row=16'h7820;
+-   11'd401: decode_row=16'h7b04;
+-   11'd402: decode_row=16'h7c98;
+-   11'd403: decode_row=16'h7cc0;
+-   11'd404: decode_row=16'h7e98;
+-   11'd405: decode_row=16'h7f64;
+-   11'd406: decode_row=16'h7f7e;
+-   11'd407: decode_row=16'h7f84;
+-   11'd408: decode_row=16'h7fa4;
+-   11'd409: decode_row=16'hc30c;
+-   11'd410: decode_row=16'h4;
+-   11'd411: decode_row=16'h1c;
+-   11'd412: decode_row=16'h24;
+-   11'd413: decode_row=16'h38;
+-   11'd414: decode_row=16'h66;
+-   11'd415: decode_row=16'h78;
+-   11'd416: decode_row=16'h88;
+-   11'd417: decode_row=16'hb0;
+-   11'd418: decode_row=16'hcc;
+-   11'd419: decode_row=16'hf0;
+-   11'd420: decode_row=16'hfc;
+-   11'd421: decode_row=16'h108;
+-   11'd422: decode_row=16'h10c;
+-   11'd423: decode_row=16'h110;
+-   11'd424: decode_row=16'h120;
+-   11'd425: decode_row=16'h140;
+-   11'd426: decode_row=16'h146;
+-   11'd427: decode_row=16'h14c;
+-   11'd428: decode_row=16'h184;
+-   11'd429: decode_row=16'h186;
+-   11'd430: decode_row=16'h188;
+-   11'd431: decode_row=16'h1bc;
+-   11'd432: decode_row=16'h1cc;
+-   11'd433: decode_row=16'h1f0;
+-   11'd434: decode_row=16'h1f8;
+-   11'd435: decode_row=16'h1fe;
+-   11'd436: decode_row=16'h220;
+-   11'd437: decode_row=16'h22c;
+-   11'd438: decode_row=16'h244;
+-   11'd439: decode_row=16'h264;
+-   11'd440: decode_row=16'h282;
+-   11'd441: decode_row=16'h308;
+-   11'd442: decode_row=16'h320;
+-   11'd443: decode_row=16'h32c;
+-   11'd444: decode_row=16'h33c;
+-   11'd445: decode_row=16'h360;
+-   11'd446: decode_row=16'h378;
+-   11'd447: decode_row=16'h382;
+-   11'd448: decode_row=16'h386;
+-   11'd449: decode_row=16'h3f8;
+-   11'd450: decode_row=16'h404;
+-   11'd451: decode_row=16'h446;
+-   11'd452: decode_row=16'h47e;
+-   11'd453: decode_row=16'h480;
+-   11'd454: decode_row=16'h486;
+-   11'd455: decode_row=16'h4c8;
+-   11'd456: decode_row=16'h554;
+-   11'd457: decode_row=16'h590;
+-   11'd458: decode_row=16'h598;
+-   11'd459: decode_row=16'h5f4;
+-   11'd460: decode_row=16'h5f8;
+-   11'd461: decode_row=16'h618;
+-   11'd462: decode_row=16'h62c;
+-   11'd463: decode_row=16'h64a;
+-   11'd464: decode_row=16'h668;
+-   11'd465: decode_row=16'h6c0;
+-   11'd466: decode_row=16'h6e0;
+-   11'd467: decode_row=16'h6f0;
+-   11'd468: decode_row=16'h6fc;
+-   11'd469: decode_row=16'h720;
+-   11'd470: decode_row=16'h770;
+-   11'd471: decode_row=16'h784;
+-   11'd472: decode_row=16'h790;
+-   11'd473: decode_row=16'h7f8;
+-   11'd474: decode_row=16'h81c;
+-   11'd475: decode_row=16'h828;
+-   11'd476: decode_row=16'h83c;
+-   11'd477: decode_row=16'h83e;
+-   11'd478: decode_row=16'h848;
+-   11'd479: decode_row=16'h86c;
+-   11'd480: decode_row=16'h87c;
+-   11'd481: decode_row=16'h888;
+-   11'd482: decode_row=16'h890;
+-   11'd483: decode_row=16'h8a4;
+-   11'd484: decode_row=16'h8c4;
+-   11'd485: decode_row=16'h8c8;
+-   11'd486: decode_row=16'h8d8;
+-   11'd487: decode_row=16'h8f8;
+-   11'd488: decode_row=16'h900;
+-   11'd489: decode_row=16'h904;
+-   11'd490: decode_row=16'h918;
+-   11'd491: decode_row=16'h91c;
+-   11'd492: decode_row=16'h92e;
+-   11'd493: decode_row=16'h938;
+-   11'd494: decode_row=16'h96c;
+-   11'd495: decode_row=16'h988;
+-   11'd496: decode_row=16'h998;
+-   11'd497: decode_row=16'h9a4;
+-   11'd498: decode_row=16'h9b0;
+-   11'd499: decode_row=16'h9c0;
+-   11'd500: decode_row=16'h9f0;
+-   11'd501: decode_row=16'h9fe;
+-   11'd502: decode_row=16'ha04;
+-   11'd503: decode_row=16'ha48;
+-   11'd504: decode_row=16'ha50;
+-   11'd505: decode_row=16'hb00;
+-   11'd506: decode_row=16'hb06;
+-   11'd507: decode_row=16'hb0c;
+-   11'd508: decode_row=16'hb18;
+-   11'd509: decode_row=16'hbf0;
+-   11'd510: decode_row=16'hbf8;
+-   11'd511: decode_row=16'hc04;
+-   11'd512: decode_row=16'hc06;
+-   11'd513: decode_row=16'hc0c;
+-   11'd514: decode_row=16'hc22;
+-   11'd515: decode_row=16'hc26;
+-   11'd516: decode_row=16'hc3c;
+-   11'd517: decode_row=16'hc42;
+-   11'd518: decode_row=16'hc46;
+-   11'd519: decode_row=16'hc62;
+-   11'd520: decode_row=16'hc80;
+-   11'd521: decode_row=16'hc84;
+-   11'd522: decode_row=16'hc88;
+-   11'd523: decode_row=16'hc90;
+-   11'd524: decode_row=16'hca0;
+-   11'd525: decode_row=16'hca8;
+-   11'd526: decode_row=16'hcf8;
+-   11'd527: decode_row=16'hd30;
+-   11'd528: decode_row=16'hdb2;
+-   11'd529: decode_row=16'hdb8;
+-   11'd530: decode_row=16'hdcc;
+-   11'd531: decode_row=16'he06;
+-   11'd532: decode_row=16'he20;
+-   11'd533: decode_row=16'he4c;
+-   11'd534: decode_row=16'he70;
+-   11'd535: decode_row=16'hee0;
+-   11'd536: decode_row=16'hef0;
+-   11'd537: decode_row=16'hf04;
+-   11'd538: decode_row=16'hf0e;
+-   11'd539: decode_row=16'hf24;
+-   11'd540: decode_row=16'hf84;
+-   11'd541: decode_row=16'hfb0;
+-   11'd542: decode_row=16'hff4;
+-   11'd543: decode_row=16'h1006;
+-   11'd544: decode_row=16'h100c;
+-   11'd545: decode_row=16'h1024;
+-   11'd546: decode_row=16'h103c;
+-   11'd547: decode_row=16'h1042;
+-   11'd548: decode_row=16'h1044;
+-   11'd549: decode_row=16'h1050;
+-   11'd550: decode_row=16'h1064;
+-   11'd551: decode_row=16'h108c;
+-   11'd552: decode_row=16'h10a0;
+-   11'd553: decode_row=16'h10b0;
+-   11'd554: decode_row=16'h10c6;
+-   11'd555: decode_row=16'h10c8;
+-   11'd556: decode_row=16'h10e0;
+-   11'd557: decode_row=16'h10f8;
+-   11'd558: decode_row=16'h1108;
+-   11'd559: decode_row=16'h1114;
+-   11'd560: decode_row=16'h1130;
+-   11'd561: decode_row=16'h1136;
+-   11'd562: decode_row=16'h1138;
+-   11'd563: decode_row=16'h1150;
+-   11'd564: decode_row=16'h116c;
+-   11'd565: decode_row=16'h1180;
+-   11'd566: decode_row=16'h11a2;
+-   11'd567: decode_row=16'h11b0;
+-   11'd568: decode_row=16'h11c0;
+-   11'd569: decode_row=16'h11c8;
+-   11'd570: decode_row=16'h11e8;
+-   11'd571: decode_row=16'h11f0;
+-   11'd572: decode_row=16'h1200;
+-   11'd573: decode_row=16'h1206;
+-   11'd574: decode_row=16'h1208;
+-   11'd575: decode_row=16'h1210;
+-   11'd576: decode_row=16'h1214;
+-   11'd577: decode_row=16'h1218;
+-   11'd578: decode_row=16'h122c;
+-   11'd579: decode_row=16'h1230;
+-   11'd580: decode_row=16'h1244;
+-   11'd581: decode_row=16'h1250;
+-   11'd582: decode_row=16'h1258;
+-   11'd583: decode_row=16'h1260;
+-   11'd584: decode_row=16'h1268;
+-   11'd585: decode_row=16'h1278;
+-   11'd586: decode_row=16'h127c;
+-   11'd587: decode_row=16'h1284;
+-   11'd588: decode_row=16'h1294;
+-   11'd589: decode_row=16'h12b4;
+-   11'd590: decode_row=16'h12c4;
+-   11'd591: decode_row=16'h12c8;
+-   11'd592: decode_row=16'h12d8;
+-   11'd593: decode_row=16'h12f0;
+-   11'd594: decode_row=16'h12f4;
+-   11'd595: decode_row=16'h12f8;
+-   11'd596: decode_row=16'h1306;
+-   11'd597: decode_row=16'h1318;
+-   11'd598: decode_row=16'h1320;
+-   11'd599: decode_row=16'h1326;
+-   11'd600: decode_row=16'h1336;
+-   11'd601: decode_row=16'h1344;
+-   11'd602: decode_row=16'h135e;
+-   11'd603: decode_row=16'h1364;
+-   11'd604: decode_row=16'h1366;
+-   11'd605: decode_row=16'h136c;
+-   11'd606: decode_row=16'h1388;
+-   11'd607: decode_row=16'h138c;
+-   11'd608: decode_row=16'h1392;
+-   11'd609: decode_row=16'h1398;
+-   11'd610: decode_row=16'h13a4;
+-   11'd611: decode_row=16'h13b8;
+-   11'd612: decode_row=16'h13c4;
+-   11'd613: decode_row=16'h13d8;
+-   11'd614: decode_row=16'h1400;
+-   11'd615: decode_row=16'h1408;
+-   11'd616: decode_row=16'h1414;
+-   11'd617: decode_row=16'h1444;
+-   11'd618: decode_row=16'h1446;
+-   11'd619: decode_row=16'h1470;
+-   11'd620: decode_row=16'h1478;
+-   11'd621: decode_row=16'h1488;
+-   11'd622: decode_row=16'h14dc;
+-   11'd623: decode_row=16'h1504;
+-   11'd624: decode_row=16'h1512;
+-   11'd625: decode_row=16'h159a;
+-   11'd626: decode_row=16'h15dc;
+-   11'd627: decode_row=16'h15fc;
+-   11'd628: decode_row=16'h1606;
+-   11'd629: decode_row=16'h1608;
+-   11'd630: decode_row=16'h160c;
+-   11'd631: decode_row=16'h1610;
+-   11'd632: decode_row=16'h1632;
+-   11'd633: decode_row=16'h163c;
+-   11'd634: decode_row=16'h1640;
+-   11'd635: decode_row=16'h1648;
+-   11'd636: decode_row=16'h1664;
+-   11'd637: decode_row=16'h1666;
+-   11'd638: decode_row=16'h1684;
+-   11'd639: decode_row=16'h16a4;
+-   11'd640: decode_row=16'h16bc;
+-   11'd641: decode_row=16'h16ec;
+-   11'd642: decode_row=16'h16f8;
+-   11'd643: decode_row=16'h1700;
+-   11'd644: decode_row=16'h1704;
+-   11'd645: decode_row=16'h170c;
+-   11'd646: decode_row=16'h170e;
+-   11'd647: decode_row=16'h1720;
+-   11'd648: decode_row=16'h1750;
+-   11'd649: decode_row=16'h17d4;
+-   11'd650: decode_row=16'h17d8;
+-   11'd651: decode_row=16'h17e4;
+-   11'd652: decode_row=16'h17f0;
+-   11'd653: decode_row=16'h1808;
+-   11'd654: decode_row=16'h180c;
+-   11'd655: decode_row=16'h1862;
+-   11'd656: decode_row=16'h1864;
+-   11'd657: decode_row=16'h1878;
+-   11'd658: decode_row=16'h187c;
+-   11'd659: decode_row=16'h1888;
+-   11'd660: decode_row=16'h189c;
+-   11'd661: decode_row=16'h18a8;
+-   11'd662: decode_row=16'h18c8;
+-   11'd663: decode_row=16'h18cc;
+-   11'd664: decode_row=16'h18d0;
+-   11'd665: decode_row=16'h18d2;
+-   11'd666: decode_row=16'h18dc;
+-   11'd667: decode_row=16'h18fc;
+-   11'd668: decode_row=16'h1908;
+-   11'd669: decode_row=16'h1912;
+-   11'd670: decode_row=16'h1920;
+-   11'd671: decode_row=16'h1924;
+-   11'd672: decode_row=16'h193c;
+-   11'd673: decode_row=16'h196c;
+-   11'd674: decode_row=16'h1980;
+-   11'd675: decode_row=16'h199a;
+-   11'd676: decode_row=16'h19a8;
+-   11'd677: decode_row=16'h19b2;
+-   11'd678: decode_row=16'h19c0;
+-   11'd679: decode_row=16'h19d0;
+-   11'd680: decode_row=16'h19d8;
+-   11'd681: decode_row=16'h19de;
+-   11'd682: decode_row=16'h19e6;
+-   11'd683: decode_row=16'h19fe;
+-   11'd684: decode_row=16'h1a00;
+-   11'd685: decode_row=16'h1a08;
+-   11'd686: decode_row=16'h1a20;
+-   11'd687: decode_row=16'h1a38;
+-   11'd688: decode_row=16'h1a48;
+-   11'd689: decode_row=16'h1b0c;
+-   11'd690: decode_row=16'h1b10;
+-   11'd691: decode_row=16'h1b18;
+-   11'd692: decode_row=16'h1b36;
+-   11'd693: decode_row=16'h1ba4;
+-   11'd694: decode_row=16'h1bc0;
+-   11'd695: decode_row=16'h1bf0;
+-   11'd696: decode_row=16'h1bf8;
+-   11'd697: decode_row=16'h1bfe;
+-   11'd698: decode_row=16'h1c08;
+-   11'd699: decode_row=16'h1c0c;
+-   11'd700: decode_row=16'h1c10;
+-   11'd701: decode_row=16'h1c24;
+-   11'd702: decode_row=16'h1c50;
+-   11'd703: decode_row=16'h1c70;
+-   11'd704: decode_row=16'h1c88;
+-   11'd705: decode_row=16'h1c90;
+-   11'd706: decode_row=16'h1cc6;
+-   11'd707: decode_row=16'h1d54;
+-   11'd708: decode_row=16'h1d98;
+-   11'd709: decode_row=16'h1df8;
+-   11'd710: decode_row=16'h1e08;
+-   11'd711: decode_row=16'h1e18;
+-   11'd712: decode_row=16'h1e24;
+-   11'd713: decode_row=16'h1e48;
+-   11'd714: decode_row=16'h1e4c;
+-   11'd715: decode_row=16'h1e64;
+-   11'd716: decode_row=16'h1e7c;
+-   11'd717: decode_row=16'h1ec4;
+-   11'd718: decode_row=16'h1ef4;
+-   11'd719: decode_row=16'h1f00;
+-   11'd720: decode_row=16'h1f0e;
+-   11'd721: decode_row=16'h1f10;
+-   11'd722: decode_row=16'h1f1c;
+-   11'd723: decode_row=16'h1f20;
+-   11'd724: decode_row=16'h1f48;
+-   11'd725: decode_row=16'h1f60;
+-   11'd726: decode_row=16'h1f6c;
+-   11'd727: decode_row=16'h1f84;
+-   11'd728: decode_row=16'h1f94;
+-   11'd729: decode_row=16'h1fb4;
+-   11'd730: decode_row=16'h1fd8;
+-   11'd731: decode_row=16'h1fe0;
+-   11'd732: decode_row=16'h201c;
+-   11'd733: decode_row=16'h2020;
+-   11'd734: decode_row=16'h2034;
+-   11'd735: decode_row=16'h2060;
+-   11'd736: decode_row=16'h2074;
+-   11'd737: decode_row=16'h207c;
+-   11'd738: decode_row=16'h2086;
+-   11'd739: decode_row=16'h208c;
+-   11'd740: decode_row=16'h2094;
+-   11'd741: decode_row=16'h20bc;
+-   11'd742: decode_row=16'h20e0;
+-   11'd743: decode_row=16'h20f0;
+-   11'd744: decode_row=16'h20f8;
+-   11'd745: decode_row=16'h20fe;
+-   11'd746: decode_row=16'h2100;
+-   11'd747: decode_row=16'h210c;
+-   11'd748: decode_row=16'h2110;
+-   11'd749: decode_row=16'h2114;
+-   11'd750: decode_row=16'h2128;
+-   11'd751: decode_row=16'h2134;
+-   11'd752: decode_row=16'h214c;
+-   11'd753: decode_row=16'h2164;
+-   11'd754: decode_row=16'h2166;
+-   11'd755: decode_row=16'h217c;
+-   11'd756: decode_row=16'h218c;
+-   11'd757: decode_row=16'h21b0;
+-   11'd758: decode_row=16'h21bc;
+-   11'd759: decode_row=16'h21c6;
+-   11'd760: decode_row=16'h21e0;
+-   11'd761: decode_row=16'h21e4;
+-   11'd762: decode_row=16'h2200;
+-   11'd763: decode_row=16'h2208;
+-   11'd764: decode_row=16'h2220;
+-   11'd765: decode_row=16'h223c;
+-   11'd766: decode_row=16'h2240;
+-   11'd767: decode_row=16'h2262;
+-   11'd768: decode_row=16'h2284;
+-   11'd769: decode_row=16'h2286;
+-   11'd770: decode_row=16'h2300;
+-   11'd771: decode_row=16'h2304;
+-   11'd772: decode_row=16'h2308;
+-   11'd773: decode_row=16'h2320;
+-   11'd774: decode_row=16'h233c;
+-   11'd775: decode_row=16'h2340;
+-   11'd776: decode_row=16'h2358;
+-   11'd777: decode_row=16'h2370;
+-   11'd778: decode_row=16'h23c0;
+-   11'd779: decode_row=16'h23c4;
+-   11'd780: decode_row=16'h23e6;
+-   11'd781: decode_row=16'h23e8;
+-   11'd782: decode_row=16'h2406;
+-   11'd783: decode_row=16'h240c;
+-   11'd784: decode_row=16'h240e;
+-   11'd785: decode_row=16'h2436;
+-   11'd786: decode_row=16'h243c;
+-   11'd787: decode_row=16'h2440;
+-   11'd788: decode_row=16'h2448;
+-   11'd789: decode_row=16'h2450;
+-   11'd790: decode_row=16'h2478;
+-   11'd791: decode_row=16'h2488;
+-   11'd792: decode_row=16'h24a8;
+-   11'd793: decode_row=16'h24bc;
+-   11'd794: decode_row=16'h24c4;
+-   11'd795: decode_row=16'h24f0;
+-   11'd796: decode_row=16'h24fe;
+-   11'd797: decode_row=16'h2504;
+-   11'd798: decode_row=16'h2508;
+-   11'd799: decode_row=16'h2520;
+-   11'd800: decode_row=16'h2538;
+-   11'd801: decode_row=16'h2544;
+-   11'd802: decode_row=16'h2554;
+-   11'd803: decode_row=16'h258c;
+-   11'd804: decode_row=16'h25a0;
+-   11'd805: decode_row=16'h25a8;
+-   11'd806: decode_row=16'h25d8;
+-   11'd807: decode_row=16'h25e0;
+-   11'd808: decode_row=16'h25e4;
+-   11'd809: decode_row=16'h25f8;
+-   11'd810: decode_row=16'h25fe;
+-   11'd811: decode_row=16'h2600;
+-   11'd812: decode_row=16'h2618;
+-   11'd813: decode_row=16'h2648;
+-   11'd814: decode_row=16'h267e;
+-   11'd815: decode_row=16'h26c4;
+-   11'd816: decode_row=16'h26c8;
+-   11'd817: decode_row=16'h2700;
+-   11'd818: decode_row=16'h2720;
+-   11'd819: decode_row=16'h2738;
+-   11'd820: decode_row=16'h273c;
+-   11'd821: decode_row=16'h2740;
+-   11'd822: decode_row=16'h27b0;
+-   11'd823: decode_row=16'h27c6;
+-   11'd824: decode_row=16'h27f4;
+-   11'd825: decode_row=16'h2800;
+-   11'd826: decode_row=16'h280c;
+-   11'd827: decode_row=16'h2830;
+-   11'd828: decode_row=16'h2848;
+-   11'd829: decode_row=16'h285c;
+-   11'd830: decode_row=16'h2860;
+-   11'd831: decode_row=16'h2880;
+-   11'd832: decode_row=16'h28a4;
+-   11'd833: decode_row=16'h2920;
+-   11'd834: decode_row=16'h293e;
+-   11'd835: decode_row=16'h294c;
+-   11'd836: decode_row=16'h2954;
+-   11'd837: decode_row=16'h2964;
+-   11'd838: decode_row=16'h299c;
+-   11'd839: decode_row=16'h2a06;
+-   11'd840: decode_row=16'h2a48;
+-   11'd841: decode_row=16'h2a58;
+-   11'd842: decode_row=16'h2a70;
+-   11'd843: decode_row=16'h2afe;
+-   11'd844: decode_row=16'h2b6c;
+-   11'd845: decode_row=16'h2be4;
+-   11'd846: decode_row=16'h2c1c;
+-   11'd847: decode_row=16'h2cb0;
+-   11'd848: decode_row=16'h2d34;
+-   11'd849: decode_row=16'h2d3a;
+-   11'd850: decode_row=16'h2d6c;
+-   11'd851: decode_row=16'h2d7e;
+-   11'd852: decode_row=16'h2da4;
+-   11'd853: decode_row=16'h2dc6;
+-   11'd854: decode_row=16'h2df4;
+-   11'd855: decode_row=16'h2df8;
+-   11'd856: decode_row=16'h2dfc;
+-   11'd857: decode_row=16'h2e24;
+-   11'd858: decode_row=16'h2e34;
+-   11'd859: decode_row=16'h2e48;
+-   11'd860: decode_row=16'h2e7c;
+-   11'd861: decode_row=16'h2ec4;
+-   11'd862: decode_row=16'h2ec8;
+-   11'd863: decode_row=16'h2f04;
+-   11'd864: decode_row=16'h2f40;
+-   11'd865: decode_row=16'h2f74;
+-   11'd866: decode_row=16'h2f84;
+-   11'd867: decode_row=16'h2fac;
+-   11'd868: decode_row=16'h2fd4;
+-   11'd869: decode_row=16'h2fe0;
+-   11'd870: decode_row=16'h2fe4;
+-   11'd871: decode_row=16'h300e;
+-   11'd872: decode_row=16'h3018;
+-   11'd873: decode_row=16'h301c;
+-   11'd874: decode_row=16'h3024;
+-   11'd875: decode_row=16'h3030;
+-   11'd876: decode_row=16'h3058;
+-   11'd877: decode_row=16'h3070;
+-   11'd878: decode_row=16'h3078;
+-   11'd879: decode_row=16'h3084;
+-   11'd880: decode_row=16'h30b0;
+-   11'd881: decode_row=16'h30dc;
+-   11'd882: decode_row=16'h3104;
+-   11'd883: decode_row=16'h310c;
+-   11'd884: decode_row=16'h3118;
+-   11'd885: decode_row=16'h3140;
+-   11'd886: decode_row=16'h314c;
+-   11'd887: decode_row=16'h3186;
+-   11'd888: decode_row=16'h318e;
+-   11'd889: decode_row=16'h319c;
+-   11'd890: decode_row=16'h31fe;
+-   11'd891: decode_row=16'h3204;
+-   11'd892: decode_row=16'h3208;
+-   11'd893: decode_row=16'h320c;
+-   11'd894: decode_row=16'h3218;
+-   11'd895: decode_row=16'h3240;
+-   11'd896: decode_row=16'h3260;
+-   11'd897: decode_row=16'h3264;
+-   11'd898: decode_row=16'h3268;
+-   11'd899: decode_row=16'h326c;
+-   11'd900: decode_row=16'h32c0;
+-   11'd901: decode_row=16'h32c8;
+-   11'd902: decode_row=16'h32cc;
+-   11'd903: decode_row=16'h3300;
+-   11'd904: decode_row=16'h3314;
+-   11'd905: decode_row=16'h3318;
+-   11'd906: decode_row=16'h3320;
+-   11'd907: decode_row=16'h3330;
+-   11'd908: decode_row=16'h3332;
+-   11'd909: decode_row=16'h3336;
+-   11'd910: decode_row=16'h3358;
+-   11'd911: decode_row=16'h3360;
+-   11'd912: decode_row=16'h3368;
+-   11'd913: decode_row=16'h3378;
+-   11'd914: decode_row=16'h3388;
+-   11'd915: decode_row=16'h33c0;
+-   11'd916: decode_row=16'h33cc;
+-   11'd917: decode_row=16'h33f0;
+-   11'd918: decode_row=16'h33f8;
+-   11'd919: decode_row=16'h3404;
+-   11'd920: decode_row=16'h3408;
+-   11'd921: decode_row=16'h3410;
+-   11'd922: decode_row=16'h3420;
+-   11'd923: decode_row=16'h3428;
+-   11'd924: decode_row=16'h3448;
+-   11'd925: decode_row=16'h3450;
+-   11'd926: decode_row=16'h3454;
+-   11'd927: decode_row=16'h345c;
+-   11'd928: decode_row=16'h348e;
+-   11'd929: decode_row=16'h34f4;
+-   11'd930: decode_row=16'h34f8;
+-   11'd931: decode_row=16'h3508;
+-   11'd932: decode_row=16'h3520;
+-   11'd933: decode_row=16'h3548;
+-   11'd934: decode_row=16'h3558;
+-   11'd935: decode_row=16'h3580;
+-   11'd936: decode_row=16'h35ac;
+-   11'd937: decode_row=16'h35b0;
+-   11'd938: decode_row=16'h35dc;
+-   11'd939: decode_row=16'h3604;
+-   11'd940: decode_row=16'h3608;
+-   11'd941: decode_row=16'h3618;
+-   11'd942: decode_row=16'h3624;
+-   11'd943: decode_row=16'h362c;
+-   11'd944: decode_row=16'h3648;
+-   11'd945: decode_row=16'h364c;
+-   11'd946: decode_row=16'h3664;
+-   11'd947: decode_row=16'h3668;
+-   11'd948: decode_row=16'h3694;
+-   11'd949: decode_row=16'h36a4;
+-   11'd950: decode_row=16'h3704;
+-   11'd951: decode_row=16'h37d4;
+-   11'd952: decode_row=16'h3804;
+-   11'd953: decode_row=16'h380c;
+-   11'd954: decode_row=16'h381e;
+-   11'd955: decode_row=16'h3838;
+-   11'd956: decode_row=16'h383c;
+-   11'd957: decode_row=16'h3866;
+-   11'd958: decode_row=16'h389c;
+-   11'd959: decode_row=16'h38ca;
+-   11'd960: decode_row=16'h38fe;
+-   11'd961: decode_row=16'h3904;
+-   11'd962: decode_row=16'h3908;
+-   11'd963: decode_row=16'h3938;
+-   11'd964: decode_row=16'h396c;
+-   11'd965: decode_row=16'h3980;
+-   11'd966: decode_row=16'h3986;
+-   11'd967: decode_row=16'h3a0c;
+-   11'd968: decode_row=16'h3a64;
+-   11'd969: decode_row=16'h3a6c;
+-   11'd970: decode_row=16'h3b08;
+-   11'd971: decode_row=16'h3bac;
+-   11'd972: decode_row=16'h3bb2;
+-   11'd973: decode_row=16'h3bfe;
+-   11'd974: decode_row=16'h3c04;
+-   11'd975: decode_row=16'h3c08;
+-   11'd976: decode_row=16'h3c18;
+-   11'd977: decode_row=16'h3c1c;
+-   11'd978: decode_row=16'h3c28;
+-   11'd979: decode_row=16'h3c2c;
+-   11'd980: decode_row=16'h3c44;
+-   11'd981: decode_row=16'h3c50;
+-   11'd982: decode_row=16'h3c70;
+-   11'd983: decode_row=16'h3c7c;
+-   11'd984: decode_row=16'h3c88;
+-   11'd985: decode_row=16'h3c90;
+-   11'd986: decode_row=16'h3cb4;
+-   11'd987: decode_row=16'h3cc8;
+-   11'd988: decode_row=16'h3d10;
+-   11'd989: decode_row=16'h3d20;
+-   11'd990: decode_row=16'h3d24;
+-   11'd991: decode_row=16'h3d2c;
+-   11'd992: decode_row=16'h3d6c;
+-   11'd993: decode_row=16'h3d84;
+-   11'd994: decode_row=16'h3d8c;
+-   11'd995: decode_row=16'h3dac;
+-   11'd996: decode_row=16'h3de0;
+-   11'd997: decode_row=16'h3e0c;
+-   11'd998: decode_row=16'h3e20;
+-   11'd999: decode_row=16'h3e24;
+-   11'd1000: decode_row=16'h3e3c;
+-   11'd1001: decode_row=16'h3e40;
+-   11'd1002: decode_row=16'h3e64;
+-   11'd1003: decode_row=16'h3e7c;
+-   11'd1004: decode_row=16'h3e84;
+-   11'd1005: decode_row=16'h3e86;
+-   11'd1006: decode_row=16'h3e88;
+-   11'd1007: decode_row=16'h3e94;
+-   11'd1008: decode_row=16'h3e98;
+-   11'd1009: decode_row=16'h3ecc;
+-   11'd1010: decode_row=16'h3ef8;
+-   11'd1011: decode_row=16'h3efc;
+-   11'd1012: decode_row=16'h3f00;
+-   11'd1013: decode_row=16'h3f04;
+-   11'd1014: decode_row=16'h3f06;
+-   11'd1015: decode_row=16'h3f62;
+-   11'd1016: decode_row=16'h3f70;
+-   11'd1017: decode_row=16'h3f88;
+-   11'd1018: decode_row=16'h3fb4;
+-   11'd1019: decode_row=16'h3fb8;
+-   11'd1020: decode_row=16'h3fbc;
+-   11'd1021: decode_row=16'h3fc2;
+-   11'd1022: decode_row=16'h3fc4;
+-   11'd1023: decode_row=16'h3fe4;
+-   11'd1024: decode_row=16'h3fe6;
+-   11'd1025: decode_row=16'h3fec;
+-   11'd1026: decode_row=16'h3ff6;
+-   11'd1027: decode_row=16'h4000;
+-   11'd1028: decode_row=16'h4078;
+-   11'd1029: decode_row=16'h418c;
+-   11'd1030: decode_row=16'h41fe;
+-   11'd1031: decode_row=16'h4318;
+-   11'd1032: decode_row=16'h4340;
+-   11'd1033: decode_row=16'h4388;
+-   11'd1034: decode_row=16'h43fe;
+-   11'd1035: decode_row=16'h4404;
+-   11'd1036: decode_row=16'h440c;
+-   11'd1037: decode_row=16'h4490;
+-   11'd1038: decode_row=16'h4554;
+-   11'd1039: decode_row=16'h4590;
+-   11'd1040: decode_row=16'h460c;
+-   11'd1041: decode_row=16'h461c;
+-   11'd1042: decode_row=16'h4620;
+-   11'd1043: decode_row=16'h4686;
+-   11'd1044: decode_row=16'h4bc6;
+-   11'd1045: decode_row=16'h4c0e;
+-   11'd1046: decode_row=16'h4c24;
+-   11'd1047: decode_row=16'h4c46;
+-   11'd1048: decode_row=16'h4ffe;
+-   11'd1049: decode_row=16'h5080;
+-   11'd1050: decode_row=16'h5114;
+-   11'd1051: decode_row=16'h5118;
+-   11'd1052: decode_row=16'h516c;
+-   11'd1053: decode_row=16'h51cc;
+-   11'd1054: decode_row=16'h51fc;
+-   11'd1055: decode_row=16'h5208;
+-   11'd1056: decode_row=16'h520c;
+-   11'd1057: decode_row=16'h5220;
+-   11'd1058: decode_row=16'h522c;
+-   11'd1059: decode_row=16'h5264;
+-   11'd1060: decode_row=16'h52a8;
+-   11'd1061: decode_row=16'h5310;
+-   11'd1062: decode_row=16'h53ac;
+-   11'd1063: decode_row=16'h53fe;
+-   11'd1064: decode_row=16'h5420;
+-   11'd1065: decode_row=16'h5820;
+-   11'd1066: decode_row=16'h5830;
+-   11'd1067: decode_row=16'h5840;
+-   11'd1068: decode_row=16'h5988;
+-   11'd1069: decode_row=16'h59c0;
+-   11'd1070: decode_row=16'h5b0c;
+-   11'd1071: decode_row=16'h5bfc;
+-   11'd1072: decode_row=16'h5e1c;
+-   11'd1073: decode_row=16'h5ed8;
+-   11'd1074: decode_row=16'h5f06;
+-   11'd1075: decode_row=16'h6000;
+-   11'd1076: decode_row=16'h6040;
+-   11'd1077: decode_row=16'h6060;
+-   11'd1078: decode_row=16'h607c;
+-   11'd1079: decode_row=16'h6080;
+-   11'd1080: decode_row=16'h6090;
+-   11'd1081: decode_row=16'h60e0;
+-   11'd1082: decode_row=16'h6104;
+-   11'd1083: decode_row=16'h6106;
+-   11'd1084: decode_row=16'h6180;
+-   11'd1085: decode_row=16'h6184;
+-   11'd1086: decode_row=16'h61e0;
+-   11'd1087: decode_row=16'h6222;
+-   11'd1088: decode_row=16'h6264;
+-   11'd1089: decode_row=16'h6388;
+-   11'd1090: decode_row=16'h63e0;
+-   11'd1091: decode_row=16'h63f0;
+-   11'd1092: decode_row=16'h63fc;
+-   11'd1093: decode_row=16'h63fe;
+-   11'd1094: decode_row=16'h6410;
+-   11'd1095: decode_row=16'h641e;
+-   11'd1096: decode_row=16'h647e;
+-   11'd1097: decode_row=16'h6490;
+-   11'd1098: decode_row=16'h64e0;
+-   11'd1099: decode_row=16'h658c;
+-   11'd1100: decode_row=16'h65ec;
+-   11'd1101: decode_row=16'h6698;
+-   11'd1102: decode_row=16'h6706;
+-   11'd1103: decode_row=16'h676c;
+-   11'd1104: decode_row=16'h6816;
+-   11'd1105: decode_row=16'h6860;
+-   11'd1106: decode_row=16'h686e;
+-   11'd1107: decode_row=16'h6890;
+-   11'd1108: decode_row=16'h69fc;
+-   11'd1109: decode_row=16'h6b88;
+-   11'd1110: decode_row=16'h6c44;
+-   11'd1111: decode_row=16'h6c60;
+-   11'd1112: decode_row=16'h6ce6;
+-   11'd1113: decode_row=16'h6d98;
+-   11'd1114: decode_row=16'h6da4;
+-   11'd1115: decode_row=16'h6ed6;
+-   11'd1116: decode_row=16'h6f3c;
+-   11'd1117: decode_row=16'h6ff4;
+-   11'd1118: decode_row=16'h6ffc;
+-   11'd1119: decode_row=16'h7000;
+-   11'd1120: decode_row=16'h7006;
+-   11'd1121: decode_row=16'h700c;
+-   11'd1122: decode_row=16'h700e;
+-   11'd1123: decode_row=16'h7018;
+-   11'd1124: decode_row=16'h7070;
+-   11'd1125: decode_row=16'h7078;
+-   11'd1126: decode_row=16'h707c;
+-   11'd1127: decode_row=16'h7084;
+-   11'd1128: decode_row=16'h70c0;
+-   11'd1129: decode_row=16'h70fc;
+-   11'd1130: decode_row=16'h7104;
+-   11'd1131: decode_row=16'h7110;
+-   11'd1132: decode_row=16'h7174;
+-   11'd1133: decode_row=16'h718c;
+-   11'd1134: decode_row=16'h71fc;
+-   11'd1135: decode_row=16'h7240;
+-   11'd1136: decode_row=16'h7244;
+-   11'd1137: decode_row=16'h7248;
+-   11'd1138: decode_row=16'h7268;
+-   11'd1139: decode_row=16'h726c;
+-   11'd1140: decode_row=16'h7384;
+-   11'd1141: decode_row=16'h738c;
+-   11'd1142: decode_row=16'h73a4;
+-   11'd1143: decode_row=16'h73f8;
+-   11'd1144: decode_row=16'h747e;
+-   11'd1145: decode_row=16'h75fc;
+-   11'd1146: decode_row=16'h7604;
+-   11'd1147: decode_row=16'h768c;
+-   11'd1148: decode_row=16'h776c;
+-   11'd1149: decode_row=16'h780c;
+-   11'd1150: decode_row=16'h781c;
+-   11'd1151: decode_row=16'h7860;
+-   11'd1152: decode_row=16'h7870;
+-   11'd1153: decode_row=16'h7884;
+-   11'd1154: decode_row=16'h7888;
+-   11'd1155: decode_row=16'h78c4;
+-   11'd1156: decode_row=16'h78e0;
+-   11'd1157: decode_row=16'h7924;
+-   11'd1158: decode_row=16'h79f8;
+-   11'd1159: decode_row=16'h7b08;
+-   11'd1160: decode_row=16'h7bfe;
+-   11'd1161: decode_row=16'h7c00;
+-   11'd1162: decode_row=16'h7c04;
+-   11'd1163: decode_row=16'h7c08;
+-   11'd1164: decode_row=16'h7c24;
+-   11'd1165: decode_row=16'h7c40;
+-   11'd1166: decode_row=16'h7c84;
+-   11'd1167: decode_row=16'h7d18;
+-   11'd1168: decode_row=16'h7d26;
+-   11'd1169: decode_row=16'h7d6c;
+-   11'd1170: decode_row=16'h7d8c;
+-   11'd1171: decode_row=16'h7d90;
+-   11'd1172: decode_row=16'h7df8;
+-   11'd1173: decode_row=16'h7e06;
+-   11'd1174: decode_row=16'h7e08;
+-   11'd1175: decode_row=16'h7e20;
+-   11'd1176: decode_row=16'h7e3c;
+-   11'd1177: decode_row=16'h7e40;
+-   11'd1178: decode_row=16'h7e58;
+-   11'd1179: decode_row=16'h7e8c;
+-   11'd1180: decode_row=16'h7e94;
+-   11'd1181: decode_row=16'h7f06;
+-   11'd1182: decode_row=16'h7f38;
+-   11'd1183: decode_row=16'h7f44;
+-   11'd1184: decode_row=16'h7f66;
+-   11'd1185: decode_row=16'h7f7c;
+-   11'd1186: decode_row=16'h7fbc;
+-   11'd1187: decode_row=16'h7fc4;
+-   11'd1188: decode_row=16'h7fcc;
+-   11'd1189: decode_row=16'h7fe4;
+-   11'd1190: decode_row=16'h7fe8;
+-   11'd1191: decode_row=16'h7fec;
++   11'd86: decode_row=16'hc40;
++   11'd87: decode_row=16'h1004;
++   11'd88: decode_row=16'h1304;
++   11'd89: decode_row=16'h1800;
++   11'd90: decode_row=16'h1820;
++   11'd91: decode_row=16'h1998;
++   11'd92: decode_row=16'h2464;
++   11'd93: decode_row=16'h3fe0;
++   11'd94: decode_row=16'h18;
++   11'd95: decode_row=16'h1c0;
++   11'd96: decode_row=16'h810;
++   11'd97: decode_row=16'h820;
++   11'd98: decode_row=16'h860;
++   11'd99: decode_row=16'hce0;
++   11'd100: decode_row=16'hf00;
++   11'd101: decode_row=16'h1080;
++   11'd102: decode_row=16'h1098;
++   11'd103: decode_row=16'h1100;
++   11'd104: decode_row=16'h1104;
++   11'd105: decode_row=16'h1198;
++   11'd106: decode_row=16'h19fc;
++   11'd107: decode_row=16'h2204;
++   11'd108: decode_row=16'h25fc;
++   11'd109: decode_row=16'h33fc;
++   11'd110: decode_row=16'h381c;
++   11'd111: decode_row=16'h3f24;
++   11'd112: decode_row=16'h73fc;
++   11'd113: decode_row=16'hc0;
++   11'd114: decode_row=16'h5a0;
++   11'd115: decode_row=16'h700;
++   11'd116: decode_row=16'h780;
++   11'd117: decode_row=16'h808;
++   11'd118: decode_row=16'he60;
++   11'd119: decode_row=16'hf80;
++   11'd120: decode_row=16'h1090;
++   11'd121: decode_row=16'h10f0;
++   11'd122: decode_row=16'h110c;
++   11'd123: decode_row=16'h1118;
++   11'd124: decode_row=16'h1190;
++   11'd125: decode_row=16'h11f8;
++   11'd126: decode_row=16'h1300;
++   11'd127: decode_row=16'h1330;
++   11'd128: decode_row=16'h1870;
++   11'd129: decode_row=16'h1990;
++   11'd130: decode_row=16'h1c20;
++   11'd131: decode_row=16'h1c38;
++   11'd132: decode_row=16'h1e38;
++   11'd133: decode_row=16'h1ff0;
++   11'd134: decode_row=16'h2000;
++   11'd135: decode_row=16'h203c;
++   11'd136: decode_row=16'h2080;
++   11'd137: decode_row=16'h2084;
++   11'd138: decode_row=16'h2104;
++   11'd139: decode_row=16'h2124;
++   11'd140: decode_row=16'h2180;
++   11'd141: decode_row=16'h2244;
++   11'd142: decode_row=16'h2404;
++   11'd143: decode_row=16'h27fe;
++   11'd144: decode_row=16'h2fa4;
++   11'd145: decode_row=16'h2ff4;
++   11'd146: decode_row=16'h3004;
++   11'd147: decode_row=16'h3008;
++   11'd148: decode_row=16'h3040;
++   11'd149: decode_row=16'h3220;
++   11'd150: decode_row=16'h3800;
++   11'd151: decode_row=16'h3c20;
++   11'd152: decode_row=16'h3dfc;
++   11'd153: decode_row=16'h3fa4;
++   11'd154: decode_row=16'h5ffe;
++   11'd155: decode_row=16'h6004;
++   11'd156: decode_row=16'h6186;
++   11'd157: decode_row=16'h7020;
++   11'd158: decode_row=16'h10;
++   11'd159: decode_row=16'h1e0;
++   11'd160: decode_row=16'h204;
++   11'd161: decode_row=16'h208;
++   11'd162: decode_row=16'h260;
++   11'd163: decode_row=16'h280;
++   11'd164: decode_row=16'h2c0;
++   11'd165: decode_row=16'h340;
++   11'd166: decode_row=16'h410;
++   11'd167: decode_row=16'h5b0;
++   11'd168: decode_row=16'h730;
++   11'd169: decode_row=16'h7fe;
++   11'd170: decode_row=16'h80c;
++   11'd171: decode_row=16'h8c0;
++   11'd172: decode_row=16'h980;
++   11'd173: decode_row=16'hbfc;
++   11'd174: decode_row=16'hd80;
++   11'd175: decode_row=16'hdb0;
++   11'd176: decode_row=16'hffc;
++   11'd177: decode_row=16'h104c;
++   11'd178: decode_row=16'h1070;
++   11'd179: decode_row=16'h10c0;
++   11'd180: decode_row=16'h10c4;
++   11'd181: decode_row=16'h1308;
++   11'd182: decode_row=16'h130c;
++   11'd183: decode_row=16'h1360;
++   11'd184: decode_row=16'h13f8;
++   11'd185: decode_row=16'h18c0;
++   11'd186: decode_row=16'h18c6;
++   11'd187: decode_row=16'h19a4;
++   11'd188: decode_row=16'h2040;
++   11'd189: decode_row=16'h20c0;
++   11'd190: decode_row=16'h21a4;
++   11'd191: decode_row=16'h2384;
++   11'd192: decode_row=16'h23fe;
++   11'd193: decode_row=16'h2490;
++   11'd194: decode_row=16'h24d0;
++   11'd195: decode_row=16'h25a4;
++   11'd196: decode_row=16'h2608;
++   11'd197: decode_row=16'h2644;
++   11'd198: decode_row=16'h2664;
++   11'd199: decode_row=16'h2a30;
++   11'd200: decode_row=16'h2ffc;
++   11'd201: decode_row=16'h2ffe;
++   11'd202: decode_row=16'h3060;
++   11'd203: decode_row=16'h30c0;
++   11'd204: decode_row=16'h3188;
++   11'd205: decode_row=16'h3210;
++   11'd206: decode_row=16'h3224;
++   11'd207: decode_row=16'h3820;
++   11'd208: decode_row=16'h3e30;
++   11'd209: decode_row=16'h3e48;
++   11'd210: decode_row=16'h3f7c;
++   11'd211: decode_row=16'h3f84;
++   11'd212: decode_row=16'h5168;
++   11'd213: decode_row=16'h6006;
++   11'd214: decode_row=16'h7060;
++   11'd215: decode_row=16'h79fc;
++   11'd216: decode_row=16'h7c20;
++   11'd217: decode_row=16'h7f04;
++   11'd218: decode_row=16'h7ff8;
++   11'd219: decode_row=16'h48;
++   11'd220: decode_row=16'h58;
++   11'd221: decode_row=16'h64;
++   11'd222: decode_row=16'h84;
++   11'd223: decode_row=16'he0;
++   11'd224: decode_row=16'h104;
++   11'd225: decode_row=16'h1fc;
++   11'd226: decode_row=16'h304;
++   11'd227: decode_row=16'h3fc;
++   11'd228: decode_row=16'h406;
++   11'd229: decode_row=16'h424;
++   11'd230: decode_row=16'h440;
++   11'd231: decode_row=16'h4c0;
++   11'd232: decode_row=16'h610;
++   11'd233: decode_row=16'h630;
++   11'd234: decode_row=16'h670;
++   11'd235: decode_row=16'h818;
++   11'd236: decode_row=16'h824;
++   11'd237: decode_row=16'h844;
++   11'd238: decode_row=16'h878;
++   11'd239: decode_row=16'h884;
++   11'd240: decode_row=16'h8b0;
++   11'd241: decode_row=16'h8fc;
++   11'd242: decode_row=16'ha30;
++   11'd243: decode_row=16'hc18;
++   11'd244: decode_row=16'hc24;
++   11'd245: decode_row=16'hc44;
++   11'd246: decode_row=16'hc48;
++   11'd247: decode_row=16'hc66;
++   11'd248: decode_row=16'hc86;
++   11'd249: decode_row=16'hcb0;
++   11'd250: decode_row=16'he00;
++   11'd251: decode_row=16'he04;
++   11'd252: decode_row=16'he78;
++   11'd253: decode_row=16'hec0;
++   11'd254: decode_row=16'hf78;
++   11'd255: decode_row=16'hfe0;
++   11'd256: decode_row=16'hffe;
++   11'd257: decode_row=16'h1010;
++   11'd258: decode_row=16'h1028;
++   11'd259: decode_row=16'h1184;
++   11'd260: decode_row=16'h118c;
++   11'd261: decode_row=16'h1238;
++   11'd262: decode_row=16'h124c;
++   11'd263: decode_row=16'h1264;
++   11'd264: decode_row=16'h1310;
++   11'd265: decode_row=16'h131c;
++   11'd266: decode_row=16'h140c;
++   11'd267: decode_row=16'h1420;
++   11'd268: decode_row=16'h1430;
++   11'd269: decode_row=16'h1554;
++   11'd270: decode_row=16'h161c;
++   11'd271: decode_row=16'h1844;
++   11'd272: decode_row=16'h1846;
++   11'd273: decode_row=16'h1898;
++   11'd274: decode_row=16'h18d8;
++   11'd275: decode_row=16'h18e0;
++   11'd276: decode_row=16'h18f0;
++   11'd277: decode_row=16'h1900;
++   11'd278: decode_row=16'h1918;
++   11'd279: decode_row=16'h1988;
++   11'd280: decode_row=16'h198c;
++   11'd281: decode_row=16'h199c;
++   11'd282: decode_row=16'h19e0;
++   11'd283: decode_row=16'h19f8;
++   11'd284: decode_row=16'h1a04;
++   11'd285: decode_row=16'h1a0c;
++   11'd286: decode_row=16'h1b24;
++   11'd287: decode_row=16'h1c18;
++   11'd288: decode_row=16'h1cc8;
++   11'd289: decode_row=16'h1d04;
++   11'd290: decode_row=16'h1da4;
++   11'd291: decode_row=16'h1e10;
++   11'd292: decode_row=16'h1e30;
++   11'd293: decode_row=16'h1e60;
++   11'd294: decode_row=16'h1ef8;
++   11'd295: decode_row=16'h1f38;
++   11'd296: decode_row=16'h1f7e;
++   11'd297: decode_row=16'h1f80;
++   11'd298: decode_row=16'h1f98;
++   11'd299: decode_row=16'h1fd0;
++   11'd300: decode_row=16'h200c;
++   11'd301: decode_row=16'h2028;
++   11'd302: decode_row=16'h20c4;
++   11'd303: decode_row=16'h2144;
++   11'd304: decode_row=16'h2160;
++   11'd305: decode_row=16'h21c0;
++   11'd306: decode_row=16'h2224;
++   11'd307: decode_row=16'h2344;
++   11'd308: decode_row=16'h2346;
++   11'd309: decode_row=16'h2400;
++   11'd310: decode_row=16'h2470;
++   11'd311: decode_row=16'h2498;
++   11'd312: decode_row=16'h2530;
++   11'd313: decode_row=16'h264c;
++   11'd314: decode_row=16'h26a4;
++   11'd315: decode_row=16'h26fc;
++   11'd316: decode_row=16'h2704;
++   11'd317: decode_row=16'h2784;
++   11'd318: decode_row=16'h27c4;
++   11'd319: decode_row=16'h27fc;
++   11'd320: decode_row=16'h2bc8;
++   11'd321: decode_row=16'h2c20;
++   11'd322: decode_row=16'h2d00;
++   11'd323: decode_row=16'h2d2c;
++   11'd324: decode_row=16'h2db4;
++   11'd325: decode_row=16'h2ff8;
++   11'd326: decode_row=16'h3006;
++   11'd327: decode_row=16'h307c;
++   11'd328: decode_row=16'h3080;
++   11'd329: decode_row=16'h30fc;
++   11'd330: decode_row=16'h3124;
++   11'd331: decode_row=16'h3180;
++   11'd332: decode_row=16'h31e0;
++   11'd333: decode_row=16'h31f0;
++   11'd334: decode_row=16'h320c;
++   11'd335: decode_row=16'h324c;
++   11'd336: decode_row=16'h3258;
++   11'd337: decode_row=16'h3310;
++   11'd338: decode_row=16'h3370;
++   11'd339: decode_row=16'h33fe;
++   11'd340: decode_row=16'h340c;
++   11'd341: decode_row=16'h344c;
++   11'd342: decode_row=16'h3488;
++   11'd343: decode_row=16'h35fc;
++   11'd344: decode_row=16'h3620;
++   11'd345: decode_row=16'h3630;
++   11'd346: decode_row=16'h3644;
++   11'd347: decode_row=16'h3818;
++   11'd348: decode_row=16'h3840;
++   11'd349: decode_row=16'h3860;
++   11'd350: decode_row=16'h38f0;
++   11'd351: decode_row=16'h3998;
++   11'd352: decode_row=16'h3bfc;
++   11'd353: decode_row=16'h3c00;
++   11'd354: decode_row=16'h3c3c;
++   11'd355: decode_row=16'h3c60;
++   11'd356: decode_row=16'h3d04;
++   11'd357: decode_row=16'h3d68;
++   11'd358: decode_row=16'h3da0;
++   11'd359: decode_row=16'h3e08;
++   11'd360: decode_row=16'h3e60;
++   11'd361: decode_row=16'h3f44;
++   11'd362: decode_row=16'h3f48;
++   11'd363: decode_row=16'h3f60;
++   11'd364: decode_row=16'h3f78;
++   11'd365: decode_row=16'h3fc0;
++   11'd366: decode_row=16'h47fe;
++   11'd367: decode_row=16'h4808;
++   11'd368: decode_row=16'h5040;
++   11'd369: decode_row=16'h5060;
++   11'd370: decode_row=16'h57fe;
++   11'd371: decode_row=16'h5904;
++   11'd372: decode_row=16'h6086;
++   11'd373: decode_row=16'h7040;
++   11'd374: decode_row=16'h718e;
++   11'd375: decode_row=16'h7204;
++   11'd376: decode_row=16'h7208;
++   11'd377: decode_row=16'h7304;
++   11'd378: decode_row=16'h7306;
++   11'd379: decode_row=16'h73f4;
++   11'd380: decode_row=16'h7446;
++   11'd381: decode_row=16'h7524;
++   11'd382: decode_row=16'h7704;
++   11'd383: decode_row=16'h77fe;
++   11'd384: decode_row=16'h7818;
++   11'd385: decode_row=16'h7820;
++   11'd386: decode_row=16'h7b04;
++   11'd387: decode_row=16'h7cc0;
++   11'd388: decode_row=16'h7e98;
++   11'd389: decode_row=16'h7f64;
++   11'd390: decode_row=16'h7f7e;
++   11'd391: decode_row=16'h7f84;
++   11'd392: decode_row=16'h7fa4;
++   11'd393: decode_row=16'hc30c;
++   11'd394: decode_row=16'h4;
++   11'd395: decode_row=16'h1c;
++   11'd396: decode_row=16'h24;
++   11'd397: decode_row=16'h38;
++   11'd398: decode_row=16'h66;
++   11'd399: decode_row=16'h78;
++   11'd400: decode_row=16'h88;
++   11'd401: decode_row=16'hb0;
++   11'd402: decode_row=16'hcc;
++   11'd403: decode_row=16'hf0;
++   11'd404: decode_row=16'hfc;
++   11'd405: decode_row=16'h108;
++   11'd406: decode_row=16'h10c;
++   11'd407: decode_row=16'h120;
++   11'd408: decode_row=16'h140;
++   11'd409: decode_row=16'h146;
++   11'd410: decode_row=16'h14c;
++   11'd411: decode_row=16'h184;
++   11'd412: decode_row=16'h186;
++   11'd413: decode_row=16'h188;
++   11'd414: decode_row=16'h1bc;
++   11'd415: decode_row=16'h1cc;
++   11'd416: decode_row=16'h1f8;
++   11'd417: decode_row=16'h1fe;
++   11'd418: decode_row=16'h220;
++   11'd419: decode_row=16'h22c;
++   11'd420: decode_row=16'h244;
++   11'd421: decode_row=16'h264;
++   11'd422: decode_row=16'h282;
++   11'd423: decode_row=16'h320;
++   11'd424: decode_row=16'h32c;
++   11'd425: decode_row=16'h33c;
++   11'd426: decode_row=16'h360;
++   11'd427: decode_row=16'h378;
++   11'd428: decode_row=16'h382;
++   11'd429: decode_row=16'h386;
++   11'd430: decode_row=16'h3f0;
++   11'd431: decode_row=16'h3f8;
++   11'd432: decode_row=16'h404;
++   11'd433: decode_row=16'h446;
++   11'd434: decode_row=16'h47e;
++   11'd435: decode_row=16'h480;
++   11'd436: decode_row=16'h486;
++   11'd437: decode_row=16'h4c8;
++   11'd438: decode_row=16'h554;
++   11'd439: decode_row=16'h590;
++   11'd440: decode_row=16'h598;
++   11'd441: decode_row=16'h5f4;
++   11'd442: decode_row=16'h5f8;
++   11'd443: decode_row=16'h608;
++   11'd444: decode_row=16'h62c;
++   11'd445: decode_row=16'h64a;
++   11'd446: decode_row=16'h668;
++   11'd447: decode_row=16'h6c0;
++   11'd448: decode_row=16'h6e0;
++   11'd449: decode_row=16'h6fc;
++   11'd450: decode_row=16'h720;
++   11'd451: decode_row=16'h770;
++   11'd452: decode_row=16'h784;
++   11'd453: decode_row=16'h7f8;
++   11'd454: decode_row=16'h828;
++   11'd455: decode_row=16'h83c;
++   11'd456: decode_row=16'h83e;
++   11'd457: decode_row=16'h848;
++   11'd458: decode_row=16'h86c;
++   11'd459: decode_row=16'h870;
++   11'd460: decode_row=16'h87c;
++   11'd461: decode_row=16'h888;
++   11'd462: decode_row=16'h890;
++   11'd463: decode_row=16'h8a4;
++   11'd464: decode_row=16'h8c4;
++   11'd465: decode_row=16'h8c8;
++   11'd466: decode_row=16'h8d8;
++   11'd467: decode_row=16'h8f8;
++   11'd468: decode_row=16'h900;
++   11'd469: decode_row=16'h904;
++   11'd470: decode_row=16'h918;
++   11'd471: decode_row=16'h91c;
++   11'd472: decode_row=16'h92e;
++   11'd473: decode_row=16'h938;
++   11'd474: decode_row=16'h96c;
++   11'd475: decode_row=16'h988;
++   11'd476: decode_row=16'h998;
++   11'd477: decode_row=16'h9a4;
++   11'd478: decode_row=16'h9b0;
++   11'd479: decode_row=16'h9c0;
++   11'd480: decode_row=16'h9f0;
++   11'd481: decode_row=16'h9fe;
++   11'd482: decode_row=16'ha04;
++   11'd483: decode_row=16'ha48;
++   11'd484: decode_row=16'ha50;
++   11'd485: decode_row=16'hb00;
++   11'd486: decode_row=16'hb06;
++   11'd487: decode_row=16'hb0c;
++   11'd488: decode_row=16'hb18;
++   11'd489: decode_row=16'hbf0;
++   11'd490: decode_row=16'hc04;
++   11'd491: decode_row=16'hc06;
++   11'd492: decode_row=16'hc0c;
++   11'd493: decode_row=16'hc22;
++   11'd494: decode_row=16'hc26;
++   11'd495: decode_row=16'hc3c;
++   11'd496: decode_row=16'hc42;
++   11'd497: decode_row=16'hc46;
++   11'd498: decode_row=16'hc62;
++   11'd499: decode_row=16'hc80;
++   11'd500: decode_row=16'hc84;
++   11'd501: decode_row=16'hc88;
++   11'd502: decode_row=16'hc90;
++   11'd503: decode_row=16'hca8;
++   11'd504: decode_row=16'hcf8;
++   11'd505: decode_row=16'hd30;
++   11'd506: decode_row=16'hdb2;
++   11'd507: decode_row=16'hdb8;
++   11'd508: decode_row=16'hdcc;
++   11'd509: decode_row=16'he06;
++   11'd510: decode_row=16'he20;
++   11'd511: decode_row=16'he4c;
++   11'd512: decode_row=16'he70;
++   11'd513: decode_row=16'hee0;
++   11'd514: decode_row=16'hef0;
++   11'd515: decode_row=16'hf04;
++   11'd516: decode_row=16'hf0e;
++   11'd517: decode_row=16'hf24;
++   11'd518: decode_row=16'hf84;
++   11'd519: decode_row=16'hfb0;
++   11'd520: decode_row=16'hff4;
++   11'd521: decode_row=16'h1006;
++   11'd522: decode_row=16'h100c;
++   11'd523: decode_row=16'h1024;
++   11'd524: decode_row=16'h1030;
++   11'd525: decode_row=16'h103c;
++   11'd526: decode_row=16'h1042;
++   11'd527: decode_row=16'h1044;
++   11'd528: decode_row=16'h1050;
++   11'd529: decode_row=16'h1064;
++   11'd530: decode_row=16'h108c;
++   11'd531: decode_row=16'h10a0;
++   11'd532: decode_row=16'h10b0;
++   11'd533: decode_row=16'h10c6;
++   11'd534: decode_row=16'h10c8;
++   11'd535: decode_row=16'h10e0;
++   11'd536: decode_row=16'h10f8;
++   11'd537: decode_row=16'h1108;
++   11'd538: decode_row=16'h1110;
++   11'd539: decode_row=16'h1114;
++   11'd540: decode_row=16'h1130;
++   11'd541: decode_row=16'h1136;
++   11'd542: decode_row=16'h1138;
++   11'd543: decode_row=16'h1150;
++   11'd544: decode_row=16'h116c;
++   11'd545: decode_row=16'h1180;
++   11'd546: decode_row=16'h11a2;
++   11'd547: decode_row=16'h11b0;
++   11'd548: decode_row=16'h11c0;
++   11'd549: decode_row=16'h11c8;
++   11'd550: decode_row=16'h11e8;
++   11'd551: decode_row=16'h11f0;
++   11'd552: decode_row=16'h1200;
++   11'd553: decode_row=16'h1206;
++   11'd554: decode_row=16'h1208;
++   11'd555: decode_row=16'h1210;
++   11'd556: decode_row=16'h1214;
++   11'd557: decode_row=16'h1218;
++   11'd558: decode_row=16'h1220;
++   11'd559: decode_row=16'h1230;
++   11'd560: decode_row=16'h1244;
++   11'd561: decode_row=16'h1250;
++   11'd562: decode_row=16'h1258;
++   11'd563: decode_row=16'h1260;
++   11'd564: decode_row=16'h1268;
++   11'd565: decode_row=16'h1270;
++   11'd566: decode_row=16'h1278;
++   11'd567: decode_row=16'h127c;
++   11'd568: decode_row=16'h1284;
++   11'd569: decode_row=16'h1294;
++   11'd570: decode_row=16'h12b4;
++   11'd571: decode_row=16'h12c4;
++   11'd572: decode_row=16'h12c8;
++   11'd573: decode_row=16'h12d8;
++   11'd574: decode_row=16'h12f0;
++   11'd575: decode_row=16'h12f4;
++   11'd576: decode_row=16'h1306;
++   11'd577: decode_row=16'h1318;
++   11'd578: decode_row=16'h1320;
++   11'd579: decode_row=16'h1326;
++   11'd580: decode_row=16'h1336;
++   11'd581: decode_row=16'h1344;
++   11'd582: decode_row=16'h1364;
++   11'd583: decode_row=16'h1366;
++   11'd584: decode_row=16'h136c;
++   11'd585: decode_row=16'h1388;
++   11'd586: decode_row=16'h138c;
++   11'd587: decode_row=16'h1398;
++   11'd588: decode_row=16'h13a4;
++   11'd589: decode_row=16'h13b8;
++   11'd590: decode_row=16'h13c4;
++   11'd591: decode_row=16'h13d8;
++   11'd592: decode_row=16'h13f0;
++   11'd593: decode_row=16'h1400;
++   11'd594: decode_row=16'h1408;
++   11'd595: decode_row=16'h1414;
++   11'd596: decode_row=16'h1444;
++   11'd597: decode_row=16'h1446;
++   11'd598: decode_row=16'h1470;
++   11'd599: decode_row=16'h1478;
++   11'd600: decode_row=16'h1488;
++   11'd601: decode_row=16'h1504;
++   11'd602: decode_row=16'h1512;
++   11'd603: decode_row=16'h159a;
++   11'd604: decode_row=16'h15dc;
++   11'd605: decode_row=16'h15fc;
++   11'd606: decode_row=16'h1606;
++   11'd607: decode_row=16'h1608;
++   11'd608: decode_row=16'h160c;
++   11'd609: decode_row=16'h1630;
++   11'd610: decode_row=16'h1632;
++   11'd611: decode_row=16'h163c;
++   11'd612: decode_row=16'h1640;
++   11'd613: decode_row=16'h1648;
++   11'd614: decode_row=16'h1664;
++   11'd615: decode_row=16'h1666;
++   11'd616: decode_row=16'h1684;
++   11'd617: decode_row=16'h16a4;
++   11'd618: decode_row=16'h16bc;
++   11'd619: decode_row=16'h16ec;
++   11'd620: decode_row=16'h16f8;
++   11'd621: decode_row=16'h1700;
++   11'd622: decode_row=16'h170c;
++   11'd623: decode_row=16'h170e;
++   11'd624: decode_row=16'h1720;
++   11'd625: decode_row=16'h1750;
++   11'd626: decode_row=16'h17d4;
++   11'd627: decode_row=16'h17d8;
++   11'd628: decode_row=16'h17e4;
++   11'd629: decode_row=16'h17f0;
++   11'd630: decode_row=16'h1808;
++   11'd631: decode_row=16'h180c;
++   11'd632: decode_row=16'h1862;
++   11'd633: decode_row=16'h1864;
++   11'd634: decode_row=16'h1878;
++   11'd635: decode_row=16'h187c;
++   11'd636: decode_row=16'h1888;
++   11'd637: decode_row=16'h189c;
++   11'd638: decode_row=16'h18a8;
++   11'd639: decode_row=16'h18c8;
++   11'd640: decode_row=16'h18cc;
++   11'd641: decode_row=16'h18d0;
++   11'd642: decode_row=16'h18d2;
++   11'd643: decode_row=16'h18dc;
++   11'd644: decode_row=16'h18fc;
++   11'd645: decode_row=16'h1908;
++   11'd646: decode_row=16'h1912;
++   11'd647: decode_row=16'h1920;
++   11'd648: decode_row=16'h1924;
++   11'd649: decode_row=16'h193c;
++   11'd650: decode_row=16'h196c;
++   11'd651: decode_row=16'h1980;
++   11'd652: decode_row=16'h199a;
++   11'd653: decode_row=16'h19a8;
++   11'd654: decode_row=16'h19b2;
++   11'd655: decode_row=16'h19c0;
++   11'd656: decode_row=16'h19d0;
++   11'd657: decode_row=16'h19d8;
++   11'd658: decode_row=16'h19de;
++   11'd659: decode_row=16'h19e6;
++   11'd660: decode_row=16'h19fe;
++   11'd661: decode_row=16'h1a08;
++   11'd662: decode_row=16'h1a38;
++   11'd663: decode_row=16'h1a48;
++   11'd664: decode_row=16'h1b0c;
++   11'd665: decode_row=16'h1b10;
++   11'd666: decode_row=16'h1b36;
++   11'd667: decode_row=16'h1ba4;
++   11'd668: decode_row=16'h1bc0;
++   11'd669: decode_row=16'h1bf0;
++   11'd670: decode_row=16'h1bf8;
++   11'd671: decode_row=16'h1bfe;
++   11'd672: decode_row=16'h1c00;
++   11'd673: decode_row=16'h1c08;
++   11'd674: decode_row=16'h1c0c;
++   11'd675: decode_row=16'h1c10;
++   11'd676: decode_row=16'h1c24;
++   11'd677: decode_row=16'h1c50;
++   11'd678: decode_row=16'h1c60;
++   11'd679: decode_row=16'h1c70;
++   11'd680: decode_row=16'h1c88;
++   11'd681: decode_row=16'h1c90;
++   11'd682: decode_row=16'h1cc6;
++   11'd683: decode_row=16'h1d54;
++   11'd684: decode_row=16'h1d98;
++   11'd685: decode_row=16'h1df8;
++   11'd686: decode_row=16'h1e08;
++   11'd687: decode_row=16'h1e18;
++   11'd688: decode_row=16'h1e24;
++   11'd689: decode_row=16'h1e48;
++   11'd690: decode_row=16'h1e4c;
++   11'd691: decode_row=16'h1e64;
++   11'd692: decode_row=16'h1e7c;
++   11'd693: decode_row=16'h1ec4;
++   11'd694: decode_row=16'h1ef4;
++   11'd695: decode_row=16'h1f00;
++   11'd696: decode_row=16'h1f10;
++   11'd697: decode_row=16'h1f1c;
++   11'd698: decode_row=16'h1f20;
++   11'd699: decode_row=16'h1f48;
++   11'd700: decode_row=16'h1f60;
++   11'd701: decode_row=16'h1f6c;
++   11'd702: decode_row=16'h1f84;
++   11'd703: decode_row=16'h1f94;
++   11'd704: decode_row=16'h1fb4;
++   11'd705: decode_row=16'h1fd8;
++   11'd706: decode_row=16'h1fe0;
++   11'd707: decode_row=16'h2020;
++   11'd708: decode_row=16'h2034;
++   11'd709: decode_row=16'h2060;
++   11'd710: decode_row=16'h2074;
++   11'd711: decode_row=16'h207c;
++   11'd712: decode_row=16'h2086;
++   11'd713: decode_row=16'h208c;
++   11'd714: decode_row=16'h2094;
++   11'd715: decode_row=16'h20bc;
++   11'd716: decode_row=16'h20e0;
++   11'd717: decode_row=16'h20f0;
++   11'd718: decode_row=16'h20f8;
++   11'd719: decode_row=16'h20fe;
++   11'd720: decode_row=16'h2100;
++   11'd721: decode_row=16'h210c;
++   11'd722: decode_row=16'h2114;
++   11'd723: decode_row=16'h2128;
++   11'd724: decode_row=16'h2134;
++   11'd725: decode_row=16'h214c;
++   11'd726: decode_row=16'h2164;
++   11'd727: decode_row=16'h2166;
++   11'd728: decode_row=16'h217c;
++   11'd729: decode_row=16'h218c;
++   11'd730: decode_row=16'h21b0;
++   11'd731: decode_row=16'h21bc;
++   11'd732: decode_row=16'h21c6;
++   11'd733: decode_row=16'h21e0;
++   11'd734: decode_row=16'h21e4;
++   11'd735: decode_row=16'h2200;
++   11'd736: decode_row=16'h2208;
++   11'd737: decode_row=16'h2220;
++   11'd738: decode_row=16'h223c;
++   11'd739: decode_row=16'h2240;
++   11'd740: decode_row=16'h2262;
++   11'd741: decode_row=16'h227c;
++   11'd742: decode_row=16'h2284;
++   11'd743: decode_row=16'h2286;
++   11'd744: decode_row=16'h2300;
++   11'd745: decode_row=16'h2304;
++   11'd746: decode_row=16'h2308;
++   11'd747: decode_row=16'h2320;
++   11'd748: decode_row=16'h233c;
++   11'd749: decode_row=16'h2340;
++   11'd750: decode_row=16'h2358;
++   11'd751: decode_row=16'h2370;
++   11'd752: decode_row=16'h23c0;
++   11'd753: decode_row=16'h23c4;
++   11'd754: decode_row=16'h23e6;
++   11'd755: decode_row=16'h23e8;
++   11'd756: decode_row=16'h2406;
++   11'd757: decode_row=16'h240c;
++   11'd758: decode_row=16'h240e;
++   11'd759: decode_row=16'h2436;
++   11'd760: decode_row=16'h243c;
++   11'd761: decode_row=16'h2440;
++   11'd762: decode_row=16'h2444;
++   11'd763: decode_row=16'h2448;
++   11'd764: decode_row=16'h2450;
++   11'd765: decode_row=16'h2478;
++   11'd766: decode_row=16'h2488;
++   11'd767: decode_row=16'h24a8;
++   11'd768: decode_row=16'h24bc;
++   11'd769: decode_row=16'h24c4;
++   11'd770: decode_row=16'h24f0;
++   11'd771: decode_row=16'h24fe;
++   11'd772: decode_row=16'h2504;
++   11'd773: decode_row=16'h2508;
++   11'd774: decode_row=16'h2520;
++   11'd775: decode_row=16'h2538;
++   11'd776: decode_row=16'h2544;
++   11'd777: decode_row=16'h2554;
++   11'd778: decode_row=16'h258c;
++   11'd779: decode_row=16'h25a0;
++   11'd780: decode_row=16'h25a8;
++   11'd781: decode_row=16'h25d8;
++   11'd782: decode_row=16'h25e0;
++   11'd783: decode_row=16'h25e4;
++   11'd784: decode_row=16'h25f8;
++   11'd785: decode_row=16'h25fe;
++   11'd786: decode_row=16'h2600;
++   11'd787: decode_row=16'h2618;
++   11'd788: decode_row=16'h2648;
++   11'd789: decode_row=16'h267e;
++   11'd790: decode_row=16'h26c4;
++   11'd791: decode_row=16'h26c8;
++   11'd792: decode_row=16'h2700;
++   11'd793: decode_row=16'h2720;
++   11'd794: decode_row=16'h2738;
++   11'd795: decode_row=16'h273c;
++   11'd796: decode_row=16'h2740;
++   11'd797: decode_row=16'h27b0;
++   11'd798: decode_row=16'h27c6;
++   11'd799: decode_row=16'h27f4;
++   11'd800: decode_row=16'h2800;
++   11'd801: decode_row=16'h280c;
++   11'd802: decode_row=16'h2830;
++   11'd803: decode_row=16'h2848;
++   11'd804: decode_row=16'h285c;
++   11'd805: decode_row=16'h2860;
++   11'd806: decode_row=16'h2880;
++   11'd807: decode_row=16'h28a4;
++   11'd808: decode_row=16'h2920;
++   11'd809: decode_row=16'h293e;
++   11'd810: decode_row=16'h294c;
++   11'd811: decode_row=16'h2954;
++   11'd812: decode_row=16'h2964;
++   11'd813: decode_row=16'h299c;
++   11'd814: decode_row=16'h2a06;
++   11'd815: decode_row=16'h2a48;
++   11'd816: decode_row=16'h2a58;
++   11'd817: decode_row=16'h2a70;
++   11'd818: decode_row=16'h2afe;
++   11'd819: decode_row=16'h2b6c;
++   11'd820: decode_row=16'h2be4;
++   11'd821: decode_row=16'h2c1c;
++   11'd822: decode_row=16'h2cb0;
++   11'd823: decode_row=16'h2d34;
++   11'd824: decode_row=16'h2d3a;
++   11'd825: decode_row=16'h2d6c;
++   11'd826: decode_row=16'h2d7e;
++   11'd827: decode_row=16'h2da4;
++   11'd828: decode_row=16'h2dc6;
++   11'd829: decode_row=16'h2df4;
++   11'd830: decode_row=16'h2df8;
++   11'd831: decode_row=16'h2dfc;
++   11'd832: decode_row=16'h2e24;
++   11'd833: decode_row=16'h2e34;
++   11'd834: decode_row=16'h2e48;
++   11'd835: decode_row=16'h2e7c;
++   11'd836: decode_row=16'h2ec4;
++   11'd837: decode_row=16'h2ec8;
++   11'd838: decode_row=16'h2f04;
++   11'd839: decode_row=16'h2f40;
++   11'd840: decode_row=16'h2f74;
++   11'd841: decode_row=16'h2f84;
++   11'd842: decode_row=16'h2fac;
++   11'd843: decode_row=16'h2fd4;
++   11'd844: decode_row=16'h2fe0;
++   11'd845: decode_row=16'h2fe4;
++   11'd846: decode_row=16'h300e;
++   11'd847: decode_row=16'h3018;
++   11'd848: decode_row=16'h301c;
++   11'd849: decode_row=16'h3024;
++   11'd850: decode_row=16'h3030;
++   11'd851: decode_row=16'h3058;
++   11'd852: decode_row=16'h3070;
++   11'd853: decode_row=16'h3078;
++   11'd854: decode_row=16'h3084;
++   11'd855: decode_row=16'h30b0;
++   11'd856: decode_row=16'h30dc;
++   11'd857: decode_row=16'h3104;
++   11'd858: decode_row=16'h310c;
++   11'd859: decode_row=16'h3110;
++   11'd860: decode_row=16'h3118;
++   11'd861: decode_row=16'h314c;
++   11'd862: decode_row=16'h3186;
++   11'd863: decode_row=16'h318e;
++   11'd864: decode_row=16'h319c;
++   11'd865: decode_row=16'h31fe;
++   11'd866: decode_row=16'h3204;
++   11'd867: decode_row=16'h3208;
++   11'd868: decode_row=16'h3218;
++   11'd869: decode_row=16'h3240;
++   11'd870: decode_row=16'h3260;
++   11'd871: decode_row=16'h3264;
++   11'd872: decode_row=16'h3268;
++   11'd873: decode_row=16'h326c;
++   11'd874: decode_row=16'h32c0;
++   11'd875: decode_row=16'h32c8;
++   11'd876: decode_row=16'h32cc;
++   11'd877: decode_row=16'h3300;
++   11'd878: decode_row=16'h3314;
++   11'd879: decode_row=16'h3318;
++   11'd880: decode_row=16'h3320;
++   11'd881: decode_row=16'h3330;
++   11'd882: decode_row=16'h3332;
++   11'd883: decode_row=16'h3336;
++   11'd884: decode_row=16'h3358;
++   11'd885: decode_row=16'h3360;
++   11'd886: decode_row=16'h3368;
++   11'd887: decode_row=16'h3378;
++   11'd888: decode_row=16'h3388;
++   11'd889: decode_row=16'h33c0;
++   11'd890: decode_row=16'h33cc;
++   11'd891: decode_row=16'h33f0;
++   11'd892: decode_row=16'h33f8;
++   11'd893: decode_row=16'h3404;
++   11'd894: decode_row=16'h3408;
++   11'd895: decode_row=16'h3410;
++   11'd896: decode_row=16'h3420;
++   11'd897: decode_row=16'h3428;
++   11'd898: decode_row=16'h3448;
++   11'd899: decode_row=16'h3450;
++   11'd900: decode_row=16'h3454;
++   11'd901: decode_row=16'h345c;
++   11'd902: decode_row=16'h348e;
++   11'd903: decode_row=16'h34f4;
++   11'd904: decode_row=16'h34f8;
++   11'd905: decode_row=16'h3508;
++   11'd906: decode_row=16'h3520;
++   11'd907: decode_row=16'h3548;
++   11'd908: decode_row=16'h3558;
++   11'd909: decode_row=16'h3580;
++   11'd910: decode_row=16'h35ac;
++   11'd911: decode_row=16'h35b0;
++   11'd912: decode_row=16'h35dc;
++   11'd913: decode_row=16'h3604;
++   11'd914: decode_row=16'h3608;
++   11'd915: decode_row=16'h3618;
++   11'd916: decode_row=16'h3624;
++   11'd917: decode_row=16'h362c;
++   11'd918: decode_row=16'h3648;
++   11'd919: decode_row=16'h364c;
++   11'd920: decode_row=16'h3664;
++   11'd921: decode_row=16'h3668;
++   11'd922: decode_row=16'h3694;
++   11'd923: decode_row=16'h36a4;
++   11'd924: decode_row=16'h3704;
++   11'd925: decode_row=16'h37d4;
++   11'd926: decode_row=16'h3804;
++   11'd927: decode_row=16'h380c;
++   11'd928: decode_row=16'h381e;
++   11'd929: decode_row=16'h3838;
++   11'd930: decode_row=16'h383c;
++   11'd931: decode_row=16'h3866;
++   11'd932: decode_row=16'h389c;
++   11'd933: decode_row=16'h38ca;
++   11'd934: decode_row=16'h38fe;
++   11'd935: decode_row=16'h3904;
++   11'd936: decode_row=16'h3908;
++   11'd937: decode_row=16'h3938;
++   11'd938: decode_row=16'h396c;
++   11'd939: decode_row=16'h3980;
++   11'd940: decode_row=16'h3986;
++   11'd941: decode_row=16'h3a0c;
++   11'd942: decode_row=16'h3a64;
++   11'd943: decode_row=16'h3a6c;
++   11'd944: decode_row=16'h3b08;
++   11'd945: decode_row=16'h3bac;
++   11'd946: decode_row=16'h3bb2;
++   11'd947: decode_row=16'h3bfe;
++   11'd948: decode_row=16'h3c04;
++   11'd949: decode_row=16'h3c08;
++   11'd950: decode_row=16'h3c18;
++   11'd951: decode_row=16'h3c1c;
++   11'd952: decode_row=16'h3c28;
++   11'd953: decode_row=16'h3c2c;
++   11'd954: decode_row=16'h3c44;
++   11'd955: decode_row=16'h3c50;
++   11'd956: decode_row=16'h3c70;
++   11'd957: decode_row=16'h3c7c;
++   11'd958: decode_row=16'h3c88;
++   11'd959: decode_row=16'h3c90;
++   11'd960: decode_row=16'h3cb4;
++   11'd961: decode_row=16'h3cc8;
++   11'd962: decode_row=16'h3d10;
++   11'd963: decode_row=16'h3d20;
++   11'd964: decode_row=16'h3d24;
++   11'd965: decode_row=16'h3d2c;
++   11'd966: decode_row=16'h3d6c;
++   11'd967: decode_row=16'h3d84;
++   11'd968: decode_row=16'h3d8c;
++   11'd969: decode_row=16'h3dac;
++   11'd970: decode_row=16'h3de0;
++   11'd971: decode_row=16'h3e0c;
++   11'd972: decode_row=16'h3e20;
++   11'd973: decode_row=16'h3e24;
++   11'd974: decode_row=16'h3e3c;
++   11'd975: decode_row=16'h3e40;
++   11'd976: decode_row=16'h3e64;
++   11'd977: decode_row=16'h3e7c;
++   11'd978: decode_row=16'h3e84;
++   11'd979: decode_row=16'h3e86;
++   11'd980: decode_row=16'h3e88;
++   11'd981: decode_row=16'h3e94;
++   11'd982: decode_row=16'h3e98;
++   11'd983: decode_row=16'h3ecc;
++   11'd984: decode_row=16'h3ef8;
++   11'd985: decode_row=16'h3efc;
++   11'd986: decode_row=16'h3f00;
++   11'd987: decode_row=16'h3f04;
++   11'd988: decode_row=16'h3f06;
++   11'd989: decode_row=16'h3f40;
++   11'd990: decode_row=16'h3f62;
++   11'd991: decode_row=16'h3f70;
++   11'd992: decode_row=16'h3f88;
++   11'd993: decode_row=16'h3fb4;
++   11'd994: decode_row=16'h3fb8;
++   11'd995: decode_row=16'h3fbc;
++   11'd996: decode_row=16'h3fc2;
++   11'd997: decode_row=16'h3fc4;
++   11'd998: decode_row=16'h3fe4;
++   11'd999: decode_row=16'h3fe6;
++   11'd1000: decode_row=16'h3fec;
++   11'd1001: decode_row=16'h3ff6;
++   11'd1002: decode_row=16'h4000;
++   11'd1003: decode_row=16'h4078;
++   11'd1004: decode_row=16'h418c;
++   11'd1005: decode_row=16'h41fe;
++   11'd1006: decode_row=16'h4318;
++   11'd1007: decode_row=16'h4340;
++   11'd1008: decode_row=16'h4388;
++   11'd1009: decode_row=16'h43fe;
++   11'd1010: decode_row=16'h4404;
++   11'd1011: decode_row=16'h440c;
++   11'd1012: decode_row=16'h4490;
++   11'd1013: decode_row=16'h4554;
++   11'd1014: decode_row=16'h4590;
++   11'd1015: decode_row=16'h460c;
++   11'd1016: decode_row=16'h461c;
++   11'd1017: decode_row=16'h4620;
++   11'd1018: decode_row=16'h4686;
++   11'd1019: decode_row=16'h4bc6;
++   11'd1020: decode_row=16'h4c0e;
++   11'd1021: decode_row=16'h4c24;
++   11'd1022: decode_row=16'h4c46;
++   11'd1023: decode_row=16'h4ffe;
++   11'd1024: decode_row=16'h5080;
++   11'd1025: decode_row=16'h5108;
++   11'd1026: decode_row=16'h5114;
++   11'd1027: decode_row=16'h5118;
++   11'd1028: decode_row=16'h516c;
++   11'd1029: decode_row=16'h51cc;
++   11'd1030: decode_row=16'h51fc;
++   11'd1031: decode_row=16'h5208;
++   11'd1032: decode_row=16'h520c;
++   11'd1033: decode_row=16'h522c;
++   11'd1034: decode_row=16'h5264;
++   11'd1035: decode_row=16'h52a8;
++   11'd1036: decode_row=16'h5310;
++   11'd1037: decode_row=16'h53ac;
++   11'd1038: decode_row=16'h53fe;
++   11'd1039: decode_row=16'h5420;
++   11'd1040: decode_row=16'h5820;
++   11'd1041: decode_row=16'h5830;
++   11'd1042: decode_row=16'h5840;
++   11'd1043: decode_row=16'h5988;
++   11'd1044: decode_row=16'h59c0;
++   11'd1045: decode_row=16'h5b0c;
++   11'd1046: decode_row=16'h5bfc;
++   11'd1047: decode_row=16'h5e1c;
++   11'd1048: decode_row=16'h5ed8;
++   11'd1049: decode_row=16'h5f06;
++   11'd1050: decode_row=16'h6000;
++   11'd1051: decode_row=16'h6040;
++   11'd1052: decode_row=16'h6060;
++   11'd1053: decode_row=16'h607c;
++   11'd1054: decode_row=16'h6090;
++   11'd1055: decode_row=16'h60e0;
++   11'd1056: decode_row=16'h6104;
++   11'd1057: decode_row=16'h6106;
++   11'd1058: decode_row=16'h6180;
++   11'd1059: decode_row=16'h6184;
++   11'd1060: decode_row=16'h61e0;
++   11'd1061: decode_row=16'h6222;
++   11'd1062: decode_row=16'h6264;
++   11'd1063: decode_row=16'h6388;
++   11'd1064: decode_row=16'h63e0;
++   11'd1065: decode_row=16'h63f0;
++   11'd1066: decode_row=16'h63fc;
++   11'd1067: decode_row=16'h63fe;
++   11'd1068: decode_row=16'h6410;
++   11'd1069: decode_row=16'h641e;
++   11'd1070: decode_row=16'h647e;
++   11'd1071: decode_row=16'h6490;
++   11'd1072: decode_row=16'h64e0;
++   11'd1073: decode_row=16'h658c;
++   11'd1074: decode_row=16'h65ec;
++   11'd1075: decode_row=16'h6698;
++   11'd1076: decode_row=16'h6706;
++   11'd1077: decode_row=16'h676c;
++   11'd1078: decode_row=16'h6816;
++   11'd1079: decode_row=16'h6860;
++   11'd1080: decode_row=16'h686e;
++   11'd1081: decode_row=16'h6890;
++   11'd1082: decode_row=16'h69fc;
++   11'd1083: decode_row=16'h6b88;
++   11'd1084: decode_row=16'h6c44;
++   11'd1085: decode_row=16'h6c60;
++   11'd1086: decode_row=16'h6d98;
++   11'd1087: decode_row=16'h6da4;
++   11'd1088: decode_row=16'h6ed6;
++   11'd1089: decode_row=16'h6f3c;
++   11'd1090: decode_row=16'h6ff4;
++   11'd1091: decode_row=16'h6ffc;
++   11'd1092: decode_row=16'h7000;
++   11'd1093: decode_row=16'h7006;
++   11'd1094: decode_row=16'h700c;
++   11'd1095: decode_row=16'h700e;
++   11'd1096: decode_row=16'h7018;
++   11'd1097: decode_row=16'h7070;
++   11'd1098: decode_row=16'h7078;
++   11'd1099: decode_row=16'h707c;
++   11'd1100: decode_row=16'h7084;
++   11'd1101: decode_row=16'h70c0;
++   11'd1102: decode_row=16'h70fc;
++   11'd1103: decode_row=16'h7104;
++   11'd1104: decode_row=16'h7174;
++   11'd1105: decode_row=16'h718c;
++   11'd1106: decode_row=16'h71fc;
++   11'd1107: decode_row=16'h7240;
++   11'd1108: decode_row=16'h7244;
++   11'd1109: decode_row=16'h7248;
++   11'd1110: decode_row=16'h7268;
++   11'd1111: decode_row=16'h726c;
++   11'd1112: decode_row=16'h7308;
++   11'd1113: decode_row=16'h7384;
++   11'd1114: decode_row=16'h73a4;
++   11'd1115: decode_row=16'h73f8;
++   11'd1116: decode_row=16'h73fe;
++   11'd1117: decode_row=16'h747e;
++   11'd1118: decode_row=16'h75fc;
++   11'd1119: decode_row=16'h7604;
++   11'd1120: decode_row=16'h768c;
++   11'd1121: decode_row=16'h776c;
++   11'd1122: decode_row=16'h7800;
++   11'd1123: decode_row=16'h780c;
++   11'd1124: decode_row=16'h781c;
++   11'd1125: decode_row=16'h7860;
++   11'd1126: decode_row=16'h7870;
++   11'd1127: decode_row=16'h7884;
++   11'd1128: decode_row=16'h7888;
++   11'd1129: decode_row=16'h78c4;
++   11'd1130: decode_row=16'h78e0;
++   11'd1131: decode_row=16'h7924;
++   11'd1132: decode_row=16'h79f8;
++   11'd1133: decode_row=16'h7b08;
++   11'd1134: decode_row=16'h7bfe;
++   11'd1135: decode_row=16'h7c00;
++   11'd1136: decode_row=16'h7c04;
++   11'd1137: decode_row=16'h7c08;
++   11'd1138: decode_row=16'h7c24;
++   11'd1139: decode_row=16'h7c40;
++   11'd1140: decode_row=16'h7c84;
++   11'd1141: decode_row=16'h7c98;
++   11'd1142: decode_row=16'h7d18;
++   11'd1143: decode_row=16'h7d26;
++   11'd1144: decode_row=16'h7d6c;
++   11'd1145: decode_row=16'h7d8c;
++   11'd1146: decode_row=16'h7d90;
++   11'd1147: decode_row=16'h7df8;
++   11'd1148: decode_row=16'h7e06;
++   11'd1149: decode_row=16'h7e08;
++   11'd1150: decode_row=16'h7e20;
++   11'd1151: decode_row=16'h7e3c;
++   11'd1152: decode_row=16'h7e40;
++   11'd1153: decode_row=16'h7e58;
++   11'd1154: decode_row=16'h7e8c;
++   11'd1155: decode_row=16'h7e94;
++   11'd1156: decode_row=16'h7f06;
++   11'd1157: decode_row=16'h7f38;
++   11'd1158: decode_row=16'h7f44;
++   11'd1159: decode_row=16'h7f66;
++   11'd1160: decode_row=16'h7f7c;
++   11'd1161: decode_row=16'h7fbc;
++   11'd1162: decode_row=16'h7fc4;
++   11'd1163: decode_row=16'h7fcc;
++   11'd1164: decode_row=16'h7fe4;
++   11'd1165: decode_row=16'h7fe8;
++   11'd1166: decode_row=16'h7fec;
+    default: ;
+   endcase
+  end
+--- original/rtl/vision6_glyph_rom.v
++++ new/rtl/vision6_glyph_rom.v
+@@ -221,15 +221,17 @@
+ 12'd2180:glyph=8'd215;
+ 12'd2181:glyph=8'd210;
+ 12'd2182:glyph=8'd126;
+-12'd2184:glyph=8'd19;
+-12'd2185:glyph=8'd3;
+-12'd2187:glyph=8'd43;
+-12'd2188:glyph=8'd171;
+-12'd2189:glyph=8'd208;
+-12'd2190:glyph=8'd136;
+-12'd2191:glyph=8'd113;
+-12'd2192:glyph=8'd58;
+-12'd2193:glyph=8'd37;
++12'd2184:glyph=8'd18;
++12'd2185:glyph=8'd21;
++12'd2186:glyph=8'd5;
++12'd2187:glyph=8'd6;
++12'd2189:glyph=8'd43;
++12'd2190:glyph=8'd171;
++12'd2191:glyph=8'd208;
++12'd2192:glyph=8'd136;
++12'd2193:glyph=8'd113;
++12'd2194:glyph=8'd58;
++12'd2195:glyph=8'd37;
+ 12'd2240:glyph=8'd18;
+ 12'd2241:glyph=8'd21;
+ 12'd2242:glyph=8'd4;
+@@ -239,18 +241,20 @@
+ 12'd2247:glyph=8'd203;
+ 12'd2248:glyph=8'd63;
+ 12'd2249:glyph=8'd216;
+-12'd2250:glyph=8'd19;
+-12'd2251:glyph=8'd3;
+-12'd2253:glyph=8'd170;
+-12'd2254:glyph=8'd192;
+-12'd2255:glyph=8'd216;
+-12'd2256:glyph=8'd18;
+-12'd2257:glyph=8'd21;
+-12'd2258:glyph=8'd4;
+-12'd2259:glyph=8'd11;
+-12'd2261:glyph=8'd61;
+-12'd2262:glyph=8'd181;
+-12'd2263:glyph=8'd37;
++12'd2250:glyph=8'd18;
++12'd2251:glyph=8'd21;
++12'd2252:glyph=8'd5;
++12'd2253:glyph=8'd6;
++12'd2255:glyph=8'd170;
++12'd2256:glyph=8'd192;
++12'd2257:glyph=8'd216;
++12'd2258:glyph=8'd18;
++12'd2259:glyph=8'd21;
++12'd2260:glyph=8'd4;
++12'd2261:glyph=8'd11;
++12'd2263:glyph=8'd61;
++12'd2264:glyph=8'd181;
++12'd2265:glyph=8'd37;
+ 12'd2304:glyph=8'd28;
+ 12'd2305:glyph=8'd12;
+ 12'd2306:glyph=8'd27;
+@@ -301,8 +305,10 @@
+ 12'd2820:glyph=8'd83;
+ 12'd2821:glyph=8'd169;
+ 12'd2822:glyph=8'd126;
+-12'd2824:glyph=8'd19;
+-12'd2825:glyph=8'd3;
++12'd2824:glyph=8'd18;
++12'd2825:glyph=8'd21;
++12'd2826:glyph=8'd5;
++12'd2827:glyph=8'd6;
+ 12'd2880:glyph=8'd54;
+ 12'd2881:glyph=8'd191;
+ 12'd2882:glyph=8'd138;
+@@ -444,14 +450,16 @@
+ 12'd3542:glyph=8'd37;
+ 12'd3584:glyph=8'd210;
+ 12'd3585:glyph=8'd126;
+-12'd3587:glyph=8'd19;
+-12'd3588:glyph=8'd3;
+-12'd3590:glyph=8'd43;
+-12'd3591:glyph=8'd171;
+-12'd3592:glyph=8'd111;
+-12'd3593:glyph=8'd100;
+-12'd3594:glyph=8'd113;
+-12'd3595:glyph=8'd58;
++12'd3587:glyph=8'd18;
++12'd3588:glyph=8'd21;
++12'd3589:glyph=8'd5;
++12'd3590:glyph=8'd6;
++12'd3592:glyph=8'd43;
++12'd3593:glyph=8'd171;
++12'd3594:glyph=8'd111;
++12'd3595:glyph=8'd100;
++12'd3596:glyph=8'd113;
++12'd3597:glyph=8'd58;
+ 12'd3648:glyph=8'd142;
+ 12'd3649:glyph=8'd170;
+ 12'd3650:glyph=8'd192;
+@@ -567,206 +575,206 @@
+ 8'd14:common_glyph=9'd17;
+ 8'd15:common_glyph=9'd18;
+ 8'd16:common_glyph=9'd19;
+-8'd17:common_glyph=9'd22;
+-8'd18:common_glyph=9'd23;
+-8'd19:common_glyph=9'd24;
+-8'd20:common_glyph=9'd26;
+-8'd21:common_glyph=9'd28;
+-8'd22:common_glyph=9'd29;
+-8'd23:common_glyph=9'd30;
+-8'd24:common_glyph=9'd31;
+-8'd25:common_glyph=9'd32;
+-8'd26:common_glyph=9'd33;
+-8'd27:common_glyph=9'd34;
+-8'd28:common_glyph=9'd35;
+-8'd29:common_glyph=9'd36;
+-8'd30:common_glyph=9'd37;
+-8'd31:common_glyph=9'd38;
+-8'd32:common_glyph=9'd39;
+-8'd33:common_glyph=9'd40;
+-8'd34:common_glyph=9'd41;
+-8'd35:common_glyph=9'd42;
+-8'd36:common_glyph=9'd43;
+-8'd37:common_glyph=9'd44;
+-8'd38:common_glyph=9'd45;
+-8'd39:common_glyph=9'd46;
+-8'd40:common_glyph=9'd47;
+-8'd41:common_glyph=9'd48;
+-8'd42:common_glyph=9'd49;
+-8'd43:common_glyph=9'd50;
+-8'd44:common_glyph=9'd51;
+-8'd45:common_glyph=9'd52;
+-8'd46:common_glyph=9'd53;
+-8'd47:common_glyph=9'd54;
+-8'd48:common_glyph=9'd55;
+-8'd49:common_glyph=9'd57;
+-8'd50:common_glyph=9'd59;
+-8'd51:common_glyph=9'd60;
+-8'd52:common_glyph=9'd61;
+-8'd53:common_glyph=9'd62;
+-8'd54:common_glyph=9'd63;
+-8'd55:common_glyph=9'd64;
+-8'd56:common_glyph=9'd66;
+-8'd57:common_glyph=9'd67;
+-8'd58:common_glyph=9'd68;
+-8'd59:common_glyph=9'd71;
+-8'd60:common_glyph=9'd72;
+-8'd61:common_glyph=9'd73;
+-8'd62:common_glyph=9'd74;
+-8'd63:common_glyph=9'd76;
+-8'd64:common_glyph=9'd77;
+-8'd65:common_glyph=9'd78;
+-8'd66:common_glyph=9'd79;
+-8'd67:common_glyph=9'd80;
+-8'd68:common_glyph=9'd81;
+-8'd69:common_glyph=9'd83;
+-8'd70:common_glyph=9'd84;
+-8'd71:common_glyph=9'd85;
+-8'd72:common_glyph=9'd86;
+-8'd73:common_glyph=9'd87;
+-8'd74:common_glyph=9'd88;
+-8'd75:common_glyph=9'd89;
+-8'd76:common_glyph=9'd91;
+-8'd77:common_glyph=9'd93;
+-8'd78:common_glyph=9'd94;
+-8'd79:common_glyph=9'd95;
+-8'd80:common_glyph=9'd96;
+-8'd81:common_glyph=9'd97;
+-8'd82:common_glyph=9'd98;
+-8'd83:common_glyph=9'd99;
+-8'd84:common_glyph=9'd100;
+-8'd85:common_glyph=9'd101;
+-8'd86:common_glyph=9'd102;
+-8'd87:common_glyph=9'd104;
+-8'd88:common_glyph=9'd105;
+-8'd89:common_glyph=9'd106;
+-8'd90:common_glyph=9'd107;
+-8'd91:common_glyph=9'd108;
+-8'd92:common_glyph=9'd109;
+-8'd93:common_glyph=9'd110;
+-8'd94:common_glyph=9'd112;
+-8'd95:common_glyph=9'd114;
+-8'd96:common_glyph=9'd115;
+-8'd97:common_glyph=9'd116;
+-8'd98:common_glyph=9'd117;
+-8'd99:common_glyph=9'd118;
+-8'd100:common_glyph=9'd119;
+-8'd101:common_glyph=9'd120;
+-8'd102:common_glyph=9'd121;
+-8'd103:common_glyph=9'd123;
+-8'd104:common_glyph=9'd125;
+-8'd105:common_glyph=9'd126;
+-8'd106:common_glyph=9'd127;
+-8'd107:common_glyph=9'd128;
+-8'd108:common_glyph=9'd129;
+-8'd109:common_glyph=9'd131;
+-8'd110:common_glyph=9'd132;
+-8'd111:common_glyph=9'd133;
+-8'd112:common_glyph=9'd135;
+-8'd113:common_glyph=9'd137;
+-8'd114:common_glyph=9'd138;
+-8'd115:common_glyph=9'd139;
+-8'd116:common_glyph=9'd140;
+-8'd117:common_glyph=9'd141;
+-8'd118:common_glyph=9'd142;
+-8'd119:common_glyph=9'd144;
+-8'd120:common_glyph=9'd145;
+-8'd121:common_glyph=9'd146;
+-8'd122:common_glyph=9'd148;
+-8'd123:common_glyph=9'd149;
+-8'd124:common_glyph=9'd151;
+-8'd125:common_glyph=9'd152;
+-8'd126:common_glyph=9'd153;
+-8'd127:common_glyph=9'd154;
+-8'd128:common_glyph=9'd155;
+-8'd129:common_glyph=9'd156;
+-8'd130:common_glyph=9'd157;
+-8'd131:common_glyph=9'd158;
+-8'd132:common_glyph=9'd160;
+-8'd133:common_glyph=9'd162;
+-8'd134:common_glyph=9'd163;
+-8'd135:common_glyph=9'd164;
+-8'd136:common_glyph=9'd165;
+-8'd137:common_glyph=9'd166;
+-8'd138:common_glyph=9'd167;
+-8'd139:common_glyph=9'd169;
+-8'd140:common_glyph=9'd170;
+-8'd141:common_glyph=9'd173;
+-8'd142:common_glyph=9'd174;
+-8'd143:common_glyph=9'd176;
+-8'd144:common_glyph=9'd177;
+-8'd145:common_glyph=9'd178;
+-8'd146:common_glyph=9'd179;
+-8'd147:common_glyph=9'd180;
+-8'd148:common_glyph=9'd181;
+-8'd149:common_glyph=9'd182;
+-8'd150:common_glyph=9'd184;
+-8'd151:common_glyph=9'd186;
+-8'd152:common_glyph=9'd188;
+-8'd153:common_glyph=9'd189;
+-8'd154:common_glyph=9'd190;
+-8'd155:common_glyph=9'd191;
+-8'd156:common_glyph=9'd192;
+-8'd157:common_glyph=9'd193;
+-8'd158:common_glyph=9'd194;
+-8'd159:common_glyph=9'd196;
+-8'd160:common_glyph=9'd197;
+-8'd161:common_glyph=9'd198;
+-8'd162:common_glyph=9'd200;
+-8'd163:common_glyph=9'd204;
+-8'd164:common_glyph=9'd205;
+-8'd165:common_glyph=9'd206;
+-8'd166:common_glyph=9'd207;
+-8'd167:common_glyph=9'd208;
+-8'd168:common_glyph=9'd209;
+-8'd169:common_glyph=9'd210;
+-8'd170:common_glyph=9'd211;
+-8'd171:common_glyph=9'd213;
+-8'd172:common_glyph=9'd215;
+-8'd173:common_glyph=9'd216;
+-8'd174:common_glyph=9'd218;
+-8'd175:common_glyph=9'd219;
+-8'd176:common_glyph=9'd221;
+-8'd177:common_glyph=9'd222;
+-8'd178:common_glyph=9'd224;
+-8'd179:common_glyph=9'd225;
+-8'd180:common_glyph=9'd226;
+-8'd181:common_glyph=9'd227;
+-8'd182:common_glyph=9'd229;
+-8'd183:common_glyph=9'd230;
+-8'd184:common_glyph=9'd231;
+-8'd185:common_glyph=9'd232;
+-8'd186:common_glyph=9'd233;
+-8'd187:common_glyph=9'd235;
+-8'd188:common_glyph=9'd237;
+-8'd189:common_glyph=9'd240;
+-8'd190:common_glyph=9'd242;
+-8'd191:common_glyph=9'd244;
+-8'd192:common_glyph=9'd245;
+-8'd193:common_glyph=9'd246;
+-8'd194:common_glyph=9'd247;
+-8'd195:common_glyph=9'd248;
+-8'd196:common_glyph=9'd249;
+-8'd197:common_glyph=9'd250;
+-8'd198:common_glyph=9'd251;
+-8'd199:common_glyph=9'd252;
+-8'd200:common_glyph=9'd253;
+-8'd201:common_glyph=9'd254;
+-8'd202:common_glyph=9'd255;
+-8'd203:common_glyph=9'd258;
+-8'd204:common_glyph=9'd259;
+-8'd205:common_glyph=9'd260;
+-8'd206:common_glyph=9'd261;
+-8'd207:common_glyph=9'd262;
+-8'd208:common_glyph=9'd263;
+-8'd209:common_glyph=9'd265;
+-8'd210:common_glyph=9'd266;
+-8'd211:common_glyph=9'd268;
+-8'd212:common_glyph=9'd271;
+-8'd213:common_glyph=9'd272;
+-8'd214:common_glyph=9'd276;
+-8'd215:common_glyph=9'd277;
+-8'd216:common_glyph=9'd278;
++8'd17:common_glyph=9'd21;
++8'd18:common_glyph=9'd22;
++8'd19:common_glyph=9'd23;
++8'd20:common_glyph=9'd25;
++8'd21:common_glyph=9'd27;
++8'd22:common_glyph=9'd28;
++8'd23:common_glyph=9'd29;
++8'd24:common_glyph=9'd30;
++8'd25:common_glyph=9'd31;
++8'd26:common_glyph=9'd32;
++8'd27:common_glyph=9'd33;
++8'd28:common_glyph=9'd34;
++8'd29:common_glyph=9'd35;
++8'd30:common_glyph=9'd36;
++8'd31:common_glyph=9'd37;
++8'd32:common_glyph=9'd38;
++8'd33:common_glyph=9'd39;
++8'd34:common_glyph=9'd40;
++8'd35:common_glyph=9'd41;
++8'd36:common_glyph=9'd42;
++8'd37:common_glyph=9'd43;
++8'd38:common_glyph=9'd44;
++8'd39:common_glyph=9'd45;
++8'd40:common_glyph=9'd46;
++8'd41:common_glyph=9'd47;
++8'd42:common_glyph=9'd48;
++8'd43:common_glyph=9'd49;
++8'd44:common_glyph=9'd50;
++8'd45:common_glyph=9'd51;
++8'd46:common_glyph=9'd52;
++8'd47:common_glyph=9'd53;
++8'd48:common_glyph=9'd54;
++8'd49:common_glyph=9'd56;
++8'd50:common_glyph=9'd58;
++8'd51:common_glyph=9'd59;
++8'd52:common_glyph=9'd60;
++8'd53:common_glyph=9'd61;
++8'd54:common_glyph=9'd62;
++8'd55:common_glyph=9'd63;
++8'd56:common_glyph=9'd65;
++8'd57:common_glyph=9'd66;
++8'd58:common_glyph=9'd67;
++8'd59:common_glyph=9'd70;
++8'd60:common_glyph=9'd71;
++8'd61:common_glyph=9'd72;
++8'd62:common_glyph=9'd73;
++8'd63:common_glyph=9'd75;
++8'd64:common_glyph=9'd76;
++8'd65:common_glyph=9'd77;
++8'd66:common_glyph=9'd78;
++8'd67:common_glyph=9'd79;
++8'd68:common_glyph=9'd80;
++8'd69:common_glyph=9'd82;
++8'd70:common_glyph=9'd83;
++8'd71:common_glyph=9'd84;
++8'd72:common_glyph=9'd85;
++8'd73:common_glyph=9'd86;
++8'd74:common_glyph=9'd87;
++8'd75:common_glyph=9'd88;
++8'd76:common_glyph=9'd89;
++8'd77:common_glyph=9'd90;
++8'd78:common_glyph=9'd91;
++8'd79:common_glyph=9'd92;
++8'd80:common_glyph=9'd93;
++8'd81:common_glyph=9'd94;
++8'd82:common_glyph=9'd95;
++8'd83:common_glyph=9'd96;
++8'd84:common_glyph=9'd97;
++8'd85:common_glyph=9'd98;
++8'd86:common_glyph=9'd99;
++8'd87:common_glyph=9'd101;
++8'd88:common_glyph=9'd102;
++8'd89:common_glyph=9'd103;
++8'd90:common_glyph=9'd104;
++8'd91:common_glyph=9'd105;
++8'd92:common_glyph=9'd106;
++8'd93:common_glyph=9'd107;
++8'd94:common_glyph=9'd109;
++8'd95:common_glyph=9'd111;
++8'd96:common_glyph=9'd112;
++8'd97:common_glyph=9'd113;
++8'd98:common_glyph=9'd114;
++8'd99:common_glyph=9'd115;
++8'd100:common_glyph=9'd116;
++8'd101:common_glyph=9'd117;
++8'd102:common_glyph=9'd118;
++8'd103:common_glyph=9'd120;
++8'd104:common_glyph=9'd122;
++8'd105:common_glyph=9'd123;
++8'd106:common_glyph=9'd124;
++8'd107:common_glyph=9'd125;
++8'd108:common_glyph=9'd126;
++8'd109:common_glyph=9'd128;
++8'd110:common_glyph=9'd129;
++8'd111:common_glyph=9'd130;
++8'd112:common_glyph=9'd132;
++8'd113:common_glyph=9'd134;
++8'd114:common_glyph=9'd135;
++8'd115:common_glyph=9'd136;
++8'd116:common_glyph=9'd137;
++8'd117:common_glyph=9'd138;
++8'd118:common_glyph=9'd139;
++8'd119:common_glyph=9'd141;
++8'd120:common_glyph=9'd142;
++8'd121:common_glyph=9'd143;
++8'd122:common_glyph=9'd145;
++8'd123:common_glyph=9'd146;
++8'd124:common_glyph=9'd147;
++8'd125:common_glyph=9'd148;
++8'd126:common_glyph=9'd149;
++8'd127:common_glyph=9'd150;
++8'd128:common_glyph=9'd151;
++8'd129:common_glyph=9'd152;
++8'd130:common_glyph=9'd153;
++8'd131:common_glyph=9'd154;
++8'd132:common_glyph=9'd156;
++8'd133:common_glyph=9'd158;
++8'd134:common_glyph=9'd159;
++8'd135:common_glyph=9'd160;
++8'd136:common_glyph=9'd161;
++8'd137:common_glyph=9'd162;
++8'd138:common_glyph=9'd163;
++8'd139:common_glyph=9'd165;
++8'd140:common_glyph=9'd166;
++8'd141:common_glyph=9'd169;
++8'd142:common_glyph=9'd170;
++8'd143:common_glyph=9'd172;
++8'd144:common_glyph=9'd173;
++8'd145:common_glyph=9'd174;
++8'd146:common_glyph=9'd175;
++8'd147:common_glyph=9'd176;
++8'd148:common_glyph=9'd177;
++8'd149:common_glyph=9'd178;
++8'd150:common_glyph=9'd180;
++8'd151:common_glyph=9'd182;
++8'd152:common_glyph=9'd184;
++8'd153:common_glyph=9'd185;
++8'd154:common_glyph=9'd186;
++8'd155:common_glyph=9'd187;
++8'd156:common_glyph=9'd188;
++8'd157:common_glyph=9'd189;
++8'd158:common_glyph=9'd190;
++8'd159:common_glyph=9'd192;
++8'd160:common_glyph=9'd193;
++8'd161:common_glyph=9'd194;
++8'd162:common_glyph=9'd195;
++8'd163:common_glyph=9'd199;
++8'd164:common_glyph=9'd200;
++8'd165:common_glyph=9'd201;
++8'd166:common_glyph=9'd202;
++8'd167:common_glyph=9'd203;
++8'd168:common_glyph=9'd204;
++8'd169:common_glyph=9'd205;
++8'd170:common_glyph=9'd206;
++8'd171:common_glyph=9'd208;
++8'd172:common_glyph=9'd210;
++8'd173:common_glyph=9'd211;
++8'd174:common_glyph=9'd212;
++8'd175:common_glyph=9'd213;
++8'd176:common_glyph=9'd215;
++8'd177:common_glyph=9'd216;
++8'd178:common_glyph=9'd218;
++8'd179:common_glyph=9'd219;
++8'd180:common_glyph=9'd220;
++8'd181:common_glyph=9'd221;
++8'd182:common_glyph=9'd223;
++8'd183:common_glyph=9'd224;
++8'd184:common_glyph=9'd225;
++8'd185:common_glyph=9'd226;
++8'd186:common_glyph=9'd227;
++8'd187:common_glyph=9'd229;
++8'd188:common_glyph=9'd231;
++8'd189:common_glyph=9'd233;
++8'd190:common_glyph=9'd235;
++8'd191:common_glyph=9'd237;
++8'd192:common_glyph=9'd238;
++8'd193:common_glyph=9'd239;
++8'd194:common_glyph=9'd240;
++8'd195:common_glyph=9'd241;
++8'd196:common_glyph=9'd242;
++8'd197:common_glyph=9'd243;
++8'd198:common_glyph=9'd244;
++8'd199:common_glyph=9'd245;
++8'd200:common_glyph=9'd246;
++8'd201:common_glyph=9'd247;
++8'd202:common_glyph=9'd248;
++8'd203:common_glyph=9'd249;
++8'd204:common_glyph=9'd250;
++8'd205:common_glyph=9'd251;
++8'd206:common_glyph=9'd252;
++8'd207:common_glyph=9'd253;
++8'd208:common_glyph=9'd254;
++8'd209:common_glyph=9'd256;
++8'd210:common_glyph=9'd257;
++8'd211:common_glyph=9'd259;
++8'd212:common_glyph=9'd262;
++8'd213:common_glyph=9'd263;
++8'd214:common_glyph=9'd266;
++8'd215:common_glyph=9'd267;
++8'd216:common_glyph=9'd268;
+ default:common_glyph=0;endcase end
+ assign shared_addr={common_glyph,row};
+ generate if(SHARED_FONT)begin:shared_font_read
+--- original/rtl/vision6_overlay.v
++++ new/rtl/vision6_overlay.v
+@@ -1,8 +1,8 @@
+ `include "gesture_config.vh"
+-module vision6_overlay #(parameter WIDTH=1280,HEIGHT=720,MAX_FACES=8,HUD_ENABLE=1,GESTURE_DEBUG=0,SHARED_FONT=0)(
++module vision6_overlay #(parameter WIDTH=1280,HEIGHT=720,MAX_FACES=8,HUD_ENABLE=1,GESTURE_DEBUG=0,SHARED_FONT=0,INLINE_THRESHOLDS=0)(
+  input clk,rst_n,input[3:0]mode,input[23:0]rgb,input de,vs,hs,
+  input[10:0]x,input[9:0]y,input edge_pixel,raw_edge,compare_edge,
+- input[7:0]raw_strength,gray_pixel,input frozen,pure_en,detect,
++ input[7:0]raw_strength,gray_pixel,cyber_threshold,input frozen,pure_en,detect,
+  input[3:0]count,input[MAX_FACES*42-1:0]boxes,
+  input[1:0]shape_class,input[41:0]shape_box,
+  input hand_valid,input[41:0]hand_box,input[2:0]gesture,input hand_skin,
+@@ -34,7 +34,7 @@
+  wire paint;wire[23:0]avatar_rgb;
+  gesture_matrix8 avatar(x,y,(mode==15&&hand_valid)?gesture:3'd0,animation[3],paint,avatar_rgb);
+  always @*begin
+-   if(raw_strength<24)neon=0;
++   if(raw_strength<(INLINE_THRESHOLDS?cyber_threshold:8'd24))neon=0;
+    else if(raw_strength<64)neon={8'd0,raw_strength,raw_strength[5:0],2'b00};
+    else if(raw_strength<128)neon=24'h00FFFF;
+    else if(raw_strength<192)neon={raw_strength,8'h20,8'hFF};
+--- original/rtl/vision8_controls.v
++++ new/rtl/vision8_controls.v
+@@ -1,5 +1,5 @@
+-// IO28: released high, pressed low. IO35 remains active high.
+-// IO29 and board keys are active low. ding, 2026-10-16.
++// IO28, IO29, IO34 and IO35: released high, pressed low.
++// Board K1/K2 ports remain constrained but are ignored by this controller.
+ // Context is bound at the debounced press; changing mode cancels held actions.
+ module vision8_key #(parameter DEBOUNCE=1488000,LONG_CYCLES=148800000)(
+  input clk,rst_n,key_n,input[3:0]context_i,
+@@ -41,81 +41,117 @@
+  end
+ endmodule
+ 
+-module vision8_controls #(parameter DEBOUNCE=1488000,LONG_CYCLES=148800000)(
+- input clk,rst_n,frame_start,io28,io29,k1_n,k2_n,io35,
++module vision8_controls #(
++ parameter DEBOUNCE=1488000,LONG_CYCLES=148800000,UART_CLKS_PER_BIT=645)(
++ input clk,rst_n,frame_start,io28,io29,k1_n,k2_n,io34,io35,
+  input capture_busy,learning,rx,
+  output reg settings_open,output reg[2:0]user_mode,output reg[1:0]capture_alg,
+  output reg pip_enable,freeze_request,output reg capture,clear,
+  output reg gesture_short,gesture_long,
+  output reg[11:0]low,high,output reg[1:0]selected,step_select,
+  output reg[11:0]low_active,high_active,output reg[15:0]version,
++ output reg[11:0]red,red_active,cyber,cyber_active,
+  output[3:0]backend_mode,output reg pure_o,detect_extra,output reg[7:0]skin_lower);
++ // The original vision8_key module above is deliberately unchanged. Four
++ // external inputs are released-high / pressed-low. K1/K2 are retained ports
++ // for pin compatibility but have no control role in this revision.
+  wire[3:0]s,l;
+- wire threshold_short,threshold_long;
+- wire[3:0]key_context={settings_open,user_mode};
++ wire[3:0]key_context={user_mode==5&&learning,user_mode};
+  vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) a(clk,rst_n,io28,key_context,s[0],l[0]);
+  vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) b(clk,rst_n,io29,key_context,s[1],l[1]);
+- vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) c(clk,rst_n,k1_n,key_context,s[2],l[2]);
+- vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) d(clk,rst_n,k2_n,key_context,s[3],l[3]);
+- vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) threshold_key(clk,rst_n,~io35,key_context,threshold_short,threshold_long);
++ vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) c(clk,rst_n,io34,key_context,s[2],l[2]);
++ vision8_key #(.DEBOUNCE(DEBOUNCE),.LONG_CYCLES(LONG_CYCLES)) d(clk,rst_n,io35,key_context,s[3],l[3]);
+  wire[11:0]step=step_select==0?12'd1:step_select==1?12'd4:12'd8;
+- wire[11:0]inc_limit=selected==0?high-1:12'd2040;
+- wire[11:0]dec_limit=selected==1?low+1:12'd1;
+- reg[11:0]delta;
+  wire serial_valid;wire[7:0]serial_data;reg diagnostic;reg[3:0]diagnostic_mode;
+- vision8_uart serial(clk,rst_n,rx,serial_valid,serial_data);
++ vision8_uart #(.CLKS_PER_BIT(UART_CLKS_PER_BIT)) serial(clk,rst_n,rx,serial_valid,serial_data);
+  wire[1:0]algorithm=user_mode==7?capture_alg:user_mode[1:0];
++ // 0=no editable profile, 1=Canny, 2=raw-Sobel red, 3=8-bit cyber.
++ wire[1:0]profile=(user_mode==1||user_mode==4)?2'd1:
++                    user_mode==2?2'd2:user_mode==3?2'd3:
++                    user_mode==7?capture_alg:2'd0;
+  assign backend_mode=diagnostic?diagnostic_mode:user_mode==5?4'd15:user_mode==4?4'd14:user_mode==6?4'd0:
+   algorithm==0?4'd0:algorithm==1?4'd1:algorithm==2?4'd10:4'd9;
++ function[11:0]increase;
++  input[11:0]value,amount,maximum;
++  reg[12:0]sum;
++  begin sum={1'b0,value}+{1'b0,amount};increase=sum>{1'b0,maximum}?maximum:sum[11:0];end
++ endfunction
++ function[11:0]decrease;
++  input[11:0]value,amount,minimum;
++  begin decrease=value<=minimum+amount?minimum:value-amount;end
++ endfunction
++ function[11:0]canny_low;
++  input[11:0]threshold;
++  begin canny_low=threshold<2?12'd1:threshold>>1;end
++ endfunction
++ wire[11:0]high_up=increase(high,step,12'd2040);
++ wire[11:0]high_down=decrease(high,step,12'd2);
++ // These tasks only assign the pending registers. All active registers are
++ // committed together at frame_start, including edits made while frozen.
++ task adjust;
++  input[1:0]which;input increment;
++  begin
++   case(which)
++    1:begin high<=increment?high_up:high_down;low<=canny_low(increment?high_up:high_down);end
++    2:red<=increment?increase(red,step,12'd2040):decrease(red,step,12'd1);
++    3:cyber<=increment?increase(cyber,step,12'd255):decrease(cyber,step,12'd1);
++    default:begin end
++   endcase
++  end
++ endtask
++ task restore_profile;
++  input[1:0]which;
++  begin
++   case(which)
++    1:begin low<=40;high<=80;end
++    2:red<=40;
++    3:cyber<=24;
++    default:begin end
++   endcase
++  end
++ endtask
+  always @(posedge clk)begin
+-  if(!rst_n)begin user_mode<=0;settings_open<=0;capture_alg<=0;pip_enable<=0;freeze_request<=0;capture<=0;clear<=0;gesture_short<=0;gesture_long<=0;
+-   low<=40;high<=80;low_active<=40;high_active<=80;selected<=0;step_select<=0;version<=0;delta<=0;pure_o<=0;detect_extra<=0;skin_lower<=10;diagnostic<=0;diagnostic_mode<=0;end
+-  else begin
++  if(!rst_n)begin
++   user_mode<=0;settings_open<=0;capture_alg<=0;pip_enable<=0;freeze_request<=0;
++   capture<=0;clear<=0;gesture_short<=0;gesture_long<=0;
++   low<=40;high<=80;low_active<=40;high_active<=80;red<=40;red_active<=40;cyber<=24;cyber_active<=24;
++   selected<=0;step_select<=0;version<=0;pure_o<=0;detect_extra<=0;skin_lower<=10;diagnostic<=0;diagnostic_mode<=0;
++  end else begin
++   settings_open<=0;selected<=0;
+    capture<=0;clear<=0;gesture_short<=0;gesture_long<=0;
+    if(frame_start)begin
+-    low_active<=low;high_active<=high;
+-    if(low!=low_active||high!=high_active)version<=version+1'b1;
++    low_active<=low;high_active<=high;red_active<=red;cyber_active<=cyber;
++    if(low!=low_active||high!=high_active||red!=red_active||cyber!=cyber_active)version<=version+1'b1;
+    end
+-   if(s[0])begin user_mode<=user_mode+1'b1;freeze_request<=0;diagnostic<=0;pure_o<=0;settings_open<=0;end
+-   else if(threshold_short)begin
+-    // A settings page, independent of the eight processing modes.
+-    // Keep the HDMI algorithm and freeze state unchanged when opening/closing.
+-    settings_open<=~settings_open;
+-   end
+-   else begin
+-    if(!settings_open&&l[0]&&user_mode>=1&&user_mode<=3)pip_enable<=~pip_enable;
+-    if(settings_open)begin
+-     if(s[2])selected<=selected==2?0:selected+1'b1;
+-     if(l[2])step_select<=step_select==2?0:step_select+1'b1;
+-     if(l[1])freeze_request<=~freeze_request;
+-     if(s[3])begin
+-      if(selected==2)begin delta=(2040-high<step)?2040-high:step;low<=low+delta;high<=high+delta;end
+-      else if(selected==0)low<=inc_limit-low<step?inc_limit:low+step;
+-      else high<=inc_limit-high<step?inc_limit:high+step;
+-     end else if(s[1])begin
+-      if(selected==2)begin delta=(low-1<step)?low-1:step;low<=low-delta;high<=high-delta;end
+-      else if(selected==1)high<=high-dec_limit<step?dec_limit:high-step;
+-      else low<=low-dec_limit<step?dec_limit:low-step;
+-     end
+-    end else if(user_mode==7)begin
++   // Physical mode events have first priority; other physical events precede
++   // UART. Thus a released key cannot also edit the new mode on this edge.
++   if(s[0])begin user_mode<=user_mode+1'b1;freeze_request<=0;diagnostic<=0;pure_o<=0;end
++   else if(|s||(|l))begin
++    if(l[0]&&user_mode>=1&&user_mode<=3)pip_enable<=~pip_enable;
++    if(user_mode==7)begin
+      if(s[1]&&!capture_busy)capture<=1;
+      if(l[1])clear<=1;
+-     if(s[3]&&!capture_busy)capture_alg<=capture_alg+1'b1;
++     if(s[2]&&!capture_busy)capture_alg<=capture_alg+1'b1;
+     end else if(user_mode==5)begin
+      gesture_short<=s[2];gesture_long<=l[2];
+      if(l[2])freeze_request<=0;
+      else if(s[1]&&!learning)freeze_request<=~freeze_request;
+-    end else if(s[1])freeze_request<=~freeze_request;
+-   end
+-   // UART remains available for maintenance. Human modes are 0..7 here.
+-   if(serial_valid)begin
+-    if((serial_data>="0"&&serial_data<="7")||serial_data=="m"||serial_data=="r"||serial_data=="p"||serial_data=="g"||serial_data=="c"||serial_data=="t")settings_open<=0;
++    end else begin
++     if(s[1])freeze_request<=~freeze_request;
++     if(user_mode>=1&&user_mode<=4)begin
++      if(l[2])step_select<=step_select==2?0:step_select+1'b1;
++      if(l[3])restore_profile(profile);
++      else if(s[2])adjust(profile,1'b0);
++      else if(s[3])adjust(profile,1'b1);
++     end
++    end
++   end else if(serial_valid)begin
+     if(serial_data>="0"&&serial_data<="7")begin user_mode<=serial_data-"0";diagnostic<=0;pure_o<=0;freeze_request<=0;end
+     else case(serial_data)
+      "m":begin user_mode<=user_mode+1'b1;diagnostic<=0;pure_o<=0;freeze_request<=0;end
+-     "+":begin delta=(2040-high<8)?2040-high:8;low<=low+delta;high<=high+delta;end
+-     "-":begin delta=(low-1<8)?low-1:8;low<=low-delta;high<=high-delta;end
+-     "r":begin user_mode<=0;low<=40;high<=80;selected<=0;step_select<=0;pure_o<=0;diagnostic<=0;detect_extra<=0;skin_lower<=10;freeze_request<=0;end
++     "+":adjust(profile,1'b1);
++     "-":adjust(profile,1'b0);
++     "r":begin user_mode<=0;low<=40;high<=80;red<=40;cyber<=24;selected<=0;step_select<=0;pure_o<=0;diagnostic<=0;detect_extra<=0;skin_lower<=10;freeze_request<=0;end
+      "p":begin pure_o<=~pure_o;user_mode<=0;diagnostic<=0;end
+      "f":detect_extra<=~detect_extra;
+      "g":begin user_mode<=0;diagnostic<=1;diagnostic_mode<=5;pure_o<=0;end
+--- original/rtl/vision8_frames.v
++++ new/rtl/vision8_frames.v
+@@ -48,22 +48,21 @@
+   if(mode_active==7)begin
+    label_x=local_x-8;label_y=local_y-8;label_area=local_x>=8&&local_x<584&&local_y>=8&&local_y<24;
+    if(valid_tiles[tile])begin
+-    case(tile_meta[97:96])0:label={"RAW   L:0000 H:0000 F:00000000 V:0000",88'd0};1:label={"CANNY L:0000 H:0000 F:00000000 V:0000",88'd0};
+-     2:label={"RED   L:0040 H:0040 F:00000000 V:0000",88'd0};default:label={"CYBER L:0040 H:0040 F:00000000 V:0000",88'd0};endcase
++    case(tile_meta[97:96])0:label={"RAW   T:----        F:00000000 V:0000",88'd0};1:label={"CANNY T:0000        F:00000000 V:0000",88'd0};
++     2:label={"RED   T:0000        F:00000000 V:0000",88'd0};default:label={"CYBER T:0000        F:00000000 V:0000",88'd0};endcase
+     label_low=tile_meta[83:72];label_high=tile_meta[95:84];
+    end else label={"EMPTY - IO29 CAPTURE",232'd0};
+   end else if(mode_active>=5)begin
+    label_x=x-16;label_y=y-8;label_area=x>=16&&x<592&&y>=8&&y<40;
+    case(mode_active)
+     6:label={"07 FACE CANDIDATES: - ",216'd0};
+-    5:label={"06 GESTURE - BOARD K1 ENROL",176'd0};
++    5:label={"06 GESTURE - IO34 ENROL",200'd0};
+    endcase
+   end
+   c=label_x/12;
+   if(c<48)label_char=label[383-c*8-:8];
+   if(mode_active==7&&valid_tiles[tile])begin
+-   if(c>=8&&c<12&&tile_meta[97:96]<2)label_char=digit(label_low,c-8);
+-   if(c>=15&&c<19&&tile_meta[97:96]<2)label_char=digit(label_high,c-15);
++   if(c>=8&&c<12&&tile_meta[97:96]!=0)label_char=digit(label_high,c-8);
+    if(c>=22&&c<30)label_char=hexchar(tile_meta[24+(29-c)*4+:4]);
+    if(c>=33&&c<37)label_char=hexchar(tile_meta[56+(36-c)*4+:4]);
+   end
+--- original/src/parallel/parallel_video.v
++++ new/src/parallel/parallel_video.v
+@@ -15,10 +15,11 @@
+  parameter FACE_MIN_RATIO_X10=`VISION_FACE_MIN_RATIO_X10,
+  parameter FACE_MAX_RATIO_X10=`VISION_FACE_MAX_RATIO_X10,
+  parameter COMPARE_CANNY=`VISION_COMPARE_CANNY,DEBUG_BOXES=`VISION_DEBUG_BOXES,
+- parameter SOURCE_TAGGED=0,CANNY_GAUSSIAN=0,HUD_ENABLE=0,GESTURE_DEBUG=0,SHARED_FONT=0
++ parameter SOURCE_TAGGED=0,CANNY_GAUSSIAN=0,HUD_ENABLE=0,GESTURE_DEBUG=0,SHARED_FONT=0,INLINE_THRESHOLDS=0
+ )(
+  input clk,rst_n,input [23:0] rgb_i,input de_i,vs_i,hs_i,
+  input [3:0] mode_i,input [11:0] low_i,high_i,
++ input [11:0] red_i,cyber_i,
+  output [23:0] rgb_o,output de_o,vs_o,hs_o,output overrun,input freeze_i,
+  output [3:0] mode_committed_o,output frozen_committed_o,
+  input pure_i,detect_i,input[7:0]skin_lower_i,health_i,
+@@ -48,10 +49,13 @@
+    else if(de_i) begin if(x==WIDTH-1) begin x<=0;y<=y+1'b1;end else x<=x+1'b1;end
+  end
+  wire [15:0] rgb565={rgb_i[23:19],rgb_i[15:10],rgb_i[7:3]};
+- reg [11:0] low_active,high_active;
++ reg [11:0] low_active,high_active,red_active;
++ reg [7:0] cyber_pending,cyber_display;
+  always @(posedge clk or negedge rst_n)
+- if(!rst_n) begin low_active<=DEFAULT_LOW;high_active<=DEFAULT_HIGH;end
+- else if(fs) begin low_active<=low_i;high_active<=high_i;end
++ if(!rst_n) begin low_active<=DEFAULT_LOW;high_active<=DEFAULT_HIGH;red_active<=40;cyber_pending<=24;end
++ else if(fs) begin low_active<=low_i;high_active<=high_i;
++  red_active<=INLINE_THRESHOLDS?red_i:12'd40;
++  cyber_pending<=INLINE_THRESHOLDS?cyber_i[7:0]:8'd24;end
+  wire ce,cv;wire [10:0] ex;wire [9:0] ey;
+  wire [7:0] gray_tap;wire [11:0] sobel_mag;
+  wire sobel_valid;wire [10:0] sobel_x;wire [9:0] sobel_y;
+@@ -95,7 +99,9 @@
+  wire [8:0] raw_preview;
+  wire [7:0] raw_strength=raw_valid?((raw_mag>255)?8'hff:raw_mag[7:0]):8'd0;
+  video_delay #(.BITS(9),.LATENCY(DELAY-RAW_DELAY)) raw_delay(clk,rst_n,
+-   {raw_valid && raw_mag>=12'd40,raw_strength},raw_preview);
++   // Only the RED backend uses the adjustable raw edge bit. Gesture and
++   // maintenance views keep their original fixed evidence threshold.
++   {raw_valid && raw_mag>=((INLINE_THRESHOLDS&&mode_pending==10)?red_active:12'd40),raw_strength},raw_preview);
+  wire hand_valid,hand_overflow,hand_raw,hand_raw_valid;wire[41:0]hand_box;wire[2:0]gesture;
+  wire aligned_hand_skin;
+  wire[2:0]learn_step,learn_state,wave_phase;wire[4:0]trained;wire[1:0]learn_error;
+@@ -119,6 +125,9 @@
+  video_delay #(.BITS(1),.LATENCY(DELAY-2)) hand_mask_delay(clk,rst_n,hand_raw&&hand_raw_valid,aligned_hand_skin);
+  wire [3:0] count;wire [MAX_FACES*42-1:0] boxes;wire busy;
+  reg avs_q;wire display_fs=avs&&!avs_q;
++ // Apply the CYBER display threshold with the delayed frame, not input VS.
++ always @(posedge clk)if(!rst_n)cyber_display<=24;
++ else if(display_fs)cyber_display<=cyber_pending;
+  
+  
+  wire face_published,face_saturated;wire[31:0]face_id;
+@@ -129,7 +138,7 @@
+  assign gesture_o=gesture;assign trained_o=trained;assign learn_state_o=learn_state;assign countdown_o=learn_countdown;
+  reg[23:0]plain,plain_neon;
+  always @*begin
+-  if(raw_preview[7:0]<24)plain_neon=0;
++  if(raw_preview[7:0]<cyber_display)plain_neon=0;
+   else if(raw_preview[7:0]<64)plain_neon={8'd0,raw_preview[7:0],raw_preview[5:0],2'b00};
+   else if(raw_preview[7:0]<128)plain_neon=24'h00ffff;
+   else if(raw_preview[7:0]<192)plain_neon={raw_preview[7:0],8'h20,8'hff};
+@@ -158,12 +167,12 @@
+  edge_shape_roi #(.WIDTH(WIDTH),.HEIGHT(HEIGHT)) u_shape(
+    .clk(clk),.rst_n(rst_n),.frame_start(display_fs),.de(ade),.edge_pixel(aligned_sobel),
+    .x(ax),.y(ay),.shape_class(shape_class),.box(shape_box));
+- vision6_overlay #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.MAX_FACES(MAX_FACES),.HUD_ENABLE(HUD_ENABLE),.GESTURE_DEBUG(GESTURE_DEBUG),.SHARED_FONT(SHARED_FONT)) u_overlay(
++ vision6_overlay #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.MAX_FACES(MAX_FACES),.HUD_ENABLE(HUD_ENABLE),.GESTURE_DEBUG(GESTURE_DEBUG),.SHARED_FONT(SHARED_FONT),.INLINE_THRESHOLDS(INLINE_THRESHOLDS)) u_overlay(
+  .shared_addr(shared_addr),.shared_bits(shared_bits),
+    .clk(clk),.rst_n(rst_n),.mode(mode_active),.rgb(argb),.de(ade),.vs(avs),.hs(ahs),
+    .x(ax),.y(ay),.edge_pixel(aligned_edge),.count(count),.boxes(boxes),
+    .gray_pixel(aligned_gray),.compare_edge(aligned_sobel),.raw_strength(raw_preview[7:0]),
+-   .raw_edge(raw_preview[8]),.frozen(frozen_active),.pure_en(pure_active),.detect(detect_active),
++   .raw_edge(raw_preview[8]),.cyber_threshold(cyber_display),.frozen(frozen_active),.pure_en(pure_active),.detect(detect_active),
+    .shape_class(shape_class),.shape_box(shape_box),.hand_valid(hand_valid),.hand_box(hand_box),
+    .gesture(gesture),.hand_skin(aligned_hand_skin),.health(health_i),
+    .hand_enable(hand_enable),.hand_overflow(hand_overflow),.debug_raw(hand_debug_raw),.debug_clean(hand_debug_clean),
+--- original/Ti60_Demo.peri.xml
++++ new/Ti60_Demo.peri.xml
+@@ -451,7 +451,10 @@
+     <efxpt:comp_gpio name="io29_button_i" gpio_def="GPIOL_P_16" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
+             <efxpt:input_config name="io29_button_i" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name=""/>
+         </efxpt:comp_gpio>
+-    <efxpt:comp_gpio name="io35_button_i" gpio_def="GPIOT_P_11" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
++    <efxpt:comp_gpio name="io34_button_i" gpio_def="GPIOT_N_11" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
++            <efxpt:input_config name="io34_button_i" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name=""/>
++        </efxpt:comp_gpio>
++        <efxpt:comp_gpio name="io35_button_i" gpio_def="GPIOT_P_11" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
+             <efxpt:input_config name="io35_button_i" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name=""/>
+         </efxpt:comp_gpio>
+         <efxpt:global_unused_config state="input with weak pullup"/>
+--- original/Ti60_Demo.pt.sdc
++++ new/Ti60_Demo.pt.sdc
+@@ -742,3 +742,6 @@
+ set_false_path -hold -from [get_clocks clk_lvds_1x] -to [get_clocks clk_pixel]
+ 
+ set_false_path -from [get_ports {io28_button_i io29_button_i io35_button_i}]
++
++# IO34 async input: only the first synchronizer stage is excepted.
++set_false_path -from [get_ports {io34_button_i}] -to [get_pins {controls/c/meta~FF|D}]
+--- original/tools/compress_shared_font_ram.py
++++ new/tools/compress_shared_font_ram.py
+@@ -28,6 +28,9 @@
+     parser.add_argument('--index-bits', type=int, choices=(5, 10), default=10)
+     parser.add_argument('--ordering', choices=('value', 'frequency'), default='frequency',
+                         help='Dictionary order; frequency wins the complete-project comparison')
++    parser.add_argument('--report-dir', type=Path,
++                        default=Path('reports/ram_optimization_20261020'),
++                        help='Project-relative report directory; use a new directory for changed UI fonts')
+     args = parser.parse_args()
+     words = [int(x, 16) for x in (P/'shared_font.hex').read_text().split()]
+     assert len(words) <= 8192 and all(0 <= x < 65536 for x in words)
+@@ -109,7 +112,7 @@
+         'reference_files_modified': False,
+         'roundtrip_all_8192_rows': 'PASS',
+     }
+-    output = P/'reports/ram_optimization_20261020'
++    output = args.report_dir if args.report_dir.is_absolute() else P/args.report_dir
+     output.mkdir(parents=True, exist_ok=True)
+     (output/'shared_font_encoding.json').write_text(
+         json.dumps(report, indent=2)+'\n', encoding='utf-8')
+--- original/tools/generate_font.py
++++ new/tools/generate_font.py
+@@ -8,11 +8,11 @@
+ lcd[1:9]=['01 原图','02 Canny','03 彩色红边','04 赛博边缘','05 彩边对照','06 手势识别','07 人脸识别','08 四帧对比']
+ lcd[9:16]=['LIVE','HOLD','人脸数量','当前画面 / 肤色轮廓候选','已冻结 / 保留当前人数','等待有效画面','人']
+ lcd[16:24]=['原图：摄像头彩色画面','Canny：黑白边缘','红边：彩色轮廓','赛博：霓虹边缘','对照：彩色画面与黑白边缘','手势：招手 点赞 比心 OK V字','人脸识别 / 实时人数','四帧：保存画面对比']
+-lcd[24:32]=['IO29 冻结 / 恢复画面','长按 IO28 开关彩色画中画','长按 IO28 开关彩色画中画','长按 IO28 开关彩色画中画','IO29 冻结 / 恢复画面','长按 K1 录入；短按确认手型','IO29 冻结 / 恢复人数','IO29 保存；长按清空；K2 换算法']
+-lcd[32:40]=['Canny 阈值','IO35 短按进入','IO35 短按返回','LOW','HIGH','LOW HIGH LINK','STEP','IO29 减小 / K2 增大']
++lcd[24:32]=['IO29 冻结 / 恢复画面','长按 IO28 开关彩色画中画','长按 IO28 开关彩色画中画','长按 IO28 开关彩色画中画','IO29 冻结 / 恢复画面','IO34 长按录入；短按确认','IO29 冻结 / 恢复人数','IO29 保存；长按清空；IO34 换算法']
++lcd[32:40]=['阈值 T','IO34 减小 / IO35 增大','长按 IO34 切步长；长按 IO35 复位','T =','','','STEP','']
+ lcd[40:48]=['IO28 切换模式','IO29 冻结 / 恢复','07 人脸数量','切换至模式7显示','正在抓帧，请稍候','手势反馈显示在 HDMI','正在录入，请保持手型','当前画面实时更新']
+ lcd[48:52]=['已保存','长按 IO29 冻结 / 恢复','FRAME','版本']
+-lcd[52:63]=['Canny 阈值调节','低阈值 / LOW','高阈值 / HIGH','K1 选择 LOW / HIGH / LINK','长按 K1 切换步长','LOW < HIGH','IO35 返回模式选择','当前选择','调节立即更新，参数按帧生效','彩边对照','模式选择']
++lcd[52:63]=['']*11
+ lcd[63]='0123456789ABCDEF-+ '
+ hdmi=json.loads((P/'tools/hdmi_text.json').read_text(encoding='utf-8'))
+ font=ImageFont.truetype('C:/Windows/Fonts/msyh.ttc',14)
+--- original/tools/hdmi_text.json
++++ new/tools/hdmi_text.json
+@@ -33,8 +33,8 @@
+   "正在确认手势",
+   "录入 OK",
+   "录入 V字",
+-  "五类手势：长按 K1 两秒重新录入。",
+-  "IO28 切换退出；K1 确认；IO29 冻结。",
++  "五类手势：长按 IO34 两秒重新录入。",
++  "IO28 切换退出；IO34 确认；IO29 冻结。",
+   "WAVE",
+   "THUMB UP",
+   "HEART",
+@@ -43,7 +43,7 @@
+   "录入手掌",
+   "录入点赞",
+   "录入比心",
+-  "摆好手型后短按 K1",
++  "摆好手型后短按 IO34",
+   "倒计时：保持手型",
+   "正在采集掌心肤色",
+   "保持不动，正在录入",
+@@ -55,7 +55,7 @@
+   "张开手掌，掌心盖住粉色小框，保持完整手指可见。",
+   "拇指朝上，其余手指握紧；确认预览能看清拇指。",
+   "单手拇指食指交叉小爱心；保持与录入时相同朝向。",
+-  "长按 K1 两秒开始录入",
++  "长按 IO34 两秒开始录入",
+   "未确认张开手掌，请分开手指",
+   "手掌已确认：左右摆手",
+   "已检测摆动：向反方向摆",

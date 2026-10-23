@@ -1,0 +1,60 @@
+{
+  "status": "INTERRUPTED",
+  "checked_utc": "2026-10-20T12:39:40.6513925Z",
+  "reason": "Previous sessions unavailable; elevated process inventory found no XSim or matching test runner. No checkpoint exists.",
+  "cpu8_completed_modes": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "cpu8_incomplete_mode": 4,
+  "epaper_final_marker_present": false,
+  "accepted_as_complete": false,
+  "original_stages": [
+    "D:\\Github_Project\\fpga_build\\inline_cpu8_20261020T095220236720Z",
+    "D:\\Github_Project\\fpga_build\\inline_epaper_20261020T095232468356Z"
+  ],
+  "archived_files": [
+    {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\reports\\inline_threshold\\interrupted_20261020T123940592Z\\cpu8\\compile.log",
+      "sha256": "5fc6a1018d11458276c4efba53bb4aed7fb73751db99234a26ffffda80f54411"
+    },
+    {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\reports\\inline_threshold\\interrupted_20261020T123940592Z\\cpu8\\console.log",
+      "sha256": "d11d560cddc96d8fddce6881add600ff8b20a9006a230a84cd4fd35f89414a9d"
+    },
+    {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\reports\\inline_threshold\\interrupted_20261020T123940592Z\\cpu8\\elab.log",
+      "sha256": "d5561f444d242d26d930ae76b656080e91cc8856d94a6432672c665e2a322aa1"
+    },
+    {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\reports\\inline_threshold\\interrupted_20261020T123940592Z\\cpu8\\inputs.json",
+      "sha256": "150f5090a0c546a43cd9fd8a9185c96779c1a2249e8fa6fb136e2b7aac8b6e1c"
+    },
+    {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\reports\\inline_threshold\\interrupted_20261020T123940592Z\\cpu8\\simulation.log",
+      "sha256": "3d1e7a6c4186197df28f727e8c4416a9e9689dec195773ae41e7c35f555cea30"
+    },
+    {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\reports\\inline_threshold\\interrupted_20261020T123940592Z\\epaper\\compile.log",
+      "sha256": "f25c1bc19b98c64123438db08778e05d15ce954d4dc4d1194c7f42f196039a25"
+    },
+    {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\reports\\inline_threshold\\interrupted_20261020T123940592Z\\epaper\\console.log",
+      "sha256": "b95ddcb05324354d28a798d876b52b457149358e2743c1c33590f5810bec8f90"
+    },
+    {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\reports\\inline_threshold\\interrupted_20261020T123940592Z\\epaper\\elab.log",
+      "sha256": "0e52734e12d9bfe5874600766e32a4f11bbf350cac7f8a1d8c725e95c7288b0d"
+    },
+    {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\reports\\inline_threshold\\interrupted_20261020T123940592Z\\epaper\\inputs.json",
+      "sha256": "545d125cc00aa1d40d6ca18b2a19176ba4afdda26baf281cb54f448ed045f121"
+    },
+    {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\reports\\inline_threshold\\interrupted_20261020T123940592Z\\epaper\\simulation.log",
+      "sha256": "81011449b3117206598063473727c314aecddd461f0dc4fd2061d8ae903e843d"
+    }
+  ]
+}

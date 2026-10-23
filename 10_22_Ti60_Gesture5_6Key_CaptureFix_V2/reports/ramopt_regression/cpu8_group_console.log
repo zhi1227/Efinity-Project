@@ -1,0 +1,138 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/rtl/shared_glyph_rom.v" into library work
+INFO: [VRFC 10-311] analyzing module shared_glyph_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/vendor/EfxSapphireSoc.v" into library work
+INFO: [VRFC 10-311] analyzing module EfxSapphireSoc
+INFO: [VRFC 10-311] analyzing module BmbToApb3Bridge
+INFO: [VRFC 10-311] analyzing module BmbSpiXdrMasterCtrl
+INFO: [VRFC 10-311] analyzing module BmbUartCtrl
+INFO: [VRFC 10-311] analyzing module BmbClint
+INFO: [VRFC 10-311] analyzing module BmbDecoder_3
+INFO: [VRFC 10-311] analyzing module BmbUnburstify
+INFO: [VRFC 10-311] analyzing module BmbOnChipRam
+INFO: [VRFC 10-311] analyzing module BmbDecoder_2
+INFO: [VRFC 10-311] analyzing module BmbArbiter
+INFO: [VRFC 10-311] analyzing module BmbDecoder_1
+INFO: [VRFC 10-311] analyzing module BmbExclusiveMonitor
+INFO: [VRFC 10-311] analyzing module BmbDecoder
+INFO: [VRFC 10-311] analyzing module BufferCC_4
+INFO: [VRFC 10-311] analyzing module SystemDebugger
+INFO: [VRFC 10-311] analyzing module JtagBridgeNoTap
+INFO: [VRFC 10-311] analyzing module VexRiscv
+INFO: [VRFC 10-311] analyzing module BufferCC_3
+INFO: [VRFC 10-311] analyzing module BufferCC_2
+INFO: [VRFC 10-311] analyzing module StreamFifo_3
+INFO: [VRFC 10-311] analyzing module StreamFifo_2
+INFO: [VRFC 10-311] analyzing module TopLevel
+INFO: [VRFC 10-311] analyzing module StreamFifo
+INFO: [VRFC 10-311] analyzing module UartCtrl
+INFO: [VRFC 10-311] analyzing module StreamArbiter
+INFO: [VRFC 10-311] analyzing module FlowCCByToggle
+INFO: [VRFC 10-311] analyzing module DataCache
+INFO: [VRFC 10-311] analyzing module InstructionCache
+INFO: [VRFC 10-311] analyzing module UartCtrlRx
+INFO: [VRFC 10-311] analyzing module UartCtrlTx
+INFO: [VRFC 10-311] analyzing module BufferCC_1
+INFO: [VRFC 10-311] analyzing module BufferCC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/rtl/menu_status_cdc.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_status_cdc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/rtl/menu_glyph_rom.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_glyph_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/rtl/menu_renderer.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_renderer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/rtl/menu8_renderer.v" into library work
+INFO: [VRFC 10-311] analyzing module menu8_renderer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/rtl/menu_lcd_apb.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_lcd_apb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/rtl/spi_write_byte.v" into library work
+INFO: [VRFC 10-311] analyzing module spi_write_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/rtl/epd_apb.v" into library work
+INFO: [VRFC 10-311] analyzing module epd_apb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/rtl/riscv_menu_top.v" into library work
+INFO: [VRFC 10-311] analyzing module riscv_menu_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/tb_menu_cpu8.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_menu_cpu8
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_menu_cpu8 -s tb_menu_cpu8 --relax 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/rtl/shared_glyph_rom.v" Line 4. Module shared_glyph_rom doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.menu_status_cdc(BITS=640)
+Compiling module work.menu_status_cdc
+Compiling module work.shared_glyph_rom
+Compiling module work.BufferCC_2
+Compiling module work.BufferCC_3
+Compiling module work.InstructionCache
+Compiling module work.DataCache
+Compiling module work.VexRiscv
+Compiling module work.BufferCC_1
+Compiling module work.FlowCCByToggle
+Compiling module work.JtagBridgeNoTap
+Compiling module work.SystemDebugger
+Compiling module work.BufferCC_4
+Compiling module work.BmbDecoder
+Compiling module work.BmbExclusiveMonitor
+Compiling module work.BmbDecoder_1
+Compiling module work.StreamArbiter
+Compiling module work.BmbArbiter
+Compiling module work.BmbDecoder_2
+Compiling module work.BmbOnChipRam
+Compiling module work.BmbUnburstify
+Compiling module work.BmbDecoder_3
+Compiling module work.BmbClint
+Compiling module work.UartCtrlTx
+Compiling module work.BufferCC
+Compiling module work.UartCtrlRx
+Compiling module work.UartCtrl
+Compiling module work.StreamFifo
+Compiling module work.BmbUartCtrl
+Compiling module work.TopLevel
+Compiling module work.StreamFifo_2
+Compiling module work.StreamFifo_3
+Compiling module work.BmbSpiXdrMasterCtrl
+Compiling module work.BmbToApb3Bridge
+Compiling module work.EfxSapphireSoc
+Compiling module work.menu_glyph_rom(SHARED_FONT=1)
+Compiling module work.menu8_renderer(SHARED_FONT=1)
+Compiling module work.menu_lcd_apb(V8_ENABLE=1,SHARED_...
+Compiling module work.spi_write_byte(HALF_PERIOD=24)
+Compiling module work.epd_apb_default
+Compiling module work.riscv_menu_top(V8_ENABLE=1,SHARE...
+Compiling module work.tb_menu_cpu8
+Built simulation snapshot tb_menu_cpu8
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_cpu8/xsim.dir/tb_menu_cpu8/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 20 02:34:08 2026...
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_menu_cpu8/xsim_script.tcl
+# xsim {tb_menu_cpu8} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: CPU8 mode 0, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 1, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 2, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 3, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 4, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 5, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 6, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 7, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 all eight mode bundles, independent settings flag, LIVE/HOLD, CPU boot, CDC, LVDS packing, frame timing
+$finish called at time : 290177045785 ps : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/tb_menu_cpu8.sv" Line 75
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:24:47 . Memory (MB): peak = 219.805 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 02:58:59 2026...

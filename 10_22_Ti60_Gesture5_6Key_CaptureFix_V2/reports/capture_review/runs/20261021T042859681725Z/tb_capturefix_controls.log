@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Oct 21 12:40:10 2026
+# Process ID: 74392
+# Current directory: D:/Github_Project/fpga_build/review_20261021T042859681725Z
+# Command line: xsim.exe -log D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\reports\capture_review\runs\20261021T042859681725Z\tb_capturefix_controls.log -mode tcl -source {xsim.dir/tb_capturefix_controls/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/reports/capture_review/runs/20261021T042859681725Z/tb_capturefix_controls.log
+# Journal file: D:/Github_Project/fpga_build/review_20261021T042859681725Z\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_capturefix_controls/xsim_script.tcl
+# xsim {tb_capturefix_controls} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: six-key controls checks=59; paired saturation, independent thresholds, frame commits, context cancellation, frozen edits, mode mapping, FOUR exit clear
+$finish called at time : 265920 ns : File "D:/Github_Project/fpga_build/review_20261021T042859681725Z/sim/tb_capturefix_controls.sv" Line 62
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct 21 12:40:15 2026...

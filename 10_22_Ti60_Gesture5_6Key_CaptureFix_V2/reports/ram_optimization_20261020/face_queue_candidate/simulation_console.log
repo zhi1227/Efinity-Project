@@ -1,0 +1,21 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_ramopt_coordinates/xsim_script.tcl
+# xsim {tb_ramopt_coordinates} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: face queue W=96 H=64 GW=48 GH=32 cycles=94822 full_queue=1536 valid_publishes=4
+PASS: CCL storage PX=11 CAP=1024 cycles=570721 valid_results=9 gesture_results=2 fifo=1 label=1 deadline=1
+PASS: CCL storage PX=10 CAP=8 cycles=570721 valid_results=8 gesture_results=2 fifo=1 label=1 deadline=1
+PASS: CCL storage PX=10 CAP=1024 cycles=570721 valid_results=9 gesture_results=2 fifo=1 label=1 deadline=1
+PASS: face queue W=320 H=180 GW=160 GH=90 cycles=864434 full_queue=14400 valid_publishes=4
+PASS: coordinate RAM exact equivalence; face 160x90 and generic 48x32; narrowed 10-bit and default 11-bit CCL; complete queues, valid boxes, merges, source IDs, saturation, overruns, FIFO/label overflow, deadlines and reset recovery
+$finish called at time : 8644340 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/face_queue_candidate/simulation/tb_ramopt_coordinates.sv" Line 157
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:15 . Memory (MB): peak = 219.730 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 03:04:14 2026...

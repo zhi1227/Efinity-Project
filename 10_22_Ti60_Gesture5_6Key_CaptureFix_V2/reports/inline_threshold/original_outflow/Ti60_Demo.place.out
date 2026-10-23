@@ -1,0 +1,1501 @@
+           
+           Efinix FPGA Placement and Routing.
+           Version: 2025.1.110.5.9 
+           Compiled: Sep 19 2025.
+           
+           Copyright (C) 2013 - 2025 Efinix, Inc. All rights reserved.
+
+           
+           The Tool Is Based on VPR of University of Toronto,
+           a free open source code under MIT license.
+           
+           ***** Beginning stage netlist pre-processing ... *****
+INFO     : Successfully Read in Verific binary Netlist dump file "outflow\Ti60_Demo.vdb".
+INFO     : ***** Beginning VDB Netlist Checker ... *****
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(11): Input/inout port clk_24m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(12): Input/inout port clk_25m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(21): Input/inout port clk_pixel_2x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(22): Input/inout port clk_pixel_10x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(30): Input/inout port dsi_refclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(31): Input/inout port dsi_byteclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(32): Input/inout port dsi_serclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(33): Input/inout port dsi_txcclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(61): Input/inout port clk_lvds_7x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(62): Input/inout port clk_27m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(63): Input/inout port clk_54m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(97): Input/inout port i_dqs_n_hi[1] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(98): Input/inout port i_dqs_n_lo[1] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(121): Input/inout port csi_ctl0_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(125): Input/inout port csi_ctl1_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(129): Input/inout port csi_scl_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(133): Input/inout port csi_sda_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(136): Input/inout port csi_rxc_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(137): Input/inout port csi_rxc_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(140): Input/inout port csi_rxc_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(147): Input/inout port csi_rxd0_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(148): Input/inout port csi_rxd0_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(149): Input/inout port csi_rxd0_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(156): Input/inout port csi_rxd1_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(157): Input/inout port csi_rxd1_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(158): Input/inout port csi_rxd1_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(165): Input/inout port csi_rxd2_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(166): Input/inout port csi_rxd2_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(167): Input/inout port csi_rxd2_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(174): Input/inout port csi_rxd3_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(175): Input/inout port csi_rxd3_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(176): Input/inout port csi_rxd3_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(235): Input/inout port dsi_txd0_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(236): Input/inout port dsi_txd0_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(237): Input/inout port dsi_txd1_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(238): Input/inout port dsi_txd1_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(239): Input/inout port dsi_txd2_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(240): Input/inout port dsi_txd2_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(241): Input/inout port dsi_txd3_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(242): Input/inout port dsi_txd3_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(269): Input/inout port cmos_ctl1_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(272): Input/inout port cmos_ctl2_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(275): Input/inout port cmos_ctl3_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\font_frequency_full_map\example_top.v(331): Input/inout port flash_data_i[3] is unconnected and will be removed. [VDB-8003]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5] is dangling. [VDB-8009]
+WARNING  : CE port of EFX_DSP48 instance u_parallel/u_shape/mult_53 is permanently disabled [VDB-8002]
+WARNING  : CE port of EFX_DSP48 instance u_parallel/u_shape/mult_54 is permanently disabled [VDB-8002]
+WARNING  : Found 85 warnings in the post-synthesis netlist.
+INFO     : VDB Netlist Checker took 0.0572493 seconds.
+INFO     : 	VDB Netlist Checker took 0.109375 seconds (approximately) in total CPU time.
+INFO     : VDB Netlist Checker virtual memory usage: begin = 148.18 MB, end = 148.892 MB, delta = 0.712 MB
+INFO     : 	VDB Netlist Checker peak virtual memory usage = 148.9 MB
+INFO     : VDB Netlist Checker resident set memory usage: begin = 156.116 MB, end = 157.38 MB, delta = 1.264 MB
+INFO     : 	VDB Netlist Checker peak resident set memory usage = 157.38 MB
+INFO     : ***** Ending VDB Netlist Checker ... *****
+INFO     : Writing netlist 'example_top' to Verilog file 'outflow\Ti60_Demo.prevpr.v' [VDB-1030]
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Net clk_pixel_10x promoted to global due to interface constraints.
+INFO     : Net clk_lvds_7x promoted to global due to interface constraints.
+INFO     : Net clk_27m promoted to global due to interface constraints.
+INFO     : Net dsi_serclk_i promoted to global due to interface constraints.
+INFO     : Net dsi_byteclk_i promoted to global due to interface constraints.
+INFO     : Net dsi_txcclk_i promoted to global due to interface constraints.
+INFO     : Found 0 constant generator nets.
+INFO     : Pass 0: Swept away 6 nets with no fanout.
+INFO     : logical_block #0(clk_24m) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #1(clk_25m) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #5(clk_pixel_2x) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #9(dsi_refclk_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #33(clk_54m) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #149(i_dqs_n_hi[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #150(i_dqs_n_hi[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #151(i_dqs_n_lo[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #152(i_dqs_n_lo[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #171(csi_ctl0_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #174(csi_ctl1_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #177(csi_scl_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #180(csi_sda_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #181(csi_rxc_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #182(csi_rxc_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #185(csi_rxc_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #189(csi_rxd0_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #190(csi_rxd0_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #191(csi_rxd0_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #192(csi_rxd0_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #193(csi_rxd0_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #194(csi_rxd0_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #195(csi_rxd0_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #196(csi_rxd0_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #197(csi_rxd0_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #198(csi_rxd0_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #202(csi_rxd1_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #203(csi_rxd1_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #204(csi_rxd1_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #205(csi_rxd1_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #206(csi_rxd1_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #207(csi_rxd1_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #208(csi_rxd1_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #209(csi_rxd1_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #210(csi_rxd1_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #211(csi_rxd1_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #215(csi_rxd2_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #216(csi_rxd2_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #217(csi_rxd2_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #218(csi_rxd2_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #219(csi_rxd2_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #220(csi_rxd2_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #221(csi_rxd2_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #222(csi_rxd2_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #223(csi_rxd2_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #224(csi_rxd2_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #228(csi_rxd3_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #229(csi_rxd3_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #230(csi_rxd3_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #231(csi_rxd3_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #232(csi_rxd3_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #233(csi_rxd3_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #234(csi_rxd3_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #235(csi_rxd3_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #236(csi_rxd3_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #237(csi_rxd3_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #310(dsi_txd0_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #311(dsi_txd0_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #312(dsi_txd1_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #313(dsi_txd1_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #314(dsi_txd2_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #315(dsi_txd2_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #316(dsi_txd3_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #317(dsi_txd3_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #343(cmos_ctl1_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #346(cmos_ctl2_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #349(cmos_ctl3_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #462(flash_data_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #463(flash_data_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #464(flash_data_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #465(flash_data_i[0]) has no fanout.
+INFO     : Removing input.
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF #15838 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF #16196 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF #16197 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF #16198 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF #16199 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF #16200 has no fanout. Check synthesis flow
+INFO     : Pass 0: Swept away 71 blocks with no fanout.
+INFO     : Pass 1: Swept away 0 nets with no fanout.
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF #15838 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF #16196 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF #16197 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF #16198 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF #16199 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF #16200 has no fanout. Check synthesis flow
+INFO     : Pass 1: Swept away 0 blocks with no fanout.
+INFO     : Swept away 6 nets and 71 blocks in total.
+INFO     : Removed 0 LUT buffers
+INFO     : Sweept away 71 nodes
+INFO     : Successfully created VPR logical netlist from Verific binary DataBase file "outflow\Ti60_Demo.vdb".
+INFO     : Netlist pre-processing took 2.1072 seconds.
+INFO     : 	Netlist pre-processing took 1.53125 seconds (approximately) in total CPU time.
+INFO     : Netlist pre-processing virtual memory usage: begin = 121.504 MB, end = 2827.22 MB, delta = 2705.72 MB
+INFO     : 	Netlist pre-processing peak virtual memory usage = 2828.3 MB
+INFO     : Netlist pre-processing resident set memory usage: begin = 99.836 MB, end = 2829.13 MB, delta = 2729.29 MB
+INFO     : 	Netlist pre-processing peak resident set memory usage = 2829.87 MB
+           ***** Ending stage netlist pre-processing *****
+           
+INFO     : Load Global Network took 0.82571 seconds.
+INFO     : 	Load Global Network took 0.28125 seconds (approximately) in total CPU time.
+INFO     : Load Global Network virtual memory usage: begin = 2827.11 MB, end = 2827.22 MB, delta = 0.104 MB
+INFO     : 	Load Global Network peak virtual memory usage = 2828.3 MB
+INFO     : Load Global Network resident set memory usage: begin = 2829.1 MB, end = 2829.73 MB, delta = 0.632 MB
+INFO     : 	Load Global Network peak resident set memory usage = 2829.87 MB
+INFO     : Reading C:/Efinity/2025.1/arch/.\rr_pb_hier_mapping.xml
+           ***** Beginning stage pre-packing ... *****
+           ***** Ending stage pre-packing *****
+           
+           ***** Beginning stage packing ... *****
+INFO     : 	[PrepackAnalyzer] Cannot pack adder chain size=9, u_parallel/hand/templates/add_135/i2
+INFO     : 	[PrepackAnalyzer] Cannot pack adder chain size=11, u_parallel/hand/wave/add_3/i2
+INFO     : 	[PrepackAnalyzer] Cannot pack adder chain size=7, u_parallel/u_regions/add_10/i1
+INFO     : 	[PrepackAnalyzer] Cannot pack adder chain size=9, AUX_ADD_CO__u_parallel/u_regions/add_35/i14
+WARNING  : Packer found FF 'u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF' with no output net.
+WARNING  : If possible, remove 'syn_preserve' attribute on FF output.
+WARNING  : Packer found FF 'u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF' with no output net.
+WARNING  : If possible, remove 'syn_preserve' attribute on FF output.
+WARNING  : Packer found FF 'u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF' with no output net.
+WARNING  : If possible, remove 'syn_preserve' attribute on FF output.
+WARNING  : Packer found FF 'u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF' with no output net.
+WARNING  : If possible, remove 'syn_preserve' attribute on FF output.
+WARNING  : Packer found FF 'u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF' with no output net.
+WARNING  : If possible, remove 'syn_preserve' attribute on FF output.
+WARNING  : Packer found FF 'u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF' with no output net.
+WARNING  : If possible, remove 'syn_preserve' attribute on FF output.
+INFO     : Generate proto netlist for file "work_pnr\Ti60_Demo.net_proto" took 0.111 seconds
+INFO     : Creating IO constraints file 'work_pnr\Ti60_Demo.io_place'
+INFO     : Packing took 0.293544 seconds.
+INFO     : 	Packing took 0.265625 seconds (approximately) in total CPU time.
+INFO     : Packing virtual memory usage: begin = 2828.3 MB, end = 2828.3 MB, delta = 0 MB
+INFO     : 	Packing peak virtual memory usage = 2828.3 MB
+INFO     : Packing resident set memory usage: begin = 2832.14 MB, end = 2832.64 MB, delta = 0.492 MB
+INFO     : 	Packing peak resident set memory usage = 2832.64 MB
+           ***** Ending stage packing *****
+           
+INFO     : Read proto netlist file work_pnr\Ti60_Demo.net_proto
+INFO     : Read proto netlist for file "work_pnr\Ti60_Demo.net_proto" took 0.038 seconds
+INFO     : Setup net and block data structure took 0.328 seconds
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+WARNING  : Found 85 warnings in the post-synthesis netlist.
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF #15838 has no fanout. Check synthesis flow
+INFO     : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF #16196 has no fanout. Check synthesis flow
+INFO     : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF #16197 has no fanout. Check synthesis flow
+INFO     : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF #16198 has no fanout. Check synthesis flow
+INFO     : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF #16199 has no fanout. Check synthesis flow
+INFO     : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF #16200 has no fanout. Check synthesis flow
+INFO     : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF #15838 has no fanout. Check synthesis flow
+INFO     : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF #16196 has no fanout. Check synthesis flow
+INFO     : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF #16197 has no fanout. Check synthesis flow
+INFO     : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF #16198 has no fanout. Check synthesis flow
+INFO     : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF #16199 has no fanout. Check synthesis flow
+INFO     : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF #16200 has no fanout. Check synthesis flow
+           ***** Beginning stage packed netlist loading ... *****
+INFO     : Read proto netlist file work_pnr\Ti60_Demo.net_proto
+INFO     : Read proto netlist for file "work_pnr\Ti60_Demo.net_proto" took 0.04 seconds
+INFO     : Setup net and block data structure took 0.291 seconds
+INFO     : Packed netlist loading took 0.345583 seconds.
+INFO     : 	Packed netlist loading took 0.328125 seconds (approximately) in total CPU time.
+INFO     : Packed netlist loading virtual memory usage: begin = 2829.76 MB, end = 2829.76 MB, delta = 0 MB
+INFO     : 	Packed netlist loading peak virtual memory usage = 2829.76 MB
+INFO     : Packed netlist loading resident set memory usage: begin = 2836.48 MB, end = 2836.52 MB, delta = 0.044 MB
+INFO     : 	Packed netlist loading peak resident set memory usage = 2836.52 MB
+           ***** Ending stage packed netlist loading *****
+           
+           ***** Beginning stage pre-placement ... *****
+INFO     : High resource utilization found. Software will optimize placement for routability
+           
+           ***** Ending stage pre-placement *****
+           
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:14] No valid object(s) found for 'dsi_refclk_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:14] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:14] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:24] No valid object(s) found for 'clk_pixel_2x'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:24] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:24] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:29] No valid object(s) found for 'clk_54m'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:29] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:29] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:33] No valid pin(s) found for clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:33] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:35] set_clock_groups: Defaulting to -exclusive since none of the required option was specified
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:341] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:341] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:342] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:342] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:347] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:347] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:348] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:348] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:546] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:546] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:546] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:547] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:547] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:547] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:548] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:548] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:548] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:549] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:549] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:549] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:550] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:550] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:550] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:551] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:551] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:551] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:552] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:552] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:552] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:553] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:553] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:553] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:554] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:554] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:554] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:555] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:555] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:555] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:556] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:556] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:556] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:557] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:557] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:557] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:558] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:558] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:558] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:559] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:559] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:559] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:560] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:560] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:560] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:561] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:561] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:561] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:562] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:562] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:562] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:563] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:563] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:563] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:564] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:564] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:564] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:565] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:565] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:565] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:566] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:566] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:566] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:567] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:567] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:567] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:568] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:568] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:568] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:569] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:569] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:569] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:570] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:570] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:570] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:571] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:571] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:571] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:572] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:572] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:572] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:573] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:573] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:573] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:574] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:574] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:574] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:575] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:575] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:575] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:576] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:576] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:576] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:577] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:577] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/font_frequency_full_map/Ti60_Demo.pt.sdc:577] Unable to run 'set_input_delay' constraint due to warnings found
+INFO     : SDC file 'Ti60_Demo.pt.sdc' parsed successfully.
+INFO     : 14 clocks (including virtual clocks), 46 inputs and 232 outputs were constrained.
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Writing IO placement constraints to "outflow\Ti60_Demo.interface.io"
+INFO     : Reading placement constraints from 'outflow\Ti60_Demo.interface.io'.
+INFO     : Reading placement constraints from 'work_pnr\Ti60_Demo.io_place'.
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Found 265 synchronizers as follows: 
+INFO     : 	Synchronizer 0: 
+INFO     :  u_menu/epaper/busy_meta~FF
+INFO     :  u_menu/epaper/busy_sync~FF
+INFO     : 	Synchronizer 1: 
+INFO     :  u_menu/soc/system_uart_0_io_logic/uartCtrl_1/rx/io_rxd_buffercc/buffers_0~FF
+INFO     :  u_menu/soc/system_uart_0_io_logic/uartCtrl_1/rx/io_rxd_buffercc_io_dataOut~FF
+INFO     : 	Synchronizer 2: 
+INFO     :  u_menu/soc/bufferCC_5/buffers_0~FF
+INFO     :  u_menu/soc/bufferCC_5_io_dataOut~FF
+INFO     : 	Synchronizer 3: 
+INFO     :  u_menu/soc/bufferCC_6/buffers_0~FF
+INFO     :  u_menu/soc/bufferCC_6_io_dataOut~FF
+INFO     : 	Synchronizer 4: 
+INFO     :  u_menu_status/req_meta~FF
+INFO     :  u_menu_status/req_sync~FF
+INFO     : 	Synchronizer 5: 
+INFO     :  u_camera_health/meta[6]~FF
+INFO     :  u_camera_health/sync[6]~FF
+INFO     : 	Synchronizer 6: 
+INFO     :  u_camera_health/meta[5]~FF
+INFO     :  u_camera_health/sync[5]~FF
+INFO     : 	Synchronizer 7: 
+INFO     :  u_camera_health/meta[4]~FF
+INFO     :  u_camera_health/sync[4]~FF
+INFO     : 	Synchronizer 8: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[3]~FF
+INFO     : 	Synchronizer 9: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[1]~FF
+INFO     : 	Synchronizer 10: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[4]~FF
+INFO     : 	Synchronizer 11: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[0]~FF
+INFO     : 	Synchronizer 12: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[3]~FF
+INFO     : 	Synchronizer 13: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[4]~FF
+INFO     : 	Synchronizer 14: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc/buffers_0[0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc_io_dataOut[0]~FF
+INFO     : 	Synchronizer 15: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[5]~FF
+INFO     : 	Synchronizer 16: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/wm[0]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/ws[0]~FF
+INFO     : 	Synchronizer 17: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc/buffers_0[6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc_io_dataOut[6]~FF
+INFO     : 	Synchronizer 18: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc/buffers_0[5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc_io_dataOut[5]~FF
+INFO     : 	Synchronizer 19: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/rm[10]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/rs[10]~FF
+INFO     : 	Synchronizer 20: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc/buffers_0[4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc_io_dataOut[4]~FF
+INFO     : 	Synchronizer 21: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/rm[9]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/rs[9]~FF
+INFO     : 	Synchronizer 22: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc/buffers_0[3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc_io_dataOut[3]~FF
+INFO     : 	Synchronizer 23: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/rm[8]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/rs[8]~FF
+INFO     : 	Synchronizer 24: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc/buffers_0[2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc_io_dataOut[2]~FF
+INFO     : 	Synchronizer 25: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/rm[7]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/rs[7]~FF
+INFO     : 	Synchronizer 26: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc/buffers_0[1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc_io_dataOut[1]~FF
+INFO     : 	Synchronizer 27: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/rm[6]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/rs[6]~FF
+INFO     : 	Synchronizer 28: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/rm[5]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/rs[5]~FF
+INFO     : 	Synchronizer 29: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/rm[4]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/rs[4]~FF
+INFO     : 	Synchronizer 30: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc/buffers_0[0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/pushToPopGray_buffercc_io_dataOut[0]~FF
+INFO     : 	Synchronizer 31: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/rm[3]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/rs[3]~FF
+INFO     : 	Synchronizer 32: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/rm[2]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/rs[2]~FF
+INFO     : 	Synchronizer 33: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/rm[1]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/rs[1]~FF
+INFO     : 	Synchronizer 34: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc/buffers_0[6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc_io_dataOut[6]~FF
+INFO     : 	Synchronizer 35: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc/buffers_0[5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc_io_dataOut[5]~FF
+INFO     : 	Synchronizer 36: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc/buffers_0[4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc_io_dataOut[4]~FF
+INFO     : 	Synchronizer 37: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc/buffers_0[3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc_io_dataOut[3]~FF
+INFO     : 	Synchronizer 38: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc/buffers_0[2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc_io_dataOut[2]~FF
+INFO     : 	Synchronizer 39: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc/buffers_0[1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc_io_dataOut[1]~FF
+INFO     : 	Synchronizer 40: 
+INFO     :  u_axi4_ctrl/camera/enable_meta~FF
+INFO     :  u_axi4_ctrl/camera/enable_sync~FF
+INFO     : 	Synchronizer 41: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc/buffers_0[0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/ac_fifo/popToPushGray_buffercc_io_dataOut[0]~FF
+INFO     : 	Synchronizer 42: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/wm[0]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/ws[0]~FF
+INFO     : 	Synchronizer 43: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/rm[0]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/rs[0]~FF
+INFO     : 	Synchronizer 44: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[1]~FF
+INFO     : 	Synchronizer 45: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[5]~FF
+INFO     : 	Synchronizer 46: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][5]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][5]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[5]~FF
+INFO     : 	Synchronizer 47: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[1]~FF
+INFO     : 	Synchronizer 48: 
+INFO     :  u_axi4_ctrl/camera/reset_meta~FF
+INFO     :  u_axi4_ctrl/camera/reset_sync~FF
+INFO     : 	Synchronizer 49: 
+INFO     :  source_tag_cdc/req_meta~FF
+INFO     :  source_tag_cdc/req_sync~FF
+INFO     : 	Synchronizer 50: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc/buffers_0[2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc_io_dataOut[2]~FF
+INFO     : 	Synchronizer 51: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[2]~FF
+INFO     : 	Synchronizer 52: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[4]~FF
+INFO     : 	Synchronizer 53: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[5]~FF
+INFO     : 	Synchronizer 54: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc/buffers_0[3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc_io_dataOut[3]~FF
+INFO     : 	Synchronizer 55: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[4]~FF
+INFO     : 	Synchronizer 56: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[2]~FF
+INFO     : 	Synchronizer 57: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[5]~FF
+INFO     : 	Synchronizer 58: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[0]~FF
+INFO     : 	Synchronizer 59: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[6]~FF
+INFO     : 	Synchronizer 60: 
+INFO     :  u_axi4_ctrl/camera/frame_good_meta~FF
+INFO     :  u_axi4_ctrl/camera/frame_good_sync~FF
+INFO     : 	Synchronizer 61: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[6]~FF
+INFO     : 	Synchronizer 62: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc/buffers_0[3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc_io_dataOut[3]~FF
+INFO     : 	Synchronizer 63: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc_io_dataOut[4]~FF
+INFO     : 	Synchronizer 64: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc_io_dataOut[3]~FF
+INFO     : 	Synchronizer 65: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc/buffers_0[6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc_io_dataOut[6]~FF
+INFO     : 	Synchronizer 66: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc_io_dataOut[2]~FF
+INFO     : 	Synchronizer 67: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc/buffers_0[5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc_io_dataOut[5]~FF
+INFO     : 	Synchronizer 68: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc_io_dataOut[1]~FF
+INFO     : 	Synchronizer 69: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][13]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][13]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[13]~FF
+INFO     : 	Synchronizer 70: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc/buffers_0[4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc_io_dataOut[4]~FF
+INFO     : 	Synchronizer 71: 
+INFO     :  u_camera_health/meta[3]~FF
+INFO     :  u_camera_health/sync[3]~FF
+INFO     : 	Synchronizer 72: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/wr_rst_int~FF
+INFO     : 	Synchronizer 73: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc/buffers_0[6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc_io_dataOut[6]~FF
+INFO     : 	Synchronizer 74: 
+INFO     :  u_menu/soc/bufferCC_7/buffers_0~FF
+INFO     :  u_menu/soc/bufferCC_7_io_dataOut~FF
+INFO     : 	Synchronizer 75: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc/buffers_0[1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc_io_dataOut[1]~FF
+INFO     : 	Synchronizer 76: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc/buffers_0[5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc_io_dataOut[5]~FF
+INFO     : 	Synchronizer 77: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc/buffers_0[5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc_io_dataOut[5]~FF
+INFO     : 	Synchronizer 78: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][12]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][12]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[12]~FF
+INFO     : 	Synchronizer 79: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc/buffers_0[4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc_io_dataOut[4]~FF
+INFO     : 	Synchronizer 80: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[2]~FF
+INFO     : 	Synchronizer 81: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc/buffers_0[0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc_io_dataOut[0]~FF
+INFO     : 	Synchronizer 82: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][11]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][11]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[11]~FF
+INFO     : 	Synchronizer 83: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[6]~FF
+INFO     : 	Synchronizer 84: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc_io_dataOut[6]~FF
+INFO     : 	Synchronizer 85: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[1]~FF
+INFO     : 	Synchronizer 86: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc/buffers_0[6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc_io_dataOut[6]~FF
+INFO     : 	Synchronizer 87: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc_io_dataOut[5]~FF
+INFO     : 	Synchronizer 88: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc/buffers_0[6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc_io_dataOut[6]~FF
+INFO     : 	Synchronizer 89: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc/buffers_0[2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc_io_dataOut[2]~FF
+INFO     : 	Synchronizer 90: 
+INFO     :  cam_reset_pipe[0]~FF
+INFO     :  cam_reset_pipe[1]~FF
+INFO     : 	Synchronizer 91: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc/buffers_0[2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc_io_dataOut[2]~FF
+INFO     : 	Synchronizer 92: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/wm[8]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/ws[8]~FF
+INFO     : 	Synchronizer 93: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc/buffers_0[4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc_io_dataOut[4]~FF
+INFO     : 	Synchronizer 94: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[5]~FF
+INFO     : 	Synchronizer 95: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc/buffers_0[3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc_io_dataOut[3]~FF
+INFO     : 	Synchronizer 96: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[6]~FF
+INFO     : 	Synchronizer 97: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc/buffers_0[2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc_io_dataOut[2]~FF
+INFO     : 	Synchronizer 98: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][2]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][2]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[2]~FF
+INFO     : 	Synchronizer 99: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[1]~FF
+INFO     : 	Synchronizer 100: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc/buffers_0[1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc_io_dataOut[1]~FF
+INFO     : 	Synchronizer 101: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc/buffers_0[0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc_io_dataOut[0]~FF
+INFO     : 	Synchronizer 102: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[6]~FF
+INFO     : 	Synchronizer 103: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc/buffers_0[5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/pushToPopGray_buffercc_io_dataOut[5]~FF
+INFO     : 	Synchronizer 104: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[2]~FF
+INFO     : 	Synchronizer 105: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc/buffers_0[1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc_io_dataOut[1]~FF
+INFO     : 	Synchronizer 106: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc/buffers_0[1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc_io_dataOut[1]~FF
+INFO     : 	Synchronizer 107: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[2]~FF
+INFO     : 	Synchronizer 108: 
+INFO     :  menu8_cdc/ack_meta~FF
+INFO     :  menu8_cdc/ack_sync~FF
+INFO     : 	Synchronizer 109: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/wm[7]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/ws[7]~FF
+INFO     : 	Synchronizer 110: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc/buffers_0[3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/pushToPopGray_buffercc_io_dataOut[3]~FF
+INFO     : 	Synchronizer 111: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc/buffers_0[3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc_io_dataOut[3]~FF
+INFO     : 	Synchronizer 112: 
+INFO     :  menu8_cdc/req_meta~FF
+INFO     :  menu8_cdc/req_sync~FF
+INFO     : 	Synchronizer 113: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/wm[9]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/ws[9]~FF
+INFO     : 	Synchronizer 114: 
+INFO     :  u_camera_health/cam_meta[0]~FF
+INFO     :  u_camera_health/cam_sync[0]~FF
+INFO     : 	Synchronizer 115: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[1]~FF
+INFO     : 	Synchronizer 116: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][7]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][7]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[7]~FF
+INFO     : 	Synchronizer 117: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc/buffers_0[4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc_io_dataOut[4]~FF
+INFO     : 	Synchronizer 118: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc/buffers_0[2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc_io_dataOut[2]~FF
+INFO     : 	Synchronizer 119: 
+INFO     :  cam_enable_pipe[0]~FF
+INFO     :  cam_enable_pipe[1]~FF
+INFO     : 	Synchronizer 120: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc/buffers_0[4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc_io_dataOut[4]~FF
+INFO     : 	Synchronizer 121: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/wm[10]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/ws[10]~FF
+INFO     : 	Synchronizer 122: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[6]~FF
+INFO     : 	Synchronizer 123: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][6]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][6]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[6]~FF
+INFO     : 	Synchronizer 124: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc/buffers_0[3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc_io_dataOut[3]~FF
+INFO     : 	Synchronizer 125: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/wm[1]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/ws[1]~FF
+INFO     : 	Synchronizer 126: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc/buffers_0[4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc_io_dataOut[4]~FF
+INFO     : 	Synchronizer 127: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/wm[2]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/ws[2]~FF
+INFO     : 	Synchronizer 128: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc/buffers_0[5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc_io_dataOut[5]~FF
+INFO     : 	Synchronizer 129: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[5]~FF
+INFO     : 	Synchronizer 130: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/wm[3]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/ws[3]~FF
+INFO     : 	Synchronizer 131: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc/buffers_0[6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc_io_dataOut[6]~FF
+INFO     : 	Synchronizer 132: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc/buffers_0[0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc_io_dataOut[0]~FF
+INFO     : 	Synchronizer 133: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[4]~FF
+INFO     : 	Synchronizer 134: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rm[0]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rs[0]~FF
+INFO     : 	Synchronizer 135: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[3]~FF
+INFO     : 	Synchronizer 136: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/wm[5]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/ws[5]~FF
+INFO     : 	Synchronizer 137: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[0]~FF
+INFO     : 	Synchronizer 138: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/wm[6]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/ws[6]~FF
+INFO     : 	Synchronizer 139: 
+INFO     :  u_axi4_ctrl/camera/u_frame_slots/fm~FF
+INFO     :  u_axi4_ctrl/camera/u_frame_slots/fs~FF
+INFO     : 	Synchronizer 140: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc/buffers_0[5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc_io_dataOut[5]~FF
+INFO     : 	Synchronizer 141: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[3]~FF
+INFO     : 	Synchronizer 142: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[0]~FF
+INFO     : 	Synchronizer 143: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][9]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][9]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[9]~FF
+INFO     : 	Synchronizer 144: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[0]~FF
+INFO     : 	Synchronizer 145: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[2]~FF
+INFO     : 	Synchronizer 146: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][10]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][10]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[10]~FF
+INFO     : 	Synchronizer 147: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc/buffers_0[6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/pushToPopGray_buffercc_io_dataOut[6]~FF
+INFO     : 	Synchronizer 148: 
+INFO     :  u_camera_health/cam_meta[1]~FF
+INFO     :  u_camera_health/cam_sync[1]~FF
+INFO     : 	Synchronizer 149: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc/buffers_0[1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc_io_dataOut[1]~FF
+INFO     : 	Synchronizer 150: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][6]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][6]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[6]~FF
+INFO     : 	Synchronizer 151: 
+INFO     :  u_camera_health/cam_meta[2]~FF
+INFO     :  u_camera_health/cam_sync[2]~FF
+INFO     : 	Synchronizer 152: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc/buffers_0[2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc_io_dataOut[2]~FF
+INFO     : 	Synchronizer 153: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][5]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][5]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[5]~FF
+INFO     : 	Synchronizer 154: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc/buffers_0[3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc_io_dataOut[3]~FF
+INFO     : 	Synchronizer 155: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][4]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][4]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[4]~FF
+INFO     : 	Synchronizer 156: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[5]~FF
+INFO     : 	Synchronizer 157: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc/buffers_0[4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc_io_dataOut[4]~FF
+INFO     : 	Synchronizer 158: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][0]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][0]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[0]~FF
+INFO     : 	Synchronizer 159: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[4]~FF
+INFO     : 	Synchronizer 160: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc/buffers_0[5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc_io_dataOut[5]~FF
+INFO     : 	Synchronizer 161: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][3]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][3]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[3]~FF
+INFO     : 	Synchronizer 162: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[3]~FF
+INFO     : 	Synchronizer 163: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc/buffers_0[6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc_io_dataOut[6]~FF
+INFO     : 	Synchronizer 164: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][8]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][8]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[8]~FF
+INFO     : 	Synchronizer 165: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][9]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][9]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[9]~FF
+INFO     : 	Synchronizer 166: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc/buffers_0[4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc_io_dataOut[4]~FF
+INFO     : 	Synchronizer 167: 
+INFO     :  u_menu_status/ack_meta~FF
+INFO     :  u_menu_status/ack_sync~FF
+INFO     : 	Synchronizer 168: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc/buffers_0[5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc_io_dataOut[5]~FF
+INFO     : 	Synchronizer 169: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][1]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][1]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[1]~FF
+INFO     : 	Synchronizer 170: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc/buffers_0[0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc_io_dataOut[0]~FF
+INFO     : 	Synchronizer 171: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc/buffers_0[2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc_io_dataOut[2]~FF
+INFO     : 	Synchronizer 172: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[4]~FF
+INFO     : 	Synchronizer 173: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][4]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][4]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[4]~FF
+INFO     : 	Synchronizer 174: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc/buffers_0[0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc_io_dataOut[0]~FF
+INFO     : 	Synchronizer 175: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][7]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][7]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[7]~FF
+INFO     : 	Synchronizer 176: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u2/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[3]~FF
+INFO     : 	Synchronizer 177: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][8]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][8]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[8]~FF
+INFO     : 	Synchronizer 178: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc/buffers_0[1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc_io_dataOut[1]~FF
+INFO     : 	Synchronizer 179: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc/buffers_0[2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc_io_dataOut[2]~FF
+INFO     : 	Synchronizer 180: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc/buffers_0[0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/pushToPopGray_buffercc_io_dataOut[0]~FF
+INFO     : 	Synchronizer 181: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc/buffers_0[3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/pushToPopGray_buffercc_io_dataOut[3]~FF
+INFO     : 	Synchronizer 182: 
+INFO     :  u_camera_health/meta[2]~FF
+INFO     :  u_camera_health/sync[2]~FF
+INFO     : 	Synchronizer 183: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[1]~FF
+INFO     : 	Synchronizer 184: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[6]~FF
+INFO     : 	Synchronizer 185: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc/buffers_0[0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc_io_dataOut[0]~FF
+INFO     : 	Synchronizer 186: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[5]~FF
+INFO     : 	Synchronizer 187: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc/buffers_0[0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc_io_dataOut[0]~FF
+INFO     : 	Synchronizer 188: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[4]~FF
+INFO     : 	Synchronizer 189: 
+INFO     :  u_camera_health/meta[0]~FF
+INFO     :  u_camera_health/sync[0]~FF
+INFO     : 	Synchronizer 190: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[3]~FF
+INFO     : 	Synchronizer 191: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc/buffers_0[1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc_io_dataOut[1]~FF
+INFO     : 	Synchronizer 192: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[0]~FF
+INFO     : 	Synchronizer 193: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc/buffers_0[1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ar/popToPushGray_buffercc_io_dataOut[1]~FF
+INFO     : 	Synchronizer 194: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc/buffers_0[2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc_io_dataOut[2]~FF
+INFO     : 	Synchronizer 195: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[2]~FF
+INFO     : 	Synchronizer 196: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc/buffers_0[3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc_io_dataOut[3]~FF
+INFO     : 	Synchronizer 197: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc/buffers_0[4]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc_io_dataOut[4]~FF
+INFO     : 	Synchronizer 198: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc/buffers_0[5]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc_io_dataOut[5]~FF
+INFO     : 	Synchronizer 199: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc/buffers_0[6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_aw/popToPushGray_buffercc_io_dataOut[6]~FF
+INFO     : 	Synchronizer 200: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[1]~FF
+INFO     : 	Synchronizer 201: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u0/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[6]~FF
+INFO     : 	Synchronizer 202: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/controller_main/bram_u1/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[0]~FF
+INFO     : 	Synchronizer 203: 
+INFO     :  source_tag_cdc/ack_meta~FF
+INFO     :  source_tag_cdc/ack_sync~FF
+INFO     : 	Synchronizer 204: 
+INFO     :  controls/a/meta~FF
+INFO     :  controls/a/sync~FF
+INFO     : 	Synchronizer 205: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/wm[2]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/ws[2]~FF
+INFO     : 	Synchronizer 206: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rm[7]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rs[7]~FF
+INFO     : 	Synchronizer 207: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/wm[4]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/ws[4]~FF
+INFO     : 	Synchronizer 208: 
+INFO     :  controls/b/meta~FF
+INFO     :  controls/b/sync~FF
+INFO     : 	Synchronizer 209: 
+INFO     :  controls/c/meta~FF
+INFO     :  controls/c/sync~FF
+INFO     : 	Synchronizer 210: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc/buffers_0[0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_wr/popToPushGray_buffercc_io_dataOut[0]~FF
+INFO     : 	Synchronizer 211: 
+INFO     :  controls/d/meta~FF
+INFO     :  controls/d/sync~FF
+INFO     : 	Synchronizer 212: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc/buffers_0[1]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rdpush/popToPushGray_buffercc_io_dataOut[1]~FF
+INFO     : 	Synchronizer 213: 
+INFO     :  controls/threshold_key/meta~FF
+INFO     :  controls/threshold_key/sync~FF
+INFO     : 	Synchronizer 214: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][3]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][3]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[3]~FF
+INFO     : 	Synchronizer 215: 
+INFO     :  controls/serial/meta~FF
+INFO     :  controls/serial/sync~FF
+INFO     : 	Synchronizer 216: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][3]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[3]~FF
+INFO     : 	Synchronizer 217: 
+INFO     :  u_axi4_ctrl/sbm~FF
+INFO     :  u_axi4_ctrl/sbs~FF
+INFO     : 	Synchronizer 218: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][0]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[0]~FF
+INFO     : 	Synchronizer 219: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][2]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_rd/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[2]~FF
+INFO     : 	Synchronizer 220: 
+INFO     :  u_axi4_ctrl/sem~FF
+INFO     :  u_axi4_ctrl/ses~FF
+INFO     : 	Synchronizer 221: 
+INFO     :  u_axi4_ctrl/badm~FF
+INFO     :  u_axi4_ctrl/bads~FF
+INFO     : 	Synchronizer 222: 
+INFO     :  u_axi4_ctrl/arm~FF
+INFO     :  u_axi4_ctrl/ars~FF
+INFO     : 	Synchronizer 223: 
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc/buffers_0[6]~FF
+INFO     :  ddr3_ctl_axi/u_efx_ddr3_soft_controller/genblk1.inst_ddr3_axi/inst_efx_ddr3/top_mc/fifo_ack/popToPushGray_buffercc_io_dataOut[6]~FF
+INFO     : 	Synchronizer 224: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/rd_rst_int~FF
+INFO     : 	Synchronizer 225: 
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/genblk2.genblk1.efx_resetsync_wr_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_FIFO_W8.u_W0_FIFO_8/u_efx_fifo_top/wr_rst_int~FF
+INFO     : 	Synchronizer 226: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][6]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][6]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[6]~FF
+INFO     : 	Synchronizer 227: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][5]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][5]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[5]~FF
+INFO     : 	Synchronizer 228: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][4]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][4]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[4]~FF
+INFO     : 	Synchronizer 229: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][3]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][3]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[3]~FF
+INFO     : 	Synchronizer 230: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][8]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][8]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[8]~FF
+INFO     : 	Synchronizer 231: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][9]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][9]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[9]~FF
+INFO     : 	Synchronizer 232: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][10]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][10]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[10]~FF
+INFO     : 	Synchronizer 233: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][11]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][11]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[11]~FF
+INFO     : 	Synchronizer 234: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][12]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][12]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[12]~FF
+INFO     : 	Synchronizer 235: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[0][7]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.xrd2wr_addr_sync/async_reg[1][7]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.raddr_cntr_gry_sync[7]~FF
+INFO     : 	Synchronizer 236: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][6]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][6]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[6]~FF
+INFO     : 	Synchronizer 237: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][5]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][5]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[5]~FF
+INFO     : 	Synchronizer 238: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][4]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][4]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[4]~FF
+INFO     : 	Synchronizer 239: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][0]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][0]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[0]~FF
+INFO     : 	Synchronizer 240: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][8]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][8]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[8]~FF
+INFO     : 	Synchronizer 241: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][9]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][9]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[9]~FF
+INFO     : 	Synchronizer 242: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][2]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][2]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[2]~FF
+INFO     : 	Synchronizer 243: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][1]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][1]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[1]~FF
+INFO     : 	Synchronizer 244: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[0][7]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.wr2rd_addr_sync/async_reg[1][7]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/xefx_fifo_ctl/async_clk.waddr_cntr_gry_sync[7]~FF
+INFO     : 	Synchronizer 245: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/wm[1]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/ws[1]~FF
+INFO     : 	Synchronizer 246: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/wm[3]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/ws[3]~FF
+INFO     : 	Synchronizer 247: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/wm[4]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/ws[4]~FF
+INFO     : 	Synchronizer 248: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/wm[5]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/ws[5]~FF
+INFO     : 	Synchronizer 249: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/wm[6]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/ws[6]~FF
+INFO     : 	Synchronizer 250: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/wm[7]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/ws[7]~FF
+INFO     : 	Synchronizer 251: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/wm[8]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/ws[8]~FF
+INFO     : 	Synchronizer 252: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/wm[9]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/ws[9]~FF
+INFO     : 	Synchronizer 253: 
+INFO     :  u_axi4_ctrl/snapshot_fifo/wm[10]~FF
+INFO     :  u_axi4_ctrl/snapshot_fifo/ws[10]~FF
+INFO     : 	Synchronizer 254: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rm[1]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rs[1]~FF
+INFO     : 	Synchronizer 255: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rm[2]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rs[2]~FF
+INFO     : 	Synchronizer 256: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rm[3]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rs[3]~FF
+INFO     : 	Synchronizer 257: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rm[4]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rs[4]~FF
+INFO     : 	Synchronizer 258: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rm[5]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rs[5]~FF
+INFO     : 	Synchronizer 259: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rm[6]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rs[6]~FF
+INFO     : 	Synchronizer 260: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rm[8]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rs[8]~FF
+INFO     : 	Synchronizer 261: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rm[9]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rs[9]~FF
+INFO     : 	Synchronizer 262: 
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rm[10]~FF
+INFO     :  u_axi4_ctrl/auxiliary_fifo/rs[10]~FF
+INFO     : 	Synchronizer 263: 
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/genblk2.genblk1.efx_resetsync_rd_rst/active_high.efx_resetsync_active_high/async_reg[0][0]~FF
+INFO     :  u_axi4_ctrl/camera/Gen_RFIFO_16.u_R0_FIFO_16/u_efx_fifo_top/rd_rst_int~FF
+INFO     : 	Synchronizer 264: 
+INFO     :  u_camera_health/meta[1]~FF
+INFO     :  u_camera_health/sync[1]~FF
+INFO     : Using optimization level TIMING_2 in qplacer to set options
+INFO     : Starting Global Placer with 32 threads ...
+            ----------     -------  --------------     -------
+             Iteration       WHPWL Worst Slack (ps) Convergence
+            ----------     -------  --------------     -------
+INFO     :           1    26817682             246         1.4%
+INFO     :           2    19949410             246         2.1%
+INFO     :           3    13909323             246         3.6%
+INFO     :           4     9854673             246         6.0%
+INFO     :           5     6047811             246        11.4%
+INFO     :           6     4386548             245        19.0%
+INFO     :           7     3570073             246        29.7%
+INFO     :           8     3066464             246        39.2%
+INFO     :           9     2911371             246        43.0%
+INFO     :          10     2827982             246        46.0%
+INFO     :          11     2764836             172        48.2%
+INFO     :          12     2712236             246        50.0%
+INFO     :          13     2647316             180        52.0%
+INFO     :          14     2575560             246        54.0%
+INFO     :          15     2564046             246        54.8%
+INFO     :          16     2537764             180        56.2%
+INFO     :          17     2533792             246        56.9%
+INFO     :          18     2509996             246        58.3%
+INFO     :          19     2498768             246        59.5%
+INFO     :          20     2464038             246        61.4%
+INFO     :          21     2461779             246        62.4%
+INFO     :          22     2436174             246        64.2%
+INFO     :          23     2455690             246        64.4%
+INFO     :          24     2437300             180        66.1%
+INFO     :          25     2428802             180        67.7%
+INFO     :          26     2427899             246        68.2%
+INFO     :          27     2399962             108        70.0%
+INFO     :          28     2425271             180        70.9%
+INFO     :          29     2428463             180        71.3%
+INFO     :          30     2436471             180        71.6%
+INFO     :          31     2422615             180        72.9%
+INFO     :          32     2416008             199        73.8%
+INFO     :          33     2418281             108        74.7%
+INFO     :          34     2419239             180        75.6%
+INFO     :          35     2413680             180        78.7%
+INFO     :          36     2382076             180        80.3%
+INFO     :          37     2374578             130        81.6%
+INFO     :          38     2368569             180        82.6%
+INFO     :          39     2377036             108        83.2%
+INFO     :          40     2369378             108        85.1%
+INFO     :          41     2378681             180        85.5%
+INFO     :          42     2382354              50        87.0%
+INFO     :          43     2395007             102        87.3%
+INFO     :          44     2399198             172        87.9%
+INFO     :          45     2406655             126        88.3%
+INFO     :          46     2416874             147        89.0%
+INFO     :          47     2428838             108        89.5%
+INFO     :          48     2459268             153        89.5%
+INFO     :          49     2471003             108        90.4%
+INFO     :          50     2478438             108        91.0%
+INFO     :          51     2385160              83        91.0%
+INFO     :          52     2382832             108        91.7%
+INFO     :          53     2396203              90        92.6%
+INFO     :          54     2399737              70        93.3%
+INFO     :          55     2393715             108        93.9%
+INFO     :          56     2397817              89        94.3%
+INFO     :          57     2403569              31        94.8%
+INFO     :          58     2408798              24        95.6%
+INFO     : Starting Annealer
+            ----------     -------  --------------     -------
+             Iteration       WHPWL  Delay Max (ps)     R Limit
+            ----------     -------  --------------     -------
+INFO     :           0     1539426            2485        30.0
+INFO     :           1     2685851           14948        90.0
+INFO     :           2     5034238           18084        90.0
+INFO     :           3     6955852           17838        90.0
+INFO     :           4     4575639             493        90.0
+INFO     :           5     3342984             493        21.6
+INFO     :           6     2503248             384        20.1
+INFO     :           7     2142347             351        18.4
+INFO     :           8     1939062             343        16.8
+INFO     :           9     1810392             343        15.2
+INFO     :          10     1753764             332        13.8
+INFO     :          11     1636064             304        12.4
+INFO     :          12     1611486             304        11.2
+INFO     :          13     1562319             304        10.1
+INFO     :          14     1526088             304         9.1
+INFO     :          15     1495027             304         8.2
+INFO     :          16     1469146             304         7.4
+INFO     :          17     1443952             304         6.6
+INFO     :          18     1425822             304         6.0
+INFO     :          19     1411003             304         5.4
+INFO     :          20     1397038             304         4.8
+INFO     :          21     1384848             304         4.4
+INFO     :          22     1372705             304         3.9
+INFO     :          23     1363573             304         3.5
+INFO     :          24     1357067             304         3.2
+INFO     :          25     1350347             304         2.9
+INFO     :          26     1343855             304         2.6
+INFO     :          27     1339065             304         2.3
+INFO     :          28     1334806             304         2.1
+INFO     :          29     1331556             304         1.9
+INFO     :          30     1329486             304         1.7
+INFO     :          31     1327132             304         1.5
+INFO     :          32     1325336             304         1.4
+INFO     :          33     1323554             304         1.3
+INFO     :          34     1321355             304         1.1
+INFO     :          35     1319900             304         1.0
+INFO     :          36     1318588             304         1.0
+INFO     :          37     1317456             304         1.0
+INFO     :          38     1316263             304         1.0
+INFO     : Counted delay computer calls: 1190233
+Starting incremental timing annealer
+INFO     : Starting incremental timing quench 1 with temperature 0.1 and 0.2 moves per pass
+            ----------     -------  --------------     -------
+             Iteration       WHPWL  Delay Max (ps)     R Limit
+            ----------     -------  --------------     -------
+INFO     :           0     1315570             304        30.0
+INFO     :           1     1315142             304        26.8
+INFO     :           2     1318426             304        23.9
+INFO     :           3     1320794             304        21.3
+INFO     :           4     1319947             304        19.1
+INFO     :           5     1319229             304        17.0
+INFO     :           6     1318495             304        15.2
+INFO     :           7     1317511             304        13.6
+INFO     :           8     1316640             304        12.1
+INFO     :           9     1315822             304        10.8
+INFO     :          10     1315162             304         9.6
+INFO     :          11     1314606             304         8.6
+INFO     :          12     1313298             304         7.7
+INFO     :          13     1312311             304         6.9
+INFO     :          14     1311329             304         6.1
+INFO     :          15     1310317             304         5.5
+INFO     :          16     1309631             304         4.9
+INFO     :          17     1308581             304         4.4
+INFO     :          18     1307296             304         3.9
+INFO     :          19     1306003             304         3.5
+INFO     : Counted delay computer calls: 8555031
+Placement successful: 52967 cells are placed
+INFO     : Peak congestion smeared over 1/4 of the chip is 0.897674 at 219,323
+INFO     : Congestion-weighted HPWL per net: 32.0552
+INFO     : Post-placement cluster-level checks is successful
+INFO     : Checks is successful
+INFO     : Placement took 442.496 seconds.
+INFO     : 	Placement took 1253.56 seconds (approximately) in total CPU time.
+INFO     : Placement virtual memory usage: begin = 245.596 MB, end = 1002.32 MB, delta = 756.728 MB
+INFO     : 	Placement peak virtual memory usage = 2830.17 MB
+INFO     : Placement resident set memory usage: begin = 256.576 MB, end = 987.68 MB, delta = 731.104 MB
+INFO     : 	Placement peak resident set memory usage = 2840.89 MB
+INFO     : Post-placement primitive-level checks is successful

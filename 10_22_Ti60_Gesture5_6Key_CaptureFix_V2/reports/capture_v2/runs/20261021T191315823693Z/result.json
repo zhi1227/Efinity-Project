@@ -1,0 +1,441 @@
+{
+  "status": "ERROR",
+  "stage": "D:\\Github_Project\\fpga_build\\capture_v2_20261021T191315823693Z",
+  "base": "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2",
+  "started_utc": "2026-10-21T19:13:15.824331+00:00",
+  "results": [
+    {
+      "bench": "tb_camera_rgb_fifo",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_camera_rgb_fifo.log",
+      "sha256": "62629d7b946ed008c1d55a0924628addb7bc0400beb8c31abcb24cabdd608618",
+      "markers": [
+        "PASS: default camera_rgb_balance -> real W0_FIFO_8 -> stalled 128-bit memory -> real R0_FIFO_16; 10848 RGB565 pixels/21696 bytes/1356 words independently checked, RGB/white/gray/black, 720 rows with full edge and centre rows, byte order, delayed-VS final pixel and counts"
+      ]
+    },
+    {
+      "bench": "tb_capture_exit_regression",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_capture_exit_regression.log",
+      "sha256": "e43c0f8844063eb243fa53c16fc104a7468cba34089c3ef45702c7aabb62f5fc",
+      "markers": [
+        "PASS: capture exit releases source without waiting for missing freeze or VS"
+      ]
+    },
+    {
+      "bench": "tb_capturefix_rawphase",
+      "status": "FAIL",
+      "error": "xsim exit=0: tb_capturefix_rawphase_console.log\n\n****** xsim v2018.3 (64-bit)\n  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018\n  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018\n    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.\n\nsource xsim.dir/tb_capturefix_rawphase/xsim_script.tcl\n# xsim {tb_capturefix_rawphase} -autoloadwcfg -runall\nVivado Simulator 2018.3\nTime resolution is 1 ps\nrun -all\nSTART capture 0 raster=4 main_good=1 bad=0\nSTATE  1 count=  12288 bad=0 good=1 rbad=0 warm=0 dma=0\nSTATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0\nSTATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0\nSTATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0\nSTATE  5 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0\nSTATE  6 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=0\nSTATE  8 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1\nSTATE  0 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1\nSTART capture 1 raster=11 main_good=1 bad=0\nSTATE  1 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0\nSTATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0\nSTATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0\nSTATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0\nSTATE  5 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0\nSTATE  6 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=0\nSTATE  8 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1\nSTATE  0 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1\nSTART capture 2 raster=19 main_good=1 bad=0\nSTATE  1 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0\nSTATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0\nSTATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0\nSTATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0\nSTATE  5 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0\nSTATE  6 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=0\nSTATE  8 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1\nSTATE  0 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1\nFatal: compositor readback mismatch tile=          2 idx=       1608 got=e7f3ff expected=ffc721\nTime: 8852142760 ps  Iteration: 0  Process: /tb_capturefix_rawphase/Always141_104  File: D:/Github_Project/fpga_build/capture_v2_20261021T191315823693Z/sim/tb_capturefix_rawphase.sv\n$finish called at time : 8852142760 ps\nrun: Time (s): cpu = 00:00:00 ; elapsed = 00:00:31 . Memory (MB): peak = 219.688 ; gain = 0.000\nexit\nINFO: [Common 17-206] Exiting xsim at Thu Oct 22 03:14:12 2026...\n"
+    },
+    {
+      "bench": "tb_capturefix_ui_select",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_capturefix_ui_select.log",
+      "sha256": "064cc7c7b18ebe187b8dfa03996547318f1eabc0638a20345fa313d09391e6b4",
+      "markers": [
+        "PASS: Canny BOTH/HIGH/LOW label, digit highlight and all1/4/8 paired/individual step hints"
+      ]
+    },
+    {
+      "bench": "tb_controls6",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_controls6.log",
+      "sha256": "876d66aaa6256d8d6e064724657b1a40b2134f3053df1167d5c5571537c14627",
+      "markers": [
+        "PASS: six-mode keys, UART, pure_en capture, optional detection and auxiliary modes"
+      ]
+    },
+    {
+      "bench": "tb_frame_path",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_frame_path.log",
+      "sha256": "d75e18f6f5430784d9a359e48b08a62051ee0e01a40dbadddce317e54e263ebe",
+      "markers": [
+        "PASS: camera bytes -> AXI memory -> RGB565 FIFO, stalled bursts, empty/short rejection, freeze/live ownership"
+      ]
+    },
+    {
+      "bench": "tb_gesture5_controls_new",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_gesture5_controls_new.log",
+      "sha256": "42e4b71263c3e6e61756202d5b0875137c6943b409c32b89c0426d482797b88b",
+      "markers": [
+        "PASS: legacy key module debounce, boot-held suppression, short/long exclusivity, five steps (new bench adapted from historical three-class test), colour failure, ambiguity, timeout and cancellation"
+      ]
+    },
+    {
+      "bench": "tb_gesture5_rgb_ramopt",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_gesture5_rgb_ramopt.log",
+      "sha256": "8de3721e3dfdc1c36cf52b89195f019bf4610081ecd4df5b26e265fc775acdf7",
+      "markers": [
+        "PASS: five-class RGB-to-template button enrollment (new adapted bench) and changed-shape wrist-wave; multi-tone fingers; learned thumb/heart/OK/V/dynamic wave; static/jitter/fist/blank rejection; freeze and mode persistence"
+      ]
+    },
+    {
+      "bench": "tb_gesture5_shared_overlay_ramopt",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_gesture5_shared_overlay_ramopt.log",
+      "sha256": "54f89e342010e9313dbf7b1f9f5ba8efbb21d40d723dd3596cc23b98dcfc0eaa",
+      "markers": [
+        "PASS: HDMI diagnostics removed across entire former label/bar area; health bits have no pixel effect",
+        "PASS: SHARED_FONT=1 five-class HUD/OK/V labels and new two-pixel ROI sides and old edges removed; palm square/right HUD unchanged; 825043 pixels equal legacy font with 589321 concurrent LCD reads; pure capture strips overlays"
+      ]
+    },
+    {
+      "bench": "tb_gesture5_templates_ramopt",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_gesture5_templates_ramopt.log",
+      "sha256": "6c38e74569f66d1d43a1deb0d788cf4055fd83bc87f823a75b7cf9b71c656017",
+      "markers": [
+        "PASS: personalized five-class enrollment (restored/adapted bench), incomplete-set suppression, sparse noise/translation tolerance, unknown/solid/invalid rejection, ambiguity and freeze persistence"
+      ]
+    },
+    {
+      "bench": "tb_h4_overlay",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_h4_overlay.log",
+      "sha256": "b357bd587bd4e788a9e899292416a409570bea0292ad30f1c19df642ae050429",
+      "markers": [
+        "PASS: three HDMI matrix + Chinese/English results, idle on missing target, no cyan debug tint, pure capture removes every overlay"
+      ]
+    },
+    {
+      "bench": "tb_h4_skin",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_h4_skin.log",
+      "sha256": "71e5bfd0691078c7e3a99caec0441885e5ccd5d82255553334f836fcdfd8a53a",
+      "markers": [
+        "PASS: pale fingertip, palm and shadow segmentation; skin calibration; white/blue/dark background rejection"
+      ]
+    },
+    {
+      "bench": "tb_h5_palm",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_h5_palm.log",
+      "sha256": "ca9df4334371c4200248a634bd5a0be84bd16d1850eab27d9dacdc3a73b11553",
+      "markers": [
+        "PASS: independent upright/sideways open-palm evidence, exact upper-hand centroid, thumb/heart/fist/checkerboard/empty/invalid rejection"
+      ]
+    },
+    {
+      "bench": "tb_h5_ui",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_h5_ui.log",
+      "sha256": "2b41faf0c271ee1713bd1aed6b52b2390b4c7febdc6b87c85ea6d34cd992292e",
+      "markers": [
+        "PASS: full 720p H5 hand-lost, palm-unconfirmed, palm-ready, reverse-direction and wave-confirmed UI rasters"
+      ]
+    },
+    {
+      "bench": "tb_h5_wave",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_h5_wave.log",
+      "sha256": "23f578f5e15be94e64ded654123b32ad8d70d3f3904fcfe3e7fabe641ac46e70",
+      "markers": [
+        "PASS: wrist-only and translational wave, two blurred frames, static jitter/one-way/unknown/thumb/heart rejection, timeout, removal, target change and disable"
+      ]
+    },
+    {
+      "bench": "tb_health6",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_health6.log",
+      "sha256": "d841609b93710b7a77b3f8f5117463fd4fb9b385215c9aed699ed2c5ef22eead",
+      "markers": [
+        "PASS: diagnostic activity, complete frame, RGB expiration and automatic missing-camera retry"
+      ]
+    },
+    {
+      "bench": "tb_i2c6",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_i2c6.log",
+      "sha256": "d4c6ef69913ff46784d9ebecff0e2d13af2bcbdfafe8f01f298b86e84253a29f",
+      "markers": [
+        "PASS: SCCB retries and 10 ms software-reset settling",
+        "PASS: absent camera produces failed ACK status without hanging configuration"
+      ]
+    },
+    {
+      "bench": "tb_io29_freeze_ddr",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_io29_freeze_ddr.log",
+      "sha256": "8659c83cdb08b9eccc7043fcd9569c2947f277d74ae8485a35c4b4da91ab62b1",
+      "markers": [
+        "PASS: IO29 active-low button -> debounce/release -> freeze request -> DDR slot held while camera writes -> resume latest source -> re-freeze",
+        "PASS: real vendor camera/main FIFOs, simultaneous DDR clients, stable stalls, B-response commit/error, snapshot packing, compare/PiP readback and restart drain; W=         12 R=         40"
+      ]
+    },
+    {
+      "bench": "tb_matrix5_ramopt",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_matrix5_ramopt.log",
+      "sha256": "22db6524e1cab3beb5a8f2c54a95d76d9e0d4b18c7909433a9dfc0a23d8cd9cf",
+      "markers": [
+        "PASS: five exact 8x8 bitmaps, idle grid, cell gaps, wave highlight, unknown class blank icon"
+      ]
+    },
+    {
+      "bench": "tb_menu_cdc6",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_menu_cdc6.log",
+      "sha256": "9832d7cf7b9bbb4435bc896543f810db5c22f9402d2871ba11e1fbecdc1273f7",
+      "markers": [
+        "PASS: CDC 1000 rapid changes, coherent payload, eventual state, reset recovery"
+      ]
+    },
+    {
+      "bench": "tb_vision8_ddr",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_vision8_ddr.log",
+      "sha256": "d9318b664e6098d49d1601948ac7ad03102132d4d9eb6ddefc2d4868a8d07d49",
+      "markers": [
+        "PASS: real vendor camera/main FIFOs, simultaneous DDR clients, stable stalls, B-response commit/error, snapshot packing, compare/PiP readback and restart drain; W=         12 R=         33"
+      ]
+    },
+    {
+      "bench": "tb_vision8_faces",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_vision8_faces.log",
+      "sha256": "9b433e804222c3290b1c4480436ab047a62a22059b90796b8064e2eb1ea611f7",
+      "markers": [
+        "PASS: real CCL nine separated regions/8+ and empty source frames; count confirmation rejects duplicate replay, preserves freeze and marks camera loss unknown"
+      ]
+    },
+    {
+      "bench": "tb_vision8_fifo",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_vision8_fifo.log",
+      "sha256": "64915e74bbed1c11be0b33bd39b9a6941d21c5658e883eb68155b009d4619536",
+      "markers": [
+        "PASS: asynchronous FIFO registered RAM prefetch, full/empty wrap and random stalls"
+      ]
+    },
+    {
+      "bench": "tb_vision8_gesture",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_vision8_gesture.log",
+      "sha256": "35d961ef7fded4a18de43c40ee5b02cf765a6ebf7629f1e3f1deb863d1f8d0ae",
+      "markers": [
+        "PASS: gesture publication gate accepts five distinct camera IDs and rejects replay votes; K1 enrolment uses elapsed-clock countdown/timeout and exits with mode change"
+      ]
+    },
+    {
+      "bench": "tb_vision8_key_boundary",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_vision8_key_boundary.log",
+      "sha256": "ca930a0a81cdc7fb7d3567b1b71de75ce6a79a54cd60f8f459c48ec76c685a9d",
+      "markers": [
+        "PASS: vision8_key 74.4MHz defaults, 20ms/2s scaled timing, 500/1999/2000/5000ms, exact release-long collision with long priority and mutual exclusion",
+        "PASS: vision8_key released/held startup, reset while held, press/release bounce, one long per hold, no short after long, context away-and-back cancellation and rearm",
+        "PASS: vision8_key same-edge NBA context changes mask pending short/long before a new context can consume them"
+      ]
+    },
+    {
+      "bench": "tb_review_hdmi_text",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_review_hdmi_text.log",
+      "sha256": "5594143011688acb3e6fc0d2351757c650b431be9b8e8f0acf77afab84feb5fd",
+      "markers": [
+        "PASS: review HDMI rendered labels chars=257 pixels=50736; BUSY FAILED EMPTY FACE GESTURE RAW CANNY RED CYBER"
+      ]
+    },
+    {
+      "bench": "tb_capturefix_menu",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_capturefix_menu.log",
+      "sha256": "cdaa1d2908f581c2c9c48691e0d719823e31115ff1d3d13b844c4ed8d6dbc378",
+      "markers": [
+        "PASS: capturefix UI scene 0 mode 1 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 1 mode 2 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 2 mode 3 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 3 mode 4 pixels 614400 threshold 24 step 0",
+        "PASS: capturefix UI scene 4 mode 5 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 5 mode 6 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 6 mode 7 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 7 mode 8 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 8 mode 2 pixels 96512 threshold 2039 step 2",
+        "PASS: capturefix UI scene 9 mode 3 pixels 96512 threshold 1 step 1",
+        "PASS: capturefix UI scene 10 mode 4 pixels 96512 threshold 255 step 1",
+        "PASS: capturefix UI scene 11 mode 5 pixels 96512 threshold 2 step 1",
+        "PASS: capturefix UI all 8 modes plus 4 threshold limit/step/freeze crops; 5301248 pixels; inline digits and actions; capture Canny LOW/HIGH; shared/local parity; retired settings bit ignored; rail timing/wrap"
+      ]
+    },
+    {
+      "bench": "tb_fourkey_font",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_fourkey_font.log",
+      "sha256": "3f37427385338b6740dad91ea7ea7c4ff6de0b1d485847994c6f21104fb733cd",
+      "markers": [
+        "PASS: fourkey compressed font all 8192 addresses and 12000 seeded random reads per port; 646144 exact pixels; independent HDMI/LVDS one-edge latency"
+      ]
+    },
+    {
+      "bench": "tb_inline_cpu8",
+      "status": "FAIL",
+      "error": "Missing terminal PASS/finish"
+    },
+    {
+      "bench": "tb_inline_epd_cpu",
+      "status": "PASS",
+      "log": "reports/capture_v2/runs/20261021T191315823693Z/tb_inline_epd_cpu.log",
+      "sha256": "10ce85138e6050f25a2d769c85ddd1699a141614b9dbcc542e90fe7bac90e7cd",
+      "markers": [
+        "PASS: inline real RISC-V firmware, 30033 SPI bytes, both image planes, reset, BUSY and live eight-mode LVDS menu/state"
+      ]
+    }
+  ],
+  "inputs": {
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\camera_rgb_balance.v": "af2d5083f92637a17804844ea1be6ee644557767db32ad69faf1a99150d72618",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\epd_apb.v": "1774e2d826aeada6c428fd282c1a803e061f7b0a764ef63d2e3229e485258e13",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\spi_write_byte.v": "6f39ac724cc4ab85d1902d7b29c8fabe4bc31ec803f36825964a765fe76c0848",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\example_top.v": "1df0fabf7176a84615bac142ba200a1fee08b56ec049a7c16dc5fe71eba6ab0c",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\cmos_i2c\\i2c_timing_ctrl_16bit.v": "dac75775f5b01c6a8b938c9f736a7a2e66ba84d90a3aef495ff999ae44f2e64d",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\cmos_i2c\\I2C_OV5640_1280720_Config.v": "2c015e18a0ee43f31b618dd2456ed56c3512be154a03cfc082a568dd2daeb830",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\lcd_para.v": "cf6b805fd38a890d191a97c327d96d875f18e432829f3074cefe63cf43c3f89e",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\lcd_driver.v": "4bfe58fb37c63cb544c549c228a9cd93f7a7f730ba8b368f14ee2c58785d962c",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\axi\\AXI4_AWARMux.v": "c466edbe97aa1765711d986198237536e8006838ab4e5b5a802ab9fc3bba0157",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\axi\\axi4_ctrl.v": "c11ccbe25be307ce8144657a7cb56d520143b8a581caf54f4b542a4877f49453",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\axi\\frame_buffer_select.v": "0bba85d69e95264c71c52802e7b3ef2f48ff4059a3cdd99a89aa6956a7ccf05c",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\vision\\gaussian3x3.v": "2d9067582f2e56256e7e557d5abd20ae23bf2537b85c96a3abb1eb629288f748",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\button_press.v": "c98673d59d71f34d78fdbe794080457bfecf273d55585652bff1261cacb13c39",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\vision_hud.v": "b4b8659433b98bf6c81d5eaddadf65be0bb2fd003ec159e1b2832839c7ab6e09",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\edge_shape_roi.v": "6fec8e6ff0504dc4f62b50cc1c43d186c0bfcf4a43e276d92fcfa64b27da70e1",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\hdmi_ip\\encode.v": "fa9eca3e88148bdabb128a3a9c43a79572a3eb92bc8d12b44c3265113b7305fe",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\hdmi_ip\\tmds_channel.v": "efa4fd6e5b89a383061c38e7b180ab30067f8c0f106bb7807d80e0f7d77c62d4",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\hdmi_ip\\rgb2dvi.v": "fc61baec2aac7e28a6561fc0cbf23ebce625b2691e917bdc13f7e8fd4fc39782",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\hdmi_ip\\serdes_4b_10to1.v": "f156d37ca13d0117a1a9bf45000dcbeb4ac1c6fb4b1e1f75013f88e38f0e1abc",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\vision\\line_buffer_3x3.v": "7bccd92923bad462bfd95bd1d18fbfab980cfbfeb2058335582e251ce22377a3",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\vision\\rgb565_to_gray.v": "655ab41e4062255dc4b8d8c8b87ce1521cd1cc2aa8a68dd590d697a156804844",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\vision\\rgb565_to_rgb888.v": "56a5786698a092dfdc5f0091368698633041b4e27f1b7f571295cfbad9201d11",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\vision\\median3x3.v": "ff58a6aac336a79c6086740399db082601c452c5e5e30f8b4dfd5f1fc102df87",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\vision\\sobel3x3.v": "769ceacbb3767f630c95e11e0f36e91a4fb3d9eee9d8f22ab5b3a15abe44fa1a",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\vision\\nms3x3.v": "4521dabb1f63be7ea3c7c3baa796e15112010c93fd475f2786f274f7bddf12f8",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\vision\\canny_threshold.v": "74fbb91789a4a3406d0bc10a97f26646cc302dd0fa1d983c7be168f5ebd7bff5",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\vision\\hysteresis_local.v": "42399b974d1557754949ba0d6cef23019e2e91432079d731aaf2c30ef9f7aa93",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\face\\rgb565_to_ycbcr_skin.v": "24ceacdbd51eedc8a3b667a02793dc7416395c652d38fdfcb642f7fbd6c979ce",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\canny_stream.v": "205c09c53627049d5b539f9a44d69232269bce4cef86d0029602af49beb9a6e4",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\face_grid_regions.v": "67bae2498ca9b06d232ad12109899e6912c3b908692b911a4fa686b366fd2ef4",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\face_morph.v": "08fc14d4b8e60014593c14ced8920945a11dc24c8b7498c4bea2a90f02d35371",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\parallel_overlay.v": "9dabf8eca58b7d502b0aabf476b53c6924a063f64c3b3e607d0e565ea576003b",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\parallel_video.v": "b007a84f313deaeee86943b06d01fbaf04dd4a260748374df6ef0d2b18c8a47a",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\uart_params.v": "b4d8808b924a89da5af7d9293cd4a4523af014108a083098521c60f0e64a10b5",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\video_delay.v": "af07254404321ecc7aa05e715a4798ad87c27586832f7c4e8c4b5a7de79a7123",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\Sensor_Image_XYCrop.v": "a8d1f2d273aea58f6b0f95efd3f52fce75cfa6e8e08d49c750624708648a1f86",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\vendor\\EfxSapphireSoc.v": "c9ef878fe2a004046f5a7eb6298b5f3f73248a27130a340d31409f0e3789689f",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\menu_status_cdc.v": "d02f08850cfc0a3946c9b2d2714a6bcfe15e1e82bc2084399741b8e7f723f558",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\shared_glyph_rom.v": "c7df447ee8bae5db143ee94961caa0554017a290973e3a3314c5a8cb4039564e",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\menu_glyph_rom.v": "de9e89c344d2b4cb3e295a6b71a2a18d22c897b0ee2236dc4a7e286e88afc035",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\menu_renderer.v": "9bcee1b7b4e0183751b20666c6f3bbed2c3adb458d8e0ade7eab78fd48e0416c",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\menu_lcd_apb.v": "e9dcdfc1ab874cd417cbc81eb09065742b1b4787355c64ee33c62b4835bcda17",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\riscv_menu_top.v": "5c26ffa1de6d293d52476d397345681265ba8f1f0c15a737f0e572afe4887c96",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\camera_health.v": "c274c420f1c50e505edca6e1cac1fdc321606866989c7aa78017047404406b4d",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\gesture_features.v": "fda6556493382768f6bbd0faa2dd9f11c9410ed9763fe41781b654df6de62ede",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\gesture_stabilizer.v": "a27e9a3e464743842998eb06d6528ba28814374254087f2fd5f58e573cf4a7ed",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\gesture_branch.v": "5c6b36e07b1e8a67217df79bfcdd640b43310589b8c4f541268c4c4e64d29f36",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\raster_xy.v": "53ae8780372a3af2cc7cfdd38ca3ea58f08b0224b3117b8510a0cbef8313b279",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\gesture_matrix8.v": "12138388abc4b26569b8417943b96930f2e1d9f2ddd2fbfefd10236c8e640db3",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\gesture_diag_hud.v": "09585bcd66751d6ce6ba3571cecac99d15219497cc881f359fa03072ace703f5",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\vision6_overlay.v": "bc3bc6d9242d9b83af758d093c6136fef6890fedd7ff7252fec29c414fdba1a1",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\gesture\\ep1_components.v": "5b16e305bbbdc4e5914fa81da68e6a176ece6443d815f69c2d1fdc409c020577",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\gesture\\ep1_math.v": "960442d0126c1ae3668864ba54424c452786b4358348d19d7967a2949f16bb1f",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\gesture\\ep1_skin.v": "e7485ff7e4cdf4567ff149aa21b6c943e128c821aa3fffdc6c93862449745d6e",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\vision6_glyph_rom.v": "23c51441cd9577b679c1cd6e9026b193592d3a9c4fbdedaf6649ea1d5931187c",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\gesture_key.v": "0526cbc8467138a8f931dfb88da5390558a7ef30c2ff9158c5f3546afc3262d9",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\gesture_skin_learn.v": "0236d9f7c582a3d3a44b1acb743848b6d885b24b55de6c9cbb6cc0cd8a0acf71",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\gesture_sample16.v": "263c8d89ed0d1f8bf4df8588522869bb8ac0b8b56cbe6ab3e91e1c1d7fd6d014",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\gesture_templates.v": "ec26a1a13b73acb4c0579af5951854d6c6eed1b54b2c39bdb253de3533962c85",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\gesture_wizard.v": "2a7ef7e3bd183781accc2fec2c757ad50ca424c56dd59d721753bc2605cd37eb",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\gesture_palm_evidence.v": "d0e867f565818c74e4a8c4414e75240601ed7f774676b17e9d836136875df66c",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\gesture_wave.v": "79eeceab77503641c56585ab0f23b515d14273dc9b0ab50cfe03fca841834576",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\vision8_controls.v": "bfed28e1b1e79525ff52d48ea70bb68ca0eb4042a618ea4ab51ba1dda92fa909",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\vision8_fifo.v": "59eca95abd00b12ca4c494533696939e6579c2f8d07992b0a164cdd33528374a",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\vision8_aux_fifo.v": "13cfe8845023ea230194548a8c52f5db656328791b2021eae61ddc22598a2bb3",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\vision8_slots.v": "06cfe3d8f9d246cc6a3f453ef9f52ef16e96028c3d74c3b0195253a215c124f8",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\vision8_base_axi.v": "38f9d2b965bc2c0f88f7611ca9b29f471699249a0aed94cfc3cfc0aa87174112",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\vision8_ddr.v": "88247ad9b4ce2389da9af4e57f1b7ff4f5404ac23239a8ee55355fc355d42e81",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\vision8_frames.v": "e9b2df5d2b58a7d1ccd56f7b44b8b2a94eaafd8bf90ac2311971a58b22fab5f6",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\menu8_renderer.v": "f83db8b331f756c39eb84c501e9448f2700ba8bfc7737af87e2cd9dfeeb2a508",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\vision8_uart.v": "8a72249ef9640a3fde5b242b91a3411c0ce26801dda93ba4d611c6d2b3fb73f2",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\vision8_ascii.v": "8992c806ba3a3cd8f3efaf41da5291cedd705aaafefbe3af142a82f38cfa677f",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\rtl\\vision8_count_filter.v": "a31573e31c9c988590a98e7f6e1dc5fbc014381b688133f297c878afca246640",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\ip\\W0_FIFO_8\\W0_FIFO_8.sv": "4e1d6a7257b89979f7d732083874dc4edc2ee873bbaa797bb1800b57e9bc9eca",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\ip\\R0_FIFO_16\\R0_FIFO_16.sv": "56ecb23717b6fa7f2496a919f393fba9ff4e4aa80bc267b5df98e334badc122f",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_camera_rgb_fifo.sv": "81cef2e12f7775f981877ccacf3f63c5e733dbdb925070c8dc3ced430f71ca06",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_capture_exit_regression.sv": "7948aa05d83095999517cdfa401e7b85a8f0b05f89270a2e6f0af7c1827d5f80",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_capturefix_rawphase.sv": "6ed4af96ff9e7157cc04b31694de5643119285e03b8aafc7d55f1eec108028f1",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_capturefix_ui_select.sv": "cbc058ef53ba33f689ffc77f541776da7949cf28bd719f6a24a2dbc14fb29283",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_controls6.sv": "aabc8151c0b58e7ac4cc6739c52a83a146864fcaa690a80e61263870ad9f14a8",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_frame_path.sv": "2efa9653b175e8005cd7a10dda3011723393645b8c911755e05d2f31d032e899",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_gesture5_controls_new.sv": "f88512e94737333dd3f1dd0999f57719bb0c46ff1a615c183705eede39e9c405",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_gesture5_rgb_ramopt.sv": "d8b97f3ebac3e618c4bf44ca702471802275ffaa967b0de4489dcd68bcbfd6d0",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_gesture5_shared_overlay_ramopt.sv": "919cdb0716e6654d403e6d0c91288e9de66355612423a26dc8be1014cf31f036",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_gesture5_templates_ramopt.sv": "13d418c1e8bd9a281fb633dd8ca22ab0e0e80aacd85128871682cd68665908e1",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_h4_overlay.sv": "baf9e658f7fc8219b2954c6bf947f1c5609858c1d23759f4a8ea9fb792ed1e37",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_h4_skin.sv": "5b22621e9b5bc5f16764b27d5de95ddcaad924d344af6ae7ee8cb5d747b3cb2d",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_h5_palm.sv": "1718f9d3e48e7c1a26a3c7ccc3095b1ceecce2c0d2b88557310bd5574060c9a8",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_h5_ui.sv": "2c502eebd2537a82ae19932bebc5143e9c54f017fdd70aeda800a62968b9964b",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_h5_wave.sv": "eaf5984eefe42f26f8fe3b3081a76bfd51955f05820df4093fa4941a78758610",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_health6.sv": "be9fe018c8ff2215b548bed1d57eb90404bb305e2b25f3af113c6cb447773fe1",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_i2c6.sv": "172f6357d9c7c636988c80653a67209ee9071d893b3ddf69da23f8a1fadaa67d",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_io29_freeze_ddr.sv": "2fb4ad575762c155d68b7f8d2ada8cccbcd254146f7d81d3391e151e8a1446ed",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_matrix5_ramopt.sv": "b70a5547838574d317ef541f6ec99453ad689d349094fef005d26e2bd1ad648b",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_menu_cdc6.sv": "a2a3c38d28bec06312d4a20f4e0bead36c3ef7bac3890053875ed68033341924",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_vision8_ddr.sv": "b02f9a635d3d79da73eeb2e7142a51f517bf7f41c8c1b3e99cb120ca6536ba32",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_vision8_faces.sv": "f12713cf533deab7834d271184d6ab19fb961cd7759c201dbdb8f036d860c9a0",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_vision8_fifo.sv": "a6d7283afefeab2fc730f327cf0e72ba2df860c5ffeea78cc7656dce1b09954b",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_vision8_gesture.sv": "b701d9657badb108ce7417b737561a59071b517d58aca1f2592b9596ad8a90ff",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_vision8_key_boundary.sv": "e35908ac5475d236ebd7db8e17b04db8d8888d4c03a89b21728fac470c7b484d",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_review_hdmi_text.sv": "d91a1d4afc170eec7f1bbafc9798a2ce89861c0f4810a2ecd1c0a5eb3fdb893b",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_capturefix_menu.sv": "34b23062fa735c99d31b3c29bd4f1d1ad809d51c11d1d03c950b4cc9c819d0cc",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_fourkey_font.sv": "8913d739c575cdae1ac5578cb2f7b7b28145b36805aaf3896fb20bd3ad7a0713",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_inline_cpu8.sv": "3a4049b590ca10f50870203190bb72221ac4e175e0c53bc424ab48bc0e03b9cd",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\sim\\tb_inline_epd_cpu.sv": "40abf54751aa72c6c916e51174a79684263a82b0786171c127193bf1c827c9f4",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\menu_font.hex": "09431667301bd4ff968a52c5cf7dfb631def6590e807f63a9c879ceb6fe1435c",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\menu_font_bank0.hex": "b811022c52f1b9d218075af0a02e2ea1360108157b85cb8b120d3d18e02b4349",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\menu_font_bank1.hex": "e2fc766e8531f5656f5ce86801c8ea5fd2d56ec29155075c31b8353e057d8a3b",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\menu_font_bank2.hex": "2b0b2cd7c400ae649649defc2edb661b7fb840e29df8713737f104a64fb5c5ba",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\menu_font_bank3.hex": "5d83bb89a6fe1386283bf723cf434c3cd0896dd2f530c7d34495fd015260855a",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\menu_font_bank4.hex": "99f37f8307f5207c5caa6eb5481d7812063429a51fa290616b66552219e3d8f8",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\menu_font_bank5.hex": "bbba7e83626cd6f61ec6e3f43e3fd664f7544b746e8614661a36978ccad9745b",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font.hex": "ea57cebe54000d81505b32814e5e39da14e5831c8749bef3a8482af509a46bc9",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_bank0.hex": "b811022c52f1b9d218075af0a02e2ea1360108157b85cb8b120d3d18e02b4349",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_bank1.hex": "078b56e2642ec146bbaa600eb1a1925a8402f826e99c52b3d96d0d9cceb5bd30",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_bank2.hex": "0f7c48113c2da9e8f6ed4227ea0cb5d407fab99065fdb85bce6e441bc20cd7d5",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_bank3.hex": "823bae68f3f7b45f438e823b4c571baa6d53f1d95429c12b12c7700f9b2b043e",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_bank4.hex": "f25f936a3dc976bd937c74acb972c76c4c158676ff0d00a2168f0ab2180a74a1",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_bank5.hex": "8a5fac3058cb69f0e69258b27c8440d8018013760d8f61cbc53f27633a07c816",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_bank6.hex": "6adb172fe54a361b94fc6a19354a6acba17a59a537c6f203f0d9140817e216f1",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_bank7.hex": "bb1c8501d217132d0c088e8a1c3d647166db0d11b3e8cea085e2a3613ab5d50a",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_bank8.hex": "7e3a7c0a892bbea3e8b2f40c2988adb57ce39c43fdc55b1032a2f6cb1f809d43",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_index_bank0.hex": "9f4f21c082a745ff0ecf570d0d7d750ed49a60fa560d3de5d0b1eaf98b5c6f8d",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_index_bank1.hex": "0119a15c0c53fa751685bdba4909c0c288a42aaed69a0ffc9b0e84825bc0365f",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_index_bank2.hex": "2975f714a4f8f1ce3ddcd43303d55572aa2a06d046a9035579dfd85039dc8707",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_index_bank3.hex": "4b113b867b075affa1230858f4bb2e221cb7d52a8f846ab8f32b3e132ea9ba6b",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\shared_font_index_bank4.hex": "c13f68c249fffd5090bb96bf5896cde0b7514c7f8415f65cb079c9c1eef0c569",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\vision6_font.hex": "f88dfb0ff6d7230160cdf59814f9b539352580b2eaa78251f72b5b1ced43d5aa",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\vision6_font_bank0.hex": "7f12dbbe90c15b54ea3e1b271e985bc38cacad0434a7c83eac78613426ba7ae5",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\vision6_font_bank1.hex": "76e5b2121d9ec12d2093aa07bdad7fcaab6da1c4e5e27395184b6b49922a1060",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\vision6_font_bank2.hex": "e658476e4fa990e6b7b8f14d1f345e94fb0de955a1fce0864340906afa8f9eb8",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\vision6_font_bank3.hex": "6e6b066c9ef810b097e81e6773955b9fb446d5184bda1a6e352de9f62802b6a6",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\vision6_font_bank4.hex": "4e39aa8230bdcbd6cdb666206c4b1354bc718b4a9196f38cf8e312b06fc0225e",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\vision6_font_bank5.hex": "aa60fdd5988e71133db38689d8fc74d4f940300d0d2a88f1a9d84dac4db62f43",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\vision6_font_bank6.hex": "6c42269ada0cb46d2b1ebabda20253c29cfe53691b1832aa82095e09aec69bc1",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol0.bin": "73decce2b7c0562cfa61578898bfe5632ea142c1f9b7bc4edf75f68ff6c19607",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol1.bin": "cedc4adb60165ac28ccf5c0f4e58b87dda821da021785a681e237e746e4d457f",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol2.bin": "f0da3a861721ecbc4edb16fce37f99a90a73885d7f7563df5f72570d66e53785",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol3.bin": "a0e8f4bfffa292608c5360c077ed969b907235f2335fc13703d9eeb848449199",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\tb\\ccl_expected.hex": "87731bf608af05d6d98c77aa46e06a85ef0f08f13c87227ab036579335d55001",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\tb\\ccl_pixels.hex": "8cea0b68cc260bbb5b27ad7c8ae4ede7e18c798b2c16c8a1779554a590ae62ae",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\gesture_config.vh": "d8fe6ee3b59e5c9eb6414cf1f779188c861a9d31224451ac90649c843d8905cd",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\rgb_balance_config.vh": "b368d61fe7a03efe55ce120a39ed57b8ebdca087a8c3404452a0396a27ac2abf",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\vision8_modes.vh": "bd98e13ecb42b8c98544538b3536f5300ee9f78db4df7d58b7d785938090280b",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\src\\parallel\\vision_config.vh": "9812b48032594ad785cb9c95f994be78c31447c1d71f29f14d8baffe0aac237a",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\Ti60_Demo.xml": "cc5f037cbb6fb1f29df9f01875cff9ac5ec43efa064a7222115ee65992b13731",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\Ti60_Demo.pt.sdc": "7f77f0252c87daf2b6309eabf85105b0d96079d0de147f2cf6f9905801727688",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\Ti60_Demo.peri.xml": "7112e1c8b5f7a389c7e7d7b22fd430bf6b97aad5cbfdea49b3b4d464e96f195a",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\tools\\capture_v2_test.py": "fd70b8cb0a7754c9909fd0dbac821076d36951bde57250039a6dfa8292a1a786",
+    "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2\\image\\epaper.hex": "fc92f55f6e7191b70c6977a8c5c4423d334f559495592f47fe2ff526fddc03fa"
+  },
+  "error": "Source drift during run",
+  "completed_utc": "2026-10-22T02:51:07.368655+00:00"
+}

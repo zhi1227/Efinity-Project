@@ -1,0 +1,122 @@
+[
+  {
+    "bench": "tb_vision8_key_boundary",
+    "status": "PASS",
+    "seconds": 8.42
+  },
+  {
+    "bench": "tb_vision8_controls",
+    "status": "PASS",
+    "seconds": 12.06
+  },
+  {
+    "bench": "tb_vision8_fifo",
+    "status": "PASS",
+    "seconds": 7.84
+  },
+  {
+    "bench": "tb_vision8_ddr",
+    "status": "PASS",
+    "seconds": 9.19
+  },
+  {
+    "bench": "tb_vision8_frames",
+    "status": "PASS",
+    "seconds": 8.81
+  },
+  {
+    "bench": "tb_vision8_faces",
+    "status": "PASS",
+    "seconds": 8.59
+  },
+  {
+    "bench": "tb_io29_freeze_ddr",
+    "status": "PASS",
+    "seconds": 9.39
+  },
+  {
+    "bench": "tb_vision8_gesture",
+    "status": "PASS",
+    "seconds": 8.67
+  },
+  {
+    "bench": "tb_h5_palm",
+    "status": "PASS",
+    "seconds": 9.34
+  },
+  {
+    "bench": "tb_h5_wave",
+    "status": "PASS",
+    "seconds": 9.8
+  },
+  {
+    "bench": "tb_gesture5_controls_new",
+    "status": "PASS",
+    "seconds": 9.42
+  },
+  {
+    "bench": "tb_gesture5_templates_ramopt",
+    "status": "PASS",
+    "seconds": 12.02
+  },
+  {
+    "bench": "tb_gesture5_rgb_ramopt",
+    "status": "PASS",
+    "seconds": 206.48
+  },
+  {
+    "bench": "tb_gesture5_shared_overlay_ramopt",
+    "status": "PASS",
+    "seconds": 27.78
+  },
+  {
+    "bench": "tb_h4_skin",
+    "status": "PASS",
+    "seconds": 7.88
+  },
+  {
+    "bench": "tb_h4_overlay",
+    "status": "PASS",
+    "seconds": 11.89
+  },
+  {
+    "bench": "tb_controls6",
+    "status": "PASS",
+    "seconds": 8.45
+  },
+  {
+    "bench": "tb_matrix5_ramopt",
+    "status": "PASS",
+    "seconds": 8.22
+  },
+  {
+    "bench": "tb_h5_ui",
+    "status": "PASS",
+    "seconds": 34.59
+  },
+  {
+    "bench": "tb_i2c6",
+    "status": "PASS",
+    "seconds": 8.27
+  },
+  {
+    "bench": "tb_health6",
+    "status": "PASS",
+    "seconds": 9.53
+  },
+  {
+    "bench": "tb_frame_path",
+    "status": "PASS",
+    "seconds": 8.7
+  },
+  {
+    "bench": "tb_menu_cdc6",
+    "status": "PASS",
+    "seconds": 8.77
+  },
+  {
+    "bench": "tb_camera_rgb_fifo",
+    "status": "PASS",
+    "seconds": 9.03
+  }
+]

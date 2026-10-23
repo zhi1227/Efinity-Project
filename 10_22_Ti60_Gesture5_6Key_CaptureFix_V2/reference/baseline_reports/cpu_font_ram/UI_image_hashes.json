@@ -1,0 +1,34 @@
+{
+  "0": {
+    "entire_ppm_identical": true,
+    "sha256": "9ba149143f6addc129a97df502f5d78c6f5b0056055e8d222a7f54d9845a6d24"
+  },
+  "1": {
+    "entire_ppm_identical": true,
+    "sha256": "b48a7a4b241f69925de65bc564a060809f49e6c1556d499aa86d787fd815c7a0"
+  },
+  "2": {
+    "entire_ppm_identical": true,
+    "sha256": "45b9b757d713f7fcd0f2555f6a956ebb0d21164c300d8c61e7033a43a4db64ff"
+  },
+  "3": {
+    "entire_ppm_identical": true,
+    "sha256": "46fab3013bafcef45e457deefd1287be17a8b9f52f58f1e444416800d1bfb403"
+  },
+  "4": {
+    "entire_ppm_identical": true,
+    "sha256": "b085d14251af9feda0ab26aac56a18f93d0373eeabdaeb0c0876daac2403131e"
+  },
+  "5": {
+    "entire_ppm_identical": true,
+    "sha256": "2af231b1064b7da3a5d0b4160673eede16ce20082b2512af3267d4439471ac9e"
+  },
+  "6": {
+    "entire_ppm_identical": true,
+    "sha256": "251387e43dcdf749bf8b689e7d922961f60e66156361ac3b6ef15741f474db90"
+  },
+  "7": {
+    "entire_ppm_identical": true,
+    "sha256": "9963fdc49befec1bea18446ae8c64fb47dd34c18422a9afc3a42939a3ecc2281"
+  }
+}

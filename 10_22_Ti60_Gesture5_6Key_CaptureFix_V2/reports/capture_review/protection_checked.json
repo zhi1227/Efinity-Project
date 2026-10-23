@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-21T04:48:42.441851+00:00",
+  "checks": [
+    {
+      "name": "untouched4Key",
+      "files": 7683,
+      "root": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold",
+      "manifest_sha256": "31b4ecece00bd0362455942a88e87f1a725ab3758deb49a21356e080cc621268",
+      "status": "PASS"
+    },
+    {
+      "name": "complete_before_audit_backup",
+      "files": 8764,
+      "root": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\_backups\\CaptureFix6Key_before_audit_20261021T041525Z",
+      "manifest_sha256": "a5bd62faa51527386958d36ec0df70c38b065c6ca301f3f4c9d0a6c4e5c9af8d",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "tests": [
+    {
+      "name": "tb_vision8_key_boundary",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_vision8_key_boundary.log",
+      "sha256": "d710fe49a0f36fc656f2d2b71005e0ea5cc1d521e463bdeaa8aad9e7b97fc875",
+      "source_phase": "value_candidate",
+      "seconds": 8.36,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_vision8_controls",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_vision8_controls.log",
+      "sha256": "83385beaa216f9da46340f508080170d393d0bdc522d3a1833781362f2267ede",
+      "source_phase": "value_candidate",
+      "seconds": 8.39,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_vision8_fifo",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_vision8_fifo.log",
+      "sha256": "e58cee088f0dd7e13d9e1f9382f6c699b2489bc1d5b57cba7058343015b5f7a9",
+      "source_phase": "value_candidate",
+      "seconds": 8.17,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_vision8_ddr",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_vision8_ddr.log",
+      "sha256": "1ddf43ec4634072349e1b55d046d4a6bf4abf59777e12de95eee262dee33139e",
+      "source_phase": "value_candidate",
+      "seconds": 9.67,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_vision8_frames",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_vision8_frames.log",
+      "sha256": "53ba9e381074fa3341803533264879e5f775b85326cd4adba44ee9bddca2a54e",
+      "source_phase": "value_candidate",
+      "seconds": 9.27,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_vision8_faces",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_vision8_faces.log",
+      "sha256": "5fbf70e2ab59a8c0e7e276bab13a350311c062537c63bd9887a5a0475466d353",
+      "source_phase": "value_candidate",
+      "seconds": 7.92,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_io29_freeze_ddr",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_io29_freeze_ddr.log",
+      "sha256": "d202da9ee62e6463b73c72049e92693b4695e2665a11feec2f1007de77039947",
+      "source_phase": "value_candidate",
+      "seconds": 8.76,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_vision8_gesture",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_vision8_gesture.log",
+      "sha256": "a26acf170d3f0a1d434629ccb82be4bc2407197bc94fd3442fe0569d5924e4c8",
+      "source_phase": "value_candidate",
+      "seconds": 8.62,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_h5_palm",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_h5_palm.log",
+      "sha256": "8ba946b8836c3976371f519f81a8923c07adb89acacd0c2c87e5c7408977f0b5",
+      "source_phase": "value_candidate",
+      "seconds": 8.74,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_h5_wave",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_h5_wave.log",
+      "sha256": "514166ca165f044d63320076fb5cb6ba5cf7e5601fbfee7e67b5548d8845ae0d",
+      "source_phase": "value_candidate",
+      "seconds": 11.03,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_gesture5_controls_new",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_gesture5_controls_new.log",
+      "sha256": "2567e2cd318d51c50f59f6f0c3465fbac8d1d52f76da9f2c3aeae97d74b8371f",
+      "source_phase": "value_candidate",
+      "seconds": 8.22,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_gesture5_templates_ramopt",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_gesture5_templates_ramopt.log",
+      "sha256": "10c8fb2602d201d7a6e1004f31e6812e0704e138490e7f753e2e802595f91c66",
+      "source_phase": "value_candidate",
+      "seconds": 8.22,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_gesture5_rgb_ramopt",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_gesture5_rgb_ramopt.log",
+      "sha256": "e2e4774e73022808399e92eb86a8800826effb8b6d00e310cd576d5b8f44d579",
+      "source_phase": "value_candidate",
+      "seconds": 258.08,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_gesture5_shared_overlay_ramopt",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_gesture5_shared_overlay_ramopt.log",
+      "sha256": "e38540fb32d5758897ebe3789053f48b16ed2c77122d0bd7107ac7d06a273046",
+      "source_phase": "value_candidate",
+      "seconds": 32.59,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_h4_skin",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_h4_skin.log",
+      "sha256": "29c05394488180d1f27ddea06dc91e6817a6e013804ea6a6ef4f995736755f4e",
+      "source_phase": "value_candidate",
+      "seconds": 8.0,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_h4_overlay",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_h4_overlay.log",
+      "sha256": "e00099c5af3247131be66e78890397112325550240384ef74e2a59de8e6cfbb6",
+      "source_phase": "value_candidate",
+      "seconds": 12.75,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_controls6",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_controls6.log",
+      "sha256": "8fe34147fd69540544d9aacc3dcafefb4fe13bdd3a9df45e03e27d4c10eb793f",
+      "source_phase": "value_candidate",
+      "seconds": 8.27,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_matrix5_ramopt",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_matrix5_ramopt.log",
+      "sha256": "25dae7ac1b6d628dbbe7af730842a5e48e17254fe3a000845933fdfe848607c2",
+      "source_phase": "value_candidate",
+      "seconds": 8.34,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_vision6",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_vision6.log",
+      "sha256": "735f5cac2189bb01f57d8e220905d885dac0062190ea1025438d400dfef1da2c",
+      "source_phase": "value_candidate",
+      "seconds": 461.03,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_h5_ui",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_h5_ui.log",
+      "sha256": "07ad8a4ab44f325d1d7e80382536443a8858ad3d6a9118445e8fd9349ce7341b",
+      "source_phase": "value_candidate",
+      "seconds": 39.09,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_i2c6",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_i2c6.log",
+      "sha256": "8b84a3e7193f256e7605ea1c3892fa30e4bfadca729eb29a07383ffe4cf4b7ab",
+      "source_phase": "value_candidate",
+      "seconds": 8.38,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_health6",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_health6.log",
+      "sha256": "684df666a4666fd2b77e7f2504ed7fb0bfd57f1de24a45ea938cac180f4606cf",
+      "source_phase": "value_candidate",
+      "seconds": 8.39,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_frame_path",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_frame_path.log",
+      "sha256": "22588ee886d6cbae493bf4428eb840f25732b685ea8eff6a2f8279ef31132b1b",
+      "source_phase": "value_candidate",
+      "seconds": 12.58,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_menu_cdc6",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_menu_cdc6.log",
+      "sha256": "7780659ce7e29d7efbe0e89e2d36e5db825444434bae212b9cd9e07b677c71d3",
+      "source_phase": "value_candidate",
+      "seconds": 13.03,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_camera_rgb_fifo",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_camera_rgb_fifo.log",
+      "sha256": "792bf36c7b3582b192c4aefb3898e560b86172870d30f0f0d61338d36cd0af69",
+      "source_phase": "value_candidate",
+      "seconds": 8.78,
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    },
+    {
+      "name": "tb_menu8_pixels",
+      "status": "PASS",
+      "log": "reports/ramopt_regression/value_evidence/tb_menu8_pixels.log",
+      "sha256": "4356d8f4b56b86e2613a0b9fb67a3aff11e93f830a5c6ed468fe7d8fe91c7c17",
+      "source_phase": "value_candidate",
+      "source_manifest": "reports/ramopt_regression/value_production_sha256.json"
+    }
+  ],
+  "test_count": 26,
+  "purpose": "Intermediate value-sorted candidate; not final delivery source. Full 25 tests plus UI passed and input SHA guard passed before restoring frequency ordering."
+}

@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "missing_actual_top",
+      "status": "PASS",
+      "rejected": "Missing required benches: tb_review_top"
+    },
+    {
+      "case": "missing_retained_bench",
+      "status": "PASS",
+      "rejected": "Missing required benches: tb_h4_skin"
+    },
+    {
+      "case": "changed_input",
+      "status": "PASS",
+      "rejected": "Changed selected test input: D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\\example_top.v"
+    },
+    {
+      "case": "failed_selected_bench",
+      "status": "PASS",
+      "rejected": "Test not PASS tb_review_top"
+    },
+    {
+      "case": "changed_log",
+      "status": "PASS",
+      "rejected": "Changed log D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\\reports\\capture_review\\runs\\20261021T042833367396Z\\tb_review_top.log"
+    },
+    {
+      "case": "missing_finish",
+      "status": "PASS",
+      "rejected": "Incomplete/error log D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\\reports\\capture_review\\verifier_tests_20261021T052909131919Z\\incomplete.log"
+    },
+    {
+      "case": "sdc_crlf",
+      "status": "PASS",
+      "rejected": "Existing SDC byte prefix changed"
+    },
+    {
+      "case": "sdc_prefix_modified",
+      "status": "PASS",
+      "rejected": "Existing SDC byte prefix changed"
+    },
+    {
+      "case": "modified_build_metrics",
+      "status": "PASS",
+      "rejected": "Selected build metrics differ from verified build record"
+    }
+  ],
+  "script_sha256": "755b7cfbc7ce8639d9980c71b60da0879e7b22d925bfd23b6a4e5f4c4e84a391",
+  "verifier_sha256": "4e8c2a4fa32751014a9594cb7714eb71fac11407a408fece2344f41f79d7c3ff",
+  "selected_evidence_sha256": "cf2d7bf0eaed8156b3c187b8403ab4ef208c2ffcaf2170147b373d35d52d4e63"
+}

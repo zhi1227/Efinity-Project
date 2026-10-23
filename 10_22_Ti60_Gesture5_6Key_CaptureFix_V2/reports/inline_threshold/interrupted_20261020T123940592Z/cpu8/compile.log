@@ -1,0 +1,53 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/inline_cpu8_20261020T095220236720Z/rtl/shared_glyph_rom.v" into library work
+INFO: [VRFC 10-311] analyzing module shared_glyph_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/inline_cpu8_20261020T095220236720Z/vendor/EfxSapphireSoc.v" into library work
+INFO: [VRFC 10-311] analyzing module EfxSapphireSoc
+INFO: [VRFC 10-311] analyzing module BmbToApb3Bridge
+INFO: [VRFC 10-311] analyzing module BmbSpiXdrMasterCtrl
+INFO: [VRFC 10-311] analyzing module BmbUartCtrl
+INFO: [VRFC 10-311] analyzing module BmbClint
+INFO: [VRFC 10-311] analyzing module BmbDecoder_3
+INFO: [VRFC 10-311] analyzing module BmbUnburstify
+INFO: [VRFC 10-311] analyzing module BmbOnChipRam
+INFO: [VRFC 10-311] analyzing module BmbDecoder_2
+INFO: [VRFC 10-311] analyzing module BmbArbiter
+INFO: [VRFC 10-311] analyzing module BmbDecoder_1
+INFO: [VRFC 10-311] analyzing module BmbExclusiveMonitor
+INFO: [VRFC 10-311] analyzing module BmbDecoder
+INFO: [VRFC 10-311] analyzing module BufferCC_4
+INFO: [VRFC 10-311] analyzing module SystemDebugger
+INFO: [VRFC 10-311] analyzing module JtagBridgeNoTap
+INFO: [VRFC 10-311] analyzing module VexRiscv
+INFO: [VRFC 10-311] analyzing module BufferCC_3
+INFO: [VRFC 10-311] analyzing module BufferCC_2
+INFO: [VRFC 10-311] analyzing module StreamFifo_3
+INFO: [VRFC 10-311] analyzing module StreamFifo_2
+INFO: [VRFC 10-311] analyzing module TopLevel
+INFO: [VRFC 10-311] analyzing module StreamFifo
+INFO: [VRFC 10-311] analyzing module UartCtrl
+INFO: [VRFC 10-311] analyzing module StreamArbiter
+INFO: [VRFC 10-311] analyzing module FlowCCByToggle
+INFO: [VRFC 10-311] analyzing module DataCache
+INFO: [VRFC 10-311] analyzing module InstructionCache
+INFO: [VRFC 10-311] analyzing module UartCtrlRx
+INFO: [VRFC 10-311] analyzing module UartCtrlTx
+INFO: [VRFC 10-311] analyzing module BufferCC_1
+INFO: [VRFC 10-311] analyzing module BufferCC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/inline_cpu8_20261020T095220236720Z/rtl/menu_status_cdc.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_status_cdc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/inline_cpu8_20261020T095220236720Z/rtl/menu_glyph_rom.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_glyph_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/inline_cpu8_20261020T095220236720Z/rtl/menu_renderer.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_renderer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/inline_cpu8_20261020T095220236720Z/rtl/menu8_renderer.v" into library work
+INFO: [VRFC 10-311] analyzing module menu8_renderer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/inline_cpu8_20261020T095220236720Z/rtl/menu_lcd_apb.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_lcd_apb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/inline_cpu8_20261020T095220236720Z/rtl/spi_write_byte.v" into library work
+INFO: [VRFC 10-311] analyzing module spi_write_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/inline_cpu8_20261020T095220236720Z/rtl/epd_apb.v" into library work
+INFO: [VRFC 10-311] analyzing module epd_apb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/inline_cpu8_20261020T095220236720Z/rtl/riscv_menu_top.v" into library work
+INFO: [VRFC 10-311] analyzing module riscv_menu_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/inline_cpu8_20261020T095220236720Z/sim/tb_inline_cpu8.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_inline_cpu8

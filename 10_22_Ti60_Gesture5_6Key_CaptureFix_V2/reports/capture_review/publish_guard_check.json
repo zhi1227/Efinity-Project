@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "compatibility_readonly": {
+    "command": [
+      "tools/verify_capturefix_delivery.py"
+    ],
+    "stdout": "Current acceptance: verify_capture_review; no historical reports will be overwritten.\n{\"status\": \"PASS\", \"tests\": 44, \"protected_files\": 474, \"published\": false}\n"
+  },
+  "existing_delivery_overwrite_rejected": {
+    "command": [
+      "tools/verify_capture_review.py",
+      "--evidence",
+      "reports/capture_review/selected_evidence.json",
+      "--publish",
+      "--output",
+      "reports/capture_review/delivery.json"
+    ],
+    "stderr": "FAIL: Refusing to overwrite delivery evidence\n"
+  },
+  "unchanged_sha256": {
+    "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\\reports\\capture_review\\delivery.json": "d55bcfb2dbf6ad429359b4f38de99d7fb5ec3c1a892bd66a12da9397742a0a42",
+    "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\\reports\\capture_fix\\delivery.json": "6a753c116b9a9e8e55ec3d9ffc5bd7570a834d49e665ebf4903a6f777a7fe843",
+    "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\\reports\\capture_fix\\changed_files.json": "9c5a6b0dc724fae7dd5ceef22322fd6487a5937cda3a15c962bab41b994f8520"
+  }
+}

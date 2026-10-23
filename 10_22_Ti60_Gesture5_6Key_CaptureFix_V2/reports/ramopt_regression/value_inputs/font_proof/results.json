@@ -1,0 +1,49 @@
+{
+  "result": "PASS",
+  "started_utc": "2026-10-19T19:02:02.7007496Z",
+  "completed_utc": "2026-10-19T19:02:07.6029918Z",
+  "log": "reports/ram_optimization_20261020/font/tb_ramopt_shared_font.log",
+  "log_sha256": "58c802f691bcd1251819a9b5d7e36e1d81cc1ad18e7bd90fb3ba891850ec6dab",
+  "bench": "sim_ramopt_font/tb_ramopt_shared_font.sv",
+  "bench_sha256": "f99b8b6c2de9b69ba653b2ee5606327ce88ba16ae372c35db6addc24c15c3e9e",
+  "optimized_sha256": {
+    "rtl/shared_glyph_rom.v": "0748af1bf5ad9c752de05890dbb3ec0e57989d7fb35e4c2a55a5308449a8e3df",
+    "shared_font_index_bank0.hex": "ab9f4f21ede9d112ba8290bd19c9d2e974b17e7cb4bd0414762a09af8161e9ee",
+    "shared_font_index_bank1.hex": "6d0654902b633e2382d11280f8100d1d37fd9d962b3b09531a0107b939c2f9c9",
+    "shared_font_index_bank2.hex": "f0af0bb673af40e16aa1459808c5d275442ec8439393d93cca4e86f7f1c885d3",
+    "shared_font_index_bank3.hex": "ce86e6382e9390f4d0efda49cb5d51391f2e7352e7e0147649ee78d95593c256",
+    "shared_font_index_bank4.hex": "695853ec7e347adbea6529413689194a11a0bd4b0ed3ba5c46189231905100b9"
+  },
+  "reference_sha256": {
+    "shared_font.hex": "eab7faf1a964e66d8997c9c7e2133c5fab993ef0d7cb6311e797ca03e79f460a",
+    "shared_font_bank0.hex": "21d31e807217ec84d611b840e251bb8493953c692ff578c472bec7b6a978d643",
+    "shared_font_bank1.hex": "992dc029a15cb3936b3816d5eca3dce097a27ad13cfddcde5df4a16b68dbec89",
+    "shared_font_bank2.hex": "7965aa223585c5a8326dd3e51d596a410295d953d0d2dd4b64eed24c036ee62f",
+    "shared_font_bank3.hex": "823bae68f3f7b45f438e823b4c571baa6d53f1d95429c12b12c7700f9b2b043e",
+    "shared_font_bank4.hex": "58b504c7d5eb8030d5f0433e5ac02284f0751b6c1a62dd5605d898be6f717aa5",
+    "shared_font_bank5.hex": "8a5fac3058cb69f0e69258b27c8440d8018013760d8f61cbc53f27633a07c816",
+    "shared_font_bank6.hex": "f27397d32f7e212edc1ed98ffefd1b5c40f08ec84936dd421a1c56e9f903c810",
+    "shared_font_bank7.hex": "66f2b21d92b28b0910bb38706da89a82f02d89c73a4234abfa2c2416631c5311",
+    "shared_font_bank8.hex": "1280d1998e94742e7118676425ffefc91b2dee18cf7984bf0b4f2b96c47c9f18",
+    "sim_ramopt_font/shared_glyph_rom_reference.v": "a3b8fdf31a167e3e5ea7d03b512276402ecf9c46c51025342808b3551d0480e2",
+    "sim_ramopt_font/shared_font_expected_8192.hex": "d2e1aaf98436855fc9cb8d87dbb12f8a6113edc3712e44c35230aed1d9984b20"
+  },
+  "reference_manifest": "sim_ramopt_font/font_reference_manifest.json",
+  "reference_manifest_sha256": "952722255480dbad1af5fcbedb8b59b16c9f134b4677449e012e3a2a511644fc",
+  "baseline_reference_rtl_sha256": "ee49270ddd720521665ffec9fa0baf64fe491940cf94ba7bc02899c9a4ad1454",
+  "encoding_report": "reports/ram_optimization_20261020/shared_font_encoding.json",
+  "encoding_report_sha256": "4e0983378ec5dbb4e64b23a312adb419a1f020cddb41c444adff93971f7b1b2c",
+  "coverage": {
+    "address_space_per_port": 8192,
+    "random_reads_per_port": 4096,
+    "independent_clock_ports": 2,
+    "latency_clocks": 1,
+    "hdmi_clock_period_ns": 13.44,
+    "lvds_clock_period_ns": 20.834,
+    "hdmi_clock_mhz_nominal": 74.4,
+    "lvds_clock_mhz_nominal": 48,
+    "exact_pixel_comparisons": 501424,
+    "hdmi_rows": 19050,
+    "lvds_rows": 12289
+  }
+}

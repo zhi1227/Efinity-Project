@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/src/vision/line_buffer_3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module line_buffer_3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/wide_line_candidate/line_buffer_current.v" into library work
+INFO: [VRFC 10-311] analyzing module line_buffer_3x3_current
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/reports/ram_optimization_20261020/wide_line_candidate/s/tb_wide.sv" into library work
+INFO: [VRFC 10-311] analyzing module ramopt_line_case
+INFO: [VRFC 10-311] analyzing module tb_wide

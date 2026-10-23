@@ -1,0 +1,7 @@
+{
+  "stage": "D:\\Github_Project\\fpga_build\\vision8_io28_fix_20261016_run1",
+  "status": "intentionally_cancelled_before_delivery",
+  "reason": "Add same-edge context-change suppression found in review before final compilation",
+  "cancelled_utc": "2026-10-15T16:55:38.001866+00:00",
+  "used_for_delivery": false
+}

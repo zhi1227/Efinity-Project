@@ -1,0 +1,58 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_inline_video_defaults -s tb_inline_video_defaults --relax -mt off 
+Turned off multi-threading.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.rgb565_to_gray
+Compiling module work.line_buffer_3x3_default
+Compiling module work.median3x3
+Compiling module work.sobel3x3
+Compiling module work.gaussian3x3
+Compiling module work.line_buffer_3x3(DWIDTH=14)
+Compiling module work.nms3x3
+Compiling module work.canny_threshold(TH_HIGH=12'b0101...
+Compiling module work.line_buffer_3x3(DWIDTH=2)
+Compiling module work.hysteresis_local
+Compiling module work.canny_stream(GAUSSIAN=1)
+Compiling module work.video_delay(BITS=19)
+Compiling module work.raster_xy
+Compiling module work.rgb565_to_rgb888
+Compiling module work.rgb565_to_ycbcr_skin
+Compiling module work.line_buffer_3x3(DWIDTH=1)
+Compiling module work.face_morph
+Compiling module work.video_delay(BITS=3,LATENCY=3309)
+Compiling module work.video_delay(BITS=8,LATENCY=6617)
+Compiling module work.video_delay(BITS=1,LATENCY=3309)
+Compiling module work.video_delay(BITS=9,LATENCY=4963)
+Compiling module work.gesture_wizard
+Compiling module work.gesture_skin_learn_default
+Compiling module work.ep1_window7
+Compiling module work.ep1_disk
+Compiling module work.ep1_morph(DILATE=1)
+Compiling module work.ep1_morph
+Compiling module work.video_delay(BITS=3,LATENCY=8267)
+Compiling module work.gesture_sample16
+Compiling module work.gesture_palm_evidence
+Compiling module work.gesture_templates
+Compiling module work.gesture_stabilizer_default
+Compiling module work.gesture_wave
+Compiling module work.ep1_classify
+Compiling module work.ep1_gesture(BORDER=2,MIN_W=80,MI...
+Compiling module work.gesture_branch
+Compiling module work.video_delay(BITS=1,LATENCY=6616)
+Compiling module work.vision8_count_filter(SOURCE_TAGG...
+Compiling module work.face_grid_regions_default
+Compiling module work.edge_shape_roi_default
+Compiling module work.gesture_diag_hud
+Compiling module work.gesture_matrix8
+Compiling module work.vision6_glyph_rom_default
+Compiling module work.vision6_overlay(HUD_ENABLE=0,GES...
+Compiling module work.parallel_video(CANNY_GAUSSIAN=1,...
+Compiling module work.vision6_overlay_original(HUD_ENA...
+Compiling module work.parallel_video_original(CANNY_GA...
+Compiling module work.tb_inline_video_defaults
+Built simulation snapshot tb_inline_video_defaults

@@ -1,0 +1,68 @@
+{
+  "experiment": "Isolated Ti60F225 shared font Efinity 2025.1 map only",
+  "date": "2026-10-20",
+  "production_sources_modified": false,
+  "candidates": [
+    {
+      "index_low_bits": 10,
+      "resources": {
+        "EFX_LUT4": 3203,
+        "EFX_FF": 8,
+        "EFX_RAM10": 0,
+        "EFX_DPRAM10": 5
+      },
+      "simulation": "PASS",
+      "simulation_log": "reports\\ram_optimization_20261020\\font\\tb_ramopt_shared_font.log",
+      "simulation_log_sha256": "55b65e189526160a01c282510234544518eb69441b00bd9b64f708b4e9ccb0c9",
+      "rtl_sha256": "cbbf674867a2fcef69bd5b087bc4968c5606a37bc876132650f97ece5a38c486",
+      "production_selected": true,
+      "dictionary_order": "frequency_then_value"
+    },
+    {
+      "index_low_bits": 5,
+      "resources": {
+        "EFX_LUT4": 7957,
+        "EFX_FF": 16,
+        "EFX_RAM10": 0,
+        "EFX_DPRAM10": 3
+      },
+      "simulation": "PASS",
+      "simulation_log": "reports\\ram_optimization_20261020\\font_candidates\\index_5\\reports\\ram_optimization_20261020\\font\\tb_ramopt_shared_font.log",
+      "simulation_log_sha256": "331bd960ae53754adb83d6cca25151ff84e71e6a1480c53a0a07fe638505a149",
+      "rtl_sha256": "cfbe1866899ea64b28974fb626cddebdc50381d2e6898d95e886d51c1dcbe4b2",
+      "production_selected": false,
+      "dictionary_order": "frequency_then_value"
+    },
+    {
+      "index_low_bits": 10,
+      "dictionary_order": "ascending_16_bit_row_value",
+      "resources": {
+        "EFX_LUT4": 2845,
+        "EFX_FF": 8,
+        "EFX_RAM10": 0,
+        "EFX_DPRAM10": 5
+      },
+      "simulation": "PASS",
+      "simulation_log": "reports\\ram_optimization_20261020\\font_candidates\\index_10_value_sorted\\reports\\ram_optimization_20261020\\font\\tb_ramopt_shared_font.log",
+      "simulation_log_sha256": "8f811deb67d7a78239996bd63e61180c9eeeca782481bbd8df30e99726e479d0",
+      "rtl_sha256": "0748af1bf5ad9c752de05890dbb3ec0e57989d7fb35e4c2a55a5308449a8e3df",
+      "production_selected": false
+    }
+  ],
+  "delta_3_ram_vs_5_ram": {
+    "EFX_LUT4": 4754,
+    "EFX_FF": 8,
+    "EFX_DPRAM10": -2
+  },
+  "recommendation": "Adopt frequency order based on full-project map, then validate final route and tests. Reject 3 RAM option (+4754 isolated LUT4 for two blocks).",
+  "delta_value_sorted_vs_frequency_5_ram": {
+    "EFX_LUT4": -358,
+    "EFX_FF": 0,
+    "EFX_DPRAM10": 0
+  },
+  "original_font_physical_ram_blocks": 18,
+  "original_font_banks": 9,
+  "final_selected_dictionary_order": "frequency",
+  "final_selection_basis": "Full-project map saves 718 LUT4 over value order at identical RAM184; parent approved frequency for final rebuild. Micro-only value gain is not decisive.",
+  "full_project_comparison": "reports/ram_optimization_20261020/font_frequency_full_map/comparison.json"
+}

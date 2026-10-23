@@ -1,0 +1,3 @@
+WARNING: cannot find correct IV value
+Running: efx_run_map.py wide_line --family Titanium --device Ti60F225 --project_xml D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\wide_line_candidate\current\wide_line.xml --output_dir outflow --opt root=wide_line_top --opt veri_options=verilog_mode=verilog_2k,vhdl_mode=vhdl_2008 work-dir=work_syn write_efx_verilog=on
+   map :	PASS 

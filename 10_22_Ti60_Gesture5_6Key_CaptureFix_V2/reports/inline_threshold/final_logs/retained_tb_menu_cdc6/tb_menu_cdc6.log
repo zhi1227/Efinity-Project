@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 20 17:58:18 2026
+# Process ID: 53828
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_4Key_InlineThreshold/sim_inline_retained
+# Command line: xsim.exe -log D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\reports\inline_threshold\retained\tb_menu_cdc6.log -mode tcl -source {xsim.dir/tb_menu_cdc6/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_4Key_InlineThreshold/reports/inline_threshold/retained/tb_menu_cdc6.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_4Key_InlineThreshold/sim_inline_retained\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_menu_cdc6/xsim_script.tcl
+# xsim {tb_menu_cdc6} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: CDC 1000 rapid changes, coherent payload, eventual state, reset recovery
+$finish called at time : 58272698 ps : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_4Key_InlineThreshold/sim/tb_menu_cdc6.sv" Line 29
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 17:58:23 2026...

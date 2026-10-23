@@ -1,0 +1,36 @@
+{
+  "same": true,
+  "phases": {
+    "v1": {
+      "hdmi_0.ppm": "d3ba3289a41a7490df272e8ac7e1c4f2164fa5fc25b336588217616d306f3a60",
+      "hdmi_1.ppm": "00ca154cc9fd34331509c752e279565acb6ba551fba74c215b6b2fb2cd07ce01",
+      "hdmi_2.ppm": "002d25e3e76a4dc4ae73cc80cae97897759204f309608f76d6a18dde5651a74c",
+      "hdmi_3.ppm": "4d7fe65ae3b0aafeec20ccbc0307671365965ec12f86818a660c95ead8c42177",
+      "hdmi_4.ppm": "1957f3bda789d9dbc9c78aafdfce3815280550bd83fc67f9349fb57cf570464f",
+      "hdmi_5.ppm": "28e9e93a71c53a182c3e05e81e1b9a4bbb582e491f561a9182763d4f868ad39c",
+      "hdmi_6.ppm": "d3ba3289a41a7490df272e8ac7e1c4f2164fa5fc25b336588217616d306f3a60"
+    },
+    "value": {
+      "hdmi_0.ppm": "d3ba3289a41a7490df272e8ac7e1c4f2164fa5fc25b336588217616d306f3a60",
+      "hdmi_1.ppm": "00ca154cc9fd34331509c752e279565acb6ba551fba74c215b6b2fb2cd07ce01",
+      "hdmi_2.ppm": "002d25e3e76a4dc4ae73cc80cae97897759204f309608f76d6a18dde5651a74c",
+      "hdmi_3.ppm": "4d7fe65ae3b0aafeec20ccbc0307671365965ec12f86818a660c95ead8c42177",
+      "hdmi_4.ppm": "1957f3bda789d9dbc9c78aafdfce3815280550bd83fc67f9349fb57cf570464f",
+      "hdmi_5.ppm": "28e9e93a71c53a182c3e05e81e1b9a4bbb582e491f561a9182763d4f868ad39c",
+      "hdmi_6.ppm": "d3ba3289a41a7490df272e8ac7e1c4f2164fa5fc25b336588217616d306f3a60"
+    },
+    "final": {
+      "hdmi_0.ppm": "d3ba3289a41a7490df272e8ac7e1c4f2164fa5fc25b336588217616d306f3a60",
+      "hdmi_1.ppm": "00ca154cc9fd34331509c752e279565acb6ba551fba74c215b6b2fb2cd07ce01",
+      "hdmi_2.ppm": "002d25e3e76a4dc4ae73cc80cae97897759204f309608f76d6a18dde5651a74c",
+      "hdmi_3.ppm": "4d7fe65ae3b0aafeec20ccbc0307671365965ec12f86818a660c95ead8c42177",
+      "hdmi_4.ppm": "1957f3bda789d9dbc9c78aafdfce3815280550bd83fc67f9349fb57cf570464f",
+      "hdmi_5.ppm": "28e9e93a71c53a182c3e05e81e1b9a4bbb582e491f561a9182763d4f868ad39c",
+      "hdmi_6.ppm": "d3ba3289a41a7490df272e8ac7e1c4f2164fa5fc25b336588217616d306f3a60"
+    }
+  },
+  "frame_count": 7,
+  "pixels_per_frame": 921600,
+  "total_pixels": 6451200,
+  "note": "All seven complete 1280x720 RGB PPM streams are byte-identical between V1, value-order candidate and final frequency-order implementation. Raw/pure, Canny, red overlay, cyber, split view, gesture-idle scenes included."
+}

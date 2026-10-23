@@ -1,0 +1,19 @@
+{
+  "stage": "D:\\Github_Project\\fpga_build\\capturefix_20261021_final2",
+  "status": "FULL_BUILD_PASS",
+  "latch_or_multiple_driver_warning_matches": [],
+  "first_stage_button_registers": [
+    "controls/e/meta~FF",
+    "controls/f/meta~FF"
+  ],
+  "existing_interface_distance_warnings": [
+    "|    dsi_txd3   |  mipi_tx_lane | warning  | mipi_ln_rule_tx_distance | These HSIO GPIO must be placed at least 1 pair away from MIPI Lane dsi_txd3 in order to avoid noise coupling from GPIO to MIPI Lane: GPIOR_N_09,GPIOR_P_09 |",
+    "|   hdmi_txd0   |    lvds_tx    | warning  |  lvds_rule_tx_distance   |     These HSIO GPIO must be placed at least 1 pair away from LVDS hdmi_txd0 in order to avoid noise coupling from GPIO to LVDS: GPIOT_N_16,GPIOT_P_16      |",
+    "|   lvds_txd1   |    lvds_tx    | warning  |  lvds_rule_tx_distance   |     These HSIO GPIO must be placed at least 1 pair away from LVDS lvds_txd1 in order to avoid noise coupling from GPIO to LVDS: GPIOT_N_11,GPIOT_P_11      |",
+    "|   lvds_txd2   |    lvds_tx    | warning  |  lvds_rule_tx_distance   |     These HSIO GPIO must be placed at least 1 pair away from LVDS lvds_txd2 in order to avoid noise coupling from GPIO to LVDS: GPIOT_N_06,GPIOT_P_06      |"
+  ],
+  "width_warning_handling": "Range checked in RTL assertions and tests; non-fatal existing numeric truncation warnings retained. Full warnings remain in outflow; not claimed zero warnings.",
+  "new_cdc": "snap_abort uses abort_meta/abort_sync async_reg two stages; return uses existing done toggle and ok synchronizers; main quality signals stay in rframe_pclk/pixel domain",
+  "warnings_sha256": "65b08fe8dbf3cf94aeb81dc559a6b263dad0b0ce584c8e460d4fdf0ac9dba6a1",
+  "selected_build": "reports/capture_fix/selected_build.json"
+}

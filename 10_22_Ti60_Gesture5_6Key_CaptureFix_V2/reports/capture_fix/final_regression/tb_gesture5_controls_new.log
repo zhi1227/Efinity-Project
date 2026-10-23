@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Oct 21 00:02:48 2026
+# Process ID: 38256
+# Current directory: D:/Github_Project/fpga_build/capturefix_finalreg_20261021T000134
+# Command line: xsim.exe -log D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\reports\capture_fix\final_regression\tb_gesture5_controls_new.log -mode tcl -source {xsim.dir/tb_gesture5_controls_new/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/reports/capture_fix/final_regression/tb_gesture5_controls_new.log
+# Journal file: D:/Github_Project/fpga_build/capturefix_finalreg_20261021T000134\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_gesture5_controls_new/xsim_script.tcl
+# xsim {tb_gesture5_controls_new} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: legacy key module debounce, boot-held suppression, short/long exclusivity, five steps (new bench adapted from historical three-class test), colour failure, ambiguity, timeout and cancellation
+$finish called at time : 5370 ns : File "D:/Github_Project/fpga_build/capturefix_finalreg_20261021T000134/sim/tb_gesture5_controls_new.sv" Line 29
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct 21 00:02:53 2026...

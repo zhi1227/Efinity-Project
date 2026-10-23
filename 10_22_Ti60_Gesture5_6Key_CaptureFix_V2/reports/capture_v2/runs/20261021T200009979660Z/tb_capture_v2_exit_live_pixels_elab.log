@@ -1,0 +1,7 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_capture_v2_exit_live_pixels -s tb_capture_v2_exit_live_pixels --relax --O3 -mt off 
+Turned off multi-threading.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <DdrCtrl> not found while processing module instance <ddr3_ctl_axi> [D:/Github_Project/fpga_build/capture_v2_fast_20261021T200009979660Z/example_top.v:509]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

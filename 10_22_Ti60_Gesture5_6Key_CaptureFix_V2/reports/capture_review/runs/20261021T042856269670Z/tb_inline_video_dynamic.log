@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Oct 21 12:46:51 2026
+# Process ID: 62004
+# Current directory: D:/Github_Project/fpga_build/review_20261021T042856269670Z
+# Command line: xsim.exe -log D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\reports\capture_review\runs\20261021T042856269670Z\tb_inline_video_dynamic.log -mode tcl -source {xsim.dir/tb_inline_video_dynamic/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/reports/capture_review/runs/20261021T042856269670Z/tb_inline_video_dynamic.log
+# Journal file: D:/Github_Project/fpga_build/review_20261021T042856269670Z\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_inline_video_dynamic/xsim_script.tcl
+# xsim {tb_inline_video_dynamic} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+CHECK: inline dynamic mode=1 T=80 pixels=12288 edges=0
+CHECK: inline dynamic mode=1 T=2 pixels=12288 edges=1980
+CHECK: inline dynamic mode=1 T=2040 pixels=12288 edges=0
+CHECK: inline dynamic mode=10 T=40 pixels=12288 edges=2772
+CHECK: inline dynamic mode=10 T=1 pixels=12288 edges=4932
+CHECK: inline dynamic mode=10 T=2040 pixels=12288 edges=0
+CHECK: inline dynamic mode=9 T=24 pixels=12288 edges=4932
+CHECK: inline dynamic mode=9 T=1 pixels=12288 edges=4932
+CHECK: inline dynamic mode=9 T=255 pixels=12288 edges=0
+CHECK: inline dynamic mode=14 T=80 pixels=12288 edges=0
+CHECK: inline dynamic mode=14 T=2 pixels=12288 edges=957
+CHECK: inline dynamic mode=14 T=2040 pixels=12288 edges=0
+PASS: inline dynamic 12 frames 147456 pixels per-frame thresholds RED CYBER Canny and split saturation response
+$finish called at time : 2227376 ns : File "D:/Github_Project/fpga_build/review_20261021T042856269670Z/sim/tb_inline_video_dynamic.sv" Line 57
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 219.926 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct 21 12:47:07 2026...

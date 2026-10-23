@@ -1,0 +1,554 @@
+{
+  "status": "PASS",
+  "project": "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_22_Ti60_Gesture5_6Key_CaptureFix_V2",
+  "tests": {
+    "tb_capturefix_controls": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capturefix_controls.log",
+      "sha256": "2ebbceb7d5272ae8a4ea6cdb7403d31afd7111f406c45fe2143b814bc6e40917",
+      "markers": [
+        "PASS: six-key controls checks=59; paired saturation, independent thresholds, frame commits, context cancellation, frozen edits, mode mapping, FOUR exit clear"
+      ]
+    },
+    "tb_review_controls": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_review_controls.log",
+      "sha256": "754997656c8e6b2437e14073ca683c7731e04ec6ac403fc3b4d17be00d8ee3e1",
+      "markers": [
+        "PASS: review controls checks=70; uncovered keys/UART minus/limits/startup/version/context covered"
+      ]
+    },
+    "tb_capture_v2_diag": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capture_v2_diag.log",
+      "sha256": "a9fc735b0937f895f6dcc2038e83a19c2fb30953166527b50ebd1d7b716c6543",
+      "markers": [
+        "PASS: FOUR V2 build ID, capture/AUX errors, freeze/health flags, source/count/DDR/watermark footer characters=        132"
+      ]
+    },
+    "tb_capturefix_pip": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capturefix_pip.log",
+      "sha256": "798b174aa47bf1d22ff4831b2d7da7c7eaa7c0726bcc4a950247a077b100fe55",
+      "markers": [
+        "PASS: frame-bound PiP/compare compositor, supported modes 1/2/3 normal AUX RGB565 pixels and border position, PiP-off main restoration, frame-bound enable/disable, underflow recovery"
+      ]
+    },
+    "tb_review_done_cdc": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_review_done_cdc.log",
+      "sha256": "24f041814bf09e52df51b22ef5fc72d975b75632a0079baa0f4c960f1a14f906",
+      "markers": [
+        "PASS: review CDC delayed status bundles=8; completion-timeout publication guard"
+      ]
+    },
+    "tb_capturefix_binding": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capturefix_binding.log",
+      "sha256": "0305294659a31d499ef35c2ec6cf2463b5eb0cfe26666028825cc9613bb6fbe6",
+      "markers": [
+        "PASS: real Canny capture locks40/80 while UART edits live42/84; source/algorithm/LOW/HIGH/version metadata bound; saved labels persist; second DDR capture uses new pair"
+      ]
+    },
+    "tb_capturefix_rawphase": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capturefix_rawphase.log",
+      "sha256": "750da1de2fcfb5adc353956d3e4faa0a784537485bfa34a680c3d77446a28222",
+      "markers": [
+        "PASS: 128x96 RAW same-VS-phase regression; actual 74.4MHz raster,96MHz AXI,100MHz camera-byte producer; real main/vendor FIFO+snapshot+four AUX concurrently; seed9126acd8; raw_checked=442387 display_checked=98532 W=597 R=3715 no steady underflow"
+      ]
+    },
+    "tb_capturefix_faults": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capturefix_faults.log",
+      "sha256": "72f49a89a9b4e26d11524c0f65a3856f3d7002af12f4f9f46eaf37b0097611d5",
+      "markers": [
+        "PASS: real cross-clock capture rejects missing last pixel, VS interruption, DDR BRESP error and actual snapshot FIFO backpressure; no partial publication, capture lock release, IO28 clear and valid recapture after every fault"
+      ]
+    },
+    "tb_capturefix_abort": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capturefix_abort.log",
+      "sha256": "5f7cf49f084e050f4f9ac6344fe65472b1a2ace1f8a916859d38b15f4bf6f6ce",
+      "markers": [
+        "PASS: cancel phase=0 AW/W/B stable, unsuccessful completion without end token",
+        "PASS: cancel phase=1 AW/W/B stable, unsuccessful completion without end token",
+        "PASS: cancel phase=2 AW/W/B stable, unsuccessful completion without end token",
+        "PASS: cancel phase=3 AW/W/B stable, unsuccessful completion without end token",
+        "PASS: cancel phase=4 AW/W/B stable, unsuccessful completion without end token",
+        "PASS: real vendor camera/main FIFOs, simultaneous DDR clients, stable stalls, B-response commit/error, snapshot packing, compare/PiP readback and restart drain; W=         18 R=         41"
+      ]
+    },
+    "tb_capture_v2_aux": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capture_v2_aux.log",
+      "sha256": "78b9116d313473daf9eee460aa5b03ce1fb325da4d46348a0298f927a62c9074",
+      "markers": [
+        "PASS: AUX one tile exact        1536 words/        384 beats; stops at frame end; no RREADY stalls"
+      ]
+    },
+    "tb_capturefix_chain": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capturefix_chain.log",
+      "sha256": "86ba396f8018949ca32b888d1f6630f551b25c30fdc55c755a1fa076bd118dad",
+      "markers": [
+        "PASS: cross-clock real camera/main vendor FIFOs, six-key controller, video pipeline, DDR writes and AUX compositor; 4 algorithms and fifth replacement; phase1..6 exit/reentry; raw=872532 display=113022 W=618 R=4644 seed=9126acd8"
+      ]
+    },
+    "tb_capture_v2_fifo": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capture_v2_fifo.log",
+      "sha256": "ae05efa0260bdd57d48395ca935eac985736c3afcb390f0315e9400379759f53",
+      "markers": [
+        "PASS: 4096 wide writes/16384 ordered words, asynchronous wrap/full/empty/reset"
+      ]
+    },
+    "tb_capture_v2_top_gold": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capture_v2_top_gold.log",
+      "sha256": "11705c4d2feb3cbd3425134965431cc42bf0cdc665048ab99ba28e2373d38261",
+      "markers": [
+        "PASS: actual top input-golden RAW single first-publish HDMI complete 4347 pixels, real health, frame-changing camera, AWARMux, vendor FIFO; physical boundaries modeled"
+      ]
+    },
+    "tb_capture_v2_fault_latch": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capture_v2_fault_latch.log",
+      "sha256": "381c8bc4ed22b6499727e74354dd546cdc7318ef28993a507d564b9458ec580c",
+      "markers": [
+        "PASS: capture timeout and AUX first-fault phase/source/coordinate latches survive later source changes; clear resets error"
+      ]
+    },
+    "tb_capturefix_cancel_boundary": {
+      "log": "reports/capture_v2/runs/20261021T192033590691Z/tb_capturefix_cancel_boundary.log",
+      "sha256": "2b78db41aa25579a33de5a7c5f9f79e1da95222c58ffd526fd2067dbe66446b2",
+      "markers": [
+        "PASS: cancellation at exact DMA-begin and publication boundary; no stray begin, no stale directory or metadata, lock released checks=2"
+      ]
+    },
+    "tb_health6": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_health6.log",
+      "sha256": "504c44312c379b6cbdcb2f6f76733aa113f87ebf1079d26972f33b7635378dee",
+      "markers": [
+        "PASS: diagnostic activity, complete frame, RGB expiration and automatic missing-camera retry"
+      ]
+    },
+    "tb_review_hdmi_text": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_review_hdmi_text.log",
+      "sha256": "94d7b8bd6c2b0560d050615e5bd81cfcfa0ff4dbd76f4fb239ffb03a9378d7a0",
+      "markers": [
+        "PASS: review HDMI rendered labels chars=257 pixels=50736; BUSY FAILED EMPTY FACE GESTURE RAW CANNY RED CYBER"
+      ]
+    },
+    "tb_vision8_faces": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_vision8_faces.log",
+      "sha256": "c1da954aa96c44fd5ac8070ead792968877da90ab84aabef81324f4f48f6366b",
+      "markers": [
+        "PASS: real CCL nine separated regions/8+ and empty source frames; count confirmation rejects duplicate replay, preserves freeze and marks camera loss unknown"
+      ]
+    },
+    "tb_vision8_key_boundary": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_vision8_key_boundary.log",
+      "sha256": "b7e3e1cd62d23ac46e6d4a1e8091c4153f16b8c46dae28e323543c241930e69b",
+      "markers": [
+        "PASS: vision8_key 74.4MHz defaults, 20ms/2s scaled timing, 500/1999/2000/5000ms, exact release-long collision with long priority and mutual exclusion",
+        "PASS: vision8_key released/held startup, reset while held, press/release bounce, one long per hold, no short after long, context away-and-back cancellation and rearm",
+        "PASS: vision8_key same-edge NBA context changes mask pending short/long before a new context can consume them"
+      ]
+    },
+    "tb_frame_path": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_frame_path.log",
+      "sha256": "00449d426af255e8aa2747d727a2cc9701c54246b12298fbf1bbb97e91dbfb7c",
+      "markers": [
+        "PASS: camera bytes -> AXI memory -> RGB565 FIFO, stalled bursts, empty/short rejection, freeze/live ownership"
+      ]
+    },
+    "tb_inline_epd_cpu": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_inline_epd_cpu.log",
+      "sha256": "1dc20e6d149e4743e19269cf1e6904aa0cfaae863e725cb85a1c41afcf0a65d9",
+      "markers": [
+        "PASS: inline real RISC-V firmware, 30033 SPI bytes, both image planes, reset, BUSY and live eight-mode LVDS menu/state"
+      ]
+    },
+    "tb_controls6": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_controls6.log",
+      "sha256": "cbb7b7859ed7341b2f2801f8bce7ceb7650816ad2a7661163c57dedf259beecc",
+      "markers": [
+        "PASS: six-mode keys, UART, pure_en capture, optional detection and auxiliary modes"
+      ]
+    },
+    "tb_matrix5_ramopt": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_matrix5_ramopt.log",
+      "sha256": "7a7b90943ec4fb107f53274327ab11aaf7e07642ee2361da3f129944e545f8f0",
+      "markers": [
+        "PASS: five exact 8x8 bitmaps, idle grid, cell gaps, wave highlight, unknown class blank icon"
+      ]
+    },
+    "tb_gesture5_controls_new": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_gesture5_controls_new.log",
+      "sha256": "7af629f13be85ffbf4a3df39133c23f6d3414d35a7989569f4744aa2a5127fb2",
+      "markers": [
+        "PASS: legacy key module debounce, boot-held suppression, short/long exclusivity, five steps (new bench adapted from historical three-class test), colour failure, ambiguity, timeout and cancellation"
+      ]
+    },
+    "tb_h4_overlay": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_h4_overlay.log",
+      "sha256": "0672ec19403a3bb57188c01f501054b5642e9d122c5ae38ceae6fd6221997f46",
+      "markers": [
+        "PASS: three HDMI matrix + Chinese/English results, idle on missing target, no cyan debug tint, pure capture removes every overlay"
+      ]
+    },
+    "tb_fourkey_font": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_fourkey_font.log",
+      "sha256": "832a3753d1774d694dc5b08f43cb209cd95c20ca5422df10e5e30c1600613789",
+      "markers": [
+        "PASS: fourkey compressed font all 8192 addresses and 12000 seeded random reads per port; 646144 exact pixels; independent HDMI/LVDS one-edge latency"
+      ]
+    },
+    "tb_capturefix_menu": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_capturefix_menu.log",
+      "sha256": "e31395df2b3627670ffe75f6c490166d60c9db156c3628585ca20447eab69221",
+      "markers": [
+        "PASS: capturefix UI scene 0 mode 1 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 1 mode 2 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 2 mode 3 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 3 mode 4 pixels 614400 threshold 24 step 0",
+        "PASS: capturefix UI scene 4 mode 5 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 5 mode 6 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 6 mode 7 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 7 mode 8 pixels 614400 threshold 40 step 0",
+        "PASS: capturefix UI scene 8 mode 2 pixels 96512 threshold 2039 step 2",
+        "PASS: capturefix UI scene 9 mode 3 pixels 96512 threshold 1 step 1",
+        "PASS: capturefix UI scene 10 mode 4 pixels 96512 threshold 255 step 1",
+        "PASS: capturefix UI scene 11 mode 5 pixels 96512 threshold 2 step 1",
+        "PASS: capturefix UI all 8 modes plus 4 threshold limit/step/freeze crops; 5301248 pixels; inline digits and actions; capture Canny LOW/HIGH; shared/local parity; retired settings bit ignored; rail timing/wrap"
+      ]
+    },
+    "tb_vision8_fifo": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_vision8_fifo.log",
+      "sha256": "3b8fffaa72840653ea116ff88572e33cd5b0f95180fd3f50bf22f66fe91cc451",
+      "markers": [
+        "PASS: asynchronous FIFO registered RAM prefetch, full/empty wrap and random stalls"
+      ]
+    },
+    "tb_h5_ui": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_h5_ui.log",
+      "sha256": "71866194aa55e4214488a2b0544e56db82097c1a0128714c5240a174c44835b6",
+      "markers": [
+        "PASS: full 720p H5 hand-lost, palm-unconfirmed, palm-ready, reverse-direction and wave-confirmed UI rasters"
+      ]
+    },
+    "tb_gesture5_templates_ramopt": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_gesture5_templates_ramopt.log",
+      "sha256": "fbb78e8cafc354c75666d7b7419036818c36c542bb6dd1ff95cc97f5155c0fc6",
+      "markers": [
+        "PASS: personalized five-class enrollment (restored/adapted bench), incomplete-set suppression, sparse noise/translation tolerance, unknown/solid/invalid rejection, ambiguity and freeze persistence"
+      ]
+    },
+    "tb_capture_exit_regression": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_capture_exit_regression.log",
+      "sha256": "008ec5b8fa904297477fc5073453ac8af5a9c2714c0c5c41aa9557cc03f83c3a",
+      "markers": [
+        "PASS: capture exit releases source without waiting for missing freeze or VS"
+      ]
+    },
+    "tb_gesture5_shared_overlay_ramopt": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_gesture5_shared_overlay_ramopt.log",
+      "sha256": "a3db51f88a2539ec0d07b24368721caaedd61a579aafd1b031dfbe08f6bad50b",
+      "markers": [
+        "PASS: HDMI diagnostics removed across entire former label/bar area; health bits have no pixel effect",
+        "PASS: SHARED_FONT=1 five-class HUD/OK/V labels and new two-pixel ROI sides and old edges removed; palm square/right HUD unchanged; 825043 pixels equal legacy font with 589321 concurrent LCD reads; pure capture strips overlays"
+      ]
+    },
+    "tb_gesture5_rgb_ramopt": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_gesture5_rgb_ramopt.log",
+      "sha256": "90436f9449f8607d7748b8390041f8677001e9f3ad55b2e0e26548139c94b859",
+      "markers": [
+        "PASS: five-class RGB-to-template button enrollment (new adapted bench) and changed-shape wrist-wave; multi-tone fingers; learned thumb/heart/OK/V/dynamic wave; static/jitter/fist/blank rejection; freeze and mode persistence"
+      ]
+    },
+    "tb_h5_palm": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_h5_palm.log",
+      "sha256": "52fde5a53c865f6e7ee08e6c2343fbaaccd2f42ed551d307b9696e88076adc49",
+      "markers": [
+        "PASS: independent upright/sideways open-palm evidence, exact upper-hand centroid, thumb/heart/fist/checkerboard/empty/invalid rejection"
+      ]
+    },
+    "tb_h5_wave": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_h5_wave.log",
+      "sha256": "bfc247c690135dca4e34bdff658e89dc1e302dde39121528dbe8cea5984dd800",
+      "markers": [
+        "PASS: wrist-only and translational wave, two blurred frames, static jitter/one-way/unknown/thumb/heart rejection, timeout, removal, target change and disable"
+      ]
+    },
+    "tb_io29_freeze_ddr": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_io29_freeze_ddr.log",
+      "sha256": "e4eb76cb2b308e61d4f092ff413004cb21e08d336926ea07e054f63f2457163c",
+      "markers": [
+        "PASS: IO29 active-low button -> debounce/release -> freeze request -> DDR slot held while camera writes -> resume latest source -> re-freeze",
+        "PASS: real vendor camera/main FIFOs, simultaneous DDR clients, stable stalls, B-response commit/error, snapshot packing, compare/PiP readback and restart drain; W=         12 R=         40"
+      ]
+    },
+    "tb_inline_cpu8": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_inline_cpu8.log",
+      "sha256": "8623a1089c5ac1c6860fdc10113a729c44d13a8945b5319ef0baeeb58d418b16",
+      "markers": [
+        "PASS: inline CPU8 mode 0, RISC-V write, frame commit, 614400 pixels, 853440 clocks",
+        "PASS: inline CPU8 mode 1, RISC-V write, frame commit, 614400 pixels, 853440 clocks",
+        "PASS: inline CPU8 mode 2, RISC-V write, frame commit, 614400 pixels, 853440 clocks",
+        "PASS: inline CPU8 mode 3, RISC-V write, frame commit, 614400 pixels, 853440 clocks",
+        "PASS: inline CPU8 mode 4, RISC-V write, frame commit, 614400 pixels, 853440 clocks",
+        "PASS: inline CPU8 mode 5, RISC-V write, frame commit, 614400 pixels, 853440 clocks",
+        "PASS: inline CPU8 mode 6, RISC-V write, frame commit, 614400 pixels, 853440 clocks",
+        "PASS: inline CPU8 mode 7, RISC-V write, frame commit, 614400 pixels, 853440 clocks",
+        "PASS: inline CPU8 all eight mode bundles, 4915200 pixels, inline threshold state, LIVE/HOLD, real CPU boot/APB, CDC, LVDS packing, frame timing"
+      ]
+    },
+    "tb_camera_rgb_fifo": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_camera_rgb_fifo.log",
+      "sha256": "8672f42330d4890cd43cc89ec0f6f897ef030ce9c9ad45a5e8810cde2e48512d",
+      "markers": [
+        "PASS: default camera_rgb_balance -> real W0_FIFO_8 -> stalled 128-bit memory -> real R0_FIFO_16; 10848 RGB565 pixels/21696 bytes/1356 words independently checked, RGB/white/gray/black, 720 rows with full edge and centre rows, byte order, delayed-VS final pixel and counts"
+      ]
+    },
+    "tb_vision8_gesture": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_vision8_gesture.log",
+      "sha256": "7ad5fbd66c62df73b8d1491b0c576d40e6d7d310e501f224922e27110382dd13",
+      "markers": [
+        "PASS: gesture publication gate accepts five distinct camera IDs and rejects replay votes; K1 enrolment uses elapsed-clock countdown/timeout and exits with mode change"
+      ]
+    },
+    "tb_h4_skin": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_h4_skin.log",
+      "sha256": "65025a0820ce35a9430f7c376655343320834ab28b71ab994b21d9102dd418d7",
+      "markers": [
+        "PASS: pale fingertip, palm and shadow segmentation; skin calibration; white/blue/dark background rejection"
+      ]
+    },
+    "tb_vision8_ddr": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_vision8_ddr.log",
+      "sha256": "1ec7e07417de10027595c1999550e23fd1feaeae7b2ff43048cc5d2657118a78",
+      "markers": [
+        "PASS: real vendor camera/main FIFOs, simultaneous DDR clients, stable stalls, B-response commit/error, snapshot packing, compare/PiP readback and restart drain; W=         12 R=         33"
+      ]
+    },
+    "tb_i2c6": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_i2c6.log",
+      "sha256": "3bc15df32fdcdc343788899d0bf3bafa0e9115989810e8defd61722c66187330",
+      "markers": [
+        "PASS: SCCB retries and 10 ms software-reset settling",
+        "PASS: absent camera produces failed ACK status without hanging configuration"
+      ]
+    },
+    "tb_capturefix_ui_select": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_capturefix_ui_select.log",
+      "sha256": "d938c03c248f52cec69650bc8cb4dd629da0c0d2d552b33635fc347becc8e4e8",
+      "markers": [
+        "PASS: Canny BOTH/HIGH/LOW label, digit highlight and all1/4/8 paired/individual step hints"
+      ]
+    },
+    "tb_menu_cdc6": {
+      "log": "reports/capture_v2/runs/20261021T192235446098Z/tb_menu_cdc6.log",
+      "sha256": "836d89ca14d21e7a545fccf8c6704307099ae700ca7fc50bd6602e40da7d204f",
+      "markers": [
+        "PASS: CDC 1000 rapid changes, coherent payload, eventual state, reset recovery"
+      ]
+    },
+    "tb_capturefix_720p_pressure": {
+      "log": "reports/capture_v2/runs/20261021T192245834935Z/tb_capturefix_720p_pressure.log",
+      "sha256": "1bbd20f63b5b2f8ae329628ef08cbe630dbd448617a509c5fffe8d7e94391b0d",
+      "markers": [
+        "PASS: 1280x720 RAW four-slot pressure; actual 74.4MHz raster,96MHz AXI,100MHz camera-byte producer; real main/vendor FIFO+snapshot+four AUX concurrently; seed9126acd8; raw_checked=33177619 display_checked=14556420 W=34881 R=107552 no steady underflow"
+      ]
+    },
+    "tb_capture_v2_pip_reader": {
+      "log": "reports/capture_v2/runs/20261021T192637154479Z/tb_capture_v2_pip_reader.log",
+      "sha256": "1ed6583bf4e7075769bf7868e2e0d32c800aa8554d0c45d6f5f6c43c103cf41e",
+      "markers": [
+        "PASS: PiP 4x spatial sample and pack exact         384 words/        384 beats; stops at frame end; no RREADY stalls"
+      ]
+    },
+    "tb_capture_v2_top_visible_shared": {
+      "log": "reports/capture_v2/runs/20261021T194705135550Z/tb_capture_v2_top_visible_shared.log",
+      "sha256": "b9d8a877fff6332112d04b40039a5435d6d6fa7771b00838cdfae4324cb19699",
+      "markers": [
+        "PASS: SHARED-SERVICE actual top five DISTINCT full-16bit frame-signature RAW inputs, 4 complete saved tiles and fifth-oldest replacement, independent input golden, final HDMI pixels=      81093 tiles=      30464/      23408/      16896/      10325, exit resumes new source"
+      ]
+    },
+    "tb_capture_v2_top_visible": {
+      "log": "reports/capture_v2/runs/20261021T194705135550Z/tb_capture_v2_top_visible.log",
+      "sha256": "30aedfc944403b11a801c09564a5a6bf1f6d101375ab5727ca82f79971e30e5a",
+      "markers": [
+        "PASS: actual top COMPLETE visible pixels per tile per frame (only real text rectangle and dividers masked), five DISTINCT full-16bit frame-signature RAW inputs, 4 complete saved tiles and fifth-oldest replacement, independent input golden, final HDMI pixels=      81093 tiles=      30464/      23408/      16896/      10325, exit resumes new source"
+      ]
+    },
+    "tb_capture_v2_top_720p_first_frame": {
+      "log": "reports/capture_v2/runs/20261021T193914925643Z/tb_capture_v2_top_720p_first_frame.log",
+      "sha256": "32bf153444a7fdcd84461e7f775975f8c832c193e5fcf1b8da7332fcb1619dc2",
+      "markers": [
+        "PASS: 720p HDMI path (LVDS clock paused), actual top input-golden RAW single first-publish HDMI FIRST full frame excluding ONLY actual label rectangle 221184 pixels, real health, frame-changing camera, AWARMux, vendor FIFO; physical boundaries modeled"
+      ]
+    },
+    "tb_inline_video_dynamic": {
+      "log": "reports/capture_v2/runs/20261021T194532799789Z/tb_inline_video_dynamic.log",
+      "sha256": "e6c7f5ef5216dad7fb0e5c0d484bf5c6dcbb300e59e6911fcd1b5ecdd4b69fa5",
+      "markers": [
+        "PASS: inline dynamic 12 frames 147456 pixels per-frame thresholds RED CYBER Canny and split saturation response"
+      ]
+    },
+    "tb_capturefix_full_load": {
+      "log": "reports/capture_v2/runs/20261021T194532799789Z/tb_capturefix_full_load.log",
+      "sha256": "a18c7743788b87833aa1b93a71c65d4e8c6e89b074e0e704c3b11b7b5ac7546b",
+      "markers": [
+        "PASS: 1280x720 preloaded four-slot replacement stress; real main+four AUX+snapshot+100MHz camera-byte stream; every active main read and AUX pixel monitored, full frames=8 raw=11980819 display=9418860 no empty/reset/invalid frame; seed9126acd8"
+      ]
+    },
+    "tb_review_video_defaults": {
+      "log": "reports/capture_v2/runs/20261021T194532799789Z/tb_review_video_defaults.log",
+      "sha256": "e306abc72195cf68a85610e311938596ca1b4363812b231055ad24d2933f2eab",
+      "markers": [
+        "PASS: 720p frame 0 mode 0 pure_en=0 pixels=921600 nonzero=885600 changed=0",
+        "PASS: 720p frame 1 mode 1 pure_en=0 pixels=921600 nonzero=6923 changed=885281",
+        "PASS: 720p frame 2 mode 10 pure_en=0 pixels=921600 nonzero=886356 changed=12996",
+        "PASS: 720p frame 3 mode 9 pure_en=0 pixels=921600 nonzero=14112 changed=886356",
+        "PASS: 720p frame 4 mode 14 pure_en=0 pixels=921600 nonzero=464997 changed=424758",
+        "PASS: 720p frame 5 mode 15 pure_en=0 pixels=921600 nonzero=885600 changed=82296",
+        "PASS: 720p frame 6 mode 15 pure_en=1 pixels=921600 nonzero=885600 changed=0",
+        "PASS: actual 4Key default equality 6451200 pixels seven 720p frames valid sync and raster"
+      ]
+    },
+    "tb_capture_v2_top_exit_pixels": {
+      "log": "reports/capture_v2/runs/20261021T200017970857Z/tb_capture_v2_top_exit_pixels.log",
+      "sha256": "bc8f544447736b81a160a435dabf94c23511892994b2551ec43a9d8a262f0fbf",
+      "markers": [
+        "PASS: IO28 exit releases real freeze and final RAW HDMI independently matches four live source inputs, changes=3",
+        "PASS: actual top COMPLETE visible pixels per tile per frame (only real text rectangle and dividers masked), five DISTINCT full-16bit frame-signature RAW inputs, 4 complete saved tiles and fifth-oldest replacement, independent input golden, final HDMI pixels=      81093 tiles=      30464/      23408/      16896/      10325, exit resumes new source"
+      ]
+    }
+  },
+  "test_count": 53,
+  "selection_sha256": "440be32d0aa4f873f8b2d9f5d67c9f48f76fe07314e2620b9e73c3aaa86e4ab1",
+  "batches": [
+    {
+      "path": "reports/capture_v2/runs/20261021T192033590691Z/result.json",
+      "raw_status": "PASS",
+      "selected": [
+        "tb_capture_v2_aux",
+        "tb_capture_v2_diag",
+        "tb_capture_v2_fault_latch",
+        "tb_capture_v2_fifo",
+        "tb_capture_v2_top_gold",
+        "tb_capturefix_abort",
+        "tb_capturefix_binding",
+        "tb_capturefix_cancel_boundary",
+        "tb_capturefix_chain",
+        "tb_capturefix_controls",
+        "tb_capturefix_faults",
+        "tb_capturefix_pip",
+        "tb_capturefix_rawphase",
+        "tb_review_controls",
+        "tb_review_done_cdc"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T192235446098Z/result.json",
+      "raw_status": "PASS",
+      "selected": [
+        "tb_camera_rgb_fifo",
+        "tb_capture_exit_regression",
+        "tb_capturefix_menu",
+        "tb_capturefix_ui_select",
+        "tb_controls6",
+        "tb_fourkey_font",
+        "tb_frame_path",
+        "tb_gesture5_controls_new",
+        "tb_gesture5_rgb_ramopt",
+        "tb_gesture5_shared_overlay_ramopt",
+        "tb_gesture5_templates_ramopt",
+        "tb_h4_overlay",
+        "tb_h4_skin",
+        "tb_h5_palm",
+        "tb_h5_ui",
+        "tb_h5_wave",
+        "tb_health6",
+        "tb_i2c6",
+        "tb_inline_cpu8",
+        "tb_inline_epd_cpu",
+        "tb_io29_freeze_ddr",
+        "tb_matrix5_ramopt",
+        "tb_menu_cdc6",
+        "tb_review_hdmi_text",
+        "tb_vision8_ddr",
+        "tb_vision8_faces",
+        "tb_vision8_fifo",
+        "tb_vision8_gesture",
+        "tb_vision8_key_boundary"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T192245834935Z/result.json",
+      "raw_status": "FAIL",
+      "selected": [
+        "tb_capturefix_720p_pressure"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T192637154479Z/result.json",
+      "raw_status": "PASS",
+      "selected": [
+        "tb_capture_v2_pip_reader"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T194705135550Z/result.json",
+      "raw_status": "PASS",
+      "selected": [
+        "tb_capture_v2_top_visible",
+        "tb_capture_v2_top_visible_shared"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T193914925643Z/result.json",
+      "raw_status": "PASS",
+      "selected": [
+        "tb_capture_v2_top_720p_first_frame"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T194532799789Z/result.json",
+      "raw_status": "PASS",
+      "selected": [
+        "tb_capturefix_full_load",
+        "tb_inline_video_dynamic",
+        "tb_review_video_defaults"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T200017970857Z/result.json",
+      "raw_status": "PASS",
+      "selected": [
+        "tb_capture_v2_top_exit_pixels"
+      ]
+    }
+  ],
+  "build": {
+    "resources": {
+      "XLRs": {
+        "used": 55481,
+        "available": 60800
+      },
+      "Memory Blocks": {
+        "used": 188,
+        "available": 256
+      },
+      "DSP Blocks": {
+        "used": 38,
+        "available": 160
+      },
+      "Global Clocks (GBUF)": {
+        "used": 14,
+        "available": 32
+      }
+    },
+    "min_setup_slack_ns": 0.154,
+    "min_hold_slack_ns": 0.006,
+    "bit_sha256": "323cda21f01e1832c2fd2f62fb9849c571451f246de55118161c273b975c596c",
+    "hex_sha256": "9f51e3dede9ac280125cc7b4d48aa4a5e8db89df4b6e9e530213ba18e156e62a",
+    "build_input_manifest_sha256": "5b9c00bc171b2f0fef1fa7abb9b102bb3edc693329e92eb86e68594a0bdd7f4d",
+    "physical_board_test": "not performed; simulation and compilation only"
+  },
+  "original": "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix",
+  "backup": "D:\\yilingsi_fpga\\Efinity_Project\\00_current\\_backups\\CaptureFix_before_V2_20261022_025711",
+  "preserved_files": 9044,
+  "protection": "reports/capture_v2/protection_checked_delivery.json",
+  "protection_sha256": "740c1592573bdd27ced375f5ff2839fb5a4a3f60b1e08e30e5c2d4a2d7885548",
+  "verifier_sha256": "2a636fe6ca095f7d13bb8fcc5ff23e2140165a9e286af2c298c36f3430298be6",
+  "physical_board": "NOT EXECUTED FOR V2; original board failure photos retained",
+  "hardware_programming": "not performed; Flash not written"
+}

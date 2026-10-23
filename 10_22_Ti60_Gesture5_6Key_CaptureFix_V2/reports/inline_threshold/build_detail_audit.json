@@ -1,0 +1,621 @@
+{
+  "status": "PASS",
+  "baseline_scope": "historical original build, hash-verified; no baseline recompilation this task",
+  "stage": "D:\\Github_Project\\fpga_build\\inline_threshold_20261020_final",
+  "original_button_pin_rows_unchanged": {
+    "io28_button_i": "C1,GPIOL_N_16,io28_button_i.N,Input,1B,1.8 V,1.8 V LVCMOS,,User IO/MIPI_GCLK/MIPI_RCLK",
+    "io29_button_i": "D1,GPIOL_P_16,io29_button_i.P,Input,1B,1.8 V,1.8 V LVCMOS,,User IO/MIPI_GCLK/MIPI_RCLK",
+    "io35_button_i": "B9,GPIOT_P_11,io35_button_i.P,Input,2B,1.8 V,1.8 V LVCMOS,,User IO"
+  },
+  "all_pin_row_changes": [
+    {
+      "pin": "A9",
+      "before": "A9,GPIOT_N_11,,,2B,1.8 V,,,User IO",
+      "after": "A9,GPIOT_N_11,io34_button_i.N,Input,2B,1.8 V,1.8 V LVCMOS,,User IO"
+    }
+  ],
+  "timing": {
+    "historical_original": {
+      "setup": [
+        {
+          "launch": "tdqss_clk",
+          "capture": "tdqss_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 0.554,
+          "edge": "R-R"
+        },
+        {
+          "launch": "tdqss_clk",
+          "capture": "core_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 1.785,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "tdqss_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 1.323,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "core_clk",
+          "constraint_ns": 5.208,
+          "slack_ns": 0.995,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "tac_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 1.877,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "twd_clk",
+          "constraint_ns": 0.541,
+          "slack_ns": 0.305,
+          "edge": "R-R"
+        },
+        {
+          "launch": "tac_clk",
+          "capture": "core_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 1.758,
+          "edge": "R-R"
+        },
+        {
+          "launch": "tac_clk",
+          "capture": "tac_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 0.406,
+          "edge": "R-R"
+        },
+        {
+          "launch": "twd_clk",
+          "capture": "twd_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 0.55,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_sys",
+          "capture": "clk_sys",
+          "constraint_ns": 10.417,
+          "slack_ns": 3.014,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_pixel",
+          "capture": "clk_pixel",
+          "constraint_ns": 13.441,
+          "slack_ns": 2.299,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_pixel",
+          "capture": "clk_lvds_1x",
+          "constraint_ns": 15.0,
+          "slack_ns": 13.709,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_lvds_1x",
+          "capture": "clk_pixel",
+          "constraint_ns": 15.0,
+          "slack_ns": 14.273,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_lvds_1x",
+          "capture": "clk_lvds_1x",
+          "constraint_ns": 20.833,
+          "slack_ns": 6.14,
+          "edge": "R-R"
+        },
+        {
+          "launch": "cmos_pclk",
+          "capture": "cmos_pclk",
+          "constraint_ns": 10.0,
+          "slack_ns": 6.583,
+          "edge": "R-R"
+        },
+        {
+          "launch": "cmos_pclk",
+          "capture": "cmos_pclk",
+          "constraint_ns": 5.0,
+          "slack_ns": 1.186,
+          "edge": "F-R"
+        }
+      ],
+      "hold": [
+        {
+          "launch": "tdqss_clk",
+          "capture": "tdqss_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.097,
+          "edge": "R-R"
+        },
+        {
+          "launch": "tdqss_clk",
+          "capture": "core_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.131,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "tdqss_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.054,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "core_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.03,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "tac_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.073,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "twd_clk",
+          "constraint_ns": -1.883,
+          "slack_ns": 2.016,
+          "edge": "R-R"
+        },
+        {
+          "launch": "tac_clk",
+          "capture": "core_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.168,
+          "edge": "R-R"
+        },
+        {
+          "launch": "tac_clk",
+          "capture": "tac_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.03,
+          "edge": "R-R"
+        },
+        {
+          "launch": "twd_clk",
+          "capture": "twd_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.052,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_sys",
+          "capture": "clk_sys",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.033,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_pixel",
+          "capture": "clk_pixel",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.026,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_lvds_1x",
+          "capture": "clk_lvds_1x",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.034,
+          "edge": "R-R"
+        },
+        {
+          "launch": "cmos_pclk",
+          "capture": "cmos_pclk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.097,
+          "edge": "R-R"
+        },
+        {
+          "launch": "cmos_pclk",
+          "capture": "cmos_pclk",
+          "constraint_ns": -5.0,
+          "slack_ns": 6.122,
+          "edge": "F-R"
+        }
+      ],
+      "min_setup_slack_ns": 0.305,
+      "min_hold_slack_ns": 0.026
+    },
+    "new": {
+      "setup": [
+        {
+          "launch": "tdqss_clk",
+          "capture": "tdqss_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 0.562,
+          "edge": "R-R"
+        },
+        {
+          "launch": "tdqss_clk",
+          "capture": "core_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 1.814,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "tdqss_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 1.115,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "core_clk",
+          "constraint_ns": 5.208,
+          "slack_ns": 0.467,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "tac_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 2.011,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "twd_clk",
+          "constraint_ns": 0.541,
+          "slack_ns": 0.298,
+          "edge": "R-R"
+        },
+        {
+          "launch": "tac_clk",
+          "capture": "core_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 1.739,
+          "edge": "R-R"
+        },
+        {
+          "launch": "tac_clk",
+          "capture": "tac_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 0.399,
+          "edge": "R-R"
+        },
+        {
+          "launch": "twd_clk",
+          "capture": "twd_clk",
+          "constraint_ns": 2.604,
+          "slack_ns": 0.456,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_sys",
+          "capture": "clk_sys",
+          "constraint_ns": 10.417,
+          "slack_ns": 2.653,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_pixel",
+          "capture": "clk_pixel",
+          "constraint_ns": 13.441,
+          "slack_ns": 2.949,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_pixel",
+          "capture": "clk_lvds_1x",
+          "constraint_ns": 15.0,
+          "slack_ns": 13.873,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_lvds_1x",
+          "capture": "clk_pixel",
+          "constraint_ns": 15.0,
+          "slack_ns": 14.494,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_lvds_1x",
+          "capture": "clk_lvds_1x",
+          "constraint_ns": 20.833,
+          "slack_ns": 7.228,
+          "edge": "R-R"
+        },
+        {
+          "launch": "cmos_pclk",
+          "capture": "cmos_pclk",
+          "constraint_ns": 10.0,
+          "slack_ns": 6.313,
+          "edge": "R-R"
+        },
+        {
+          "launch": "cmos_pclk",
+          "capture": "cmos_pclk",
+          "constraint_ns": 5.0,
+          "slack_ns": 1.784,
+          "edge": "F-R"
+        }
+      ],
+      "hold": [
+        {
+          "launch": "tdqss_clk",
+          "capture": "tdqss_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.1,
+          "edge": "R-R"
+        },
+        {
+          "launch": "tdqss_clk",
+          "capture": "core_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.146,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "tdqss_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.055,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "core_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.029,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "tac_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.049,
+          "edge": "R-R"
+        },
+        {
+          "launch": "core_clk",
+          "capture": "twd_clk",
+          "constraint_ns": -1.883,
+          "slack_ns": 2.026,
+          "edge": "R-R"
+        },
+        {
+          "launch": "tac_clk",
+          "capture": "core_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.169,
+          "edge": "R-R"
+        },
+        {
+          "launch": "tac_clk",
+          "capture": "tac_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.03,
+          "edge": "R-R"
+        },
+        {
+          "launch": "twd_clk",
+          "capture": "twd_clk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.04,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_sys",
+          "capture": "clk_sys",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.03,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_pixel",
+          "capture": "clk_pixel",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.026,
+          "edge": "R-R"
+        },
+        {
+          "launch": "clk_lvds_1x",
+          "capture": "clk_lvds_1x",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.031,
+          "edge": "R-R"
+        },
+        {
+          "launch": "cmos_pclk",
+          "capture": "cmos_pclk",
+          "constraint_ns": 0.0,
+          "slack_ns": 0.095,
+          "edge": "R-R"
+        },
+        {
+          "launch": "cmos_pclk",
+          "capture": "cmos_pclk",
+          "constraint_ns": -5.0,
+          "slack_ns": 6.05,
+          "edge": "F-R"
+        }
+      ],
+      "min_setup_slack_ns": 0.298,
+      "min_hold_slack_ns": 0.026
+    }
+  },
+  "synthesis_warnings": {
+    "original_count": 399,
+    "new_count": 388,
+    "original_scope": {
+      "synthesis_sections": 2,
+      "raw_all_sections_warning_lines": 798,
+      "scope": "Only final synthesis section compared; older appended sections retained as historical raw evidence"
+    },
+    "new_scope": {
+      "synthesis_sections": 1,
+      "raw_all_sections_warning_lines": 388,
+      "scope": "Only final synthesis section compared; older appended sections retained as historical raw evidence"
+    },
+    "added_or_changed": [
+      {
+        "count": 1,
+        "warning": "[EFX-0011 VERI-WARNING] expression size 32 truncated to fit in target size 10 (VERI-1209) (rtl/menu8_renderer.v:LINE)"
+      },
+      {
+        "count": 1,
+        "warning": "[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (rtl/menu8_renderer.v:LINE)"
+      },
+      {
+        "count": 1,
+        "warning": "[EFX-0666 WARNING] Mapping into logic multiplier 'mult_343'. (rtl/menu8_renderer.v:LINE)"
+      },
+      {
+        "count": 1,
+        "warning": "[EFX-0011 VERI-WARNING] Input/inout port key_mode_n is unconnected and will be removed. (VDB-8003) (example_top.v:LINE)"
+      },
+      {
+        "count": 1,
+        "warning": "[EFX-0011 VERI-WARNING] Input/inout port key_freeze_n is unconnected and will be removed. (VDB-8003) (example_top.v:LINE)"
+      },
+      {
+        "count": 1,
+        "warning": "[EFX-0011 VERI-WARNING] Found 87 warnings in the post-synthesis netlist. "
+      }
+    ],
+    "removed_or_changed": [
+      {
+        "count": 5,
+        "warning": "[EFX-0011 VERI-WARNING] expression size 32 truncated to fit in target size 12 (VERI-1209) (rtl/vision8_controls.v:LINE)"
+      },
+      {
+        "count": 1,
+        "warning": "[EFX-0011 VERI-WARNING] expression size 13 truncated to fit in target size 12 (VERI-1209) (rtl/vision8_controls.v:LINE)"
+      },
+      {
+        "count": 1,
+        "warning": "[EFX-0011 VERI-WARNING] expression size 3 truncated to fit in target size 2 (VERI-1209) (rtl/vision8_controls.v:LINE)"
+      },
+      {
+        "count": 1,
+        "warning": "[EFX-0011 VERI-WARNING] expression size 390 truncated to fit in target size 384 (VERI-1209) (rtl/vision8_frames.v:LINE)"
+      },
+      {
+        "count": 7,
+        "warning": "[EFX-0011 VERI-WARNING] expression size 32 truncated to fit in target size 11 (VERI-1209) (rtl/menu8_renderer.v:LINE)"
+      },
+      {
+        "count": 1,
+        "warning": "[EFX-0666 WARNING] Mapping into logic multiplier 'mult_344'. (rtl/menu8_renderer.v:LINE)"
+      },
+      {
+        "count": 1,
+        "warning": "[EFX-0011 VERI-WARNING] Found 85 warnings in the post-synthesis netlist. "
+      }
+    ],
+    "normalization": "Staging prefix and source line numbers only; logic identifiers retained"
+  },
+  "interface_issues": {
+    "original": [
+      {
+        "instance_name": "hdmi_txd0",
+        "instance_type": "lvds_tx",
+        "severity": "warning",
+        "rule_name": "lvds_rule_tx_distance",
+        "message": "These HSIO GPIO must be placed at least 1 pair away from LVDS hdmi_txd0 in order to avoid noise coupling from GPIO to LVDS: GPIOT_N_16,GPIOT_P_16"
+      },
+      {
+        "instance_name": "lvds_txd1",
+        "instance_type": "lvds_tx",
+        "severity": "warning",
+        "rule_name": "lvds_rule_tx_distance",
+        "message": "These HSIO GPIO must be placed at least 1 pair away from LVDS lvds_txd1 in order to avoid noise coupling from GPIO to LVDS: GPIOT_P_11"
+      },
+      {
+        "instance_name": "lvds_txd2",
+        "instance_type": "lvds_tx",
+        "severity": "warning",
+        "rule_name": "lvds_rule_tx_distance",
+        "message": "These HSIO GPIO must be placed at least 1 pair away from LVDS lvds_txd2 in order to avoid noise coupling from GPIO to LVDS: GPIOT_N_06,GPIOT_P_06"
+      },
+      {
+        "instance_name": "dsi_txd3",
+        "instance_type": "mipi_tx_lane",
+        "severity": "warning",
+        "rule_name": "mipi_ln_rule_tx_distance",
+        "message": "These HSIO GPIO must be placed at least 1 pair away from MIPI Lane dsi_txd3 in order to avoid noise coupling from GPIO to MIPI Lane: GPIOR_N_09,GPIOR_P_09"
+      }
+    ],
+    "new": [
+      {
+        "instance_name": "hdmi_txd0",
+        "instance_type": "lvds_tx",
+        "severity": "warning",
+        "rule_name": "lvds_rule_tx_distance",
+        "message": "These HSIO GPIO must be placed at least 1 pair away from LVDS hdmi_txd0 in order to avoid noise coupling from GPIO to LVDS: GPIOT_N_16,GPIOT_P_16"
+      },
+      {
+        "instance_name": "lvds_txd1",
+        "instance_type": "lvds_tx",
+        "severity": "warning",
+        "rule_name": "lvds_rule_tx_distance",
+        "message": "These HSIO GPIO must be placed at least 1 pair away from LVDS lvds_txd1 in order to avoid noise coupling from GPIO to LVDS: GPIOT_N_11,GPIOT_P_11"
+      },
+      {
+        "instance_name": "lvds_txd2",
+        "instance_type": "lvds_tx",
+        "severity": "warning",
+        "rule_name": "lvds_rule_tx_distance",
+        "message": "These HSIO GPIO must be placed at least 1 pair away from LVDS lvds_txd2 in order to avoid noise coupling from GPIO to LVDS: GPIOT_N_06,GPIOT_P_06"
+      },
+      {
+        "instance_name": "dsi_txd3",
+        "instance_type": "mipi_tx_lane",
+        "severity": "warning",
+        "rule_name": "mipi_ln_rule_tx_distance",
+        "message": "These HSIO GPIO must be placed at least 1 pair away from MIPI Lane dsi_txd3 in order to avoid noise coupling from GPIO to MIPI Lane: GPIOR_N_09,GPIOR_P_09"
+      }
+    ],
+    "new_or_changed": [
+      {
+        "instance_name": "lvds_txd1",
+        "instance_type": "lvds_tx",
+        "severity": "warning",
+        "rule_name": "lvds_rule_tx_distance",
+        "message": "These HSIO GPIO must be placed at least 1 pair away from LVDS lvds_txd1 in order to avoid noise coupling from GPIO to LVDS: GPIOT_N_11,GPIOT_P_11"
+      }
+    ],
+    "removed_or_changed": [
+      {
+        "instance_name": "lvds_txd1",
+        "instance_type": "lvds_tx",
+        "severity": "warning",
+        "rule_name": "lvds_rule_tx_distance",
+        "message": "These HSIO GPIO must be placed at least 1 pair away from LVDS lvds_txd1 in order to avoid noise coupling from GPIO to LVDS: GPIOT_P_11"
+      }
+    ],
+    "board_scope": "Interface generation passed; HSIO GPIO/LVDS proximity warnings still require physical noise-coupling observation"
+  },
+  "synchronizer_report": {
+    "identical_to_original": true,
+    "new": "---------- Synchronizer Analysis ----------\r\nThe maximum skew between data paths driving synchronizer inputs on the same bus should be less than\r\n1X the min_clock_period (2604 ps). This ensures skew between synchronized signals on a bus function properly.\r\n\r\nNo Synchronizer warnings to report.\r\n",
+    "scope": "Efinity synchronizer report, not formal CDC/MTBF certification"
+  },
+  "input_source_count": 505,
+  "evidence_sha256": {
+    "outflow\\Ti60_Demo.timing.rpt": "3c79e33ecb3b0737d187e04cc15d2b807abd52e50c989d8962f402f2fb070a55",
+    "outflow\\Ti60_Demo.warn.log": "f2cdcc86b6a928c5b0622b332ebedaa5a06ecc0bcf3eec74c0c283674afd9f94",
+    "outflow\\Ti60_Demo.pinout.csv": "ddc124e37a5f101338868045407af7b8a154d6ff4a56ac8966cff3117774ad3c",
+    "outflow\\design_issue.xml": "05721e120f422115c3e278e280efeeb0399c2d954c60834f35c50f1a66c0fee8",
+    "outflow\\Ti60_Demo.cdc.rpt": "d4fa455902f55e338ffe0f3deddc3e2910fc4e080778cc0ae0a4d699428d1fb1"
+  },
+  "hardware_programmed": false
+}

@@ -1,0 +1,80 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_capturefix_faults/xsim_script.tcl
+# xsim {tb_capturefix_faults} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+STATE  1 count=  12288 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  5 count=      0 bad=0 good=0 rbad=0 warm=1 dma=0
+STATE  7 count=      0 bad=0 good=0 rbad=0 warm=1 dma=0
+STATE  8 count=      0 bad=0 good=0 rbad=0 warm=1 dma=1
+STATE  0 count=      0 bad=0 good=0 rbad=0 warm=1 dma=1
+STATE  1 count=  12288 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  5 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  6 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  8 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  0 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  1 count=  12288 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  7 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  8 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  0 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  1 count=  12288 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  5 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  6 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  8 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  0 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  1 count=  12288 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  5 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  6 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  8 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  0 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  1 count=  12288 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  5 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  6 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  8 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  0 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  1 count=  12288 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  5 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  6 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  7 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  8 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  0 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  1 count=  12288 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  5 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  6 count=  12288 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  8 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1
+STATE  0 count=      0 bad=0 good=1 rbad=0 warm=1 dma=1
+PASS: real cross-clock capture rejects missing last pixel, VS interruption, DDR BRESP error and actual snapshot FIFO backpressure; no partial publication, capture lock release, IO28 clear and valid recapture after every fault
+$finish called at time : 25506028800 ps : File "D:/Github_Project/fpga_build/capturefix_finalreg_20261021T000134/sim/tb_capturefix_faults.sv" Line 164
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:03:01 . Memory (MB): peak = 219.773 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct 21 00:17:32 2026...

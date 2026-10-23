@@ -1,0 +1,164 @@
+{
+  "schema": "capture-v2-explicit-evidence-1",
+  "required_benches": [
+    "tb_capture_v2_top_gold",
+    "tb_capture_v2_aux",
+    "tb_capture_v2_fifo",
+    "tb_capture_v2_diag",
+    "tb_capture_v2_fault_latch",
+    "tb_capturefix_chain",
+    "tb_capturefix_pip",
+    "tb_capturefix_abort",
+    "tb_capturefix_faults",
+    "tb_capturefix_controls",
+    "tb_capturefix_binding",
+    "tb_capturefix_cancel_boundary",
+    "tb_review_done_cdc",
+    "tb_review_controls",
+    "tb_capturefix_rawphase",
+    "tb_camera_rgb_fifo",
+    "tb_capture_exit_regression",
+    "tb_capturefix_ui_select",
+    "tb_controls6",
+    "tb_frame_path",
+    "tb_gesture5_controls_new",
+    "tb_gesture5_rgb_ramopt",
+    "tb_gesture5_shared_overlay_ramopt",
+    "tb_gesture5_templates_ramopt",
+    "tb_h4_overlay",
+    "tb_h4_skin",
+    "tb_h5_palm",
+    "tb_h5_ui",
+    "tb_h5_wave",
+    "tb_health6",
+    "tb_i2c6",
+    "tb_io29_freeze_ddr",
+    "tb_matrix5_ramopt",
+    "tb_menu_cdc6",
+    "tb_vision8_ddr",
+    "tb_vision8_faces",
+    "tb_vision8_fifo",
+    "tb_vision8_gesture",
+    "tb_vision8_key_boundary",
+    "tb_review_hdmi_text",
+    "tb_capturefix_menu",
+    "tb_fourkey_font",
+    "tb_inline_cpu8",
+    "tb_inline_epd_cpu",
+    "tb_capturefix_720p_pressure",
+    "tb_capture_v2_pip_reader",
+    "tb_capture_v2_top_visible",
+    "tb_capture_v2_top_visible_shared",
+    "tb_capture_v2_top_720p_first_frame",
+    "tb_review_video_defaults",
+    "tb_inline_video_dynamic",
+    "tb_capturefix_full_load",
+    "tb_capture_v2_top_exit_pixels"
+  ],
+  "runs": [
+    {
+      "path": "reports/capture_v2/runs/20261021T192033590691Z/result.json",
+      "benches": [
+        "tb_capture_v2_top_gold",
+        "tb_capture_v2_aux",
+        "tb_capture_v2_fifo",
+        "tb_capture_v2_diag",
+        "tb_capture_v2_fault_latch",
+        "tb_capturefix_chain",
+        "tb_capturefix_pip",
+        "tb_capturefix_abort",
+        "tb_capturefix_faults",
+        "tb_capturefix_controls",
+        "tb_capturefix_binding",
+        "tb_capturefix_cancel_boundary",
+        "tb_review_done_cdc",
+        "tb_review_controls",
+        "tb_capturefix_rawphase"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T192235446098Z/result.json",
+      "benches": [
+        "tb_camera_rgb_fifo",
+        "tb_capture_exit_regression",
+        "tb_capturefix_ui_select",
+        "tb_controls6",
+        "tb_frame_path",
+        "tb_gesture5_controls_new",
+        "tb_gesture5_rgb_ramopt",
+        "tb_gesture5_shared_overlay_ramopt",
+        "tb_gesture5_templates_ramopt",
+        "tb_h4_overlay",
+        "tb_h4_skin",
+        "tb_h5_palm",
+        "tb_h5_ui",
+        "tb_h5_wave",
+        "tb_health6",
+        "tb_i2c6",
+        "tb_io29_freeze_ddr",
+        "tb_matrix5_ramopt",
+        "tb_menu_cdc6",
+        "tb_vision8_ddr",
+        "tb_vision8_faces",
+        "tb_vision8_fifo",
+        "tb_vision8_gesture",
+        "tb_vision8_key_boundary",
+        "tb_review_hdmi_text",
+        "tb_capturefix_menu",
+        "tb_fourkey_font",
+        "tb_inline_cpu8",
+        "tb_inline_epd_cpu"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T192245834935Z/result.json",
+      "benches": [
+        "tb_capturefix_720p_pressure"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T192637154479Z/result.json",
+      "benches": [
+        "tb_capture_v2_pip_reader"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T194705135550Z/result.json",
+      "benches": [
+        "tb_capture_v2_top_visible",
+        "tb_capture_v2_top_visible_shared"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T193914925643Z/result.json",
+      "benches": [
+        "tb_capture_v2_top_720p_first_frame"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T194532799789Z/result.json",
+      "benches": [
+        "tb_review_video_defaults",
+        "tb_inline_video_dynamic",
+        "tb_capturefix_full_load"
+      ]
+    },
+    {
+      "path": "reports/capture_v2/runs/20261021T200017970857Z/result.json",
+      "benches": [
+        "tb_capture_v2_top_exit_pixels"
+      ]
+    }
+  ],
+  "baseline_failure": "reports/capture_v2/runs/20261021T190805854819Z/result.json",
+  "build": "reports/capture_v2/selected_build.json",
+  "boundaries": [
+    "Physical camera and DDR PHY are modeled, not hardware-tested.",
+    "720p actual-top HDMI acceptance pauses independent LVDS/CPU clock; production video/camera/AXI clocks retained. Small actual-top tests run all clocks.",
+    "Full-load legacy fixture preloads memory/directory; four actual saves and fifth replacement are checked separately by actual-top complete/shared tests.",
+    "AUX baseline regression reproduces an end-boundary wrap, not a proven unique root cause of board gray screen."
+  ],
+  "excluded_development": "Historical FAIL/ERROR and explicitly cancelled redundant variants retained; selected PASS roots must bind final production sources. See development_notes.md.",
+  "protection": "reports/capture_v2/protection_checked_delivery.json",
+  "protection_sha256": "740c1592573bdd27ced375f5ff2839fb5a4a3f60b1e08e30e5c2d4a2d7885548"
+}

@@ -1,0 +1,858 @@
+{
+  "status": "GENERATED",
+  "created_utc": "2026-10-21T05:32:34.955067+00:00",
+  "warnings": {
+    "inputs": {
+      "original4Key": {
+        "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\outflow\\Ti60_Demo.warn.log",
+        "sha256": "f2cdcc86b6a928c5b0622b332ebedaa5a06ecc0bcf3eec74c0c283674afd9f94",
+        "count": 388
+      },
+      "before_audit": {
+        "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\\reports\\capture_review\\previous_outflow\\Ti60_Demo.warn.log",
+        "sha256": "65b08fe8dbf3cf94aeb81dc559a6b263dad0b0ce584c8e460d4fdf0ac9dba6a1",
+        "count": 396
+      },
+      "current": {
+        "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\\outflow\\Ti60_Demo.warn.log",
+        "sha256": "c6c05c77398b24cf1d07fc19d25a53a6d87c92f51b3ed75fe3f2788f888a418c",
+        "count": 392
+      }
+    },
+    "difference": {
+      "original4Key": {
+        "added": [
+          {
+            "message": "[EFX-0011 VERI-WARNING] expression size 3 truncated to fit in target size 2 (VERI-1209) @ rtl/vision8_controls.v",
+            "count": 1
+          },
+          {
+            "message": "[EFX-0011 VERI-WARNING] expression size 32 truncated to fit in target size 11 (VERI-1209) @ rtl/menu8_renderer.v",
+            "count": 7
+          },
+          {
+            "message": "[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) @ rtl/menu8_renderer.v",
+            "count": 1
+          },
+          {
+            "message": "[EFX-0666 WARNING] Mapping into logic multiplier 'mult_358'. @ rtl/menu8_renderer.v",
+            "count": 1
+          },
+          {
+            "message": "[EFX-0011 VERI-WARNING] Found 85 warnings in the post-synthesis netlist. ",
+            "count": 1
+          }
+        ],
+        "removed": [
+          {
+            "message": "[EFX-0011 VERI-WARNING] expression size 8 truncated to fit in target size 3 (VERI-1209) @ rtl/vision8_controls.v",
+            "count": 1
+          },
+          {
+            "message": "[EFX-0011 VERI-WARNING] expression size 391 truncated to fit in target size 384 (VERI-1209) @ rtl/vision8_frames.v",
+            "count": 1
+          },
+          {
+            "message": "[EFX-0011 VERI-WARNING] expression size 390 truncated to fit in target size 384 (VERI-1209) @ rtl/vision8_frames.v",
+            "count": 1
+          },
+          {
+            "message": "[EFX-0666 WARNING] Mapping into logic multiplier 'mult_343'. @ rtl/menu8_renderer.v",
+            "count": 1
+          },
+          {
+            "message": "[EFX-0011 VERI-WARNING] Input/inout port key_mode_n is unconnected and will be removed. (VDB-8003) @ example_top.v",
+            "count": 1
+          },
+          {
+            "message": "[EFX-0011 VERI-WARNING] Input/inout port key_freeze_n is unconnected and will be removed. (VDB-8003) @ example_top.v",
+            "count": 1
+          },
+          {
+            "message": "[EFX-0011 VERI-WARNING] Found 87 warnings in the post-synthesis netlist. ",
+            "count": 1
+          }
+        ]
+      },
+      "before_audit": {
+        "added": [],
+        "removed": [
+          {
+            "message": "[EFX-0011 VERI-WARNING] expression size 391 truncated to fit in target size 384 (VERI-1209) @ rtl/vision8_frames.v",
+            "count": 3
+          },
+          {
+            "message": "[EFX-0011 VERI-WARNING] expression size 390 truncated to fit in target size 384 (VERI-1209) @ rtl/vision8_frames.v",
+            "count": 1
+          }
+        ]
+      }
+    },
+    "note": "Grouped by message plus source file; source-line movement ignored. New coordinate/integer width warnings must not all be called inherited. No 392-to-384 label truncation remains."
+  },
+  "timing": {
+    "original4Key": {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_4Key_InlineThreshold\\outflow\\Ti60_Demo.timing.rpt",
+      "sha256": "3c79e33ecb3b0737d187e04cc15d2b807abd52e50c989d8962f402f2fb070a55",
+      "domains": {
+        "tdqss_clk": {
+          "setup_min_slack_ns": 0.562,
+          "hold_min_slack_ns": 0.1
+        },
+        "core_clk": {
+          "setup_min_slack_ns": 0.467,
+          "hold_min_slack_ns": 0.029
+        },
+        "tac_clk": {
+          "setup_min_slack_ns": 0.399,
+          "hold_min_slack_ns": 0.03
+        },
+        "twd_clk": {
+          "setup_min_slack_ns": 0.456,
+          "hold_min_slack_ns": 0.04
+        },
+        "clk_sys": {
+          "setup_min_slack_ns": 2.653,
+          "hold_min_slack_ns": 0.03
+        },
+        "clk_pixel": {
+          "setup_min_slack_ns": 2.949,
+          "hold_min_slack_ns": 0.026
+        },
+        "clk_lvds_1x": {
+          "setup_min_slack_ns": 7.228,
+          "hold_min_slack_ns": 0.031
+        },
+        "cmos_pclk": {
+          "setup_min_slack_ns": 1.784,
+          "hold_min_slack_ns": 0.095
+        }
+      },
+      "relationships": {
+        "setup": [
+          {
+            "launch": "tdqss_clk",
+            "capture": "tdqss_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 0.562,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tdqss_clk",
+            "capture": "core_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 1.814,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "tdqss_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 1.115,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "core_clk",
+            "constraint_ns": 5.208,
+            "slack_ns": 0.467,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "tac_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 2.011,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "twd_clk",
+            "constraint_ns": 0.541,
+            "slack_ns": 0.298,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tac_clk",
+            "capture": "core_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 1.739,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tac_clk",
+            "capture": "tac_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 0.399,
+            "edge": "R-R"
+          },
+          {
+            "launch": "twd_clk",
+            "capture": "twd_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 0.456,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_sys",
+            "capture": "clk_sys",
+            "constraint_ns": 10.417,
+            "slack_ns": 2.653,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_pixel",
+            "capture": "clk_pixel",
+            "constraint_ns": 13.441,
+            "slack_ns": 2.949,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_pixel",
+            "capture": "clk_lvds_1x",
+            "constraint_ns": 15.0,
+            "slack_ns": 13.873,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_lvds_1x",
+            "capture": "clk_pixel",
+            "constraint_ns": 15.0,
+            "slack_ns": 14.494,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_lvds_1x",
+            "capture": "clk_lvds_1x",
+            "constraint_ns": 20.833,
+            "slack_ns": 7.228,
+            "edge": "R-R"
+          },
+          {
+            "launch": "cmos_pclk",
+            "capture": "cmos_pclk",
+            "constraint_ns": 10.0,
+            "slack_ns": 6.313,
+            "edge": "R-R"
+          },
+          {
+            "launch": "cmos_pclk",
+            "capture": "cmos_pclk",
+            "constraint_ns": 5.0,
+            "slack_ns": 1.784,
+            "edge": "F-R"
+          }
+        ],
+        "hold": [
+          {
+            "launch": "tdqss_clk",
+            "capture": "tdqss_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.1,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tdqss_clk",
+            "capture": "core_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.146,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "tdqss_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.055,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "core_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.029,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "tac_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.049,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "twd_clk",
+            "constraint_ns": -1.883,
+            "slack_ns": 2.026,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tac_clk",
+            "capture": "core_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.169,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tac_clk",
+            "capture": "tac_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.03,
+            "edge": "R-R"
+          },
+          {
+            "launch": "twd_clk",
+            "capture": "twd_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.04,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_sys",
+            "capture": "clk_sys",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.03,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_pixel",
+            "capture": "clk_pixel",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.026,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_lvds_1x",
+            "capture": "clk_lvds_1x",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.031,
+            "edge": "R-R"
+          },
+          {
+            "launch": "cmos_pclk",
+            "capture": "cmos_pclk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.095,
+            "edge": "R-R"
+          },
+          {
+            "launch": "cmos_pclk",
+            "capture": "cmos_pclk",
+            "constraint_ns": -5.0,
+            "slack_ns": 6.05,
+            "edge": "F-R"
+          }
+        ]
+      }
+    },
+    "before_audit": {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\\reports\\capture_review\\previous_outflow\\Ti60_Demo.timing.rpt",
+      "sha256": "e8068f29d5ed5221116e3d55513ed8378fcd7c3bcdc41498e9fed167c5ec061a",
+      "domains": {
+        "tdqss_clk": {
+          "setup_min_slack_ns": 0.351,
+          "hold_min_slack_ns": 0.091
+        },
+        "core_clk": {
+          "setup_min_slack_ns": 0.875,
+          "hold_min_slack_ns": 0.026
+        },
+        "tac_clk": {
+          "setup_min_slack_ns": 0.471,
+          "hold_min_slack_ns": 0.026
+        },
+        "twd_clk": {
+          "setup_min_slack_ns": 0.368,
+          "hold_min_slack_ns": 0.052
+        },
+        "clk_sys": {
+          "setup_min_slack_ns": 2.356,
+          "hold_min_slack_ns": 0.028
+        },
+        "clk_pixel": {
+          "setup_min_slack_ns": 2.71,
+          "hold_min_slack_ns": 0.026
+        },
+        "clk_lvds_1x": {
+          "setup_min_slack_ns": 5.761,
+          "hold_min_slack_ns": 0.034
+        },
+        "cmos_pclk": {
+          "setup_min_slack_ns": 1.468,
+          "hold_min_slack_ns": 0.029
+        }
+      },
+      "relationships": {
+        "setup": [
+          {
+            "launch": "tdqss_clk",
+            "capture": "tdqss_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 0.351,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tdqss_clk",
+            "capture": "core_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 1.767,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "tdqss_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 1.37,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "core_clk",
+            "constraint_ns": 5.208,
+            "slack_ns": 0.875,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "tac_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 1.936,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "twd_clk",
+            "constraint_ns": 0.541,
+            "slack_ns": 0.302,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tac_clk",
+            "capture": "core_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 1.566,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tac_clk",
+            "capture": "tac_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 0.471,
+            "edge": "R-R"
+          },
+          {
+            "launch": "twd_clk",
+            "capture": "twd_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 0.368,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_sys",
+            "capture": "clk_sys",
+            "constraint_ns": 10.417,
+            "slack_ns": 2.356,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_pixel",
+            "capture": "clk_pixel",
+            "constraint_ns": 13.441,
+            "slack_ns": 2.71,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_pixel",
+            "capture": "clk_lvds_1x",
+            "constraint_ns": 15.0,
+            "slack_ns": 13.587,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_lvds_1x",
+            "capture": "clk_pixel",
+            "constraint_ns": 15.0,
+            "slack_ns": 14.333,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_lvds_1x",
+            "capture": "clk_lvds_1x",
+            "constraint_ns": 20.833,
+            "slack_ns": 5.761,
+            "edge": "R-R"
+          },
+          {
+            "launch": "cmos_pclk",
+            "capture": "cmos_pclk",
+            "constraint_ns": 10.0,
+            "slack_ns": 5.964,
+            "edge": "R-R"
+          },
+          {
+            "launch": "cmos_pclk",
+            "capture": "cmos_pclk",
+            "constraint_ns": 5.0,
+            "slack_ns": 1.468,
+            "edge": "F-R"
+          }
+        ],
+        "hold": [
+          {
+            "launch": "tdqss_clk",
+            "capture": "tdqss_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.091,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tdqss_clk",
+            "capture": "core_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.176,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "tdqss_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.072,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "core_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.026,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "tac_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.088,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "twd_clk",
+            "constraint_ns": -1.883,
+            "slack_ns": 1.998,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tac_clk",
+            "capture": "core_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.136,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tac_clk",
+            "capture": "tac_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.026,
+            "edge": "R-R"
+          },
+          {
+            "launch": "twd_clk",
+            "capture": "twd_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.052,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_sys",
+            "capture": "clk_sys",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.028,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_pixel",
+            "capture": "clk_pixel",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.026,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_lvds_1x",
+            "capture": "clk_lvds_1x",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.034,
+            "edge": "R-R"
+          },
+          {
+            "launch": "cmos_pclk",
+            "capture": "cmos_pclk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.029,
+            "edge": "R-R"
+          },
+          {
+            "launch": "cmos_pclk",
+            "capture": "cmos_pclk",
+            "constraint_ns": -5.0,
+            "slack_ns": 6.109,
+            "edge": "F-R"
+          }
+        ]
+      }
+    },
+    "current": {
+      "path": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\\outflow\\Ti60_Demo.timing.rpt",
+      "sha256": "a6f851064ee876ce61f6d4f029cc5b7a48a804edb0cfd4777994a11a30e700f3",
+      "domains": {
+        "tdqss_clk": {
+          "setup_min_slack_ns": 0.339,
+          "hold_min_slack_ns": 0.097
+        },
+        "core_clk": {
+          "setup_min_slack_ns": 0.683,
+          "hold_min_slack_ns": 0.028
+        },
+        "tac_clk": {
+          "setup_min_slack_ns": 0.429,
+          "hold_min_slack_ns": 0.026
+        },
+        "twd_clk": {
+          "setup_min_slack_ns": 0.594,
+          "hold_min_slack_ns": 0.046
+        },
+        "clk_sys": {
+          "setup_min_slack_ns": 2.205,
+          "hold_min_slack_ns": 0.027
+        },
+        "clk_pixel": {
+          "setup_min_slack_ns": 2.473,
+          "hold_min_slack_ns": 0.026
+        },
+        "clk_lvds_1x": {
+          "setup_min_slack_ns": 6.472,
+          "hold_min_slack_ns": 0.03
+        },
+        "cmos_pclk": {
+          "setup_min_slack_ns": 1.408,
+          "hold_min_slack_ns": 0.098
+        }
+      },
+      "relationships": {
+        "setup": [
+          {
+            "launch": "tdqss_clk",
+            "capture": "tdqss_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 0.339,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tdqss_clk",
+            "capture": "core_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 1.781,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "tdqss_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 1.137,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "core_clk",
+            "constraint_ns": 5.208,
+            "slack_ns": 0.683,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "tac_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 1.99,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "twd_clk",
+            "constraint_ns": 0.541,
+            "slack_ns": 0.326,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tac_clk",
+            "capture": "core_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 1.699,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tac_clk",
+            "capture": "tac_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 0.429,
+            "edge": "R-R"
+          },
+          {
+            "launch": "twd_clk",
+            "capture": "twd_clk",
+            "constraint_ns": 2.604,
+            "slack_ns": 0.594,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_sys",
+            "capture": "clk_sys",
+            "constraint_ns": 10.417,
+            "slack_ns": 2.205,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_pixel",
+            "capture": "clk_pixel",
+            "constraint_ns": 13.441,
+            "slack_ns": 2.473,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_pixel",
+            "capture": "clk_lvds_1x",
+            "constraint_ns": 15.0,
+            "slack_ns": 13.538,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_lvds_1x",
+            "capture": "clk_pixel",
+            "constraint_ns": 15.0,
+            "slack_ns": 14.365,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_lvds_1x",
+            "capture": "clk_lvds_1x",
+            "constraint_ns": 20.833,
+            "slack_ns": 6.472,
+            "edge": "R-R"
+          },
+          {
+            "launch": "cmos_pclk",
+            "capture": "cmos_pclk",
+            "constraint_ns": 10.0,
+            "slack_ns": 6.177,
+            "edge": "R-R"
+          },
+          {
+            "launch": "cmos_pclk",
+            "capture": "cmos_pclk",
+            "constraint_ns": 5.0,
+            "slack_ns": 1.408,
+            "edge": "F-R"
+          }
+        ],
+        "hold": [
+          {
+            "launch": "tdqss_clk",
+            "capture": "tdqss_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.097,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tdqss_clk",
+            "capture": "core_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.132,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "tdqss_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.057,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "core_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.028,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "tac_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.048,
+            "edge": "R-R"
+          },
+          {
+            "launch": "core_clk",
+            "capture": "twd_clk",
+            "constraint_ns": -1.883,
+            "slack_ns": 2.016,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tac_clk",
+            "capture": "core_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.174,
+            "edge": "R-R"
+          },
+          {
+            "launch": "tac_clk",
+            "capture": "tac_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.026,
+            "edge": "R-R"
+          },
+          {
+            "launch": "twd_clk",
+            "capture": "twd_clk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.046,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_sys",
+            "capture": "clk_sys",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.027,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_pixel",
+            "capture": "clk_pixel",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.026,
+            "edge": "R-R"
+          },
+          {
+            "launch": "clk_lvds_1x",
+            "capture": "clk_lvds_1x",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.03,
+            "edge": "R-R"
+          },
+          {
+            "launch": "cmos_pclk",
+            "capture": "cmos_pclk",
+            "constraint_ns": 0.0,
+            "slack_ns": 0.098,
+            "edge": "R-R"
+          },
+          {
+            "launch": "cmos_pclk",
+            "capture": "cmos_pclk",
+            "constraint_ns": -5.0,
+            "slack_ns": 6.078,
+            "edge": "F-R"
+          }
+        ]
+      }
+    }
+  },
+  "hardware": "NOT_RUN"
+}

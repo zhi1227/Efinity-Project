@@ -1,0 +1,22 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_capture_v2_diag -s tb_capture_v2_diag --relax -mt off 
+Turned off multi-threading.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 3 for port 'column' [D:/Github_Project/fpga_build/capture_v2_20261021T192033590691Z/rtl/vision8_frames.v:109]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.vision8_ascii
+Compiling module work.vision8_frames_default
+Compiling module work.tb_capture_v2_diag
+Built simulation snapshot tb_capture_v2_diag
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Github_Project/fpga_build/capture_v2_20261021T192033590691Z/xsim.dir/tb_capture_v2_diag/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct 22 03:22:36 2026...

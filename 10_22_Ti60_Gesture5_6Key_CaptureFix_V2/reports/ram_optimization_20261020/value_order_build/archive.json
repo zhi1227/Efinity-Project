@@ -1,0 +1,16 @@
+{
+  "phase": "value-order candidate; not final selection",
+  "inputs": 504,
+  "files": {
+    "reports/build_verified.json": "9377ad381c22bc625a4ae6385f854f6c12811684e0280c4a1417b7b487754fc0",
+    "reports/vision8/build_input_sha256.json": "0836d0cd931382a31b04a3dfe47e9adb32d4986f6d598d9f7fc8f83151a566ae",
+    "reports/efinity_build.log": "b243fbd6c2ce1944a3feb60005926155c8aa3507b5edc51139b75a3c7e61b8ca",
+    "reports/ram_optimization_20261020/final_build.console.log": "6511e41f780f7be9495f97c42df09aad32b6cbb70d119067603bb3e09ab3e84e",
+    "outflow/Ti60_Demo.route.rpt": "4d6566b92d0e36d4f2b1d1bb24a1ac47917bcceec4f639de3af0474346fc460c",
+    "outflow/Ti60_Demo.timing.rpt": "6fceb449003bed58d2f34528c933b449b7f2339ce6ab2dbfe107cf963f911ea5",
+    "outflow/Ti60_Demo.bit": "f02eec6319306c61fa3187bbbc51b47449ce8aef374e38bb29a3d37d4ca228cf",
+    "outflow/Ti60_Demo.hex": "0fae522e1305a6cbcd50fee7752b520a062e8f6a30481c0845b5d00982d7fddb",
+    "outflow/Ti60_Demo.res.csv": "b9a4f4803d9f4f73e95db56d02f7fa1ef4fa742ed6441dddc24e7d4c1bfc0f57",
+    "outflow/Ti60_Demo.map.out": "1c0feab36bdef8ee00f0f5758332a5495308ef08aef5f49a5b486fdb02f89c8f"
+  }
+}

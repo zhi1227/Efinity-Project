@@ -1,0 +1,30 @@
+{
+  "source_result": "reports/capture_review/runs/20261021T043323001295Z/result.json",
+  "result_sha256": "4b0b8033953501b703d4c8788c441143e3dfbe30126b0bb61e462bb45e092eb4",
+  "pngs": {
+    "eight_modes_rtl.png": "d9ac178b3fc2492d053f93721d9e1ccbb231af1b7a14637f223ab8547462ae16",
+    "menu_0.png": "4b836ee56faab24fd855e1b39313a90c9a5591b3a652d838ebf1817495d09968",
+    "menu_1.png": "927c1f3f6bfd9858f316bdf6a71ce2329372832d55d0b2c4a91136a463f6670f",
+    "menu_10.png": "73ea2643e55b7d810d7a63ef3a8ac4c91e6f3c536547d6ebae4c5b4e27e29fef",
+    "menu_11.png": "e5c02d73138bcc8236679ecb50ce70b67f8c7ce01ca12eaeb1a38a09281b8224",
+    "menu_2.png": "c3a4070b75c821747d19f4dc91170c6ba8e42d4dda86317a4921eca129dd504c",
+    "menu_3.png": "d9dfd603d55d211b2baba12b19b6cad52ed3721833fb138887519cea7cf41544",
+    "menu_4.png": "19eb3b06b7845572377d745ea40b2f04f6f9e9ca7170baae777beae7c88a64d9",
+    "menu_5.png": "60041f0e17e6015259c88172a6c09852df2e165eae5f897d01b7c2d7dd71ecb6",
+    "menu_6.png": "58db845f42acddb49af55665e2497394f4319e4ab98a2137b0bec41a4f183041",
+    "menu_7.png": "3f769535c8d5674bffc6c4797840e384926617fb87c9a10c2dea254ac0b5e868",
+    "menu_8.png": "857b6a6a147ecff17a95493a744d412b44a291c489c129e3603aa405a58f30ae",
+    "menu_9.png": "28f9242717899f8512e10c719ea824a0cf7f980480f0dbbd6131a83d88d4ac14"
+  },
+  "note": "Actual tb_capturefix_menu RTL PPM converted without changing pixels; contact sheet resized for viewing only. No physical display photograph.",
+  "display_order_internal_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    7,
+    5,
+    6
+  ]
+}

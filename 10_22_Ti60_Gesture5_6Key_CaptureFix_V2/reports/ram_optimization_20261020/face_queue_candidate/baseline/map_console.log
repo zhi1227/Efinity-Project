@@ -1,0 +1,4 @@
+WARNING: cannot find correct IV value
+Creating D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\face_queue_candidate\baseline\outflow
+Running: efx_run_map.py face_queue --family Titanium --device Ti60F225 --project_xml D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_RAM_Optimized\reports\ram_optimization_20261020\face_queue_candidate\baseline\face_queue.xml --output_dir outflow --opt root=face_grid_regions --opt veri_options=verilog_mode=verilog_2k,vhdl_mode=vhdl_2008 work-dir=work_syn write_efx_verilog=on
+   map :	PASS 

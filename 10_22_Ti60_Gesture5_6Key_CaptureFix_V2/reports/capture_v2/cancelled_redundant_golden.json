@@ -1,0 +1,7 @@
+{
+  "start": "2026-10-22T11:04:05.0616562+08:00",
+  "pid": 31908,
+  "reason": "Cancelled only this redundant non-selected golden replay after the independent full golden test194532 passed. Selected pressure root and full-load root already PASS. Raw failure is retained; not claimed as PASS.",
+  "run": "20261021T192245834935Z",
+  "bench": "tb_review_video_defaults"
+}

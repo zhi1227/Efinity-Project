@@ -1,0 +1,123 @@
+
+Efinix FPGA Placement and Routing.
+Version: 2025.1.110.5.9 
+Date: Wed Oct 21 00:03:46 2026
+
+Copyright (C) 2013 - 2025 Efinix, Inc. All rights reserved.
+ 
+Family: Titanium 
+Device: Ti60F225
+Top-level Entity Name: Ti60_Demo
+Elapsed time for packing: 0 hours 0 minutes 0 seconds
+
+---------- Resource Summary (begin) ----------
+Inputs: 73 / 1703 (4.29%)
+Outputs: 439 / 2267 (19.36%)
+Global Clocks (GBUF): 14 / 32 (43.75%)
+Regional Clocks (RBUF): 0 / 32 (0.00%)
+	RBUF: Core: 0 / 16 (0.00%)
+	RBUF: Periphery: 0 / 8 (0.00%)
+	RBUF: Multi-Region: 0 / 8 (0.00%)
+XLRs: 55047 / 60800 (90.54%)
+	XLRs needed for Logic: 27793 / 60800 (45.71%)
+	XLRs needed for Logic + FF: 7560 / 60800 (12.43%)
+	XLRs needed for Adder: 4698 / 60800 (7.73%)
+	XLRs needed for Adder + FF: 1316 / 60800 (2.16%)
+	XLRs needed for FF: 13148 / 60800 (21.62%)
+	XLRs needed for SRL8: 532 / 14720 (3.61%)
+	XLRs needed for SRL8+FF: 0 / 14720 (0.00%)
+	XLRs needed for Routing: 0 / 60800 (0.00%)
+Memory Blocks: 184 / 256 (71.88%)
+DSP Blocks: 38 / 160 (23.75%)
+---------- Resource Summary (end) ----------
+
+
+---------- DSP Packer Summary (begin) ----------
+
+	DSP48 blocks required to legally pack design: 38
+	DSP48 blocks recoverable by optimizing:
+		-> DSP24/12 control signals & parameters: 0
+	Best case scenario DSP count after optimizing: 38
+
+---------- DSP Packer Summary (end) ----------
+
+
+---------- IO Interface Summary (begin) ----------
+
++------------------------+--------------+
+| Missing Interface Pins | Input/Output |
++------------------------+--------------+
+|      cmos_ctl3_i       |    Input     |
+|    flash_data_i[0]     |    Input     |
+|    flash_data_i[1]     |    Input     |
+|    flash_data_i[2]     |    Input     |
+|    flash_data_i[3]     |    Input     |
+|      clk_pixel_2x      |    Input     |
+|      cmos_ctl2_i       |    Input     |
+|     i_dqs_n_lo[1]      |    Input     |
+|     i_dqs_n_hi[1]      |    Input     |
+|       csi_sda_i        |    Input     |
+|      dsi_refclk_i      |    Input     |
+|        clk_54m         |    Input     |
+|       csi_scl_i        |    Input     |
+|       csi_ctl0_i       |    Input     |
+|       csi_ctl1_i       |    Input     |
+|     i_dqs_n_lo[0]      |    Input     |
+|     i_dqs_n_hi[0]      |    Input     |
+|        clk_25m         |    Input     |
+|       csi_rxc_i        |    Input     |
+|    dsi_txd3_lp_p_i     |    Input     |
+|    dsi_txd3_lp_n_i     |    Input     |
+|    dsi_txd0_lp_p_i     |    Input     |
+|    dsi_txd0_lp_n_i     |    Input     |
+|    dsi_txd1_lp_p_i     |    Input     |
+|    dsi_txd1_lp_n_i     |    Input     |
+|    dsi_txd2_lp_p_i     |    Input     |
+|    dsi_txd2_lp_n_i     |    Input     |
+|    csi_rxd2_hs_i[0]    |    Input     |
+|    csi_rxd2_hs_i[1]    |    Input     |
+|    csi_rxd2_hs_i[2]    |    Input     |
+|    csi_rxd2_hs_i[3]    |    Input     |
+|    csi_rxd2_hs_i[4]    |    Input     |
+|    csi_rxd2_hs_i[5]    |    Input     |
+|    csi_rxd2_hs_i[6]    |    Input     |
+|    csi_rxd2_hs_i[7]    |    Input     |
+|    csi_rxd2_lp_p_i     |    Input     |
+|    csi_rxd2_lp_n_i     |    Input     |
+|    csi_rxd3_hs_i[0]    |    Input     |
+|    csi_rxd3_hs_i[1]    |    Input     |
+|    csi_rxd3_hs_i[2]    |    Input     |
+|    csi_rxd3_hs_i[3]    |    Input     |
+|    csi_rxd3_hs_i[4]    |    Input     |
+|    csi_rxd3_hs_i[5]    |    Input     |
+|    csi_rxd3_hs_i[6]    |    Input     |
+|    csi_rxd3_hs_i[7]    |    Input     |
+|    csi_rxd3_lp_p_i     |    Input     |
+|    csi_rxd3_lp_n_i     |    Input     |
+|     csi_rxc_lp_p_i     |    Input     |
+|     csi_rxc_lp_n_i     |    Input     |
+|    csi_rxd0_hs_i[0]    |    Input     |
+|    csi_rxd0_hs_i[1]    |    Input     |
+|    csi_rxd0_hs_i[2]    |    Input     |
+|    csi_rxd0_hs_i[3]    |    Input     |
+|    csi_rxd0_hs_i[4]    |    Input     |
+|    csi_rxd0_hs_i[5]    |    Input     |
+|    csi_rxd0_hs_i[6]    |    Input     |
+|    csi_rxd0_hs_i[7]    |    Input     |
+|    csi_rxd0_lp_p_i     |    Input     |
+|    csi_rxd0_lp_n_i     |    Input     |
+|    csi_rxd1_hs_i[0]    |    Input     |
+|    csi_rxd1_hs_i[1]    |    Input     |
+|    csi_rxd1_hs_i[2]    |    Input     |
+|    csi_rxd1_hs_i[3]    |    Input     |
+|    csi_rxd1_hs_i[4]    |    Input     |
+|    csi_rxd1_hs_i[5]    |    Input     |
+|    csi_rxd1_hs_i[6]    |    Input     |
+|    csi_rxd1_hs_i[7]    |    Input     |
+|    csi_rxd1_lp_p_i     |    Input     |
+|    csi_rxd1_lp_n_i     |    Input     |
+|      cmos_ctl1_i       |    Input     |
++------------------------+--------------+
+
+----------- IO Interface Summary (end) ----------
+

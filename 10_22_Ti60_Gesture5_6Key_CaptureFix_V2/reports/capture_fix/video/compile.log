@@ -1,0 +1,136 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/camera_rgb_balance.v" into library work
+INFO: [VRFC 10-311] analyzing module camera_rgb_balance
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/epd_apb.v" into library work
+INFO: [VRFC 10-311] analyzing module epd_apb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/spi_write_byte.v" into library work
+INFO: [VRFC 10-311] analyzing module spi_write_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/cmos_i2c/i2c_timing_ctrl_16bit.v" into library work
+INFO: [VRFC 10-311] analyzing module i2c_timing_ctrl_16bit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/cmos_i2c/I2C_OV5640_1280720_Config.v" into library work
+INFO: [VRFC 10-311] analyzing module I2C_OV5640_1280720_Config
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/vision/gaussian3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module gaussian3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/parallel/button_press.v" into library work
+INFO: [VRFC 10-311] analyzing module button_press
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/parallel/vision_hud.v" into library work
+INFO: [VRFC 10-311] analyzing module vision_hud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/parallel/edge_shape_roi.v" into library work
+INFO: [VRFC 10-311] analyzing module edge_shape_roi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/vision/line_buffer_3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module line_buffer_3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/vision/rgb565_to_gray.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb565_to_gray
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/vision/rgb565_to_rgb888.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb565_to_rgb888
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/vision/median3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module median3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/vision/sobel3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module sobel3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/vision/nms3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module nms3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/vision/canny_threshold.v" into library work
+INFO: [VRFC 10-311] analyzing module canny_threshold
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/vision/hysteresis_local.v" into library work
+INFO: [VRFC 10-311] analyzing module hysteresis_local
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/face/rgb565_to_ycbcr_skin.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb565_to_ycbcr_skin
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/parallel/canny_stream.v" into library work
+INFO: [VRFC 10-311] analyzing module canny_stream
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/parallel/face_grid_regions.v" into library work
+INFO: [VRFC 10-311] analyzing module face_grid_regions
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/parallel/face_morph.v" into library work
+INFO: [VRFC 10-311] analyzing module face_morph
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/parallel/parallel_overlay.v" into library work
+INFO: [VRFC 10-311] analyzing module parallel_overlay
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/parallel/parallel_video.v" into library work
+INFO: [VRFC 10-311] analyzing module parallel_video
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/parallel/uart_params.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_params
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/parallel/video_delay.v" into library work
+INFO: [VRFC 10-311] analyzing module video_delay
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/menu_status_cdc.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_status_cdc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/shared_glyph_rom.v" into library work
+INFO: [VRFC 10-311] analyzing module shared_glyph_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/menu_glyph_rom.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_glyph_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/menu_renderer.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_renderer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/menu_lcd_apb.v" into library work
+INFO: [VRFC 10-311] analyzing module menu_lcd_apb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/riscv_menu_top.v" into library work
+INFO: [VRFC 10-311] analyzing module riscv_menu_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/camera_health.v" into library work
+INFO: [VRFC 10-311] analyzing module camera_health
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/gesture_features.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_features
+INFO: [VRFC 10-311] analyzing module gesture_shape
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/gesture_stabilizer.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_stabilizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/gesture_branch.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_branch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/raster_xy.v" into library work
+INFO: [VRFC 10-311] analyzing module raster_xy
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/gesture_matrix8.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_matrix8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/gesture_diag_hud.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_diag_hud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/vision6_overlay.v" into library work
+INFO: [VRFC 10-311] analyzing module vision6_overlay
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/gesture/ep1_components.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_classify
+INFO: [VRFC 10-311] analyzing module ep1_gesture
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/gesture/ep1_math.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_color
+INFO: [VRFC 10-311] analyzing module ep1_median
+INFO: [VRFC 10-311] analyzing module ep1_gradient
+INFO: [VRFC 10-311] analyzing module ep1_morph
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/src/gesture/ep1_skin.v" into library work
+INFO: [VRFC 10-311] analyzing module ep1_skin
+INFO: [VRFC 10-311] analyzing module ep1_window7
+INFO: [VRFC 10-311] analyzing module ep1_disk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/vision6_glyph_rom.v" into library work
+INFO: [VRFC 10-311] analyzing module vision6_glyph_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/gesture_key.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_key
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/gesture_skin_learn.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_skin_learn
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/gesture_sample16.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_sample16
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/gesture_templates.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_templates
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/gesture_wizard.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_wizard
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/gesture_palm_evidence.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_palm_evidence
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/gesture_wave.v" into library work
+INFO: [VRFC 10-311] analyzing module gesture_wave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/vision8_controls.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_key
+INFO: [VRFC 10-311] analyzing module vision8_controls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/vision8_fifo.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/vision8_slots.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_slots
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/vision8_base_axi.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_base_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/vision8_ddr.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_ddr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/vision8_frames.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_frames
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/menu8_renderer.v" into library work
+INFO: [VRFC 10-311] analyzing module menu8_renderer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/vision8_uart.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_uart
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/vision8_ascii.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_ascii
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/rtl/vision8_count_filter.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_count_filter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/sim/inline_reference/parallel_video_original.v" into library work
+INFO: [VRFC 10-311] analyzing module parallel_video_original
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/sim/inline_reference/vision6_overlay_original.v" into library work
+INFO: [VRFC 10-311] analyzing module vision6_overlay_original
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/sim/tb_inline_video_defaults.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_inline_video_defaults
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/sim/tb_inline_video_dynamic.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_inline_video_dynamic

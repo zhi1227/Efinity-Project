@@ -1,0 +1,194 @@
+[
+  {
+    "path": "example_top.v",
+    "before_sha256": "7faf098fec56802ac296a2bdd3ed1adaa7833a5491677124be6ccc9c52e26b8f",
+    "after_sha256": "527e8a612921f8f51584505c332fdac6c5001a1450ba984a3a79d7158c122ccf",
+    "purpose": "capture/keys/integration"
+  },
+  {
+    "path": "menu_font.hex",
+    "before_sha256": "009711f7fab281ef598f70f21c0f4049fdabc7c8f7e4e85013de2b815c58360d",
+    "after_sha256": "09431667301bd4ff968a52c5cf7dfb631def6590e807f63a9c879ceb6fe1435c",
+    "purpose": "font generation"
+  },
+  {
+    "path": "menu_font_bank0.hex",
+    "before_sha256": "118a26b3e918636fdc5abd767a582fc61459451a60cbcadc413721cc77255f34",
+    "after_sha256": "b811022c52f1b9d218075af0a02e2ea1360108157b85cb8b120d3d18e02b4349",
+    "purpose": "font generation"
+  },
+  {
+    "path": "menu_font_bank1.hex",
+    "before_sha256": "c7a51da6f63b01c9c6c578c0fc6e9d629ed90c13cb1e26f18aca24def64d8907",
+    "after_sha256": "e2fc766e8531f5656f5ce86801c8ea5fd2d56ec29155075c31b8353e057d8a3b",
+    "purpose": "font generation"
+  },
+  {
+    "path": "menu_font_bank2.hex",
+    "before_sha256": "7b2f0732afbcedab7f34b09bdfa239767ea98a9639cf617ce86f005f04fc7a4e",
+    "after_sha256": "2b0b2cd7c400ae649649defc2edb661b7fb840e29df8713737f104a64fb5c5ba",
+    "purpose": "font generation"
+  },
+  {
+    "path": "menu_font_bank3.hex",
+    "before_sha256": "f66cd3a409478d6825d1702176a7a58342861bff7a9a4e458bd953736d745bb4",
+    "after_sha256": "5d83bb89a6fe1386283bf723cf434c3cd0896dd2f530c7d34495fd015260855a",
+    "purpose": "font generation"
+  },
+  {
+    "path": "menu_font_bank4.hex",
+    "before_sha256": "2f0de5cf474c2bad0406ca184e8833249bf76c7c8187ce3ce7da5ef74769b6b1",
+    "after_sha256": "99f37f8307f5207c5caa6eb5481d7812063429a51fa290616b66552219e3d8f8",
+    "purpose": "font generation"
+  },
+  {
+    "path": "rtl/menu8_renderer.v",
+    "before_sha256": "c4175ed7a7c0e3707cf44876180c3181ab05311a809111a0a0c2a270598f5e0d",
+    "after_sha256": "f83db8b331f756c39eb84c501e9448f2700ba8bfc7737af87e2cd9dfeeb2a508",
+    "purpose": "capture/keys/integration"
+  },
+  {
+    "path": "rtl/menu_glyph_rom.v",
+    "before_sha256": "109143d06dfbe59fa786e34cd726a9764ccab295cca2a190b590ef894d211e8a",
+    "after_sha256": "de9e89c344d2b4cb3e295a6b71a2a18d22c897b0ee2236dc4a7e286e88afc035",
+    "purpose": "font generation"
+  },
+  {
+    "path": "rtl/shared_glyph_rom.v",
+    "before_sha256": "1c69fa957f1a4fd11dcd52a19a65babfae08a769a8ee993a484e2f36b37a8eef",
+    "after_sha256": "c7df447ee8bae5db143ee94961caa0554017a290973e3a3314c5a8cb4039564e",
+    "purpose": "font generation"
+  },
+  {
+    "path": "rtl/vision6_glyph_rom.v",
+    "before_sha256": "09ce24462b9d48fd0e64800c0c697e641399f40ead38b0d67f6160cff6f86bbd",
+    "after_sha256": "23c51441cd9577b679c1cd6e9026b193592d3a9c4fbdedaf6649ea1d5931187c",
+    "purpose": "font generation"
+  },
+  {
+    "path": "rtl/vision8_base_axi.v",
+    "before_sha256": "22ba12fa68b828ff9ff35fb3663727fb3f40762e166bd2e249bdd471d346c663",
+    "after_sha256": "38f9d2b965bc2c0f88f7611ca9b29f471699249a0aed94cfc3cfc0aa87174112",
+    "purpose": "capture/keys/integration"
+  },
+  {
+    "path": "rtl/vision8_controls.v",
+    "before_sha256": "51c4cc010164d920efd640ea8c71c31219e6162224665c68936f7b7ac265a74a",
+    "after_sha256": "bfed28e1b1e79525ff52d48ea70bb68ca0eb4042a618ea4ab51ba1dda92fa909",
+    "purpose": "capture/keys/integration"
+  },
+  {
+    "path": "rtl/vision8_ddr.v",
+    "before_sha256": "f95171020e1966e035f052509ed53faf360794d731b1dc5f44d5b5a2e10cc4c4",
+    "after_sha256": "0e8af7b08ee1ba083a16b87d678e1656e3f0d4296b6cd965ae8b5d9257746a74",
+    "purpose": "capture/keys/integration"
+  },
+  {
+    "path": "rtl/vision8_frames.v",
+    "before_sha256": "12f0b5cdb9a6523c2f02d72ad0e7783f34b522bdbb5bae8797d58b1e106efb0c",
+    "after_sha256": "2ff1503eff93774254620d7fcababb258662c8410095adad0ea8dbb7b420c66e",
+    "purpose": "capture/keys/integration"
+  },
+  {
+    "path": "shared_font.hex",
+    "before_sha256": "28b54dd46b8295aed7ab1b27aa2038bc2608dd23258c84cf6abb95da4c60002f",
+    "after_sha256": "ea57cebe54000d81505b32814e5e39da14e5831c8749bef3a8482af509a46bc9",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_bank0.hex",
+    "before_sha256": "118a26b3e918636fdc5abd767a582fc61459451a60cbcadc413721cc77255f34",
+    "after_sha256": "b811022c52f1b9d218075af0a02e2ea1360108157b85cb8b120d3d18e02b4349",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_bank1.hex",
+    "before_sha256": "0ee90ec69ade33efa83a206348cc7885b8145c5cd3345b5f7531ee71ae9d1d8e",
+    "after_sha256": "078b56e2642ec146bbaa600eb1a1925a8402f826e99c52b3d96d0d9cceb5bd30",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_bank2.hex",
+    "before_sha256": "bed8bae91125f8331602e5a7c10869ab47668b522c84e8633783f96ad1ea745c",
+    "after_sha256": "0f7c48113c2da9e8f6ed4227ea0cb5d407fab99065fdb85bce6e441bc20cd7d5",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_bank3.hex",
+    "before_sha256": "c57da86027b4747bad529b31fc55c98429d37e243f5da8a1af3c80d1ba81eb0e",
+    "after_sha256": "823bae68f3f7b45f438e823b4c571baa6d53f1d95429c12b12c7700f9b2b043e",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_bank4.hex",
+    "before_sha256": "4cd5cb11c37eb2a9dfa860e226f9045cd48a09acc3cb0e194f91d43bb8e9dfab",
+    "after_sha256": "f25f936a3dc976bd937c74acb972c76c4c158676ff0d00a2168f0ab2180a74a1",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_bank5.hex",
+    "before_sha256": "8cd34c2d6ec3af55f1f87728e5f0365aa658ccda9d08d510355d39533c68d6f8",
+    "after_sha256": "8a5fac3058cb69f0e69258b27c8440d8018013760d8f61cbc53f27633a07c816",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_bank6.hex",
+    "before_sha256": "e3e2e9e7422c01295532a09d8244501d204754d8fb7b4ac231258d58525917bc",
+    "after_sha256": "6adb172fe54a361b94fc6a19354a6acba17a59a537c6f203f0d9140817e216f1",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_bank7.hex",
+    "before_sha256": "f2a77489edd0c3e292f0328c1c7cbf84def69cc9b0eae11e3e4831b354d9a277",
+    "after_sha256": "bb1c8501d217132d0c088e8a1c3d647166db0d11b3e8cea085e2a3613ab5d50a",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_bank8.hex",
+    "before_sha256": "bbcd35d5a54a60649d586e03c1e4b885b936ff172992b4691cc25cddf896761f",
+    "after_sha256": "7e3a7c0a892bbea3e8b2f40c2988adb57ce39c43fdc55b1032a2f6cb1f809d43",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_index_bank0.hex",
+    "before_sha256": "855ec240b1705e11613b45ab6d4a059b6e8f7693665a54d33ddb368351925079",
+    "after_sha256": "9f4f21c082a745ff0ecf570d0d7d750ed49a60fa560d3de5d0b1eaf98b5c6f8d",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_index_bank1.hex",
+    "before_sha256": "613a3358a58a706b1e07f54a2621bebee73fa64f13107e7736c1e18f9d4ad9cc",
+    "after_sha256": "0119a15c0c53fa751685bdba4909c0c288a42aaed69a0ffc9b0e84825bc0365f",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_index_bank2.hex",
+    "before_sha256": "36a8a92619037247ac3c421d8221a896b5b2925f7a9397b4ab1db9006352bec5",
+    "after_sha256": "2975f714a4f8f1ce3ddcd43303d55572aa2a06d046a9035579dfd85039dc8707",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_index_bank3.hex",
+    "before_sha256": "f2e2e16155b3eb331e94b2891b749d9d5c3853a2c542aa03d085d5e99dbcfb82",
+    "after_sha256": "4b113b867b075affa1230858f4bb2e221cb7d52a8f846ab8f32b3e132ea9ba6b",
+    "purpose": "font generation"
+  },
+  {
+    "path": "shared_font_index_bank4.hex",
+    "before_sha256": "05630fdddf9dedbc3d056156a7be8e51f40bba137e64f0eb9dc7f434464dcaa7",
+    "after_sha256": "c13f68c249fffd5090bb96bf5896cde0b7514c7f8415f65cb079c9c1eef0c569",
+    "purpose": "font generation"
+  },
+  {
+    "path": "src/parallel/vision8_modes.vh",
+    "before_sha256": null,
+    "after_sha256": "bd98e13ecb42b8c98544538b3536f5300ee9f78db4df7d58b7d785938090280b",
+    "purpose": "mode display mapping"
+  },
+  {
+    "path": "Ti60_Demo.pt.sdc",
+    "before_sha256": "32fe1a6c7ce73198c8a148ce3eda2b0059a72f81a3d9642cbd196d91d753efd6",
+    "after_sha256": "44731b0b1d26e9b0f8e5618e9666f3a4b82471c8212b7e088a0c1266d94ba92f",
+    "purpose": "capture/keys/integration"
+  }
+]

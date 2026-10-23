@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 20 23:54:58 2026
+# Process ID: 66624
+# Current directory: D:/Github_Project/fpga_build/capturefix_tb_capturefix_backpressure_debug_20261020T155450574129Z
+# Command line: xsim.exe -log D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\reports\capture_fix\tb_capturefix_backpressure_debug\20261020T155450574129Z\simulation.log -mode tcl -source {xsim.dir/tb_capturefix_backpressure_debug/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/reports/capture_fix/tb_capturefix_backpressure_debug/20261020T155450574129Z/simulation.log
+# Journal file: D:/Github_Project/fpga_build/capturefix_tb_capturefix_backpressure_debug_20261020T155450574129Z\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_capturefix_backpressure_debug/xsim_script.tcl
+# xsim {tb_capturefix_backpressure_debug} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+STATE  1 count=  12288 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  2 count=      0 bad=0 good=1 rbad=0 warm=0 dma=0
+STATE  3 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  4 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+STATE  5 count=      0 bad=0 good=1 rbad=0 warm=1 dma=0
+Fatal: W changed under stall owner=1 valid=1 last=0/0 data=24fe24fe24fe24fe24fe24fe24fe24fe/24fe24fe24fe24fe24fe24fe24fe244a empty=1 reset=0 snapshot=1 abort=0
+Time: 2995386408 ps  Iteration: 0  Process: /tb_capturefix_backpressure_debug/Always83_248  File: D:/Github_Project/fpga_build/capturefix_tb_capturefix_backpressure_debug_20261020T155450574129Z/sim/tb_capturefix_backpressure_debug.sv
+$finish called at time : 2995386408 ps : File "D:/Github_Project/fpga_build/capturefix_tb_capturefix_backpressure_debug_20261020T155450574129Z/ip/R0_FIFO_16/R0_FIFO_16.sv" Line 422
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 219.773 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 23:55:19 2026...

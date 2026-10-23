@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Oct 21 00:10:11 2026
+# Process ID: 67824
+# Current directory: D:/Github_Project/fpga_build/capturefix_finalreg_20261021T000134
+# Command line: xsim.exe -log D:\yilingsi_fpga\Efinity_Project\2026.10.20\10_20_ding_Ti60_Gesture5_6Key_CaptureFix\reports\capture_fix\final_regression\tb_menu_cdc6.log -mode tcl -source {xsim.dir/tb_menu_cdc6/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_6Key_CaptureFix/reports/capture_fix/final_regression/tb_menu_cdc6.log
+# Journal file: D:/Github_Project/fpga_build/capturefix_finalreg_20261021T000134\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_menu_cdc6/xsim_script.tcl
+# xsim {tb_menu_cdc6} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: CDC 1000 rapid changes, coherent payload, eventual state, reset recovery
+$finish called at time : 58272698 ps : File "D:/Github_Project/fpga_build/capturefix_finalreg_20261021T000134/sim/tb_menu_cdc6.sv" Line 29
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct 21 00:10:16 2026...

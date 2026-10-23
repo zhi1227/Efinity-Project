@@ -1,0 +1,134 @@
+[
+  {
+    "path": "example_top.v",
+    "kind": "modified",
+    "before_sha256": "527e8a612921f8f51584505c332fdac6c5001a1450ba984a3a79d7158c122ccf",
+    "after_sha256": "4c693a67817417b2879f66b30d562d991cd7a2f0165052dea10c6a05d8ecaa9f"
+  },
+  {
+    "path": "Ti60_Demo.pt.sdc",
+    "kind": "modified",
+    "before_sha256": "44731b0b1d26e9b0f8e5618e9666f3a4b82471c8212b7e088a0c1266d94ba92f",
+    "after_sha256": "7f77f0252c87daf2b6309eabf85105b0d96079d0de147f2cf6f9905801727688"
+  },
+  {
+    "path": "README_CaptureFix_6Key.md",
+    "kind": "modified",
+    "before_sha256": "0d58c5f6bc161864fac2b5adbd2d724ee85ba4d736dd4c4fda9397a4e30c30a6",
+    "after_sha256": "fa01467cad04f1ab698420a1791a2fe1445817c1e9b63578347dccd029274e4e"
+  },
+  {
+    "path": "README_核查报告整改_20261021.md",
+    "kind": "added",
+    "before_sha256": null,
+    "after_sha256": "1446b2fdfce006a66fd7303c51f7b828ad08e073bea313ebd207d1b93d5a1ff9"
+  },
+  {
+    "path": "rtl/vision8_frames.v",
+    "kind": "modified",
+    "before_sha256": "2ff1503eff93774254620d7fcababb258662c8410095adad0ea8dbb7b420c66e",
+    "after_sha256": "798eca9e4901275016f0483faf2dd644ec850c820ace2cd972930949baf3e342"
+  },
+  {
+    "path": "tools/capture_review_analysis.py",
+    "kind": "added",
+    "before_sha256": null,
+    "after_sha256": "57fa3ccd93d96ff79620d8f94fa1df3a870bf713c08cdc298e6f31be503db4d1"
+  },
+  {
+    "path": "tools/capture_review_build.py",
+    "kind": "added",
+    "before_sha256": null,
+    "after_sha256": "80e8f435f6120e4911744660e2f4320e443556962d15926f5fc07b7c845cdafb"
+  },
+  {
+    "path": "tools/capture_review_test.py",
+    "kind": "added",
+    "before_sha256": null,
+    "after_sha256": "7613d32de2de1f63b77b4f0f338439295dc33a826737211ec646a599b424f454"
+  },
+  {
+    "path": "tools/test_capturefix_cpu.py",
+    "kind": "modified",
+    "before_sha256": "c093393902317b1b8e0b5e2128406289128b3c2b5d580d26481c7eb81df78b8e",
+    "after_sha256": "150589c1d4bcb39cdd95e1839ba8c86f0e626f302611d12efea3f4036824c887"
+  },
+  {
+    "path": "tools/test_capturefix_ui.py",
+    "kind": "modified",
+    "before_sha256": "8e0e553cf7e38baa8af489868350f3a512f4d8e0674ed0f79a34b7f04d043343",
+    "after_sha256": "87b5ece52425d2c69b2502b38c8e41d600fc47967369b9d23f213a764bd4fa67"
+  },
+  {
+    "path": "tools/test_capture_review_verifier.py",
+    "kind": "added",
+    "before_sha256": null,
+    "after_sha256": "755b7cfbc7ce8639d9980c71b60da0879e7b22d925bfd23b6a4e5f4c4e84a391"
+  },
+  {
+    "path": "tools/verify_capturefix_delivery.py",
+    "kind": "modified",
+    "before_sha256": "c9eb9d4e5b71587a6b7de0a796616593c0f34198dbbe10a993d9abc4908310c0",
+    "after_sha256": "3de9e835cc58c9d997ac59d240c2c7eef8d94674ab411a27cda71dbee3b8f91b"
+  },
+  {
+    "path": "tools/verify_capture_review.py",
+    "kind": "added",
+    "before_sha256": null,
+    "after_sha256": "4e8c2a4fa32751014a9594cb7714eb71fac11407a408fece2344f41f79d7c3ff"
+  },
+  {
+    "path": "sim/tb_capturefix_chain.sv",
+    "kind": "modified",
+    "before_sha256": "431ae9a766d544bccd19d9e61abafcd0364baf3bdf764c4740944c8b495f91db",
+    "after_sha256": "76d7ed811e309f276643416d27da3c7bae230d3fa251ff996357e81d7c898e7b"
+  },
+  {
+    "path": "sim/tb_capturefix_menu.sv",
+    "kind": "modified",
+    "before_sha256": "0928dd0db3f2c297e8596e25934be3f7aa0198fb4a81c40b6e350320381cc214",
+    "after_sha256": "34b23062fa735c99d31b3c29bd4f1d1ad809d51c11d1d03c950b4cc9c819d0cc"
+  },
+  {
+    "path": "sim/tb_inline_cpu8.sv",
+    "kind": "modified",
+    "before_sha256": "600d67fc64296b36150245ff3150871f58dc0e1acdbbeac902dd7f9da2cb7a7a",
+    "after_sha256": "3a4049b590ca10f50870203190bb72221ac4e175e0c53bc424ab48bc0e03b9cd"
+  },
+  {
+    "path": "sim/tb_inline_video_dynamic.sv",
+    "kind": "modified",
+    "before_sha256": "2c5d182e58e066903d3761411e3a902e81c06db128420932badff2c0073fb4f9",
+    "after_sha256": "96d6910bd894c66c0e4c26ff559f4f356368a14ab54ceb745e5984877292b2e7"
+  },
+  {
+    "path": "sim/tb_review_controls.sv",
+    "kind": "added",
+    "before_sha256": null,
+    "after_sha256": "e0d984e170f30191824b756d9fa321c5e4f78290ba186b43fd11a7d7654d6182"
+  },
+  {
+    "path": "sim/tb_review_done_cdc.sv",
+    "kind": "added",
+    "before_sha256": null,
+    "after_sha256": "dffe4ad9a9a0f6dcce7cce15906be5e77eda6b288faed73424caf0239e87d4c6"
+  },
+  {
+    "path": "sim/tb_review_hdmi_text.sv",
+    "kind": "added",
+    "before_sha256": null,
+    "after_sha256": "d91a1d4afc170eec7f1bbafc9798a2ce89861c0f4810a2ecd1c0a5eb3fdb893b"
+  },
+  {
+    "path": "sim/tb_review_top.sv",
+    "kind": "added",
+    "before_sha256": null,
+    "after_sha256": "389c271574c94c95099053f4f285f00c8b6436e534944902aeb23a5548cf8aa6"
+  },
+  {
+    "path": "sim/tb_review_video_defaults.sv",
+    "kind": "added",
+    "before_sha256": null,
+    "after_sha256": "2c559141a52c0d58db8e250aea2e119e909ec702d7395e9b310b252f2166ed57"
+  }
+]

@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 20 02:41:13 2026
+# Process ID: 50304
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_menu8_pixels
+# Command line: xsim.exe -log ../reports/vision8/tb_menu8_pixels.log -mode tcl -source {xsim.dir/tb_menu8_pixels/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_menu8_pixels/../reports/vision8/tb_menu8_pixels.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_menu8_pixels\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_menu8_pixels/xsim_script.tcl
+# xsim {tb_menu8_pixels} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: UI scenario 0 mode 0 settings 0 digits 556 face 0 cards 1918
+PASS: UI scenario 1 mode 1 settings 0 digits 400 face 0 cards 1918
+PASS: UI scenario 2 mode 2 settings 0 digits 256 face 0 cards 1918
+PASS: UI scenario 3 mode 3 settings 0 digits 336 face 0 cards 1918
+PASS: UI scenario 4 mode 4 settings 0 digits 560 face 0 cards 1918
+PASS: UI scenario 5 mode 5 settings 0 digits 352 face 0 cards 1918
+PASS: UI scenario 6 mode 6 settings 0 digits 0 face 816 cards 1918
+PASS: UI scenario 7 mode 7 settings 0 digits 428 face 0 cards 1918
+PASS: UI scenario 8 mode 6 settings 0 digits 0 face 592 cards 1918
+PASS: UI scenario 9 mode 6 settings 0 digits 0 face 448 cards 1918
+PASS: UI scenario 10 mode 6 settings 0 digits 0 face 448 cards 1918
+PASS: UI scenario 11 mode 6 settings 0 digits 0 face 128 cards 1918
+PASS: UI scenario 12 mode 6 settings 1 digits 4480 face 249 cards 0
+PASS: UI scenario 13 mode 6 settings 1 digits 4480 face 249 cards 0
+PASS: UI scenario 14 mode 6 settings 1 digits 3808 face 0 cards 0
+PASS: UI scenario 15 mode 1 settings 0 digits 400 face 0 cards 1918
+PASS: UI scenario 16 mode 0 settings 0 digits 556 face 0 cards 1918
+PASS: all eight UI modes, independent full-screen thresholds, live values, face 8+/0/3/frozen/invalid, frame-based flow/wrap/retargeting, shared/local parity, health-independent output
+$finish called at time : 104465470 ns : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/tb_menu8_pixels.sv" Line 73
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:05:01 . Memory (MB): peak = 218.035 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 02:46:19 2026...

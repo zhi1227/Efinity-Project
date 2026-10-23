@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/rtl/vision8_ascii.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_ascii
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/rtl/vision8_frames.v" into library work
+INFO: [VRFC 10-311] analyzing module vision8_frames
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/yilingsi_fpga/Efinity_Project/2026.10.16/10_16_ding_Ti60_Vision8_IO28_ButtonFix/sim/tb_vision8_frames.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_vision8_frames

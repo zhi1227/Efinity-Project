@@ -1,0 +1,20 @@
+[
+  {
+    "run": "20261021T192010439630Z",
+    "pid": 53192,
+    "reason": "Redundant long full-resolution variant cancelled explicitly; first-published-complete-frame 720p acceptance remains running. No PASS claimed.",
+    "start": "2026-10-22T03:20:27.4377243+08:00"
+  },
+  {
+    "run": "20261021T192757358851Z",
+    "pid": 59288,
+    "reason": "Redundant long full-resolution variant cancelled explicitly; first-published-complete-frame 720p acceptance remains running. No PASS claimed.",
+    "start": "2026-10-22T03:28:14.3836103+08:00"
+  },
+  {
+    "run": "20261021T193126036473Z",
+    "pid": 23016,
+    "reason": "Redundant long full-resolution variant cancelled explicitly; first-published-complete-frame 720p acceptance remains running. No PASS claimed.",
+    "start": "2026-10-22T03:31:43.7074474+08:00"
+  }
+]

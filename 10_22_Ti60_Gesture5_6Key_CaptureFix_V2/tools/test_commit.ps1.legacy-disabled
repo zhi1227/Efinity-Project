@@ -1,0 +1,15 @@
+param([string]$VivadoBin='E:\Xilinx\Vivado\2019.2\bin')
+$ErrorActionPreference='Stop'
+Push-Location (Split-Path -Parent $PSScriptRoot)
+try {
+ [xml]$proj=Get-Content -LiteralPath 'Ti60_Demo.xml'
+ $sources=@($proj.project.design_info.design_file | ForEach-Object {$_.name} | Where-Object {$_ -like 'src/vision/*' -or $_ -like 'src/face/*' -or $_ -like 'src/parallel/*'})
+ & (Join-Path $VivadoBin 'xvlog.bat') '--sv' '-i' 'src/parallel' @sources 'sim/tb_menu_commit.sv'
+ if($LASTEXITCODE){throw 'xvlog failed'}
+ & (Join-Path $VivadoBin 'xelab.bat') 'tb_menu_commit' '-s' 'tb_menu_commit' '--relax'
+ if($LASTEXITCODE){throw 'xelab failed'}
+ & (Join-Path $VivadoBin 'xsim.bat') 'tb_menu_commit' '-runall' '-log' 'reports/tb_menu_commit.log'
+ if($LASTEXITCODE){throw 'xsim failed'}
+ if(!(Select-String -LiteralPath 'reports/tb_menu_commit.log' -SimpleMatch 'PASS:')){throw 'No PASS result'}
+ if(Select-String -LiteralPath 'reports/tb_menu_commit.log' -Pattern 'Fatal:|Error:'){throw 'Simulation failed'}
+} finally {Pop-Location}

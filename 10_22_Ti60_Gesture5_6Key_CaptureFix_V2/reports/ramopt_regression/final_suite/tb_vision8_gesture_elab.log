@@ -1,0 +1,36 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_vision8_gesture -s tb_vision8_gesture --relax -mt off 
+Turned off multi-threading.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.gesture_wizard(COUNTDOWN_FRAMES=...
+Compiling module work.gesture_skin_learn(WIDTH=128,HEI...
+Compiling module work.ep1_window7(WIDTH=128)
+Compiling module work.ep1_disk
+Compiling module work.line_buffer_3x3(WIDTH=128,DWIDTH...
+Compiling module work.ep1_morph(DILATE=1)
+Compiling module work.ep1_morph
+Compiling module work.video_delay(BITS=3,LATENCY=817)
+Compiling module work.raster_xy(WIDTH=128)
+Compiling module work.gesture_sample16
+Compiling module work.gesture_palm_evidence
+Compiling module work.gesture_templates
+Compiling module work.gesture_stabilizer(WIDTH=128,HEI...
+Compiling module work.gesture_wave(WIDTH=128,HEIGHT=96...
+Compiling module work.ep1_classify
+Compiling module work.ep1_gesture(WIDTH=128,HEIGHT=96,...
+Compiling module work.gesture_branch(SOURCE_TAGGED=1,C...
+Compiling module work.tb_vision8_gesture
+Built simulation snapshot tb_vision8_gesture
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_ramopt_final/xsim.dir/tb_vision8_gesture/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 20 03:06:43 2026...

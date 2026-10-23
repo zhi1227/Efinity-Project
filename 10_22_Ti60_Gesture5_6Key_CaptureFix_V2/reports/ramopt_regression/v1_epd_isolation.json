@@ -1,0 +1,148 @@
+{
+  "source_phase": "v1",
+  "canonical_production_manifest": "reports/ramopt_regression/v1_production_sha256.json",
+  "archived_production_inputs": "reports/ramopt_regression/v1_inputs",
+  "compile_sources": {
+    "rtl/shared_glyph_rom.v": "cbbf674867a2fcef69bd5b087bc4968c5606a37bc876132650f97ece5a38c486",
+    "vendor/EfxSapphireSoc.v": "c9ef878fe2a004046f5a7eb6298b5f3f73248a27130a340d31409f0e3789689f",
+    "rtl/menu_glyph_rom.v": "d1f338564c4ea8c4d13887a1e35e5b6ea2a82b633f42ff089536882413271e56",
+    "rtl/menu_renderer.v": "9bcee1b7b4e0183751b20666c6f3bbed2c3adb458d8e0ade7eab78fd48e0416c",
+    "rtl/menu8_renderer.v": "edba7a1523c47141efbed44eaaa53dae3a46f199e835a29f8895bdfeafed319a",
+    "rtl/menu_lcd_apb.v": "e9dcdfc1ab874cd417cbc81eb09065742b1b4787355c64ee33c62b4835bcda17",
+    "rtl/spi_write_byte.v": "6f39ac724cc4ab85d1902d7b29c8fabe4bc31ec803f36825964a765fe76c0848",
+    "rtl/epd_apb.v": "1774e2d826aeada6c428fd282c1a803e061f7b0a764ef63d2e3229e485258e13",
+    "rtl/riscv_menu_top.v": "5c26ffa1de6d293d52476d397345681265ba8f1f0c15a737f0e572afe4887c96",
+    "sim/tb_epd_cpu.sv": "674b31cbb077ae15e477cf2263571e75fe01d3d91ac4551395e0167376546b94"
+  },
+  "runtime_assets": {
+    "sim_epaper/EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol0.bin": "73decce2b7c0562cfa61578898bfe5632ea142c1f9b7bc4edf75f68ff6c19607",
+    "sim_epaper/EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol1.bin": "cedc4adb60165ac28ccf5c0f4e58b87dda821da021785a681e237e746e4d457f",
+    "sim_epaper/EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol2.bin": "f0da3a861721ecbc4edb16fce37f99a90a73885d7f7563df5f72570d66e53785",
+    "sim_epaper/EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol3.bin": "a0e8f4bfffa292608c5360c077ed969b907235f2335fc13703d9eeb848449199",
+    "sim_epaper/epaper.hex": "fc92f55f6e7191b70c6977a8c5c4423d334f559495592f47fe2ff526fddc03fa",
+    "sim_epaper/menu_font.hex": "e265e2ef135f000a275ec2a317a33fbdb34bb65c094cf9eeecd21c34df17edfb",
+    "sim_epaper/menu_font_bank0.hex": "21d31e807217ec84d611b840e251bb8493953c692ff578c472bec7b6a978d643",
+    "sim_epaper/menu_font_bank1.hex": "4d0d157dd3e07d981139535b755299a1d4566071789ee77255157281ad4148a8",
+    "sim_epaper/menu_font_bank2.hex": "d79680b81ab36b63a41993eec6efd273a01a3a933ffe130abf7349540312d8f5",
+    "sim_epaper/menu_font_bank3.hex": "d7dca27cecca95d64fd844e80db86b14c46eb7ef949dcdff8706e7edbea7742c",
+    "sim_epaper/menu_font_bank4.hex": "080f382b9b61188994d8b1edae828ab5ddf4444e54c93b5a4850f28757ff8a7d",
+    "sim_epaper/menu_font_bank5.hex": "bbba7e83626cd6f61ec6e3f43e3fd664f7544b746e8614661a36978ccad9745b",
+    "sim_epaper/shared_font.hex": "eab7faf1a964e66d8997c9c7e2133c5fab993ef0d7cb6311e797ca03e79f460a",
+    "sim_epaper/shared_font_bank0.hex": "21d31e807217ec84d611b840e251bb8493953c692ff578c472bec7b6a978d643",
+    "sim_epaper/shared_font_bank1.hex": "992dc029a15cb3936b3816d5eca3dce097a27ad13cfddcde5df4a16b68dbec89",
+    "sim_epaper/shared_font_bank2.hex": "7965aa223585c5a8326dd3e51d596a410295d953d0d2dd4b64eed24c036ee62f",
+    "sim_epaper/shared_font_bank3.hex": "823bae68f3f7b45f438e823b4c571baa6d53f1d95429c12b12c7700f9b2b043e",
+    "sim_epaper/shared_font_bank4.hex": "58b504c7d5eb8030d5f0433e5ac02284f0751b6c1a62dd5605d898be6f717aa5",
+    "sim_epaper/shared_font_bank5.hex": "8a5fac3058cb69f0e69258b27c8440d8018013760d8f61cbc53f27633a07c816",
+    "sim_epaper/shared_font_bank6.hex": "f27397d32f7e212edc1ed98ffefd1b5c40f08ec84936dd421a1c56e9f903c810",
+    "sim_epaper/shared_font_bank7.hex": "66f2b21d92b28b0910bb38706da89a82f02d89c73a4234abfa2c2416631c5311",
+    "sim_epaper/shared_font_bank8.hex": "1280d1998e94742e7118676425ffefc91b2dee18cf7984bf0b4f2b96c47c9f18",
+    "sim_epaper/shared_font_index_bank0.hex": "476f91a475dba05c08086c241d41f0e7ed65ec8b83cb07fc59266b3cd31991a5",
+    "sim_epaper/shared_font_index_bank1.hex": "8b9f47947b7fea4048c8c3601aea044b3dfc91ea773b0879c7236938999e424c",
+    "sim_epaper/shared_font_index_bank2.hex": "5f89d921e81d07b2ef1fa9d3c11c65d92f76bcd778d74d799139d7c8a9e6a918",
+    "sim_epaper/shared_font_index_bank3.hex": "c7195a663bd0c73922a79b985de8a5039aa1e52e5dbbfc1fcef014a8e207de58",
+    "sim_epaper/shared_font_index_bank4.hex": "2f25cf3c2918d18adf104ed4eb4c663698b1892d5bf65aaea4d6f3ee096f8a70",
+    "sim_epaper/vision6_font.hex": "f88dfb0ff6d7230160cdf59814f9b539352580b2eaa78251f72b5b1ced43d5aa",
+    "sim_epaper/vision6_font_bank0.hex": "7f12dbbe90c15b54ea3e1b271e985bc38cacad0434a7c83eac78613426ba7ae5",
+    "sim_epaper/vision6_font_bank1.hex": "76e5b2121d9ec12d2093aa07bdad7fcaab6da1c4e5e27395184b6b49922a1060",
+    "sim_epaper/vision6_font_bank2.hex": "e658476e4fa990e6b7b8f14d1f345e94fb0de955a1fce0864340906afa8f9eb8",
+    "sim_epaper/vision6_font_bank3.hex": "6e6b066c9ef810b097e81e6773955b9fb446d5184bda1a6e352de9f62802b6a6",
+    "sim_epaper/vision6_font_bank4.hex": "4e39aa8230bdcbd6cdb666206c4b1354bc718b4a9196f38cf8e312b06fc0225e",
+    "sim_epaper/vision6_font_bank5.hex": "aa60fdd5988e71133db38689d8fc74d4f940300d0d2a88f1a9d84dac4db62f43",
+    "sim_epaper/vision6_font_bank6.hex": "6c42269ada0cb46d2b1ebabda20253c29cfe53691b1832aa82095e09aec69bc1"
+  },
+  "compiled_snapshot_sha256": {
+    "sim_epaper/xsim.dir/tb_epd_cpu/xsimk.exe": "3a56815c9022430246ad34ec423a2f81be12475175cde89f41d4c43f1c85a8d7",
+    "sim_epaper/xsim.dir/tb_epd_cpu/xsim.mem": "824a096a3cc412b2b645b8af459bcdfcb8b92567b144cd04280c6527208ec390",
+    "sim_epaper/xsim.dir/tb_epd_cpu/xsim.reloc": "ad7fc73a37b595b4e71727d1c3102d676ffb057c16cb77a05ee24804398d7763",
+    "sim_epaper/xsim.dir/tb_epd_cpu/xsim.dbg": "d6f725d06de1a97d0100cfc3baf9b51005501cbacbaeb88606d364c18564c7f8",
+    "sim_epaper/xsim.dir/tb_epd_cpu/xsim.type": "cf1c5a4aa3dd8007f3756f2f3d607d67751cd98e99c8f5038c3f8b9fd06aa8c8",
+    "sim_epaper/xsim.dir/tb_epd_cpu/xsim.rtti": "c51f99e650fd5d7d1f91c1ae2b82a03ed104e8b7a54990e2c531d7b7ebed0ec3",
+    "sim_epaper/xsim.dir/tb_epd_cpu/xsim.svtype": "5e876731a1fd4c0c8ac0a3aff4befc5f7199f92bfa53d574c970498a201d24de",
+    "sim_epaper/xsim.dir/tb_epd_cpu/xsim.xdbg": "79a5ba43fcb6cf1078ad1027ba430779bd0fafd85f770f877c6ccfc07f86d453",
+    "sim_epaper/xsim.dir/tb_epd_cpu/Compile_Options.txt": "f11705e7a6eac7ac44403f58db9dcc1348ccd5f11648c45ae6b363eef5b33bdf",
+    "sim_epaper/xsim.dir/tb_epd_cpu/xsim_script.tcl": "c459d25fa27199f37a776e3e06e59ec5226a355711a2898230474dfd52c30786"
+  },
+  "readmem_sites": [
+    {
+      "file": "rtl/shared_glyph_rom.v",
+      "line": 1394,
+      "text": "initial $readmemh(\"shared_font_index_bank0.hex\",bank0);"
+    },
+    {
+      "file": "rtl/shared_glyph_rom.v",
+      "line": 1399,
+      "text": "initial $readmemh(\"shared_font_index_bank1.hex\",bank1);"
+    },
+    {
+      "file": "rtl/shared_glyph_rom.v",
+      "line": 1404,
+      "text": "initial $readmemh(\"shared_font_index_bank2.hex\",bank2);"
+    },
+    {
+      "file": "rtl/shared_glyph_rom.v",
+      "line": 1409,
+      "text": "initial $readmemh(\"shared_font_index_bank3.hex\",bank3);"
+    },
+    {
+      "file": "rtl/shared_glyph_rom.v",
+      "line": 1414,
+      "text": "initial $readmemh(\"shared_font_index_bank4.hex\",bank4);"
+    },
+    {
+      "file": "vendor/EfxSapphireSoc.v",
+      "line": 4754,
+      "text": "$readmemb(\"EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol0.bin\",ram_symbol0);"
+    },
+    {
+      "file": "vendor/EfxSapphireSoc.v",
+      "line": 4755,
+      "text": "$readmemb(\"EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol1.bin\",ram_symbol1);"
+    },
+    {
+      "file": "vendor/EfxSapphireSoc.v",
+      "line": 4756,
+      "text": "$readmemb(\"EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol2.bin\",ram_symbol2);"
+    },
+    {
+      "file": "vendor/EfxSapphireSoc.v",
+      "line": 4757,
+      "text": "$readmemb(\"EfxSapphireSoc.v_toplevel_system_ramA_logic_ram_symbol3.bin\",ram_symbol3);"
+    },
+    {
+      "file": "rtl/menu_glyph_rom.v",
+      "line": 705,
+      "text": "initial $readmemh(\"menu_font_bank0.hex\",bank0);"
+    },
+    {
+      "file": "rtl/menu_glyph_rom.v",
+      "line": 708,
+      "text": "initial $readmemh(\"menu_font_bank1.hex\",bank1);"
+    },
+    {
+      "file": "rtl/menu_glyph_rom.v",
+      "line": 711,
+      "text": "initial $readmemh(\"menu_font_bank2.hex\",bank2);"
+    },
+    {
+      "file": "rtl/menu_glyph_rom.v",
+      "line": 714,
+      "text": "initial $readmemh(\"menu_font_bank3.hex\",bank3);"
+    },
+    {
+      "file": "rtl/menu_glyph_rom.v",
+      "line": 717,
+      "text": "initial $readmemh(\"menu_font_bank4.hex\",bank4);"
+    },
+    {
+      "file": "sim/tb_epd_cpu.sv",
+      "line": 22,
+      "text": "$readmemh(\"epaper.hex\",pixels);"
+    }
+  ],
+  "isolation": "EPD xvlog/xelab finished and xsim is running. All readmem filenames resolve to immutable copies in sim_epaper; compiled snapshot embeds v1 RTL. Root production mutations cannot affect this v1 simulation. Do not rerun test_epaper or modify sim_epaper until complete.",
+  "snapshot_archive": "reports/ramopt_regression/v1_inputs/sim_epaper_snapshot",
+  "completed": "PASS",
+  "final_log": "reports/ramopt_regression/v1_evidence/tb_epd_cpu.log",
+  "all_runtime_assets_and_compiled_snapshot_unchanged_at_end": true
+}

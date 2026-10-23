@@ -1,0 +1,17 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/review_20261021T042411898270Z/rtl/camera_rgb_balance.v" into library work
+INFO: [VRFC 10-311] analyzing module camera_rgb_balance
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/review_20261021T042411898270Z/rtl/epd_apb.v" into library work
+INFO: [VRFC 10-311] analyzing module epd_apb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/review_20261021T042411898270Z/rtl/spi_write_byte.v" into library work
+INFO: [VRFC 10-311] analyzing module spi_write_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github_Project/fpga_build/review_20261021T042411898270Z/example_top.v" into library work
+INFO: [VRFC 10-311] analyzing module example_top
+INFO: [VRFC 10-2458] undeclared symbol pure_capture, assumed default net type wire [D:/Github_Project/fpga_build/review_20261021T042411898270Z/example_top.v:920]
+INFO: [VRFC 10-2458] undeclared symbol detect_maintenance, assumed default net type wire [D:/Github_Project/fpga_build/review_20261021T042411898270Z/example_top.v:920]
+INFO: [VRFC 10-2458] undeclared symbol skin_lower, assumed default net type wire [D:/Github_Project/fpga_build/review_20261021T042411898270Z/example_top.v:920]
+INFO: [VRFC 10-2458] undeclared symbol threshold_low, assumed default net type wire [D:/Github_Project/fpga_build/review_20261021T042411898270Z/example_top.v:923]
+INFO: [VRFC 10-2458] undeclared symbol threshold_high, assumed default net type wire [D:/Github_Project/fpga_build/review_20261021T042411898270Z/example_top.v:923]
+INFO: [VRFC 10-2458] undeclared symbol display_mode, assumed default net type wire [D:/Github_Project/fpga_build/review_20261021T042411898270Z/example_top.v:924]
+ERROR: [VRFC 10-2938] 'display_mode' is already implicitly declared on line 924 [D:/Github_Project/fpga_build/review_20261021T042411898270Z/example_top.v:1052]
+ERROR: [VRFC 10-2938] 'pure_capture' is already implicitly declared on line 920 [D:/Github_Project/fpga_build/review_20261021T042411898270Z/example_top.v:1053]
+ERROR: [VRFC 10-2865] module 'example_top' ignored due to previous errors [D:/Github_Project/fpga_build/review_20261021T042411898270Z/example_top.v:6]

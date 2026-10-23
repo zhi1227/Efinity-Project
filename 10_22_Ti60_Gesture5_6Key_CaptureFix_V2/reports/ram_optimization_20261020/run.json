@@ -1,0 +1,8 @@
+{
+  "original": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.19\\10_18_guo_Ti60_gesture5",
+  "optimized": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_ding_Ti60_Gesture5_RAM_Optimized",
+  "baseline_build": "D:\\yilingsi_fpga\\Efinity_Project\\2026.10.20\\10_20_Gesture5_RAM_Baseline",
+  "original_files": 1035,
+  "started_utc": "2026-10-19T18:28:13.251577+00:00",
+  "copy_seconds": 3.09
+}

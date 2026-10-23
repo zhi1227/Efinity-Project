@@ -1,0 +1,804 @@
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:14] No valid object(s) found for 'dsi_refclk_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:14] No valid pin(s) found for clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:14] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:24] No valid object(s) found for 'clk_pixel_2x'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:24] No valid pin(s) found for clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:24] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:29] No valid object(s) found for 'clk_54m'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:29] No valid pin(s) found for clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:29] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:33] No valid pin(s) found for clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:33] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:35] set_clock_groups: Defaulting to -exclusive since none of the required option was specified
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:341] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:341] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:342] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:342] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:347] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:347] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:348] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:348] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:546] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:546] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:546] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:547] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:547] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:547] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:548] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:548] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:548] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:549] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:549] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:549] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:550] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:550] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:550] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:551] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:551] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:551] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:552] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:552] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:552] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:553] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:553] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:553] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:554] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:554] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:554] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:555] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:555] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:555] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:556] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:556] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:556] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:557] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:557] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:557] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:558] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:558] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:558] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:559] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:559] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:559] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:560] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:560] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:560] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:561] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:561] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:561] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:562] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:562] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:562] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:563] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:563] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:563] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:564] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:564] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:564] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:565] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:565] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:565] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:566] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:566] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:566] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:567] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:567] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:567] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:568] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:568] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:568] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:569] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:569] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:569] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:570] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:570] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:570] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:571] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:571] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:571] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:572] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:572] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:572] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:573] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:573] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:573] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:574] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:574] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:574] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:575] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:575] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:575] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:576] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:576] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:576] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:577] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:577] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:577] Unable to run 'set_input_delay' constraint due to warnings found
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Router Setup
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : High utilization design detected; tuning for routability.
+INFO     : [Setup Parallel Routing Scheduler]
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Route Circuit with 32 threads
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Beneficial skew enabled! Optimizing clock skews ... 
+INFO     : Non-legalized beneficial skew improved geomean CPD by 0.17% (from 4100ps to 4093ps)
+INFO     : CSS improved CPD of clock tdqss_clk by 0.00% (from 1917ps to 1917ps)
+INFO     : CSS improved CPD of clock core_clk by 0.00% (from 4391ps to 4391ps)
+INFO     : CSS improved CPD of clock tac_clk by 0.00% (from 2068ps to 2068ps)
+INFO     : CSS improved CPD of clock twd_clk by 0.00% (from 1915ps to 1915ps)
+INFO     : CSS improved CPD of clock clk_sys by 0.00% (from 7438ps to 7438ps)
+INFO     : CSS improved CPD of clock clk_pixel by 0.00% (from 9417ps to 9417ps)
+INFO     : CSS improved CPD of clock clk_lvds_1x by 0.00% (from 11285ps to 11285ps)
+INFO     : CSS improved CPD of clock cmos_pclk by 0.00% (from 3036ps to 3036ps)
+INFO     : Discretized beneficial skew improved geomean CPD by 0.00% (from 4100ps to 4100ps in 5 iterations and 0.9 sec)
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Overridding delay budgets for 560 synchronizer-related pins
+
+INFO     : Iter  1: overlap=149938  heapops=12758944   (0%) cpd=243   frr=1.00  msec=4939
+INFO     : [Setup Delay Budgets | 894.7 ms]
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Hold Fixing
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Total min wire delay:  17814603
+INFO     : Hold fix wire delay:        480
+INFO     : Hold fix delay ratio:     0.00%
+INFO     : Pins requiring hold fix:  0.00%
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Iter  2: overlap=79987   heapops=11555253   (17%) cpd=243   frr=1.00  msec=2562
+INFO     : Iter  3: overlap=59705   heapops=11332380   (24%) cpd=243   frr=1.00  msec=2609
+INFO     : Iter  4: overlap=46975   heapops=10996367   (32%) cpd=243   frr=1.00  msec=2533
+INFO     : Iter  5: overlap=35895   heapops=10656813   (39%) cpd=243   frr=1.00  msec=2502
+INFO     : Iter  6: overlap=26803   heapops=10020324   (46%) cpd=243   frr=1.00  msec=2501
+INFO     : Iter  7: overlap=19357   heapops=9255863    (53%) cpd=243   frr=1.00  msec=2420
+INFO     : Iter  8: overlap=13188   heapops=8023644    (62%) cpd=243   frr=1.00  msec=2142
+INFO     : [Rebuild Parallel Routing Scheduler]
+INFO     : Iter  9: overlap=8425    heapops=6558348    (69%) cpd=243   frr=1.00  msec=2079
+INFO     : Iter 10: overlap=4965    heapops=5201704    (78%) cpd=243   frr=1.00  msec=1957
+INFO     : Iter 11: overlap=2692    heapops=3574730    (83%) cpd=243   frr=1.00  msec=1544
+INFO     : [Rebuild Parallel Routing Scheduler]
+INFO     : Iter 12: overlap=1243    heapops=2346015    (88%) cpd=243   frr=1.00  msec=1384
+INFO     : Iter 13: overlap=467     heapops=1336328    (90%) cpd=243   frr=1.00  msec=969
+INFO     : Iter 14: overlap=206     heapops=668365     (91%) cpd=243   frr=1.00  msec=713
+INFO     : [Rebuild Parallel Routing Scheduler]
+INFO     : Iter 15: overlap=90      heapops=447822     (92%) cpd=243   frr=1.00  msec=821
+INFO     : Iter 16: overlap=41      heapops=222087     (92%) cpd=243   frr=1.00  msec=485
+INFO     : Iter 17: overlap=21      heapops=274862     (92%) cpd=243   frr=1.00  msec=525
+INFO     : Iter 18: overlap=12      heapops=610158     (92%) cpd=243   frr=1.00  msec=678
+INFO     : Iter 19: overlap=7       heapops=406769     (92%) cpd=243   frr=1.00  msec=590
+INFO     : Iter 20: overlap=3       heapops=143326     (92%) cpd=243   frr=1.00  msec=500
+INFO     : Iter 21: overlap=2       heapops=139579     (92%) cpd=243   frr=1.00  msec=462
+INFO     : Iter 22: overlap=1       heapops=140005     (92%) cpd=243   frr=1.00  msec=452
+INFO     : Iter 23: overlap=1       heapops=138045     (92%) cpd=243   frr=1.00  msec=468
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Beneficial skew enabled! Optimizing clock skews ... 
+INFO     : Non-legalized beneficial skew improved geomean CPD by 0.00% (from 4348ps to 4348ps)
+INFO     : CSS improved CPD of clock tdqss_clk by 0.00% (from 1932ps to 1932ps)
+INFO     : CSS improved CPD of clock core_clk by 0.00% (from 4631ps to 4631ps)
+INFO     : CSS improved CPD of clock tac_clk by 0.00% (from 2095ps to 2095ps)
+INFO     : CSS improved CPD of clock twd_clk by -0.59% (from 2038ps to 2050ps)
+INFO     : CSS improved CPD of clock clk_sys by 0.00% (from 7654ps to 7654ps)
+INFO     : CSS improved CPD of clock clk_pixel by 0.53% (from 10437ps to 10382ps)
+INFO     : CSS improved CPD of clock clk_lvds_1x by 0.00% (from 13495ps to 13495ps)
+INFO     : CSS improved CPD of clock cmos_pclk by 0.00% (from 3106ps to 3106ps)
+INFO     : Discretized beneficial skew improved geomean CPD by -0.02% (from 4348ps to 4349ps in 1 iterations and 1.0 sec)
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Iter 24: overlap=0       heapops=145354     (92%) cpd=243   frr=1.00  msec=1534
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing Result
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing Succeeded in 40.11 seconds taking 24 iterations! 
+INFO     : 
+INFO     : First iteration critical path delay = 0.243 ns 
+INFO     : Last iteration critical path delay  = 0.243 ns (ratio = 1.00)
+INFO     : Max Routing Heap Size = 98,973
+INFO     : Routing trace written to file 'outflow\Ti60_Demo.troutingtraces' 
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing took 46.8688 seconds.
+INFO     : 	Routing took 219.562 seconds (approximately) in total CPU time.
+INFO     : Routing virtual memory usage: begin = 394.812 MB, end = 613.316 MB, delta = 218.504 MB
+INFO     : 	Routing peak virtual memory usage = 2816.83 MB
+INFO     : Routing resident set memory usage: begin = 398.532 MB, end = 608.424 MB, delta = 209.892 MB
+INFO     : 	Routing peak resident set memory usage = 2826.57 MB
+           ***** Beginning stage final timing analysis ... *****
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:14] No valid object(s) found for 'dsi_refclk_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:14] No valid pin(s) found for clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:14] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:24] No valid object(s) found for 'clk_pixel_2x'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:24] No valid pin(s) found for clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:24] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:29] No valid object(s) found for 'clk_54m'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:29] No valid pin(s) found for clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:29] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:33] No valid pin(s) found for clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:33] Unable to run 'create_clock' constraint due to warnings found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:35] set_clock_groups: Defaulting to -exclusive since none of the required option was specified
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No clocks matched 'csi_rxc_i'
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:341] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:341] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_hi[0]'
+WARNING  : No ports matched 'i_dqs_n_lo[0]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:342] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:342] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:347] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:347] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'i_dqs_n_lo[1]'
+WARNING  : No ports matched 'i_dqs_n_hi[1]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:348] set_input_delay: No valid input port(s) found
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:348] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:546] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:546] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:546] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:547] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:547] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:547] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:548] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:548] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:548] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:549] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:549] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:549] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:550] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:550] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:550] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:551] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:551] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:551] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:552] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:552] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:552] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~278'
+WARNING  : No ports matched 'csi_rxd0_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:553] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:553] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:553] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:554] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:554] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:554] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:555] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:555] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:555] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:556] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:556] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:556] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:557] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:557] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:557] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:558] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:558] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:558] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:559] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:559] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:559] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:560] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:560] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:560] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~294'
+WARNING  : No ports matched 'csi_rxd1_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:561] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:561] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:561] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:562] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:562] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:562] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:563] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:563] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:563] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:564] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:564] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:564] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:565] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:565] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:565] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:566] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:566] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:566] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:567] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:567] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:567] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:568] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:568] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:568] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~245'
+WARNING  : No ports matched 'csi_rxd2_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:569] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:569] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:569] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:570] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:570] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:570] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_rd_o'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:571] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:571] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:571] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:572] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:572] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:572] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:573] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:573] set_output_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:573] Unable to run 'set_output_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:574] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:574] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:574] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_fifo_empty_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:575] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:575] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:575] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:576] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:576] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:576] Unable to run 'set_input_delay' constraint due to warnings found
+WARNING  : No ports matched 'csi_rxc_i~CLKOUT~218~255'
+WARNING  : No ports matched 'csi_rxd3_hs_i[*]'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:577] No clocks matched 'csi_rxc_i'
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:577] set_input_delay: No valid clock found for -clock
+WARNING  : [SDC D:/Github_Project/fpga_build/inline_threshold_20261020_final/Ti60_Demo.pt.sdc:577] Unable to run 'set_input_delay' constraint due to warnings found
+Maximum possible analyzed clocks frequency
+ Clock Name  Period (ns)  Frequency (MHz)     Edge
+tdqss_clk        2.042       489.716         (R-R)
+core_clk         4.741       210.926         (R-R)
+tac_clk          2.205       453.515         (R-R)
+twd_clk          2.148       465.549         (R-R)
+clk_sys          7.764       128.800         (R-R)
+clk_pixel       10.492        95.311         (R-R)
+clk_lvds_1x     13.605        73.502         (R-R)
+cmos_pclk        6.432       155.473         (F-R)
+
+Geomean max period: 4.890
+
+Setup (Max) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+  tdqss_clk        tdqss_clk            2.604            0.562           (R-R)
+  tdqss_clk        core_clk             2.604            1.814           (R-R)
+  core_clk         tdqss_clk            2.604            1.115           (R-R)
+  core_clk         core_clk             5.208            0.467           (R-R)
+  core_clk         tac_clk              2.604            2.011           (R-R)
+  core_clk         twd_clk              0.541            0.298           (R-R)
+  tac_clk          core_clk             2.604            1.739           (R-R)
+  tac_clk          tac_clk              2.604            0.399           (R-R)
+  twd_clk          twd_clk              2.604            0.456           (R-R)
+  clk_sys          clk_sys             10.417            2.653           (R-R)
+  clk_pixel        clk_pixel           13.441            2.949           (R-R)
+  clk_pixel        clk_lvds_1x         15.000           13.873           (R-R)
+  clk_lvds_1x      clk_pixel           15.000           14.494           (R-R)
+  clk_lvds_1x      clk_lvds_1x         20.833            7.228           (R-R)
+  cmos_pclk        cmos_pclk           10.000            6.313           (R-R)
+  cmos_pclk        cmos_pclk            5.000            1.784           (F-R)
+
+Hold (Min) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+  tdqss_clk        tdqss_clk            0.000           0.100            (R-R)
+  tdqss_clk        core_clk             0.000           0.146            (R-R)
+  core_clk         tdqss_clk            0.000           0.055            (R-R)
+  core_clk         core_clk             0.000           0.029            (R-R)
+  core_clk         tac_clk              0.000           0.049            (R-R)
+  core_clk         twd_clk             -1.883           2.026            (R-R)
+  tac_clk          core_clk             0.000           0.169            (R-R)
+  tac_clk          tac_clk              0.000           0.030            (R-R)
+  twd_clk          twd_clk              0.000           0.040            (R-R)
+  clk_sys          clk_sys              0.000           0.030            (R-R)
+  clk_pixel        clk_pixel            0.000           0.026            (R-R)
+  clk_lvds_1x      clk_lvds_1x          0.000           0.031            (R-R)
+  cmos_pclk        cmos_pclk            0.000           0.095            (R-R)
+  cmos_pclk        cmos_pclk           -5.000           6.050            (F-R)
+
+INFO     : Write Timing Report to "outflow\Ti60_Demo.timing.rpt" ...
+INFO     : final timing analysis took 25.854 seconds.
+INFO     : 	final timing analysis took 28.8125 seconds (approximately) in total CPU time.
+INFO     : final timing analysis virtual memory usage: begin = 675.012 MB, end = 827.744 MB, delta = 152.732 MB
+INFO     : 	final timing analysis peak virtual memory usage = 2816.83 MB
+INFO     : final timing analysis resident set memory usage: begin = 665.584 MB, end = 805.02 MB, delta = 139.436 MB
+INFO     : 	final timing analysis peak resident set memory usage = 2826.57 MB
+           ***** Ending stage final timing analysis *****
+           
+           ***** Beginning stage netlist pre-processing ... *****
+INFO     : Successfully Read in Verific binary Netlist dump file "outflow\Ti60_Demo.vdb".
+INFO     : ***** Beginning VDB Netlist Checker ... *****
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(11): Input/inout port clk_24m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(12): Input/inout port clk_25m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(21): Input/inout port clk_pixel_2x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(22): Input/inout port clk_pixel_10x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(30): Input/inout port dsi_refclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(31): Input/inout port dsi_byteclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(32): Input/inout port dsi_serclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(33): Input/inout port dsi_txcclk_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(61): Input/inout port clk_lvds_7x is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(62): Input/inout port clk_27m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(63): Input/inout port clk_54m is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(97): Input/inout port i_dqs_n_hi[1] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(98): Input/inout port i_dqs_n_lo[1] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(121): Input/inout port csi_ctl0_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(125): Input/inout port csi_ctl1_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(129): Input/inout port csi_scl_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(133): Input/inout port csi_sda_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(136): Input/inout port csi_rxc_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(137): Input/inout port csi_rxc_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(140): Input/inout port csi_rxc_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(147): Input/inout port csi_rxd0_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(148): Input/inout port csi_rxd0_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(149): Input/inout port csi_rxd0_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(156): Input/inout port csi_rxd1_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(157): Input/inout port csi_rxd1_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(158): Input/inout port csi_rxd1_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(165): Input/inout port csi_rxd2_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(166): Input/inout port csi_rxd2_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(167): Input/inout port csi_rxd2_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(174): Input/inout port csi_rxd3_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(175): Input/inout port csi_rxd3_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(176): Input/inout port csi_rxd3_hs_i[7] is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(235): Input/inout port dsi_txd0_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(236): Input/inout port dsi_txd0_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(237): Input/inout port dsi_txd1_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(238): Input/inout port dsi_txd1_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(239): Input/inout port dsi_txd2_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(240): Input/inout port dsi_txd2_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(241): Input/inout port dsi_txd3_lp_p_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(242): Input/inout port dsi_txd3_lp_n_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(269): Input/inout port cmos_ctl1_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(272): Input/inout port cmos_ctl2_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(275): Input/inout port cmos_ctl3_i is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(324): Input/inout port key_mode_n is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(329): Input/inout port key_freeze_n is unconnected and will be removed. [VDB-8003]
+WARNING  : D:\Github_Project\fpga_build\inline_threshold_20261020_final\example_top.v(332): Input/inout port flash_data_i[3] is unconnected and will be removed. [VDB-8003]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4] is dangling. [VDB-8009]
+WARNING  : Net u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5] is dangling. [VDB-8009]
+WARNING  : CE port of EFX_DSP48 instance u_parallel/u_shape/mult_53 is permanently disabled [VDB-8002]
+WARNING  : CE port of EFX_DSP48 instance u_parallel/u_shape/mult_54 is permanently disabled [VDB-8002]
+WARNING  : Found 87 warnings in the post-synthesis netlist.
+INFO     : VDB Netlist Checker took 0.0675402 seconds.
+INFO     : 	VDB Netlist Checker took 0.078125 seconds (approximately) in total CPU time.
+INFO     : VDB Netlist Checker virtual memory usage: begin = 651.68 MB, end = 651.752 MB, delta = 0.072 MB
+INFO     : 	VDB Netlist Checker peak virtual memory usage = 2816.83 MB
+INFO     : VDB Netlist Checker resident set memory usage: begin = 647.784 MB, end = 647.868 MB, delta = 0.084 MB
+INFO     : 	VDB Netlist Checker peak resident set memory usage = 2826.57 MB
+INFO     : ***** Ending VDB Netlist Checker ... *****
+INFO     : Writing netlist 'example_top' to Verilog file 'outflow\Ti60_Demo.prevpr.v' [VDB-1030]
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Net clk_pixel_10x promoted to global due to interface constraints.
+INFO     : Net clk_lvds_7x promoted to global due to interface constraints.
+INFO     : Net clk_27m promoted to global due to interface constraints.
+INFO     : Net dsi_serclk_i promoted to global due to interface constraints.
+INFO     : Net dsi_byteclk_i promoted to global due to interface constraints.
+INFO     : Net dsi_txcclk_i promoted to global due to interface constraints.
+INFO     : Found 0 constant generator nets.
+INFO     : Pass 0: Swept away 6 nets with no fanout.
+INFO     : logical_block #0(clk_24m) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #1(clk_25m) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #5(clk_pixel_2x) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #9(dsi_refclk_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #33(clk_54m) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #149(i_dqs_n_hi[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #150(i_dqs_n_hi[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #151(i_dqs_n_lo[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #152(i_dqs_n_lo[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #171(csi_ctl0_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #174(csi_ctl1_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #177(csi_scl_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #180(csi_sda_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #181(csi_rxc_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #182(csi_rxc_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #185(csi_rxc_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #189(csi_rxd0_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #190(csi_rxd0_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #191(csi_rxd0_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #192(csi_rxd0_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #193(csi_rxd0_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #194(csi_rxd0_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #195(csi_rxd0_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #196(csi_rxd0_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #197(csi_rxd0_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #198(csi_rxd0_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #202(csi_rxd1_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #203(csi_rxd1_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #204(csi_rxd1_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #205(csi_rxd1_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #206(csi_rxd1_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #207(csi_rxd1_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #208(csi_rxd1_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #209(csi_rxd1_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #210(csi_rxd1_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #211(csi_rxd1_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #215(csi_rxd2_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #216(csi_rxd2_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #217(csi_rxd2_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #218(csi_rxd2_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #219(csi_rxd2_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #220(csi_rxd2_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #221(csi_rxd2_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #222(csi_rxd2_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #223(csi_rxd2_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #224(csi_rxd2_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #228(csi_rxd3_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #229(csi_rxd3_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #230(csi_rxd3_hs_i[7]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #231(csi_rxd3_hs_i[6]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #232(csi_rxd3_hs_i[5]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #233(csi_rxd3_hs_i[4]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #234(csi_rxd3_hs_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #235(csi_rxd3_hs_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #236(csi_rxd3_hs_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #237(csi_rxd3_hs_i[0]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #310(dsi_txd0_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #311(dsi_txd0_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #312(dsi_txd1_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #313(dsi_txd1_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #314(dsi_txd2_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #315(dsi_txd2_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #316(dsi_txd3_lp_p_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #317(dsi_txd3_lp_n_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #343(cmos_ctl1_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #346(cmos_ctl2_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #349(cmos_ctl3_i) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #449(key_mode_n) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #454(key_freeze_n) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #463(flash_data_i[3]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #464(flash_data_i[2]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #465(flash_data_i[1]) has no fanout.
+INFO     : Removing input.
+INFO     : logical_block #466(flash_data_i[0]) has no fanout.
+INFO     : Removing input.
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF #15847 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF #16205 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF #16206 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF #16207 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF #16208 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF #16209 has no fanout. Check synthesis flow
+INFO     : Pass 0: Swept away 73 blocks with no fanout.
+INFO     : Pass 1: Swept away 0 nets with no fanout.
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[0]~FF #15847 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[1]~FF #16205 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[2]~FF #16206 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[3]~FF #16207 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[4]~FF #16208 has no fanout. Check synthesis flow
+WARNING  : logical_block u_menu/soc/system_cores_0_logic_cpu/IBusCachedPlugin_cache/lineLoader_address[5]~FF #16209 has no fanout. Check synthesis flow
+INFO     : Pass 1: Swept away 0 blocks with no fanout.
+INFO     : Swept away 6 nets and 73 blocks in total.
+INFO     : Removed 0 LUT buffers
+INFO     : Sweept away 73 nodes
+INFO     : Successfully created VPR logical netlist from Verific binary DataBase file "outflow\Ti60_Demo.vdb".
+INFO     : Netlist pre-processing took 3.10533 seconds.
+INFO     : 	Netlist pre-processing took 2 seconds (approximately) in total CPU time.
+INFO     : Netlist pre-processing virtual memory usage: begin = 564.192 MB, end = 3216.78 MB, delta = 2652.58 MB
+INFO     : 	Netlist pre-processing peak virtual memory usage = 3218.1 MB
+INFO     : Netlist pre-processing resident set memory usage: begin = 561.304 MB, end = 3191.24 MB, delta = 2629.94 MB
+INFO     : 	Netlist pre-processing peak resident set memory usage = 3191.24 MB
+           ***** Ending stage netlist pre-processing *****
+           
+           ***** Beginning stage packed netlist loading ... *****
+INFO     : Load Global Network took 1.11094 seconds.
+INFO     : 	Load Global Network took 0.25 seconds (approximately) in total CPU time.
+INFO     : Load Global Network virtual memory usage: begin = 3216.61 MB, end = 3216.61 MB, delta = 0 MB
+INFO     : 	Load Global Network peak virtual memory usage = 3218.1 MB
+INFO     : Load Global Network resident set memory usage: begin = 3190.23 MB, end = 3189.86 MB, delta = -0.368 MB
+INFO     : 	Load Global Network peak resident set memory usage = 3191.29 MB
+INFO     : Reading C:/Efinity/2025.1/arch/.\rr_pb_hier_mapping.xml
+INFO     : Read proto netlist file work_pnr\Ti60_Demo.net_proto
+INFO     : Read proto netlist for file "work_pnr\Ti60_Demo.net_proto" took 0.049 seconds
+INFO     : Setup net and block data structure took 0.367 seconds
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Packed netlist loading took 1.78549 seconds.
+INFO     : 	Packed netlist loading took 0.875 seconds (approximately) in total CPU time.
+INFO     : Packed netlist loading virtual memory usage: begin = 3216.61 MB, end = 3218.1 MB, delta = 1.488 MB
+INFO     : 	Packed netlist loading peak virtual memory usage = 3218.1 MB
+INFO     : Packed netlist loading resident set memory usage: begin = 3190.14 MB, end = 3193.28 MB, delta = 3.14 MB
+INFO     : 	Packed netlist loading peak resident set memory usage = 3193.28 MB
+           ***** Ending stage packed netlist loading *****
+           
+INFO     : Run checks after load placement.
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully loaded placement data from "outflow\Ti60_Demo.place".
+           ***** Beginning stage bitstream generation ... *****
+INFO     : Reading core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Successfully read core interface constraints file "outflow\Ti60_Demo.interface.csv"
+INFO     : Finished writing bitstream file work_pnr\Ti60_Demo.lbf.
+INFO     : Bitstream generation took 2.69245 seconds.
+INFO     : 	Bitstream generation took 2.42188 seconds (approximately) in total CPU time.
+INFO     : Bitstream generation virtual memory usage: begin = 683.48 MB, end = 859.704 MB, delta = 176.224 MB
+INFO     : 	Bitstream generation peak virtual memory usage = 3218.1 MB
+INFO     : Bitstream generation resident set memory usage: begin = 660.032 MB, end = 838.64 MB, delta = 178.608 MB
+INFO     : 	Bitstream generation peak resident set memory usage = 3193.7 MB
+           ***** Ending stage bitstream generation *****
+           
+INFO     : The entire flow of EFX_PNR took 716.811 seconds.
+INFO     : 	The entire flow of EFX_PNR took 1880.72 seconds (approximately) in total CPU time.
+INFO     : The entire flow of EFX_PNR virtual memory usage: begin = 19.944 MB, end = 859.104 MB, delta = 839.16 MB
+INFO     : 	The entire flow of EFX_PNR peak virtual memory usage = 3218.1 MB
+INFO     : The entire flow of EFX_PNR resident set memory usage: begin = 22.04 MB, end = 840.276 MB, delta = 818.236 MB
+INFO     : 	The entire flow of EFX_PNR peak resident set memory usage = 3193.7 MB

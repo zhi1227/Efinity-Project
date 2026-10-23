@@ -1,0 +1,12 @@
+{
+  "README.md": "0b10c501acbab8315f9fa6ce51c23929756355b73ce37d09471b69e687cbbbb1",
+  "README_CaptureFix_V2.md": "1e551e0b3fd0fd8e7d4a4272c78460ccbfb4fd7184c5fc3d246257729f371a00",
+  "tools/verify_capture_v2.py": "2a636fe6ca095f7d13bb8fcc5ff23e2140165a9e286af2c298c36f3430298be6",
+  "reports/capture_v2/changes.json": "2d50876d3bc565ba8e57e4959fa7f9f94f11f1fd240d95b0eccab5b8c6bea88e",
+  "reports/capture_v2/rtl_and_tests.patch": "839099df153d38cb9f208f9abc64853228d82b1098df4a41b29da1ae10fb1c9f",
+  "reports/capture_v2/delivery.json": "fe60d698efa82ec20d6d076bc37d029db579dfcbfe6107993cc94f2f287282aa",
+  "reports/capture_v2/selected_evidence.json": "440be32d0aa4f873f8b2d9f5d67c9f48f76fe07314e2620b9e73c3aaa86e4ab1",
+  "reports/capture_v2/selected_build.json": "373badd0df7e2599f2334590cda56f601c7685c4903237e1c9757bd1b42017b4",
+  "outflow/Ti60_Demo.bit": "323cda21f01e1832c2fd2f62fb9849c571451f246de55118161c273b975c596c",
+  "outflow/Ti60_Demo.hex": "9f51e3dede9ac280125cc7b4d48aa4a5e8db89df4b6e9e530213ba18e156e62a"
+}

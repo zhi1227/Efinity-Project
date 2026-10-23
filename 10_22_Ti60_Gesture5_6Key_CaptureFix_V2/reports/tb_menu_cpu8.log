@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 20 02:34:08 2026
+# Process ID: 10548
+# Current directory: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_cpu8
+# Command line: xsim.exe -log ../reports/tb_menu_cpu8.log -mode tcl -source {xsim.dir/tb_menu_cpu8/xsim_script.tcl}
+# Log file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_cpu8/../reports/tb_menu_cpu8.log
+# Journal file: D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim_cpu8\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_menu_cpu8/xsim_script.tcl
+# xsim {tb_menu_cpu8} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+PASS: CPU8 mode 0, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 1, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 2, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 3, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 4, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 5, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 6, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 mode 7, RISC-V write, frame commit, 614400 pixels, 853440 clocks
+PASS: CPU8 all eight mode bundles, independent settings flag, LIVE/HOLD, CPU boot, CDC, LVDS packing, frame timing
+$finish called at time : 290177045785 ps : File "D:/yilingsi_fpga/Efinity_Project/2026.10.20/10_20_ding_Ti60_Gesture5_RAM_Optimized/sim/tb_menu_cpu8.sv" Line 75
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:24:47 . Memory (MB): peak = 219.805 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 02:58:59 2026...

@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-20",
+  "experiment": "Ti60F225 full-capacity face queue split planes with combined tail",
+  "production_edited_by_experiment": false,
+  "candidate_source": "reports\\ram_optimization_20261020\\face_queue_candidate\\banked\\rtl\\face_grid_regions.v",
+  "candidate_source_sha256": "67bae2498ca9b06d232ad12109899e6912c3b908692b911a4fa686b366fd2ef4",
+  "v1_source_sha256": "90a30891f5e57b7b601968f62a30cb3c2496e62cba130224303e9c941172c2e8",
+  "resources": {
+    "baseline": {
+      "EFX_ADD": 110,
+      "EFX_LUT4": 1659,
+      "EFX_FF": 2257,
+      "EFX_RAM10": 28,
+      "EFX_DPRAM10": 4,
+      "EFX_DSP48": 4,
+      "EFX_DSP24": 1
+    },
+    "banked": {
+      "EFX_ADD": 110,
+      "EFX_LUT4": 1844,
+      "EFX_FF": 2259,
+      "EFX_RAM10": 22,
+      "EFX_DPRAM10": 4,
+      "EFX_DSP48": 4,
+      "EFX_DSP24": 1
+    }
+  },
+  "delta": {
+    "EFX_ADD": 0,
+    "EFX_LUT4": 185,
+    "EFX_FF": 2,
+    "EFX_RAM10": -6,
+    "EFX_DPRAM10": 0,
+    "EFX_DSP48": 0,
+    "EFX_DSP24": 0
+  },
+  "queue_ram_blocks": {
+    "v1": 28,
+    "banked": 22
+  },
+  "grid_ram_blocks_unchanged": 4,
+  "simulation": {
+    "result": "PASS",
+    "log": "reports\\ram_optimization_20261020\\face_queue_candidate\\equivalence.log",
+    "log_sha256": "37286ec8f9a82ddbb8c68acae974146a9299616a9183f7c98286caad86430411",
+    "bench": "reports\\ram_optimization_20261020\\face_queue_candidate\\simulation\\tb_ramopt_coordinates.sv",
+    "bench_sha256": "55aa04a1cf381840c91f8c8021257d49f74def146339b83a78fbf9a5a7c2c0d3",
+    "promoted_official_bench": "sim_ramopt_coordinates/tb_ramopt_coordinates.sv",
+    "face_coverage": [
+      {
+        "pixel_width": 96,
+        "pixel_height": 64,
+        "grid_width": 48,
+        "grid_height": 32,
+        "cycles": 94822,
+        "full_queue": 1536,
+        "valid_publishes": 4
+      },
+      {
+        "pixel_width": 320,
+        "pixel_height": 180,
+        "grid_width": 160,
+        "grid_height": 90,
+        "cycles": 864434,
+        "full_queue": 14400,
+        "valid_publishes": 4
+      }
+    ],
+    "state_coverage": [
+      "all public outputs",
+      "FSM state",
+      "capture/process bank",
+      "grid read and clear controls",
+      "queue head/tail/write pointers",
+      "queue enqueue and synchronous read decoded addresses",
+      "scan/current/neighbor/min/max coordinates",
+      "component area",
+      "work/pending boxes/count/saturation",
+      "source publication IDs",
+      "full capacity",
+      "overrun",
+      "reset recovery"
+    ],
+    "ccl_configurations": [
+      "10bit CAP1024",
+      "10bit CAP8",
+      "11bit CAP1024"
+    ]
+  },
+  "recommendation": "Adopt exact candidate after parent approval; saves 6 RAM blocks for 185 LUT4 and 2 FF. Full project PNR still required."
+}
